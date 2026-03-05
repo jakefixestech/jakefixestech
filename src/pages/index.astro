@@ -1,11 +1,53 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600">
+    <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-36 lg:py-44">
+      
+      <!-- Coming soon badge -->
+      <div class="mb-8 inline-flex items-center gap-2 rounded-full bg-yellow-400/20 px-4 py-1.5 text-sm font-medium text-yellow-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>Full website coming soon</span>
+      </div>
+
+      <h1 class="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
+        Your Friendly Neighborhood Tech Expert
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-blue-100">
+        From cracked screens to slow computers, Jake Fixes Tech provides
+        reliable, affordable computer repair for homes and small businesses
+        in or nearby Littleton New Hampshire.
+      </p>
+
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+        <a href="/services" class="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-base font-medium text-blue-700 hover:bg-blue-50">
+          View Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/location" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 px-6 py-3 text-base font-medium text-white hover:bg-white/20">
+          Find Us
+        </a>
+      </div>
+
+      <!-- Trust signals -->
+      <div class="mt-14 flex flex-wrap gap-x-8 gap-y-3 text-sm text-blue-200">
+        <span class="flex items-center gap-2">
+          <span class="inline-block h-2 w-2 rounded-full bg-green-400"></span>
+          Locally Owned & Operated
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="inline-block h-2 w-2 rounded-full bg-green-400"></span>
+          Fast Turnaround
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="inline-block h-2 w-2 rounded-full bg-green-400"></span>
+          Free Diagnostics
+        </span>
+      </div>
+
+    </div>
+  </section>
 </Layout>
