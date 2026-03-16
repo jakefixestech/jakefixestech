@@ -1,0 +1,70 @@
+---
+---
+<footer style="border-top:1px solid #e5e7eb;background:white;">
+  <div style="max-width:80rem;margin:0 auto;padding:3rem 1.5rem;">
+    
+    <div class="footer-inner">
+      <!-- Brand -->
+      <div style="display:flex;align-items:center;gap:0.625rem;">
+        <div style="display:flex;height:2.25rem;width:2.25rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#2563eb;">
+          <svg style="height:1rem;width:1rem;color:white;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span style="font-size:1.125rem;font-weight:700;color:#111827;">Jake Fixes Tech</span>
+      </div>
+
+      <!-- Nav -->
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/location">Hours & Location</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/terms">Terms & Conditions</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div style="margin-top:2rem;border-top:1px solid #e5e7eb;padding-top:2rem;text-align:center;font-size:0.75rem;color:#9ca3af;">
+      <p>&copy; {new Date().getFullYear()} Jake Fixes Tech LLC. All rights reserved. Serving Littleton, NH and surrounding areas.</p>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: #111827;
+  }
+
+  @media (min-width: 768px) {
+    .footer-inner {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+</style>
