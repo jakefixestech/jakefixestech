@@ -197,10 +197,38 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
 
-      <!-- Annual savings callout -->
-      <div style="margin-top:2rem;background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.25rem 1.5rem;text-align:center;">
-        <p style="font-weight:700;color:#1e40af;font-size:1rem;">💰 Pay Annually & Save!</p>
-        <p style="color:#3b82f6;font-size:0.9rem;margin-top:0.25rem;">Pay for a full year upfront and get 2 months free — that's like getting your last 2 months at no cost. Quarterly payment options also available.</p>
+      <!-- Payment Options Callout -->
+      <div style="margin-top:2rem;background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.5rem;">
+        <p style="font-weight:700;color:#1e40af;font-size:1rem;margin-bottom:1rem;">💰 Flexible Payment Options — Pay Less Upfront or Save More Annually!</p>
+        
+        <div id="pricing-table-grid">
+          <div class="pricing-col">
+            <div class="pricing-col-header">Plan</div>
+            <div class="pricing-col-row">Basic</div>
+            <div class="pricing-col-row">Standard</div>
+            <div class="pricing-col-row">Premium</div>
+          </div>
+          <div class="pricing-col">
+            <div class="pricing-col-header">Monthly</div>
+            <div class="pricing-col-row">$75/mo</div>
+            <div class="pricing-col-row">$150/mo</div>
+            <div class="pricing-col-row">$300/mo</div>
+          </div>
+          <div class="pricing-col">
+            <div class="pricing-col-header">Quarterly <span style="font-size:0.7rem;color:#2563eb;">(save 5%)</span></div>
+            <div class="pricing-col-row">$213/quarter</div>
+            <div class="pricing-col-row">$427/quarter</div>
+            <div class="pricing-col-row">$855/quarter</div>
+          </div>
+          <div class="pricing-col pricing-col-featured">
+            <div class="pricing-col-header">Annual <span style="font-size:0.7rem;color:#2563eb;">(2 months free!)</span></div>
+            <div class="pricing-col-row">$750/year</div>
+            <div class="pricing-col-row">$1,500/year</div>
+            <div class="pricing-col-row">$3,000/year</div>
+          </div>
+        </div>
+
+        <p style="color:#3b82f6;font-size:0.8rem;margin-top:1rem;text-align:center;">Full payment terms and cancellation policy available in our <a href="/terms#web-services-terms" style="color:#1e40af;font-weight:600;text-decoration:underline;">Terms & Conditions</a>.</p>
       </div>
 
     </div>
@@ -226,7 +254,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Terms Notice -->
   <section style="background:white;padding:1rem 1.5rem 2rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;text-align:center;">
-      <p style="color:#9ca3af;font-size:0.875rem;">All web design and management services are subject to our <a href="/terms#web-services-terms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Terms & Conditions</a>
+      <p style="color:#9ca3af;font-size:0.875rem;">All web design and management services are subject to our <a href="/terms#web-services-terms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Terms & Conditions</a>. By engaging Jake Fixes Tech LLC for web services you agree to these terms.</p>
     </div>
   </section>
 
@@ -476,6 +504,41 @@ import Layout from '../layouts/Layout.astro';
     background: #1d4ed8;
   }
 
+  #pricing-table-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .pricing-col {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid #bfdbfe;
+  }
+
+  .pricing-col-featured {
+    border: 2px solid #2563eb;
+  }
+
+  .pricing-col-header {
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+  }
+
+  .pricing-col-row {
+    font-size: 0.85rem;
+    color: #374151;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    border-top: 1px solid #eff6ff;
+  }
+
   @media (max-width: 768px) {
     #why-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -487,6 +550,10 @@ import Layout from '../layouts/Layout.astro';
 
     #management-grid {
       grid-template-columns: 1fr;
+    }
+
+    #pricing-table-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
