@@ -198,40 +198,45 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Payment Options Callout -->
-      <div style="margin-top:2rem;background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.5rem;">
-        <p style="font-weight:700;color:#1e40af;font-size:1rem;margin-bottom:1rem;">💰 Flexible Payment Options — Pay Less Upfront or Save More Annually!</p>
-        
-        <div id="pricing-table-grid">
-          <div class="pricing-col">
-            <div class="pricing-col-header">Plan</div>
-            <div class="pricing-col-row">Basic</div>
-            <div class="pricing-col-row">Standard</div>
-            <div class="pricing-col-row">Premium</div>
-          </div>
-          <div class="pricing-col">
-            <div class="pricing-col-header">Monthly</div>
-            <div class="pricing-col-row">$75/mo</div>
-            <div class="pricing-col-row">$150/mo</div>
-            <div class="pricing-col-row">$300/mo</div>
-          </div>
-          <div class="pricing-col">
-            <div class="pricing-col-header">Quarterly <span style="font-size:0.7rem;color:#2563eb;">(save 5%)</span></div>
-            <div class="pricing-col-row">$213/quarter</div>
-            <div class="pricing-col-row">$427/quarter</div>
-            <div class="pricing-col-row">$855/quarter</div>
-          </div>
-          <div class="pricing-col pricing-col-featured">
-            <div class="pricing-col-header">Annual <span style="font-size:0.7rem;color:#2563eb;">(2 months free!)</span></div>
-            <div class="pricing-col-row">$750/year</div>
-            <div class="pricing-col-row">$1,500/year</div>
-            <div class="pricing-col-row">$3,000/year</div>
-          </div>
-        </div>
+      <!-- Payment Options Callout -->
+<div style="margin-top:2rem;background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.5rem;">
+  <p style="font-weight:700;color:#1e40af;font-size:1rem;margin-bottom:1rem;">💰 Flexible Payment Options — Pay Less Upfront or Save More Annually!</p>
+  
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:320px;">
+      <thead>
+        <tr style="background:#dbeafe;">
+          <th style="padding:0.625rem 1rem;text-align:left;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Plan</th>
+          <th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Monthly</th>
+          <th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Quarterly<br/><span style="font-size:0.7rem;font-weight:400;">save 5%</span></th>
+          <th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;background:#dbeafe;">Annual<br/><span style="font-size:0.7rem;font-weight:400;">2 months free!</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Basic</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$75/mo</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$213/qtr</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$750/yr</td>
+        </tr>
+        <tr style="background:#f9fafb;">
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Standard</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$150/mo</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$427/qtr</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$1,500/yr</td>
+        </tr>
+        <tr>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Premium</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$300/mo</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$855/qtr</td>
+          <td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$3,000/yr</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-        <p style="color:#3b82f6;font-size:0.8rem;margin-top:1rem;text-align:center;">Full payment terms and cancellation policy available in our <a href="/terms#web-services-terms" style="color:#1e40af;font-weight:600;text-decoration:underline;">Terms & Conditions</a>.</p>
-      </div>
-
-    </div>
+  <p style="color:#3b82f6;font-size:0.8rem;margin-top:1rem;text-align:center;">Full payment terms and cancellation policy available in our <a href="/terms#web-services-terms" style="color:#1e40af;font-weight:600;text-decoration:underline;">Terms & Conditions</a>.</p>
+</div>
   </section>
 
   <!-- On Demand Hourly -->
