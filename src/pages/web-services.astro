@@ -5,9 +5,11 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Website Design & Management | Jake Fixes Tech — Littleton, NH"
 description="Professional website design, hosting and management for small businesses. Packages starting at $750. Serving Littleton NH and the North Country.">
 
-  <!-- Header Banner -->
-  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:5rem 1.5rem 4rem 1.5rem;text-align:center;">
-    <div style="max-width:56rem;margin:0 auto;">
+<!-- Header Banner -->
+  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
+    <div style="max-width:56rem;margin:0 auto;padding:5rem 1.5rem 4rem 1.5rem;text-align:center;position:relative;z-index:2;">
       <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Web Services</p>
       <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Professional Website Design & Management</h1>
       <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">I build fast, modern, mobile-friendly websites for small businesses and organizations across the North Country. You own your site outright — no holding it hostage, no surprise fees.</p>
