@@ -4,15 +4,20 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Pricing | Jake Fixes Tech — Affordable Computer Repair Littleton, NH"
 description="Transparent flat rate pricing for all computer repair services. Starting at $50 diagnostic fee applied toward your repair. No hidden fees, no surprises.">
+
+  <!-- Header Banner -->
+  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
+    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Pricing</p>
+      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Transparent, Honest Pricing</h1>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">Flat rate pricing paid upfront. No hidden fees, no surprises. Parts are extra where applicable.</p>
+    </div>
+  </section>
+
   <section style="background:white;padding:3rem 1.5rem 5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
-
-      <!-- Header Banner -->
-      <div style="background:linear-gradient(135deg,#1e40af,#2563eb);border-radius:0.75rem;padding:2.5rem;text-align:center;margin-bottom:3rem;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Pricing</p>
-        <h1 style="font-size:2rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:0.5rem;">Transparent, Honest Pricing</h1>
-        <p style="color:#bfdbfe;font-size:1rem;">Flat rate pricing paid upfront. No hidden fees, no surprises. Parts are extra where applicable.</p>
-      </div>
 
       <!-- Diagnostic Fee Callout -->
       <div style="background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.5rem;margin-bottom:2.5rem;display:flex;align-items:flex-start;gap:1rem;">
@@ -137,6 +142,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
 
     </div>
   </section>
+
 </Layout>
 
 <style>
