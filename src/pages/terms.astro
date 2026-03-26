@@ -4,15 +4,21 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Terms & Conditions | Jake Fixes Tech LLC"
 description="Terms and Conditions for Jake Fixes Tech LLC tech repair and web design services. Read before using our services.">
+
+  <!-- Hero Banner -->
+  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
+    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Legal</p>
+      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Terms & Conditions</h1>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">Please read these terms carefully before using our services.</p>
+      <p style="color:#93c5fd;font-size:0.875rem;margin-top:0.75rem;">Last updated: March 2026</p>
+    </div>
+  </section>
+
   <section style="background:white;padding:3rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
-
-      <!-- Header Banner -->
-      <div style="background:linear-gradient(135deg,#1e40af,#2563eb);border-radius:0.75rem;padding:2.5rem;text-align:center;margin-bottom:3rem;">
-        <h1 style="font-size:2rem;font-weight:800;color:white;margin-bottom:0.5rem;">Terms & Conditions</h1>
-        <p style="color:#bfdbfe;font-size:1rem;">Please read these terms carefully before using our services.</p>
-        <p style="color:#93c5fd;font-size:0.875rem;margin-top:0.5rem;">Last updated: March 2026</p>
-      </div>
 
       <!-- PART 1: TECH REPAIR SERVICES -->
       <div class="terms-section">
@@ -216,6 +222,7 @@ description="Terms and Conditions for Jake Fixes Tech LLC tech repair and web de
 
     </div>
   </section>
+
 </Layout>
 
 <style>
