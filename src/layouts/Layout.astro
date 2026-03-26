@@ -26,12 +26,6 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://jakefixestech.com');
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <meta property="og:title" content="Jake Fixes Tech — Computer Repair & Website Design in Littleton, NH" />
-<meta property="og:description" content="Your friendly neighborhood tech expert. Affordable computer repair, tech support and website design serving Littleton, NH and the North Country." />
-<meta property="og:image" content="https://jakefixestech.com/hero.jpg" />
-<meta property="og:url" content="https://jakefixestech.com" />
-<meta property="og:type" content="website" />
-
     <!-- Primary SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -54,7 +48,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://jakefixestech.com');
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
-    <!-- Local Business Schema (helps Google understand you're a local business) -->
+    <!-- Local Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -99,7 +93,9 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://jakefixestech.com');
   </head>
   <body>
     <Navbar />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

@@ -181,16 +181,15 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
 </style>
 
 <script>
-  // Grand Opening: April 18, 2026 at 9:00 AM Eastern
   const LAUNCH = new Date('2026-04-18T09:00:00-04:00').getTime();
 
-  const daysEl     = document.getElementById('cd-days');
-  const hoursEl    = document.getElementById('cd-hours');
-  const minutesEl  = document.getElementById('cd-minutes');
-  const secondsEl  = document.getElementById('cd-seconds');
-  const srEl       = document.getElementById('cd-sr-announcement');
+  const daysEl    = document.getElementById('cd-days');
+  const hoursEl   = document.getElementById('cd-hours');
+  const minutesEl = document.getElementById('cd-minutes');
+  const secondsEl = document.getElementById('cd-seconds');
+  const srEl      = document.getElementById('cd-sr-announcement');
 
-  function pad(n) {
+  function pad(n: number) {
     return String(Math.max(0, n)).padStart(2, '0');
   }
 
@@ -201,12 +200,11 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     const diff = LAUNCH - now;
 
     if (diff <= 0) {
-      // We've launched!
-      daysEl.textContent    = '00';
-      hoursEl.textContent   = '00';
-      minutesEl.textContent = '00';
-      secondsEl.textContent = '00';
-      if (srEl) srEl.textContent = 'Jake Fixes Tech is now open!';
+      if (daysEl)    daysEl.textContent    = '00';
+      if (hoursEl)   hoursEl.textContent   = '00';
+      if (minutesEl) minutesEl.textContent = '00';
+      if (secondsEl) secondsEl.textContent = '00';
+      if (srEl)      srEl.textContent      = 'Jake Fixes Tech is now open!';
       return;
     }
 
@@ -220,8 +218,6 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     if (minutesEl) minutesEl.textContent = pad(minutes);
     if (secondsEl) secondsEl.textContent = pad(seconds);
 
-    // Only update screen reader announcement once per minute
-    // so it doesn't read every single second
     if (minutes !== lastSRMinute && srEl) {
       lastSRMinute = minutes;
       srEl.textContent = `${days} days, ${hours} hours, and ${minutes} minutes until Jake Fixes Tech opens.`;
