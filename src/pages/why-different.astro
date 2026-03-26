@@ -1,0 +1,607 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Why My Websites Are Different | Jake Fixes Tech"
+  description="See why Jake Fixes Tech builds faster, safer, and more accessible websites than traditional web agencies — at a fraction of the ongoing cost."
+>
+
+  <!-- Hero -->
+  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" width="1920" height="1080" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
+    <div style="max-width:56rem;margin:0 auto;padding:5rem 1.5rem 4rem 1.5rem;text-align:center;position:relative;z-index:2;">
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">The Jake Fixes Tech Difference</p>
+      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Why my Websites Are Different</h1>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">
+        A lot has changed in web development over the last decade. Not every agency got the memo.
+        Here's an honest look at what separates a modern website from an outdated one — and why it matters for your business.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:1rem;">Let's be real for a second.</h2>
+      <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:1rem;">
+        A lot of web agencies are still building websites the same way they did 10-15 years ago. WordPress themes, bloated plugins, slow load times, and a monthly invoice for things that have been free for years. Meanwhile your business is paying the price — in slow load times, bad Google rankings, security vulnerabilities, and customers who bounce before your page even finishes loading.
+      </p>
+      <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:1rem;">
+        I build websites differently. Not because I'm trying to be fancy — because the tools available today are genuinely better, faster, and more secure than what most agencies are still using. And I pass those benefits directly to you.
+      </p>
+      <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;">
+        Here's exactly what I mean.
+      </p>
+    </div>
+  </section>
+
+  <!-- Speed Section -->
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:72rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Performance</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Speed Isn't a Luxury — It's Everything</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;margin-left:auto;margin-right:auto;line-height:1.75;">Google uses page speed as a ranking factor. Slow sites rank lower, lose visitors, and lose sales. Here's how the numbers stack up.</p>
+      </div>
+
+      <div id="speed-grid">
+        <div class="speed-card">
+          <div class="speed-label">Typical Agency Site</div>
+          <div class="speed-bar-wrap">
+            <div class="speed-bar speed-bar-bad" style="width:85%;">
+              <span>5–15 seconds</span>
+            </div>
+          </div>
+          <p class="speed-note">WordPress with plugins, unoptimized images, shared hosting</p>
+        </div>
+        <div class="speed-card">
+          <div class="speed-label">Jake Fixes Tech Site</div>
+          <div class="speed-bar-wrap">
+            <div class="speed-bar speed-bar-good" style="width:8%;">
+              <span style="color:#111827;margin-left:0.5rem;">0.3s</span>
+            </div>
+          </div>
+          <p class="speed-note">Astro static HTML, Cloudflare global CDN, zero unnecessary JavaScript</p>
+        </div>
+      </div>
+
+      <div id="stat-cards">
+        <div class="stat-card">
+          <div class="stat-number" style="color:#2563eb;">93x</div>
+          <div class="stat-label">Smaller Page Size</div>
+          <div class="stat-sub">125kb vs 11,000kb+</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color:#2563eb;">50x</div>
+          <div class="stat-label">Faster Load Time</div>
+          <div class="stat-sub">0.3s vs 15s+</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color:#16a34a;">400/400</div>
+          <div class="stat-label">Google Lighthouse</div>
+          <div class="stat-sub">Perfect score, every page</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color:#16a34a;">10/10</div>
+          <div class="stat-label">WAVE Accessibility</div>
+          <div class="stat-sub">Every single page</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What is Lighthouse / WAVE -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:72rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">The Score That Matters</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Google Grades Every Website. Here's How to Read the Report Card.</h2>
+      </div>
+      <div id="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon">🔦</div>
+          <h3>Google Lighthouse</h3>
+          <p>Google's own free tool that grades any website out of 400 points across Performance, Accessibility, Best Practices and SEO. Most professional agency sites score 200–300. Every site I build scores 400/400 — a perfect grade on Google's own test.</p>
+          <div style="margin-top:1rem;background:#eff6ff;border-radius:0.5rem;padding:0.75rem 1rem;">
+            <div style="font-size:0.8rem;color:#1e40af;font-weight:600;">TYPICAL AGENCY: 200–300 / 400</div>
+            <div style="font-size:0.8rem;color:#16a34a;font-weight:700;margin-top:0.25rem;">JAKE FIXES TECH: 400 / 400 ✅</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">♿</div>
+          <h3>WAVE Accessibility Checker</h3>
+          <p>WAVE is an industry standard tool that checks whether a website is usable by people with disabilities — including screen reader users, keyboard-only users, and people with visual impairments. Most agency sites have never been checked. Every page I build scores 10/10.</p>
+          <div style="margin-top:1rem;background:#eff6ff;border-radius:0.5rem;padding:0.75rem 1rem;">
+            <div style="font-size:0.8rem;color:#1e40af;font-weight:600;">TYPICAL AGENCY: Never checked</div>
+            <div style="font-size:0.8rem;color:#16a34a;font-weight:700;margin-top:0.25rem;">JAKE FIXES TECH: 10 / 10 ✅</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">⚖️</div>
+          <h3>ADA Compliance</h3>
+          <p>Under the Americans with Disabilities Act, businesses can be sued for having inaccessible websites. It happens to small businesses regularly. Every site I build meets WCAG 2.1 AA accessibility standards out of the box — no extra charge, no add-on, just built in from day one.</p>
+          <div style="margin-top:1rem;background:#eff6ff;border-radius:0.5rem;padding:0.75rem 1rem;">
+            <div style="font-size:0.8rem;color:#1e40af;font-weight:600;">TYPICAL AGENCY: Rarely addressed</div>
+            <div style="font-size:0.8rem;color:#16a34a;font-weight:700;margin-top:0.25rem;">JAKE FIXES TECH: WCAG 2.1 AA ✅</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Hidden Costs Section -->
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:72rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">The Real Cost of a Website</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Stop Paying for Things That Are Free</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+          SSL certificates, hosting, backups, CDN protection — these things have been free for years. Some agencies are still charging hundreds of dollars a year for them. Here's the truth.
+        </p>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th style="text-align:left;">What You're Paying For</th>
+              <th style="text-align:center;">Old School Agency</th>
+              <th style="text-align:center;">Jake Fixes Tech</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="feature-name">SSL Certificate</div>
+                <div class="feature-desc">The padlock icon that makes your site secure</div>
+              </td>
+              <td class="agency-col">$50–$700/yr</td>
+              <td class="jake-col">✅ Free (Cloudflare)</td>
+            </tr>
+            <tr class="row-alt">
+              <td>
+                <div class="feature-name">Website Hosting</div>
+                <div class="feature-desc">Where your website lives on the internet</div>
+              </td>
+              <td class="agency-col">$30–$100/mo</td>
+              <td class="jake-col">✅ Free (Cloudflare Pages)</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="feature-name">Website Backups</div>
+                <div class="feature-desc">Saving copies in case something goes wrong</div>
+              </td>
+              <td class="agency-col">$20–$50/mo</td>
+              <td class="jake-col">✅ Free (GitHub)</td>
+            </tr>
+            <tr class="row-alt">
+              <td>
+                <div class="feature-name">CDN & DDoS Protection</div>
+                <div class="feature-desc">Global speed boost and attack protection</div>
+              </td>
+              <td class="agency-col">$20–$200/mo</td>
+              <td class="jake-col">✅ Free (Cloudflare)</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="feature-name">Platform</div>
+                <div class="feature-desc">What the website is built on</div>
+              </td>
+              <td class="agency-col">WordPress (outdated, hack-prone)</td>
+              <td class="jake-col">✅ Astro (modern, static, secure)</td>
+            </tr>
+            <tr class="row-alt">
+              <td>
+                <div class="feature-name">Security Risk</div>
+                <div class="feature-desc">How vulnerable your site is to attacks</div>
+              </td>
+              <td class="agency-col">⚠️ High — WordPress is the #1 hacked platform</td>
+              <td class="jake-col">✅ Minimal — static HTML has no attack surface</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="feature-name">Page Load Time</div>
+                <div class="feature-desc">How fast your site loads for visitors</div>
+              </td>
+              <td class="agency-col">⚠️ 5–15 seconds</td>
+              <td class="jake-col">✅ Under 1 second</td>
+            </tr>
+            <tr class="row-alt">
+              <td>
+                <div class="feature-name">Google Lighthouse Score</div>
+                <div class="feature-desc">Google's official website performance grade</div>
+              </td>
+              <td class="agency-col">⚠️ 200–300 / 400</td>
+              <td class="jake-col">✅ 400 / 400 — Perfect</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="feature-name">ADA / WCAG Accessibility</div>
+                <div class="feature-desc">Legal compliance for users with disabilities</div>
+              </td>
+              <td class="agency-col">⚠️ Rarely included</td>
+              <td class="jake-col">✅ Built in, every page</td>
+            </tr>
+            <tr class="row-alt">
+              <td>
+                <div class="feature-name">You Own the Website</div>
+                <div class="feature-desc">Full code and content ownership</div>
+              </td>
+              <td class="agency-col">⚠️ Sometimes held hostage</td>
+              <td class="jake-col">✅ Always — it's yours outright</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:2rem;background:#fef9c3;border:2px solid #fbbf24;border-radius:0.75rem;padding:1.25rem 1.5rem;">
+        <p style="color:#92400e;font-size:0.95rem;line-height:1.75;margin:0;">
+          💡 <strong>Quick math:</strong> If an agency is charging you $700/yr for SSL + $50/mo for hosting + $30/mo for backups, that's over <strong>$1,660 per year</strong> for things that are completely free with a modern stack. Over 5 years that's $8,300+ — on top of what you paid to build the site.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WordPress vs Astro -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:72rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">The Platform Problem</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">WordPress Was Great in 2010. It's 2026.</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">WordPress powers a huge portion of the web — which is exactly why it's the number one target for hackers. It requires constant updates, plugin maintenance, and ongoing costs just to keep it running safely.</p>
+      </div>
+      <div id="platform-grid">
+        <div class="platform-card platform-bad">
+          <div class="platform-header-bad">
+            <h3>WordPress</h3>
+            <span class="platform-tag-bad">Old School</span>
+          </div>
+          <ul class="platform-list">
+            <li>⚠️ #1 most hacked website platform</li>
+            <li>⚠️ Requires constant plugin updates</li>
+            <li>⚠️ Plugins conflict and break things</li>
+            <li>⚠️ Database driven — slow by default</li>
+            <li>⚠️ Needs paid hosting to run</li>
+            <li>⚠️ Performance requires extra paid plugins</li>
+            <li>⚠️ Accessibility requires extra paid plugins</li>
+            <li>⚠️ Heavy, bloated pages by default</li>
+          </ul>
+        </div>
+        <div class="platform-card platform-good">
+          <div class="platform-header-good">
+            <h3>Astro + Cloudflare</h3>
+            <span class="platform-tag-good">Modern Stack</span>
+          </div>
+          <ul class="platform-list">
+            <li>✅ Static HTML — nothing to hack</li>
+            <li>✅ No plugins, no updates to manage</li>
+            <li>✅ Nothing to conflict or break</li>
+            <li>✅ Pre-built pages — loads instantly</li>
+            <li>✅ Free hosting on Cloudflare Pages</li>
+            <li>✅ Performance is built in by design</li>
+            <li>✅ Accessibility built in from scratch</li>
+            <li>✅ Lean, fast pages under 200kb</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Line -->
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;text-align:center;">
+      <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:1rem;">The Bottom Line</h2>
+      <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:1rem;">
+        You deserve a website that loads fast, ranks well on Google, is accessible to every visitor, and doesn't come with a monthly bill for things that are free. That's not a premium add-on — that's just what a website should be in 2026.
+      </p>
+      <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:2rem;">
+        Every site I build scores 400/400 on Google Lighthouse and 10/10 on WAVE. It's hosted for free on Cloudflare's global network, backed up automatically on GitHub, and secured with a free SSL certificate. You own it outright from day one. No recurring fees for things that should have been free all along.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="/web-services" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+          View Web Packages
+          <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/location" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:2px solid #2563eb;">
+          Get a Free Quote
+          <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  #speed-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+  }
+
+  .speed-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .speed-label {
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .speed-bar-wrap {
+    background: #f3f4f6;
+    border-radius: 9999px;
+    height: 2.5rem;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .speed-bar {
+    height: 100%;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: width 1s ease;
+  }
+
+  .speed-bar-bad {
+    background: #fca5a5;
+    color: #991b1b;
+  }
+
+  .speed-bar-good {
+    background: #86efac;
+    color: #166534;
+    min-width: 60px;
+  }
+
+  .speed-note {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  #stat-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-sub {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  #tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .tool-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .tool-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tool-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+  }
+
+  .tool-card p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  .compare-table thead tr {
+    background: #1e40af;
+    color: white;
+  }
+
+  .compare-table th {
+    padding: 1rem 1.25rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  .compare-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+  }
+
+  .row-alt {
+    background: #f8fafc;
+  }
+
+  .feature-name {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.2rem;
+  }
+
+  .feature-desc {
+    font-size: 0.78rem;
+    color: #6b7280;
+  }
+
+  .agency-col {
+    text-align: center;
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .jake-col {
+    text-align: center;
+    color: #16a34a;
+    font-weight: 600;
+  }
+
+  #platform-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .platform-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .platform-bad {
+    border: 2px solid #fca5a5;
+  }
+
+  .platform-good {
+    border: 2px solid #86efac;
+  }
+
+  .platform-header-bad {
+    background: #fee2e2;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .platform-header-good {
+    background: #dcfce7;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .platform-header-bad h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #991b1b;
+    margin: 0;
+  }
+
+  .platform-header-good h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #166534;
+    margin: 0;
+  }
+
+  .platform-tag-bad {
+    background: #fca5a5;
+    color: #991b1b;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .platform-tag-good {
+    background: #86efac;
+    color: #166534;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .platform-list {
+    list-style: none;
+    padding: 1.25rem 1.5rem;
+    margin: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .platform-list li {
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    #stat-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #tools-grid {
+      grid-template-columns: 1fr;
+    }
+    #platform-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #stat-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
