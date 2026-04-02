@@ -132,8 +132,54 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- The Hidden Costs Section -->
+  <!-- Accessibility Overlay Widget Section -->
   <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:2.5rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">A Common Misconception</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Those Little Accessibility Widgets Aren't the Answer</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">You've probably seen them — a small wheelchair icon in the corner of a website that opens a panel to adjust fonts, contrast, and other settings. It's a well-intentioned idea. But it comes with a real problem that's worth understanding.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+        <div style="background:white;border:2px solid #fca5a5;border-radius:0.75rem;padding:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <span style="font-size:1.5rem;">⚠️</span>
+            <h3 style="font-size:1rem;font-weight:700;color:#991b1b;margin:0;">Accessibility Overlay Widgets</h3>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;">
+            <li style="font-size:0.875rem;color:#374151;">❌ Layered on top of broken underlying code</li>
+            <li style="font-size:0.875rem;color:#374151;">❌ Puts the burden on the visitor to fix it themselves</li>
+            <li style="font-size:0.875rem;color:#374151;">❌ Can interfere with real screen readers</li>
+            <li style="font-size:0.875rem;color:#374151;">❌ Often costs $500–$1,500/year</li>
+            <li style="font-size:0.875rem;color:#374151;">❌ Doesn't guarantee ADA compliance</li>
+          </ul>
+        </div>
+        <div style="background:white;border:2px solid #86efac;border-radius:0.75rem;padding:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <span style="font-size:1.5rem;">✅</span>
+            <h3 style="font-size:1rem;font-weight:700;color:#166534;margin:0;">Built-In Accessibility (My Approach)</h3>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;">
+            <li style="font-size:0.875rem;color:#374151;">✅ Proper semantic HTML from the ground up</li>
+            <li style="font-size:0.875rem;color:#374151;">✅ Works for every visitor without any extra steps</li>
+            <li style="font-size:0.875rem;color:#374151;">✅ Compatible with all screen readers and assistive tools</li>
+            <li style="font-size:0.875rem;color:#374151;">✅ Included in every build at no extra charge</li>
+            <li style="font-size:0.875rem;color:#374151;">✅ Genuine WCAG AA compliance, verified on every page</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;">
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.85;margin:0;">
+          Think of it this way: a widget that lets a visitor adjust font sizes is a bit like putting the accessible entrance around the back and hoping people find the sign. The intention is good — but the experience isn't. Real accessibility means every visitor arrives to a site that already works for them, no adjustments needed. That's what I build — verified with <strong>WAVE accessibility testing on every single page</strong>, and backed by thorough manual testing on top of that. Automated tools catch a lot, but manual testing catches the rest.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Hidden Costs Section -->
+  <section style="background:white;padding:4rem 1.5rem;">
     <div style="max-width:72rem;margin:0 auto;">
       <div style="text-align:center;margin-bottom:3rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">The Real Cost of a Website</p>
@@ -247,7 +293,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- WordPress vs Astro -->
-  <section style="background:white;padding:4rem 1.5rem;">
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:72rem;margin:0 auto;">
       <div style="text-align:center;margin-bottom:3rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">The Platform Problem</p>
@@ -292,7 +338,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Bottom Line -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section style="background:white;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;text-align:center;">
       <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:1rem;">The Bottom Line</h2>
       <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:1rem;">
