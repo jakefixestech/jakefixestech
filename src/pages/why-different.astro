@@ -141,7 +141,7 @@ import Layout from '../layouts/Layout.astro';
         <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">You've probably seen them — a small wheelchair icon in the corner of a website that opens a panel to adjust fonts, contrast, and other settings. It's a well-intentioned idea. But it comes with a real problem that's worth understanding.</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+      <div class="widget-compare-grid">
         <div style="background:white;border:2px solid #fca5a5;border-radius:0.75rem;padding:1.5rem;">
           <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
             <span style="font-size:1.5rem;">⚠️</span>
@@ -189,98 +189,126 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
 
-      <div style="overflow-x:auto;">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th style="text-align:left;">What You're Paying For</th>
-              <th style="text-align:center;">Old School Agency</th>
-              <th style="text-align:center;">Jake Fixes Tech</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="feature-name">SSL Certificate</div>
-                <div class="feature-desc">The padlock icon that makes your site secure</div>
-              </td>
-              <td class="agency-col">$50–$700/yr</td>
-              <td class="jake-col">✅ Free (Cloudflare)</td>
-            </tr>
-            <tr class="row-alt">
-              <td>
-                <div class="feature-name">Website Hosting</div>
-                <div class="feature-desc">Where your website lives on the internet</div>
-              </td>
-              <td class="agency-col">$30–$100/mo</td>
-              <td class="jake-col">✅ Free (Cloudflare Pages)</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="feature-name">Website Backups</div>
-                <div class="feature-desc">Saving copies in case something goes wrong</div>
-              </td>
-              <td class="agency-col">$20–$50/mo</td>
-              <td class="jake-col">✅ Free (GitHub)</td>
-            </tr>
-            <tr class="row-alt">
-              <td>
-                <div class="feature-name">CDN &amp; DDoS Protection</div>
-                <div class="feature-desc">Global speed boost and attack protection</div>
-              </td>
-              <td class="agency-col">$20–$200/mo</td>
-              <td class="jake-col">✅ Free (Cloudflare)</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="feature-name">Platform</div>
-                <div class="feature-desc">What the website is built on</div>
-              </td>
-              <td class="agency-col">WordPress (outdated, hack-prone)</td>
-              <td class="jake-col">✅ Astro (modern, static, secure)</td>
-            </tr>
-            <tr class="row-alt">
-              <td>
-                <div class="feature-name">Security Risk</div>
-                <div class="feature-desc">How vulnerable your site is to attacks</div>
-              </td>
-              <td class="agency-col">⚠️ High — WordPress is the #1 hacked platform</td>
-              <td class="jake-col">✅ Minimal — static HTML has no attack surface</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="feature-name">Page Load Time</div>
-                <div class="feature-desc">How fast your site loads for visitors</div>
-              </td>
-              <td class="agency-col">⚠️ 5–15 seconds</td>
-              <td class="jake-col">✅ Under 1 second</td>
-            </tr>
-            <tr class="row-alt">
-              <td>
-                <div class="feature-name">Lighthouse Performance Score</div>
-                <div class="feature-desc">Google's official website performance grade</div>
-              </td>
-              <td class="agency-col">⚠️ 50–75 / 100</td>
-              <td class="jake-col">✅ 100 / 100 — Perfect</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="feature-name">ADA / WCAG Accessibility</div>
-                <div class="feature-desc">Legal compliance for users with disabilities</div>
-              </td>
-              <td class="agency-col">⚠️ Rarely included</td>
-              <td class="jake-col">✅ Built in, every page</td>
-            </tr>
-            <tr class="row-alt">
-              <td>
-                <div class="feature-name">You Own the Website</div>
-                <div class="feature-desc">Full code and content ownership</div>
-              </td>
-              <td class="agency-col">⚠️ Sometimes held hostage</td>
-              <td class="jake-col">✅ Always — it's yours outright</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="compare-cards">
+
+        <div class="compare-header-row">
+          <div style="flex:1;min-width:0;"></div>
+          <div class="compare-cols">
+            <div style="width:220px;text-align:center;font-size:0.8rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:0.05em;padding:0 1rem;border-right:1px solid rgba(255,255,255,0.2);">Old School Agency</div>
+            <div style="width:220px;text-align:center;font-size:0.8rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:0.05em;padding:0 1rem;">Jake Fixes Tech</div>
+          </div>
+        </div>
+
+        <div class="compare-card">
+          <div class="compare-feature">
+            <div class="feature-name">SSL Certificate</div>
+            <div class="feature-desc">The padlock icon that makes your site secure</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">$50–$700/yr</div>
+            <div class="compare-jake">✅ Free (Cloudflare)</div>
+          </div>
+        </div>
+
+        <div class="compare-card row-alt">
+          <div class="compare-feature">
+            <div class="feature-name">Website Hosting</div>
+            <div class="feature-desc">Where your website lives on the internet</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">$30–$100/mo</div>
+            <div class="compare-jake">✅ Free (Cloudflare Pages)</div>
+          </div>
+        </div>
+
+        <div class="compare-card">
+          <div class="compare-feature">
+            <div class="feature-name">Website Backups</div>
+            <div class="feature-desc">Saving copies in case something goes wrong</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">$20–$50/mo</div>
+            <div class="compare-jake">✅ Free (GitHub)</div>
+          </div>
+        </div>
+
+        <div class="compare-card row-alt">
+          <div class="compare-feature">
+            <div class="feature-name">CDN &amp; DDoS Protection</div>
+            <div class="feature-desc">Global speed boost and attack protection</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">$20–$200/mo</div>
+            <div class="compare-jake">✅ Free (Cloudflare)</div>
+          </div>
+        </div>
+
+        <div class="compare-card">
+          <div class="compare-feature">
+            <div class="feature-name">Platform</div>
+            <div class="feature-desc">What the website is built on</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">WordPress (outdated, hack-prone)</div>
+            <div class="compare-jake">✅ Astro (modern, static, secure)</div>
+          </div>
+        </div>
+
+        <div class="compare-card row-alt">
+          <div class="compare-feature">
+            <div class="feature-name">Security Risk</div>
+            <div class="feature-desc">How vulnerable your site is to attacks</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">⚠️ High — WordPress is the #1 hacked platform</div>
+            <div class="compare-jake">✅ Minimal — static HTML has no attack surface</div>
+          </div>
+        </div>
+
+        <div class="compare-card">
+          <div class="compare-feature">
+            <div class="feature-name">Page Load Time</div>
+            <div class="feature-desc">How fast your site loads for visitors</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">⚠️ 5–15 seconds</div>
+            <div class="compare-jake">✅ Under 1 second</div>
+          </div>
+        </div>
+
+        <div class="compare-card row-alt">
+          <div class="compare-feature">
+            <div class="feature-name">Lighthouse Performance Score</div>
+            <div class="feature-desc">Google's official website performance grade</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">⚠️ 50–75 / 100</div>
+            <div class="compare-jake">✅ 100 / 100 — Perfect</div>
+          </div>
+        </div>
+
+        <div class="compare-card">
+          <div class="compare-feature">
+            <div class="feature-name">ADA / WCAG Accessibility</div>
+            <div class="feature-desc">Legal compliance for users with disabilities</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">⚠️ Rarely included</div>
+            <div class="compare-jake">✅ Built in, every page</div>
+          </div>
+        </div>
+
+        <div class="compare-card row-alt">
+          <div class="compare-feature">
+            <div class="feature-name">You Own the Website</div>
+            <div class="feature-desc">Full code and content ownership</div>
+          </div>
+          <div class="compare-cols">
+            <div class="compare-agency">⚠️ Sometimes held hostage</div>
+            <div class="compare-jake">✅ Always — it's yours outright</div>
+          </div>
+        </div>
+
       </div>
 
       <div style="margin-top:2rem;background:#fef9c3;border:2px solid #fbbf24;border-radius:0.75rem;padding:1.25rem 1.5rem;">
@@ -462,6 +490,7 @@ import Layout from '../layouts/Layout.astro';
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    align-items: stretch;
   }
 
   .tool-card {
@@ -469,6 +498,8 @@ import Layout from '../layouts/Layout.astro';
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .tool-icon {
@@ -490,7 +521,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .score-box {
-    margin-top: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
     background: #f0fdf4;
     border: 1px solid #bbf7d0;
     border-radius: 0.5rem;
@@ -510,58 +542,90 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 0.25rem;
   }
 
-  .compare-table {
-    width: 100%;
-    border-collapse: collapse;
+  .widget-compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .compare-header-row {
+    background: #1e40af;
+    padding: 0.875rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .compare-cards {
     background: white;
     border-radius: 0.75rem;
     overflow: hidden;
-    font-size: 0.9rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
   }
 
-  .compare-table thead tr {
-    background: #1e40af;
-    color: white;
-  }
-
-  .compare-table th {
-    padding: 1rem 1.25rem;
-    font-weight: 700;
-    font-size: 0.875rem;
-  }
-
-  .compare-table td {
+  .compare-card {
     padding: 1rem 1.25rem;
     border-bottom: 1px solid #f3f4f6;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .row-alt {
+  .compare-card:last-child {
+    border-bottom: none;
+  }
+
+  .compare-card.row-alt {
     background: #f8fafc;
+  }
+
+  .compare-feature {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .compare-cols {
+    display: flex;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  .compare-agency {
+    width: 220px;
+    text-align: center;
+    color: #b91c1c;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0 1rem;
+    border-right: 1px solid #e5e7eb;
+  }
+
+  .compare-jake {
+    width: 220px;
+    text-align: center;
+    color: #15803d;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0 1rem;
+  }
+
+  .compare-agency .col-label,
+  .compare-jake .col-label {
+    display: none;
   }
 
   .feature-name {
     font-weight: 600;
     color: #111827;
     margin-bottom: 0.2rem;
+    font-size: 0.9rem;
   }
 
   .feature-desc {
     font-size: 0.78rem;
     color: #6b7280;
-  }
-
-  .agency-col {
-    text-align: center;
-    color: #b91c1c;
-    font-weight: 600;
-  }
-
-  .jake-col {
-    text-align: center;
-    color: #15803d;
-    font-weight: 600;
   }
 
   #platform-grid {
@@ -663,11 +727,39 @@ import Layout from '../layouts/Layout.astro';
     #platform-grid {
       grid-template-columns: 1fr;
     }
+    .widget-compare-grid {
+      grid-template-columns: 1fr;
+    }
+    .compare-card {
+      flex-wrap: wrap;
+    }
+    .compare-cols {
+      width: 100%;
+    }
+    .compare-agency,
+    .compare-jake {
+      width: 50%;
+      font-size: 0.8rem;
+    }
   }
 
   @media (max-width: 480px) {
     #stat-cards {
       grid-template-columns: repeat(2, 1fr);
+    }
+    .compare-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .compare-cols {
+      width: 100%;
+    }
+    .compare-agency,
+    .compare-jake {
+      width: 50%;
+      text-align: left;
+      padding: 0.25rem 0.5rem 0.25rem 0;
+      border-right: none;
     }
   }
 </style>
