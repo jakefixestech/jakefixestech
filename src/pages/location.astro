@@ -16,25 +16,25 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
     </div>
   </section>
 
+  <!-- Appointment Notice — Full Width Section -->
+  <section style="background:#1e40af;padding:2rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem;">
+      <div style="display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.15);border-radius:50%;height:3rem;width:3rem;flex-shrink:0;">
+        <svg style="height:1.5rem;width:1.5rem;color:white;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div style="flex:1;min-width:200px;">
+        <p style="font-size:1.1rem;font-weight:800;color:white;margin-bottom:0.25rem;">By Appointment Only</p>
+        <p style="color:#bfdbfe;font-size:0.95rem;line-height:1.6;">Please call or text before stopping by. Same-day appointments are often available!</p>
+      </div>
+      <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;white-space:nowrap;flex-shrink:0;">
+        Contact Jake
+        <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
   <section style="background:#f8fafc;padding:3rem 1.5rem 5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
-
-      <!-- Launch Date Banner -->
-      <div style="background:#fefce8;border:2px solid #eab308;border-radius:0.75rem;padding:1.25rem 1.5rem;margin-bottom:2rem;text-align:center;">
-        <p style="font-size:1rem;font-weight:700;color:#854d0e;">🚀 Official Launch Date: April 18th, 2026</p>
-        <p style="font-size:0.875rem;color:#92400e;margin-top:0.25rem;">Jake Fixes Tech LLC opens Saturday April 18th — <a href="/contact" style="color:#92400e;font-weight:700;text-decoration:underline;">reserve your spot now</a> before we open!</p>
-      </div>
-
-      <!-- Appointment Notice -->
-      <div style="background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.25rem 1.5rem;margin-bottom:2rem;display:flex;align-items:flex-start;gap:1rem;">
-        <div style="background:#2563eb;border-radius:50%;height:2.5rem;width:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;">
-          <svg style="height:1.25rem;width:1.25rem;color:white;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <div>
-          <h2 style="font-weight:700;color:#1e40af;font-size:1rem;margin-bottom:0.25rem;">By Appointment Only</h2>
-          <p style="color:#1e40af;font-size:0.9rem;line-height:1.6;">Please call, text, or <a href="/contact" style="color:#1e40af;font-weight:700;text-decoration:underline;">fill out our contact form</a> before stopping by. Same-day appointments are often available!</p>
-        </div>
-      </div>
 
       <!-- Cards Grid -->
       <div id="location-grid">
@@ -76,7 +76,7 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
             </div>
             <h2 class="card-title">Contact Info</h2>
           </div>
-          <ul style="display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem;list-style:none;padding:0;margin:0;">
+          <ul style="display:flex;flex-direction:column;gap:0.75rem;list-style:none;padding:0;margin:0;">
             <li>
               <a href="https://maps.google.com/?q=28+Groves+Street+Littleton+NH+03561" target="_blank" rel="noopener noreferrer" class="contact-link">
                 <div class="contact-icon">
@@ -199,6 +199,8 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
     border-radius: 0.5rem;
     padding: 0.625rem 0.875rem;
     font-size: 0.875rem;
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
 
   .hours-row span {
