@@ -2,30 +2,24 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Contact & Reserve a Spot | Jake Fixes Tech — Littleton, NH"
-description="Reserve your future spot before Jake Fixes Tech opens April 18th. Fill out the form and Jake will be in touch to confirm your appointment.">
+<Layout title="Contact | Jake Fixes Tech — Littleton, NH"
+description="Get in touch with Jake Fixes Tech for computer repair, tech support or website design. Call, text or fill out the form and I'll get back to you within 24 hours.">
 
   <!-- Hero Banner -->
   <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
     <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" width="1200" height="630" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
     <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Contact & Reserve</p>
-      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Reserve Your Spot</h1>
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Contact</p>
+      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Get in Touch</h1>
       <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">
-        Fill out the form below and I'll get back to you within 24 hours to confirm your appointment.
+        Have a question or ready to get started? Fill out the form below and I'll get back to you within 24 hours.
       </p>
     </div>
   </section>
 
   <section style="background:#f8fafc;padding:3rem 1.5rem 5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
-
-      <!-- Pre-launch Banner -->
-      <div style="background:#fefce8;border:2px solid #eab308;border-radius:0.75rem;padding:1.25rem 1.5rem;margin-bottom:2rem;text-align:center;">
-        <p style="font-size:1rem;font-weight:700;color:#854d0e;">🎉 Now Accepting Pre-Launch Reservations!</p>
-        <p style="font-size:0.875rem;color:#92400e;margin-top:0.25rem;">Jake Fixes Tech officially opens April 18th, 2026. Fill out the form and I'll be in touch to confirm your future spot. No payment required to reserve.</p>
-      </div>
 
       <!-- Contact Options -->
       <div id="contact-options">
@@ -72,7 +66,7 @@ description="Reserve your future spot before Jake Fixes Tech opens April 18th. F
           <input type="hidden" name="access_key" value="46f02289-b380-48e0-9273-5b0a17f21f63" />
           <input type="hidden" name="subject" value="New Contact Form Submission — Jake Fixes Tech" />
           <input type="hidden" name="from_name" value="Jake Fixes Tech Website" />
-          <input type="checkbox" name="botcheck" style="display:none;" />
+          <input type="checkbox" name="botcheck" aria-label="Leave this field empty" aria-hidden="true" tabindex="-1" style="display:none;" />
 
           <div class="form-grid">
 
@@ -152,7 +146,7 @@ description="Reserve your future spot before Jake Fixes Tech opens April 18th. F
                 <optgroup label="Web Design">
                   <option value="web-starter">Website — Starter Package ($750)</option>
                   <option value="web-professional">Website — Professional Package ($2,000)</option>
-                  <option value="web-premium">Website — Premium Package ($5,000+)</option>
+                  <option value="web-premium">Website — Premium Package ($3,500+)</option>
                   <option value="web-other">Website — Not Sure / Just Inquiring</option>
                 </optgroup>
                 <option value="other">Something Else</option>
@@ -231,7 +225,7 @@ description="Reserve your future spot before Jake Fixes Tech opens April 18th. F
         result.style.background = '#f0fdf4';
         result.style.border = '1px solid #86efac';
         result.style.color = '#15803d';
-        result.textContent = '✅ Message sent! I\'ll be in touch within 24 hours to confirm your future spot.';
+        result.textContent = '✅ Message sent! I\'ll get back to you within 24 hours.';
         form.reset();
       } else {
         throw new Error('Submission failed');
