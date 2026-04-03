@@ -9,7 +9,12 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://jakefixestech.com',
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        external: ['/pagefind/pagefind.js']
+      }
+    }
   },
 
   integrations: [sitemap()]

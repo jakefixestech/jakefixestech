@@ -21,6 +21,23 @@
       <li><a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900">Contact</a></li>
     </ul>
 
+    <!-- Search form (desktop) -->
+    <form action="/search" method="get" role="search" class="hidden md:flex items-center">
+      <label for="nav-search" class="sr-only">Search Jake Fixes Tech</label>
+      <div class="search-wrap">
+        <svg class="search-icon" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input
+          type="search"
+          id="nav-search"
+          name="q"
+          placeholder="Search..."
+          autocomplete="off"
+          class="search-input"
+          aria-label="Search Jake Fixes Tech"
+        />
+      </div>
+    </form>
+
     <button id="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" class="inline-flex items-center justify-center rounded-md p-2 text-gray-900 md:hidden">
       <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -36,8 +53,74 @@
       <li><a href="/web-services" class="block rounded-md px-3 py-2.5 text-base font-medium text-gray-600 hover:bg-gray-100">Web Design</a></li>
       <li><a href="/contact" class="block rounded-md px-3 py-2.5 text-base font-medium text-gray-600 hover:bg-gray-100">Contact</a></li>
     </ul>
+    <!-- Mobile search -->
+    <form action="/search" method="get" role="search" class="mt-4">
+      <label for="nav-search-mobile" class="sr-only">Search Jake Fixes Tech</label>
+      <div class="search-wrap" style="width:100%;">
+        <svg class="search-icon" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input
+          type="search"
+          id="nav-search-mobile"
+          name="q"
+          placeholder="Search..."
+          autocomplete="off"
+          class="search-input"
+          style="width:100%;"
+          aria-label="Search Jake Fixes Tech"
+        />
+      </div>
+    </form>
   </div>
 </header>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .search-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 0.6rem;
+    height: 1rem;
+    width: 1rem;
+    color: #9ca3af;
+    pointer-events: none;
+    flex-shrink: 0;
+  }
+
+  .search-input {
+    padding: 0.4rem 0.75rem 0.4rem 2rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    color: #111827;
+    background: white;
+    width: 160px;
+    transition: border-color 0.15s, box-shadow 0.15s, width 0.2s;
+    height: 2.25rem;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    width: 220px;
+  }
+</style>
 
 <script>
   const toggle = document.getElementById('mobile-toggle');
