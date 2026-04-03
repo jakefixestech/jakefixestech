@@ -1,0 +1,411 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Hardware Upgrades | Jake Fixes Tech — Littleton, NH"
+description="RAM upgrades, SSD installations and HDD-to-SSD migrations in Littleton, NH. On-site cloning hardware means you keep all your files. Windows and Linux only. Serving the North Country.">
+
+  <!-- Header Banner -->
+  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
+    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+        <a href="/services" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
+      </p>
+      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Hardware Upgrades</h1>
+      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
+        Before you buy a new computer, let's talk. A RAM upgrade or SSD swap can make a slow, aging machine feel brand new — for a fraction of the cost of a replacement.
+      </p>
+      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+          Book an Upgrade
+          <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
+          View Pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Bar -->
+  <section style="background:#1e40af;padding:1.25rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem;text-align:center;">
+      <div>
+        <div style="font-size:1.75rem;font-weight:800;color:white;">$60+</div>
+        <div style="font-size:0.8rem;color:#bfdbfe;font-weight:600;">Labor + Parts</div>
+      </div>
+      <div style="width:1px;height:2.5rem;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
+      <div>
+        <div style="font-size:1.75rem;font-weight:800;color:white;">Files Kept</div>
+        <div style="font-size:0.8rem;color:#bfdbfe;font-weight:600;">On-Site Cloning Hardware</div>
+      </div>
+      <div style="width:1px;height:2.5rem;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
+      <div>
+        <div style="font-size:1.75rem;font-weight:800;color:white;">Windows & Linux</div>
+        <div style="font-size:0.8rem;color:#bfdbfe;font-weight:600;">No Apple Hardware</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Don't Buy New Yet -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Before You Replace It</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Your Computer Might Just Need an Upgrade</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">A slow computer doesn't always mean it's time for a new one. In many cases, the hardware inside is perfectly capable — it's just undersized for what you're asking it to do today. Adding RAM or swapping to an SSD is often all it takes to go from frustratingly slow to noticeably fast. I've done this dozens of times and the results speak for themselves.</p>
+      </div>
+
+      <div id="upgrade-types">
+
+        <div class="upgrade-card" style="border-left:4px solid #2563eb;">
+          <div class="upgrade-icon" style="background:#eff6ff;color:#1e40af;">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg>
+          </div>
+          <div>
+            <h3 class="upgrade-title">RAM Upgrade</h3>
+            <p class="upgrade-desc">RAM is what your computer uses to run programs simultaneously. If you're running out, everything slows down — your browser, your apps, your whole experience. Upgrading RAM is one of the fastest and most affordable ways to breathe new life into a machine that struggles with everyday tasks. I check compatibility first and only proceed if your RAM slots are accessible and upgradeable.</p>
+            <div class="upgrade-price">Starting at $60 + parts</div>
+          </div>
+        </div>
+
+        <div class="upgrade-card" style="border-left:4px solid #15803d;">
+          <div class="upgrade-icon" style="background:#f0fdf4;color:#15803d;">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="3"/><path d="M2 12c0 1.66 4.48 3 10 3s10-1.34 10-3"/><path d="M2 12v6c0 1.66 4.48 3 10 3s10-1.34 10-3v-6"/></svg>
+          </div>
+          <div>
+            <h3 class="upgrade-title">HDD to SSD Migration</h3>
+            <p class="upgrade-desc">This is the single biggest upgrade you can make to an older computer. Traditional hard drives are mechanical — they have spinning platters and moving parts that are slow by nature. Solid state drives have no moving parts and are dramatically faster. A computer that used to take several minutes to boot can start up in seconds after this swap. I use dedicated cloning hardware to copy everything from your old drive to the new one. Your files, your programs, your settings — all intact.</p>
+            <div class="upgrade-price">Starting at $85 + parts</div>
+          </div>
+        </div>
+
+        <div class="upgrade-card" style="border-left:4px solid #7c3aed;">
+          <div class="upgrade-icon" style="background:#f5f3ff;color:#6d28d9;">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h.01M10 12h.01"/></svg>
+          </div>
+          <div>
+            <h3 class="upgrade-title">NVMe SSD Upgrade</h3>
+            <p class="upgrade-desc">NVMe SSDs are the fastest storage drives available for consumer computers. If your machine has an M.2 slot, upgrading to NVMe storage delivers significantly faster load times, faster file transfers, and a snappier overall experience compared to even a standard SSD. I have cloning hardware specifically for NVMe drives so your data transfers cleanly with no reinstalling required.</p>
+            <div class="upgrade-price">Starting at $85 + parts</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- The Cloning Advantage -->
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">No Data Loss</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Your Files Stay Right Where They Are</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">The biggest concern most people have about a hardware upgrade is losing their files. With my on-site cloning hardware, that's not a concern. I clone your existing drive to the new one before anything gets swapped out. You get a faster machine with everything exactly as you left it.</p>
+      </div>
+
+      <div id="clone-grid">
+        <div class="clone-card">
+          <span class="clone-icon">💾</span>
+          <h3>Traditional HDD Cloning</h3>
+          <p>For older machines with standard 2.5" or 3.5" hard drives. Everything gets copied over before the swap.</p>
+        </div>
+        <div class="clone-card">
+          <span class="clone-icon">⚡</span>
+          <h3>SSD Cloning</h3>
+          <p>Upgrading from one SSD to a larger or faster one. Dedicated hardware makes the transfer clean and complete.</p>
+        </div>
+        <div class="clone-card">
+          <span class="clone-icon">🚀</span>
+          <h3>NVMe Cloning</h3>
+          <p>M.2 NVMe drive upgrades handled with the right cloning hardware. Fast, accurate, no reinstalling anything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Can't Upgrade -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Honest Expectations</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Not Every Machine Can Be Upgraded</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">I'd rather tell you upfront than have you come in for something that isn't possible. Here's what I won't be able to help with, and why.</p>
+      </div>
+
+      <div id="limits-grid">
+        <div class="limit-card">
+          <span style="font-size:1.5rem;">🍎</span>
+          <div>
+            <h3>Apple Hardware</h3>
+            <p>I do not work on Apple hardware at all. No MacBook RAM, no iMac SSD, no Mac Mini upgrades. Software support only for Mac users.</p>
+          </div>
+        </div>
+        <div class="limit-card">
+          <span style="font-size:1.5rem;">🔩</span>
+          <div>
+            <h3>Soldered Components</h3>
+            <p>Many modern thin laptops have RAM soldered directly to the motherboard. If it's soldered in, it can't be upgraded. I'll check your specific model before anything else so you know exactly what's possible.</p>
+          </div>
+        </div>
+        <div class="limit-card">
+          <span style="font-size:1.5rem;">📱</span>
+          <div>
+            <h3>Phones & Tablets</h3>
+            <p>Mobile device storage and RAM are not upgradeable. If your phone is running out of space, that's a software and storage management conversation, not a hardware one.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.5rem;background:#fffbeb;border:2px solid #f59e0b;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:0.75rem;">
+        <span style="font-size:1.25rem;flex-shrink:0;">💡</span>
+        <p style="font-size:0.875rem;color:#92400e;line-height:1.6;margin:0;">Not sure if your machine is upgradeable? Bring it in or reach out and I'll check the specs for free before you commit to anything.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signs You Need This -->
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Is It Time?</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Signs Your Computer Needs an Upgrade</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">These are the most common signs that a hardware upgrade could make a real difference for you.</p>
+      </div>
+      <div id="symptoms-grid">
+        <div class="symptom-card">
+          <span class="symptom-icon">🐌</span>
+          <h3>Slow Boot Times</h3>
+          <p>Taking several minutes to start up is almost always a sign of an aging hard drive. An SSD swap fixes this dramatically.</p>
+        </div>
+        <div class="symptom-card">
+          <span class="symptom-icon">🌀</span>
+          <h3>Constant Loading Spinners</h3>
+          <p>If programs are slow to open and your drive light is constantly on, your storage can't keep up. An SSD changes everything.</p>
+        </div>
+        <div class="symptom-card">
+          <span class="symptom-icon">🥶</span>
+          <h3>Freezing With Multiple Tabs</h3>
+          <p>If opening a few browser tabs slows your whole computer down, you're likely running low on RAM.</p>
+        </div>
+        <div class="symptom-card">
+          <span class="symptom-icon">💸</span>
+          <h3>Thinking About Buying New</h3>
+          <p>Before spending $500-$1,000 on a new machine, let me look at what you have. An upgrade at a fraction of that cost might be all you need.</p>
+        </div>
+        <div class="symptom-card">
+          <span class="symptom-icon">📂</span>
+          <h3>Running Out of Storage</h3>
+          <p>A larger SSD gives you more room and faster performance at the same time. Two problems solved with one upgrade.</p>
+        </div>
+        <div class="symptom-card">
+          <span class="symptom-icon">🔊</span>
+          <h3>Fan Running Constantly</h3>
+          <p>Older hard drives make your system work harder, generating more heat. SSDs run cooler and quieter by design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:4rem 1.5rem;text-align:center;">
+    <div style="max-width:40rem;margin:0 auto;">
+      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Ready to Speed Things Up?</h2>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">Don't replace it yet. Bring it in and let me take a look. A quick spec check is free and I'll tell you exactly what's possible and what it'll cost before anything gets started.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get in Touch
+        </a>
+        <a href="tel:+18022341552" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.54-.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 17z"/></svg>
+          (802) 234-1552
+        </a>
+      </div>
+      <p style="color:#bfdbfe;font-size:0.875rem;margin-top:1.5rem;">
+        <a href="/services" style="color:#bfdbfe;text-decoration:underline;" aria-label="Back to all services">← Back to All Services</a>
+      </p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  #upgrade-types {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .upgrade-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .upgrade-icon {
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .upgrade-icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .upgrade-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .upgrade-desc {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .upgrade-price {
+    display: inline-block;
+    background: #eff6ff;
+    color: #1e40af;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+
+  #clone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .clone-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .clone-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .clone-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.375rem;
+  }
+
+  .clone-card p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  #limits-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .limit-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .limit-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+  }
+
+  .limit-card p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  #symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .symptom-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  .symptom-icon {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .symptom-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.375rem;
+  }
+
+  .symptom-card p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .upgrade-card {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    #clone-grid {
+      grid-template-columns: 1fr;
+    }
+    #symptoms-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    #clone-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #symptoms-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
