@@ -2,90 +2,134 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Search | Jake Fixes Tech" description="Search Jake Fixes Tech for services, pricing, web design and more.">
+<Layout title="Computer Repair Services | Jake Fixes Tech — Littleton, NH"
+description="Screen repair, virus removal, data recovery, hardware upgrades, gaming console repair and more. Flat rate pricing, no hidden fees. Serving Littleton NH.">
 
   <!-- Header Banner -->
   <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
     <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Search</p>
-      <h1 style="margin-top:0.5rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">What are you looking for?</h1>
-      <div style="margin-top:1.5rem;max-width:36rem;margin-left:auto;margin-right:auto;">
-        <form action="/search" method="get" role="search" style="display:flex;gap:0.5rem;">
-          <label for="hero-search" class="sr-only">Search Jake Fixes Tech</label>
-          <input
-            type="search"
-            id="hero-search"
-            name="q"
-            placeholder="Try 'virus removal' or 'web design'..."
-            autocomplete="off"
-            style="flex:1;padding:0.875rem 1.25rem;border:none;border-radius:0.5rem;font-size:1rem;color:#111827;background:white;min-width:0;"
-            aria-label="Search Jake Fixes Tech"
-          />
-          <button type="submit" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 1.5rem;border-radius:0.5rem;border:none;cursor:pointer;font-size:1rem;white-space:nowrap;">
-            <svg style="height:1.1rem;width:1.1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-            Search
-          </button>
-        </form>
-      </div>
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">What I Do</p>
+      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Common Repairs I Handle Every Day</h1>
+      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
+        No job is too big or too small. Whether it's a quick cleanup or a major component swap, I treat every machine like it's my own.
+      </p>
     </div>
   </section>
 
-  <!-- Results Section -->
-  <section style="background:#f8fafc;padding:3rem 1.5rem 5rem 1.5rem;min-height:50vh;">
-    <div style="max-width:56rem;margin:0 auto;">
+  <section class="bg-gray-50 py-20">
+    <div class="mx-auto max-w-7xl px-6">
 
-      <div id="search-status" style="margin-bottom:1.5rem;"></div>
-      <div id="search-results-list" aria-live="polite" aria-label="Search results"></div>
+      <div id="services-grid">
 
-      <!-- Quick Links (shown when no search) -->
-      <div id="quick-links">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:1rem;">Popular Pages</p>
-        <div id="quick-grid">
-          <a href="/services" class="quick-card">
-            <span class="quick-icon">🔧</span>
-            <div>
-              <div class="quick-title">Computer Repair Services</div>
-              <div class="quick-desc">Screen repair, virus removal, hardware upgrades and more</div>
-            </div>
-          </a>
-          <a href="/pricing" class="quick-card">
-            <span class="quick-icon">💰</span>
-            <div>
-              <div class="quick-title">Pricing</div>
-              <div class="quick-desc">Transparent flat rate pricing for all services</div>
-            </div>
-          </a>
-          <a href="/web-services" class="quick-card">
-            <span class="quick-icon">🌐</span>
-            <div>
-              <div class="quick-title">Web Design</div>
-              <div class="quick-desc">Custom website design and management packages</div>
-            </div>
-          </a>
-          <a href="/location" class="quick-card">
-            <span class="quick-icon">📍</span>
-            <div>
-              <div class="quick-title">Hours & Location</div>
-              <div class="quick-desc">Find us in Littleton, NH — by appointment only</div>
-            </div>
-          </a>
-          <a href="/about" class="quick-card">
-            <span class="quick-icon">👤</span>
-            <div>
-              <div class="quick-title">About Jake</div>
-              <div class="quick-desc">Learn about Jake Fixes Tech and what sets us apart</div>
-            </div>
-          </a>
-          <a href="/contact" class="quick-card">
-            <span class="quick-icon">✉️</span>
-            <div>
-              <div class="quick-title">Contact</div>
-              <div class="quick-desc">Get in touch to book a repair or ask a question</div>
-            </div>
-          </a>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h2>Screen Repair</h2>
+          <p>Cracked, flickering, or dead screens? I replace a variety of laptop and desktop screens quickly and affordably. Note: Apple hardware repairs not available.</p>
         </div>
+
+        <a href="/services/virus-removal" class="service-card" style="text-decoration:none;display:block;">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h2>Virus & Malware Removal</h2>
+          <p>Thorough cleaning and protection setup to get your computer running safely again.</p>
+          <span style="display:inline-flex;align-items:center;gap:0.25rem;color:#2563eb;font-size:0.8rem;font-weight:600;margin-top:0.75rem;">Learn more →</span>
+        </a>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="3"/><path d="M2 12c0 1.66 4.48 3 10 3s10-1.34 10-3"/><path d="M2 12v6c0 1.66 4.48 3 10 3s10-1.34 10-3v-6"/></svg>
+          </div>
+          <h2>Data Recovery</h2>
+          <p>Lost important files? I use professional recovery software to retrieve deleted, corrupted or lost data from drives, USB drives and memory cards. For severe physical damage I'll point you to the right specialists.</p>
+        </div>
+
+        <a href="/services/hardware-upgrades" class="service-card" style="text-decoration:none;display:block;">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg>
+          </div>
+          <h2>Hardware Upgrades</h2>
+          <p>Speed up your machine with RAM upgrades, SSD installations, and other hardware improvements. Windows and Linux machines only.</p>
+          <span style="display:inline-flex;align-items:center;gap:0.25rem;color:#2563eb;font-size:0.8rem;font-weight:600;margin-top:0.75rem;">Learn more →</span>
+        </a>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h2>Broken Tech Repairs</h2>
+          <p>Physically damaged or completely dead devices? I diagnose and fix a wide range of broken tech issues.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h2>On-Site Tech Support</h2>
+          <p>I come to you! From WiFi setup to teaching you how to use your devices safely, I offer friendly on-site visits for homes and small businesses in the Littleton area.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h.01M10 12h.01M7 9l-1 3 1 3M13 9l1 3-1 3"/></svg>
+          </div>
+          <h2>Gaming Console Repair</h2>
+          <p>PlayStation, Xbox, Nintendo Switch and more. I diagnose and repair common console issues including disc drives, overheating and more.</p>
+        </div>
+
+        <a href="/services/tech-tutoring" class="service-card" style="text-decoration:none;display:block;">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h2>Tech Tutoring</h2>
+          <p>Patient, friendly one-on-one tech help for all skill levels. Email, safe browsing, device setup, and anything else you need help understanding.</p>
+          <span style="display:inline-flex;align-items:center;gap:0.25rem;color:#2563eb;font-size:0.8rem;font-weight:600;margin-top:0.75rem;">Learn more →</span>
+        </a>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h2>Website Creation</h2>
+          <p>Need a professional website for your business? I design, build and host custom websites. <a href="/web-services" style="color:#2563eb;font-weight:600;">View packages & pricing →</a></p>
+        </div>
+
+        <a href="/services/mac-software" class="service-card" style="text-decoration:none;display:block;">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M12 8h.01"/><circle cx="17" cy="8" r="1"/></svg>
+          </div>
+          <h2>Mac & Apple Software</h2>
+          <p>macOS installation, upgrades and troubleshooting on any Mac. I also install Linux on older Macs (2012–2018) to give them a new life. Software only — no Apple hardware repairs.</p>
+          <span style="display:inline-flex;align-items:center;gap:0.25rem;color:#2563eb;font-size:0.8rem;font-weight:600;margin-top:0.75rem;">Learn more →</span>
+        </a>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h2>Android Phone Screen Repair (Later in 2026)</h2>
+          <p>I am currently not doing cell phone screen replacements. I plan to offer this service late 2026, once I get specialized tools to do so. Stay tuned.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h2>Remote Support</h2>
+          <p>Can't make it in? I can diagnose and fix many software issues remotely. Fast, convenient support from the comfort of your own home.</p>
+        </div>
+
+      </div>
+
+      <div style="margin-top:3rem;text-align:center;">
+        <p style="color:#4b5563;margin-bottom:1rem;">Don't see what you need? Just ask — chances are I can help!</p>
+        <a href="/contact" style="display:inline-flex;align-items:center;justify-content:center;border-radius:0.375rem;background-color:#2563eb;padding:0.75rem 1.5rem;font-size:1rem;font-weight:500;color:white;text-decoration:none;">
+          Get in Touch
+        </a>
       </div>
 
     </div>
@@ -94,189 +138,66 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  #quick-grid {
+  #services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 3.5rem;
   }
 
-  .quick-card {
+  .service-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s;
+    color: inherit;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .service-icon {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-    text-decoration: none;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-
-  .quick-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transform: translateY(-1px);
-  }
-
-  .quick-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .quick-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.2rem;
-  }
-
-  .quick-desc {
-    font-size: 0.8rem;
-    color: #6b7280;
-    line-height: 1.5;
-  }
-
-  .result-card {
-    display: block;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.25rem 1.5rem;
-    text-decoration: none;
-    transition: box-shadow 0.2s, transform 0.2s;
-    margin-bottom: 1rem;
-  }
-
-  .result-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transform: translateY(-1px);
-  }
-
-  .result-title {
-    font-size: 1.1rem;
-    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-color: #dbeafe;
     color: #2563eb;
-    margin-bottom: 0.375rem;
-  }
-
-  .result-url {
-    font-size: 0.75rem;
-    color: #15803d;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-  }
-
-  .result-excerpt {
-    font-size: 0.9rem;
-    color: #4b5563;
-    line-height: 1.6;
-  }
-
-  .result-excerpt mark {
-    background: #fef9c3;
-    color: #111827;
-    border-radius: 2px;
-    padding: 0 2px;
-  }
-
-  .no-results {
-    text-align: center;
-    padding: 3rem 1.5rem;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-  }
-
-  .no-results-icon {
-    font-size: 3rem;
-    display: block;
     margin-bottom: 1rem;
   }
 
-  .no-results h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
+  .service-icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
     color: #111827;
     margin-bottom: 0.5rem;
   }
 
-  .no-results p {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-bottom: 1.5rem;
+  .service-card p {
+    font-size: 0.875rem;
+    line-height: 1.625;
+    color: #4b5563;
   }
 
-  @media (max-width: 640px) {
-    #quick-grid {
+  @media (max-width: 768px) {
+    #services-grid {
       grid-template-columns: 1fr;
     }
   }
-</style>
 
-<script>
-  async function runSearch() {
-    const params = new URLSearchParams(window.location.search);
-    const query = params.get('q')?.trim() ?? '';
-    const statusEl = document.getElementById('search-status');
-    const resultsEl = document.getElementById('search-results-list');
-    const quickLinks = document.getElementById('quick-links');
-    const heroInput = document.getElementById('hero-search') as HTMLInputElement;
-
-    if (heroInput && query) heroInput.value = query;
-
-    if (!query || !statusEl || !resultsEl || !quickLinks) return;
-
-    quickLinks.hidden = true;
-    statusEl.innerHTML = '<p style="color:#6b7280;font-size:0.9rem;">Searching...</p>';
-
-    let pagefind: any;
-    try {
-      // @ts-ignore
-      pagefind = await import(/* @vite-ignore */ '/pagefind/pagefind.js');
-      await pagefind.init();
-    } catch {
-      statusEl.innerHTML = '<p style="color:#6b7280;font-size:0.9rem;">Search index not available. Try again on the live site.</p>';
-      return;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    #services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-    const results = await pagefind.search(query);
-    const data = await Promise.all(results.results.map((r: any) => r.data()));
-
-    if (data.length === 0) {
-      statusEl.innerHTML = '';
-      resultsEl.innerHTML = `
-        <div style="text-align:center;padding:3rem 1.5rem;background:white;border:1px solid #e5e7eb;border-radius:0.75rem;">
-          <span style="font-size:3rem;display:block;margin-bottom:1rem;">🔍</span>
-          <h2 style="font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:0.5rem;">No results for "${query}"</h2>
-          <p style="font-size:0.9rem;color:#6b7280;margin-bottom:1.5rem;">Try a different search term or browse the popular pages below.</p>
-          <a href="/services" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;">Browse All Services</a>
-        </div>
-      `;
-      quickLinks.hidden = false;
-      return;
-    }
-
-    statusEl.innerHTML = `<p style="color:#6b7280;font-size:0.9rem;margin-bottom:1.5rem;"><strong>${data.length}</strong> result${data.length === 1 ? '' : 's'} for "<strong>${query}</strong>"</p>`;
-
-    resultsEl.innerHTML = data.map((item: any) => `
-      <a href="${item.url}" style="display:block;background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;text-decoration:none;margin-bottom:1rem;transition:box-shadow 0.2s,transform 0.2s;cursor:pointer;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
-        <div style="font-size:1.1rem;font-weight:700;color:#2563eb;margin-bottom:0.375rem;">${item.meta?.title ?? 'Jake Fixes Tech'}</div>
-        <div style="font-size:0.75rem;color:#15803d;margin-bottom:0.5rem;font-weight:500;">jakefixestech.com${item.url}</div>
-        <div style="font-size:0.9rem;color:#4b5563;line-height:1.6;">${item.excerpt ?? ''}</div>
-      </a>
-    `).join('');
   }
-
-  runSearch();
-</script>
+</style>
