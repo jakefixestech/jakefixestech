@@ -138,11 +138,32 @@
   });
 
   // Scroll mobile search into view when focused — fixes Facebook/Instagram WebView
-  // keyboard pushing the input out of view
   const mobileSearch = document.getElementById('nav-search-mobile');
+
+  function ensureSearchVisible() {
+    if (!mobileSearch) return;
+    const rect = mobileSearch.getBoundingClientRect();
+    const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    // If input is below the visible viewport area, scroll it into view
+    if (rect.bottom > viewportHeight - 20) {
+      const scrollY = window.scrollY + rect.top - (viewportHeight / 2) + (rect.height / 2);
+      window.scrollTo({ top: scrollY, behavior: 'smooth' });
+    }
+  }
+
   mobileSearch?.addEventListener('focus', () => {
-    setTimeout(() => {
-      mobileSearch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 300);
+    // Fire immediately and again after keyboard finishes opening
+    setTimeout(ensureSearchVisible, 100);
+    setTimeout(ensureSearchVisible, 350);
+    setTimeout(ensureSearchVisible, 600);
   });
+
+  // visualViewport API fires when keyboard resizes the viewport (most reliable for WebViews)
+  if (window.visualViewport && mobileSearch) {
+    window.visualViewport.addEventListener('resize', () => {
+      if (document.activeElement === mobileSearch) {
+        setTimeout(ensureSearchVisible, 50);
+      }
+    });
+  }
 </script>
