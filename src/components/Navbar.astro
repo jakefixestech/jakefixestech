@@ -136,4 +136,13 @@
     toggle.setAttribute('aria-expanded', String(!expanded));
     toggle.setAttribute('aria-label', !expanded ? 'Close navigation menu' : 'Open navigation menu');
   });
+
+  // Scroll mobile search into view when focused — fixes Facebook/Instagram WebView
+  // keyboard pushing the input out of view
+  const mobileSearch = document.getElementById('nav-search-mobile');
+  mobileSearch?.addEventListener('focus', () => {
+    setTimeout(() => {
+      mobileSearch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  });
 </script>
