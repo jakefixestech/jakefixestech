@@ -44,7 +44,7 @@
     </button>
   </nav>
 
-  <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white px-6 pb-6 md:hidden">
+  <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white px-6 pb-6 md:hidden" style="position:fixed;top:73px;left:0;right:0;z-index:49;box-shadow:0 4px 12px rgba(0,0,0,0.1);max-height:calc(100vh - 73px);overflow-y:auto;">
     <ul class="flex flex-col gap-1 pt-4">
       <li><a href="/services" class="block rounded-md px-3 py-2.5 text-base font-medium text-gray-600 hover:bg-gray-100">Services</a></li>
       <li><a href="/pricing" class="block rounded-md px-3 py-2.5 text-base font-medium text-gray-600 hover:bg-gray-100">Pricing</a></li>
@@ -136,34 +136,4 @@
     toggle.setAttribute('aria-expanded', String(!expanded));
     toggle.setAttribute('aria-label', !expanded ? 'Close navigation menu' : 'Open navigation menu');
   });
-
-  // Scroll mobile search into view when focused — fixes Facebook/Instagram WebView
-  const mobileSearch = document.getElementById('nav-search-mobile');
-
-  function ensureSearchVisible() {
-    if (!mobileSearch) return;
-    const rect = mobileSearch.getBoundingClientRect();
-    const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-    // If input is below the visible viewport area, scroll it into view
-    if (rect.bottom > viewportHeight - 20) {
-      const scrollY = window.scrollY + rect.top - (viewportHeight / 2) + (rect.height / 2);
-      window.scrollTo({ top: scrollY, behavior: 'smooth' });
-    }
-  }
-
-  mobileSearch?.addEventListener('focus', () => {
-    // Fire immediately and again after keyboard finishes opening
-    setTimeout(ensureSearchVisible, 100);
-    setTimeout(ensureSearchVisible, 350);
-    setTimeout(ensureSearchVisible, 600);
-  });
-
-  // visualViewport API fires when keyboard resizes the viewport (most reliable for WebViews)
-  if (window.visualViewport && mobileSearch) {
-    window.visualViewport.addEventListener('resize', () => {
-      if (document.activeElement === mobileSearch) {
-        setTimeout(ensureSearchVisible, 50);
-      }
-    });
-  }
 </script>
