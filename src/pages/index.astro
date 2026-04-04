@@ -185,53 +185,53 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
 
       <div id="preview-grid">
 
-        <div class="preview-card">
-          <div class="preview-icon">
+        <a href="/services/screen-repair" class="preview-card" style="text-decoration:none;display:block;color:inherit;" aria-label="Screen Repair — learn about screen replacement services">
+          <div class="preview-icon" aria-hidden="true">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <h3>Screen Repair</h3>
           <p>Cracked or dead screen? I replace laptop and desktop displays quickly and affordably.</p>
-        </div>
+        </a>
 
-        <div class="preview-card">
-          <div class="preview-icon">
+        <a href="/services/virus-removal" class="preview-card" style="text-decoration:none;display:block;color:inherit;" aria-label="Virus and Malware Removal — learn about computer cleaning and protection">
+          <div class="preview-icon" aria-hidden="true">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3>Virus & Malware Removal</h3>
           <p>Full system clean and protection setup to get your computer running safely again.</p>
-        </div>
+        </a>
 
-        <div class="preview-card">
-          <div class="preview-icon">
+        <a href="/services/hardware-upgrades" class="preview-card" style="text-decoration:none;display:block;color:inherit;" aria-label="Hardware Upgrades — learn about RAM, SSD and other upgrades">
+          <div class="preview-icon" aria-hidden="true">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg>
           </div>
           <h3>Hardware Upgrades</h3>
           <p>RAM, SSD and other upgrades to make your old computer feel brand new.</p>
-        </div>
+        </a>
 
-        <div class="preview-card">
-          <div class="preview-icon">
+        <a href="/services/data-recovery" class="preview-card" style="text-decoration:none;display:block;color:inherit;" aria-label="Data Recovery — learn about recovering lost or deleted files">
+          <div class="preview-icon" aria-hidden="true">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="3"/><path d="M2 12c0 1.66 4.48 3 10 3s10-1.34 10-3"/><path d="M2 12v6c0 1.66 4.48 3 10 3s10-1.34 10-3v-6"/></svg>
           </div>
           <h3>Data Recovery</h3>
           <p>Lost important files? I specialize in recovering data from damaged or corrupted drives.</p>
-        </div>
+        </a>
 
-        <div class="preview-card">
-          <div class="preview-icon">
+        <a href="/services/broken-tech-repairs" class="preview-card" style="text-decoration:none;display:block;color:inherit;" aria-label="Broken Tech Repairs — learn about diagnosing and fixing damaged devices">
+          <div class="preview-icon" aria-hidden="true">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </div>
           <h3>Broken Tech Repairs</h3>
           <p>Physically damaged or completely dead devices? I diagnose and fix a wide range of issues.</p>
-        </div>
+        </a>
 
-        <div class="preview-card">
-          <div class="preview-icon">
+        <a href="/services/on-site-tech-support" class="preview-card" style="text-decoration:none;display:block;color:inherit;" aria-label="On-Site Tech Support — learn about in-home and business visits">
+          <div class="preview-icon" aria-hidden="true">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <h3>On-Site Tech Support</h3>
           <p>I come to you! On-site visits for homes and small businesses in the Littleton area.</p>
-        </div>
+        </a>
 
       </div>
 
@@ -436,11 +436,12 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     border-radius: 0.75rem;
     padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s;
   }
 
   .preview-card:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
   }
 
   .preview-icon {
