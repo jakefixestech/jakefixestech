@@ -36,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
     <div style="max-width:56rem;margin:0 auto;">
 
       <div id="search-status" style="margin-bottom:1.5rem;min-height:1.5rem;"></div>
-      <div id="search-results-list" aria-live="polite" aria-label="Search results" style="min-height:300px;"></div>
+      <div id="search-results-list" aria-live="polite" aria-label="Search results"></div>
 
       <!-- Quick Links (shown when no search) -->
       <div id="quick-links">
@@ -236,6 +236,7 @@ import Layout from '../layouts/Layout.astro';
 
     if (!query || !statusEl || !resultsEl || !quickLinks) return;
 
+    resultsEl.style.minHeight = '300px';
     quickLinks.hidden = true;
     statusEl.innerHTML = '<p style="color:#6b7280;font-size:0.9rem;">Searching...</p>';
     resultsEl.innerHTML = `
