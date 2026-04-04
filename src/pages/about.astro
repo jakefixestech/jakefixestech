@@ -105,28 +105,36 @@ description="Meet Jake Charland — Computer Information Systems graduate, forme
       <div id="credentials-grid">
 
         <div class="credential-card">
-          <div class="credential-icon">🎓</div>
+          <div class="credential-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
           <h3>Bachelor's Degree</h3>
           <p>Computer Information Systems</p>
           <p class="credential-sub">Lyndon State College, Vermont</p>
         </div>
 
         <div class="credential-card">
-          <div class="credential-icon">👨‍🏫</div>
+          <div class="credential-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <h3>College Instructor</h3>
           <p>Taught Senior Level Advanced Website Programming</p>
           <p class="credential-sub">Lyndon State College — 2 semesters</p>
         </div>
 
         <div class="credential-card">
-          <div class="credential-icon">🏫</div>
+          <div class="credential-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
           <h3>School IT Experience</h3>
           <p>IT support across multiple Vermont schools and colleges</p>
           <p class="credential-sub">10+ years hands-on experience</p>
         </div>
 
         <div class="credential-card">
-          <div class="credential-icon">🏢</div>
+          <div class="credential-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
           <h3>Infrastructure Build-Out</h3>
           <p>Solo technology setup for Do North Coworking Space</p>
           <p class="credential-sub">Lyndonville, Vermont</p>
@@ -185,8 +193,20 @@ description="Meet Jake Charland — Computer Information Systems graduate, forme
   }
 
   .credential-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: #dbeafe;
+    color: #2563eb;
+    margin: 0 auto 0.75rem auto;
+  }
+
+  .credential-icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
   }
 
   .credential-card h3 {
