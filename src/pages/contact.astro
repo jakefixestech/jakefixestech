@@ -64,7 +64,7 @@ description="Get in touch with Jake Fixes Tech for computer repair, tech support
           novalidate
         >
           <input type="hidden" name="access_key" value="46f02289-b380-48e0-9273-5b0a17f21f63" />
-          <input type="hidden" name="subject" value="New Contact Form Submission — Jake Fixes Tech" />
+          <input type="hidden" name="subject" value="New Contact Form Submission - Jake Fixes Tech" />
           <input type="hidden" name="from_name" value="Jake Fixes Tech Website" />
           <input type="checkbox" name="botcheck" aria-label="Leave this field empty" aria-hidden="true" tabindex="-1" style="display:none;" />
 
@@ -117,8 +117,8 @@ description="Get in touch with Jake Fixes Tech for computer repair, tech support
             <div class="form-group">
               <label for="contact-method" class="form-label">Preferred Contact Method</label>
               <select id="contact-method" name="preferred_contact" class="form-input">
-                <option value="either">Either — phone or email is fine</option>
-                <option value="phone">Phone / Text preferred</option>
+                <option value="either">Either is fine</option>
+                <option value="phone">Phone or text preferred</option>
                 <option value="email">Email preferred</option>
               </select>
             </div>
@@ -130,24 +130,29 @@ description="Get in touch with Jake Fixes Tech for computer repair, tech support
               <select id="service" name="service_type" required aria-required="true" class="form-input">
                 <option value="">Select a service...</option>
                 <optgroup label="Computer Repair">
-                  <option value="screen-repair">Screen Repair</option>
+                  <option value="screen-repair">Screen Repair (Laptop, Chromebook, All-in-One)</option>
                   <option value="virus-removal">Virus &amp; Malware Removal</option>
                   <option value="data-recovery">Data Recovery</option>
                   <option value="hardware-upgrade">Hardware Upgrade (RAM, SSD, etc.)</option>
                   <option value="broken-tech">Broken Tech / General Repair</option>
+                  <option value="printer-repair">Printer Repair</option>
                   <option value="mac-software">Mac &amp; Apple Software</option>
-                  <option value="console-repair">Gaming Console Repair</option>
                 </optgroup>
-                <optgroup label="Support & Services">
+                <optgroup label="Gaming">
+                  <option value="console-repair">Gaming Console Repair</option>
+                  <option value="handheld-repair">Handheld Gaming Device Repair</option>
+                  <option value="retro-repair">Retro Console / Odds &amp; Ends</option>
+                </optgroup>
+                <optgroup label="Support &amp; Services">
                   <option value="onsite-support">On-Site Tech Support</option>
                   <option value="remote-support">Remote Support</option>
                   <option value="tech-tutoring">Tech Tutoring</option>
                 </optgroup>
                 <optgroup label="Web Design">
-                  <option value="web-starter">Website — Starter Package ($750)</option>
-                  <option value="web-professional">Website — Professional Package ($2,000)</option>
-                  <option value="web-premium">Website — Premium Package ($3,500+)</option>
-                  <option value="web-other">Website — Not Sure / Just Inquiring</option>
+                  <option value="web-starter">Website - Starter Package ($750)</option>
+                  <option value="web-professional">Website - Professional Package ($2,000)</option>
+                  <option value="web-premium">Website - Premium Package ($3,500+)</option>
+                  <option value="web-other">Website - Not Sure / Just Inquiring</option>
                 </optgroup>
                 <option value="other">Something Else</option>
               </select>
@@ -158,9 +163,14 @@ description="Get in touch with Jake Fixes Tech for computer repair, tech support
               <select id="device" name="device_type" class="form-input">
                 <option value="not-applicable">Not applicable / Website inquiry</option>
                 <option value="windows-laptop">Windows Laptop</option>
-                <option value="windows-desktop">Windows Desktop</option>
+                <option value="windows-desktop">Windows Desktop / Tower</option>
+                <option value="chromebook">Chromebook</option>
+                <option value="linux">Linux Machine</option>
                 <option value="mac">Mac (iMac, MacBook, Mac Mini)</option>
-                <option value="gaming-console">Gaming Console</option>
+                <option value="gaming-console">Gaming Console (PS4, PS5, Xbox, etc.)</option>
+                <option value="handheld">Handheld Gaming Device (Switch, Steam Deck, Game Boy, etc.)</option>
+                <option value="printer">Printer</option>
+                <option value="external-drive">External Drive, USB Drive or Memory Card</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -175,7 +185,7 @@ description="Get in touch with Jake Fixes Tech for computer repair, tech support
                 rows="5"
                 required
                 aria-required="true"
-                placeholder="Please describe what's going on in as much detail as you can — the more info the better!"
+                placeholder="Please describe what's going on in as much detail as you can. The more info the better!"
                 class="form-input"
                 style="resize:vertical;"
               ></textarea>
