@@ -1,0 +1,485 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="FAQ | Jake Fixes Tech — Littleton, NH"
+description="Answers to the most common questions about computer repair, pricing, turnaround time, Apple devices, data privacy and web design services at Jake Fixes Tech.">
+
+  <!-- Header Banner -->
+  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
+    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">FAQ</p>
+      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Frequently Asked Questions</h1>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">Quick answers to the questions I hear most. Don't see yours? Just reach out and I'll get back to you fast.</p>
+    </div>
+  </section>
+
+  <section style="background:#f8fafc;padding:4rem 1.5rem 5rem 1.5rem;">
+    <div style="max-width:52rem;margin:0 auto;">
+
+      <!-- Pricing -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Pricing & Payment</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much does computer repair cost?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>All repairs start with a $50 diagnostic fee, which is applied toward your total if you proceed. Repair pricing from there depends on the service. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and screen replacement labor is $100 plus the cost of the part. You can see the full breakdown on the <a href="/pricing">Pricing page</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the $50 diagnostic fee and do I have to pay it?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes, the $50 diagnostic fee is required upfront before any work begins. It covers my time to assess your device and tell you exactly what's wrong and what it will cost to fix. If you decide to proceed with the repair, that $50 comes off your total. So if your repair costs $100, you only owe $50 more. If you decide not to repair, the fee is non-refundable but you leave with a clear answer on what's wrong.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What payment methods do you accept?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>I accept all major credit and debit cards, tap-to-pay including Apple Pay and Google Pay, and cash. Payment is collected at drop-off for the diagnostic fee and at pickup for the remainder.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you charge if you can't fix it?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>The $50 diagnostic fee applies regardless of outcome. That fee covers my time to diagnose the problem. If the device is unfixable or the repair isn't worth the cost, I'll tell you honestly and only the diagnostic fee applies. You won't be charged for a repair that wasn't completed.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Turnaround -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Turnaround & Availability</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long does a repair take?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Most software repairs like virus removal and OS issues are completed within 24 to 48 hours. Hardware repairs that require parts may take longer depending on part availability, typically 3 to 5 days. I'll always give you an honest timeline upfront and let you know if anything changes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            When can I drop off my device?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Drop-offs are available weekdays from 5pm to 7:30pm at my Littleton location. On-site visits are available on weekends from 9am to 4pm. Hours are subject to change so reach out first to confirm availability. You can view current hours on the <a href="/location">Hours & Location page</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you offer same-day repairs?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Same-day is sometimes possible for straightforward software issues depending on my current workload. Reach out and describe what's going on and I'll let you know if same-day is realistic. Hardware repairs requiring parts are generally not same-day.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Apple & Devices -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Apple & Device Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you work on Apple products?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes and no. I support macOS software fully, including installations, upgrades, troubleshooting and installing Linux on older Macs to give them a new life. What I do not do is Apple hardware repairs. No MacBook screen replacements, no iMac repairs, no internal hardware work on any Apple device. For hardware repairs on Apple products, Apple or an Apple Authorized Service Provider is the right call.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you fix phones?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Not currently for hardware repairs. Phone screen replacement requires specialized heat tools I don't have yet. I do handle Android software issues like virus removal and malware remotely. Phone hardware repair is something I plan to offer in the future.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you work on Chromebooks?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes, all Chromebooks are supported. Screen replacements, hardware repairs, software troubleshooting and general issues. The one exception is the Google Pixelbook and similar high-end Chromebooks that use proprietary parts which can be harder to source.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you repair gaming consoles?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes. PlayStation, Xbox, Nintendo Switch, Wii, Wii U, GameCube, N64 and other retro consoles. Common repairs include disc drive failures, overheating, Joy-Con drift, power issues and general diagnostics. I also do retro odds and ends like Game Boy cartridge battery replacements. See the <a href="/services/gaming-console-repair">Gaming Console Repair page</a> for the full breakdown.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Data & Privacy -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Data & Privacy</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is my data safe when I drop off my device?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes. I only access what is necessary to diagnose and complete the repair. I do not browse personal files, photos or documents. Your data is your business. If a repair requires wiping your device I will always discuss that with you first and attempt a backup beforehand if possible.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Should I back up my data before bringing in my device?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes, always. While I take every precaution to protect your data during a repair, some repairs carry a small risk of data loss. Backing up beforehand is the safest move. If you don't know how to back up your device, I can help with that as part of the service or as a standalone job.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can you recover files from a dead or broken computer?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Often yes. If the computer won't boot but the drive is intact, I can pull the drive, connect it externally and attempt to recover your files. Data recovery starts with a $50 assessment. If recovery is successful the total is $100. See the <a href="/services/data-recovery">Data Recovery page</a> for full details on what's possible and what isn't.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Warranty & Honesty -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Warranty & Honesty</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do repairs come with a warranty?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to my work, I'll fix it at no charge. The warranty covers labor only and does not cover new or unrelated issues, physical damage, or part failures after installation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Will you tell me if my device isn't worth fixing?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Always. If the repair cost is approaching half or more of what a replacement would cost, I'll tell you that before any work begins. I'd rather lose the job than have you spend money on something that isn't worth it. Honest advice is part of the service.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Remote & On-Site -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Remote & On-Site Support</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can you fix my computer without me bringing it in?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes, for most software issues. I offer remote support via phone, video call or by taking direct control of your screen using Chrome Remote Desktop. This works well for virus removal, software troubleshooting, OS issues, printer problems and more. Hardware repairs always require the device in person. See the <a href="/services/remote-support">Remote Support page</a> for details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you come to my home or business?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes. On-site visits are available on weekends from 9am to 4pm for homes and small businesses within roughly 30 minutes of Littleton, NH. A flat travel fee applies for distances over 10 miles. See the <a href="/services/on-site-tech-support">On-Site Tech Support page</a> for the full travel fee breakdown.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Web Design -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Web Design</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I own my website after you build it?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes, always. You own the code, the domain and all the content outright from day one. I don't hold websites hostage or lock you into a platform. If you ever want to take your site elsewhere or have someone else manage it, that's your right and I'll make the transition as easy as possible.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much does a website cost?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Build packages start at $750 for a 1 to 3 page starter site, $2,000 for a 5 to 15 page professional site, and $3,500 and up for larger custom builds. Payment is 50% upfront and 50% on launch. Optional monthly management plans are available starting at $75/month. See the full breakdown on the <a href="/web-services">Web Services page</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Will my website be fast and show up on Google?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes. Every site I build scores 100/100 on Google Lighthouse Performance and is fully SEO optimized. Sites are hosted on Cloudflare's global network so they load in under a second anywhere in the world. I also build in WCAG AA accessibility compliance on every page, which Google rewards with better rankings. See <a href="/why-different">Why My Websites Are Different</a> for the full technical breakdown.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I need to pay monthly fees after the site is built?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>No mandatory fees. Hosting is free on Cloudflare Pages, SSL is free, and backups are handled automatically through GitHub. The only ongoing cost is your domain name, typically around $10 to $15 per year. Optional management plans are available if you want me to handle updates and maintenance, but they're never required.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Search nudge -->
+      <div style="margin-top:3rem;background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+        <p style="font-size:0.875rem;color:#4b5563;margin:0;">Looking for something specific? Try searching the site.</p>
+        <a href="/search" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:600;padding:0.5rem 1rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;white-space:nowrap;">
+          <svg style="height:0.875rem;width:0.875rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Search the Site
+        </a>
+      </div>
+
+      <!-- Still have questions -->
+      <div style="margin-top:1rem;background:#eff6ff;border:2px solid #bfdbfe;border-radius:0.75rem;padding:2rem;display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;">
+        <div style="display:flex;height:3rem;width:3rem;min-width:3rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8 9a4 4 0 1 1 4 4v2"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#1e40af;margin-bottom:0.5rem;">Still Have a Question?</h3>
+          <p style="color:#1e40af;font-size:0.9rem;line-height:1.75;margin:0;">If your question isn't covered here, reach out. I respond fast and there's no such thing as a question too small.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.75rem;">
+            <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:600;padding:0.625rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;">Send a Message</a>
+            <a href="tel:+18022341552" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:600;padding:0.625rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;border:1px solid #bfdbfe;">(802) 234-1552</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<!-- FAQ Schema Markup for Google Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does computer repair cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All repairs start with a $50 diagnostic fee applied toward your total. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and screen replacement labor is $100 plus parts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the $50 diagnostic fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The $50 diagnostic fee is required upfront before any work begins. If you proceed with the repair it comes off your total. If you decide not to repair, you leave with a clear answer on what is wrong."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work on Apple products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "macOS software is fully supported including installations, upgrades and troubleshooting. Apple hardware repairs including MacBooks and iMacs are not available. For hardware repairs on Apple products, Apple or an Apple Authorized Service Provider is the right call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do repairs come with a warranty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to the repair work, it will be fixed at no charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you fix my computer remotely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for most software issues. Remote support is available via phone, video call or direct screen control using Chrome Remote Desktop. Hardware repairs always require the device in person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I own my website after you build it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, always. You own the code, the domain and all content outright from day one. No platform lock-in, no holding the site hostage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a website cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Build packages start at $750 for a 1 to 3 page starter site, $2,000 for a 5 to 15 page professional site, and $3,500 and up for larger custom builds. No mandatory monthly fees after launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you come to my home or business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. On-site visits are available weekends 9am to 4pm within roughly 30 minutes of Littleton, NH. A flat travel fee applies for distances over 10 miles."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  .faq-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-group-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #dbeafe;
+  }
+
+  .faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: white;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.125rem 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.5;
+    transition: background 0.15s;
+  }
+
+  .faq-question:hover {
+    background: #f8fafc;
+  }
+
+  .faq-question[aria-expanded="true"] {
+    background: #eff6ff;
+    color: #1e40af;
+    border-bottom: 1px solid #dbeafe;
+  }
+
+  .faq-chevron {
+    height: 1.25rem;
+    width: 1.25rem;
+    min-width: 1.25rem;
+    color: #6b7280;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .faq-question[aria-expanded="true"] .faq-chevron {
+    transform: rotate(180deg);
+    color: #2563eb;
+  }
+
+  .faq-answer {
+    padding: 1rem 1.25rem 1.25rem 1.25rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .faq-answer a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const answer = btn.nextElementSibling as HTMLElement;
+
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (expanded) {
+        answer.hidden = true;
+      } else {
+        answer.hidden = false;
+      }
+    });
+  });
+</script>
