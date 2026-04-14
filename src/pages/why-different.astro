@@ -504,7 +504,7 @@ import Layout from '../layouts/Layout.astro';
 
   #stat-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
     max-width: 900px;
     margin: 0 auto;
@@ -779,6 +779,12 @@ import Layout from '../layouts/Layout.astro';
     .compare-cols { width: 100%; }
     .compare-agency,
     .compare-jake { width: 50%; font-size: 0.8rem; }
+  }
+
+  @media (max-width: 480px) {
+    #stat-cards { grid-template-columns: 1fr 1fr; }
+    #stat-cards .stat-card { padding: 1rem; }
+    .stat-number { font-size: 1.5rem; }
   }
 
   @media (max-width: 480px) {
