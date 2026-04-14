@@ -78,7 +78,7 @@ const sites = [
   {
     tier: 'premium',
     name: 'Coming Soon',
-    industry: '80+ page custom build',
+    industry: '80+ page custom build · Est. $6,000',
     location: '',
     pages: 0,
     url: null,
@@ -88,7 +88,7 @@ const sites = [
   {
     tier: 'premium',
     name: 'Coming Soon',
-    industry: '150+ page custom build',
+    industry: '150+ page custom build · Est. $10,000',
     location: '',
     pages: 0,
     url: null,
@@ -198,7 +198,7 @@ description="Browse example websites built by Jake Fixes Tech. Starter, Professi
                 </div>
                 <div style="font-weight:600;color:#111827;font-size:0.95rem;">{site.name}</div>
                 <div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">
-                  {site.location && `${site.location} · `}{site.pages} page{site.pages !== 1 ? 's' : ''}
+                  {site.location && `${site.location} · `}{site.pages} page{site.pages !== 1 ? 's' : ''}{site.tier === 'premium' && site.pages > 0 ? ' · Est. $3,500' : ''}
                 </div>
                 <div class="portfolio-link">View Example →</div>
               </div>
