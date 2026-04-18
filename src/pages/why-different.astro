@@ -59,8 +59,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="speed-card">
           <div class="speed-label">Jake Fixes Tech Site</div>
           <div class="speed-bar-wrap">
-            <div class="speed-bar speed-bar-good" style="width:8%;">
-              <span style="color:#14532d;margin-left:0.5rem;">0.3s</span>
+            <div class="speed-bar speed-bar-good" style="width:15%;">
+              <span style="color:#14532d;margin-left:0.5rem;">Under 2s</span>
             </div>
           </div>
           <p class="speed-note">Astro static HTML, Cloudflare global CDN, zero unnecessary JavaScript</p>
@@ -69,18 +69,18 @@ import Layout from '../layouts/Layout.astro';
 
       <div id="stat-cards">
         <div class="stat-card">
-          <div class="stat-number" style="color:#1d4ed8;">93x</div>
-          <div class="stat-label">Smaller Page Size</div>
-          <div class="stat-sub">125kb vs 11,000kb+</div>
+          <div class="stat-number" style="color:#1d4ed8;">5–10x</div>
+          <div class="stat-label">Faster Load Time</div>
+          <div class="stat-sub">vs typical agency sites</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" style="color:#1d4ed8;">50x</div>
-          <div class="stat-label">Faster Load Time</div>
-          <div class="stat-sub">0.3s vs 15s+</div>
+          <div class="stat-number" style="color:#1d4ed8;">&lt;2s</div>
+          <div class="stat-label">Load Time</div>
+          <div class="stat-sub">Globally on Cloudflare</div>
         </div>
         <div class="stat-card">
           <div class="stat-number" style="color:#15803d;">100/100</div>
-          <div class="stat-label">Lighthouse Performance</div>
+          <div class="stat-label">Lighthouse Desktop</div>
           <div class="stat-sub">Every page, every time</div>
         </div>
         <div class="stat-card">
@@ -104,10 +104,10 @@ import Layout from '../layouts/Layout.astro';
         <div class="tool-card">
           <div class="tool-icon">🔦</div>
           <h3>Google Lighthouse</h3>
-          <p>Google's own free tool that grades any website across Performance, Accessibility, Best Practices and SEO, each scored out of 100. Most professional agency sites score 50–75 on performance. Every site I build scores 100/100 on Performance, Best Practices, and SEO on Google's own test.</p>
+          <p>Google's own free tool that grades any website across Performance, Accessibility, Best Practices and SEO, each scored out of 100. Most professional agency sites score 50–75 on performance. Every site I build scores 100/100 on Lighthouse desktop, and consistently hits 398–400 out of 400 on mobile — the highest tier achievable.</p>
           <div class="score-box">
             <div class="score-agency">TYPICAL AGENCY: 50–75 Performance</div>
-            <div class="score-jake">JAKE FIXES TECH: 100 Performance ✅</div>
+            <div class="score-jake">JAKE FIXES TECH: 100 Desktop · 398–400 Mobile ✅</div>
           </div>
         </div>
         <div class="tool-card">
@@ -272,7 +272,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="compare-cols">
             <div class="compare-agency">⚠️ 5–15 seconds</div>
-            <div class="compare-jake">✅ Under 1 second</div>
+            <div class="compare-jake">✅ Under 2 seconds</div>
           </div>
         </div>
 
@@ -283,7 +283,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="compare-cols">
             <div class="compare-agency">⚠️ 50–75 / 100</div>
-            <div class="compare-jake">✅ 100 / 100 — Perfect</div>
+            <div class="compare-jake">✅ 100 / 100 Desktop — Perfect</div>
           </div>
         </div>
 
@@ -405,11 +405,11 @@ import Layout from '../layouts/Layout.astro';
             <li>✅ Static HTML. Nothing to hack</li>
             <li>✅ No plugins, no updates to manage</li>
             <li>✅ Nothing to conflict or break</li>
-            <li>✅ Pre-built pages. Loads instantly</li>
+            <li>✅ Pre-built pages. Loads fast</li>
             <li>✅ Free hosting on Cloudflare Pages</li>
             <li>✅ Performance is built in by design</li>
             <li>✅ Accessibility built in from scratch</li>
-            <li>✅ Lean, fast pages under 200kb</li>
+            <li>✅ Lean, optimized pages</li>
           </ul>
         </div>
       </div>
@@ -424,7 +424,7 @@ import Layout from '../layouts/Layout.astro';
         You deserve a website that loads fast, ranks well on Google, is accessible to every visitor, and doesn't come with a monthly bill for things that are free. That's not a premium add-on. That's just what a website should be in 2026.
       </p>
       <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:2rem;">
-        Every site I build scores 100/100 on Lighthouse Performance and 10/10 on WAVE accessibility. It's hosted for free on Cloudflare's global network, backed up automatically on GitHub, and secured with a free SSL certificate. You own it outright from day one. No recurring fees for things that should have been free all along.
+        Every site I build scores 100/100 on Lighthouse desktop and consistently hits 398–400 out of 400 on mobile. It's hosted for free on Cloudflare's global network, backed up automatically on GitHub, and secured with a free SSL certificate. You own it outright from day one. No recurring fees for things that should have been free all along.
       </p>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
         <a href="/web-services" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
@@ -442,332 +442,57 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  #speed-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
-  }
+  #speed-grid { display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: 0 auto 3rem auto; }
+  .speed-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; }
+  .speed-label { font-weight: 700; color: #111827; margin-bottom: 0.75rem; font-size: 0.95rem; }
+  .speed-bar-wrap { background: #f3f4f6; border-radius: 9999px; height: 2.5rem; width: 100%; overflow: hidden; margin-bottom: 0.75rem; display: flex; align-items: center; }
+  .speed-bar { height: 100%; border-radius: 9999px; display: flex; align-items: center; padding: 0 1rem; font-weight: 700; font-size: 0.9rem; }
+  .speed-bar-bad { background: #fca5a5; color: #7f1d1d; }
+  .speed-bar-good { background: #86efac; color: #14532d; min-width: 80px; }
+  .speed-note { font-size: 0.8rem; color: #6b7280; margin: 0; }
 
-  .speed-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-  }
+  #stat-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+  .stat-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; text-align: center; }
+  .stat-number { font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 0.5rem; }
+  .stat-label { font-size: 0.875rem; font-weight: 700; color: #111827; margin-bottom: 0.25rem; }
+  .stat-sub { font-size: 0.75rem; color: #6b7280; }
 
-  .speed-label {
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-  }
+  #tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: stretch; }
+  .tool-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; display: flex; flex-direction: column; }
+  .tool-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .tool-card h3 { font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem; }
+  .tool-card p { font-size: 0.875rem; color: #374151; line-height: 1.7; }
+  .score-box { margin-top: auto; padding-top: 1rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 0.5rem; padding: 0.75rem 1rem; }
+  .score-agency { font-size: 0.8rem; color: #1e3a8a; font-weight: 700; }
+  .score-jake { font-size: 0.8rem; color: #14532d; font-weight: 700; margin-top: 0.25rem; }
 
-  .speed-bar-wrap {
-    background: #f3f4f6;
-    border-radius: 9999px;
-    height: 2.5rem;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-  }
+  .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .widget-compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
 
-  .speed-bar {
-    height: 100%;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    font-weight: 700;
-    font-size: 0.9rem;
-  }
+  .compare-header-row { background: #1e40af; padding: 0.875rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
+  .compare-cards { background: white; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; }
+  .compare-card { padding: 1rem 1.25rem; border-bottom: 1px solid #f3f4f6; display: flex; align-items: center; gap: 1rem; }
+  .compare-card:last-child { border-bottom: none; }
+  .compare-card.row-alt { background: #f8fafc; }
+  .compare-feature { flex: 1; min-width: 0; }
+  .compare-cols { display: flex; gap: 0; flex-shrink: 0; }
+  .compare-agency { width: 220px; text-align: center; color: #b91c1c; font-weight: 600; font-size: 0.875rem; padding: 0 1rem; border-right: 1px solid #e5e7eb; }
+  .compare-jake { width: 220px; text-align: center; color: #15803d; font-weight: 600; font-size: 0.875rem; padding: 0 1rem; }
+  .feature-name { font-weight: 600; color: #111827; margin-bottom: 0.2rem; font-size: 0.9rem; }
+  .feature-desc { font-size: 0.78rem; color: #6b7280; }
 
-  .speed-bar-bad {
-    background: #fca5a5;
-    color: #7f1d1d;
-  }
-
-  .speed-bar-good {
-    background: #86efac;
-    color: #14532d;
-    min-width: 60px;
-  }
-
-  .speed-note {
-    font-size: 0.8rem;
-    color: #6b7280;
-    margin: 0;
-  }
-
-  #stat-cards {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.5rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .stat-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-label {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.25rem;
-  }
-
-  .stat-sub {
-    font-size: 0.75rem;
-    color: #6b7280;
-  }
-
-  #tools-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: stretch;
-  }
-
-  .tool-card {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .tool-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .tool-card h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.75rem;
-  }
-
-  .tool-card p {
-    font-size: 0.875rem;
-    color: #374151;
-    line-height: 1.7;
-  }
-
-  .score-box {
-    margin-top: auto;
-    padding-top: 1rem;
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .score-agency {
-    font-size: 0.8rem;
-    color: #1e3a8a;
-    font-weight: 700;
-  }
-
-  .score-jake {
-    font-size: 0.8rem;
-    color: #14532d;
-    font-weight: 700;
-    margin-top: 0.25rem;
-  }
-
-  .two-col-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .widget-compare-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .compare-header-row {
-    background: #1e40af;
-    padding: 0.875rem 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .compare-cards {
-    background: white;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    border: 1px solid #e5e7eb;
-  }
-
-  .compare-card {
-    padding: 1rem 1.25rem;
-    border-bottom: 1px solid #f3f4f6;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .compare-card:last-child {
-    border-bottom: none;
-  }
-
-  .compare-card.row-alt {
-    background: #f8fafc;
-  }
-
-  .compare-feature {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .compare-cols {
-    display: flex;
-    gap: 0;
-    flex-shrink: 0;
-  }
-
-  .compare-agency {
-    width: 220px;
-    text-align: center;
-    color: #b91c1c;
-    font-weight: 600;
-    font-size: 0.875rem;
-    padding: 0 1rem;
-    border-right: 1px solid #e5e7eb;
-  }
-
-  .compare-jake {
-    width: 220px;
-    text-align: center;
-    color: #15803d;
-    font-weight: 600;
-    font-size: 0.875rem;
-    padding: 0 1rem;
-  }
-
-  .feature-name {
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 0.2rem;
-    font-size: 0.9rem;
-  }
-
-  .feature-desc {
-    font-size: 0.78rem;
-    color: #6b7280;
-  }
-
-  #platform-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .platform-card {
-    border-radius: 0.75rem;
-    overflow: hidden;
-  }
-
-  .platform-bad {
-    border: 2px solid #fca5a5;
-  }
-
-  .platform-good {
-    border: 2px solid #86efac;
-  }
-
-  .platform-header-bad {
-    background: #fee2e2;
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .platform-header-good {
-    background: #dcfce7;
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .platform-header-bad h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #991b1b;
-    margin: 0;
-  }
-
-  .platform-header-good h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #166534;
-    margin: 0;
-  }
-
-  .platform-tag-bad {
-    background: #fca5a5;
-    color: #7f1d1d;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0.2rem 0.6rem;
-    border-radius: 9999px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .platform-tag-good {
-    background: #86efac;
-    color: #14532d;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0.2rem 0.6rem;
-    border-radius: 9999px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .platform-list {
-    list-style: none;
-    padding: 1.25rem 1.5rem;
-    margin: 0;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-  }
-
-  .platform-list li {
-    font-size: 0.875rem;
-    color: #374151;
-    line-height: 1.5;
-  }
+  #platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto; }
+  .platform-card { border-radius: 0.75rem; overflow: hidden; }
+  .platform-bad { border: 2px solid #fca5a5; }
+  .platform-good { border: 2px solid #86efac; }
+  .platform-header-bad { background: #fee2e2; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .platform-header-good { background: #dcfce7; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .platform-header-bad h3 { font-size: 1.1rem; font-weight: 700; color: #991b1b; margin: 0; }
+  .platform-header-good h3 { font-size: 1.1rem; font-weight: 700; color: #166534; margin: 0; }
+  .platform-tag-bad { background: #fca5a5; color: #7f1d1d; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .platform-tag-good { background: #86efac; color: #14532d; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .platform-list { list-style: none; padding: 1.25rem 1.5rem; margin: 0; background: white; display: flex; flex-direction: column; gap: 0.625rem; }
+  .platform-list li { font-size: 0.875rem; color: #374151; line-height: 1.5; }
 
   @media (max-width: 768px) {
     #stat-cards { grid-template-columns: repeat(2, 1fr); }
@@ -777,21 +502,15 @@ import Layout from '../layouts/Layout.astro';
     .two-col-grid { grid-template-columns: 1fr; }
     .compare-card { flex-wrap: wrap; }
     .compare-cols { width: 100%; }
-    .compare-agency,
-    .compare-jake { width: 50%; font-size: 0.8rem; }
-  }
-
-  @media (max-width: 480px) {
-    #stat-cards { grid-template-columns: 1fr 1fr; }
-    #stat-cards .stat-card { padding: 1rem; }
-    .stat-number { font-size: 1.5rem; }
+    .compare-agency, .compare-jake { width: 50%; font-size: 0.8rem; }
   }
 
   @media (max-width: 480px) {
     #stat-cards { grid-template-columns: repeat(2, 1fr); }
+    #stat-cards .stat-card { padding: 1rem; }
+    .stat-number { font-size: 1.5rem; }
     .compare-card { flex-direction: column; align-items: flex-start; }
     .compare-cols { width: 100%; }
-    .compare-agency,
-    .compare-jake { width: 50%; text-align: left; padding: 0.25rem 0.5rem 0.25rem 0; border-right: none; }
+    .compare-agency, .compare-jake { width: 50%; text-align: left; padding: 0.25rem 0.5rem 0.25rem 0; border-right: none; }
   }
 </style>
