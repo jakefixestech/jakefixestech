@@ -26,6 +26,20 @@
           <li><a href="/privacy">Privacy Policy</a></li>
         </ul>
       </nav>
+
+      <!-- Social -->
+      <a
+        href="https://www.facebook.com/profile.php?id=61588399565146"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Jake Fixes Tech on Facebook"
+        class="fb-link"
+      >
+        <svg style="height:1.25rem;width:1.25rem;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+        Facebook
+      </a>
     </div>
 
     <div style="margin-top:2rem;border-top:1px solid #e5e7eb;padding-top:2rem;text-align:center;font-size:0.75rem;color:#6b7280;">
@@ -62,6 +76,27 @@
 
   .footer-links a:hover {
     color: #111827;
+  }
+
+  .fb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .fb-link:hover {
+    color: #1877f2;
+  }
+
+  .fb-link:focus-visible {
+    outline: 3px solid #1877f2;
+    outline-offset: 3px;
+    border-radius: 0.25rem;
   }
 
   @media (min-width: 768px) {
