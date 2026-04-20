@@ -12,11 +12,11 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
     <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
       <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Hours & Location</p>
       <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Find Us in Littleton, NH</h1>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">Based in Littleton, NH — serving the North Country and surrounding communities.</p>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">Based in Littleton, NH - serving the North Country and surrounding communities.</p>
     </div>
   </section>
 
-  <!-- Appointment Notice — Full Width Section -->
+  <!-- Appointment Notice -->
   <section style="background:#1e40af;padding:2rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem;">
       <div style="display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.15);border-radius:50%;height:3rem;width:3rem;flex-shrink:0;">
@@ -35,8 +35,6 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
 
   <section style="background:#f8fafc;padding:3rem 1.5rem 5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
-
-      <!-- Cards Grid -->
       <div id="location-grid">
 
         <!-- Hours Card -->
@@ -49,16 +47,16 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
           </div>
           <div class="hours-list">
             <div class="hours-row">
-              <span>Monday — Friday</span>
-              <span class="hours-time">Drop-off: 5:00 PM – 7:30 PM</span>
+              <span>Monday - Friday</span>
+              <span class="hours-time">Drop-off: 5:00 PM - 7:30 PM</span>
             </div>
             <div class="hours-row">
               <span>Saturday</span>
-              <span class="hours-time">9:00 AM – 4:00 PM</span>
+              <span class="hours-time">9:00 AM - 4:00 PM</span>
             </div>
             <div class="hours-row">
               <span>Sunday</span>
-              <span class="hours-time">9:00 AM – 4:00 PM</span>
+              <span class="hours-time">9:00 AM - 4:00 PM</span>
             </div>
             <div class="hours-row" style="background:#fef2f2;">
               <span style="color:#991b1b;">Holidays</span>
@@ -78,13 +76,13 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
           </div>
           <ul style="display:flex;flex-direction:column;gap:0.75rem;list-style:none;padding:0;margin:0;">
             <li>
-              <a href="https://maps.google.com/?q=28+Groves+Street+Littleton+NH+03561" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Open 28 Grove Street, Littleton NH in Google Maps">
+              <a href="https://maps.google.com/?q=28+Grove+Street+Littleton+NH+03561" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Open 28 Grove Street, Littleton NH in Google Maps">
                 <div class="contact-icon">
                   <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
                   <p class="contact-label">Address</p>
-                  <p class="contact-value">28 Groves Street, Apt 1, Littleton, NH 03561</p>
+                  <p class="contact-value">28 Grove Street, Apt 1, Littleton, NH 03561</p>
                 </div>
               </a>
             </li>
@@ -114,14 +112,12 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- Google Maps — Full Width Section (click to load) -->
+  <!-- Google Maps -->
   <section style="background:white;padding:0;">
     <div id="map-container" style="position:relative;width:100%;height:420px;background:#e8eef7;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-
       <div id="map-placeholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem;z-index:1;">
         <div style="background:#2563eb;border-radius:50%;height:4rem;width:4rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
           <svg style="height:2rem;width:2rem;color:white;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -140,7 +136,6 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
         </button>
         <p style="font-size:0.75rem;color:#4b5563;">Clicking loads Google Maps and accepts their cookie policy</p>
       </div>
-
     </div>
   </section>
 
@@ -149,9 +144,7 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
       const container = document.getElementById('map-container');
       const placeholder = document.getElementById('map-placeholder');
       if (!container || !placeholder) return;
-
       placeholder.style.display = 'none';
-
       const iframe = document.createElement('iframe');
       iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2855.2989653780346!2d-71.77109892392336!3d44.30380407107865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb46f3046ed8e0b%3A0x66f17ea337a64a56!2s28%20Grove%20St%2C%20Littleton%2C%20NH%2003561!5e0!3m2!1sen!2sus!4v1775095941000!5m2!1sen!2sus';
       iframe.width = '100%';
@@ -159,22 +152,22 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
       iframe.style.cssText = 'border:0;display:block;position:absolute;inset:0;';
       iframe.allowFullscreen = true;
       iframe.referrerPolicy = 'no-referrer-when-downgrade';
-      iframe.title = 'Google Maps — Jake Fixes Tech, 28 Grove Street, Littleton, NH';
+      iframe.title = 'Google Maps - Jake Fixes Tech, 28 Grove Street, Littleton, NH';
       container.appendChild(iframe);
     });
   </script>
 
-  <!-- Service Area + CTA -->
+  <!-- Service Area + CTA — Full Width -->
   <section style="background:#f8fafc;padding:3rem 1.5rem;">
-    <div style="max-width:56rem;margin:0 auto;">
+    <div style="max-width:72rem;margin:0 auto;">
 
       <!-- Service Area -->
-      <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;text-align:center;">
+      <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2rem;text-align:center;">
         <h2 style="font-size:1rem;font-weight:700;color:#111827;margin-bottom:0.5rem;">📍 Service Area</h2>
         <p style="color:#6b7280;font-size:0.9rem;line-height:1.75;">Based in Littleton, NH. I serve Littleton and surrounding towns including Franconia, Bethlehem, Whitefield, Lancaster, Sugar Hill and nearby Vermont communities.</p>
       </div>
 
-      <!-- Contact CTA -->
+      <!-- CTA -->
       <div style="margin-top:1.5rem;text-align:center;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
         <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
           Send a Message
@@ -192,128 +185,21 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
 </Layout>
 
 <style>
-  #location-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr;
-  }
-
-  @media (min-width: 768px) {
-    #location-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .location-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  }
-
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .card-icon {
-    display: flex;
-    height: 2.5rem;
-    width: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    background: #dbeafe;
-    color: #2563eb;
-    flex-shrink: 0;
-  }
-
-  .card-icon svg {
-    height: 1.25rem;
-    width: 1.25rem;
-  }
-
-  .card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #111827;
-  }
-
-  .hours-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .hours-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f8fafc;
-    border-radius: 0.5rem;
-    padding: 0.625rem 0.875rem;
-    font-size: 0.875rem;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-  }
-
-  .hours-row span {
-    color: #374151;
-    font-weight: 500;
-  }
-
-  .hours-time {
-    color: #4b5563 !important;
-    font-weight: 400 !important;
-  }
-
-  .contact-link {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-
-  .contact-link:hover {
-    background: #f8fafc;
-  }
-
-  .contact-icon {
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.375rem;
-    background: #dbeafe;
-    color: #2563eb;
-    flex-shrink: 0;
-    margin-top: 0.1rem;
-  }
-
-  .contact-icon svg {
-    height: 1rem;
-    width: 1rem;
-  }
-
-  .contact-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #6b7280;
-  }
-
-  .contact-value {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #111827;
-    margin-top: 0.1rem;
-  }
+  #location-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+  @media (min-width: 768px) { #location-grid { grid-template-columns: 1fr 1fr; } }
+  .location-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .card-icon { display: flex; height: 2.5rem; width: 2.5rem; align-items: center; justify-content: center; border-radius: 0.5rem; background: #dbeafe; color: #2563eb; flex-shrink: 0; }
+  .card-icon svg { height: 1.25rem; width: 1.25rem; }
+  .card-title { font-size: 1.1rem; font-weight: 700; color: #111827; }
+  .hours-list { display: flex; flex-direction: column; gap: 0.5rem; }
+  .hours-row { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border-radius: 0.5rem; padding: 0.625rem 0.875rem; font-size: 0.875rem; flex-wrap: wrap; gap: 0.25rem; }
+  .hours-row span { color: #374151; font-weight: 500; }
+  .hours-time { color: #4b5563 !important; font-weight: 400 !important; }
+  .contact-link { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; text-decoration: none; transition: background 0.2s; }
+  .contact-link:hover { background: #f8fafc; }
+  .contact-icon { display: flex; height: 2rem; width: 2rem; align-items: center; justify-content: center; border-radius: 0.375rem; background: #dbeafe; color: #2563eb; flex-shrink: 0; margin-top: 0.1rem; }
+  .contact-icon svg { height: 1rem; width: 1rem; }
+  .contact-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; }
+  .contact-value { font-size: 0.9rem; font-weight: 500; color: #111827; margin-top: 0.1rem; }
 </style>
