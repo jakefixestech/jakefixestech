@@ -107,14 +107,14 @@ import Layout from '../layouts/Layout.astro';
         .robot-inner {
           animation: robotBob 1s ease-in-out infinite;
         }
-        .robot1 { left: 12%; animation: robotPop1 60s ease-in-out infinite; }
-        .robot2 { left: 45%; animation: robotPop2 60s ease-in-out infinite; }
-        .robot3 { left: 72%; animation: robotExit  60s ease-in-out infinite; }
+        .robot1 { left: 12%; animation: robotPop1 60s ease-in-out 10s infinite; }
+        .robot2 { left: 45%; animation: robotPop2 60s ease-in-out 10s infinite; }
+        .robot3 { left: 72%; animation: robotExit  60s ease-in-out 10s infinite; }
 
         .eye-group  { animation: eyeSearch 2s ease-in-out infinite; }
         .magnifier  { animation: magSwing 1.2s ease-in-out infinite; transform-origin: 10px 10px; }
-        .exclamation{ animation: exclPop 60s ease-in-out infinite; transform-origin: center bottom; }
-        .result-box { animation: boxSlide 60s ease-in-out infinite; }
+        .exclamation{ animation: exclPop 60s ease-in-out 10s infinite; transform-origin: center bottom; }
+        .result-box { animation: boxSlide 60s ease-in-out 10s infinite; }
 
         @media (prefers-reduced-motion: reduce) {
           .robot-wrap, .robot-inner, .eye-group, .magnifier, .exclamation, .result-box {
@@ -129,7 +129,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="robot-inner">
           <svg width="64" height="80" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="32" y1="8" x2="32" y2="2" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="32" cy="1" r="3" fill="#93c5fd" style="animation: antennaBlink 60s ease-in-out infinite;"/>
+            <circle cx="32" cy="1" r="3" fill="#93c5fd" style="animation: antennaBlink 60s ease-in-out 10s infinite;"/>
             <rect x="14" y="8" width="36" height="28" rx="6" fill="white" fill-opacity="0.15" stroke="white" stroke-width="2"/>
             <g class="eye-group">
               <circle cx="24" cy="22" r="5" fill="white"/>
@@ -160,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="robot-inner">
           <svg width="64" height="80" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="32" y1="8" x2="32" y2="2" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="32" cy="1" r="3" fill="#93c5fd" style="animation: antennaBlink 60s ease-in-out infinite 0.3s;"/>
+            <circle cx="32" cy="1" r="3" fill="#93c5fd" style="animation: antennaBlink 60s ease-in-out 10.3s infinite;"/>
             <rect x="14" y="8" width="36" height="28" rx="6" fill="white" fill-opacity="0.15" stroke="white" stroke-width="2"/>
             <g class="eye-group">
               <circle cx="24" cy="22" r="5" fill="white"/>
@@ -207,7 +207,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="robot-inner">
           <svg width="64" height="80" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="32" y1="8" x2="32" y2="2" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="32" cy="1" r="3" fill="#93c5fd" style="animation: antennaBlink 60s ease-in-out infinite 0.6s;"/>
+            <circle cx="32" cy="1" r="3" fill="#93c5fd" style="animation: antennaBlink 60s ease-in-out 10.6s infinite;"/>
             <rect x="14" y="8" width="36" height="28" rx="6" fill="white" fill-opacity="0.15" stroke="white" stroke-width="2"/>
             <circle cx="24" cy="22" r="6" fill="white"/>
             <circle cx="40" cy="22" r="6" fill="white"/>
