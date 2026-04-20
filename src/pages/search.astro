@@ -107,14 +107,14 @@ import Layout from '../layouts/Layout.astro';
         .robot-inner {
           animation: robotBob 1s ease-in-out infinite;
         }
-        .robot1 { left: 12%; animation: robotPop1 60s ease-in-out 10s infinite; }
-        .robot2 { left: 45%; animation: robotPop2 60s ease-in-out 10s infinite; }
-        .robot3 { left: 72%; animation: robotExit  60s ease-in-out 10s infinite; }
+        .robot1 { left: 12%; animation: robotPop1 60s ease-in-out 10s infinite both; }
+        .robot2 { left: 45%; animation: robotPop2 60s ease-in-out 10s infinite both; }
+        .robot3 { left: 72%; animation: robotExit  60s ease-in-out 10s infinite both; }
 
         .eye-group  { animation: eyeSearch 2s ease-in-out infinite; }
         .magnifier  { animation: magSwing 1.2s ease-in-out infinite; transform-origin: 10px 10px; }
-        .exclamation{ animation: exclPop 60s ease-in-out 10s infinite; transform-origin: center bottom; }
-        .result-box { animation: boxSlide 60s ease-in-out 10s infinite; }
+        .exclamation{ animation: exclPop 60s ease-in-out 10s infinite both; transform-origin: center bottom; }
+        .result-box { animation: boxSlide 60s ease-in-out 10s infinite both; }
 
         @media (prefers-reduced-motion: reduce) {
           .robot-wrap, .robot-inner, .eye-group, .magnifier, .exclamation, .result-box {
