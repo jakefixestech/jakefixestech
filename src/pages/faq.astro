@@ -265,7 +265,7 @@ description="Answers to the most common questions about computer repair, pricing
             <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" hidden>
-            <p>Yes. Every site I build scores 100/100 on Google Lighthouse Performance and is fully SEO optimized. Sites are hosted on Cloudflare's global network so they load in under a second anywhere in the world. I also build in WCAG AA accessibility compliance on every page, which Google rewards with better rankings. See <a href="/why-different">Why My Websites Are Different</a> for the full technical breakdown.</p>
+            <p>Yes. Every site I build scores 100/100 on Google Lighthouse desktop and consistently hits 398 to 400 out of 400 on mobile. Sites are hosted on Cloudflare's global network for fast load times worldwide. I also build in WCAG AA accessibility compliance on every page, which Google rewards with better rankings. See <a href="/why-different">Why My Websites Are Different</a> for the full breakdown.</p>
           </div>
         </div>
 
@@ -275,7 +275,7 @@ description="Answers to the most common questions about computer repair, pricing
             <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" hidden>
-            <p>No mandatory fees. Hosting is free on Cloudflare Pages, SSL is free, and backups are handled automatically through GitHub. The only ongoing cost is your domain name, typically around $10 to $15 per year. Optional management plans are available if you want me to handle updates and maintenance, but they're never required.</p>
+            <p>No mandatory fees. Hosting is free on Cloudflare Pages, SSL is free, and backups are handled automatically through GitHub. The only ongoing cost is your domain name, typically around $10 per year on Cloudflare. Optional management plans are available if you want me to handle updates and maintenance, but they're never required.</p>
           </div>
         </div>
 
@@ -284,7 +284,7 @@ description="Answers to the most common questions about computer repair, pricing
       <!-- Search nudge -->
       <div style="margin-top:3rem;background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
         <p style="font-size:0.875rem;color:#4b5563;margin:0;">Looking for something specific? Try searching the site.</p>
-        <a href="/search" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:600;padding:0.5rem 1rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;white-space:nowrap;">
+        <a href="/search" class="nudge-btn">
           <svg style="height:0.875rem;width:0.875rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           Search the Site
         </a>
@@ -299,8 +299,8 @@ description="Answers to the most common questions about computer repair, pricing
           <h3 style="font-size:1.1rem;font-weight:700;color:#1e40af;margin-bottom:0.5rem;">Still Have a Question?</h3>
           <p style="color:#1e40af;font-size:0.9rem;line-height:1.75;margin:0;">If your question isn't covered here, reach out. I respond fast and there's no such thing as a question too small.</p>
           <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.75rem;">
-            <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:600;padding:0.625rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;">Send a Message</a>
-            <a href="tel:+18022341552" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:600;padding:0.625rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;border:1px solid #bfdbfe;">(802) 234-1552</a>
+            <a href="/contact" class="cta-btn-primary">Send a Message</a>
+            <a href="tel:+18022341552" class="cta-btn-secondary">(802) 234-1552</a>
           </div>
         </div>
       </div>
@@ -310,84 +310,26 @@ description="Answers to the most common questions about computer repair, pricing
 
 </Layout>
 
-<!-- FAQ Schema Markup for Google Rich Snippets -->
+<!-- FAQ Schema Markup -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does computer repair cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "All repairs start with a $50 diagnostic fee applied toward your total. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and screen replacement labor is $100 plus parts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the $50 diagnostic fee?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The $50 diagnostic fee is required upfront before any work begins. If you proceed with the repair it comes off your total. If you decide not to repair, you leave with a clear answer on what is wrong."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you work on Apple products?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "macOS software is fully supported including installations, upgrades and troubleshooting. Apple hardware repairs including MacBooks and iMacs are not available. For hardware repairs on Apple products, Apple or an Apple Authorized Service Provider is the right call."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do repairs come with a warranty?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to the repair work, it will be fixed at no charge."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you fix my computer remotely?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, for most software issues. Remote support is available via phone, video call or direct screen control using Chrome Remote Desktop. Hardware repairs always require the device in person."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I own my website after you build it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, always. You own the code, the domain and all content outright from day one. No platform lock-in, no holding the site hostage."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does a website cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Build packages start at $750 for a 1 to 3 page starter site, $2,000 for a 5 to 15 page professional site, and $3,500 and up for larger custom builds. No mandatory monthly fees after launch."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you come to my home or business?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. On-site visits are available weekends 9am to 4pm within roughly 30 minutes of Littleton, NH. A flat travel fee applies for distances over 10 miles."
-      }
-    }
+    { "@type": "Question", "name": "How much does computer repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "All repairs start with a $50 diagnostic fee applied toward your total. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and screen replacement labor is $100 plus parts." } },
+    { "@type": "Question", "name": "What is the $50 diagnostic fee?", "acceptedAnswer": { "@type": "Answer", "text": "The $50 diagnostic fee is required upfront before any work begins. If you proceed with the repair it comes off your total. If you decide not to repair, you leave with a clear answer on what is wrong." } },
+    { "@type": "Question", "name": "Do you work on Apple products?", "acceptedAnswer": { "@type": "Answer", "text": "macOS software is fully supported including installations, upgrades and troubleshooting. Apple hardware repairs including MacBooks and iMacs are not available." } },
+    { "@type": "Question", "name": "Do repairs come with a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to the repair work, it will be fixed at no charge." } },
+    { "@type": "Question", "name": "Can you fix my computer remotely?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for most software issues. Remote support is available via phone, video call or direct screen control using Chrome Remote Desktop. Hardware repairs always require the device in person." } },
+    { "@type": "Question", "name": "Do I own my website after you build it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, always. You own the code, the domain and all content outright from day one." } },
+    { "@type": "Question", "name": "How much does a website cost?", "acceptedAnswer": { "@type": "Answer", "text": "Build packages start at $750 for a 1 to 3 page starter site, $2,000 for a 5 to 15 page professional site, and $3,500 and up for larger custom builds." } },
+    { "@type": "Question", "name": "Do you come to my home or business?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On-site visits are available weekends 9am to 4pm within roughly 30 minutes of Littleton, NH. A flat travel fee applies for distances over 10 miles." } }
   ]
 }
 </script>
 
 <style>
-  .faq-group {
-    margin-bottom: 2.5rem;
-  }
+  .faq-group { margin-bottom: 2.5rem; }
 
   .faq-group-title {
     font-size: 0.875rem;
@@ -426,8 +368,13 @@ description="Answers to the most common questions about computer repair, pricing
     transition: background 0.15s;
   }
 
-  .faq-question:hover {
-    background: #f8fafc;
+  .faq-question:hover { background: #f8fafc; }
+
+  .faq-question:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: -3px;
+    border-radius: 0.75rem;
+    background: #eff6ff;
   }
 
   .faq-question[aria-expanded="true"] {
@@ -450,21 +397,66 @@ description="Answers to the most common questions about computer repair, pricing
     color: #2563eb;
   }
 
-  .faq-answer {
-    padding: 1rem 1.25rem 1.25rem 1.25rem;
-  }
+  .faq-answer { padding: 1rem 1.25rem 1.25rem 1.25rem; }
 
-  .faq-answer p {
-    font-size: 0.9rem;
-    color: #4b5563;
-    line-height: 1.75;
-    margin: 0;
-  }
+  .faq-answer p { font-size: 0.9rem; color: #4b5563; line-height: 1.75; margin: 0; }
 
-  .faq-answer a {
-    color: #2563eb;
+  .faq-answer a { color: #2563eb; font-weight: 600; text-decoration: underline; }
+
+  .nudge-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #2563eb;
+    color: white;
     font-weight: 600;
-    text-decoration: underline;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .nudge-btn:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+  }
+
+  .cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .cta-btn-primary:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+  }
+
+  .cta-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e40af;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid #bfdbfe;
+  }
+
+  .cta-btn-secondary:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
   }
 </style>
 
@@ -473,13 +465,8 @@ description="Answers to the most common questions about computer repair, pricing
     btn.addEventListener('click', () => {
       const expanded = btn.getAttribute('aria-expanded') === 'true';
       const answer = btn.nextElementSibling as HTMLElement;
-
       btn.setAttribute('aria-expanded', String(!expanded));
-      if (expanded) {
-        answer.hidden = true;
-      } else {
-        answer.hidden = false;
-      }
+      answer.hidden = expanded;
     });
   });
 </script>
