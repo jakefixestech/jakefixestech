@@ -20,32 +20,27 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
   <section style="background:white;padding:5rem 1.5rem;">
     <div style="max-width:80rem;margin:0 auto;">
 
+      <!-- Photo + Text side by side -->
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:start;margin-bottom:3rem;">
+
+        <img src="/brickwall.webp" alt="Jake Charland, owner of Jake Fixes Tech LLC" width="600" height="740" style="width:280px;border-radius:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.12);flex-shrink:0;" />
+
+        <div>
+          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">My Story</p>
+          <h2 style="margin-top:0.75rem;font-size:2rem;font-weight:800;color:#111827;line-height:1.2;">Tech Has Been My Thing Since Day One</h2>
+          <p style="margin-top:1.25rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">Hi, I'm Jake Charland. I've been passionate about technology since I was a kid. Taking things apart, figuring out how they work and putting them back together is something I've always loved. What started as a hobby turned into a career spanning over a decade of real hands-on experience in IT, computer repair and web development.</p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">I hold a <strong style="color:#111827;">Bachelor's Degree in Computer Information Systems</strong> from Lyndon State College in Vermont. I also had the opportunity to teach a senior level advanced website programming course there twice. That experience gave me a deep appreciation for breaking down complex tech concepts into something anyone can understand.</p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">Over the years I've worked in IT across multiple Vermont schools and colleges, supporting students, staff and entire organizations with their technology needs. I also single-handedly set up all of the technology infrastructure for the <strong style="color:#111827;">Do North Coworking Space</strong> in Lyndonville, VT during my final semester of college. That included everything from networking to workstations, built from scratch.</p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">I recently launched Jake Fixes Tech LLC right here in Littleton, NH to bring affordable, honest tech repair and professional web design to my community. Homes, families and small businesses across the North Country deserve tech support they can actually trust.</p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">When your tech isn't working I know how stressful that can be. I'm here to make the process as smooth and painless as possible. No upselling, no confusing jargon, just honest work at a fair price.</p>
+        </div>
+      </div>
+
+      <!-- Values full width below -->
       <div id="about-grid">
 
-        <!-- Photo + Text -->
-        <div>
-          <img src="/brickwall.webp" alt="Jake Charland, owner of Jake Fixes Tech LLC" width="600" height="740" style="width:100%;max-width:420px;border-radius:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.12);margin-bottom:2rem;display:block;" />
-          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">My Story</p>
-          <h2 style="margin-top:0.75rem;font-size:2rem;font-weight:800;color:#111827;line-height:1.2;">
-            Tech Has Been My Thing Since Day One
-          </h2>
-          <p style="margin-top:1.25rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            Hi, I'm Jake Charland. I've been passionate about technology since I was a kid. Taking things apart, figuring out how they work and putting them back together is something I've always loved. What started as a hobby turned into a career spanning over a decade of real hands-on experience in IT, computer repair and web development.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            I hold a <strong style="color:#111827;">Bachelor's Degree in Computer Information Systems</strong> from Lyndon State College in Vermont. I also had the opportunity to teach a senior level advanced website programming course there twice. That experience gave me a deep appreciation for breaking down complex tech concepts into something anyone can understand.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            Over the years I've worked in IT across multiple Vermont schools and colleges, supporting students, staff and entire organizations with their technology needs. I also single-handedly set up all of the technology infrastructure for the <strong style="color:#111827;">Do North Coworking Space</strong> in Lyndonville, VT during my final semester of college. That included everything from networking to workstations, built from scratch.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            I recently launched Jake Fixes Tech LLC right here in Littleton, NH to bring affordable, honest tech repair and professional web design to my community. Homes, families and small businesses across the North Country deserve tech support they can actually trust.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            When your tech isn't working I know how stressful that can be. I'm here to make the process as smooth and painless as possible. No upselling, no confusing jargon, just honest work at a fair price.
-          </p>
-        </div>
-
+        <!-- Values -->
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
         <!-- Values -->
         <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
@@ -166,7 +161,11 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
 
 <style>
   #about-grid { display: grid; gap: 3rem; grid-template-columns: 1fr; }
-  @media (min-width: 1024px) { #about-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
+  @media (min-width: 1024px) { #about-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns:auto 1fr"] { grid-template-columns: 1fr !important; }
+    div[style*="width:280px"] { width: 100% !important; max-width: 320px; margin: 0 auto; }
+  }
   #credentials-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .credential-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .credential-icon { display: flex; height: 3rem; width: 3rem; align-items: center; justify-content: center; border-radius: 0.5rem; background: #dbeafe; color: #2563eb; margin: 0 auto 0.75rem auto; }
