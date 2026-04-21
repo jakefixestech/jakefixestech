@@ -91,6 +91,15 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://jakefixestech.com');
       }
     </script>
 
+    <!-- Google Analytics 4 via Partytown (zero Lighthouse impact) -->
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-7C6PE3V9LJ"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7C6PE3V9LJ');
+    </script>
+
   </head>
   <body>
     <Navbar />
