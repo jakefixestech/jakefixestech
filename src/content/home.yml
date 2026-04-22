@@ -1,60 +1,58 @@
-# Hero Section
-heroTitle: "Your Friendly Neighborhood Tech Expert"
-heroSubtitle: "From broken devices to slow computers, Jake Fixes Tech provides reliable, affordable computer repair for homes and small businesses in and around Littleton, New Hampshire. I also do Professional, modern website design and management."
-heroBtnPrimary: "View Services"
-heroBtnSecondary: "Ask a Question"
-heroBadge1: "Locally Owned & Operated"
-heroBadge2: "Flat Rate Pricing"
-heroBadge3: "30 Day Labor Warranty"
-heroBadge4: "Fast Turnaround"
-heroBadge5: "Professional Web Development"
-
-# Services Preview Section
-servicesLabel: "What I Fix"
-servicesTitle: "Common Repairs I Handle Every Day"
-servicesSubtitle: "No job is too big or too small. I treat every device like it's my own."
-
-service1Title: "Screen Repair"
-service1Desc: "Cracked or dead screen? I replace laptop and desktop displays quickly and affordably."
-
-service2Title: "Virus & Malware Removal"
-service2Desc: "Full system clean and protection setup to get your computer running safely again."
-
-service3Title: "Hardware Upgrades"
-service3Desc: "RAM, SSD and other upgrades to make your old computer feel brand new."
-
-service4Title: "Data Recovery"
-service4Desc: "Lost important files? I specialize in recovering data from damaged or corrupted drives."
-
-service5Title: "Broken Tech Repairs"
-service5Desc: "Physically damaged or completely dead devices? I diagnose and fix a wide range of issues."
-
-service6Title: "On-Site Tech Support"
-service6Desc: "I come to you! On-site visits for homes and small businesses in the Littleton area."
-
-# Web Services Teaser
-webLabel: "Also Available"
-webTitle: "Need a Website for Your Business?"
-webDesc1: "I don't just fix tech — I build it too. From simple landing pages to full custom websites, I design, build and host professional websites for small businesses and organizations across the North Country."
-webDesc2: "Built with modern technology, lightning fast, mobile friendly and you own it outright. Packages starting at $750 with optional monthly management plans available."
-webBtnText: "View Web Packages"
-
-# Why Choose Jake Section
-whyLabel: "Why Choose Jake"
-whyTitle: "Tech Repair You Can Actually Trust"
-
-why1Title: "Flat Rate Pricing"
-why1Desc: "No hourly surprises. You know exactly what you're paying before I start. Parts are the only extra cost."
-
-why2Title: "30 Day Labor Warranty"
-why2Desc: "Every repair comes with a 30 day warranty on my labor. If the same issue comes back, I fix it free."
-
-why3Title: "Local & Personal"
-why3Desc: "You're not dealing with a big box store. You're dealing with Jake — a real person in your community."
-
-why4Title: "Fast Turnaround"
-why4Desc: "Most repairs completed within 24-48 hours. I know you need your tech back as soon as possible."
-
-# CTA Section
-ctaTitle: "Ready to Get Your Tech Fixed?"
-ctaSubtitle: "Call, text or email to schedule your appointment. Same-day appointments often available!"
+heroTitle: Your Friendly Neighborhood Tech Expert.
+heroSubtitle: From broken devices to slow computers, Jake Fixes Tech provides
+  reliable, affordable computer repair for homes and small businesses in and
+  around Littleton, New Hampshire. I also do Professional, modern website design
+  and management.
+heroBtnPrimary: View Services
+heroBtnSecondary: Ask a Question
+heroBadge1: Locally Owned & Operated
+heroBadge2: Flat Rate Pricing
+heroBadge3: 30 Day Labor Warranty
+heroBadge4: Fast Turnaround
+heroBadge5: Professional Web Development
+servicesLabel: What I Fix
+servicesTitle: Common Repairs I Handle Every Day
+servicesSubtitle: No job is too big or too small. I treat every device like it's my own.
+service1Title: Screen Repair
+service1Desc: Cracked or dead screen? I replace laptop and desktop displays
+  quickly and affordably.
+service2Title: Virus & Malware Removal
+service2Desc: Full system clean and protection setup to get your computer
+  running safely again.
+service3Title: Hardware Upgrades
+service3Desc: RAM, SSD and other upgrades to make your old computer feel brand new.
+service4Title: Data Recovery
+service4Desc: Lost important files? I specialize in recovering data from damaged
+  or corrupted drives.
+service5Title: Broken Tech Repairs
+service5Desc: Physically damaged or completely dead devices? I diagnose and fix
+  a wide range of issues.
+service6Title: On-Site Tech Support
+service6Desc: I come to you! On-site visits for homes and small businesses in
+  the Littleton area.
+webLabel: Also Available
+webTitle: Need a Website for Your Business?
+webDesc1: I don't just fix tech — I build it too. From simple landing pages to
+  full custom websites, I design, build and host professional websites for small
+  businesses and organizations across the North Country.
+webDesc2: Built with modern technology, lightning fast, mobile friendly and you
+  own it outright. Packages starting at $750 with optional monthly management
+  plans available.
+webBtnText: View Web Packages
+whyLabel: Why Choose Jake
+whyTitle: Tech Repair You Can Actually Trust
+why1Title: Flat Rate Pricing
+why1Desc: No hourly surprises. You know exactly what you're paying before I
+  start. Parts are the only extra cost.
+why2Title: 30 Day Labor Warranty
+why2Desc: Every repair comes with a 30 day warranty on my labor. If the same
+  issue comes back, I fix it free.
+why3Title: Local & Personal
+why3Desc: You're not dealing with a big box store. You're dealing with Jake — a
+  real person in your community.
+why4Title: Fast Turnaround
+why4Desc: Most repairs completed within 24-48 hours. I know you need your tech
+  back as soon as possible.
+ctaTitle: Ready to Get Your Tech Fixed?
+ctaSubtitle: Call, text or email to schedule your appointment. Same-day
+  appointments often available!
