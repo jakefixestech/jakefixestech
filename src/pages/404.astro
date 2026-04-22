@@ -12,16 +12,73 @@ description="This page doesn't exist. But Jake Fixes Tech does — computer repa
       <!-- Error code display -->
       <div style="font-size:clamp(5rem,20vw,9rem);font-weight:900;color:#2563eb;line-height:1;letter-spacing:-0.05em;font-variant-numeric:tabular-nums;">404</div>
 
-      <div style="margin:1.5rem auto 1rem auto;background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;max-width:36rem;text-align:left;font-family:monospace;font-size:0.85rem;color:#374151;line-height:1.9;">
-        <div><span style="color:#2563eb;font-weight:700;">CRITICAL ERROR</span> — Page Not Found</div>
-        <div style="color:#6b7280;">Kernel: jakefixestech.com v1.0</div>
-        <div style="margin-top:0.5rem;"><span style="color:#dc2626;">✗</span> Attempting to locate requested page...</div>
-        <div><span style="color:#dc2626;">✗</span> Scanning filesystem... no results</div>
-        <div><span style="color:#dc2626;">✗</span> Checking backup sectors... nothing</div>
-        <div><span style="color:#dc2626;">✗</span> Running diagnostics... page confirmed dead</div>
-        <div style="margin-top:0.5rem;"><span style="color:#b45309;">⚠</span> Recommendation: try a working page</div>
-        <div style="margin-top:0.5rem;color:#6b7280;">Diagnostic fee: $0.00 &nbsp;·&nbsp; Pages recovered: 0</div>
+      <div style="margin:1.5rem auto 1rem auto;background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;max-width:36rem;text-align:left;font-family:monospace;font-size:0.85rem;color:#374151;line-height:1.9;min-height:14rem;">
+        <div id="terminal-output" aria-live="polite" aria-label="Terminal diagnostic output"></div>
+        <span id="terminal-cursor" class="cursor" aria-hidden="true">█</span>
       </div>
+
+      <script>
+        const lines = [
+          { text: 'CRITICAL ERROR — Page Not Found', class: 't-error', delay: 0 },
+          { text: 'Kernel: jakefixestech.com v1.0', class: 't-dim', delay: 800 },
+          { text: '✗ Attempting to locate requested page...', class: 't-fail', delay: 1800, pauseAfter: 600 },
+          { text: '✗ Scanning filesystem... no results', class: 't-fail', delay: 3200, pauseAfter: 400 },
+          { text: '✗ Checking backup sectors... nothing', class: 't-fail', delay: 4600, pauseAfter: 400 },
+          { text: '✗ Running diagnostics... page confirmed dead', class: 't-fail', delay: 5800, pauseAfter: 700 },
+          { text: '⚠ Recommendation: try a working page', class: 't-warn', delay: 7200 },
+          { text: 'Diagnostic fee: $0.00  ·  Pages recovered: 0', class: 't-dim', delay: 8400 },
+        ];
+
+        const output = document.getElementById('terminal-output');
+        const cursor = document.getElementById('terminal-cursor');
+        const CHAR_SPEED = 28; // ms per character
+
+        function typeLine(text, className, onDone) {
+          const line = document.createElement('div');
+          line.className = className;
+          // add spacing before certain lines
+          if (className === 't-fail' && output.children.length === 2) {
+            line.style.marginTop = '0.4rem';
+          }
+          if (className === 't-warn') {
+            line.style.marginTop = '0.4rem';
+          }
+          if (className === 't-dim' && output.children.length > 2) {
+            line.style.marginTop = '0.4rem';
+          }
+          output.appendChild(line);
+
+          let i = 0;
+          function typeChar() {
+            if (i < text.length) {
+              line.textContent += text[i];
+              i++;
+              setTimeout(typeChar, CHAR_SPEED);
+            } else {
+              if (onDone) onDone();
+            }
+          }
+          typeChar();
+        }
+
+        function runTerminal() {
+          lines.forEach((line, index) => {
+            setTimeout(() => {
+              const pauseAfter = line.pauseAfter || 0;
+              typeLine(line.text, line.class, () => {
+                // blink cursor briefly after each line
+                if (index === lines.length - 1) {
+                  // last line — hide cursor after a moment
+                  setTimeout(() => { cursor.style.display = 'none'; }, 1200);
+                }
+              });
+            }, line.delay);
+          });
+        }
+
+        // small initial delay then start
+        setTimeout(runTerminal, 300);
+      </script>
 
       <h1 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.75rem;">This Page Is Deader Than a Laptop With Liquid Damage.</h1>
       <p style="color:#6b7280;font-size:1rem;line-height:1.75;max-width:34rem;margin:0 auto 2rem auto;">Whatever you were looking for isn't here. It may have moved, been deleted, or never existed in the first place. Happens to the best of us. The good news — everything else on this site works perfectly.</p>
@@ -146,6 +203,25 @@ description="This page doesn't exist. But Jake Fixes Tech does — computer repa
 </Layout>
 
 <style>
+  #terminal-output .t-error { color: #2563eb; font-weight: 700; }
+  #terminal-output .t-dim { color: #6b7280; }
+  #terminal-output .t-fail { color: #374151; }
+  #terminal-output .t-warn { color: #b45309; }
+
+  .cursor {
+    display: inline-block;
+    color: #2563eb;
+    font-family: monospace;
+    font-size: 0.85rem;
+    animation: blink 0.7s step-end infinite;
+    vertical-align: baseline;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
   #service-links-grid {
     display: grid;
     gap: 1.25rem;
