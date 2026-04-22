@@ -1,0 +1,59 @@
+# Header
+headerLabel: "What I Do"
+headerTitle: "Services"
+headerSubtitle: "From quick software fixes to full hardware overhauls, I handle a wide range of tech repairs and services. No job is too big or too small."
+
+# Computer Repair Section
+repairLabel: "Computer Repair"
+repairTitle: "Hardware & Software Repairs"
+repairSubtitle: "Every repair backed by a 30 day labor warranty. Windows, Linux and Mac software supported."
+
+service1Title: "Screen Repair"
+service1Desc: "Cracked, flickering, or dead screens? I replace a variety of laptop and desktop screens quickly and affordably. Note: Apple hardware repairs not available."
+
+service2Title: "Virus & Malware Removal"
+service2Desc: "Thorough cleaning and protection setup to get your computer running safely again."
+
+service3Title: "Data Recovery"
+service3Desc: "Lost important files? I use professional recovery software to retrieve deleted, corrupted or lost data from drives, USB drives and memory cards."
+
+service4Title: "Hardware Upgrades"
+service4Desc: "Speed up your machine with RAM upgrades, SSD installations, and other hardware improvements. Windows and Linux machines only."
+
+service5Title: "Broken Tech Repairs"
+service5Desc: "Physically damaged or completely dead devices? I diagnose and fix a wide range of broken tech issues."
+
+service6Title: "Gaming Console Repair"
+service6Desc: "PlayStation, Xbox, Nintendo Switch and more. I diagnose and repair common console issues including disc drives, overheating and more."
+
+# Web Design Spotlight
+webLabel: "Also Available"
+webTitle: "Professional Website Design & Management"
+webDesc: "I don't just fix tech. I build it too. Fast, modern, mobile-friendly websites for small businesses across the North Country. You own it outright. No monthly Squarespace fees, no bloated WordPress plugins."
+
+# Software & OS Section
+softwareLabel: "Software & OS"
+softwareTitle: "Operating Systems & Remote Help"
+softwareSubtitle: "OS installs, software troubleshooting and remote support across all major platforms."
+
+service7Title: "Mac & Apple Software"
+service7Desc: "macOS installation, upgrades and troubleshooting on any Mac. I also install Linux on older Macs (2012 to 2018) to give them a new life. Software only."
+
+service8Title: "Remote Support"
+service8Desc: "Can't make it in? I can diagnose and fix many software issues remotely. Fast, convenient support from the comfort of your own home."
+
+# Support & Learning Section
+supportLabel: "Support & Learning"
+supportTitle: "On-Site Help & Tech Tutoring"
+supportSubtitle: "In person or remote help for anyone who wants to get more comfortable with their technology."
+
+service9Title: "On-Site Tech Support"
+service9Desc: "I come to you! From WiFi setup to teaching you how to use your devices safely, I offer friendly on-site visits for homes and small businesses in the Littleton area."
+
+service10Title: "Tech Tutoring"
+service10Desc: "Patient, friendly one-on-one tech help for all skill levels. Email, safe browsing, device setup, and anything else you need help understanding."
+
+# CTA Section
+ctaTitle: "Don't See What You Need?"
+ctaSubtitle: "Just ask. Describe what's going on and I'll let you know what I can do."
+ctaFootnote: "Android phone screen repair coming later in 2026."
