@@ -23,8 +23,8 @@ collections:
         fields:
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
-          - { label: "Hero Button — Primary", name: "heroBtnPrimary", widget: "string" }
-          - { label: "Hero Button — Secondary", name: "heroBtnSecondary", widget: "string" }
+          - { label: "Hero Button Primary", name: "heroBtnPrimary", widget: "string" }
+          - { label: "Hero Button Secondary", name: "heroBtnSecondary", widget: "string" }
           - { label: "Badge 1", name: "heroBadge1", widget: "string" }
           - { label: "Badge 2", name: "heroBadge2", widget: "string" }
           - { label: "Badge 3", name: "heroBadge3", widget: "string" }
@@ -105,6 +105,61 @@ collections:
           - { label: "CTA Title", name: "ctaTitle", widget: "string" }
           - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
           - { label: "CTA Footnote", name: "ctaFootnote", widget: "string" }
+
+      - name: "pricing"
+        label: "Pricing Page"
+        file: "src/content/pricing.yml"
+        fields:
+          - { label: "Header Label", name: "headerLabel", widget: "string" }
+          - { label: "Header Title", name: "headerTitle", widget: "string" }
+          - { label: "Header Subtitle", name: "headerSubtitle", widget: "text" }
+          - { label: "Diagnostic Title", name: "diagTitle", widget: "string" }
+          - { label: "Diagnostic Description", name: "diagDesc", widget: "text" }
+          - { label: "Software 1 Name", name: "soft1Name", widget: "string" }
+          - { label: "Software 1 Price", name: "soft1Price", widget: "string" }
+          - { label: "Software 2 Name", name: "soft2Name", widget: "string" }
+          - { label: "Software 2 Price", name: "soft2Price", widget: "string" }
+          - { label: "Software 3 Name", name: "soft3Name", widget: "string" }
+          - { label: "Software 3 Price", name: "soft3Price", widget: "string" }
+          - { label: "Software 4 Name", name: "soft4Name", widget: "string" }
+          - { label: "Software 4 Price", name: "soft4Price", widget: "string" }
+          - { label: "Hardware 1 Name", name: "hard1Name", widget: "string" }
+          - { label: "Hardware 1 Price", name: "hard1Price", widget: "string" }
+          - { label: "Hardware 2 Name", name: "hard2Name", widget: "string" }
+          - { label: "Hardware 2 Price", name: "hard2Price", widget: "string" }
+          - { label: "Hardware 3 Name", name: "hard3Name", widget: "string" }
+          - { label: "Hardware 3 Price", name: "hard3Price", widget: "string" }
+          - { label: "Hardware 4 Name", name: "hard4Name", widget: "string" }
+          - { label: "Hardware 4 Price", name: "hard4Price", widget: "string" }
+          - { label: "Hardware 5 Name", name: "hard5Name", widget: "string" }
+          - { label: "Hardware 5 Price", name: "hard5Price", widget: "string" }
+          - { label: "Data 1 Name", name: "data1Name", widget: "string" }
+          - { label: "Data 1 Price", name: "data1Price", widget: "string" }
+          - { label: "Data 2 Name", name: "data2Name", widget: "string" }
+          - { label: "Data 2 Price", name: "data2Price", widget: "string" }
+          - { label: "Mac 1 Name", name: "mac1Name", widget: "string" }
+          - { label: "Mac 1 Price", name: "mac1Price", widget: "string" }
+          - { label: "Mac 2 Name", name: "mac2Name", widget: "string" }
+          - { label: "Mac 2 Price", name: "mac2Price", widget: "string" }
+          - { label: "Mac 3 Name", name: "mac3Name", widget: "string" }
+          - { label: "Mac 3 Price", name: "mac3Price", widget: "string" }
+          - { label: "Mac 4 Name", name: "mac4Name", widget: "string" }
+          - { label: "Mac 4 Price", name: "mac4Price", widget: "string" }
+          - { label: "Mac 5 Name", name: "mac5Name", widget: "string" }
+          - { label: "Mac 5 Price", name: "mac5Price", widget: "string" }
+          - { label: "Console 1 Name", name: "console1Name", widget: "string" }
+          - { label: "Console 1 Price", name: "console1Price", widget: "string" }
+          - { label: "Console 2 Name", name: "console2Name", widget: "string" }
+          - { label: "Console 2 Price", name: "console2Price", widget: "string" }
+          - { label: "Console 3 Name", name: "console3Name", widget: "string" }
+          - { label: "Console 3 Price", name: "console3Price", widget: "string" }
+          - { label: "Support 1 Name", name: "support1Name", widget: "string" }
+          - { label: "Support 1 Price", name: "support1Price", widget: "string" }
+          - { label: "Support 2 Name", name: "support2Name", widget: "string" }
+          - { label: "Support 2 Price", name: "support2Price", widget: "string" }
+          - { label: "Support 3 Name", name: "support3Name", widget: "string" }
+          - { label: "Support 3 Price", name: "support3Price", widget: "string" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
 
   - name: "blog"
     label: "Blog / News"

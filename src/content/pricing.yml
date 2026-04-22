@@ -1,0 +1,67 @@
+# Header
+headerLabel: "Pricing"
+headerTitle: "Transparent, Honest Pricing"
+headerSubtitle: "Flat rate pricing paid upfront. No hidden fees, no surprises. Parts are extra where applicable."
+
+# Diagnostic Fee
+diagTitle: "$50 Diagnostic Fee"
+diagDesc: "All repairs start with a $50 diagnostic fee. If you proceed with the repair, that $50 is applied toward your total cost. If you decide not to repair, the fee covers my time and expertise."
+
+# Software Services
+soft1Name: "Virus & Malware Removal"
+soft1Price: "$75"
+soft2Name: "OS Reinstall (Windows or macOS)"
+soft2Price: "$85"
+soft3Name: "Software Troubleshooting & Tune-Up"
+soft3Price: "$60"
+soft4Name: "Driver Installation & Updates"
+soft4Price: "$50"
+
+# Hardware Services
+hard1Name: "Screen Replacement (labor only)"
+hard1Price: "$100 + parts"
+hard2Name: "RAM Upgrade (labor only)"
+hard2Price: "$60 + parts"
+hard3Name: "SSD Installation & OS Migration"
+hard3Price: "$85 + parts"
+hard4Name: "Hardware Diagnostics"
+hard4Price: "$75"
+hard5Name: "Broken Tech Repair"
+hard5Price: "From $60 + parts"
+
+# Data Services
+data1Name: "Data Recovery (software)"
+data1Price: "$100"
+data2Name: "Data Backup & Transfer"
+data2Price: "$60"
+
+# Mac & Apple Software
+mac1Name: "macOS Reinstall or Upgrade"
+mac1Price: "$85"
+mac2Name: "macOS Software Troubleshooting"
+mac2Price: "$60"
+mac3Name: "iCloud Troubleshooting"
+mac3Price: "$60"
+mac4Name: "Time Machine Backup Setup"
+mac4Price: "$50"
+mac5Name: "Linux Install on Older Mac (2012 to 2018)"
+mac5Price: "$85"
+
+# Gaming Console
+console1Name: "Console Diagnostics & Repair"
+console1Price: "From $60 + parts"
+console2Name: "Internal Cleaning & Dust Removal"
+console2Price: "$50"
+console3Name: "Disc Drive Repair"
+console3Price: "$65 + parts"
+
+# On-Site, Remote & Tutoring
+support1Name: "On-Site Tech Support (per hour)"
+support1Price: "$65/hr"
+support2Name: "Remote Tech Support (per hour)"
+support2Price: "$65/hr"
+support3Name: "Tech Tutoring (per hour)"
+support3Price: "$50/hr"
+
+# Disclaimer
+disclaimer: "All prices are starting rates and may vary based on device make, model and complexity of the repair. Parts are charged separately at cost. A 30 day labor warranty is included on all completed repairs. Contact me for a free quote!"
