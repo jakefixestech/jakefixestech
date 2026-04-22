@@ -161,6 +161,31 @@ collections:
           - { label: "Support 3 Price", name: "support3Price", widget: "string" }
           - { label: "Disclaimer", name: "disclaimer", widget: "text" }
 
+      - name: "hours"
+        label: "Hours & Location Page"
+        file: "src/content/hours.yml"
+        fields:
+          - { label: "Header Label", name: "headerLabel", widget: "string" }
+          - { label: "Header Title", name: "headerTitle", widget: "string" }
+          - { label: "Header Subtitle", name: "headerSubtitle", widget: "text" }
+          - { label: "Appointment Title", name: "apptTitle", widget: "string" }
+          - { label: "Appointment Description", name: "apptDesc", widget: "text" }
+          - { label: "Mon-Fri Label", name: "monFriLabel", widget: "string" }
+          - { label: "Mon-Fri Hours", name: "monFriHours", widget: "string" }
+          - { label: "Saturday Label", name: "satLabel", widget: "string" }
+          - { label: "Saturday Hours", name: "satHours", widget: "string" }
+          - { label: "Sunday Label", name: "sunLabel", widget: "string" }
+          - { label: "Sunday Hours", name: "sunHours", widget: "string" }
+          - { label: "Holiday Label", name: "holidayLabel", widget: "string" }
+          - { label: "Holiday Hours", name: "holidayHours", widget: "string" }
+          - { label: "Hours Note", name: "hoursNote", widget: "text" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Service Area Label", name: "areaLabel", widget: "string" }
+          - { label: "Service Area Title", name: "areaTitle", widget: "string" }
+          - { label: "Service Area Description", name: "areaDesc", widget: "text" }
+
   - name: "blog"
     label: "Blog / News"
     folder: "src/content/blog"

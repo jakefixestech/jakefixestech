@@ -1,0 +1,29 @@
+# Header
+headerLabel: "Hours & Location"
+headerTitle: "Find Us in Littleton, NH"
+headerSubtitle: "Based in Littleton, NH - serving the North Country and surrounding communities."
+
+# Appointment Notice
+apptTitle: "By Appointment Only"
+apptDesc: "Please call or text before stopping by. Same-day appointments are often available!"
+
+# Hours
+monFriLabel: "Monday - Friday"
+monFriHours: "Drop-off: 5:00 PM - 7:30 PM"
+satLabel: "Saturday"
+satHours: "9:00 AM - 4:00 PM"
+sunLabel: "Sunday"
+sunHours: "9:00 AM - 4:00 PM"
+holidayLabel: "Holidays"
+holidayHours: "Closed"
+hoursNote: "Weekend hours include on-site visits and in-shop repairs. Weekday evenings are drop-off only."
+
+# Contact Info
+address: "28 Grove Street, Apt 1, Littleton, NH 03561"
+phone: "(802) 234-1552"
+email: "jake@jakefixestech.com"
+
+# Service Area
+areaLabel: "📍 Service Area"
+areaTitle: "Serving Littleton & the North Country"
+areaDesc: "Based in Littleton, NH. I serve Littleton and surrounding towns including Franconia, Bethlehem, Whitefield, Lancaster, Sugar Hill and nearby Vermont communities."
