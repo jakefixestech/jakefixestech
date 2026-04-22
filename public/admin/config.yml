@@ -161,6 +161,47 @@ collections:
           - { label: "Support 3 Price", name: "support3Price", widget: "string" }
           - { label: "Disclaimer", name: "disclaimer", widget: "text" }
 
+      - name: "why-different"
+        label: "Why Different Page"
+        file: "src/content/why-different.yml"
+        fields:
+          - { label: "Header Label", name: "headerLabel", widget: "string" }
+          - { label: "Header Title", name: "headerTitle", widget: "string" }
+          - { label: "Header Subtitle", name: "headerSubtitle", widget: "text" }
+          - { label: "Intro Title", name: "introTitle", widget: "string" }
+          - { label: "Intro Paragraph 1", name: "introPara1", widget: "text" }
+          - { label: "Intro Paragraph 2", name: "introPara2", widget: "text" }
+          - { label: "Intro Paragraph 3", name: "introPara3", widget: "string" }
+          - { label: "Speed Label", name: "speedLabel", widget: "string" }
+          - { label: "Speed Title", name: "speedTitle", widget: "string" }
+          - { label: "Speed Description", name: "speedDesc", widget: "text" }
+          - { label: "Scores Label", name: "scoresLabel", widget: "string" }
+          - { label: "Scores Title", name: "scoresTitle", widget: "string" }
+          - { label: "Tool 1 Title", name: "tool1Title", widget: "string" }
+          - { label: "Tool 1 Description", name: "tool1Desc", widget: "text" }
+          - { label: "Tool 2 Title", name: "tool2Title", widget: "string" }
+          - { label: "Tool 2 Description", name: "tool2Desc", widget: "text" }
+          - { label: "Tool 3 Title", name: "tool3Title", widget: "string" }
+          - { label: "Tool 3 Description", name: "tool3Desc", widget: "text" }
+          - { label: "Widget Label", name: "widgetLabel", widget: "string" }
+          - { label: "Widget Title", name: "widgetTitle", widget: "string" }
+          - { label: "Widget Description", name: "widgetDesc", widget: "text" }
+          - { label: "Widget Note", name: "widgetNote", widget: "text" }
+          - { label: "Costs Label", name: "costsLabel", widget: "string" }
+          - { label: "Costs Title", name: "costsTitle", widget: "string" }
+          - { label: "Costs Description", name: "costsDesc", widget: "text" }
+          - { label: "Costs Math Note", name: "costsMath", widget: "text" }
+          - { label: "Pricing Label", name: "pricingLabel", widget: "string" }
+          - { label: "Pricing Title", name: "pricingTitle", widget: "string" }
+          - { label: "Pricing Description", name: "pricingDesc", widget: "text" }
+          - { label: "Pricing Note", name: "pricingNote", widget: "text" }
+          - { label: "Platform Label", name: "platformLabel", widget: "string" }
+          - { label: "Platform Title", name: "platformTitle", widget: "string" }
+          - { label: "Platform Description", name: "platformDesc", widget: "text" }
+          - { label: "Bottom Line Title", name: "bottomTitle", widget: "string" }
+          - { label: "Bottom Line Paragraph 1", name: "bottomPara1", widget: "text" }
+          - { label: "Bottom Line Paragraph 2", name: "bottomPara2", widget: "text" }
+
       - name: "web-services"
         label: "Web Services Page"
         file: "src/content/web-services.yml"

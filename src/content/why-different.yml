@@ -1,0 +1,53 @@
+# Header
+headerLabel: "The Jake Fixes Tech Difference"
+headerTitle: "Why my Websites Are Different"
+headerSubtitle: "A lot has changed in web development over the last decade. Not every agency got the memo. Here's an honest look at what separates a modern website from an outdated one, and why it matters for your business."
+
+# Intro
+introTitle: "Let's be real for a second."
+introPara1: "A lot of web agencies are still building websites the same way they did 10-15 years ago. WordPress themes, bloated plugins, slow load times, and a monthly invoice for things that have been free for years. Meanwhile your business is paying the price in slow load times, bad Google rankings, security vulnerabilities, and customers who bounce before your page even finishes loading."
+introPara2: "I build websites differently. Not because I'm trying to be fancy, but because the tools available today are genuinely better, faster, and more secure than what most agencies are still using. And I pass those benefits directly to you."
+introPara3: "Here's exactly what I mean."
+
+# Speed Section
+speedLabel: "Performance"
+speedTitle: "Speed Isn't a Luxury. It's Everything."
+speedDesc: "Google uses page speed as a ranking factor. Slow sites rank lower, lose visitors, and lose sales. Here's how the numbers stack up."
+
+# Lighthouse / WAVE Section
+scoresLabel: "The Score That Matters"
+scoresTitle: "Google Grades Every Website. Here's How to Read the Report Card."
+tool1Title: "Google Lighthouse"
+tool1Desc: "Google's own free tool that grades any website across Performance, Accessibility, Best Practices and SEO, each scored out of 100. Most professional agency sites score 50–75 on performance. Every site I build scores 100/100 on Lighthouse desktop, and consistently hits 398–400 out of 400 on mobile — the highest tier achievable."
+tool2Title: "WAVE Accessibility Checker"
+tool2Desc: "WAVE is the industry standard tool that checks whether a website is usable by people with disabilities, including screen reader users, keyboard-only users, and people with visual impairments. Most agency sites have never been checked. Every page I build scores 10/10."
+tool3Title: "ADA Compliance"
+tool3Desc: "Under the Americans with Disabilities Act, businesses can be sued for having inaccessible websites. It happens to small businesses regularly. Every site I build meets WCAG 2.1 AA accessibility standards out of the box. No extra charge, no add-on, just built in from day one."
+
+# Accessibility Widget Section
+widgetLabel: "A Common Misconception"
+widgetTitle: "Those Little Accessibility Widgets Aren't the Answer"
+widgetDesc: "You've probably seen them. A small wheelchair icon in the corner of a website that opens a panel to adjust fonts, contrast, and other settings. It's a well-intentioned idea, but it comes with a real problem that's worth understanding."
+widgetNote: "Think of it this way: a widget that lets a visitor adjust font sizes is a bit like putting the accessible entrance around the back and hoping people find the sign. The intention is good, but the experience isn't. Real accessibility means every visitor arrives to a site that already works for them, no adjustments needed. That's what I build, verified with WAVE accessibility testing on every single page and backed by thorough manual testing on top of that. Automated tools catch a lot, but manual testing catches the rest."
+
+# Hidden Costs Section
+costsLabel: "The Real Cost of a Website"
+costsTitle: "Stop Paying for Things That Are Free"
+costsDesc: "SSL certificates, hosting, backups, CDN protection. These things have been free for years. Some agencies are still charging hundreds of dollars a year for them. Here's the truth."
+costsMath: "Quick math: If an agency is charging you $700/yr for SSL + $50/mo for hosting + $30/mo for backups, that's over $1,660 per year for things that are completely free with a modern stack. Over 5 years that's $8,300+ on top of what you paid to build the site."
+
+# Transparent Pricing Section
+pricingLabel: "No Games, No Guesswork"
+pricingTitle: "My Prices Are Right on the Website. All of Them."
+pricingDesc: "Most agencies make you call to get a quote. That's not because every project is unique — it's because they want to size up your budget before they name a number. I don't work that way."
+pricingNote: "No discovery calls required. No pressure. Browse the packages, look at the examples, and reach out when you're ready."
+
+# WordPress vs Astro Section
+platformLabel: "The Platform Problem"
+platformTitle: "WordPress Was Great in 2010. It's 2026."
+platformDesc: "WordPress powers a huge portion of the web, which is exactly why it's the number one target for hackers. It requires constant updates, plugin maintenance, and ongoing costs just to keep it running safely."
+
+# Bottom Line
+bottomTitle: "The Bottom Line"
+bottomPara1: "You deserve a website that loads fast, ranks well on Google, is accessible to every visitor, and doesn't come with a monthly bill for things that are free. That's not a premium add-on. That's just what a website should be in 2026."
+bottomPara2: "Every site I build scores 100/100 on Lighthouse desktop and consistently hits 398–400 out of 400 on mobile. It's hosted for free on Cloudflare's global network, backed up automatically on GitHub, and secured with a free SSL certificate. You own it outright from day one. No recurring fees for things that should have been free all along."
