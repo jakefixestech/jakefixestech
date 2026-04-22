@@ -63,18 +63,6 @@ collections:
           - { label: "CTA Title", name: "ctaTitle", widget: "string" }
           - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
 
-  - name: "blog"
-    label: "Blog / News"
-    folder: "src/content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-
       - name: "services"
         label: "Services Page"
         file: "src/content/services.yml"
@@ -117,3 +105,15 @@ collections:
           - { label: "CTA Title", name: "ctaTitle", widget: "string" }
           - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
           - { label: "CTA Footnote", name: "ctaFootnote", widget: "string" }
+
+  - name: "blog"
+    label: "Blog / News"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
