@@ -13,6 +13,56 @@ display_url: https://jakefixestech.com
 logo_url: https://jakefixestech.com/favicon.png
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      - name: "home"
+        label: "Home Page"
+        file: "src/content/home.yml"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Button — Primary", name: "heroBtnPrimary", widget: "string" }
+          - { label: "Hero Button — Secondary", name: "heroBtnSecondary", widget: "string" }
+          - { label: "Badge 1", name: "heroBadge1", widget: "string" }
+          - { label: "Badge 2", name: "heroBadge2", widget: "string" }
+          - { label: "Badge 3", name: "heroBadge3", widget: "string" }
+          - { label: "Badge 4", name: "heroBadge4", widget: "string" }
+          - { label: "Badge 5", name: "heroBadge5", widget: "string" }
+          - { label: "Services Section Label", name: "servicesLabel", widget: "string" }
+          - { label: "Services Section Title", name: "servicesTitle", widget: "string" }
+          - { label: "Services Section Subtitle", name: "servicesSubtitle", widget: "string" }
+          - { label: "Service 1 Title", name: "service1Title", widget: "string" }
+          - { label: "Service 1 Description", name: "service1Desc", widget: "text" }
+          - { label: "Service 2 Title", name: "service2Title", widget: "string" }
+          - { label: "Service 2 Description", name: "service2Desc", widget: "text" }
+          - { label: "Service 3 Title", name: "service3Title", widget: "string" }
+          - { label: "Service 3 Description", name: "service3Desc", widget: "text" }
+          - { label: "Service 4 Title", name: "service4Title", widget: "string" }
+          - { label: "Service 4 Description", name: "service4Desc", widget: "text" }
+          - { label: "Service 5 Title", name: "service5Title", widget: "string" }
+          - { label: "Service 5 Description", name: "service5Desc", widget: "text" }
+          - { label: "Service 6 Title", name: "service6Title", widget: "string" }
+          - { label: "Service 6 Description", name: "service6Desc", widget: "text" }
+          - { label: "Web Section Label", name: "webLabel", widget: "string" }
+          - { label: "Web Section Title", name: "webTitle", widget: "string" }
+          - { label: "Web Description 1", name: "webDesc1", widget: "text" }
+          - { label: "Web Description 2", name: "webDesc2", widget: "text" }
+          - { label: "Web Button Text", name: "webBtnText", widget: "string" }
+          - { label: "Why Section Label", name: "whyLabel", widget: "string" }
+          - { label: "Why Section Title", name: "whyTitle", widget: "string" }
+          - { label: "Why 1 Title", name: "why1Title", widget: "string" }
+          - { label: "Why 1 Description", name: "why1Desc", widget: "text" }
+          - { label: "Why 2 Title", name: "why2Title", widget: "string" }
+          - { label: "Why 2 Description", name: "why2Desc", widget: "text" }
+          - { label: "Why 3 Title", name: "why3Title", widget: "string" }
+          - { label: "Why 3 Description", name: "why3Desc", widget: "text" }
+          - { label: "Why 4 Title", name: "why4Title", widget: "string" }
+          - { label: "Why 4 Description", name: "why4Desc", widget: "text" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
+
   - name: "blog"
     label: "Blog / News"
     folder: "src/content/blog"
