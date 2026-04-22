@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import content from '../content/about.yml';
 ---
 
 <Layout title="About Jake | Jake Fixes Tech in Littleton, NH"
@@ -10,88 +11,71 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
     <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
     <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">About Jake</p>
-      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">A Lifelong Passion for Fixing Things</h1>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">Computer technician, web developer and technology educator serving Littleton, NH and the North Country.</p>
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">{content.headerLabel}</p>
+      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">{content.headerTitle}</h1>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">{content.headerSubtitle}</p>
     </div>
   </section>
 
   <!-- Main About Section -->
   <section style="background:white;padding:5rem 1.5rem;">
     <div style="max-width:80rem;margin:0 auto;">
-
       <div id="about-grid">
 
         <!-- Text -->
         <div>
-          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">My Story</p>
-          <h2 style="margin-top:0.75rem;font-size:2rem;font-weight:800;color:#111827;line-height:1.2;">
-            Tech Has Been My Thing Since Day One
-          </h2>
-          <p style="margin-top:1.25rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            Hi, I'm Jake Charland. I've been passionate about technology since I was a kid. Taking things apart, figuring out how they work and putting them back together is something I've always loved. What started as a hobby turned into a career spanning over a decade of real hands-on experience in IT, computer repair and web development.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            I hold a <strong style="color:#111827;">Bachelor's Degree in Computer Information Systems</strong> from Lyndon State College in Vermont. I also had the opportunity to teach a senior level advanced website programming course there twice. That experience gave me a deep appreciation for breaking down complex tech concepts into something anyone can understand.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            Over the years I've worked in IT across multiple Vermont schools and colleges, supporting students, staff and entire organizations with their technology needs. I also single-handedly set up all of the technology infrastructure for the <strong style="color:#111827;">Do North Coworking Space</strong> in Lyndonville, VT during my final semester of college. That included everything from networking to workstations, built from scratch.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            I recently launched Jake Fixes Tech LLC right here in Littleton, NH to bring affordable, honest tech repair and professional web design to my community. Homes, families and small businesses across the North Country deserve tech support they can actually trust.
-          </p>
-          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">
-            When your tech isn't working I know how stressful that can be. I'm here to make the process as smooth and painless as possible. No upselling, no confusing jargon, just honest work at a fair price.
-          </p>
+          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.storyLabel}</p>
+          <h2 style="margin-top:0.75rem;font-size:2rem;font-weight:800;color:#111827;line-height:1.2;">{content.storyTitle}</h2>
+          <p style="margin-top:1.25rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">{content.story1}</p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;" set:html={content.story2.replace("Bachelor's Degree in Computer Information Systems", '<strong style="color:#111827;">Bachelor\'s Degree in Computer Information Systems</strong>')}></p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;" set:html={content.story3.replace("Do North Coworking Space", '<strong style="color:#111827;">Do North Coworking Space</strong>')}></p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">{content.story4}</p>
+          <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">{content.story5}</p>
         </div>
 
         <!-- Values + Photo -->
         <div style="display:flex;flex-direction:column;gap:1.5rem;">
-
           <div style="display:flex;gap:1rem;">
             <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
               <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
             <div>
-              <h3 style="font-weight:600;color:#111827;">Passion for Tech</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">Been tinkering with computers and gadgets since childhood and never stopped. Every repair is a puzzle I genuinely love solving.</p>
+              <h3 style="font-weight:600;color:#111827;">{content.value1Title}</h3>
+              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value1Desc}</p>
             </div>
           </div>
-
           <div style="display:flex;gap:1rem;">
             <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
               <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
             </div>
             <div>
-              <h3 style="font-weight:600;color:#111827;">Honest Service</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">No upselling and no hidden fees. You get a clear diagnosis and a fair price before any work begins. If it can't be fixed I'll tell you straight.</p>
+              <h3 style="font-weight:600;color:#111827;">{content.value2Title}</h3>
+              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value2Desc}</p>
             </div>
           </div>
-
           <div style="display:flex;gap:1rem;">
             <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
               <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
             <div>
-              <h3 style="font-weight:600;color:#111827;">Community First</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">Proud to serve Littleton, NH and the surrounding North Country. Homes, families and small businesses all deserve tech support they can count on.</p>
+              <h3 style="font-weight:600;color:#111827;">{content.value3Title}</h3>
+              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value3Desc}</p>
             </div>
           </div>
-
           <div style="display:flex;gap:1rem;">
             <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
               <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
             <div>
-              <h3 style="font-weight:600;color:#111827;">Formally Educated</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">Bachelor's degree in Computer Information Systems and real experience teaching advanced web programming at the college level. This isn't just a side hustle. It's a career.</p>
+              <h3 style="font-weight:600;color:#111827;">{content.value4Title}</h3>
+              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value4Desc}</p>
             </div>
           </div>
 
-          <!-- Photo below values -->
-          <img src="/brickwall.webp" alt="Jake Charland, owner of Jake Fixes Tech LLC" width="600" height="740" style="width:100%;border-radius:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.12);margin-top:0.5rem;" />
-
+          <!-- Photo — swappable from Decap -->
+          <img src={content.photo} alt={content.photoAlt} width="600" height="740" style="width:100%;border-radius:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.12);margin-top:0.5rem;" />
         </div>
+
       </div>
     </div>
   </section>
@@ -100,45 +84,33 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
   <section style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:80rem;margin:0 auto;">
       <div style="text-align:center;margin-bottom:3rem;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Background & Experience</p>
-        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Real Credentials. Real Experience.</h2>
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.credLabel}</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.credTitle}</h2>
       </div>
-
       <div id="credentials-grid">
         <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <h3>Bachelor's Degree</h3>
-          <p>Computer Information Systems</p>
-          <p class="credential-sub">Lyndon State College, Vermont</p>
+          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <h3>{content.cred1Title}</h3>
+          <p>{content.cred1Desc}</p>
+          <p class="credential-sub">{content.cred1Sub}</p>
         </div>
-
         <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>College Instructor</h3>
-          <p>Taught Senior Level Advanced Website Programming</p>
-          <p class="credential-sub">Lyndon State College, 2 semesters</p>
+          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>{content.cred2Title}</h3>
+          <p>{content.cred2Desc}</p>
+          <p class="credential-sub">{content.cred2Sub}</p>
         </div>
-
         <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>School IT Experience</h3>
-          <p>IT support across multiple Vermont schools and colleges</p>
-          <p class="credential-sub">10+ years hands-on experience</p>
+          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>{content.cred3Title}</h3>
+          <p>{content.cred3Desc}</p>
+          <p class="credential-sub">{content.cred3Sub}</p>
         </div>
-
         <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-          </div>
-          <h3>Infrastructure Build-Out</h3>
-          <p>Solo technology setup for Do North Coworking Space</p>
-          <p class="credential-sub">Lyndonville, Vermont</p>
+          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+          <h3>{content.cred4Title}</h3>
+          <p>{content.cred4Desc}</p>
+          <p class="credential-sub">{content.cred4Sub}</p>
         </div>
       </div>
     </div>
@@ -147,15 +119,11 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
   <!-- CTA -->
   <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:4rem 1.5rem;text-align:center;">
     <div style="max-width:40rem;margin:0 auto;">
-      <h2 style="font-size:1.75rem;font-weight:800;color:white;margin-bottom:1rem;">Ready to Work With Jake?</h2>
-      <p style="color:#bfdbfe;font-size:1rem;line-height:1.75;margin-bottom:2rem;">Whether you need a repair, a new website or just some tech help, I've got you covered.</p>
+      <h2 style="font-size:1.75rem;font-weight:800;color:white;margin-bottom:1rem;">{content.ctaTitle}</h2>
+      <p style="color:#bfdbfe;font-size:1rem;line-height:1.75;margin-bottom:2rem;">{content.ctaSubtitle}</p>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/services" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
-          View Services
-        </a>
-        <a href="/contact" style="display:inline-flex;align-items:center;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          Get in Touch
-        </a>
+        <a href="/services" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">View Services</a>
+        <a href="/contact" style="display:inline-flex;align-items:center;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">Get in Touch</a>
       </div>
     </div>
   </section>

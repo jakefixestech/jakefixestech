@@ -1,0 +1,47 @@
+# Header
+headerLabel: "About Jake"
+headerTitle: "A Lifelong Passion for Fixing Things"
+headerSubtitle: "Computer technician, web developer and technology educator serving Littleton, NH and the North Country."
+
+# Main Story
+storyLabel: "My Story"
+storyTitle: "Tech Has Been My Thing Since Day One"
+story1: "Hi, I'm Jake Charland. I've been passionate about technology since I was a kid. Taking things apart, figuring out how they work and putting them back together is something I've always loved. What started as a hobby turned into a career spanning over a decade of real hands-on experience in IT, computer repair and web development."
+story2: "I hold a Bachelor's Degree in Computer Information Systems from Lyndon State College in Vermont. I also had the opportunity to teach a senior level advanced website programming course there twice. That experience gave me a deep appreciation for breaking down complex tech concepts into something anyone can understand."
+story3: "Over the years I've worked in IT across multiple Vermont schools and colleges, supporting students, staff and entire organizations with their technology needs. I also single-handedly set up all of the technology infrastructure for the Do North Coworking Space in Lyndonville, VT during my final semester of college. That included everything from networking to workstations, built from scratch."
+story4: "I recently launched Jake Fixes Tech LLC right here in Littleton, NH to bring affordable, honest tech repair and professional web design to my community. Homes, families and small businesses across the North Country deserve tech support they can actually trust."
+story5: "When your tech isn't working I know how stressful that can be. I'm here to make the process as smooth and painless as possible. No upselling, no confusing jargon, just honest work at a fair price."
+
+# Photo
+photo: "/brickwall.webp"
+photoAlt: "Jake Charland, owner of Jake Fixes Tech LLC"
+
+# Values
+value1Title: "Passion for Tech"
+value1Desc: "Been tinkering with computers and gadgets since childhood and never stopped. Every repair is a puzzle I genuinely love solving."
+value2Title: "Honest Service"
+value2Desc: "No upselling and no hidden fees. You get a clear diagnosis and a fair price before any work begins. If it can't be fixed I'll tell you straight."
+value3Title: "Community First"
+value3Desc: "Proud to serve Littleton, NH and the surrounding North Country. Homes, families and small businesses all deserve tech support they can count on."
+value4Title: "Formally Educated"
+value4Desc: "Bachelor's degree in Computer Information Systems and real experience teaching advanced web programming at the college level. This isn't just a side hustle. It's a career."
+
+# Credentials
+credLabel: "Background & Experience"
+credTitle: "Real Credentials. Real Experience."
+cred1Title: "Bachelor's Degree"
+cred1Desc: "Computer Information Systems"
+cred1Sub: "Lyndon State College, Vermont"
+cred2Title: "College Instructor"
+cred2Desc: "Taught Senior Level Advanced Website Programming"
+cred2Sub: "Lyndon State College, 2 semesters"
+cred3Title: "School IT Experience"
+cred3Desc: "IT support across multiple Vermont schools and colleges"
+cred3Sub: "10+ years hands-on experience"
+cred4Title: "Infrastructure Build-Out"
+cred4Desc: "Solo technology setup for Do North Coworking Space"
+cred4Sub: "Lyndonville, Vermont"
+
+# CTA
+ctaTitle: "Ready to Work With Jake?"
+ctaSubtitle: "Whether you need a repair, a new website or just some tech help, I've got you covered."

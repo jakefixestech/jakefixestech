@@ -161,6 +161,47 @@ collections:
           - { label: "Support 3 Price", name: "support3Price", widget: "string" }
           - { label: "Disclaimer", name: "disclaimer", widget: "text" }
 
+      - name: "about"
+        label: "About Page"
+        file: "src/content/about.yml"
+        fields:
+          - { label: "Header Label", name: "headerLabel", widget: "string" }
+          - { label: "Header Title", name: "headerTitle", widget: "string" }
+          - { label: "Header Subtitle", name: "headerSubtitle", widget: "text" }
+          - { label: "Story Label", name: "storyLabel", widget: "string" }
+          - { label: "Story Title", name: "storyTitle", widget: "string" }
+          - { label: "Story Paragraph 1", name: "story1", widget: "text" }
+          - { label: "Story Paragraph 2", name: "story2", widget: "text" }
+          - { label: "Story Paragraph 3", name: "story3", widget: "text" }
+          - { label: "Story Paragraph 4", name: "story4", widget: "text" }
+          - { label: "Story Paragraph 5", name: "story5", widget: "text" }
+          - { label: "About Photo", name: "photo", widget: "image" }
+          - { label: "Photo Alt Text", name: "photoAlt", widget: "string" }
+          - { label: "Value 1 Title", name: "value1Title", widget: "string" }
+          - { label: "Value 1 Description", name: "value1Desc", widget: "text" }
+          - { label: "Value 2 Title", name: "value2Title", widget: "string" }
+          - { label: "Value 2 Description", name: "value2Desc", widget: "text" }
+          - { label: "Value 3 Title", name: "value3Title", widget: "string" }
+          - { label: "Value 3 Description", name: "value3Desc", widget: "text" }
+          - { label: "Value 4 Title", name: "value4Title", widget: "string" }
+          - { label: "Value 4 Description", name: "value4Desc", widget: "text" }
+          - { label: "Credentials Label", name: "credLabel", widget: "string" }
+          - { label: "Credentials Title", name: "credTitle", widget: "string" }
+          - { label: "Credential 1 Title", name: "cred1Title", widget: "string" }
+          - { label: "Credential 1 Description", name: "cred1Desc", widget: "text" }
+          - { label: "Credential 1 Sub", name: "cred1Sub", widget: "string" }
+          - { label: "Credential 2 Title", name: "cred2Title", widget: "string" }
+          - { label: "Credential 2 Description", name: "cred2Desc", widget: "text" }
+          - { label: "Credential 2 Sub", name: "cred2Sub", widget: "string" }
+          - { label: "Credential 3 Title", name: "cred3Title", widget: "string" }
+          - { label: "Credential 3 Description", name: "cred3Desc", widget: "text" }
+          - { label: "Credential 3 Sub", name: "cred3Sub", widget: "string" }
+          - { label: "Credential 4 Title", name: "cred4Title", widget: "string" }
+          - { label: "Credential 4 Description", name: "cred4Desc", widget: "text" }
+          - { label: "Credential 4 Sub", name: "cred4Sub", widget: "string" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
+
       - name: "hours"
         label: "Hours & Location Page"
         file: "src/content/hours.yml"
