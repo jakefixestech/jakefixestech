@@ -161,6 +161,50 @@ collections:
           - { label: "Support 3 Price", name: "support3Price", widget: "string" }
           - { label: "Disclaimer", name: "disclaimer", widget: "text" }
 
+      - name: "web-services"
+        label: "Web Services Page"
+        file: "src/content/web-services.yml"
+        fields:
+          - { label: "Header Label", name: "headerLabel", widget: "string" }
+          - { label: "Header Title", name: "headerTitle", widget: "string" }
+          - { label: "Header Subtitle", name: "headerSubtitle", widget: "text" }
+          - { label: "Why Label", name: "whyLabel", widget: "string" }
+          - { label: "Why Title", name: "whyTitle", widget: "string" }
+          - { label: "Why Description", name: "whyDesc", widget: "text" }
+          - { label: "Why 1 Title", name: "why1Title", widget: "string" }
+          - { label: "Why 1 Description", name: "why1Desc", widget: "text" }
+          - { label: "Why 2 Title", name: "why2Title", widget: "string" }
+          - { label: "Why 2 Description", name: "why2Desc", widget: "text" }
+          - { label: "Why 3 Title", name: "why3Title", widget: "string" }
+          - { label: "Why 3 Description", name: "why3Desc", widget: "text" }
+          - { label: "Why 4 Title", name: "why4Title", widget: "string" }
+          - { label: "Why 4 Description", name: "why4Desc", widget: "text" }
+          - { label: "ADA Card Title", name: "adaTitle", widget: "string" }
+          - { label: "ADA Card Description", name: "adaDesc", widget: "text" }
+          - { label: "Packages Label", name: "packagesLabel", widget: "string" }
+          - { label: "Packages Title", name: "packagesTitle", widget: "string" }
+          - { label: "Packages Description", name: "packagesDesc", widget: "text" }
+          - { label: "Starter Price", name: "starterPrice", widget: "string" }
+          - { label: "Professional Price", name: "professionalPrice", widget: "string" }
+          - { label: "Premium Price", name: "premiumPrice", widget: "string" }
+          - { label: "Premium Notice", name: "premiumNotice", widget: "text" }
+          - { label: "Management Label", name: "mgmtLabel", widget: "string" }
+          - { label: "Management Title", name: "mgmtTitle", widget: "string" }
+          - { label: "Management Description", name: "mgmtDesc", widget: "text" }
+          - { label: "Basic Plan Price", name: "basicPrice", widget: "string" }
+          - { label: "Standard Plan Price", name: "standardPrice", widget: "string" }
+          - { label: "Premium Plan Price", name: "premiumMgmtPrice", widget: "string" }
+          - { label: "On-Demand Label", name: "onDemandLabel", widget: "string" }
+          - { label: "On-Demand Title", name: "onDemandTitle", widget: "string" }
+          - { label: "On-Demand Description", name: "onDemandDesc", widget: "text" }
+          - { label: "On-Demand Rate", name: "onDemandRate", widget: "string" }
+          - { label: "Questionnaire Label", name: "questionnaireLabel", widget: "string" }
+          - { label: "Questionnaire Title", name: "questionnaireTitle", widget: "string" }
+          - { label: "Questionnaire Description", name: "questionnaireDesc", widget: "text" }
+          - { label: "Questionnaire Save Note", name: "questionnaireSave", widget: "text" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
+
       - name: "about"
         label: "About Page"
         file: "src/content/about.yml"

@@ -1,0 +1,54 @@
+# Header
+headerLabel: "Web Services"
+headerTitle: "Professional Website Design & Management"
+headerSubtitle: "I build fast, modern, mobile-friendly websites for small businesses and organizations across the North Country. You own your site outright. No holding it hostage, no surprise fees."
+
+# Why Jake Section
+whyLabel: "Why Jake Fixes Tech"
+whyTitle: "Websites Built for Real Businesses"
+whyDesc: "No bloated page builders, no monthly Squarespace fees. I build custom, lightning fast websites that you own outright. The code, domain and content are yours forever."
+why1Title: "Lightning Fast"
+why1Desc: "Built with Astro and hosted on Cloudflare's global network. Your site loads instantly anywhere in the world."
+why2Title: "Mobile First"
+why2Desc: "Every site I build looks great on phones, tablets and desktops. Most of your visitors are on mobile."
+why3Title: "Secure & Reliable"
+why3Desc: "Free SSL certificate, Cloudflare protection and 99.9% uptime. Your site is safe and always online."
+why4Title: "Local & Personal"
+why4Desc: "You're working directly with Jake, not an agency that hands you off to a junior developer."
+
+# ADA Card
+adaTitle: "ADA & WCAG AA Compliant — Built Into Every Site"
+adaDesc: "All websites I build follow WCAG AA accessibility guidelines, the standard required under the Americans with Disabilities Act. This means your site works for everyone, including users with visual, motor or cognitive disabilities. Accessible websites also rank better in Google. Every site I build scores a perfect 10/10 on WAVE and 100/100 on Lighthouse desktop — with mobile scores consistently hitting 398–400 out of 400. That's the bar I hold all my work to."
+
+# Build Packages
+packagesLabel: "Build Packages"
+packagesTitle: "One-Time Website Build Pricing"
+packagesDesc: "All packages include mobile responsive design, SSL certificate, domain setup and a 30 day post-launch support period. Payment is 50% upfront and 50% on launch."
+starterPrice: "$750"
+professionalPrice: "$2,000"
+premiumPrice: "$3,500+"
+premiumNotice: "Premium projects are quoted by scope. The $3,500 price is a starting point. Your final quote depends on page count, custom features, content complexity and timeline."
+
+# Management Plans
+mgmtLabel: "Management Plans"
+mgmtTitle: "Optional Monthly Management"
+mgmtDesc: "After your site launches, keep it running smoothly with an optional management plan. Plans can be paid monthly, quarterly or annually. Save 2 months free when you pay annually!"
+basicPrice: "$75"
+standardPrice: "$150"
+premiumMgmtPrice: "$300"
+
+# On Demand
+onDemandLabel: "On-Demand Work"
+onDemandTitle: "Need Something Outside Your Plan?"
+onDemandDesc: "Quick changes, new features, or anything outside your management plan — I'm available for on-demand work with a 24 hour turnaround for most requests. No retainer required."
+onDemandRate: "$75"
+
+# Questionnaire
+questionnaireLabel: "Starting a Web Project?"
+questionnaireTitle: "Fill Out the Project Questionnaire"
+questionnaireDesc: "Tell me about your business, your goals and your vision before we even talk. It takes about 10 minutes and helps me show up to our first conversation already prepared with ideas for your site."
+questionnaireSave: "You can save your progress at any time by clicking the Save button at the bottom of the form and logging in with Google or Facebook. Your progress gets emailed to you so you can finish it whenever works for you. No need to do it all in one sitting."
+
+# CTA
+ctaTitle: "Ready to Get Your Business Online?"
+ctaSubtitle: "Let's talk about your project. I'll give you a free quote and we can get started right away."
