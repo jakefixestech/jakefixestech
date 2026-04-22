@@ -12,6 +12,10 @@
 /pagefind/*.js
   Content-Type: application/javascript
 
+/admin
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:
+
 /admin/*
   X-Frame-Options: SAMEORIGIN
   Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:
