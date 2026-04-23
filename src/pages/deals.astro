@@ -1,0 +1,284 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Community Discounts & Deals | Jake Fixes Tech — Littleton, NH"
+description="10% off all computer repair services for military, first responders, police, firefighters, seniors and students. Jake Fixes Tech — Littleton, NH.">
+
+  <!-- Header -->
+  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
+    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
+    <div style="max-width:56rem;margin:0 auto;padding:5rem 1.5rem 4rem 1.5rem;text-align:center;position:relative;z-index:2;">
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Community Discounts</p>
+      <h1 style="font-size:2.75rem;font-weight:900;color:white;margin-top:0.5rem;margin-bottom:1rem;line-height:1.1;">Deals for the People<br/>Who Show Up for Us</h1>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:40rem;margin:0 auto;">Some people give more than they take. This is my small way of giving back. 10% off all computer repair labor — no expiration, no fine print, forever.</p>
+    </div>
+  </section>
+
+  <!-- How to Claim -->
+  <section style="background:#1e40af;padding:1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;text-align:center;">
+      <p style="color:white;font-size:0.95rem;line-height:1.75;margin:0;"><strong style="color:#bfdbfe;">How to claim:</strong> Just mention it when you reach out or drop off. Show valid ID, badge, student ID or military ID. That's it. No forms, no codes, no hassle.</p>
+    </div>
+  </section>
+
+  <!-- Discount Cards -->
+  <section style="background:#f8fafc;padding:5rem 1.5rem;">
+    <div style="max-width:52rem;margin:0 auto;display:flex;flex-direction:column;gap:2rem;">
+
+      <!-- Military -->
+      <div class="deal-card reveal-left" data-delay="0">
+        <div class="deal-icon-wrap deal-icon-military">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Shield with star -->
+            <path d="M60 8L20 24V56C20 78 38 97 60 104C82 97 100 78 100 56V24L60 8Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round" fill="none"/>
+            <polygon points="60,32 65,47 81,47 68,56 73,71 60,62 47,71 52,56 39,47 55,47" fill="currentColor" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="deal-content">
+          <div class="deal-badge">10% Off — Forever</div>
+          <h2 class="deal-title">Military</h2>
+          <p class="deal-desc">Active duty, reserves, veterans — all branches, all ranks. Army, Navy, Air Force, Marines, Coast Guard, Space Force. You served. This one's easy.</p>
+          <p class="deal-fine">Valid military ID or DD-214 required.</p>
+        </div>
+      </div>
+
+      <!-- Police -->
+      <div class="deal-card reveal-right" data-delay="100">
+        <div class="deal-icon-wrap deal-icon-police">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Badge shape -->
+            <path d="M60 6L72 18H90V36L102 48L90 60V78H72L60 90L48 78H30V60L18 48L30 36V18H48L60 6Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round" fill="none"/>
+            <circle cx="60" cy="48" r="14" stroke="currentColor" stroke-width="4" fill="none"/>
+            <line x1="60" y1="34" x2="60" y2="38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <line x1="60" y1="58" x2="60" y2="62" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <line x1="46" y1="48" x2="50" y2="48" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <line x1="70" y1="48" x2="74" y2="48" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="deal-content">
+          <div class="deal-badge">10% Off — Forever</div>
+          <h2 class="deal-title">Law Enforcement</h2>
+          <p class="deal-desc">Local police, state police, sheriff's deputies, corrections officers, federal law enforcement. You keep communities safe — the least I can do is keep your tech running.</p>
+          <p class="deal-fine">Valid badge or department ID required.</p>
+        </div>
+      </div>
+
+      <!-- Fire / EMS -->
+      <div class="deal-card reveal-left" data-delay="200">
+        <div class="deal-icon-wrap deal-icon-fire">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Maltese cross / fire cross -->
+            <path d="M60 10 L72 30 L90 18 L78 36 L100 48 L80 60 L100 72 L78 84 L90 102 L72 90 L60 110 L48 90 L30 102 L42 84 L20 72 L40 60 L20 48 L42 36 L30 18 L48 30 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round" fill="none"/>
+            <path d="M60 40 C52 48 48 54 48 62 C48 71 53 78 60 80 C67 78 72 71 72 62 C72 54 68 48 60 40Z" fill="currentColor" opacity="0.85"/>
+            <path d="M60 52 C57 57 56 61 57 65 C58 68 59 70 60 71 C61 70 62 68 63 65 C64 61 63 57 60 52Z" fill="#f8fafc" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="deal-content">
+          <div class="deal-badge">10% Off — Forever</div>
+          <h2 class="deal-title">Firefighters & EMS</h2>
+          <p class="deal-desc">Career and volunteer firefighters, EMTs, paramedics. Whether you're running into buildings or running calls at 3am — you've got a standing discount here.</p>
+          <p class="deal-fine">Valid department ID, badge or volunteer card required.</p>
+        </div>
+      </div>
+
+      <!-- Senior -->
+      <div class="deal-card reveal-right" data-delay="300">
+        <div class="deal-icon-wrap deal-icon-senior">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Heart with hands -->
+            <path d="M60 90 C60 90 22 68 22 44 C22 32 31 24 42 24 C50 24 57 29 60 35 C63 29 70 24 78 24 C89 24 98 32 98 44 C98 68 60 90 60 90Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round" fill="none"/>
+            <path d="M44 56 C44 56 50 64 60 68 C70 64 76 56 76 56" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="deal-content">
+          <div class="deal-badge">10% Off — Forever</div>
+          <h2 class="deal-title">Seniors (65+)</h2>
+          <p class="deal-desc">Tech shouldn't be a barrier for anyone. If you're 65 or older, you get 10% off every repair, every time — plus I'll always take the extra time to explain exactly what happened and why.</p>
+          <p class="deal-fine">Just mention your age. No ID required.</p>
+        </div>
+      </div>
+
+      <!-- Student -->
+      <div class="deal-card reveal-left" data-delay="400">
+        <div class="deal-icon-wrap deal-icon-student">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Graduation cap -->
+            <polygon points="60,22 104,44 60,66 16,44" stroke="currentColor" stroke-width="5" stroke-linejoin="round" fill="none"/>
+            <path d="M84 56 L84 80 C84 80 72 92 60 92 C48 92 36 80 36 80 L36 56" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="104" y1="44" x2="104" y2="68" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="104" cy="72" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="deal-content">
+          <div class="deal-badge">10% Off — Forever</div>
+          <h2 class="deal-title">Students</h2>
+          <p class="deal-desc">High school, community college, university — if you're enrolled, you qualify. Your laptop is your lifeline. A dead computer during finals week is a genuine emergency and I take it seriously.</p>
+          <p class="deal-fine">Valid student ID required.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Fine Print / Full Terms -->
+  <section style="background:white;padding:3rem 1.5rem;">
+    <div style="max-width:52rem;margin:0 auto;">
+      <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem 2rem;">
+        <h2 style="font-size:1rem;font-weight:700;color:#111827;margin-bottom:1rem;">Discount Terms</h2>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;">
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Applies to all computer repair labor charges. Does not apply to parts, web design services or on-demand hourly web work.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> 10% discount applies after the $50 diagnostic fee, which is non-discountable.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> One discount per repair. Discounts cannot be combined.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Must be mentioned at time of drop-off or before work begins. Cannot be applied retroactively.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Valid indefinitely — no expiration date, no seasonal limits.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Jake Fixes Tech reserves the right to request verification. Abuse of the discount program results in forfeiture.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:4rem 1.5rem;text-align:center;">
+    <div style="max-width:40rem;margin:0 auto;">
+      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Ready to Bring Your Device In?</h2>
+      <p style="color:#bfdbfe;font-size:1.05rem;line-height:1.75;margin-bottom:2rem;">Reach out, mention your discount, and let's get your tech sorted. No appointment needed to ask a question.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get in Touch
+        </a>
+        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
+          View Full Pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Deal Cards */
+  .deal-card {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    opacity: 0;
+    transition: box-shadow 0.3s;
+  }
+
+  .deal-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+  }
+
+  /* Scroll reveal animations */
+  .reveal-left { transform: translateX(-60px) rotate(-2deg); }
+  .reveal-right { transform: translateX(60px) rotate(2deg); }
+
+  .deal-card.visible {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Icon wraps */
+  .deal-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    min-width: 140px;
+    height: 140px;
+    border-radius: 1rem;
+    flex-shrink: 0;
+  }
+
+  .deal-icon-wrap svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .deal-icon-military { background: #eff6ff; color: #1d4ed8; }
+  .deal-icon-police   { background: #1e293b; color: #e2e8f0; }
+  .deal-icon-fire     { background: #fff7ed; color: #c2410c; }
+  .deal-icon-senior   { background: #fdf2f8; color: #9d174d; }
+  .deal-icon-student  { background: #f0fdf4; color: #15803d; }
+
+  /* Content */
+  .deal-badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 0.625rem;
+  }
+
+  .deal-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 0.625rem;
+    line-height: 1.1;
+  }
+
+  .deal-desc {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.75;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .deal-fine {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin: 0;
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .deal-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.5rem;
+    }
+    .deal-icon-wrap {
+      width: 100px;
+      min-width: 100px;
+      height: 100px;
+    }
+    .deal-icon-wrap svg { width: 70px; height: 70px; }
+    .deal-title { font-size: 1.375rem; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  const cards = document.querySelectorAll('.deal-card');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const delay = parseInt(card.getAttribute('data-delay') || '0');
+        setTimeout(() => {
+          card.classList.add('visible');
+        }, delay);
+        observer.unobserve(card);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
