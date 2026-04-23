@@ -342,7 +342,7 @@ description="Professional website design, hosting and management for small busin
             Learn how the Content Dashboard works →
           </a>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1rem;min-width:240px;flex-shrink:0;">
+        <div class="dashboard-pricing-cards">
           <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;">
             <div>
               <div style="font-size:0.85rem;font-weight:700;color:#111827;">Starter Package</div>
@@ -507,6 +507,7 @@ description="Professional website design, hosting and management for small busin
   .mgmt-btn:hover { background: #1d4ed8; }
 
   .dashboard-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .dashboard-pricing-cards { display: flex; flex-direction: column; gap: 1rem; min-width: 240px; flex-shrink: 0; }
 
   @media (max-width: 768px) {
     #why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -514,6 +515,7 @@ description="Professional website design, hosting and management for small busin
     #portfolio-grid { grid-template-columns: 1fr; }
     #management-grid { grid-template-columns: 1fr; }
     .dashboard-features-grid { grid-template-columns: 1fr; }
+    .dashboard-pricing-cards { min-width: unset; width: 100%; flex-shrink: unset; }
   }
   @media (min-width: 769px) and (max-width: 1024px) {
     #why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
