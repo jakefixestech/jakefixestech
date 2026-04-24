@@ -1,67 +1,498 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import content from '../content/services.yml';
 ---
 
 <Layout title="Computer Repair Services | Jake Fixes Tech — Littleton, NH"
 description="Screen repair, virus removal, data recovery, hardware upgrades, gaming console repair and more. Flat rate pricing, no hidden fees. Serving Littleton NH.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">{content.headerLabel}</p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">{content.headerTitle}</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        {content.headerSubtitle}
-      </p>
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Computer repair services">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <radialGradient id="tileGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color:white;stop-opacity:0.12"/>
+          <stop offset="100%" style="stop-color:white;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="280" cy="240" rx="360" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1200" cy="300" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- PERSON AT DESK — left side, side-profile working at computer -->
+      <g class="desk-scene" transform="translate(100, 180)">
+        <!-- Floor line -->
+        <line x1="-20" y1="240" x2="380" y2="240" stroke="white" stroke-opacity="0.2" stroke-width="1.5" class="ds-floor"/>
+
+        <!-- DESK -->
+        <!-- Desk surface -->
+        <rect x="120" y="150" width="240" height="8" rx="1" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.12" class="ds-desk"/>
+        <!-- Desk front edge / apron -->
+        <rect x="120" y="158" width="240" height="6" stroke="white" stroke-opacity="0.2" stroke-width="1" fill="white" fill-opacity="0.06" class="ds-desk"/>
+        <!-- Desk legs -->
+        <line x1="135" y1="164" x2="135" y2="240" stroke="white" stroke-opacity="0.3" stroke-width="2" class="ds-desk"/>
+        <line x1="345" y1="164" x2="345" y2="240" stroke="white" stroke-opacity="0.3" stroke-width="2" class="ds-desk"/>
+
+        <!-- MONITOR — on desk -->
+        <g class="ds-monitor">
+          <!-- Monitor bezel -->
+          <rect x="230" y="60" width="120" height="80" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="white" fill-opacity="0.08"/>
+          <!-- Screen content area (inner rect) -->
+          <rect x="236" y="66" width="108" height="68" rx="1.5" stroke="white" stroke-opacity="0.2" stroke-width="1" fill="white" fill-opacity="0.04"/>
+          <!-- Stand neck -->
+          <rect x="282" y="140" width="16" height="6" fill="white" fill-opacity="0.25"/>
+          <!-- Stand base -->
+          <path d="M268 150 L312 150 L308 146 L272 146 Z" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.12"/>
+
+          <!-- Screen content — code/text lines that pulse-update -->
+          <g class="ds-screen-content">
+            <line class="ds-code ds-code-1" x1="242" y1="74" x2="282" y2="74" stroke="white" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+            <line class="ds-code ds-code-2" x1="242" y1="82" x2="312" y2="82" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+            <line class="ds-code ds-code-3" x1="250" y1="90" x2="296" y2="90" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+            <line class="ds-code ds-code-4" x1="250" y1="98" x2="326" y2="98" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+            <line class="ds-code ds-code-5" x1="242" y1="106" x2="288" y2="106" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+            <line class="ds-code ds-code-6" x1="258" y1="114" x2="318" y2="114" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+            <!-- Blinking cursor at end of current line -->
+            <rect class="ds-cursor" x="320" y="110" width="6" height="8" fill="white" fill-opacity="0.8"/>
+          </g>
+        </g>
+
+        <!-- KEYBOARD on desk -->
+        <g class="ds-keyboard">
+          <rect x="150" y="142" width="70" height="8" rx="1" stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="white" fill-opacity="0.1"/>
+          <!-- Key details -->
+          <line x1="156" y1="146" x2="214" y2="146" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+        </g>
+
+        <!-- CHAIR — behind person -->
+        <g class="ds-chair">
+          <!-- Chair back (tall) -->
+          <rect x="46" y="110" width="10" height="70" rx="2" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <!-- Chair seat -->
+          <rect x="40" y="178" width="60" height="8" rx="1.5" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.1"/>
+          <!-- Seat post -->
+          <line x1="70" y1="186" x2="70" y2="220" stroke="white" stroke-opacity="0.3" stroke-width="2"/>
+          <!-- 5-star chair base (two visible legs in side view) -->
+          <line x1="70" y1="220" x2="52" y2="238" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round"/>
+          <line x1="70" y1="220" x2="88" y2="238" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round"/>
+          <!-- Wheels -->
+          <circle cx="50" cy="238" r="2.5" stroke="white" stroke-opacity="0.35" stroke-width="1" fill="white" fill-opacity="0.15"/>
+          <circle cx="90" cy="238" r="2.5" stroke="white" stroke-opacity="0.35" stroke-width="1" fill="white" fill-opacity="0.15"/>
+        </g>
+
+        <!-- PERSON — side profile, seated, arm extended to keyboard -->
+        <g class="ds-person">
+          <!-- Torso (trapezoid shoulder-to-hip, leaning slightly forward) -->
+          <path d="M72 128 L112 120 L122 178 L74 180 Z"
+            stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.12" stroke-linejoin="round"/>
+          <!-- Neck -->
+          <line x1="106" y1="118" x2="108" y2="108" stroke="white" stroke-opacity="0.5" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Head (with slight nod) -->
+          <g class="ds-head" transform-origin="108 100">
+            <circle cx="108" cy="96" r="14" stroke="white" stroke-opacity="0.55" stroke-width="2" fill="white" fill-opacity="0.12"/>
+            <!-- Hair suggestion (small cap on top) -->
+            <path d="M96 92 Q108 80 120 92" stroke="white" stroke-opacity="0.55" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Ear dot -->
+            <circle cx="100" cy="98" r="1.5" fill="white" fill-opacity="0.5"/>
+          </g>
+
+          <!-- Upper arm (shoulder to elbow, reaching forward toward keyboard) -->
+          <line x1="114" y1="128" x2="150" y2="138" stroke="white" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round"/>
+          <!-- Forearm + hand (elbow to keyboard) — this is the animated piece -->
+          <g class="ds-arm" transform-origin="150 138">
+            <line x1="150" y1="138" x2="180" y2="142" stroke="white" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round"/>
+            <!-- Hand -->
+            <ellipse cx="186" cy="142" rx="7" ry="4" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.15"/>
+          </g>
+
+          <!-- Leg (seated, knee bent, foot on floor) -->
+          <path d="M100 180 L120 210 L140 230" stroke="white" stroke-opacity="0.45" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Shoe -->
+          <ellipse cx="144" cy="234" rx="8" ry="3" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.15"/>
+        </g>
+      </g>
+
+      <!-- SERVICE TILES GRID — right side, 3x2 tiles -->
+      <g class="tile-grid" transform="translate(1060, 160)">
+        <!-- Tile 1: Laptop/screen -->
+        <g class="tile tile-1" transform="translate(0, 0)">
+          <rect x="0" y="0" width="80" height="80" rx="8" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <circle cx="40" cy="40" r="35" fill="url(#tileGlow)" class="tile-glow"/>
+          <g transform="translate(24, 24)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="28" height="18" rx="1.5"/>
+            <line x1="8" y1="30" x2="24" y2="30"/>
+            <line x1="14" y1="26" x2="18" y2="26"/>
+          </g>
+        </g>
+        <!-- Tile 2: Virus/shield with check -->
+        <g class="tile tile-2" transform="translate(100, 0)">
+          <rect x="0" y="0" width="80" height="80" rx="8" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <circle cx="40" cy="40" r="35" fill="url(#tileGlow)" class="tile-glow"/>
+          <g transform="translate(24, 22)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2 L2 8 L2 20 C2 28 16 34 16 34 C16 34 30 28 30 20 L30 8 Z"/>
+            <path d="M10 18 L14 22 L22 12"/>
+          </g>
+        </g>
+        <!-- Tile 3: Hardware/chip (simplified — 4 tick marks instead of 8) -->
+        <g class="tile tile-3" transform="translate(200, 0)">
+          <rect x="0" y="0" width="80" height="80" rx="8" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <circle cx="40" cy="40" r="35" fill="url(#tileGlow)" class="tile-glow"/>
+          <g transform="translate(22, 22)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="6" width="24" height="24" rx="2"/>
+            <rect x="13" y="13" width="10" height="10"/>
+            <line x1="18" y1="2" x2="18" y2="6"/>
+            <line x1="18" y1="30" x2="18" y2="34"/>
+            <line x1="2" y1="18" x2="6" y2="18"/>
+            <line x1="30" y1="18" x2="34" y2="18"/>
+          </g>
+        </g>
+        <!-- Tile 4: Data/disk -->
+        <g class="tile tile-4" transform="translate(0, 100)">
+          <rect x="0" y="0" width="80" height="80" rx="8" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <circle cx="40" cy="40" r="35" fill="url(#tileGlow)" class="tile-glow"/>
+          <g transform="translate(22, 22)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="18" cy="10" rx="16" ry="4"/>
+            <path d="M2 10 C2 12.5 9 15 18 15 S34 12.5 34 10"/>
+            <path d="M2 10 L2 26 C2 28.5 9 31 18 31 S34 28.5 34 26 L34 10"/>
+          </g>
+        </g>
+        <!-- Tile 5: Tools/wrench -->
+        <g class="tile tile-5" transform="translate(100, 100)">
+          <rect x="0" y="0" width="80" height="80" rx="8" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <circle cx="40" cy="40" r="35" fill="url(#tileGlow)" class="tile-glow"/>
+          <g transform="translate(22, 22)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 6 L28 12 L14 26 L8 20 Z"/>
+            <line x1="14" y1="26" x2="6" y2="34"/>
+            <circle cx="26" cy="10" r="3"/>
+          </g>
+        </g>
+        <!-- Tile 6: Gaming/controller -->
+        <g class="tile tile-6" transform="translate(200, 100)">
+          <rect x="0" y="0" width="80" height="80" rx="8" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <circle cx="40" cy="40" r="35" fill="url(#tileGlow)" class="tile-glow"/>
+          <g transform="translate(20, 26)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="36" height="22" rx="3"/>
+            <line x1="10" y1="15" x2="14" y2="15"/>
+            <line x1="12" y1="13" x2="12" y2="17"/>
+            <circle cx="28" cy="13" r="1.5" fill="white"/>
+            <circle cx="32" cy="17" r="1.5" fill="white"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- AMBIENT GEARS — rotating slowly in the background, very subtle -->
+      <g class="gear-field">
+        <!-- Gear 1 top left -->
+        <g class="ambient-gear ag-1" transform="translate(80, 60)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
+            <circle cx="0" cy="0" r="14"/>
+            <circle cx="0" cy="0" r="5"/>
+            <path d="M0 -18 L-2 -14 L2 -14 Z M0 18 L-2 14 L2 14 Z M-18 0 L-14 -2 L-14 2 Z M18 0 L14 -2 L14 2 Z M13 -13 L10 -10 L13 -10 Z M-13 13 L-10 10 L-13 10 Z M13 13 L10 10 L13 13 Z M-13 -13 L-10 -10 L-13 -10 Z"/>
+          </g>
+        </g>
+        <!-- Gear 2 top center -->
+        <g class="ambient-gear ag-2" transform="translate(560, 50)">
+          <g stroke="white" stroke-opacity="0.09" fill="none" stroke-width="1.2">
+            <circle cx="0" cy="0" r="11"/>
+            <circle cx="0" cy="0" r="4"/>
+            <path d="M0 -15 L-2 -11 L2 -11 Z M0 15 L-2 11 L2 11 Z M-15 0 L-11 -2 L-11 2 Z M15 0 L11 -2 L11 2 Z"/>
+          </g>
+        </g>
+        <!-- Gear 3 upper right (above tiles) -->
+        <g class="ambient-gear ag-3" transform="translate(880, 90)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
+            <circle cx="0" cy="0" r="10"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
+          </g>
+        </g>
+        <!-- Gear 4 lower left -->
+        <g class="ambient-gear ag-4" transform="translate(480, 440)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
+            <circle cx="0" cy="0" r="13"/>
+            <circle cx="0" cy="0" r="4"/>
+            <path d="M0 -17 L-2 -13 L2 -13 Z M0 17 L-2 13 L2 13 Z M-17 0 L-13 -2 L-13 2 Z M17 0 L13 -2 L13 2 Z M12 -12 L9 -9 L12 -9 Z M-12 12 L-9 9 L-12 9 Z"/>
+          </g>
+        </g>
+        <!-- Gear 5 lower right -->
+        <g class="ambient-gear ag-5" transform="translate(1340, 450)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
+            <circle cx="0" cy="0" r="11"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -14 L-2 -11 L2 -11 Z M0 14 L-2 11 L2 11 Z M-14 0 L-11 -2 L-11 2 Z M14 0 L11 -2 L11 2 Z"/>
+          </g>
+        </g>
+        <!-- Gear 6 mid left area -->
+        <g class="ambient-gear ag-6" transform="translate(60, 420)">
+          <g stroke="white" stroke-opacity="0.09" fill="none" stroke-width="1.2">
+            <circle cx="0" cy="0" r="9"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -12 L-2 -9 L2 -9 Z M0 12 L-2 9 L2 9 Z M-12 0 L-9 -2 L-9 2 Z M12 0 L9 -2 L9 2 Z"/>
+          </g>
+        </g>
+        <!-- Gear 7 far right top -->
+        <g class="ambient-gear ag-7" transform="translate(1380, 80)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
+            <circle cx="0" cy="0" r="10"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <radialGradient id="tileGlowM" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color:white;stop-opacity:0.12"/>
+          <stop offset="100%" style="stop-color:white;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="320" cy="480" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- PERSON AT DESK — mobile, top -->
+      <g class="desk-scene" transform="translate(50, 30)">
+        <!-- Floor line -->
+        <line x1="-20" y1="200" x2="340" y2="200" stroke="white" stroke-opacity="0.2" stroke-width="1.2" class="ds-floor"/>
+
+        <!-- Desk -->
+        <rect x="100" y="125" width="200" height="6" rx="1" stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="white" fill-opacity="0.12" class="ds-desk"/>
+        <rect x="100" y="131" width="200" height="5" stroke="white" stroke-opacity="0.2" stroke-width="0.8" fill="white" fill-opacity="0.06" class="ds-desk"/>
+        <line x1="115" y1="136" x2="115" y2="200" stroke="white" stroke-opacity="0.3" stroke-width="1.5" class="ds-desk"/>
+        <line x1="285" y1="136" x2="285" y2="200" stroke="white" stroke-opacity="0.3" stroke-width="1.5" class="ds-desk"/>
+
+        <!-- Monitor -->
+        <g class="ds-monitor">
+          <rect x="190" y="50" width="100" height="66" rx="2.5" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <rect x="195" y="55" width="90" height="56" rx="1" stroke="white" stroke-opacity="0.2" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+          <rect x="234" y="116" width="12" height="5" fill="white" fill-opacity="0.25"/>
+          <path d="M222 125 L258 125 L255 121 L225 121 Z" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.12"/>
+
+          <g class="ds-screen-content">
+            <line class="ds-code ds-code-1" x1="200" y1="62" x2="232" y2="62" stroke="white" stroke-opacity="0.55" stroke-width="1.8" stroke-linecap="round"/>
+            <line class="ds-code ds-code-2" x1="200" y1="70" x2="258" y2="70" stroke="white" stroke-opacity="0.5" stroke-width="1.8" stroke-linecap="round"/>
+            <line class="ds-code ds-code-3" x1="206" y1="78" x2="244" y2="78" stroke="white" stroke-opacity="0.5" stroke-width="1.8" stroke-linecap="round"/>
+            <line class="ds-code ds-code-4" x1="206" y1="86" x2="270" y2="86" stroke="white" stroke-opacity="0.5" stroke-width="1.8" stroke-linecap="round"/>
+            <line class="ds-code ds-code-5" x1="200" y1="94" x2="238" y2="94" stroke="white" stroke-opacity="0.5" stroke-width="1.8" stroke-linecap="round"/>
+            <line class="ds-code ds-code-6" x1="214" y1="102" x2="262" y2="102" stroke="white" stroke-opacity="0.5" stroke-width="1.8" stroke-linecap="round"/>
+            <rect class="ds-cursor" x="264" y="98" width="5" height="7" fill="white" fill-opacity="0.8"/>
+          </g>
+        </g>
+
+        <!-- Keyboard -->
+        <g class="ds-keyboard">
+          <rect x="128" y="118" width="56" height="6" rx="1" stroke="white" stroke-opacity="0.35" stroke-width="1" fill="white" fill-opacity="0.1"/>
+        </g>
+
+        <!-- Chair -->
+        <g class="ds-chair">
+          <rect x="40" y="92" width="8" height="58" rx="1.5" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+          <rect x="34" y="148" width="50" height="6" rx="1.2" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.1"/>
+          <line x1="58" y1="154" x2="58" y2="182" stroke="white" stroke-opacity="0.3" stroke-width="1.5"/>
+          <line x1="58" y1="182" x2="42" y2="198" stroke="white" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="58" y1="182" x2="74" y2="198" stroke="white" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="40" cy="198" r="2" stroke="white" stroke-opacity="0.35" stroke-width="0.8" fill="white" fill-opacity="0.15"/>
+          <circle cx="76" cy="198" r="2" stroke="white" stroke-opacity="0.35" stroke-width="0.8" fill="white" fill-opacity="0.15"/>
+        </g>
+
+        <!-- Person -->
+        <g class="ds-person">
+          <path d="M60 108 L94 102 L102 150 L62 152 Z"
+            stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.12" stroke-linejoin="round"/>
+          <line x1="89" y1="100" x2="91" y2="92" stroke="white" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+          <g class="ds-head" transform-origin="91 86">
+            <circle cx="91" cy="82" r="12" stroke="white" stroke-opacity="0.55" stroke-width="1.5" fill="white" fill-opacity="0.12"/>
+            <path d="M81 78 Q91 68 101 78" stroke="white" stroke-opacity="0.55" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <circle cx="84" cy="84" r="1.2" fill="white" fill-opacity="0.5"/>
+          </g>
+          <line x1="96" y1="108" x2="126" y2="116" stroke="white" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+          <g class="ds-arm" transform-origin="126 116">
+            <line x1="126" y1="116" x2="152" y2="118" stroke="white" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="157" cy="118" rx="6" ry="3.5" stroke="white" stroke-opacity="0.5" stroke-width="1.2" fill="white" fill-opacity="0.15"/>
+          </g>
+          <path d="M85 152 L100 176 L118 194" stroke="white" stroke-opacity="0.45" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <ellipse cx="122" cy="196" rx="7" ry="2.5" stroke="white" stroke-opacity="0.5" stroke-width="1.2" fill="white" fill-opacity="0.15"/>
+        </g>
+      </g>
+
+      <!-- Service tiles — bottom, 3x2 grid -->
+      <g class="tile-grid" transform="translate(62, 420)">
+        <g class="tile tile-1" transform="translate(0, 0)">
+          <rect x="0" y="0" width="60" height="60" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+          <circle cx="30" cy="30" r="26" fill="url(#tileGlowM)" class="tile-glow"/>
+          <g transform="translate(18, 20)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="14" rx="1"/>
+            <line x1="6" y1="23" x2="18" y2="23"/>
+            <line x1="10" y1="20" x2="14" y2="20"/>
+          </g>
+        </g>
+        <g class="tile tile-2" transform="translate(70, 0)">
+          <rect x="0" y="0" width="60" height="60" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+          <circle cx="30" cy="30" r="26" fill="url(#tileGlowM)" class="tile-glow"/>
+          <g transform="translate(18, 17)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2 L2 6 L2 15 C2 21 12 26 12 26 C12 26 22 21 22 15 L22 6 Z"/>
+            <path d="M7 14 L10 17 L16 10"/>
+          </g>
+        </g>
+        <g class="tile tile-3" transform="translate(140, 0)">
+          <rect x="0" y="0" width="60" height="60" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+          <circle cx="30" cy="30" r="26" fill="url(#tileGlowM)" class="tile-glow"/>
+          <g transform="translate(18, 17)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="18" height="18" rx="2"/>
+            <rect x="10" y="10" width="6" height="6"/>
+            <line x1="13" y1="1" x2="13" y2="4"/>
+            <line x1="13" y1="22" x2="13" y2="25"/>
+            <line x1="1" y1="13" x2="4" y2="13"/>
+            <line x1="22" y1="13" x2="25" y2="13"/>
+          </g>
+        </g>
+        <g class="tile tile-4" transform="translate(210, 0)">
+          <rect x="0" y="0" width="60" height="60" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+          <circle cx="30" cy="30" r="26" fill="url(#tileGlowM)" class="tile-glow"/>
+          <g transform="translate(18, 17)" stroke="white" stroke-opacity="0.9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="14" cy="8" rx="12" ry="3"/>
+            <path d="M2 8 C2 10 8 12 14 12 S26 10 26 8"/>
+            <path d="M2 8 L2 20 C2 22 8 24 14 24 S26 22 26 20 L26 8"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Ambient gears -->
+      <g class="gear-field">
+        <g class="ambient-gear ag-1" transform="translate(40, 260)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1">
+            <circle cx="0" cy="0" r="10"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
+          </g>
+        </g>
+        <g class="ambient-gear ag-2" transform="translate(350, 240)">
+          <g stroke="white" stroke-opacity="0.09" fill="none" stroke-width="1">
+            <circle cx="0" cy="0" r="9"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -12 L-2 -9 L2 -9 Z M0 12 L-2 9 L2 9 Z M-12 0 L-9 -2 L-9 2 Z M12 0 L9 -2 L9 2 Z"/>
+          </g>
+        </g>
+        <g class="ambient-gear ag-3" transform="translate(200, 320)">
+          <g stroke="white" stroke-opacity="0.07" fill="none" stroke-width="1">
+            <circle cx="0" cy="0" r="12"/>
+            <circle cx="0" cy="0" r="4"/>
+            <path d="M0 -15 L-2 -12 L2 -12 Z M0 15 L-2 12 L2 12 Z M-15 0 L-12 -2 L-12 2 Z M15 0 L12 -2 L12 2 Z M11 -11 L8 -8 L11 -8 Z M-11 11 L-8 8 L-11 8 Z"/>
+          </g>
+        </g>
+        <g class="ambient-gear ag-4" transform="translate(30, 540)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1">
+            <circle cx="0" cy="0" r="9"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -12 L-2 -9 L2 -9 Z M0 12 L-2 9 L2 9 Z M-12 0 L-9 -2 L-9 2 Z M12 0 L9 -2 L9 2 Z"/>
+          </g>
+        </g>
+        <g class="ambient-gear ag-5" transform="translate(370, 540)">
+          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1">
+            <circle cx="0" cy="0" r="10"/>
+            <circle cx="0" cy="0" r="3"/>
+            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">WHAT I FIX</p>
+      <h1 id="hero-wordmark">Everything Under the Hood.</h1>
+      <p id="hero-tagline">From a cracked laptop screen to a stubborn virus, a slow computer to a broken gaming console — if it's tech, there's a good chance I can fix it.</p>
+      <a href="/contact" id="hero-cta">
+        Get a Free Quote
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('services-content').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
   <!-- Computer Repair -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section id="services-content" style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:72rem;margin:0 auto;">
       <div style="margin-bottom:2rem;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.repairLabel}</p>
-        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.25rem;">{content.repairTitle}</h2>
-        <p style="color:#6b7280;margin-top:0.5rem;font-size:0.9rem;line-height:1.6;">{content.repairSubtitle}</p>
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">COMPUTER REPAIR</p>
+        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.25rem;">Hardware & Screen Fixes</h2>
+        <p style="color:#6b7280;margin-top:0.5rem;font-size:0.9rem;line-height:1.6;">Common physical repairs and upgrades for laptops, desktops, and gaming consoles. Flat rate pricing, no surprises.</p>
       </div>
       <div class="services-grid">
         <a id="screen-repair" href="/services/screen-repair" class="service-card" style="text-decoration:none;display:block;">
           <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <h3>{content.service1Title}</h3>
-          <p>{content.service1Desc}</p>
+          <h3>Screen Repair</h3>
+          <p>Cracked laptop screen? I replace screens on most laptops and tablets with quality parts.</p>
           <span class="learn-more">Learn about screen repair →</span>
         </a>
         <a id="virus-removal" href="/services/virus-removal" class="service-card" style="text-decoration:none;display:block;">
           <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h3>{content.service2Title}</h3>
-          <p>{content.service2Desc}</p>
+          <h3>Virus & Malware Removal</h3>
+          <p>Suspicious popups or sluggish performance? I'll deep clean your system and get it back to fighting shape.</p>
           <span class="learn-more">Learn about virus removal →</span>
         </a>
         <a id="data-recovery" href="/services/data-recovery" class="service-card" style="text-decoration:none;display:block;">
           <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="3"/><path d="M2 12c0 1.66 4.48 3 10 3s10-1.34 10-3"/><path d="M2 12v6c0 1.66 4.48 3 10 3s10-1.34 10-3v-6"/></svg></div>
-          <h3>{content.service3Title}</h3>
-          <p>{content.service3Desc}</p>
+          <h3>Data Recovery</h3>
+          <p>Lost photos or important files? I can often recover data from drives that seem beyond hope.</p>
           <span class="learn-more">Learn about data recovery →</span>
         </a>
         <a id="hardware-upgrades" href="/services/hardware-upgrades" class="service-card" style="text-decoration:none;display:block;">
           <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg></div>
-          <h3>{content.service4Title}</h3>
-          <p>{content.service4Desc}</p>
+          <h3>Hardware Upgrades</h3>
+          <p>SSD swaps, RAM boosts, cooling improvements — breathe new life into your aging computer.</p>
           <span class="learn-more">Learn about hardware upgrades →</span>
         </a>
         <a id="broken-tech-repairs" href="/services/broken-tech-repairs" class="service-card" style="text-decoration:none;display:block;">
           <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-          <h3>{content.service5Title}</h3>
-          <p>{content.service5Desc}</p>
+          <h3>Broken Tech Repairs</h3>
+          <p>Power jack not working? Keyboard keys stuck? I diagnose and fix a wide range of hardware issues.</p>
           <span class="learn-more">Learn about broken tech repairs →</span>
         </a>
         <a id="gaming-console-repair" href="/services/gaming-console-repair" class="service-card" style="text-decoration:none;display:block;">
           <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h.01M10 12h.01M7 9l-1 3 1 3M13 9l1 3-1 3"/></svg></div>
-          <h3>{content.service6Title}</h3>
-          <p>{content.service6Desc}</p>
+          <h3>Gaming Console Repair</h3>
+          <p>HDMI port issues, controller repairs, deep cleaning — keep your PlayStation or Xbox in the game.</p>
           <span class="learn-more">Learn about gaming console repair →</span>
         </a>
       </div>
@@ -73,9 +504,9 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
     <div style="max-width:72rem;margin:0 auto;">
       <div class="web-spotlight-inner">
         <div>
-          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin-bottom:0.5rem;">{content.webLabel}</p>
-          <h2 style="font-size:1.75rem;font-weight:800;color:white;margin-bottom:0.75rem;line-height:1.2;">{content.webTitle}</h2>
-          <p style="color:#bfdbfe;line-height:1.75;font-size:1rem;margin-bottom:1.5rem;">{content.webDesc}</p>
+          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin-bottom:0.5rem;">WEBSITE DESIGN</p>
+          <h2 style="font-size:1.75rem;font-weight:800;color:white;margin-bottom:0.75rem;line-height:1.2;">Fast, Accessible, Beautifully Crafted Sites</h2>
+          <p style="color:#bfdbfe;line-height:1.75;font-size:1rem;margin-bottom:1.5rem;">Hand-coded websites built for speed and accessibility. No bloated templates, no surprise monthly fees — just a fast, modern site you actually own.</p>
           <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem;">
             <span class="web-badge">100/100 Lighthouse</span>
             <span class="web-badge">10/10 WAVE</span>
@@ -118,22 +549,22 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
   <section style="background:white;padding:4rem 1.5rem;">
     <div style="max-width:72rem;margin:0 auto;">
       <div style="margin-bottom:2rem;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.softwareLabel}</p>
-        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.25rem;">{content.softwareTitle}</h2>
-        <p style="color:#6b7280;margin-top:0.5rem;font-size:0.9rem;line-height:1.6;">{content.softwareSubtitle}</p>
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">SOFTWARE & OS</p>
+        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.25rem;">Software, Setup & Remote Help</h2>
+        <p style="color:#6b7280;margin-top:0.5rem;font-size:0.9rem;line-height:1.6;">Operating system support, software troubleshooting, and remote sessions when you can't drop it off.</p>
       </div>
       <div class="software-layout">
         <div class="services-grid-two">
           <a id="mac-software" href="/services/mac-software" class="service-card" style="text-decoration:none;display:block;">
             <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M12 8h.01"/><circle cx="17" cy="8" r="1"/></svg></div>
-            <h3>{content.service7Title}</h3>
-            <p>{content.service7Desc}</p>
+            <h3>Mac & Apple Software</h3>
+            <p>macOS issues, iCloud setup, software troubleshooting — full Mac software support (no hardware).</p>
             <span class="learn-more">Learn about Mac & Apple software →</span>
           </a>
           <a id="remote-support" href="/services/remote-support" class="service-card" style="text-decoration:none;display:block;">
             <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-            <h3>{content.service8Title}</h3>
-            <p>{content.service8Desc}</p>
+            <h3>Remote Support</h3>
+            <p>Can't bring it in? I'll connect to your computer remotely and sort it out from wherever you are.</p>
             <span class="learn-more">Learn about remote support →</span>
           </a>
         </div>
@@ -170,22 +601,22 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
   <section style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:72rem;margin:0 auto;">
       <div style="margin-bottom:2rem;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.supportLabel}</p>
-        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.25rem;">{content.supportTitle}</h2>
-        <p style="color:#6b7280;margin-top:0.5rem;font-size:0.9rem;line-height:1.6;">{content.supportSubtitle}</p>
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">SUPPORT & LEARNING</p>
+        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.25rem;">On-Site Support & Tech Tutoring</h2>
+        <p style="color:#6b7280;margin-top:0.5rem;font-size:0.9rem;line-height:1.6;">In-person help at your home or business, or 1-on-1 tutoring to help you build your tech confidence.</p>
       </div>
       <div class="software-layout">
         <div class="services-grid-two">
           <a id="on-site-tech-support" href="/services/on-site-tech-support" class="service-card" style="text-decoration:none;display:block;">
             <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <h3>{content.service9Title}</h3>
-            <p>{content.service9Desc}</p>
+            <h3>On-Site Tech Support</h3>
+            <p>In-home or business visits for setup, troubleshooting, network help, and more around Littleton.</p>
             <span class="learn-more">Learn about on-site tech support →</span>
           </a>
           <a id="tech-tutoring" href="/services/tech-tutoring" class="service-card" style="text-decoration:none;display:block;">
             <div class="service-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <h3>{content.service10Title}</h3>
-            <p>{content.service10Desc}</p>
+            <h3>Tech Tutoring</h3>
+            <p>1-on-1 lessons on email, phones, computers, online safety — go at your pace, ask anything.</p>
             <span class="learn-more">Learn about tech tutoring →</span>
           </a>
         </div>
@@ -221,8 +652,8 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
   <!-- Bottom CTA -->
   <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:4rem 1.5rem;text-align:center;">
     <div style="max-width:40rem;margin:0 auto;">
-      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">{content.ctaTitle}</h2>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">{content.ctaSubtitle}</p>
+      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Ready to Get Started?</h2>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">Reach out for a free quote, or give me a call to talk through what's going on with your tech.</p>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
         <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
           <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -233,13 +664,180 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
           (802) 234-1552
         </a>
       </div>
-      <p style="color:#93c5fd;font-size:0.875rem;margin-top:1.5rem;">{content.ctaFootnote}</p>
+      <p style="color:#93c5fd;font-size:0.875rem;margin-top:1.5rem;">Most repairs completed in 1-3 business days.</p>
     </div>
   </section>
 
 </Layout>
 
 <style>
+  /* ===== ANIMATED SVG HERO ===== */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* ===== SEQUENCED TIMING =====
+     0.2–1.0s  hero text sequence
+     0.3–1.0s  desk scene builds (floor → desk → chair → person → monitor → keyboard)
+     0.8–1.8s  service tiles fade in one by one
+     1.3s+     code lines flicker/cycle on monitor, cursor blinks, head nods, arm taps
+     2.2s+     tiles pulse-glow cycling
+     0.3s+     ambient gears rotate forever
+  */
+
+  /* Desk scene */
+  .ds-floor    { animation: fadeIn 0.5s ease 0.3s both; }
+  .ds-desk     { animation: fadeIn 0.5s ease 0.5s both; }
+  .ds-chair    { animation: fadeIn 0.5s ease 0.6s both; }
+  .ds-monitor  { animation: fadeIn 0.6s ease 0.8s both; }
+  .ds-keyboard { animation: fadeIn 0.4s ease 1.0s both; }
+  .ds-person   { animation: fadeIn 0.6s ease 0.9s both; }
+
+  /* Head does a subtle nod while working */
+  .ds-head {
+    animation: headNod 7s ease-in-out infinite 2s;
+    transform-origin: 108px 100px;
+  }
+  @keyframes headNod {
+    0%, 80%, 100% { transform: rotate(0deg); }
+    85%           { transform: rotate(-3deg); }
+    90%           { transform: rotate(2deg); }
+  }
+
+  /* Hand/forearm taps the keyboard rhythmically */
+  .ds-arm {
+    animation: armTap 1.4s ease-in-out infinite 1.8s;
+    transform-origin: 150px 138px;
+  }
+  @keyframes armTap {
+    0%, 100% { transform: translateY(0); }
+    30%      { transform: translateY(-2px); }
+    60%      { transform: translateY(0.5px); }
+  }
+
+  /* Code lines flicker/update — simulates typing. Each line animates its own reveal/fade on its own cycle. */
+  .ds-code { transform-origin: left; animation: codeFlicker 8s ease-in-out infinite both; }
+  .ds-code-1 { animation-delay: 1.3s; }
+  .ds-code-2 { animation-delay: 1.6s; }
+  .ds-code-3 { animation-delay: 1.9s; }
+  .ds-code-4 { animation-delay: 2.2s; }
+  .ds-code-5 { animation-delay: 2.5s; }
+  .ds-code-6 { animation-delay: 2.8s; }
+  @keyframes codeFlicker {
+    0%   { opacity: 0; transform: scaleX(0); }
+    6%   { opacity: 1; transform: scaleX(1); }
+    85%  { opacity: 1; transform: scaleX(1); }
+    90%  { opacity: 0.3; }
+    95%  { opacity: 1; }
+    100% { opacity: 1; transform: scaleX(1); }
+  }
+
+  /* Blinking cursor */
+  .ds-cursor { animation: cursorBlink 1.1s steps(2) infinite 2s; }
+  @keyframes cursorBlink {
+    0%, 50% { opacity: 0.8; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Service tiles fade in (opacity only, so CSS transform doesn't clobber the SVG translate attribute that positions them in the grid) */
+  .tile { opacity: 0; animation: tileFade 0.5s ease both; }
+  .tile-1 { animation-delay: 0.8s; }
+  .tile-2 { animation-delay: 0.95s; }
+  .tile-3 { animation-delay: 1.1s; }
+  .tile-4 { animation-delay: 1.25s; }
+  .tile-5 { animation-delay: 1.4s; }
+  .tile-6 { animation-delay: 1.55s; }
+  @keyframes tileFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  /* Glow overlay inside each tile pulses on its own rhythm */
+  .tile-1 .tile-glow { animation: tileGlow 3s ease-in-out infinite 2.4s; opacity: 0; }
+  .tile-2 .tile-glow { animation: tileGlow 3.5s ease-in-out infinite 2.7s; opacity: 0; }
+  .tile-3 .tile-glow { animation: tileGlow 4s ease-in-out infinite 3.0s; opacity: 0; }
+  .tile-4 .tile-glow { animation: tileGlow 3.2s ease-in-out infinite 2.5s; opacity: 0; }
+  .tile-5 .tile-glow { animation: tileGlow 3.8s ease-in-out infinite 2.8s; opacity: 0; }
+  .tile-6 .tile-glow { animation: tileGlow 3.4s ease-in-out infinite 2.9s; opacity: 0; }
+  @keyframes tileGlow {
+    0%, 100% { opacity: 0.2; }
+    50%      { opacity: 0.7; }
+  }
+
+  /* Ambient gears rotate continuously at different speeds & directions */
+  .ambient-gear {
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.3s both;
+  }
+  .ambient-gear > g {
+    animation: gearSpin 20s linear infinite;
+    transform-origin: center;
+  }
+  .ag-2 > g { animation: gearSpinReverse 26s linear infinite; }
+  .ag-3 > g { animation: gearSpin 16s linear infinite; }
+  .ag-4 > g { animation: gearSpinReverse 22s linear infinite; }
+  .ag-5 > g { animation: gearSpin 18s linear infinite; }
+  .ag-6 > g { animation: gearSpinReverse 14s linear infinite; }
+  .ag-7 > g { animation: gearSpin 24s linear infinite; }
+  @keyframes gearSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes gearSpinReverse {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+  }
+
+  /* Utility keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 48rem;
+  }
+  .hero-label { font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin:0;opacity:0;animation:fadeUp 0.6s ease 0.2s forwards; }
+  #hero-wordmark { font-size:clamp(2.25rem,6vw,3.5rem);font-weight:900;color:white;margin:0;line-height:1.1;text-shadow:0 2px 30px rgba(0,0,0,0.3);opacity:0;animation:fadeUp 0.7s ease 0.5s forwards; }
+  #hero-tagline { font-size:clamp(0.875rem,1.8vw,1rem);color:#bfdbfe;margin:0;max-width:38rem;line-height:1.75;opacity:0;animation:fadeUp 0.6s ease 0.8s forwards; }
+  #hero-cta { display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;opacity:0;animation:fadeUp 0.6s ease 1.0s forwards;transition:transform 0.2s,box-shadow 0.2s; }
+  #hero-cta:hover { transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+  #scroll-hint { position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.85);animation:scrollBounce 2s ease-in-out infinite,fadeUp 0.6s ease 2.0s both;opacity:0;z-index:2;cursor:pointer; }
+  @keyframes scrollBounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ===== REST OF PAGE (unchanged from original) ===== */
   .services-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .software-layout { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; }
   .services-grid-two { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -267,6 +865,9 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
   .web-price-desc { font-size: 0.75rem; color: #6b7280; }
 
   @media (max-width: 768px) {
+    #hero-svg { height:70vh;min-height:440px; }
+    .hero-bg-desktop { display:none; }
+    .hero-bg-mobile  { display:block; }
     .services-grid { grid-template-columns: 1fr; }
     .services-grid-two { grid-template-columns: 1fr; }
     .software-layout { grid-template-columns: 1fr; }
@@ -283,5 +884,19 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
     .platform-panel { min-width: unset; }
     .web-spotlight-inner { grid-template-columns: 1fr; }
     .web-price-cards { flex-direction: row; min-width: unset; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ds-floor,.ds-desk,.ds-chair,.ds-monitor,.ds-keyboard,.ds-person,
+    .ds-head,.ds-arm,.ds-code,.ds-cursor,
+    .tile,.tile-glow,.ambient-gear,.ambient-gear > g,
+    .glow-orb-1,.glow-orb-2,#scroll-hint { animation:none; }
+    .hero-label,#hero-wordmark,#hero-tagline,#hero-cta,#scroll-hint,
+    .ds-floor,.ds-desk,.ds-chair,.ds-monitor,.ds-keyboard,.ds-person,
+    .tile { opacity:1; transform:none; }
+    .ds-code { opacity: 1; transform: scaleX(1); }
+    .ds-cursor { opacity: 0.8; }
+    .tile-glow { opacity: 0.5; }
+    .ambient-gear { opacity: 1; }
   }
 </style>
