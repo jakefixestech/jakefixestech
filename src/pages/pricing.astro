@@ -24,63 +24,46 @@ description="Transparent flat rate pricing for all computer repair services. Sta
       <ellipse cx="280" cy="240" rx="360" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1200" cy="300" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
 
-      <!-- PRICE TAG — left side, hanging from string -->
-      <g class="price-tag" transform="translate(120, 120)">
-        <!-- Hanging string from top -->
+      <!-- PRICE TAG — left side. Pulled down 10px (y:120→130) to keep string clear of top edge on tall viewports -->
+      <g class="price-tag" transform="translate(120, 130)">
         <line x1="70" y1="0" x2="70" y2="50" stroke="white" stroke-opacity="0.18" stroke-width="1.5" class="tag-string"/>
-        <!-- Pivot point -->
         <circle cx="70" cy="0" r="3" fill="white" fill-opacity="0.2" class="tag-pivot"/>
-        <!-- The tag itself — swings -->
         <g class="tag-swing" transform-origin="70 0">
-          <!-- Tag body - classic angled tag shape -->
           <path d="M70 50 L30 70 L30 170 L180 170 L180 70 L70 50 Z"
             stroke="white" stroke-opacity="0.25" stroke-width="2"
             fill="white" fill-opacity="0.08" class="tag-body"/>
-          <!-- Hole in tag -->
           <circle cx="70" cy="70" r="5" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="#1e3a8a" class="tag-hole"/>
-          <!-- FLAT RATE label -->
           <text x="110" y="105" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="11" font-family="monospace" letter-spacing="2" font-weight="700" class="tag-text tag-t1">FLAT RATE</text>
-          <!-- Horizontal rule -->
           <line x1="50" y1="115" x2="170" y2="115" stroke="white" stroke-opacity="0.2" stroke-width="1" class="tag-text tag-t2"/>
-          <!-- Dollar amount -->
           <text x="110" y="145" text-anchor="middle" fill="white" fill-opacity="0.7" font-size="28" font-weight="900" font-family="monospace" class="tag-text tag-t3">$50</text>
-          <!-- Subtext -->
           <text x="110" y="160" text-anchor="middle" fill="white" fill-opacity="0.35" font-size="7" font-family="monospace" letter-spacing="1" class="tag-text tag-t4">DIAGNOSTIC</text>
         </g>
       </g>
 
-      <!-- RECEIPT — right side, lines drawing in -->
-      <g class="receipt" transform="translate(1080, 90)">
-        <!-- Receipt paper with zigzag bottom -->
+      <!-- RECEIPT — right side. Pulled down 20px (y:90→110) to clear top edge cropping -->
+      <g class="receipt" transform="translate(1080, 110)">
         <path d="M0 20 L220 20 L220 280 L210 290 L200 280 L190 290 L180 280 L170 290 L160 280 L150 290 L140 280 L130 290 L120 280 L110 290 L100 280 L90 290 L80 280 L70 290 L60 280 L50 290 L40 280 L30 290 L20 280 L10 290 L0 280 Z"
           stroke="white" stroke-opacity="0.22" stroke-width="2"
           fill="white" fill-opacity="0.07" class="receipt-body"/>
-        <!-- Header -->
         <text x="110" y="50" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="11" font-family="monospace" letter-spacing="2" font-weight="700" class="receipt-line rc-l1">INVOICE</text>
         <line x1="20" y1="62" x2="200" y2="62" stroke="white" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="3 3" class="receipt-line rc-l2"/>
 
-        <!-- Service name -->
         <text x="20" y="90" fill="white" fill-opacity="0.5" font-size="9" font-family="monospace" letter-spacing="1" class="receipt-line rc-l3">SERVICE</text>
         <text x="20" y="110" fill="white" fill-opacity="0.7" font-size="13" font-family="monospace" font-weight="700" class="receipt-line rc-l4">PC Tune-Up</text>
 
-        <!-- Detail line -->
         <g class="receipt-line rc-l5">
           <text x="20" y="135" fill="white" fill-opacity="0.4" font-size="9" font-family="monospace">Optimization + cleanup</text>
         </g>
 
-        <!-- Separator -->
         <line x1="20" y1="155" x2="200" y2="155" stroke="white" stroke-opacity="0.25" stroke-width="1" class="receipt-line rc-l6"/>
 
-        <!-- Total -->
         <g class="receipt-line rc-l7">
           <text x="20" y="180" fill="white" fill-opacity="0.5" font-size="11" font-family="monospace" font-weight="700">TOTAL</text>
           <text x="200" y="180" text-anchor="end" fill="white" fill-opacity="0.85" font-size="18" font-family="monospace" font-weight="900">$60</text>
         </g>
 
-        <!-- Thank you line -->
         <text x="110" y="205" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="8" font-family="monospace" letter-spacing="1" class="receipt-line rc-l8">THANK YOU!</text>
 
-        <!-- "PAID" stamp — rotated, reassuring completed-transaction vibe -->
         <g class="receipt-stamp" transform="translate(150, 125) rotate(-12)">
           <rect x="-42" y="-20" width="84" height="40" rx="3" stroke="white" stroke-opacity="0.5" stroke-width="2.5" fill="none"/>
           <rect x="-38" y="-16" width="76" height="32" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="1" fill="none"/>
@@ -88,16 +71,14 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- COIN STACKS — moved down below CTA button area -->
-      <g class="coins" transform="translate(480, 420)">
-        <!-- Stack 1 — 3 coins, short -->
+      <!-- COIN STACKS — pulled up 40px (y:420→380) so bottom of tallest stack (y:412 in scene) sits in safe zone -->
+      <g class="coins" transform="translate(480, 380)">
         <g class="coin-stack stack-1">
           <ellipse cx="0" cy="40" rx="26" ry="7" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c1a"/>
           <ellipse cx="0" cy="28" rx="26" ry="7" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c1b"/>
           <ellipse cx="0" cy="16" rx="26" ry="7" stroke="white" stroke-opacity="0.28" stroke-width="1.5" fill="white" fill-opacity="0.1" class="coin c1c"/>
           <text x="0" y="19" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="11" font-weight="900" font-family="monospace">$</text>
         </g>
-        <!-- Stack 2 — 5 coins, tallest -->
         <g class="coin-stack stack-2" transform="translate(80, 0)">
           <ellipse cx="0" cy="40" rx="28" ry="7.5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c2a"/>
           <ellipse cx="0" cy="28" rx="28" ry="7.5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c2b"/>
@@ -106,7 +87,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           <ellipse cx="0" cy="-8" rx="28" ry="7.5" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.1" class="coin c2e"/>
           <text x="0" y="-5" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="12" font-weight="900" font-family="monospace">$</text>
         </g>
-        <!-- Stack 3 — 4 coins, medium -->
         <g class="coin-stack stack-3" transform="translate(170, 0)">
           <ellipse cx="0" cy="40" rx="26" ry="7" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c3a"/>
           <ellipse cx="0" cy="28" rx="26" ry="7" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c3b"/>
@@ -114,13 +94,11 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           <ellipse cx="0" cy="4" rx="26" ry="7" stroke="white" stroke-opacity="0.28" stroke-width="1.5" fill="white" fill-opacity="0.1" class="coin c3d"/>
           <text x="0" y="7" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="11" font-weight="900" font-family="monospace">$</text>
         </g>
-        <!-- Stack 4 — 2 coins, shortest -->
         <g class="coin-stack stack-4" transform="translate(250, 0)">
           <ellipse cx="0" cy="40" rx="24" ry="6.5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c4a"/>
           <ellipse cx="0" cy="28" rx="24" ry="6.5" stroke="white" stroke-opacity="0.28" stroke-width="1.5" fill="white" fill-opacity="0.1" class="coin c4b"/>
           <text x="0" y="31" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="10" font-weight="900" font-family="monospace">$</text>
         </g>
-        <!-- Stack 5 — 3 coins -->
         <g class="coin-stack stack-5" transform="translate(330, 0)">
           <ellipse cx="0" cy="40" rx="25" ry="7" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c5a"/>
           <ellipse cx="0" cy="28" rx="25" ry="7" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c5b"/>
@@ -129,20 +107,20 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- AMBIENT PRICING GLYPHS — floating $ and % symbols, subtle twinkle -->
+      <!-- AMBIENT PRICING GLYPHS — top row pulled from y:45-65 to y:75-95, all kept inside safe zone (y:75 to y:445) -->
       <g class="glyph-field" font-family="monospace" font-weight="700" fill="white">
-        <text x="80" y="70" font-size="18" fill-opacity="0.1" class="glyph-tw gl-a">$</text>
-        <text x="340" y="55" font-size="14" fill-opacity="0.1" class="glyph-tw gl-b">%</text>
-        <text x="420" y="110" font-size="22" fill-opacity="0.12" class="glyph-tw gl-c">$</text>
-        <text x="510" y="50" font-size="13" fill-opacity="0.1" class="glyph-tw gl-d">$</text>
-        <text x="580" y="150" font-size="15" fill-opacity="0.1" class="glyph-tw gl-a">%</text>
-        <text x="680" y="65" font-size="17" fill-opacity="0.11" class="glyph-tw gl-b">$</text>
-        <text x="770" y="120" font-size="13" fill-opacity="0.1" class="glyph-tw gl-c">%</text>
-        <text x="860" y="45" font-size="20" fill-opacity="0.12" class="glyph-tw gl-d">$</text>
-        <text x="940" y="140" font-size="14" fill-opacity="0.1" class="glyph-tw gl-a">$</text>
-        <text x="1010" y="65" font-size="16" fill-opacity="0.1" class="glyph-tw gl-b">%</text>
-        <text x="1340" y="50" font-size="18" fill-opacity="0.11" class="glyph-tw gl-c">$</text>
-        <text x="1360" y="150" font-size="13" fill-opacity="0.1" class="glyph-tw gl-d">%</text>
+        <text x="80" y="85" font-size="18" fill-opacity="0.1" class="glyph-tw gl-a">$</text>
+        <text x="340" y="75" font-size="14" fill-opacity="0.1" class="glyph-tw gl-b">%</text>
+        <text x="420" y="125" font-size="22" fill-opacity="0.12" class="glyph-tw gl-c">$</text>
+        <text x="510" y="80" font-size="13" fill-opacity="0.1" class="glyph-tw gl-d">$</text>
+        <text x="580" y="160" font-size="15" fill-opacity="0.1" class="glyph-tw gl-a">%</text>
+        <text x="680" y="90" font-size="17" fill-opacity="0.11" class="glyph-tw gl-b">$</text>
+        <text x="770" y="130" font-size="13" fill-opacity="0.1" class="glyph-tw gl-c">%</text>
+        <text x="860" y="80" font-size="20" fill-opacity="0.12" class="glyph-tw gl-d">$</text>
+        <text x="940" y="150" font-size="14" fill-opacity="0.1" class="glyph-tw gl-a">$</text>
+        <text x="1010" y="90" font-size="16" fill-opacity="0.1" class="glyph-tw gl-b">%</text>
+        <text x="1340" y="100" font-size="18" fill-opacity="0.11" class="glyph-tw gl-c">$</text>
+        <text x="1360" y="180" font-size="13" fill-opacity="0.1" class="glyph-tw gl-d">%</text>
         <text x="420" y="290" font-size="14" fill-opacity="0.09" class="glyph-tw gl-a">$</text>
         <text x="900" y="300" font-size="13" fill-opacity="0.09" class="glyph-tw gl-b">%</text>
       </g>
@@ -173,8 +151,8 @@ description="Transparent flat rate pricing for all computer repair services. Sta
       <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="320" cy="480" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- Price tag — top-left -->
-      <g class="price-tag" transform="translate(20, 30)">
+      <!-- Price tag — top-left. Pulled down from y:30 to y:60 so the string isn't right at viewport edge -->
+      <g class="price-tag" transform="translate(20, 60)">
         <line x1="45" y1="0" x2="45" y2="30" stroke="white" stroke-opacity="0.18" stroke-width="1.5" class="tag-string"/>
         <circle cx="45" cy="0" r="2.5" fill="white" fill-opacity="0.2" class="tag-pivot"/>
         <g class="tag-swing" transform-origin="45 0">
@@ -189,34 +167,28 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- Receipt — top-right -->
-      <g class="receipt" transform="translate(240, 30)">
+      <!-- Receipt — top-right. Pulled down from y:30 to y:60 (top of receipt was getting cropped on tall phones) -->
+      <g class="receipt" transform="translate(240, 60)">
         <path d="M0 14 L140 14 L140 170 L132 178 L124 170 L116 178 L108 170 L100 178 L92 170 L84 178 L76 170 L68 178 L60 170 L52 178 L44 170 L36 178 L28 170 L20 178 L12 170 L4 178 L0 170 Z"
           stroke="white" stroke-opacity="0.22" stroke-width="1.5"
           fill="white" fill-opacity="0.07" class="receipt-body"/>
         <text x="70" y="35" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="8" font-family="monospace" letter-spacing="1.5" font-weight="700" class="receipt-line rc-l1">INVOICE</text>
         <line x1="14" y1="44" x2="126" y2="44" stroke="white" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="2 2" class="receipt-line rc-l2"/>
 
-        <!-- Service name -->
         <text x="14" y="62" fill="white" fill-opacity="0.5" font-size="6.5" font-family="monospace" letter-spacing="1" class="receipt-line rc-l3">SERVICE</text>
         <text x="14" y="78" fill="white" fill-opacity="0.7" font-size="10" font-family="monospace" font-weight="700" class="receipt-line rc-l4">PC Tune-Up</text>
 
-        <!-- Detail line -->
         <text x="14" y="94" fill="white" fill-opacity="0.4" font-size="6.5" font-family="monospace" class="receipt-line rc-l5">Optimization + cleanup</text>
 
-        <!-- Separator -->
         <line x1="14" y1="108" x2="126" y2="108" stroke="white" stroke-opacity="0.25" stroke-width="1" class="receipt-line rc-l6"/>
 
-        <!-- Total -->
         <g class="receipt-line rc-l7">
           <text x="14" y="126" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace" font-weight="700">TOTAL</text>
           <text x="126" y="126" text-anchor="end" fill="white" fill-opacity="0.85" font-size="13" font-family="monospace" font-weight="900">$60</text>
         </g>
 
-        <!-- Thank you -->
         <text x="70" y="146" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="6" font-family="monospace" letter-spacing="1" class="receipt-line rc-l8">THANK YOU!</text>
 
-        <!-- PAID stamp, rotated -->
         <g class="receipt-stamp" transform="translate(96, 82) rotate(-12)">
           <rect x="-26" y="-12" width="52" height="24" rx="2" stroke="white" stroke-opacity="0.5" stroke-width="1.8" fill="none"/>
           <rect x="-23" y="-9" width="46" height="18" rx="1.5" stroke="white" stroke-opacity="0.25" stroke-width="0.8" fill="none"/>
@@ -224,8 +196,8 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- Coin stacks — below CTA button area -->
-      <g class="coins" transform="translate(80, 470)">
+      <!-- Coin stacks — pulled up from y:470 to y:430 so bottom of coins (y:458 in scene) is safely above viewport edge -->
+      <g class="coins" transform="translate(80, 430)">
         <g class="coin-stack stack-1">
           <ellipse cx="0" cy="28" rx="18" ry="5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c1a"/>
           <ellipse cx="0" cy="20" rx="18" ry="5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c1b"/>
@@ -252,20 +224,20 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- Floating pricing glyphs -->
+      <!-- Floating pricing glyphs — kept inside safe zone (y:70 to y:540, was y:40 to y:560) -->
       <g class="glyph-field" font-family="monospace" font-weight="700" fill="white">
-        <text x="185" y="40" font-size="14" fill-opacity="0.11" class="glyph-tw gl-a">$</text>
-        <text x="195" y="90" font-size="11" fill-opacity="0.09" class="glyph-tw gl-c">%</text>
-        <text x="170" y="140" font-size="13" fill-opacity="0.1" class="glyph-tw gl-b">$</text>
+        <text x="185" y="70" font-size="14" fill-opacity="0.11" class="glyph-tw gl-a">$</text>
+        <text x="195" y="120" font-size="11" fill-opacity="0.09" class="glyph-tw gl-c">%</text>
+        <text x="170" y="170" font-size="13" fill-opacity="0.1" class="glyph-tw gl-b">$</text>
         <text x="30" y="240" font-size="14" fill-opacity="0.1" class="glyph-tw gl-d">%</text>
         <text x="120" y="220" font-size="12" fill-opacity="0.1" class="glyph-tw gl-a">$</text>
         <text x="220" y="250" font-size="15" fill-opacity="0.11" class="glyph-tw gl-c">$</text>
         <text x="350" y="230" font-size="13" fill-opacity="0.1" class="glyph-tw gl-b">%</text>
         <text x="60" y="310" font-size="12" fill-opacity="0.09" class="glyph-tw gl-d">$</text>
         <text x="300" y="310" font-size="13" fill-opacity="0.1" class="glyph-tw gl-a">%</text>
-        <text x="30" y="440" font-size="14" fill-opacity="0.1" class="glyph-tw gl-b">$</text>
-        <text x="370" y="420" font-size="13" fill-opacity="0.1" class="glyph-tw gl-c">%</text>
-        <text x="190" y="560" font-size="12" fill-opacity="0.09" class="glyph-tw gl-d">$</text>
+        <text x="30" y="390" font-size="14" fill-opacity="0.1" class="glyph-tw gl-b">$</text>
+        <text x="370" y="380" font-size="13" fill-opacity="0.1" class="glyph-tw gl-c">%</text>
+        <text x="190" y="540" font-size="12" fill-opacity="0.09" class="glyph-tw gl-d">$</text>
       </g>
 
       <!-- Grid -->
@@ -314,7 +286,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
     <div style="max-width:56rem;margin:0 auto;">
       <div id="price-grid">
 
-        <!-- Software Services -->
         <div class="price-category" style="border-color:#bfdbfe;border-left:4px solid #2563eb;">
           <h2 style="background:#eff6ff;color:#1e40af;border-bottom-color:#bfdbfe;">
             <div class="cat-icon" style="background:#dbeafe;color:#2563eb;" aria-hidden="true">
@@ -330,7 +301,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           </div>
         </div>
 
-        <!-- Hardware Services -->
         <div class="price-category" style="border-color:#fed7aa;border-left:4px solid #c2410c;">
           <h2 style="background:#fff7ed;color:#7c2d12;border-bottom-color:#fed7aa;">
             <div class="cat-icon" style="background:#ffedd5;color:#c2410c;" aria-hidden="true">
@@ -347,7 +317,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           </div>
         </div>
 
-        <!-- Data Services -->
         <div class="price-category" style="border-color:#bbf7d0;border-left:4px solid #15803d;">
           <h2 style="background:#f0fdf4;color:#14532d;border-bottom-color:#bbf7d0;">
             <div class="cat-icon" style="background:#dcfce7;color:#15803d;" aria-hidden="true">
@@ -361,7 +330,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           </div>
         </div>
 
-        <!-- Mac & Apple Software -->
         <div class="price-category" style="border-color:#e2e8f0;border-left:4px solid #475569;">
           <h2 style="background:#f8fafc;color:#1e293b;border-bottom-color:#e2e8f0;">
             <div class="cat-icon" style="background:#e2e8f0;color:#475569;" aria-hidden="true">
@@ -378,7 +346,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           </div>
         </div>
 
-        <!-- Gaming Console -->
         <div class="price-category" style="border-color:#ddd6fe;border-left:4px solid #6d28d9;">
           <h2 style="background:#f5f3ff;color:#4c1d95;border-bottom-color:#ddd6fe;">
             <div class="cat-icon" style="background:#ede9fe;color:#6d28d9;" aria-hidden="true">
@@ -393,7 +360,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           </div>
         </div>
 
-        <!-- On-Site, Remote & Tutoring -->
         <div class="price-category" style="border-color:#fde68a;border-left:4px solid #b45309;">
           <h2 style="background:#fffbeb;color:#78350f;border-bottom-color:#fde68a;">
             <div class="cat-icon" style="background:#fef3c7;color:#b45309;" aria-hidden="true">
@@ -410,13 +376,11 @@ description="Transparent flat rate pricing for all computer repair services. Sta
 
       </div>
 
-      <!-- Disclaimer -->
       <div style="margin-top:2.5rem;text-align:center;background:#f9fafb;border-radius:0.75rem;padding:1.5rem;">
         <p style="color:#6b7280;font-size:0.9rem;line-height:1.75;">Prices reflect standard repairs. Complex issues may require additional parts or labor — you'll always receive a written quote before any work begins. No surprises, ever.</p>
         <a href="/contact" style="display:inline-flex;align-items:center;justify-content:center;margin-top:1rem;background:#2563eb;color:white;font-weight:600;padding:0.75rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;">Schedule a Repair</a>
       </div>
 
-      <!-- Deals / Discounts -->
       <div style="margin-top:1rem;background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
         <div style="display:flex;align-items:center;gap:0.75rem;">
           <div style="display:flex;height:2.5rem;width:2.5rem;min-width:2.5rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true">
@@ -460,15 +424,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
   .hero-bg-desktop { display: block; }
   .hero-bg-mobile  { display: none; }
 
-  /* ===== SEQUENCED TIMING (compressed so things start happening immediately) =====
-     0.2–1.0s  hero text sequence (label → headline → tagline → CTA)
-     0.4–1.1s  price tag builds (string → pivot → body → hole → text lines)
-     0.6–1.8s  receipt body + lines stagger in, stamp pops last
-     1.2–2.0s  coin stacks staircase up
-     2.2s      tag starts continuous swing, scroll arrow fades in
-     0.3s+     pricing glyphs twinkle forever
-  */
-
   /* Price tag */
   .tag-string { animation: dropIn 0.4s ease 0.4s both; transform-origin: top; }
   .tag-pivot  { animation: fadeIn 0.3s ease 0.4s both; }
@@ -479,7 +434,6 @@ description="Transparent flat rate pricing for all computer repair services. Sta
   .tag-t2 { animation-delay: 0.95s; }
   .tag-t3 { animation-delay: 1.05s; }
   .tag-t4 { animation-delay: 1.15s; }
-  /* Continuous gentle swing after elements settled */
   .tag-swing {
     animation: tagSwing 4s ease-in-out infinite 2.2s;
     transform-origin: 70px 0;
@@ -514,41 +468,27 @@ description="Transparent flat rate pricing for all computer repair services. Sta
     to   { opacity: 1; transform: scale(1) rotate(0deg); }
   }
 
-  /* Coins — stacks pop in sequence */
+  /* Coins */
   .coin-stack { opacity: 0; animation: fadeIn 0.4s ease both; }
   .stack-1 { animation-delay: 1.2s; }
   .stack-2 { animation-delay: 1.35s; }
   .stack-3 { animation-delay: 1.5s; }
   .stack-4 { animation-delay: 1.65s; }
   .stack-5 { animation-delay: 1.8s; }
-  /* Individual coins within each stack pop up */
   .coin {
     animation: coinPop 0.25s cubic-bezier(0.34,1.56,0.64,1) both;
   }
-  .c1a { animation-delay: 1.2s; }
-  .c1b { animation-delay: 1.28s; }
-  .c1c { animation-delay: 1.36s; }
-  .c2a { animation-delay: 1.35s; }
-  .c2b { animation-delay: 1.43s; }
-  .c2c { animation-delay: 1.51s; }
-  .c2d { animation-delay: 1.59s; }
-  .c2e { animation-delay: 1.67s; }
-  .c3a { animation-delay: 1.5s; }
-  .c3b { animation-delay: 1.58s; }
-  .c3c { animation-delay: 1.66s; }
-  .c3d { animation-delay: 1.74s; }
-  .c4a { animation-delay: 1.65s; }
-  .c4b { animation-delay: 1.73s; }
-  .c4c { animation-delay: 1.81s; }
-  .c5a { animation-delay: 1.8s; }
-  .c5b { animation-delay: 1.88s; }
-  .c5c { animation-delay: 1.96s; }
+  .c1a { animation-delay: 1.2s; } .c1b { animation-delay: 1.28s; } .c1c { animation-delay: 1.36s; }
+  .c2a { animation-delay: 1.35s; } .c2b { animation-delay: 1.43s; } .c2c { animation-delay: 1.51s; } .c2d { animation-delay: 1.59s; } .c2e { animation-delay: 1.67s; }
+  .c3a { animation-delay: 1.5s; } .c3b { animation-delay: 1.58s; } .c3c { animation-delay: 1.66s; } .c3d { animation-delay: 1.74s; }
+  .c4a { animation-delay: 1.65s; } .c4b { animation-delay: 1.73s; } .c4c { animation-delay: 1.81s; }
+  .c5a { animation-delay: 1.8s; } .c5b { animation-delay: 1.88s; } .c5c { animation-delay: 1.96s; }
   @keyframes coinPop {
     from { opacity: 0; transform: translateY(15px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* Pricing glyph field — twinkles multiply against each glyph's fill-opacity */
+  /* Glyphs */
   .glyph-tw {
     opacity: 0;
     animation-fill-mode: both;
@@ -599,7 +539,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
   #scroll-hint { position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.85);animation:scrollBounce 2s ease-in-out infinite,fadeUp 0.6s ease 2.2s both;opacity:0;z-index:2;cursor:pointer; }
   @keyframes scrollBounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
-  /* Price grid (unchanged from original) */
+  /* Price grid */
   #price-grid { display: flex; flex-direction: column; gap: 1.5rem; }
   .price-category { border: 1px solid #e5e7eb; border-radius: 0.75rem; overflow: hidden; }
   .price-category h2 { background: #f8fafc; padding: 0.875rem 1.5rem; font-size: 1rem; font-weight: 700; color: #111827; border-bottom: 1px solid #e5e7eb; margin: 0; display: flex; align-items: center; gap: 0.75rem; }
