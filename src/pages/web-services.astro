@@ -79,30 +79,6 @@ description="Professional website design, hosting and management for small busin
         <text x="0" y="24" text-anchor="middle" fill="white" fill-opacity="0.25" font-size="8" font-family="monospace">/100</text>
       </g>
 
-      <!-- Floating tech stack icons -->
-      <!-- Mobile phone -->
-      <g class="float-icon float-icon-1" transform="translate(560, 40)" stroke="white" stroke-opacity="0.15" fill="none" stroke-width="1.5">
-        <rect x="0" y="0" width="28" height="46" rx="4"/>
-        <line x1="10" y1="40" x2="18" y2="40"/>
-        <line x1="8" y1="6" x2="20" y2="6"/>
-      </g>
-      <!-- Shield / security -->
-      <g class="float-icon float-icon-2" transform="translate(640, 380)" stroke="white" stroke-opacity="0.12" fill="none" stroke-width="1.5">
-        <path d="M20 2 L2 9 L2 22 C2 31 20 38 20 38 C20 38 38 31 38 22 L38 9 Z"/>
-        <polyline points="12,19 17,24 28,13"/>
-      </g>
-      <!-- Globe/web -->
-      <g class="float-icon float-icon-3" transform="translate(780, 420)" stroke="white" stroke-opacity="0.12" fill="none" stroke-width="1.5">
-        <circle cx="20" cy="20" r="18"/>
-        <line x1="2" y1="20" x2="38" y2="20"/>
-        <path d="M20 2 C12 8 12 32 20 38"/>
-        <path d="M20 2 C28 8 28 32 20 38"/>
-      </g>
-      <!-- Star / quality -->
-      <g class="float-icon float-icon-4" transform="translate(520, 420)" stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.5">
-        <polygon points="20,2 24,14 38,14 27,22 31,34 20,26 9,34 13,22 2,14 16,14"/>
-      </g>
-
       <!-- Grid background -->
       <g stroke="white" stroke-opacity="0.04" stroke-width="1">
         <line x1="0" y1="130" x2="1440" y2="130"/>
@@ -184,18 +160,6 @@ description="Professional website design, hosting and management for small busin
       <g class="lightning-group" transform="translate(320, 380)">
         <path d="M20 0 L6 34 L18 34 L0 70" stroke="white" stroke-opacity="0.2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="bolt bolt-main"/>
         <path d="M55 10 L44 38 L54 38 L38 70" stroke="white" stroke-opacity="0.12" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="bolt bolt-2"/>
-      </g>
-
-      <!-- Floating icons -->
-      <g class="float-icon float-icon-2" transform="translate(20, 490)" stroke="white" stroke-opacity="0.12" fill="none" stroke-width="1.5">
-        <path d="M16 2 L2 8 L2 18 C2 25 16 30 16 30 C16 30 30 25 30 18 L30 8 Z"/>
-        <polyline points="10,15 14,19 22,11"/>
-      </g>
-      <g class="float-icon float-icon-3" transform="translate(180, 490)" stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.5">
-        <circle cx="16" cy="16" r="14"/>
-        <line x1="2" y1="16" x2="30" y2="16"/>
-        <path d="M16 2 C10 7 10 25 16 30"/>
-        <path d="M16 2 C22 7 22 25 16 30"/>
       </g>
 
       <!-- Grid -->
@@ -396,7 +360,7 @@ description="Professional website design, hosting and management for small busin
             </tbody>
           </table>
         </div>
-        <p style="color:#1e40af;font-size:0.8rem;margin-top:1rem;text-align:center;">Full payment terms and cancellation policy available in our <a href="/terms#web-services-terms" style="color:#1e40af;font-weight:600;text-decoration:underline;">Terms & Conditions</a>.</p>
+        <p style="color:#1e40af;font-size:0.8rem;margin-top:1rem;text-align:center;">Full payment terms and cancellation policy available in our <a href="/terms#web-services-terms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Terms & Conditions</a>.</p>
       </div>
     </div>
   </section>
@@ -601,15 +565,6 @@ description="Professional website design, hosting and management for small busin
     50%       { opacity: 0.5; }
   }
 
-  /* Floating icons */
-  .float-icon-1 { animation: floatA 6s ease-in-out infinite; }
-  .float-icon-2 { animation: floatB 7s ease-in-out infinite; }
-  .float-icon-3 { animation: floatC 5.5s ease-in-out infinite; }
-  .float-icon-4 { animation: floatA 8s ease-in-out infinite reverse; }
-  @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-
   /* Glow orbs */
   .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
   .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
@@ -781,7 +736,6 @@ description="Professional website design, hosting and management for small busin
 
   @media (prefers-reduced-motion: reduce) {
     .browser-frame, .code-line, .cursor-blink, .bolt, .lightning-group,
-    .float-icon-1, .float-icon-2, .float-icon-3, .float-icon-4,
     .score-bar-1, .score-bar-2, .score-bar-3, .score-ring,
     .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
     .hero-label, #hero-wordmark, #hero-tagline, #hero-btns, #scroll-hint { opacity: 1; transform: none; }
