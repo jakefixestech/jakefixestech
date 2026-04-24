@@ -279,8 +279,8 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
       <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="320" cy="480" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- PERSON AT DESK — mobile, top -->
-      <g class="desk-scene" transform="translate(50, 30)">
+      <!-- PERSON AT DESK — mobile, top, scaled for small canvas -->
+      <g class="desk-scene" transform="translate(80, 20) scale(0.75)">
         <!-- Floor line -->
         <line x1="-20" y1="200" x2="340" y2="200" stroke="white" stroke-opacity="0.2" stroke-width="1.2" class="ds-floor"/>
 
@@ -344,8 +344,8 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
         </g>
       </g>
 
-      <!-- Service tiles — bottom, 3x2 grid -->
-      <g class="tile-grid" transform="translate(62, 420)">
+      <!-- Service tiles — bottom, below CTA -->
+      <g class="tile-grid" transform="translate(62, 510)">
         <g class="tile tile-1" transform="translate(0, 0)">
           <rect x="0" y="0" width="60" height="60" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
           <circle cx="30" cy="30" r="26" fill="url(#tileGlowM)" class="tile-glow"/>
@@ -868,6 +868,8 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
     #hero-svg { height:70vh;min-height:440px; }
     .hero-bg-desktop { display:none; }
     .hero-bg-mobile  { display:block; }
+    /* On mobile the label sits over the busy desk scene — boost contrast */
+    .hero-label { color: white; text-shadow: 0 1px 8px rgba(0,0,0,0.4); }
     .services-grid { grid-template-columns: 1fr; }
     .services-grid-two { grid-template-columns: 1fr; }
     .software-layout { grid-template-columns: 1fr; }
