@@ -6,14 +6,190 @@ import content from '../content/hours.yml';
 <Layout title="Hours & Location | Jake Fixes Tech — Littleton, NH"
 description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:30PM, weekends 9AM-4PM. Call or text (802) 234-1552.">
 
-  <!-- Hero Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" width="1920" height="1080" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">{content.headerLabel}</p>
-      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">{content.headerTitle}</h1>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">{content.headerSubtitle}</p>
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Hours and Location">
+
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="400" cy="180" rx="400" ry="280" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1100" cy="360" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- Road/path lines suggesting navigation -->
+      <g stroke="white" stroke-opacity="0.08" fill="none">
+        <path d="M0 260 Q360 200 720 260 Q1080 320 1440 260" stroke-width="40" stroke-linecap="round"/>
+        <path d="M0 260 Q360 200 720 260 Q1080 320 1440 260" stroke-width="2" stroke-opacity="0.15" stroke-dasharray="30 20"/>
+      </g>
+
+      <!-- Large clock - left side -->
+      <g class="clock-group" transform="translate(180, 140)">
+        <!-- Clock face -->
+        <circle cx="0" cy="0" r="110" stroke="white" stroke-opacity="0.12" stroke-width="2" fill="none" class="clock-face"/>
+        <circle cx="0" cy="0" r="106" stroke="white" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+        <!-- Hour markers -->
+        <line x1="0" y1="-98" x2="0" y2="-86" stroke="white" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round" class="clock-mark"/>
+        <line x1="49" y1="-84.9" x2="42.9" y2="-74.3" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="84.9" y1="-49" x2="74.3" y2="-42.9" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="98" y1="0" x2="86" y2="0" stroke="white" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+        <line x1="84.9" y1="49" x2="74.3" y2="42.9" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="49" y1="84.9" x2="42.9" y2="74.3" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="0" y1="98" x2="0" y2="86" stroke="white" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+        <line x1="-49" y1="84.9" x2="-42.9" y2="74.3" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-84.9" y1="49" x2="-74.3" y2="42.9" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-98" y1="0" x2="-86" y2="0" stroke="white" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+        <line x1="-84.9" y1="-49" x2="-74.3" y2="-42.9" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-49" y1="-84.9" x2="-42.9" y2="-74.3" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Hour hand — pointing ~5 o'clock -->
+        <line x1="0" y1="0" x2="42" y2="60" stroke="white" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" class="hour-hand"/>
+        <!-- Minute hand — pointing ~12 -->
+        <line x1="0" y1="0" x2="-8" y2="-78" stroke="white" stroke-opacity="0.5" stroke-width="2.5" stroke-linecap="round" class="minute-hand"/>
+        <!-- Second hand -->
+        <line x1="0" y1="14" x2="0" y2="-82" stroke="white" stroke-opacity="0.3" stroke-width="1" stroke-linecap="round" class="second-hand"/>
+        <!-- Center dot -->
+        <circle cx="0" cy="0" r="5" fill="white" fill-opacity="0.6"/>
+        <circle cx="0" cy="0" r="2" fill="white" fill-opacity="0.9"/>
+      </g>
+
+      <!-- Map pin cluster - right side -->
+      <g class="pin-group" transform="translate(1150, 80)">
+        <!-- Main large pin -->
+        <g class="map-pin-main">
+          <path d="M60 0 C60 33 30 66 0 90 C-30 66 -60 33 -60 0 A60 60 0 0 1 60 0 Z" stroke="white" stroke-opacity="0.25" stroke-width="2" fill="white" fill-opacity="0.06" class="pin-body"/>
+          <circle cx="0" cy="0" r="22" stroke="white" stroke-opacity="0.3" stroke-width="2" fill="white" fill-opacity="0.08"/>
+          <!-- NH abbreviation area -->
+          <text x="0" y="6" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="14" font-weight="700" font-family="monospace">NH</text>
+        </g>
+        <!-- Pulse rings around pin -->
+        <circle cx="0" cy="0" r="65" stroke="white" stroke-opacity="0" stroke-width="1.5" fill="none" class="pin-pulse pin-pulse-1"/>
+        <circle cx="0" cy="0" r="65" stroke="white" stroke-opacity="0" stroke-width="1" fill="none" class="pin-pulse pin-pulse-2"/>
+        <!-- Shadow ellipse at bottom -->
+        <ellipse cx="0" cy="95" rx="20" ry="6" fill="white" fill-opacity="0.08"/>
+        <!-- Small secondary pins -->
+        <g class="small-pin small-pin-1" transform="translate(-120, 60)">
+          <path d="M18 0 C18 10 9 20 0 27 C-9 20 -18 10 -18 0 A18 18 0 0 1 18 0 Z" stroke="white" stroke-opacity="0.15" stroke-width="1.5" fill="white" fill-opacity="0.04"/>
+          <circle cx="0" cy="0" r="6" stroke="white" stroke-opacity="0.2" fill="none"/>
+        </g>
+        <g class="small-pin small-pin-2" transform="translate(100, 100)">
+          <path d="M14 0 C14 8 7 16 0 21 C-7 16 -14 8 -14 0 A14 14 0 0 1 14 0 Z" stroke="white" stroke-opacity="0.12" stroke-width="1.5" fill="white" fill-opacity="0.04"/>
+          <circle cx="0" cy="0" r="5" stroke="white" stroke-opacity="0.15" fill="none"/>
+        </g>
+        <g class="small-pin small-pin-3" transform="translate(-80, 160)">
+          <path d="M12 0 C12 7 6 14 0 18 C-6 14 -12 7 -12 0 A12 12 0 0 1 12 0 Z" stroke="white" stroke-opacity="0.1" stroke-width="1.5" fill="white" fill-opacity="0.03"/>
+          <circle cx="0" cy="0" r="4" stroke="white" stroke-opacity="0.12" fill="none"/>
+        </g>
+        <!-- Dotted lines connecting pins (like a map route) -->
+        <line x1="-120" y1="60" x2="-20" y2="30" stroke="white" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="100" y1="100" x2="20" y2="40" stroke="white" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="-80" y1="160" x2="-10" y2="70" stroke="white" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="4 4"/>
+      </g>
+
+      <!-- Compass rose - bottom left -->
+      <g class="compass" transform="translate(120, 400)" stroke="white" stroke-opacity="0.12" fill="none">
+        <circle cx="0" cy="0" r="36" stroke-width="1"/>
+        <line x1="0" y1="-36" x2="0" y2="36" stroke-width="1"/>
+        <line x1="-36" y1="0" x2="36" y2="0" stroke-width="1"/>
+        <polygon points="0,-28 5,-10 0,-4 -5,-10" fill="white" fill-opacity="0.2" stroke="none"/>
+        <polygon points="0,28 5,10 0,4 -5,10" fill="white" fill-opacity="0.08" stroke="none"/>
+        <text x="0" y="-40" text-anchor="middle" fill="white" fill-opacity="0.2" font-size="10" font-family="monospace">N</text>
+      </g>
+
+      <!-- Subtle grid lines suggesting a map -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+
+    </svg>
+
+    <!-- Mobile SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="200" cy="200" rx="260" ry="200" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="200" cy="480" rx="220" ry="160" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Road line -->
+      <path d="M0 300 Q200 240 400 300" stroke="white" stroke-opacity="0.08" stroke-width="30" fill="none"/>
+      <path d="M0 300 Q200 240 400 300" stroke="white" stroke-opacity="0.1" stroke-width="1.5" stroke-dasharray="20 15" fill="none"/>
+
+      <!-- Clock - top left -->
+      <g class="clock-group" transform="translate(80, 100)">
+        <circle cx="0" cy="0" r="65" stroke="white" stroke-opacity="0.15" stroke-width="2" fill="none" class="clock-face"/>
+        <line x1="0" y1="-58" x2="0" y2="-50" stroke="white" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="58" y1="0" x2="50" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="0" y1="58" x2="0" y2="50" stroke="white" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="-58" y1="0" x2="-50" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="0" y1="0" x2="25" y2="36" stroke="white" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" class="hour-hand"/>
+        <line x1="0" y1="0" x2="-5" y2="-46" stroke="white" stroke-opacity="0.5" stroke-width="2.5" stroke-linecap="round" class="minute-hand"/>
+        <line x1="0" y1="8" x2="0" y2="-50" stroke="white" stroke-opacity="0.25" stroke-width="1" stroke-linecap="round" class="second-hand"/>
+        <circle cx="0" cy="0" r="4" fill="white" fill-opacity="0.7"/>
+      </g>
+
+      <!-- Map pin - top right -->
+      <g class="pin-group" transform="translate(310, 90)">
+        <path d="M36 0 C36 20 18 40 0 54 C-18 40 -36 20 -36 0 A36 36 0 0 1 36 0 Z" stroke="white" stroke-opacity="0.2" stroke-width="2" fill="white" fill-opacity="0.06" class="pin-body"/>
+        <circle cx="0" cy="0" r="13" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+        <circle cx="0" cy="54" r="0" fill="white" fill-opacity="0"/>
+        <ellipse cx="0" cy="57" rx="12" ry="4" fill="white" fill-opacity="0.08"/>
+        <circle cx="0" cy="0" r="40" stroke="white" stroke-opacity="0" stroke-width="1.5" fill="none" class="pin-pulse pin-pulse-1"/>
+        <circle cx="0" cy="0" r="40" stroke="white" stroke-opacity="0" stroke-width="1" fill="none" class="pin-pulse pin-pulse-2"/>
+      </g>
+
+      <!-- Compass - bottom left -->
+      <g class="compass" transform="translate(60, 510)" stroke="white" stroke-opacity="0.15" fill="none">
+        <circle cx="0" cy="0" r="28" stroke-width="1"/>
+        <line x1="0" y1="-28" x2="0" y2="28" stroke-width="1"/>
+        <line x1="-28" y1="0" x2="28" y2="0" stroke-width="1"/>
+        <polygon points="0,-22 4,-8 0,-3 -4,-8" fill="white" fill-opacity="0.25" stroke="none"/>
+        <polygon points="0,22 4,8 0,3 -4,8" fill="white" fill-opacity="0.1" stroke="none"/>
+        <text x="0" y="-32" text-anchor="middle" fill="white" fill-opacity="0.25" font-size="9" font-family="monospace">N</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">Hours & Location</p>
+      <h1 id="hero-wordmark">{content.headerTitle}</h1>
+      <p id="hero-tagline">{content.headerSubtitle}</p>
+      <a href="#hours-section" id="hero-cta">
+        View Hours
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('hours-section').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -34,78 +210,50 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
     </div>
   </section>
 
-  <section style="background:#f8fafc;padding:3rem 1.5rem 5rem 1.5rem;">
+  <section id="hours-section" style="background:#f8fafc;padding:3rem 1.5rem 5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div id="location-grid">
-
         <!-- Hours Card -->
         <div class="location-card">
           <div class="card-header">
-            <div class="card-icon">
-              <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
+            <div class="card-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <h2 class="card-title">Business Hours</h2>
           </div>
           <div class="hours-list">
-            <div class="hours-row">
-              <span>{content.monFriLabel}</span>
-              <span class="hours-time">{content.monFriHours}</span>
-            </div>
-            <div class="hours-row">
-              <span>{content.satLabel}</span>
-              <span class="hours-time">{content.satHours}</span>
-            </div>
-            <div class="hours-row">
-              <span>{content.sunLabel}</span>
-              <span class="hours-time">{content.sunHours}</span>
-            </div>
-            <div class="hours-row" style="background:#fef2f2;">
-              <span style="color:#991b1b;">{content.holidayLabel}</span>
-              <span style="color:#991b1b;font-weight:500;">{content.holidayHours}</span>
-            </div>
+            <div class="hours-row"><span>{content.monFriLabel}</span><span class="hours-time">{content.monFriHours}</span></div>
+            <div class="hours-row"><span>{content.satLabel}</span><span class="hours-time">{content.satHours}</span></div>
+            <div class="hours-row"><span>{content.sunLabel}</span><span class="hours-time">{content.sunHours}</span></div>
+            <div class="hours-row" style="background:#fef2f2;"><span style="color:#991b1b;">{content.holidayLabel}</span><span style="color:#991b1b;font-weight:500;">{content.holidayHours}</span></div>
           </div>
           <p style="font-size:0.8rem;color:#6b7280;margin-top:1rem;padding:0 0.25rem;">{content.hoursNote}</p>
         </div>
-
         <!-- Contact Card -->
         <div class="location-card">
           <div class="card-header">
-            <div class="card-icon">
-              <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
+            <div class="card-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <h2 class="card-title">Contact Info</h2>
           </div>
           <ul style="display:flex;flex-direction:column;gap:0.75rem;list-style:none;padding:0;margin:0;">
             <li>
               <a href="https://maps.google.com/?q=28+Grove+Street+Littleton+NH+03561" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Open 28 Grove Street, Littleton NH in Google Maps">
                 <div class="contact-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                <div>
-                  <p class="contact-label">Address</p>
-                  <p class="contact-value">{content.address}</p>
-                </div>
+                <div><p class="contact-label">Address</p><p class="contact-value">{content.address}</p></div>
               </a>
             </li>
             <li>
               <a href="tel:+18022341552" class="contact-link">
                 <div class="contact-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.54-.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 17z"/></svg></div>
-                <div>
-                  <p class="contact-label">Phone &amp; Text</p>
-                  <p class="contact-value">{content.phone}</p>
-                </div>
+                <div><p class="contact-label">Phone &amp; Text</p><p class="contact-value">{content.phone}</p></div>
               </a>
             </li>
             <li>
               <a href="mailto:jake@jakefixestech.com" class="contact-link">
                 <div class="contact-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                <div>
-                  <p class="contact-label">Email</p>
-                  <p class="contact-value">{content.email}</p>
-                </div>
+                <div><p class="contact-label">Email</p><p class="contact-value">{content.email}</p></div>
               </a>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
@@ -131,6 +279,7 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
   </section>
 
   <script>
+    // @ts-nocheck
     document.getElementById('load-map-btn')?.addEventListener('click', () => {
       const container = document.getElementById('map-container');
       const placeholder = document.getElementById('map-placeholder');
@@ -146,6 +295,28 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
       iframe.title = 'Google Maps - Jake Fixes Tech, 28 Grove Street, Littleton, NH';
       container.appendChild(iframe);
     });
+
+    // Live clock hands
+    function updateClock() {
+      const now = new Date();
+      const s = now.getSeconds();
+      const m = now.getMinutes();
+      const h = now.getHours() % 12;
+      const sDeg = s * 6;
+      const mDeg = m * 6 + s * 0.1;
+      const hDeg = h * 30 + m * 0.5;
+      document.querySelectorAll('.second-hand').forEach(el => {
+        el.setAttribute('transform', `rotate(${sDeg})`);
+      });
+      document.querySelectorAll('.minute-hand').forEach(el => {
+        el.setAttribute('transform', `rotate(${mDeg})`);
+      });
+      document.querySelectorAll('.hour-hand').forEach(el => {
+        el.setAttribute('transform', `rotate(${hDeg})`);
+      });
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
   </script>
 
   <!-- Service Area + CTA -->
@@ -170,6 +341,172 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Clock animations */
+  .clock-face {
+    animation: clockAppear 1s ease forwards;
+    opacity: 0;
+  }
+  @keyframes clockAppear {
+    from { opacity: 0; r: 80; }
+    to   { opacity: 1; }
+  }
+
+  /* Map pin animations */
+  .pin-body {
+    animation: pinDrop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both;
+    transform-origin: center bottom;
+  }
+  @keyframes pinDrop {
+    from { transform: translateY(-40px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+  }
+
+  .pin-pulse {
+    animation: pinPulseRing 2.5s ease-out infinite;
+  }
+  .pin-pulse-1 { animation-delay: 1.5s; }
+  .pin-pulse-2 { animation-delay: 2.2s; }
+  @keyframes pinPulseRing {
+    0%   { r: 65; stroke-opacity: 0.4; stroke-width: 2; }
+    100% { r: 110; stroke-opacity: 0; stroke-width: 0.5; }
+  }
+
+  /* Mobile pin pulse uses smaller r */
+  .hero-bg-mobile .pin-pulse {
+    animation: pinPulseRingMobile 2.5s ease-out infinite;
+  }
+  .hero-bg-mobile .pin-pulse-1 { animation-delay: 1.5s; }
+  .hero-bg-mobile .pin-pulse-2 { animation-delay: 2.2s; }
+  @keyframes pinPulseRingMobile {
+    0%   { r: 40; stroke-opacity: 0.4; stroke-width: 2; }
+    100% { r: 80; stroke-opacity: 0; stroke-width: 0.5; }
+  }
+
+  /* Small pins float */
+  .small-pin-1 { animation: floatA 5s ease-in-out infinite; }
+  .small-pin-2 { animation: floatB 6s ease-in-out infinite; }
+  .small-pin-3 { animation: floatC 7s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+  /* Compass slow rotate */
+  .compass { animation: compassSpin 30s linear infinite; transform-origin: center; }
+  @keyframes compassSpin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+  }
+
+  .hero-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #93c5fd;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+
+  #hero-wordmark {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+
+  #hero-tagline {
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+    color: #bfdbfe;
+    margin: 0;
+    max-width: 34rem;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+
+  #hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e40af;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 1.2s forwards;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  #hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.8);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100%{transform:translateX(-50%) translateY(0)}
+    50%{transform:translateX(-50%) translateY(6px)}
+  }
+
+  /* Rest of page */
   #location-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
   @media (min-width: 768px) { #location-grid { grid-template-columns: 1fr 1fr; } }
   .location-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
@@ -188,4 +525,16 @@ description="Jake Fixes Tech is located in Littleton, NH. Weekday drop-offs 5-7:
   .map-btn:focus-visible { outline: 3px solid #fbbf24; outline-offset: 3px; }
   .contact-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; }
   .contact-value { font-size: 0.9rem; font-weight: 500; color: #111827; margin-top: 0.1rem; }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 440px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pin-body, .pin-pulse, .small-pin-1, .small-pin-2, .small-pin-3,
+    .compass, .glow-orb-1, .glow-orb-2, .clock-face, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta, #scroll-hint { opacity: 1; transform: none; }
+  }
 </style>

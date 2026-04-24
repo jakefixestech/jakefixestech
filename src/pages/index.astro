@@ -221,7 +221,7 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     </div>
 
     <!-- Scroll indicator -->
-    <div id="scroll-hint" aria-hidden="true">
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('hero-content-band').scrollIntoView({behavior:'smooth'})">
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
@@ -595,6 +595,7 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     animation: scrollBounce 2s ease-in-out infinite, wordmarkFade 0.8s ease 3.5s forwards;
     opacity: 0;
     z-index: 2;
+    cursor: pointer;
   }
 
   @keyframes scrollBounce {
