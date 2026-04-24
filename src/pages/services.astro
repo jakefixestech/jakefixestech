@@ -189,62 +189,56 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
         </g>
       </g>
 
-      <!-- AMBIENT GEARS — rotating slowly in the background, very subtle -->
-      <g class="gear-field">
-        <!-- Gear 1 top left -->
-        <g class="ambient-gear ag-1" transform="translate(80, 60)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
+      <!-- AMBIENT REPAIR ICONS — checkmarks, plus signs, small wrenches, gently drifting -->
+      <g class="icon-field">
+        <!-- Checkmark in circle, top left -->
+        <g class="ambient-icon ai-1" transform="translate(80, 60)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="0" cy="0" r="12"/>
+            <path d="M-5 0 L-1 4 L5 -4"/>
+          </g>
+        </g>
+        <!-- Plus/medical cross, top center -->
+        <g class="ambient-icon ai-2" transform="translate(560, 50)">
+          <g stroke="white" stroke-opacity="0.11" fill="none" stroke-width="2" stroke-linecap="round">
+            <line x1="0" y1="-10" x2="0" y2="10"/>
+            <line x1="-10" y1="0" x2="10" y2="0"/>
+          </g>
+        </g>
+        <!-- Small wrench, upper right -->
+        <g class="ambient-icon ai-3" transform="translate(880, 90)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Wrench shape: head + handle, drawn tilted -->
+            <path d="M-12 12 L2 -2 M-12 12 L-16 8 L-18 14 L-14 16 Z" transform="rotate(25)"/>
+            <circle cx="4" cy="-4" r="3" transform="rotate(25)"/>
+          </g>
+        </g>
+        <!-- Checkmark in circle, lower left -->
+        <g class="ambient-icon ai-4" transform="translate(480, 440)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="0" cy="0" r="14"/>
-            <circle cx="0" cy="0" r="5"/>
-            <path d="M0 -18 L-2 -14 L2 -14 Z M0 18 L-2 14 L2 14 Z M-18 0 L-14 -2 L-14 2 Z M18 0 L14 -2 L14 2 Z M13 -13 L10 -10 L13 -10 Z M-13 13 L-10 10 L-13 10 Z M13 13 L10 10 L13 13 Z M-13 -13 L-10 -10 L-13 -10 Z"/>
+            <path d="M-6 0 L-1 5 L6 -5"/>
           </g>
         </g>
-        <!-- Gear 2 top center -->
-        <g class="ambient-gear ag-2" transform="translate(560, 50)">
-          <g stroke="white" stroke-opacity="0.09" fill="none" stroke-width="1.2">
+        <!-- Plus sign, lower right -->
+        <g class="ambient-icon ai-5" transform="translate(1340, 450)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="2" stroke-linecap="round">
+            <line x1="0" y1="-9" x2="0" y2="9"/>
+            <line x1="-9" y1="0" x2="9" y2="0"/>
+          </g>
+        </g>
+        <!-- Small wrench, mid left -->
+        <g class="ambient-icon ai-6" transform="translate(60, 420)">
+          <g stroke="white" stroke-opacity="0.11" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-10 10 L2 -2 M-10 10 L-14 6 L-16 12 L-12 14 Z" transform="rotate(-15)"/>
+            <circle cx="4" cy="-4" r="2.5" transform="rotate(-15)"/>
+          </g>
+        </g>
+        <!-- Checkmark circle, far right top -->
+        <g class="ambient-icon ai-7" transform="translate(1380, 80)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="0" cy="0" r="11"/>
-            <circle cx="0" cy="0" r="4"/>
-            <path d="M0 -15 L-2 -11 L2 -11 Z M0 15 L-2 11 L2 11 Z M-15 0 L-11 -2 L-11 2 Z M15 0 L11 -2 L11 2 Z"/>
-          </g>
-        </g>
-        <!-- Gear 3 upper right (above tiles) -->
-        <g class="ambient-gear ag-3" transform="translate(880, 90)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
-            <circle cx="0" cy="0" r="10"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
-          </g>
-        </g>
-        <!-- Gear 4 lower left -->
-        <g class="ambient-gear ag-4" transform="translate(480, 440)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
-            <circle cx="0" cy="0" r="13"/>
-            <circle cx="0" cy="0" r="4"/>
-            <path d="M0 -17 L-2 -13 L2 -13 Z M0 17 L-2 13 L2 13 Z M-17 0 L-13 -2 L-13 2 Z M17 0 L13 -2 L13 2 Z M12 -12 L9 -9 L12 -9 Z M-12 12 L-9 9 L-12 9 Z"/>
-          </g>
-        </g>
-        <!-- Gear 5 lower right -->
-        <g class="ambient-gear ag-5" transform="translate(1340, 450)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
-            <circle cx="0" cy="0" r="11"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -14 L-2 -11 L2 -11 Z M0 14 L-2 11 L2 11 Z M-14 0 L-11 -2 L-11 2 Z M14 0 L11 -2 L11 2 Z"/>
-          </g>
-        </g>
-        <!-- Gear 6 mid left area -->
-        <g class="ambient-gear ag-6" transform="translate(60, 420)">
-          <g stroke="white" stroke-opacity="0.09" fill="none" stroke-width="1.2">
-            <circle cx="0" cy="0" r="9"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -12 L-2 -9 L2 -9 Z M0 12 L-2 9 L2 9 Z M-12 0 L-9 -2 L-9 2 Z M12 0 L9 -2 L9 2 Z"/>
-          </g>
-        </g>
-        <!-- Gear 7 far right top -->
-        <g class="ambient-gear ag-7" transform="translate(1380, 80)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1.2">
-            <circle cx="0" cy="0" r="10"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
+            <path d="M-5 0 L-1 4 L5 -4"/>
           </g>
         </g>
       </g>
@@ -344,8 +338,8 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
         </g>
       </g>
 
-      <!-- Service tiles — bottom, below CTA -->
-      <g class="tile-grid" transform="translate(62, 510)">
+      <!-- Service tiles — below CTA, above scroll arrow -->
+      <g class="tile-grid" transform="translate(62, 470)">
         <g class="tile tile-1" transform="translate(0, 0)">
           <rect x="0" y="0" width="60" height="60" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
           <circle cx="30" cy="30" r="26" fill="url(#tileGlowM)" class="tile-glow"/>
@@ -386,41 +380,48 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
         </g>
       </g>
 
-      <!-- Ambient gears -->
-      <g class="gear-field">
-        <g class="ambient-gear ag-1" transform="translate(40, 260)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1">
-            <circle cx="0" cy="0" r="10"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
-          </g>
-        </g>
-        <g class="ambient-gear ag-2" transform="translate(350, 240)">
-          <g stroke="white" stroke-opacity="0.09" fill="none" stroke-width="1">
+      <!-- Ambient repair icons — checkmarks, plus signs, wrenches -->
+      <g class="icon-field">
+        <!-- Checkmark circle, top-left corner -->
+        <g class="ambient-icon ai-1" transform="translate(25, 30)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="0" cy="0" r="9"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -12 L-2 -9 L2 -9 Z M0 12 L-2 9 L2 9 Z M-12 0 L-9 -2 L-9 2 Z M12 0 L9 -2 L9 2 Z"/>
+            <path d="M-4 0 L-1 3 L4 -3"/>
           </g>
         </g>
-        <g class="ambient-gear ag-3" transform="translate(200, 320)">
-          <g stroke="white" stroke-opacity="0.07" fill="none" stroke-width="1">
-            <circle cx="0" cy="0" r="12"/>
-            <circle cx="0" cy="0" r="4"/>
-            <path d="M0 -15 L-2 -12 L2 -12 Z M0 15 L-2 12 L2 12 Z M-15 0 L-12 -2 L-12 2 Z M15 0 L12 -2 L12 2 Z M11 -11 L8 -8 L11 -8 Z M-11 11 L-8 8 L-11 8 Z"/>
+        <!-- Plus, top-right -->
+        <g class="ambient-icon ai-2" transform="translate(375, 50)">
+          <g stroke="white" stroke-opacity="0.11" fill="none" stroke-width="1.8" stroke-linecap="round">
+            <line x1="0" y1="-8" x2="0" y2="8"/>
+            <line x1="-8" y1="0" x2="8" y2="0"/>
           </g>
         </g>
-        <g class="ambient-gear ag-4" transform="translate(30, 540)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1">
-            <circle cx="0" cy="0" r="9"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -12 L-2 -9 L2 -9 Z M0 12 L-2 9 L2 9 Z M-12 0 L-9 -2 L-9 2 Z M12 0 L9 -2 L9 2 Z"/>
+        <!-- Small wrench, mid-left below desk -->
+        <g class="ambient-icon ai-3" transform="translate(30, 250)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-8 8 L2 -2 M-8 8 L-11 5 L-13 10 L-10 12 Z" transform="rotate(-15)"/>
+            <circle cx="3" cy="-3" r="2" transform="rotate(-15)"/>
           </g>
         </g>
-        <g class="ambient-gear ag-5" transform="translate(370, 540)">
-          <g stroke="white" stroke-opacity="0.08" fill="none" stroke-width="1">
+        <!-- Checkmark circle, right side -->
+        <g class="ambient-icon ai-4" transform="translate(370, 260)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="0" cy="0" r="10"/>
-            <circle cx="0" cy="0" r="3"/>
-            <path d="M0 -13 L-2 -10 L2 -10 Z M0 13 L-2 10 L2 10 Z M-13 0 L-10 -2 L-10 2 Z M13 0 L10 -2 L10 2 Z"/>
+            <path d="M-5 0 L-1 4 L5 -4"/>
+          </g>
+        </g>
+        <!-- Plus, bottom area (between CTA and tiles) -->
+        <g class="ambient-icon ai-5" transform="translate(40, 400)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.8" stroke-linecap="round">
+            <line x1="0" y1="-7" x2="0" y2="7"/>
+            <line x1="-7" y1="0" x2="7" y2="0"/>
+          </g>
+        </g>
+        <!-- Small wrench, bottom-right -->
+        <g class="ambient-icon ai-6" transform="translate(365, 410)">
+          <g stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-7 7 L2 -2 M-7 7 L-10 4 L-12 9 L-9 11 Z" transform="rotate(25)"/>
+            <circle cx="3" cy="-3" r="2" transform="rotate(25)"/>
           </g>
         </g>
       </g>
@@ -699,7 +700,7 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
      0.8–1.8s  service tiles fade in one by one
      1.3s+     code lines flicker/cycle on monitor, cursor blinks, head nods, arm taps
      2.2s+     tiles pulse-glow cycling
-     0.3s+     ambient gears rotate forever
+     0.3s+     ambient repair icons gently drift forever
   */
 
   /* Desk scene */
@@ -780,28 +781,28 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
     50%      { opacity: 0.7; }
   }
 
-  /* Ambient gears rotate continuously at different speeds & directions */
-  .ambient-gear {
+  /* Ambient repair icons — drift and gently bob in place, no full rotation */
+  .ambient-icon {
     opacity: 0;
     animation: fadeIn 0.8s ease 0.3s both;
   }
-  .ambient-gear > g {
-    animation: gearSpin 20s linear infinite;
+  .ambient-icon > g {
+    animation: iconDrift 9s ease-in-out infinite;
     transform-origin: center;
   }
-  .ag-2 > g { animation: gearSpinReverse 26s linear infinite; }
-  .ag-3 > g { animation: gearSpin 16s linear infinite; }
-  .ag-4 > g { animation: gearSpinReverse 22s linear infinite; }
-  .ag-5 > g { animation: gearSpin 18s linear infinite; }
-  .ag-6 > g { animation: gearSpinReverse 14s linear infinite; }
-  .ag-7 > g { animation: gearSpin 24s linear infinite; }
-  @keyframes gearSpin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+  .ai-2 > g { animation: iconDrift 11s ease-in-out infinite 1s; }
+  .ai-3 > g { animation: iconDriftReverse 10s ease-in-out infinite 0.5s; }
+  .ai-4 > g { animation: iconDrift 12s ease-in-out infinite 2s; }
+  .ai-5 > g { animation: iconDriftReverse 8s ease-in-out infinite 1.5s; }
+  .ai-6 > g { animation: iconDrift 10s ease-in-out infinite 0.8s; }
+  .ai-7 > g { animation: iconDriftReverse 11s ease-in-out infinite 1.2s; }
+  @keyframes iconDrift {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-6px) rotate(2deg); }
   }
-  @keyframes gearSpinReverse {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(-360deg); }
+  @keyframes iconDriftReverse {
+    0%, 100% { transform: translateY(0) rotate(2deg); }
+    50%      { transform: translateY(-5px) rotate(-2deg); }
   }
 
   /* Utility keyframes */
@@ -891,7 +892,7 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
   @media (prefers-reduced-motion: reduce) {
     .ds-floor,.ds-desk,.ds-chair,.ds-monitor,.ds-keyboard,.ds-person,
     .ds-head,.ds-arm,.ds-code,.ds-cursor,
-    .tile,.tile-glow,.ambient-gear,.ambient-gear > g,
+    .tile,.tile-glow,.ambient-icon,.ambient-icon > g,
     .glow-orb-1,.glow-orb-2,#scroll-hint { animation:none; }
     .hero-label,#hero-wordmark,#hero-tagline,#hero-cta,#scroll-hint,
     .ds-floor,.ds-desk,.ds-chair,.ds-monitor,.ds-keyboard,.ds-person,
@@ -899,6 +900,6 @@ description="Screen repair, virus removal, data recovery, hardware upgrades, gam
     .ds-code { opacity: 1; transform: scaleX(1); }
     .ds-cursor { opacity: 0.8; }
     .tile-glow { opacity: 0.5; }
-    .ambient-gear { opacity: 1; }
+    .ambient-icon { opacity: 1; }
   }
 </style>
