@@ -8,8 +8,9 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
 
   <!-- SVG Animated Hero -->
   <section id="hero-svg" aria-label="Jake Fixes Tech hero">
-    <!-- Animated SVG background -->
-    <svg id="hero-bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+    <!-- DESKTOP SVG (hidden on mobile) -->
+    <svg id="hero-bg" class="hero-bg-desktop" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
@@ -20,15 +21,9 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
           <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0" />
         </linearGradient>
       </defs>
-
-      <!-- Base gradient background -->
       <rect width="1440" height="600" fill="url(#bgGrad)"/>
-
-      <!-- Subtle glow orbs -->
       <ellipse cx="300" cy="200" rx="350" ry="250" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1100" cy="400" rx="300" ry="200" fill="url(#glowGrad)" class="glow-orb-2"/>
-
-      <!-- Circuit board traces - horizontal lines -->
       <g class="circuit-group" stroke="white" stroke-opacity="0.12" fill="none">
         <path d="M0 150 L200 150 L220 170 L400 170" stroke-width="1.5" class="trace trace-1"/>
         <path d="M0 280 L100 280 L130 310 L350 310 L380 280 L600 280" stroke-width="1.5" class="trace trace-2"/>
@@ -39,8 +34,6 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
         <path d="M200 350 L350 350 L380 320 L500 320" stroke-width="1.5" class="trace trace-7"/>
         <path d="M1000 500 L1200 500 L1220 480 L1440 480" stroke-width="1.5" class="trace trace-8"/>
       </g>
-
-      <!-- Circuit nodes - dots at junctions -->
       <g class="nodes-group" fill="white">
         <circle cx="200" cy="150" r="3" fill-opacity="0" class="node node-1"/>
         <circle cx="400" cy="170" r="3" fill-opacity="0" class="node node-2"/>
@@ -55,83 +48,162 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
         <circle cx="1100" cy="250" r="4" fill-opacity="0" class="node node-11"/>
         <circle cx="350" cy="350" r="3" fill-opacity="0" class="node node-12"/>
         <circle cx="1200" cy="500" r="3" fill-opacity="0" class="node node-13"/>
-        <!-- Larger accent nodes -->
         <circle cx="550" cy="510" r="5" fill-opacity="0" class="node node-accent-1"/>
         <circle cx="1300" cy="220" r="5" fill-opacity="0" class="node node-accent-2"/>
         <circle cx="500" cy="320" r="5" fill-opacity="0" class="node node-accent-3"/>
       </g>
-
-      <!-- Pulsing rings on accent nodes -->
       <g fill="none" stroke="white">
         <circle cx="550" cy="510" r="5" stroke-opacity="0" class="pulse-ring pulse-ring-1"/>
         <circle cx="1300" cy="220" r="5" stroke-opacity="0" class="pulse-ring pulse-ring-2"/>
         <circle cx="500" cy="320" r="5" stroke-opacity="0" class="pulse-ring pulse-ring-3"/>
       </g>
-
-      <!-- Floating tech icons - laptop -->
       <g class="float-icon float-icon-1" transform="translate(120, 60)" stroke="white" stroke-opacity="0.2" fill="none" stroke-width="1.5">
         <rect x="0" y="0" width="48" height="32" rx="3"/>
         <line x1="0" y1="36" x2="48" y2="36"/>
         <line x1="16" y1="32" x2="32" y2="32"/>
       </g>
-
-      <!-- Floating tech icons - cpu chip -->
       <g class="float-icon float-icon-2" transform="translate(1280, 80)" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="1.5">
         <rect x="8" y="8" width="32" height="32" rx="2"/>
         <rect x="16" y="16" width="16" height="16"/>
-        <line x1="16" y1="2" x2="16" y2="8"/>
-        <line x1="32" y1="2" x2="32" y2="8"/>
-        <line x1="16" y1="40" x2="16" y2="46"/>
-        <line x1="32" y1="40" x2="32" y2="46"/>
-        <line x1="2" y1="16" x2="8" y2="16"/>
-        <line x1="2" y1="32" x2="8" y2="32"/>
-        <line x1="40" y1="16" x2="46" y2="16"/>
-        <line x1="40" y1="32" x2="46" y2="32"/>
+        <line x1="16" y1="2" x2="16" y2="8"/><line x1="32" y1="2" x2="32" y2="8"/>
+        <line x1="16" y1="40" x2="16" y2="46"/><line x1="32" y1="40" x2="32" y2="46"/>
+        <line x1="2" y1="16" x2="8" y2="16"/><line x1="2" y1="32" x2="8" y2="32"/>
+        <line x1="40" y1="16" x2="46" y2="16"/><line x1="40" y1="32" x2="46" y2="32"/>
       </g>
-
-      <!-- Floating tech icons - screwdriver/wrench -->
       <g class="float-icon float-icon-3" transform="translate(680, 30)" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="1.5">
         <path d="M8 40 L32 8 M28 4 L44 4 L44 12 L36 12 L28 4"/>
         <circle cx="10" cy="38" r="4"/>
       </g>
-
-      <!-- Floating tech icons - wifi signal -->
       <g class="float-icon float-icon-4" transform="translate(1100, 470)" stroke="white" stroke-opacity="0.15" fill="none" stroke-width="1.5">
         <path d="M4 20 C4 20 12 8 24 8 C36 8 44 20 44 20"/>
         <path d="M10 26 C10 26 15 18 24 18 C33 18 38 26 38 26"/>
         <path d="M16 32 C16 32 19 28 24 28 C29 28 32 32 32 32"/>
         <circle cx="24" cy="38" r="2" fill="white" fill-opacity="0.15"/>
       </g>
-
-      <!-- Floating tech icons - shield -->
       <g class="float-icon float-icon-5" transform="translate(50, 390)" stroke="white" stroke-opacity="0.15" fill="none" stroke-width="1.5">
         <path d="M24 4 L4 12 L4 28 C4 38 24 46 24 46 C24 46 44 38 44 28 L44 12 Z"/>
       </g>
-
-      <!-- Data flow dots moving along traces -->
-      <circle r="3" fill="white" fill-opacity="0.7" class="data-dot data-dot-1">
-        <animateMotion dur="4s" repeatCount="indefinite" begin="0.5s">
-          <mpath href="#trace-path-1"/>
-        </animateMotion>
+      <circle r="3" fill="white" fill-opacity="0.7">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="0.5s"><mpath href="#trace-path-1"/></animateMotion>
       </circle>
-      <circle r="2.5" fill="white" fill-opacity="0.6" class="data-dot data-dot-2">
-        <animateMotion dur="5s" repeatCount="indefinite" begin="1.5s">
-          <mpath href="#trace-path-2"/>
-        </animateMotion>
+      <circle r="2.5" fill="white" fill-opacity="0.6">
+        <animateMotion dur="5s" repeatCount="indefinite" begin="1.5s"><mpath href="#trace-path-2"/></animateMotion>
       </circle>
-      <circle r="2" fill="white" fill-opacity="0.5" class="data-dot data-dot-3">
-        <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s">
-          <mpath href="#trace-path-3"/>
-        </animateMotion>
+      <circle r="2" fill="white" fill-opacity="0.5">
+        <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s"><mpath href="#trace-path-3"/></animateMotion>
       </circle>
-
-      <!-- Hidden paths for animateMotion -->
       <defs>
         <path id="trace-path-1" d="M0 150 L200 150 L220 170 L400 170"/>
         <path id="trace-path-2" d="M600 280 L380 280 L350 310 L130 310 L100 280 L0 280"/>
         <path id="trace-path-3" d="M800 100 L1000 100 L1020 120 L1200 120 L1220 100 L1440 100"/>
       </defs>
+    </svg>
 
+    <!-- MOBILE SVG (hidden on desktop) — portrait 400x700 viewBox -->
+    <svg id="hero-bg-mobile" class="hero-bg-mobile" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.4" />
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0" />
+        </linearGradient>
+      </defs>
+
+      <rect width="400" height="700" fill="url(#bgGradM)"/>
+
+      <!-- Glow orbs -->
+      <ellipse cx="200" cy="150" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="200" cy="550" rx="200" ry="160" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Vertical-friendly circuit traces -->
+      <g stroke="white" stroke-opacity="0.15" fill="none">
+        <path d="M60 0 L60 100 L80 120 L80 200" stroke-width="1.5" class="trace trace-1"/>
+        <path d="M340 0 L340 80 L320 100 L320 200" stroke-width="1.5" class="trace trace-2"/>
+        <path d="M0 180 L80 180 L100 200 L300 200 L320 180 L400 180" stroke-width="1.5" class="trace trace-3"/>
+        <path d="M80 300 L160 300 L180 320 L220 320 L240 300 L320 300" stroke-width="1.5" class="trace trace-4"/>
+        <path d="M0 420 L100 420 L120 440 L280 440 L300 420 L400 420" stroke-width="1.5" class="trace trace-5"/>
+        <path d="M60 500 L60 600 L80 620 L80 700" stroke-width="1.5" class="trace trace-6"/>
+        <path d="M340 500 L340 580 L320 600 L320 700" stroke-width="1.5" class="trace trace-7"/>
+        <path d="M0 560 L120 560 L140 580 L260 580 L280 560 L400 560" stroke-width="1.5" class="trace trace-8"/>
+      </g>
+
+      <!-- Nodes -->
+      <g fill="white">
+        <circle cx="60" cy="100" r="3" fill-opacity="0" class="node node-1"/>
+        <circle cx="80" cy="200" r="3" fill-opacity="0" class="node node-2"/>
+        <circle cx="340" cy="80" r="3" fill-opacity="0" class="node node-3"/>
+        <circle cx="320" cy="200" r="3" fill-opacity="0" class="node node-4"/>
+        <circle cx="80" cy="180" r="3" fill-opacity="0" class="node node-5"/>
+        <circle cx="320" cy="180" r="3" fill-opacity="0" class="node node-6"/>
+        <circle cx="160" cy="300" r="3" fill-opacity="0" class="node node-7"/>
+        <circle cx="240" cy="300" r="3" fill-opacity="0" class="node node-8"/>
+        <circle cx="100" cy="420" r="3" fill-opacity="0" class="node node-9"/>
+        <circle cx="300" cy="420" r="3" fill-opacity="0" class="node node-10"/>
+        <circle cx="60" cy="600" r="3" fill-opacity="0" class="node node-11"/>
+        <circle cx="340" cy="580" r="3" fill-opacity="0" class="node node-12"/>
+        <circle cx="120" cy="560" r="3" fill-opacity="0" class="node node-13"/>
+        <!-- Accent nodes -->
+        <circle cx="200" cy="200" r="5" fill-opacity="0" class="node node-accent-1"/>
+        <circle cx="200" cy="440" r="5" fill-opacity="0" class="node node-accent-2"/>
+        <circle cx="200" cy="580" r="5" fill-opacity="0" class="node node-accent-3"/>
+      </g>
+
+      <!-- Pulse rings -->
+      <g fill="none" stroke="white">
+        <circle cx="200" cy="200" r="5" stroke-opacity="0" class="pulse-ring pulse-ring-1"/>
+        <circle cx="200" cy="440" r="5" stroke-opacity="0" class="pulse-ring pulse-ring-2"/>
+        <circle cx="200" cy="580" r="5" stroke-opacity="0" class="pulse-ring pulse-ring-3"/>
+      </g>
+
+      <!-- Floating icons — scaled for mobile -->
+      <!-- Laptop top left -->
+      <g class="float-icon float-icon-1" transform="translate(20, 30)" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="1.5">
+        <rect x="0" y="0" width="40" height="28" rx="2"/>
+        <line x1="0" y1="32" x2="40" y2="32"/>
+        <line x1="12" y1="28" x2="28" y2="28"/>
+      </g>
+
+      <!-- Chip top right -->
+      <g class="float-icon float-icon-2" transform="translate(330, 24)" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="1.5">
+        <rect x="6" y="6" width="28" height="28" rx="2"/>
+        <rect x="13" y="13" width="14" height="14"/>
+        <line x1="13" y1="2" x2="13" y2="6"/><line x1="27" y1="2" x2="27" y2="6"/>
+        <line x1="13" y1="34" x2="13" y2="38"/><line x1="27" y1="34" x2="27" y2="38"/>
+        <line x1="2" y1="13" x2="6" y2="13"/><line x1="2" y1="27" x2="6" y2="27"/>
+        <line x1="34" y1="13" x2="38" y2="13"/><line x1="34" y1="27" x2="38" y2="27"/>
+      </g>
+
+      <!-- Shield bottom left -->
+      <g class="float-icon float-icon-5" transform="translate(20, 620)" stroke="white" stroke-opacity="0.15" fill="none" stroke-width="1.5">
+        <path d="M20 2 L2 9 L2 22 C2 31 20 38 20 38 C20 38 38 31 38 22 L38 9 Z"/>
+      </g>
+
+      <!-- Wifi bottom right -->
+      <g class="float-icon float-icon-4" transform="translate(330, 610)" stroke="white" stroke-opacity="0.15" fill="none" stroke-width="1.5">
+        <path d="M2 16 C2 16 9 6 20 6 C31 6 38 16 38 16"/>
+        <path d="M7 21 C7 21 12 15 20 15 C28 15 33 21 33 21"/>
+        <path d="M12 26 C12 26 15 23 20 23 C25 23 28 26 28 26"/>
+        <circle cx="20" cy="31" r="2" fill="white" fill-opacity="0.15"/>
+      </g>
+
+      <!-- Data dots for mobile traces -->
+      <circle r="3" fill="white" fill-opacity="0.7">
+        <animateMotion dur="3s" repeatCount="indefinite" begin="0.5s">
+          <mpath href="#mob-trace-1"/>
+        </animateMotion>
+      </circle>
+      <circle r="2.5" fill="white" fill-opacity="0.6">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="1.2s">
+          <mpath href="#mob-trace-2"/>
+        </animateMotion>
+      </circle>
+      <defs>
+        <path id="mob-trace-1" d="M60 0 L60 100 L80 120 L80 200"/>
+        <path id="mob-trace-2" d="M0 420 L100 420 L120 440 L280 440 L300 420 L400 420"/>
+      </defs>
     </svg>
 
     <!-- Hero text content -->
@@ -327,6 +399,10 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
 
 <style>
   /* ===== SVG HERO ===== */
+  /* Desktop/mobile SVG swap */
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
   #hero-svg {
     position: relative;
     width: 100%;
@@ -553,13 +629,13 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
   .why-card p { font-size: 0.875rem; color: #6b7280; line-height: 1.625; }
 
   @media (max-width: 768px) {
-    #hero-svg { height: 70vh; }
+    #hero-svg { height: 75vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
     #preview-grid { grid-template-columns: 1fr; }
     #why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     #web-teaser-grid { grid-template-columns: 1fr; }
     #web-teaser-cards { grid-template-columns: 1fr; }
-    .float-icon-1, .float-icon-2, .float-icon-3,
-    .float-icon-4, .float-icon-5 { display: none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
