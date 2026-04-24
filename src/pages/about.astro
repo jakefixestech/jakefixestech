@@ -6,23 +6,230 @@ import content from '../content/about.yml';
 <Layout title="About Jake | Jake Fixes Tech in Littleton, NH"
 description="Meet Jake Charland, Computer Information Systems graduate, former college instructor and 10+ year IT veteran. Serving Littleton NH and the North Country.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">{content.headerLabel}</p>
-      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">{content.headerTitle}</h1>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">{content.headerSubtitle}</p>
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="About Jake">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="280" cy="240" rx="360" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1200" cy="300" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- Mountain silhouette along bottom -->
+      <g class="mountains">
+        <polygon points="0,520 100,350 220,450 380,280 520,410 660,300 780,420 900,310 1040,440 1180,300 1320,420 1440,350 1440,520"
+          fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.08" stroke-width="1" class="mountain-back"/>
+        <polygon points="0,520 60,430 160,490 280,370 420,470 540,360 680,470 800,380 940,480 1080,370 1220,470 1360,400 1440,440 1440,520"
+          fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.14" stroke-width="1.5" class="mountain-front"/>
+        <!-- Snow caps -->
+        <polygon points="380,280 398,256 416,280" fill="white" fill-opacity="0.22" class="snow snow-1"/>
+        <polygon points="660,300 676,278 692,300" fill="white" fill-opacity="0.2" class="snow snow-2"/>
+        <polygon points="900,310 916,288 932,310" fill="white" fill-opacity="0.22" class="snow snow-3"/>
+        <polygon points="1180,300 1196,278 1212,300" fill="white" fill-opacity="0.18" class="snow snow-4"/>
+      </g>
+
+      <!-- DIPLOMA SCROLL — left side, anchored lower so it sits on mountain line -->
+      <g class="diploma-group" transform="translate(100, 180)">
+        <!-- Scroll body -->
+        <rect x="0" y="30" width="240" height="180" rx="4"
+          stroke="white" stroke-opacity="0.22" stroke-width="2"
+          fill="white" fill-opacity="0.07" class="diploma-body"/>
+        <!-- Top curl -->
+        <ellipse cx="120" cy="30" rx="120" ry="16"
+          stroke="white" stroke-opacity="0.2" stroke-width="1.5"
+          fill="white" fill-opacity="0.08" class="diploma-curl-top"/>
+        <!-- Bottom curl -->
+        <ellipse cx="120" cy="210" rx="120" ry="16"
+          stroke="white" stroke-opacity="0.2" stroke-width="1.5"
+          fill="white" fill-opacity="0.08" class="diploma-curl-bot"/>
+        <!-- Inner shadow lines on curls -->
+        <ellipse cx="120" cy="30" rx="100" ry="11" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+        <ellipse cx="120" cy="210" rx="100" ry="11" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+
+        <!-- Header text area -->
+        <text x="120" y="70" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="11" font-family="serif" font-style="italic" class="diploma-text dip-t1">Certificate of Achievement</text>
+        <line x1="20" y1="78" x2="220" y2="78" stroke="white" stroke-opacity="0.15" stroke-width="1" class="diploma-rule"/>
+
+        <!-- CIS degree text -->
+        <text x="120" y="108" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="18" font-weight="700" font-family="serif" class="diploma-text dip-t2">CIS</text>
+        <text x="120" y="128" text-anchor="middle" fill="white" fill-opacity="0.35" font-size="8" font-family="monospace" class="diploma-text dip-t3">COMPUTER INFORMATION</text>
+        <text x="120" y="140" text-anchor="middle" fill="white" fill-opacity="0.35" font-size="8" font-family="monospace" class="diploma-text dip-t4">SYSTEMS</text>
+
+        <!-- Seal -->
+        <circle cx="120" cy="175" r="20"
+          stroke="white" stroke-opacity="0.3" stroke-width="2"
+          fill="white" fill-opacity="0.08" class="diploma-seal"/>
+        <circle cx="120" cy="175" r="14"
+          stroke="white" stroke-opacity="0.2" stroke-width="1"
+          fill="none" class="diploma-seal"/>
+        <!-- Star in seal -->
+        <polygon points="120,164 122.4,171.6 130,171.6 124,176.4 126.4,184 120,179.2 113.6,184 116,176.4 110,171.6 117.6,171.6"
+          fill="white" fill-opacity="0.35" class="diploma-star"/>
+        <!-- Ribbon below seal -->
+        <path d="M102 194 L110 202 L120 196 L130 202 L138 194" stroke="white" stroke-opacity="0.2" stroke-width="1.5" fill="none" stroke-linecap="round" class="diploma-star"/>
+      </g>
+
+      <!-- YEARS BADGE — far right, out of headline zone -->
+      <g class="years-badge" transform="translate(1180, 140)">
+        <!-- Outer decorative ring -->
+        <circle cx="70" cy="80" r="82" stroke="white" stroke-opacity="0.1" stroke-width="1.5" fill="none" stroke-dasharray="6 4" class="badge-outer"/>
+        <!-- Main circle -->
+        <circle cx="70" cy="80" r="68" stroke="white" stroke-opacity="0.2" stroke-width="2" fill="white" fill-opacity="0.06" class="badge-ring"/>
+        <circle cx="70" cy="80" r="54" stroke="white" stroke-opacity="0.12" stroke-width="1" fill="none" class="badge-ring"/>
+        <!-- Number -->
+        <text x="70" y="72" text-anchor="middle" fill="white" fill-opacity="0.65" font-size="36" font-weight="900" font-family="monospace" class="badge-num">10+</text>
+        <text x="70" y="92" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="10" font-family="monospace" letter-spacing="2" class="badge-num">YEARS</text>
+        <text x="70" y="108" text-anchor="middle" fill="white" fill-opacity="0.3" font-size="8" font-family="monospace" letter-spacing="1" class="badge-num">EXPERIENCE</text>
+        <!-- Tick marks -->
+        <line x1="70" y1="4" x2="70" y2="16" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
+        <line x1="70" y1="144" x2="70" y2="156" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
+        <line x1="-6" y1="80" x2="6" y2="80" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
+        <line x1="134" y1="80" x2="146" y2="80" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
+      </g>
+
+      <!-- STARFIELD — twinkling night sky above mountains -->
+      <g class="starfield" fill="white">
+        <circle cx="90" cy="45" r="1.4" class="star-tw star-tw-a"/>
+        <circle cx="180" cy="120" r="1.1" class="star-tw star-tw-b"/>
+        <circle cx="260" cy="70" r="2.2" class="star-tw star-tw-c"/>
+        <circle cx="420" cy="95" r="1.3" class="star-tw star-tw-a"/>
+        <circle cx="490" cy="35" r="1.7" class="star-tw star-tw-d"/>
+        <circle cx="560" cy="150" r="1.1" class="star-tw star-tw-b"/>
+        <circle cx="640" cy="70" r="2.0" class="star-tw star-tw-c"/>
+        <circle cx="770" cy="110" r="1.3" class="star-tw star-tw-d"/>
+        <circle cx="860" cy="45" r="1.6" class="star-tw star-tw-a"/>
+        <circle cx="940" cy="140" r="1.2" class="star-tw star-tw-b"/>
+        <circle cx="1020" cy="80" r="2.3" class="star-tw star-tw-c"/>
+        <circle cx="1100" cy="40" r="1.2" class="star-tw star-tw-d"/>
+        <circle cx="1360" cy="90" r="1.5" class="star-tw star-tw-a"/>
+        <circle cx="1410" cy="180" r="1.0" class="star-tw star-tw-b"/>
+        <circle cx="60" cy="200" r="1.1" class="star-tw star-tw-d"/>
+        <circle cx="355" cy="180" r="1.4" class="star-tw star-tw-c"/>
+        <circle cx="680" cy="220" r="1.0" class="star-tw star-tw-b"/>
+        <circle cx="1150" cy="250" r="1.3" class="star-tw star-tw-a"/>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="320" cy="480" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Mountains -->
+      <g class="mountains">
+        <polygon points="0,600 80,450 180,530 280,400 380,490 400,470 400,600"
+          fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.08" stroke-width="1" class="mountain-back"/>
+        <polygon points="0,600 50,510 140,570 240,460 340,550 400,510 400,600"
+          fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.14" stroke-width="1.5" class="mountain-front"/>
+        <polygon points="280,400 296,378 312,400" fill="white" fill-opacity="0.22" class="snow snow-1"/>
+        <polygon points="80,450 94,430 108,450" fill="white" fill-opacity="0.18" class="snow snow-2"/>
+      </g>
+
+      <!-- Diploma — bottom-left, on mountain line -->
+      <g class="diploma-group" transform="translate(20, 420)">
+        <rect x="0" y="16" width="140" height="110" rx="3"
+          stroke="white" stroke-opacity="0.22" stroke-width="1.5"
+          fill="white" fill-opacity="0.07" class="diploma-body"/>
+        <ellipse cx="70" cy="16" rx="70" ry="10"
+          stroke="white" stroke-opacity="0.2" stroke-width="1.5"
+          fill="white" fill-opacity="0.08" class="diploma-curl-top"/>
+        <ellipse cx="70" cy="126" rx="70" ry="10"
+          stroke="white" stroke-opacity="0.2" stroke-width="1.5"
+          fill="white" fill-opacity="0.08" class="diploma-curl-bot"/>
+        <text x="70" y="42" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="7.5" font-family="serif" font-style="italic" class="diploma-text dip-t1">Certificate of Achievement</text>
+        <line x1="10" y1="49" x2="130" y2="49" stroke="white" stroke-opacity="0.15" stroke-width="1" class="diploma-rule"/>
+        <text x="70" y="68" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="13" font-weight="700" font-family="serif" class="diploma-text dip-t2">CIS</text>
+        <text x="70" y="82" text-anchor="middle" fill="white" fill-opacity="0.3" font-size="6" font-family="monospace" class="diploma-text dip-t3">COMPUTER INFO</text>
+        <text x="70" y="91" text-anchor="middle" fill="white" fill-opacity="0.3" font-size="6" font-family="monospace" class="diploma-text dip-t4">SYSTEMS</text>
+        <circle cx="70" cy="108" r="12" stroke="white" stroke-opacity="0.28" stroke-width="1.5" fill="white" fill-opacity="0.08" class="diploma-seal"/>
+        <polygon points="70,101 72,106.4 77.6,106.4 73.2,109.6 74.8,115 70,111.8 65.2,115 66.8,109.6 62.4,106.4 68,106.4" fill="white" fill-opacity="0.35" class="diploma-star"/>
+      </g>
+
+      <!-- Years badge — top-right, above text zone -->
+      <g class="years-badge" transform="translate(270, 40)">
+        <circle cx="50" cy="56" r="60" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none" stroke-dasharray="4 3" class="badge-outer"/>
+        <circle cx="50" cy="56" r="50" stroke="white" stroke-opacity="0.2" stroke-width="2" fill="white" fill-opacity="0.06" class="badge-ring"/>
+        <circle cx="50" cy="56" r="40" stroke="white" stroke-opacity="0.1" stroke-width="1" fill="none" class="badge-ring"/>
+        <text x="50" y="50" text-anchor="middle" fill="white" fill-opacity="0.65" font-size="24" font-weight="900" font-family="monospace" class="badge-num">10+</text>
+        <text x="50" y="66" text-anchor="middle" fill="white" fill-opacity="0.38" font-size="7" font-family="monospace" letter-spacing="1" class="badge-num">YEARS</text>
+        <text x="50" y="78" text-anchor="middle" fill="white" fill-opacity="0.28" font-size="6" font-family="monospace" class="badge-num">EXPERIENCE</text>
+      </g>
+
+      <!-- STARFIELD — twinkling night sky -->
+      <g class="starfield" fill="white">
+        <circle cx="40" cy="50" r="1.2" class="star-tw star-tw-a"/>
+        <circle cx="100" cy="110" r="1.5" class="star-tw star-tw-c"/>
+        <circle cx="160" cy="60" r="1.1" class="star-tw star-tw-b"/>
+        <circle cx="60" cy="180" r="1.3" class="star-tw star-tw-d"/>
+        <circle cx="200" cy="140" r="1.6" class="star-tw star-tw-a"/>
+        <circle cx="130" cy="220" r="1.1" class="star-tw star-tw-c"/>
+        <circle cx="220" cy="220" r="1.2" class="star-tw star-tw-b"/>
+        <circle cx="310" cy="180" r="1.4" class="star-tw star-tw-d"/>
+        <circle cx="370" cy="240" r="1.1" class="star-tw star-tw-a"/>
+        <circle cx="80" cy="300" r="1.3" class="star-tw star-tw-c"/>
+        <circle cx="280" cy="320" r="1.2" class="star-tw star-tw-b"/>
+        <circle cx="190" cy="360" r="1.0" class="star-tw star-tw-d"/>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">{content.headerLabel}</p>
+      <h1 id="hero-wordmark">{content.headerTitle}</h1>
+      <p id="hero-tagline">{content.headerSubtitle}</p>
+      <a href="/contact" id="hero-cta">
+        Get in Touch
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('about-content').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
   <!-- Main About Section -->
-  <section style="background:white;padding:5rem 1.5rem;">
+  <section id="about-content" style="background:white;padding:5rem 1.5rem;">
     <div style="max-width:80rem;margin:0 auto;">
       <div id="about-grid">
-
-        <!-- Text -->
         <div>
           <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.storyLabel}</p>
           <h2 style="margin-top:0.75rem;font-size:2rem;font-weight:800;color:#111827;line-height:1.2;">{content.storyTitle}</h2>
@@ -32,55 +239,18 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
           <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">{content.story4}</p>
           <p style="margin-top:1rem;line-height:1.75;color:#4b5563;font-size:1.05rem;">{content.story5}</p>
         </div>
-
-        <!-- Values + Photo -->
         <div style="display:flex;flex-direction:column;gap:1.5rem;">
-          <div style="display:flex;gap:1rem;">
-            <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
-              <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <div>
-              <h3 style="font-weight:600;color:#111827;">{content.value1Title}</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value1Desc}</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:1rem;">
-            <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
-              <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-            </div>
-            <div>
-              <h3 style="font-weight:600;color:#111827;">{content.value2Title}</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value2Desc}</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:1rem;">
-            <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
-              <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <h3 style="font-weight:600;color:#111827;">{content.value3Title}</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value3Desc}</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:1rem;">
-            <div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;">
-              <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
-            <div>
-              <h3 style="font-weight:600;color:#111827;">{content.value4Title}</h3>
-              <p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value4Desc}</p>
-            </div>
-          </div>
-
-          <!-- Photo — swappable from Decap -->
+          <div style="display:flex;gap:1rem;"><div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div><h3 style="font-weight:600;color:#111827;">{content.value1Title}</h3><p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value1Desc}</p></div></div>
+          <div style="display:flex;gap:1rem;"><div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><div><h3 style="font-weight:600;color:#111827;">{content.value2Title}</h3><p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value2Desc}</p></div></div>
+          <div style="display:flex;gap:1rem;"><div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h3 style="font-weight:600;color:#111827;">{content.value3Title}</h3><p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value3Desc}</p></div></div>
+          <div style="display:flex;gap:1rem;"><div style="display:flex;height:2.75rem;width:2.75rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div><h3 style="font-weight:600;color:#111827;">{content.value4Title}</h3><p style="margin-top:0.25rem;font-size:0.875rem;line-height:1.625;color:#4b5563;">{content.value4Desc}</p></div></div>
           <img src={content.photo} alt={content.photoAlt} width="600" height="740" style="width:100%;border-radius:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.12);margin-top:0.5rem;" />
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Credentials Section -->
+  <!-- Credentials -->
   <section style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:80rem;margin:0 auto;">
       <div style="text-align:center;margin-bottom:3rem;">
@@ -88,30 +258,10 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
         <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.credTitle}</h2>
       </div>
       <div id="credentials-grid">
-        <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-          <h3>{content.cred1Title}</h3>
-          <p>{content.cred1Desc}</p>
-          <p class="credential-sub">{content.cred1Sub}</p>
-        </div>
-        <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <h3>{content.cred2Title}</h3>
-          <p>{content.cred2Desc}</p>
-          <p class="credential-sub">{content.cred2Sub}</p>
-        </div>
-        <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <h3>{content.cred3Title}</h3>
-          <p>{content.cred3Desc}</p>
-          <p class="credential-sub">{content.cred3Sub}</p>
-        </div>
-        <div class="credential-card">
-          <div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
-          <h3>{content.cred4Title}</h3>
-          <p>{content.cred4Desc}</p>
-          <p class="credential-sub">{content.cred4Sub}</p>
-        </div>
+        <div class="credential-card"><div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><h3>{content.cred1Title}</h3><p>{content.cred1Desc}</p><p class="credential-sub">{content.cred1Sub}</p></div>
+        <div class="credential-card"><div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>{content.cred2Title}</h3><p>{content.cred2Desc}</p><p class="credential-sub">{content.cred2Sub}</p></div>
+        <div class="credential-card"><div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>{content.cred3Title}</h3><p>{content.cred3Desc}</p><p class="credential-sub">{content.cred3Sub}</p></div>
+        <div class="credential-card"><div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><h3>{content.cred4Title}</h3><p>{content.cred4Desc}</p><p class="credential-sub">{content.cred4Sub}</p></div>
       </div>
     </div>
   </section>
@@ -131,14 +281,169 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
 </Layout>
 
 <style>
-  #about-grid { display: grid; gap: 3rem; grid-template-columns: 1fr; }
-  @media (min-width: 1024px) { #about-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
-  #credentials-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .credential-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-  .credential-icon { display: flex; height: 3rem; width: 3rem; align-items: center; justify-content: center; border-radius: 0.5rem; background: #dbeafe; color: #2563eb; margin: 0 auto 0.75rem auto; }
-  .credential-icon svg { height: 1.5rem; width: 1.5rem; }
-  .credential-card h3 { font-size: 1rem; font-weight: 700; color: #111827; margin-bottom: 0.375rem; }
-  .credential-card p { font-size: 0.875rem; color: #4b5563; line-height: 1.5; }
-  .credential-sub { font-size: 0.8rem !important; color: #6b7280 !important; margin-top: 0.25rem; }
-  @media (max-width: 768px) { #credentials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-</style>
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* ===== SEQUENCED TIMING =====
+     0.0–1.2s  glow orbs settle
+     0.8–2.0s  mountains rise
+     1.8–2.4s  snow pops
+     2.2–3.6s  diploma builds (body → curls → text lines → seal → star)
+     2.4–3.6s  badge builds (outer → ring → number)
+     3.0s      wrench drops
+     2.0–3.4s  hero text sequence
+  */
+
+  /* Mountains */
+  .mountain-back  { animation: mtRise 1.4s ease 0.8s both; }
+  .mountain-front { animation: mtRise 1.2s ease 1.2s both; }
+  .snow { animation: snowPop 0.4s ease both; }
+  .snow-1 { animation-delay: 1.9s; }
+  .snow-2 { animation-delay: 2.05s; }
+  .snow-3 { animation-delay: 2.2s; }
+  .snow-4 { animation-delay: 2.1s; }
+  @keyframes mtRise {
+    from { opacity: 0; transform: translateY(50px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes snowPop {
+    from { opacity: 0; transform: scale(0); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* Diploma */
+  .diploma-body     { animation: dipAppear 0.7s ease 2.2s both; }
+  .diploma-curl-top { animation: dipAppear 0.5s ease 2.6s both; }
+  .diploma-curl-bot { animation: dipAppear 0.5s ease 2.6s both; }
+  .diploma-rule     { animation: dipAppear 0.4s ease 2.9s both; }
+  .diploma-text     { animation: dipAppear 0.4s ease both; }
+  .dip-t1 { animation-delay: 2.8s; }
+  .dip-t2 { animation-delay: 3.0s; }
+  .dip-t3 { animation-delay: 3.2s; }
+  .dip-t4 { animation-delay: 3.4s; }
+  .diploma-seal { animation: sealSpin 0.7s cubic-bezier(0.34,1.56,0.64,1) 3.6s both; }
+  .diploma-star { animation: dipAppear 0.4s ease 4.0s both; }
+  @keyframes dipAppear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes sealSpin {
+    from { opacity: 0; transform: scale(0) rotate(-180deg); transform-origin: center; }
+    to   { opacity: 1; transform: scale(1) rotate(0deg); transform-origin: center; }
+  }
+
+  /* Years badge */
+  .badge-outer { animation: badgeFade 1s ease 2.4s both; }
+  .badge-ring  { animation: badgePop 0.8s cubic-bezier(0.34,1.56,0.64,1) 2.8s both; }
+  .badge-num   { animation: dipAppear 0.5s ease 3.4s both; }
+  @keyframes badgeFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes badgePop {
+    from { opacity: 0; transform: scale(0.4); transform-origin: center; }
+    to   { opacity: 1; transform: scale(1); transform-origin: center; }
+  }
+
+  /* STARFIELD — fade in after mountains settle, then twinkle forever.
+     Four twinkle variants with different speeds and phase offsets so
+     the sky never pulses in lockstep. */
+  .star-tw {
+    opacity: 0;
+    animation-fill-mode: both;
+  }
+  .star-tw-a { animation: twinkleSlow 4.2s ease-in-out infinite 2.0s; }
+  .star-tw-b { animation: twinkleSlow 5.5s ease-in-out infinite 2.4s; }
+  .star-tw-c { animation: twinkleFast 3.2s ease-in-out infinite 2.2s; }
+  .star-tw-d { animation: twinkleFast 3.8s ease-in-out infinite 2.6s; }
+
+  @keyframes twinkleSlow {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    45%  { opacity: 0.4; }
+    70%  { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  @keyframes twinkleFast {
+    0%   { opacity: 0; }
+    15%  { opacity: 0.8; }
+    40%  { opacity: 1; }
+    65%  { opacity: 0.45; }
+    100% { opacity: 0.9; }
+  }
+
+  /* Glow — starts immediately */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text — sequenced after background elements */
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 48rem;
+  }
+  .hero-label { font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin:0;opacity:0;animation:fadeUp 0.7s ease 2.0s forwards; }
+  #hero-wordmark { font-size:clamp(2.25rem,6vw,3.5rem);font-weight:900;color:white;margin:0;line-height:1.1;text-shadow:0 2px 30px rgba(0,0,0,0.3);opacity:0;animation:fadeUp 0.8s ease 2.3s forwards; }
+  #hero-tagline { font-size:clamp(0.875rem,1.8vw,1rem);color:#bfdbfe;margin:0;max-width:36rem;line-height:1.75;opacity:0;animation:fadeUp 0.7s ease 2.6s forwards; }
+  #hero-cta { display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;opacity:0;animation:fadeUp 0.7s ease 2.9s forwards;transition:transform 0.2s,box-shadow 0.2s; }
+  #hero-cta:hover { transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+  #scroll-hint { position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.85);animation:scrollBounce 2s ease-in-out infinite,fadeUp 0.7s ease 3.4s both;opacity:0;z-index:2;cursor:pointer; }
+  @keyframes scrollBounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* Page */
+  #about-grid { display:grid;gap:3rem;grid-template-columns:1fr; }
+  @media (min-width:1024px) { #about-grid { grid-template-columns:1fr 1fr;align-items:start; } }
+  #credentials-grid { display:grid;gap:1.5rem;grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .credential-card { background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.05); }
+  .credential-icon { display:flex;height:3rem;width:3rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;margin:0 auto 0.75rem auto; }
+  .credential-icon svg { height:1.5rem;width:1.5rem; }
+  .credential-card h3 { font-size:1rem;font-weight:700;color:#111827;margin-bottom:0.375rem; }
+  .credential-card p { font-size:0.875rem;color:#4b5563;line-height:1.5; }
+  .credential-sub { font-size:0.8rem !important;color:#6b7280 !important;margin-top:0.25rem; }
+
+  @media (max-width:768px) {
+    #hero-svg { height:70vh;min-height:440px; }
+    .hero-bg-desktop { display:none; }
+    .hero-bg-mobile  { display:block; }
+    #credentials-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+    .mountain-back,.mountain-front,.snow,.diploma-body,.diploma-curl-top,.diploma-curl-bot,
+    .diploma-rule,.diploma-text,.diploma-seal,.diploma-star,.badge-outer,.badge-ring,
+    .badge-num,.star-tw,
+    .glow-orb-1,.glow-orb-2,#scroll-hint { animation:none; }
+    .hero-label,#hero-wordmark,#hero-tagline,#hero-cta,#scroll-hint { opacity:1;transform:none; }
+    .diploma-body,.mountain-back,.mountain-front,.badge-ring { opacity:1; }
+    .diploma-text,.diploma-seal,.diploma-star,.badge-num,.badge-outer { opacity:1; }
+    .star-tw { opacity:0.7; }
+  }
+</style></document_content>
