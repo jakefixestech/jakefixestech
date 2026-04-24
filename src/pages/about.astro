@@ -25,93 +25,79 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
       <ellipse cx="280" cy="240" rx="360" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1200" cy="300" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
 
-      <!-- Mountain silhouette along bottom -->
+      <!-- Mountains stay anchored to bottom — they ARE the bottom. Bottom of polygons at y:520 is the gradient floor, no harm if cropped on ultrawide -->
       <g class="mountains">
         <polygon points="0,520 100,350 220,450 380,280 520,410 660,300 780,420 900,310 1040,440 1180,300 1320,420 1440,350 1440,520"
           fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.08" stroke-width="1" class="mountain-back"/>
         <polygon points="0,520 60,430 160,490 280,370 420,470 540,360 680,470 800,380 940,480 1080,370 1220,470 1360,400 1440,440 1440,520"
           fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.14" stroke-width="1.5" class="mountain-front"/>
-        <!-- Snow caps -->
         <polygon points="380,280 398,256 416,280" fill="white" fill-opacity="0.22" class="snow snow-1"/>
         <polygon points="660,300 676,278 692,300" fill="white" fill-opacity="0.2" class="snow snow-2"/>
         <polygon points="900,310 916,288 932,310" fill="white" fill-opacity="0.22" class="snow snow-3"/>
         <polygon points="1180,300 1196,278 1212,300" fill="white" fill-opacity="0.18" class="snow snow-4"/>
       </g>
 
-      <!-- DIPLOMA SCROLL — left side, anchored lower so it sits on mountain line -->
+      <!-- DIPLOMA SCROLL — y:180 stays. Diploma extends from y:210 (top curl) to y:390 (bottom of seal/ribbon) — fits inside safe zone (75-445). -->
       <g class="diploma-group" transform="translate(100, 180)">
-        <!-- Scroll body -->
         <rect x="0" y="30" width="240" height="180" rx="4"
           stroke="white" stroke-opacity="0.22" stroke-width="2"
           fill="white" fill-opacity="0.07" class="diploma-body"/>
-        <!-- Top curl -->
         <ellipse cx="120" cy="30" rx="120" ry="16"
           stroke="white" stroke-opacity="0.2" stroke-width="1.5"
           fill="white" fill-opacity="0.08" class="diploma-curl-top"/>
-        <!-- Bottom curl -->
         <ellipse cx="120" cy="210" rx="120" ry="16"
           stroke="white" stroke-opacity="0.2" stroke-width="1.5"
           fill="white" fill-opacity="0.08" class="diploma-curl-bot"/>
-        <!-- Inner shadow lines on curls -->
         <ellipse cx="120" cy="30" rx="100" ry="11" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
         <ellipse cx="120" cy="210" rx="100" ry="11" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
 
-        <!-- Header text area -->
         <text x="120" y="70" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="11" font-family="serif" font-style="italic" class="diploma-text dip-t1">Certificate of Achievement</text>
         <line x1="20" y1="78" x2="220" y2="78" stroke="white" stroke-opacity="0.15" stroke-width="1" class="diploma-rule"/>
 
-        <!-- CIS degree text -->
         <text x="120" y="108" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="18" font-weight="700" font-family="serif" class="diploma-text dip-t2">CIS</text>
         <text x="120" y="128" text-anchor="middle" fill="white" fill-opacity="0.35" font-size="8" font-family="monospace" class="diploma-text dip-t3">COMPUTER INFORMATION</text>
         <text x="120" y="140" text-anchor="middle" fill="white" fill-opacity="0.35" font-size="8" font-family="monospace" class="diploma-text dip-t4">SYSTEMS</text>
 
-        <!-- Seal -->
         <circle cx="120" cy="175" r="20"
           stroke="white" stroke-opacity="0.3" stroke-width="2"
           fill="white" fill-opacity="0.08" class="diploma-seal"/>
         <circle cx="120" cy="175" r="14"
           stroke="white" stroke-opacity="0.2" stroke-width="1"
           fill="none" class="diploma-seal"/>
-        <!-- Star in seal -->
         <polygon points="120,164 122.4,171.6 130,171.6 124,176.4 126.4,184 120,179.2 113.6,184 116,176.4 110,171.6 117.6,171.6"
           fill="white" fill-opacity="0.35" class="diploma-star"/>
-        <!-- Ribbon below seal -->
         <path d="M102 194 L110 202 L120 196 L130 202 L138 194" stroke="white" stroke-opacity="0.2" stroke-width="1.5" fill="none" stroke-linecap="round" class="diploma-star"/>
       </g>
 
-      <!-- YEARS BADGE — far right, out of headline zone -->
+      <!-- YEARS BADGE — y:140 stays. Outer ring r:82 means top edge at y:140-2=138, well inside safe zone. -->
       <g class="years-badge" transform="translate(1180, 140)">
-        <!-- Outer decorative ring -->
         <circle cx="70" cy="80" r="82" stroke="white" stroke-opacity="0.1" stroke-width="1.5" fill="none" stroke-dasharray="6 4" class="badge-outer"/>
-        <!-- Main circle -->
         <circle cx="70" cy="80" r="68" stroke="white" stroke-opacity="0.2" stroke-width="2" fill="white" fill-opacity="0.06" class="badge-ring"/>
         <circle cx="70" cy="80" r="54" stroke="white" stroke-opacity="0.12" stroke-width="1" fill="none" class="badge-ring"/>
-        <!-- Number -->
         <text x="70" y="72" text-anchor="middle" fill="white" fill-opacity="0.65" font-size="36" font-weight="900" font-family="monospace" class="badge-num">10+</text>
         <text x="70" y="92" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="10" font-family="monospace" letter-spacing="2" class="badge-num">YEARS</text>
         <text x="70" y="108" text-anchor="middle" fill="white" fill-opacity="0.3" font-size="8" font-family="monospace" letter-spacing="1" class="badge-num">EXPERIENCE</text>
-        <!-- Tick marks -->
         <line x1="70" y1="4" x2="70" y2="16" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
         <line x1="70" y1="144" x2="70" y2="156" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
         <line x1="-6" y1="80" x2="6" y2="80" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
         <line x1="134" y1="80" x2="146" y2="80" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" class="badge-ring"/>
       </g>
 
-      <!-- STARFIELD — twinkling night sky above mountains -->
+      <!-- STARFIELD — top stars pulled DOWN. y:35,40,45 → y:75,80,85. Bottom stars y:250 already safe. -->
       <g class="starfield" fill="white">
-        <circle cx="90" cy="45" r="1.4" class="star-tw star-tw-a"/>
+        <circle cx="90" cy="80" r="1.4" class="star-tw star-tw-a"/>
         <circle cx="180" cy="120" r="1.1" class="star-tw star-tw-b"/>
-        <circle cx="260" cy="70" r="2.2" class="star-tw star-tw-c"/>
-        <circle cx="420" cy="95" r="1.3" class="star-tw star-tw-a"/>
-        <circle cx="490" cy="35" r="1.7" class="star-tw star-tw-d"/>
+        <circle cx="260" cy="100" r="2.2" class="star-tw star-tw-c"/>
+        <circle cx="420" cy="105" r="1.3" class="star-tw star-tw-a"/>
+        <circle cx="490" cy="80" r="1.7" class="star-tw star-tw-d"/>
         <circle cx="560" cy="150" r="1.1" class="star-tw star-tw-b"/>
-        <circle cx="640" cy="70" r="2.0" class="star-tw star-tw-c"/>
+        <circle cx="640" cy="100" r="2.0" class="star-tw star-tw-c"/>
         <circle cx="770" cy="110" r="1.3" class="star-tw star-tw-d"/>
-        <circle cx="860" cy="45" r="1.6" class="star-tw star-tw-a"/>
+        <circle cx="860" cy="85" r="1.6" class="star-tw star-tw-a"/>
         <circle cx="940" cy="140" r="1.2" class="star-tw star-tw-b"/>
-        <circle cx="1020" cy="80" r="2.3" class="star-tw star-tw-c"/>
-        <circle cx="1100" cy="40" r="1.2" class="star-tw star-tw-d"/>
-        <circle cx="1360" cy="90" r="1.5" class="star-tw star-tw-a"/>
+        <circle cx="1020" cy="100" r="2.3" class="star-tw star-tw-c"/>
+        <circle cx="1100" cy="80" r="1.2" class="star-tw star-tw-d"/>
+        <circle cx="1360" cy="100" r="1.5" class="star-tw star-tw-a"/>
         <circle cx="1410" cy="180" r="1.0" class="star-tw star-tw-b"/>
         <circle cx="60" cy="200" r="1.1" class="star-tw star-tw-d"/>
         <circle cx="355" cy="180" r="1.4" class="star-tw star-tw-c"/>
@@ -119,7 +105,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
         <circle cx="1150" cy="250" r="1.3" class="star-tw star-tw-a"/>
       </g>
 
-      <!-- Grid -->
       <g stroke="white" stroke-opacity="0.04" stroke-width="1">
         <line x1="0" y1="130" x2="1440" y2="130"/>
         <line x1="0" y1="260" x2="1440" y2="260"/>
@@ -145,7 +130,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
       <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="320" cy="480" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- Mountains -->
       <g class="mountains">
         <polygon points="0,600 80,450 180,530 280,400 380,490 400,470 400,600"
           fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.08" stroke-width="1" class="mountain-back"/>
@@ -155,7 +139,7 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
         <polygon points="80,450 94,430 108,450" fill="white" fill-opacity="0.18" class="snow snow-2"/>
       </g>
 
-      <!-- Diploma — upper-left sky, clear of mountains and text zone -->
+      <!-- Diploma — y:140 stays. Bottom of seal at y:140+120=y:260. Safe. -->
       <g class="diploma-group" transform="translate(20, 140)">
         <rect x="0" y="16" width="140" height="110" rx="3"
           stroke="white" stroke-opacity="0.22" stroke-width="1.5"
@@ -175,8 +159,8 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
         <polygon points="70,101 72,106.4 77.6,106.4 73.2,109.6 74.8,115 70,111.8 65.2,115 66.8,109.6 62.4,106.4 68,106.4" fill="white" fill-opacity="0.35" class="diploma-star"/>
       </g>
 
-      <!-- Years badge — top-right, above text zone -->
-      <g class="years-badge" transform="translate(270, 40)">
+      <!-- Years badge — pulled DOWN from y:40 to y:65 (outer ring r:60 was extending to y:-4) -->
+      <g class="years-badge" transform="translate(270, 65)">
         <circle cx="50" cy="56" r="60" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none" stroke-dasharray="4 3" class="badge-outer"/>
         <circle cx="50" cy="56" r="50" stroke="white" stroke-opacity="0.2" stroke-width="2" fill="white" fill-opacity="0.06" class="badge-ring"/>
         <circle cx="50" cy="56" r="40" stroke="white" stroke-opacity="0.1" stroke-width="1" fill="none" class="badge-ring"/>
@@ -185,11 +169,11 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
         <text x="50" y="78" text-anchor="middle" fill="white" fill-opacity="0.28" font-size="6" font-family="monospace" class="badge-num">EXPERIENCE</text>
       </g>
 
-      <!-- STARFIELD — twinkling night sky -->
+      <!-- STARFIELD — top star at y:50 pulled to y:75; rest already safe -->
       <g class="starfield" fill="white">
-        <circle cx="40" cy="50" r="1.2" class="star-tw star-tw-a"/>
+        <circle cx="40" cy="75" r="1.2" class="star-tw star-tw-a"/>
         <circle cx="100" cy="110" r="1.5" class="star-tw star-tw-c"/>
-        <circle cx="160" cy="60" r="1.1" class="star-tw star-tw-b"/>
+        <circle cx="160" cy="95" r="1.1" class="star-tw star-tw-b"/>
         <circle cx="50" cy="340" r="1.3" class="star-tw star-tw-d"/>
         <circle cx="200" cy="140" r="1.6" class="star-tw star-tw-a"/>
         <circle cx="160" cy="330" r="1.1" class="star-tw star-tw-c"/>
@@ -201,7 +185,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
         <circle cx="190" cy="360" r="1.0" class="star-tw star-tw-d"/>
       </g>
 
-      <!-- Grid -->
       <g stroke="white" stroke-opacity="0.04" stroke-width="1">
         <line x1="0" y1="150" x2="400" y2="150"/>
         <line x1="0" y1="300" x2="400" y2="300"/>
@@ -303,17 +286,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
   .hero-bg-desktop { display: block; }
   .hero-bg-mobile  { display: none; }
 
-  /* ===== SEQUENCED TIMING =====
-     0.0–1.2s  glow orbs settle
-     0.8–2.0s  mountains rise
-     1.8–2.4s  snow pops
-     2.2–3.6s  diploma builds (body → curls → text lines → seal → star)
-     2.4–3.6s  badge builds (outer → ring → number)
-     3.0s      wrench drops
-     2.0–3.4s  hero text sequence
-  */
-
-  /* Mountains */
   .mountain-back  { animation: mtRise 1.4s ease 0.8s both; }
   .mountain-front { animation: mtRise 1.2s ease 1.2s both; }
   .snow { animation: snowPop 0.4s ease both; }
@@ -330,7 +302,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
     to   { opacity: 1; transform: scale(1); }
   }
 
-  /* Diploma */
   .diploma-body     { animation: dipAppear 0.7s ease 2.2s both; }
   .diploma-curl-top { animation: dipAppear 0.5s ease 2.6s both; }
   .diploma-curl-bot { animation: dipAppear 0.5s ease 2.6s both; }
@@ -351,7 +322,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
     to   { opacity: 1; transform: scale(1) rotate(0deg); transform-origin: center; }
   }
 
-  /* Years badge */
   .badge-outer { animation: badgeFade 1s ease 2.4s both; }
   .badge-ring  { animation: badgePop 0.8s cubic-bezier(0.34,1.56,0.64,1) 2.8s both; }
   .badge-num   { animation: dipAppear 0.5s ease 3.4s both; }
@@ -364,9 +334,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
     to   { opacity: 1; transform: scale(1); transform-origin: center; }
   }
 
-  /* STARFIELD — fade in after mountains settle, then twinkle forever.
-     Four twinkle variants with different speeds and phase offsets so
-     the sky never pulses in lockstep. */
   .star-tw {
     opacity: 0;
     animation-fill-mode: both;
@@ -391,12 +358,10 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
     100% { opacity: 0.9; }
   }
 
-  /* Glow — starts immediately */
   .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
   .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
   @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
 
-  /* Hero text — sequenced after background elements */
   #hero-content {
     position: relative;
     z-index: 2;
@@ -418,7 +383,6 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
   #scroll-hint { position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.85);animation:scrollBounce 2s ease-in-out infinite,fadeUp 0.7s ease 3.4s both;opacity:0;z-index:2;cursor:pointer; }
   @keyframes scrollBounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
-  /* Page */
   #about-grid { display:grid;gap:3rem;grid-template-columns:1fr; }
   @media (min-width:1024px) { #about-grid { grid-template-columns:1fr 1fr;align-items:start; } }
   #credentials-grid { display:grid;gap:1.5rem;grid-template-columns:repeat(4,minmax(0,1fr)); }
@@ -446,4 +410,4 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
     .diploma-text,.diploma-seal,.diploma-star,.badge-num,.badge-outer { opacity:1; }
     .star-tw { opacity:0.7; }
   }
-</style></document_content>
+</style>
