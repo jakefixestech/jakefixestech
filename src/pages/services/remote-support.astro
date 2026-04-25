@@ -5,27 +5,297 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Remote Tech Support | Jake Fixes Tech — Littleton, NH"
 description="Remote computer support via phone, video call or remote control. I can troubleshoot and fix many software issues without you leaving home. Windows, Mac, Linux and Chromebook.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Remote Tech Support Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="220" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1220" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Client's laptop (with problem) — translate(280, 240) -->
+      <g class="client-group" transform="translate(280, 240)">
+        <!-- Laptop base -->
+        <path d="M-110 80 L110 80 L120 95 L-120 95 Z" stroke="white" stroke-opacity="0.35" stroke-width="2" fill="white" fill-opacity="0.06" class="device-body"/>
+        <!-- Laptop screen -->
+        <rect x="-100" y="-70" width="200" height="150" rx="4" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="white" fill-opacity="0.05" class="device-frame"/>
+        <rect x="-92" y="-62" width="184" height="134" rx="2" fill="white" fill-opacity="0.04"/>
+        <circle cx="0" cy="-66" r="1.2" fill="white" fill-opacity="0.4"/>
+
+        <!-- Screen content: error state, then fixed -->
+        <g class="screen-state-error">
+          <!-- Error window -->
+          <rect x="-70" y="-40" width="140" height="80" rx="3" stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="white" fill-opacity="0.06"/>
+          <line x1="-70" y1="-28" x2="70" y2="-28" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+          <circle cx="-64" cy="-34" r="2" fill="#fca5a5" fill-opacity="0.5"/>
+          <circle cx="-58" cy="-34" r="2" fill="white" fill-opacity="0.3"/>
+          <circle cx="-52" cy="-34" r="2" fill="white" fill-opacity="0.3"/>
+          <!-- Big X / error symbol -->
+          <circle cx="0" cy="5" r="14" stroke="#fca5a5" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+          <line x1="-7" y1="-2" x2="7" y2="12" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="7" y1="-2" x2="-7" y2="12" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="0" y="33" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="8" font-family="ui-monospace, monospace" letter-spacing="1">ERROR</text>
+        </g>
+
+        <!-- Screen state: fixed -->
+        <g class="screen-state-fixed">
+          <rect x="-70" y="-40" width="140" height="80" rx="3" stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="white" fill-opacity="0.06"/>
+          <line x1="-70" y1="-28" x2="70" y2="-28" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+          <circle cx="-64" cy="-34" r="2" fill="#86efac" fill-opacity="0.6"/>
+          <circle cx="-58" cy="-34" r="2" fill="white" fill-opacity="0.3"/>
+          <circle cx="-52" cy="-34" r="2" fill="white" fill-opacity="0.3"/>
+          <circle cx="0" cy="5" r="14" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+          <polyline points="-7,5 -2,11 8,-2" stroke="#86efac" stroke-opacity="0.85" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="0" y="33" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="8" font-family="ui-monospace, monospace" letter-spacing="1">FIXED</text>
+        </g>
+
+        <!-- Hinge -->
+        <rect x="-22" y="79" width="44" height="3" rx="1" fill="white" fill-opacity="0.2"/>
+
+        <!-- "Client" label -->
+        <text x="0" y="125" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="10" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">YOU</text>
+      </g>
+
+      <!-- RIGHT: Jake's desktop monitor — translate(1180, 240) -->
+      <g class="jake-group" transform="translate(1180, 240)">
+        <!-- Monitor stand -->
+        <path d="M-30 95 L30 95 L20 80 L-20 80 Z" stroke="white" stroke-opacity="0.3" stroke-width="2" fill="white" fill-opacity="0.06"/>
+        <rect x="-50" y="92" width="100" height="6" rx="1" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+        <!-- Monitor frame -->
+        <rect x="-110" y="-80" width="220" height="160" rx="4" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.06" class="device-body"/>
+        <!-- Screen bezel -->
+        <rect x="-102" y="-72" width="204" height="146" rx="2" fill="white" fill-opacity="0.04"/>
+
+        <!-- Screen content: showing client's screen + control panel -->
+        <!-- Top window bar -->
+        <rect x="-92" y="-62" width="184" height="10" rx="1" fill="white" fill-opacity="0.12"/>
+        <circle cx="-86" cy="-57" r="1.5" fill="#fca5a5" fill-opacity="0.55"/>
+        <circle cx="-81" cy="-57" r="1.5" fill="#fcd34d" fill-opacity="0.55"/>
+        <circle cx="-76" cy="-57" r="1.5" fill="#86efac" fill-opacity="0.6"/>
+        <text x="0" y="-55" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="6" font-family="ui-monospace, monospace" letter-spacing="1">remote.session — connected</text>
+
+        <!-- "Mirror" of client's screen inside Jake's monitor -->
+        <rect x="-80" y="-40" width="160" height="100" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="1" fill="white" fill-opacity="0.04"/>
+        <!-- Show same content state on Jake's screen as client -->
+        <g class="screen-state-error">
+          <line x1="-70" y1="-30" x2="50" y2="-30" stroke="white" stroke-opacity="0.3" stroke-width="0.8"/>
+          <line x1="-70" y1="-22" x2="30" y2="-22" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+          <line x1="-70" y1="-14" x2="40" y2="-14" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+          <rect x="-30" y="-5" width="60" height="35" rx="2" stroke="#fca5a5" stroke-opacity="0.5" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+          <text x="0" y="18" text-anchor="middle" fill="#fca5a5" fill-opacity="0.6" font-size="6" font-family="ui-monospace, monospace">ISSUE</text>
+        </g>
+        <g class="screen-state-fixed">
+          <line x1="-70" y1="-30" x2="50" y2="-30" stroke="white" stroke-opacity="0.3" stroke-width="0.8"/>
+          <line x1="-70" y1="-22" x2="30" y2="-22" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+          <line x1="-70" y1="-14" x2="40" y2="-14" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+          <rect x="-30" y="-5" width="60" height="35" rx="2" stroke="#86efac" stroke-opacity="0.5" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+          <text x="0" y="18" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="6" font-family="ui-monospace, monospace">RESOLVED</text>
+        </g>
+
+        <!-- Status bar bottom -->
+        <rect x="-92" y="62" width="184" height="10" rx="1" fill="white" fill-opacity="0.06"/>
+        <circle cx="-84" cy="67" r="1.5" fill="#86efac" fill-opacity="0.7" class="connection-pulse"/>
+        <text x="-78" y="69" fill="white" fill-opacity="0.45" font-size="5.5" font-family="ui-monospace, monospace">SECURE</text>
+        <text x="80" y="69" text-anchor="end" fill="white" fill-opacity="0.4" font-size="5.5" font-family="ui-monospace, monospace">jake</text>
+
+        <!-- "Jake" label -->
+        <text x="0" y="125" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="10" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">JAKE</text>
+      </g>
+
+      <!-- Connection between client and Jake -->
+      <!-- Dotted line path from client top (390, 170) to jake top (1070, 170), arching high above hero text -->
+      <path id="conn-path" d="M390 170 Q730 30 1070 170" stroke="white" stroke-opacity="0.2" stroke-width="1.5" fill="none" stroke-dasharray="6 5" class="conn-line"/>
+
+      <!-- Secure lock badge at the apex of the arc, above hero text -->
+      <g transform="translate(730, 50)">
+        <g class="secure-badge">
+          <circle cx="0" cy="0" r="22" stroke="#86efac" stroke-opacity="0.6" stroke-width="2" fill="#1e3a8a" fill-opacity="0.4"/>
+          <rect x="-7" y="-2" width="14" height="11" rx="1.5" stroke="#86efac" stroke-opacity="0.85" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <path d="M-4 -2 V -7 a 4 4 0 0 1 8 0 V -2" stroke="#86efac" stroke-opacity="0.85" stroke-width="1.5" fill="none"/>
+          <circle cx="0" cy="3.5" r="1.2" fill="#86efac" fill-opacity="0.85"/>
+        </g>
+        <text x="0" y="38" text-anchor="middle" fill="#86efac" fill-opacity="0.65" font-size="8" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">ENCRYPTED</text>
+      </g>
+
+      <!-- Traveling cursor (going from Jake → Client to show remote control) -->
+      <g class="cursor-traveler">
+        <!-- Cursor pointer arrow shape -->
+        <polygon points="0,0 0,16 4,12 7,18 9,17 6,11 11,11" stroke="white" stroke-width="1.5" stroke-linejoin="round" fill="white" fill-opacity="0.9"/>
+        <animateMotion dur="10s" repeatCount="indefinite" begin="0s" keyPoints="1;1;0;0" keyTimes="0;0.15;0.4;1" calcMode="linear">
+          <mpath href="#conn-path"/>
+        </animateMotion>
+      </g>
+
+      <!-- Click ripple at the cursor's destination (client side) -->
+      <g class="click-ripple" transform="translate(390, 170)">
+        <circle cx="0" cy="0" r="6" stroke="#86efac" stroke-opacity="0.6" stroke-width="2" fill="none"/>
+      </g>
+
+      <!-- Floating WiFi signal — outer wrapper -->
+      <g transform="translate(900, 130)">
+        <g class="float-icon float-tool-1" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2" stroke-linecap="round">
+          <path d="M -16 -4 a 22 22 0 0 1 32 0"/>
+          <path d="M -10 2 a 14 14 0 0 1 20 0"/>
+          <path d="M -4 8 a 6 6 0 0 1 8 0"/>
+          <circle cx="0" cy="14" r="1.5" fill="white" fill-opacity="0.4" stroke="none"/>
+        </g>
+      </g>
+
+      <!-- Floating chat bubble (phone support) -->
+      <g transform="translate(160, 380)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.18" fill="white" fill-opacity="0.06" stroke-width="1.5" stroke-linejoin="round">
+          <path d="M-18 -10 L18 -10 Q22 -10 22 -6 L22 8 Q22 12 18 12 L0 12 L-6 18 L-6 12 L-18 12 Q-22 12 -22 8 L-22 -6 Q-22 -10 -18 -10 Z"/>
+          <line x1="-12" y1="-2" x2="12" y2="-2" stroke-opacity="0.3"/>
+          <line x1="-12" y1="3" x2="6" y2="3" stroke-opacity="0.3"/>
+        </g>
+      </g>
+
+      <!-- Floating headset (call) -->
+      <g transform="translate(1280, 110)">
+        <g class="float-icon float-tool-3" stroke="white" stroke-opacity="0.18" fill="white" fill-opacity="0.06" stroke-width="1.5" stroke-linejoin="round">
+          <path d="M-14 4 V -2 a 14 14 0 0 1 28 0 V 4"/>
+          <rect x="-16" y="2" width="6" height="10" rx="1.5"/>
+          <rect x="10" y="2" width="6" height="10" rx="1.5"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// connect</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// secure</text>
+        <text x="1180" y="450" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// fix</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">latency: 12ms</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="80" cy="100" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="340" cy="500" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Client laptop top-left — translate(80, 90) -->
+      <g class="client-group" transform="translate(80, 90)">
+        <path d="M-65 50 L65 50 L72 60 L-72 60 Z" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.06" class="device-body"/>
+        <rect x="-60" y="-45" width="120" height="95" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="white" fill-opacity="0.05" class="device-frame"/>
+        <rect x="-54" y="-39" width="108" height="83" rx="2" fill="white" fill-opacity="0.04"/>
+
+        <g class="screen-state-error">
+          <circle cx="0" cy="0" r="11" stroke="#fca5a5" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+          <line x1="-5" y1="-5" x2="5" y2="5" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+          <line x1="5" y1="-5" x2="-5" y2="5" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+          <text x="0" y="22" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="6" font-family="ui-monospace, monospace" letter-spacing="1">ERROR</text>
+        </g>
+        <g class="screen-state-fixed">
+          <circle cx="0" cy="0" r="11" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+          <polyline points="-5,0 -1,5 6,-3" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="0" y="22" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="6" font-family="ui-monospace, monospace" letter-spacing="1">FIXED</text>
+        </g>
+      </g>
+
+      <!-- Jake's monitor bottom-right — translate(310, 510) -->
+      <g class="jake-group" transform="translate(310, 510)">
+        <path d="M-18 60 L18 60 L13 50 L-13 50 Z" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+        <rect x="-30" y="58" width="60" height="4" rx="1" stroke="white" stroke-opacity="0.3" stroke-width="1" fill="white" fill-opacity="0.06"/>
+        <rect x="-65" y="-45" width="130" height="95" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="1.8" fill="white" fill-opacity="0.06" class="device-body"/>
+        <rect x="-58" y="-38" width="116" height="83" rx="2" fill="white" fill-opacity="0.04"/>
+
+        <rect x="-54" y="-32" width="108" height="6" rx="0.8" fill="white" fill-opacity="0.12"/>
+        <circle cx="-50" cy="-29" r="0.9" fill="#fca5a5" fill-opacity="0.55"/>
+        <circle cx="-46" cy="-29" r="0.9" fill="#fcd34d" fill-opacity="0.55"/>
+        <circle cx="-42" cy="-29" r="0.9" fill="#86efac" fill-opacity="0.6"/>
+
+        <rect x="-50" y="-20" width="100" height="55" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+        <g class="screen-state-error">
+          <text x="0" y="13" text-anchor="middle" fill="#fca5a5" fill-opacity="0.7" font-size="6" font-family="ui-monospace, monospace">CLIENT ISSUE</text>
+        </g>
+        <g class="screen-state-fixed">
+          <text x="0" y="13" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="6" font-family="ui-monospace, monospace">RESOLVED</text>
+        </g>
+
+        <circle cx="-50" cy="42" r="1.2" fill="#86efac" fill-opacity="0.7" class="connection-pulse"/>
+        <text x="-46" y="44" fill="white" fill-opacity="0.45" font-size="4" font-family="ui-monospace, monospace">SECURE</text>
+      </g>
+
+      <!-- Mobile connection path (top-left to bottom-right) -->
+      <path id="conn-path-m" d="M140 80 Q220 280 270 510" stroke="white" stroke-opacity="0.18" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/>
+
+      <!-- Secure lock badge in middle -->
+      <g transform="translate(225, 290)">
+        <g class="secure-badge">
+          <circle cx="0" cy="0" r="16" stroke="#86efac" stroke-opacity="0.6" stroke-width="1.5" fill="#1e3a8a" fill-opacity="0.4"/>
+          <rect x="-5" y="-1" width="10" height="8" rx="1" stroke="#86efac" stroke-opacity="0.85" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+          <path d="M-3 -1 V -5 a 3 3 0 0 1 6 0 V -1" stroke="#86efac" stroke-opacity="0.85" stroke-width="1.2" fill="none"/>
+        </g>
+      </g>
+
+      <!-- Mobile cursor traveler -->
+      <g class="cursor-traveler">
+        <polygon points="0,0 0,12 3,9 5,14 7,13 4,8 8,8" stroke="white" stroke-width="1.2" stroke-linejoin="round" fill="white" fill-opacity="0.9"/>
+        <animateMotion dur="10s" repeatCount="indefinite" begin="0s" keyPoints="1;1;0;0" keyTimes="0;0.15;0.4;1" calcMode="linear">
+          <mpath href="#conn-path-m"/>
+        </animateMotion>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
         <a href="/services#remote-support" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
       </p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Remote Support</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        Can't make it in? No problem. I can diagnose and fix many software issues remotely by phone, video call, or by taking control of your screen directly. Windows, Mac, Linux and Chromebook all supported.
-      </p>
-      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+      <h1 id="hero-wordmark">Remote Support</h1>
+      <p id="hero-tagline">Can't make it in? No problem. I can diagnose and fix many software issues remotely by phone, video call, or by taking control of your screen directly. Windows, Mac, Linux and Chromebook all supported.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
           Get Remote Help
           <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          View Pricing
-        </a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
       </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -50,7 +320,7 @@ description="Remote computer support via phone, video call or remote control. I 
   </section>
 
   <!-- How It Works -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section id="how-it-works" style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div style="margin-bottom:2.5rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">How It Works</p>
@@ -278,6 +548,202 @@ description="Remote computer support via phone, video call or remote control. I 
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Pieces fade in */
+  .device-body, .device-frame { animation: pieceAppear 0.8s ease 0.3s both; }
+  @keyframes pieceAppear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* 10s loop matching the cursor travel:
+     0-15%:  cursor parked on Jake's side (error visible)
+     15-40%: cursor travels Jake → Client (error still visible)
+     40%:    cursor lands, click ripple, error → fixed
+     40-92%: long pause on FIXED state (the satisfying "done" beat)
+     92-100%: cursor fades out, brief reset for loop */
+  .screen-state-error  { animation: errorState 10s ease-in-out infinite; }
+  .screen-state-fixed  { opacity: 0; animation: fixedState 10s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes errorState {
+    0%, 38%  { opacity: 1; }
+    44%      { opacity: 0; }
+    100%     { opacity: 0; }
+  }
+  @keyframes fixedState {
+    0%, 38%  { opacity: 0; transform: scale(0.85); }
+    46%      { opacity: 1; transform: scale(1.1); }
+    52%, 92% { opacity: 1; transform: scale(1); }
+    100%     { opacity: 0; transform: scale(0.85); }
+  }
+
+  /* Cursor fades in when about to move, fades out near end of cycle before reset */
+  .cursor-traveler { animation: cursorFade 10s ease-in-out infinite; }
+  @keyframes cursorFade {
+    0%, 8%    { opacity: 0; }
+    13%       { opacity: 1; }
+    88%       { opacity: 1; }
+    96%, 100% { opacity: 0; }
+  }
+
+  /* Connection line shimmer (dash offset animation) */
+  .conn-line { animation: dashFlow 3s linear infinite; }
+  @keyframes dashFlow {
+    from { stroke-dashoffset: 0; }
+    to   { stroke-dashoffset: -22; }
+  }
+
+  /* Secure badge gentle pulse */
+  .secure-badge { animation: securePulse 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes securePulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.06); }
+  }
+
+  /* Connection LED pulse */
+  .connection-pulse { animation: connDot 1.5s ease-in-out infinite; }
+  @keyframes connDot {
+    0%, 100% { fill-opacity: 0.5; }
+    50%      { fill-opacity: 1; }
+  }
+
+  /* Click ripple at cursor destination — fires when cursor lands at 40% */
+  .click-ripple { animation: clickAt 10s ease-in-out infinite; transform-origin: center; transform-box: fill-box; opacity: 0; }
+  @keyframes clickAt {
+    0%, 38% { opacity: 0; transform: scale(0.5); }
+    42%     { opacity: 1; transform: scale(1); }
+    50%     { opacity: 0; transform: scale(2.2); }
+    100%    { opacity: 0; transform: scale(2.2); }
+  }
+
+  /* Float icons */
+  .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 40rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .device-body, .device-frame, .screen-state-error, .screen-state-fixed,
+    .conn-line, .secure-badge, .connection-pulse, .click-ripple, .cursor-traveler,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .device-body, .device-frame { opacity: 1; }
+    .screen-state-error { opacity: 0; }
+    .screen-state-fixed { opacity: 1; transform: scale(1); }
+    .cursor-traveler { display: none; }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Page content (preserved exactly) */
   .service-item { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1.25rem; }
   .service-icon { height: 3rem; width: 3rem; min-width: 3rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .service-icon svg { height: 1.5rem; width: 1.5rem; }
