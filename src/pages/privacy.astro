@@ -70,11 +70,17 @@ description="Privacy Policy for Jake Fixes Tech LLC. Learn how we handle and pro
         <path id="secure-path" d="M520 240 Q740 220 960 200"/>
       </defs>
 
-      <!-- Floating eye-with-slash (no-tracking) -->
-      <g class="float-icon float-icon-1" transform="translate(560, 60)" stroke="white" stroke-opacity="0.1" fill="none" stroke-width="2">
+      <!-- Floating eye-with-slash (no-tracking) - upper area, safe zone -->
+      <g class="float-icon float-icon-1" transform="translate(620, 70)" stroke="white" stroke-opacity="0.12" fill="none" stroke-width="2">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
         <circle cx="12" cy="12" r="3"/>
-        <line x1="2" y1="2" x2="22" y2="22" stroke-opacity="0.18"/>
+        <line x1="2" y1="2" x2="22" y2="22" stroke-opacity="0.2"/>
+      </g>
+
+      <!-- Floating "no-share" / blocked circle - balances upper-left of safe zone -->
+      <g class="float-icon float-icon-5" transform="translate(280, 75)" stroke="white" stroke-opacity="0.12" fill="none" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="5" y1="5" x2="19" y2="19"/>
       </g>
 
       <!-- Floating key -->
@@ -88,11 +94,11 @@ description="Privacy Policy for Jake Fixes Tech LLC. Learn how we handle and pro
         <path d="M12 11c0-3 2-5 5-5M5 14a7 7 0 0 1 7-7M9 18a3 3 0 0 1 0-6 3 3 0 0 1 3 3M14 23c-2-2-3-5-3-8M19 22a18 18 0 0 0-1-9 5 5 0 0 0-7-2"/>
       </g>
 
-      <!-- "SECURE" stamp - top right corner -->
-      <g class="float-icon float-icon-4" transform="translate(1280, 60)">
-        <circle cx="40" cy="40" r="34" stroke="white" stroke-opacity="0.15" stroke-width="1.5" fill="none"/>
-        <circle cx="40" cy="40" r="28" stroke="white" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
-        <text x="40" y="44" text-anchor="middle" font-size="10" font-family="ui-monospace, monospace" font-weight="700" fill="white" fill-opacity="0.25">SECURE</text>
+      <!-- "SECURE" stamp - upper-right area, inside ultrawide safe zone -->
+      <g class="float-icon float-icon-4" transform="translate(1140, 60)">
+        <circle cx="32" cy="32" r="28" stroke="white" stroke-opacity="0.15" stroke-width="1.5" fill="none"/>
+        <circle cx="32" cy="32" r="22" stroke="white" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+        <text x="32" y="36" text-anchor="middle" font-size="9" font-family="ui-monospace, monospace" font-weight="700" fill="white" fill-opacity="0.25">SECURE</text>
       </g>
 
       <!-- Grid -->
@@ -396,6 +402,7 @@ description="Privacy Policy for Jake Fixes Tech LLC. Learn how we handle and pro
   .float-icon-2 { animation: floatB 7s ease-in-out infinite; }
   .float-icon-3 { animation: floatC 5.5s ease-in-out infinite; }
   .float-icon-4 { animation: floatA 8s ease-in-out infinite; }
+  .float-icon-5 { animation: floatB 6.5s ease-in-out infinite; }
   @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
   @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
   @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
@@ -505,7 +512,7 @@ description="Privacy Policy for Jake Fixes Tech LLC. Learn how we handle and pro
   @media (prefers-reduced-motion: reduce) {
     .shield-outer, .shield-inner, .check-draw, .pulse-ring,
     .lock-body, .lock-shackle, .keyhole, .data-flow,
-    .float-icon-1, .float-icon-2, .float-icon-3, .float-icon-4,
+    .float-icon-1, .float-icon-2, .float-icon-3, .float-icon-4, .float-icon-5,
     .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
     .hero-label, #hero-wordmark, #hero-tagline, #hero-cta, .hero-meta, #scroll-hint { opacity: 1; transform: none; }
     .check-draw { stroke-dashoffset: 0; }
