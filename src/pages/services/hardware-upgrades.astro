@@ -5,27 +5,308 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Hardware Upgrades | Jake Fixes Tech — Littleton, NH"
 description="RAM upgrades, SSD installations and HDD-to-SSD migrations in Littleton, NH. On-site cloning hardware means you keep all your files. Windows and Linux only. Serving the North Country.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Hardware Upgrades Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="speedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#86efac;stop-opacity:0.6"/>
+          <stop offset="100%" style="stop-color:#86efac;stop-opacity:0.2"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="220" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1220" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Motherboard with RAM slot — translate(280, 240) -->
+      <g class="board-group" transform="translate(280, 240)">
+        <!-- Motherboard outline -->
+        <rect x="-130" y="-100" width="260" height="200" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="2" fill="white" fill-opacity="0.05" class="board-body"/>
+        <!-- Circuit traces (decorative) -->
+        <path d="M-130 -50 L-100 -50 L-100 -20 L-70 -20" stroke="white" stroke-opacity="0.15" stroke-width="1" fill="none"/>
+        <path d="M130 60 L100 60 L100 30 L70 30" stroke="white" stroke-opacity="0.15" stroke-width="1" fill="none"/>
+        <path d="M-130 80 L-90 80 L-90 50" stroke="white" stroke-opacity="0.12" stroke-width="1" fill="none"/>
+        <path d="M130 -70 L70 -70 L70 -90" stroke="white" stroke-opacity="0.12" stroke-width="1" fill="none"/>
+        <!-- CPU socket -->
+        <rect x="-50" y="-80" width="50" height="50" rx="3" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+        <text x="-25" y="-50" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="9" font-family="ui-monospace, monospace" font-weight="700">CPU</text>
+        <!-- Capacitors -->
+        <circle cx="30" cy="-70" r="6" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+        <circle cx="50" cy="-70" r="6" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+        <circle cx="70" cy="-70" r="6" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+        <!-- Mounting screws -->
+        <circle cx="-122" cy="-92" r="3" fill="white" fill-opacity="0.3"/>
+        <circle cx="122" cy="-92" r="3" fill="white" fill-opacity="0.3"/>
+        <circle cx="-122" cy="92" r="3" fill="white" fill-opacity="0.3"/>
+        <circle cx="122" cy="92" r="3" fill="white" fill-opacity="0.3"/>
+
+        <!-- RAM slot (empty) -->
+        <rect x="-100" y="20" width="200" height="14" rx="2" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="#1e3a8a" fill-opacity="0.5" class="ram-slot"/>
+        <!-- Slot retaining clips -->
+        <rect x="-104" y="18" width="6" height="18" rx="1" fill="white" fill-opacity="0.2"/>
+        <rect x="98" y="18" width="6" height="18" rx="1" fill="white" fill-opacity="0.2"/>
+
+        <!-- RAM stick — outer group positions, inner animates the drop-in -->
+        <g transform="translate(0, 0)">
+          <g class="ram-stick">
+            <!-- RAM PCB -->
+            <rect x="-95" y="22" width="190" height="10" rx="1" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.18"/>
+            <!-- Memory chips -->
+            <rect x="-85" y="14" width="20" height="6" rx="1" fill="white" fill-opacity="0.4"/>
+            <rect x="-60" y="14" width="20" height="6" rx="1" fill="white" fill-opacity="0.4"/>
+            <rect x="-35" y="14" width="20" height="6" rx="1" fill="white" fill-opacity="0.4"/>
+            <rect x="-10" y="14" width="20" height="6" rx="1" fill="white" fill-opacity="0.4"/>
+            <rect x="15" y="14" width="20" height="6" rx="1" fill="white" fill-opacity="0.4"/>
+            <rect x="40" y="14" width="20" height="6" rx="1" fill="white" fill-opacity="0.4"/>
+            <rect x="65" y="14" width="20" height="6" rx="1" fill="white" fill-opacity="0.4"/>
+            <!-- Pin contacts at bottom -->
+            <line x1="-90" y1="32" x2="90" y2="32" stroke="white" stroke-opacity="0.6" stroke-width="1"/>
+            <!-- DDR notch -->
+            <rect x="-3" y="30" width="6" height="2" fill="#1e3a8a"/>
+          </g>
+        </g>
+
+        <!-- Power-on glow ring (appears when RAM is seated) -->
+        <circle cx="0" cy="0" r="135" stroke="#86efac" stroke-opacity="0" stroke-width="2" fill="none" class="power-glow"/>
+
+        <!-- Status LED -->
+        <circle cx="105" cy="-90" r="3.5" fill="white" fill-opacity="0.25" class="status-led"/>
+      </g>
+
+      <!-- RIGHT: SSD with speedometer — translate(1180, 220) -->
+      <g class="ssd-group" transform="translate(1180, 220)">
+        <!-- SSD module -->
+        <rect x="-90" y="-50" width="180" height="80" rx="4" stroke="white" stroke-opacity="0.3" stroke-width="2" fill="white" fill-opacity="0.06" class="ssd-body"/>
+        <!-- SSD label area -->
+        <rect x="-80" y="-42" width="160" height="40" rx="2" stroke="white" stroke-opacity="0.18" stroke-width="1" fill="white" fill-opacity="0.04"/>
+        <text x="0" y="-30" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="11" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">SSD UPGRADE</text>
+        <text x="0" y="-15" text-anchor="middle" fill="white" fill-opacity="0.35" font-size="8" font-family="ui-monospace, monospace" letter-spacing="1">NVMe · M.2 · SATA</text>
+
+        <!-- M.2 connector pins -->
+        <g transform="translate(0, 12)">
+          <line x1="-70" y1="0" x2="70" y2="0" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+          <g fill="white" fill-opacity="0.35">
+            <rect x="-68" y="2" width="3" height="6"/>
+            <rect x="-58" y="2" width="3" height="6"/>
+            <rect x="-48" y="2" width="3" height="6"/>
+            <rect x="-38" y="2" width="3" height="6"/>
+            <rect x="-28" y="2" width="3" height="6"/>
+            <rect x="-18" y="2" width="3" height="6"/>
+            <rect x="-8" y="2" width="3" height="6"/>
+            <rect x="2" y="2" width="3" height="6"/>
+            <rect x="12" y="2" width="3" height="6"/>
+            <rect x="22" y="2" width="3" height="6"/>
+            <rect x="32" y="2" width="3" height="6"/>
+            <rect x="42" y="2" width="3" height="6"/>
+            <rect x="52" y="2" width="3" height="6"/>
+            <rect x="62" y="2" width="3" height="6"/>
+          </g>
+        </g>
+
+        <!-- Speed/progress bar showing performance boost (below the SSD) -->
+        <g transform="translate(0, 65)">
+          <text x="-90" y="-2" fill="white" fill-opacity="0.45" font-size="9" font-family="ui-monospace, monospace" font-weight="700">SPEED</text>
+          <text x="90" y="-2" text-anchor="end" fill="#86efac" fill-opacity="0.85" font-size="9" font-family="ui-monospace, monospace" font-weight="700" class="speed-label">FAST</text>
+          <!-- Track -->
+          <rect x="-90" y="4" width="180" height="10" rx="5" stroke="white" stroke-opacity="0.18" stroke-width="1" fill="white" fill-opacity="0.04"/>
+          <!-- Fill (animates) -->
+          <rect x="-90" y="4" width="0" height="10" rx="5" fill="url(#speedGrad)" class="speed-fill"/>
+          <!-- Tick marks -->
+          <line x1="-50" y1="2" x2="-50" y2="16" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+          <line x1="-10" y1="2" x2="-10" y2="16" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+          <line x1="30" y1="2" x2="30" y2="16" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+          <line x1="70" y1="2" x2="70" y2="16" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+        </g>
+
+        <!-- Boot time labels (slow → fast) -->
+        <g transform="translate(0, 105)">
+          <text x="-90" y="0" fill="white" fill-opacity="0.4" font-size="9" font-family="ui-monospace, monospace" class="boot-old">old: 3:24</text>
+          <text x="90" y="0" text-anchor="end" fill="#86efac" fill-opacity="0.7" font-size="9" font-family="ui-monospace, monospace" font-weight="700" class="boot-new">new: 0:12</text>
+        </g>
+      </g>
+
+      <!-- Floating CPU chip — outer wrapper -->
+      <g transform="translate(720, 90)">
+        <g class="float-icon float-tool-1" stroke="white" stroke-opacity="0.18" fill="white" fill-opacity="0.06" stroke-width="1.5">
+          <rect x="-14" y="-14" width="28" height="28" rx="2"/>
+          <rect x="-8" y="-8" width="16" height="16" rx="1" fill-opacity="0.1"/>
+          <line x1="-14" y1="-8" x2="-20" y2="-8"/>
+          <line x1="-14" y1="0" x2="-20" y2="0"/>
+          <line x1="-14" y1="8" x2="-20" y2="8"/>
+          <line x1="14" y1="-8" x2="20" y2="-8"/>
+          <line x1="14" y1="0" x2="20" y2="0"/>
+          <line x1="14" y1="8" x2="20" y2="8"/>
+          <line x1="-8" y1="-14" x2="-8" y2="-20"/>
+          <line x1="0" y1="-14" x2="0" y2="-20"/>
+          <line x1="8" y1="-14" x2="8" y2="-20"/>
+          <line x1="-8" y1="14" x2="-8" y2="20"/>
+          <line x1="0" y1="14" x2="0" y2="20"/>
+          <line x1="8" y1="14" x2="8" y2="20"/>
+        </g>
+      </g>
+
+      <!-- Floating NVMe stick (small) -->
+      <g transform="translate(160, 380)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.18" fill="white" fill-opacity="0.06" stroke-width="1.5">
+          <rect x="-22" y="-5" width="44" height="10" rx="1.5"/>
+          <rect x="-18" y="-3" width="6" height="6" rx="0.5" fill-opacity="0.25"/>
+          <rect x="-10" y="-3" width="6" height="6" rx="0.5" fill-opacity="0.25"/>
+          <rect x="-2" y="-3" width="6" height="6" rx="0.5" fill-opacity="0.25"/>
+          <line x1="22" y1="-2" x2="26" y2="-2"/>
+          <line x1="22" y1="2" x2="26" y2="2"/>
+        </g>
+      </g>
+
+      <!-- Floating lightning bolt (power up) -->
+      <g transform="translate(1280, 110)">
+        <g class="float-icon float-tool-3" stroke="white" stroke-opacity="0.2" fill="white" fill-opacity="0.08" stroke-width="2" stroke-linejoin="round">
+          <polygon points="2,-18 -10,4 -2,4 -6,18 8,-4 0,-4 4,-18"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// install</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// boot</text>
+        <text x="1180" y="450" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// 5x faster</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">DDR4 16GB</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="speedGradM" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#86efac;stop-opacity:0.6"/>
+          <stop offset="100%" style="stop-color:#86efac;stop-opacity:0.2"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="80" cy="100" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="340" cy="500" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Motherboard top-left — translate(80, 90) -->
+      <g class="board-group" transform="translate(80, 90)">
+        <rect x="-75" y="-60" width="150" height="120" rx="4" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.05" class="board-body"/>
+        <rect x="-30" y="-48" width="34" height="34" rx="2" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+        <text x="-13" y="-28" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="7" font-family="ui-monospace, monospace" font-weight="700">CPU</text>
+        <circle cx="20" cy="-40" r="4" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+        <circle cx="34" cy="-40" r="4" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+        <circle cx="48" cy="-40" r="4" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+        <circle cx="-70" cy="-55" r="2" fill="white" fill-opacity="0.3"/>
+        <circle cx="70" cy="-55" r="2" fill="white" fill-opacity="0.3"/>
+        <circle cx="-70" cy="55" r="2" fill="white" fill-opacity="0.3"/>
+        <circle cx="70" cy="55" r="2" fill="white" fill-opacity="0.3"/>
+
+        <rect x="-60" y="14" width="120" height="10" rx="2" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="#1e3a8a" fill-opacity="0.5"/>
+        <rect x="-63" y="12" width="4" height="14" rx="1" fill="white" fill-opacity="0.2"/>
+        <rect x="59" y="12" width="4" height="14" rx="1" fill="white" fill-opacity="0.2"/>
+
+        <g transform="translate(0, 0)">
+          <g class="ram-stick">
+            <rect x="-57" y="16" width="114" height="7" rx="1" stroke="white" stroke-opacity="0.5" stroke-width="1.2" fill="white" fill-opacity="0.18"/>
+            <rect x="-50" y="10" width="14" height="4" rx="0.5" fill="white" fill-opacity="0.4"/>
+            <rect x="-32" y="10" width="14" height="4" rx="0.5" fill="white" fill-opacity="0.4"/>
+            <rect x="-14" y="10" width="14" height="4" rx="0.5" fill="white" fill-opacity="0.4"/>
+            <rect x="4" y="10" width="14" height="4" rx="0.5" fill="white" fill-opacity="0.4"/>
+            <rect x="22" y="10" width="14" height="4" rx="0.5" fill="white" fill-opacity="0.4"/>
+            <rect x="40" y="10" width="14" height="4" rx="0.5" fill="white" fill-opacity="0.4"/>
+            <line x1="-54" y1="23" x2="54" y2="23" stroke="white" stroke-opacity="0.6" stroke-width="0.8"/>
+            <rect x="-2" y="21" width="4" height="2" fill="#1e3a8a"/>
+          </g>
+        </g>
+
+        <circle cx="0" cy="0" r="80" stroke="#86efac" stroke-opacity="0" stroke-width="1.5" fill="none" class="power-glow"/>
+      </g>
+
+      <!-- SSD bottom-right — translate(310, 470) -->
+      <g class="ssd-group" transform="translate(310, 470)">
+        <rect x="-65" y="-35" width="130" height="60" rx="3" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.06" class="ssd-body"/>
+        <rect x="-58" y="-29" width="116" height="30" rx="2" stroke="white" stroke-opacity="0.18" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+        <text x="0" y="-19" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="9" font-family="ui-monospace, monospace" letter-spacing="1.5" font-weight="700">SSD UPGRADE</text>
+        <text x="0" y="-7" text-anchor="middle" fill="white" fill-opacity="0.35" font-size="6.5" font-family="ui-monospace, monospace" letter-spacing="0.5">NVMe · M.2 · SATA</text>
+        <g transform="translate(0, 9)">
+          <line x1="-50" y1="0" x2="50" y2="0" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+          <g fill="white" fill-opacity="0.35">
+            <rect x="-48" y="2" width="2.5" height="4"/>
+            <rect x="-40" y="2" width="2.5" height="4"/>
+            <rect x="-32" y="2" width="2.5" height="4"/>
+            <rect x="-24" y="2" width="2.5" height="4"/>
+            <rect x="-16" y="2" width="2.5" height="4"/>
+            <rect x="-8" y="2" width="2.5" height="4"/>
+            <rect x="0" y="2" width="2.5" height="4"/>
+            <rect x="8" y="2" width="2.5" height="4"/>
+            <rect x="16" y="2" width="2.5" height="4"/>
+            <rect x="24" y="2" width="2.5" height="4"/>
+            <rect x="32" y="2" width="2.5" height="4"/>
+            <rect x="40" y="2" width="2.5" height="4"/>
+          </g>
+        </g>
+
+        <g transform="translate(0, 45)">
+          <text x="-65" y="-2" fill="white" fill-opacity="0.45" font-size="7" font-family="ui-monospace, monospace" font-weight="700">SPEED</text>
+          <text x="65" y="-2" text-anchor="end" fill="#86efac" fill-opacity="0.85" font-size="7" font-family="ui-monospace, monospace" font-weight="700" class="speed-label">FAST</text>
+          <rect x="-65" y="2" width="130" height="8" rx="4" stroke="white" stroke-opacity="0.18" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+          <rect x="-65" y="2" width="0" height="8" rx="4" fill="url(#speedGradM)" class="speed-fill-m"/>
+        </g>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
         <a href="/services#hardware-upgrades" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
       </p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Hardware Upgrades</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        Before you buy a new computer, let's talk. A RAM upgrade or SSD swap can make a slow, aging machine feel brand new for a fraction of the cost of a replacement.
-      </p>
-      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+      <h1 id="hero-wordmark">Hardware Upgrades</h1>
+      <p id="hero-tagline">Before you buy a new computer, let's talk. A RAM upgrade or SSD swap can make a slow, aging machine feel brand new for a fraction of the cost of a replacement.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
           Book an Upgrade
           <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          View Pricing
-        </a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
       </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('upgrade-section').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -50,7 +331,7 @@ description="RAM upgrades, SSD installations and HDD-to-SSD migrations in Little
   </section>
 
   <!-- Don't Buy New Yet -->
-  <section style="background:white;padding:4rem 1.5rem;">
+  <section id="upgrade-section" style="background:white;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div style="margin-bottom:2rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Before You Replace It</p>
@@ -281,6 +562,212 @@ description="RAM upgrades, SSD installations and HDD-to-SSD migrations in Little
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Board entrance */
+  .board-body, .ssd-body { animation: pieceAppear 0.8s ease 0.3s both; }
+  @keyframes pieceAppear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* RAM stick drop-in cycle, 6s loop:
+     0-15%: above slot, falling
+     15-25%: seated in slot
+     25-90%: stays seated
+     90-100%: lifts back out for loop reset
+  */
+  .ram-stick { animation: ramDrop 6s ease-in-out infinite; }
+  @keyframes ramDrop {
+    0%       { transform: translateY(-90px); opacity: 0; }
+    8%       { opacity: 1; }
+    18%      { transform: translateY(0); opacity: 1; }
+    22%      { transform: translateY(-3px); }
+    25%, 88% { transform: translateY(0); opacity: 1; }
+    98%, 100% { transform: translateY(-90px); opacity: 0; }
+  }
+
+  /* Power glow ring fades in once RAM is seated */
+  .power-glow { animation: powerGlow 6s ease-in-out infinite; }
+  @keyframes powerGlow {
+    0%, 22%   { stroke-opacity: 0; }
+    30%       { stroke-opacity: 0.5; }
+    50%       { stroke-opacity: 0.2; }
+    70%       { stroke-opacity: 0.4; }
+    88%       { stroke-opacity: 0.25; }
+    98%, 100% { stroke-opacity: 0; }
+  }
+
+  /* Status LED blinks after install */
+  .status-led { animation: ledPulse 6s ease-in-out infinite; }
+  @keyframes ledPulse {
+    0%, 22% { fill: white; fill-opacity: 0.25; }
+    25%     { fill: #86efac; fill-opacity: 0.9; }
+    35%     { fill: #86efac; fill-opacity: 0.5; }
+    45%     { fill: #86efac; fill-opacity: 0.9; }
+    88%     { fill: #86efac; fill-opacity: 0.6; }
+    98%, 100% { fill: white; fill-opacity: 0.25; }
+  }
+
+  /* Speed bar fills on cycle, syncs with RAM install moment */
+  .speed-fill { animation: speedFill 6s ease-in-out infinite; }
+  .speed-fill-m { animation: speedFillM 6s ease-in-out infinite; }
+  @keyframes speedFill {
+    0%, 22%  { width: 0; }
+    50%      { width: 180px; }
+    88%      { width: 180px; }
+    98%, 100% { width: 0; }
+  }
+  @keyframes speedFillM {
+    0%, 22%  { width: 0; }
+    50%      { width: 130px; }
+    88%      { width: 130px; }
+    98%, 100% { width: 0; }
+  }
+
+  .speed-label, .boot-new { animation: labelGreen 6s ease-in-out infinite; }
+  @keyframes labelGreen {
+    0%, 25%  { opacity: 0; }
+    45%, 88% { opacity: 0.85; }
+    98%, 100% { opacity: 0; }
+  }
+
+  .boot-old { animation: labelDim 6s ease-in-out infinite; }
+  @keyframes labelDim {
+    0%, 25%  { opacity: 0.4; text-decoration: none; }
+    45%, 88% { opacity: 0.25; text-decoration: line-through; }
+    98%, 100% { opacity: 0.4; text-decoration: none; }
+  }
+
+  /* Float icons */
+  .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(3deg)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-12px) scale(1.05)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 40rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .board-body, .ssd-body, .ram-stick, .power-glow, .status-led,
+    .speed-fill, .speed-fill-m, .speed-label, .boot-new, .boot-old,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .board-body, .ssd-body { opacity: 1; }
+    .ram-stick { transform: translateY(0); opacity: 1; }
+    .speed-fill { width: 180px; }
+    .speed-fill-m { width: 130px; }
+    .speed-label, .boot-new { opacity: 0.85; }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Page content (preserved exactly) */
   #upgrade-types { display: flex; flex-direction: column; gap: 1.25rem; }
   .upgrade-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; display: flex; align-items: flex-start; gap: 1.25rem; }
   .upgrade-icon { height: 3rem; width: 3rem; min-width: 3rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
