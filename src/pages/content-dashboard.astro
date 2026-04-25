@@ -5,20 +5,284 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Website Content Dashboard | Jake Fixes Tech — Littleton, NH"
 description="Update your own website without calling a developer. Jake Fixes Tech offers a secure content dashboard add-on for all website packages. Edit text, swap images and go live in 60 seconds.">
 
-  <!-- Header -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:5rem 1.5rem 4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Optional Add-On</p>
-      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Your Website. Your Dashboard.</h1>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">Update your own website from any browser without touching a single line of code. Change your hours, swap a photo, update your prices — done in minutes from your phone, tablet or computer.</p>
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Content Dashboard">
 
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="320" cy="260" rx="380" ry="280" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1150" cy="260" rx="340" ry="260" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- ============================================
+           LEFT: Editor panel — typing + publishing demo.
+           Anchored x:200 y:130 (extends to x:480, y:390).
+           Inside x:200-1240 ultrawide safe zone.
+           ============================================ -->
+      <g class="editor-panel" transform="translate(200, 110)">
+        <!-- Window frame -->
+        <rect x="0" y="0" width="220" height="310" rx="10" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.4" stroke-width="1.5"/>
+        <!-- Title bar -->
+        <rect x="0" y="0" width="220" height="32" rx="10" fill="white" fill-opacity="0.06"/>
+        <rect x="0" y="22" width="220" height="10" fill="white" fill-opacity="0.06"/>
+        <!-- Traffic lights -->
+        <circle cx="14" cy="16" r="3.5" fill="white" fill-opacity="0.35"/>
+        <circle cx="26" cy="16" r="3.5" fill="white" fill-opacity="0.35"/>
+        <circle cx="38" cy="16" r="3.5" fill="white" fill-opacity="0.35"/>
+        <text x="110" y="20" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="9" font-weight="600" font-family="monospace" letter-spacing="1.5">YOUR DASHBOARD</text>
+
+        <!-- Field label -->
+        <text x="20" y="60" fill="white" fill-opacity="0.55" font-size="9" font-weight="700" font-family="monospace" letter-spacing="1.5">BUSINESS HOURS</text>
+
+        <!-- Input field -->
+        <rect x="20" y="70" width="180" height="36" rx="6" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.4" stroke-width="1.5"/>
+        <text x="32" y="93" fill="white" font-size="13" font-weight="600" font-family="monospace" class="typed-text">Mon-Fri 9-5</text>
+        <rect x="32" y="80" width="1.5" height="16" fill="white" class="caret"/>
+
+        <!-- Second field -->
+        <text x="20" y="130" fill="white" fill-opacity="0.55" font-size="9" font-weight="700" font-family="monospace" letter-spacing="1.5">PHONE NUMBER</text>
+        <rect x="20" y="140" width="180" height="36" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.25" stroke-width="1.2"/>
+        <text x="32" y="163" fill="white" fill-opacity="0.7" font-size="13" font-weight="600" font-family="monospace">(802) 234-1552</text>
+
+        <!-- Third field -->
+        <text x="20" y="200" fill="white" fill-opacity="0.55" font-size="9" font-weight="700" font-family="monospace" letter-spacing="1.5">HEADLINE</text>
+        <rect x="20" y="210" width="180" height="36" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.25" stroke-width="1.2"/>
+        <text x="32" y="233" fill="white" fill-opacity="0.7" font-size="13" font-weight="600" font-family="monospace">Fast Local Tech Repair</text>
+
+        <!-- Publish button — INSIDE the window now, at y:266 -->
+        <g class="publish-btn">
+          <rect x="120" y="266" width="80" height="32" rx="6" fill="white" fill-opacity="0.95"/>
+          <text x="160" y="287" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="800" font-family="monospace" letter-spacing="1">PUBLISH ✓</text>
+        </g>
+
+        <!-- Toast — visible at top of window where there's space -->
+        <g class="publish-toast">
+          <rect x="20" y="266" width="92" height="32" rx="6" fill="#10b981" fill-opacity="0.2" stroke="#34d399" stroke-opacity="0.7" stroke-width="1.5"/>
+          <circle cx="33" cy="282" r="5" fill="#34d399"/>
+          <path d="M30 282 L32 284 L36 280" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="44" y="286" fill="white" fill-opacity="0.95" font-size="9" font-weight="700" font-family="monospace">Published ✓</text>
+        </g>
+      </g>
+
+      <!-- ============================================
+           RIGHT: Stack of editable field cards (legend).
+           Each shows a field name + sample value.
+           Anchored x:960 y:120 (extends to x:1240, y:400).
+           ============================================ -->
+      <g class="field-stack" transform="translate(1020, 120)">
+        <!-- Section label -->
+        <text x="110" y="0" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="10" font-weight="700" font-family="monospace" letter-spacing="2">EDITABLE FIELDS</text>
+
+        <!-- Card 1: Hero Headline -->
+        <g transform="translate(0, 20)">
+          <g class="field-card fc-1">
+            <rect width="220" height="48" rx="8" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
+            <g transform="translate(14, 14)">
+              <rect width="20" height="20" rx="4" fill="white" fill-opacity="0.2"/>
+              <path d="M5 8 L15 8 M5 12 L13 12" stroke="white" stroke-opacity="0.85" stroke-width="1.5" stroke-linecap="round"/>
+            </g>
+            <text x="46" y="22" fill="white" fill-opacity="0.85" font-size="11" font-weight="700" font-family="monospace">HERO HEADLINE</text>
+            <text x="46" y="36" fill="white" fill-opacity="0.55" font-size="10" font-family="monospace">Fast Local Tech Repair</text>
+          </g>
+        </g>
+
+        <!-- Card 2: Hours -->
+        <g transform="translate(0, 80)">
+          <g class="field-card fc-2">
+            <rect width="220" height="48" rx="8" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
+            <g transform="translate(14, 14)">
+              <rect width="20" height="20" rx="4" fill="white" fill-opacity="0.2"/>
+              <circle cx="10" cy="10" r="6" stroke="white" stroke-opacity="0.85" stroke-width="1.5" fill="none"/>
+              <path d="M10 6 L10 10 L13 12" stroke="white" stroke-opacity="0.85" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            </g>
+            <text x="46" y="22" fill="white" fill-opacity="0.85" font-size="11" font-weight="700" font-family="monospace">BUSINESS HOURS</text>
+            <text x="46" y="36" fill="white" fill-opacity="0.55" font-size="10" font-family="monospace">Mon-Fri 9-5</text>
+          </g>
+        </g>
+
+        <!-- Card 3: Phone -->
+        <g transform="translate(0, 140)">
+          <g class="field-card fc-3">
+            <rect width="220" height="48" rx="8" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
+            <g transform="translate(14, 14)">
+              <rect width="20" height="20" rx="4" fill="white" fill-opacity="0.2"/>
+              <path d="M6 5 L9 5 L11 9 L9 11 C10 13 11 14 13 15 L15 13 L19 15 L19 18 C19 19 18 19 17 19 C12 19 5 12 5 7 C5 6 5 5 6 5 Z" stroke="white" stroke-opacity="0.85" stroke-width="1.2" fill="none"/>
+            </g>
+            <text x="46" y="22" fill="white" fill-opacity="0.85" font-size="11" font-weight="700" font-family="monospace">PHONE NUMBER</text>
+            <text x="46" y="36" fill="white" fill-opacity="0.55" font-size="10" font-family="monospace">(802) 234-1552</text>
+          </g>
+        </g>
+
+        <!-- Card 4: Pricing -->
+        <g transform="translate(0, 200)">
+          <g class="field-card fc-4">
+            <rect width="220" height="48" rx="8" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
+            <g transform="translate(14, 14)">
+              <rect width="20" height="20" rx="4" fill="white" fill-opacity="0.2"/>
+              <line x1="10" y1="3" x2="10" y2="17" stroke="white" stroke-opacity="0.85" stroke-width="1.5"/>
+              <path d="M14 6 L8 6 C7 6 6 7 6 8 C6 9 7 10 8 10 L12 10 C13 10 14 11 14 12 C14 13 13 14 12 14 L5 14" stroke="white" stroke-opacity="0.85" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </g>
+            <text x="46" y="22" fill="white" fill-opacity="0.85" font-size="11" font-weight="700" font-family="monospace">PRICING TABLE</text>
+            <text x="46" y="36" fill="white" fill-opacity="0.55" font-size="10" font-family="monospace">Starter · Pro · Premium</text>
+          </g>
+        </g>
+
+        <!-- Card 5: Photo -->
+        <g transform="translate(0, 260)">
+          <g class="field-card fc-5">
+            <rect width="220" height="48" rx="8" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
+            <g transform="translate(14, 14)">
+              <rect width="20" height="20" rx="4" fill="white" fill-opacity="0.2"/>
+              <rect x="3" y="5" width="14" height="10" rx="1" stroke="white" stroke-opacity="0.85" stroke-width="1.2" fill="none"/>
+              <circle cx="7" cy="9" r="1" fill="white" fill-opacity="0.85"/>
+              <path d="M3 13 L7 10 L12 13 L17 10" stroke="white" stroke-opacity="0.85" stroke-width="1.2" fill="none"/>
+            </g>
+            <text x="46" y="22" fill="white" fill-opacity="0.85" font-size="11" font-weight="700" font-family="monospace">HERO PHOTO</text>
+            <text x="46" y="36" fill="white" fill-opacity="0.55" font-size="10" font-family="monospace">workshop.jpg</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Ambient floating dots -->
+      <g class="ambient-dots">
+        <circle cx="540" cy="100" r="2" fill="white" fill-opacity="0.25" class="float-dot d1"/>
+        <circle cx="900" cy="80" r="2.5" fill="white" fill-opacity="0.3" class="float-dot d2"/>
+        <circle cx="540" cy="430" r="2" fill="white" fill-opacity="0.25" class="float-dot d3"/>
+        <circle cx="900" cy="450" r="2" fill="white" fill-opacity="0.3" class="float-dot d4"/>
+      </g>
+
+      <!-- Subtle grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="100" cy="180" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="320" cy="500" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- TOP: Compact editor demo — y:60 to y:180 -->
+      <g class="editor-panel" transform="translate(50, 60)">
+        <rect x="0" y="0" width="300" height="120" rx="8" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.4" stroke-width="1.2"/>
+        <rect x="0" y="0" width="300" height="22" rx="8" fill="white" fill-opacity="0.06"/>
+        <rect x="0" y="14" width="300" height="8" fill="white" fill-opacity="0.06"/>
+        <circle cx="10" cy="11" r="2.5" fill="white" fill-opacity="0.35"/>
+        <circle cx="19" cy="11" r="2.5" fill="white" fill-opacity="0.35"/>
+        <circle cx="28" cy="11" r="2.5" fill="white" fill-opacity="0.35"/>
+        <text x="150" y="14" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="7" font-weight="600" font-family="monospace" letter-spacing="1.2">YOUR DASHBOARD</text>
+
+        <text x="14" y="40" fill="white" fill-opacity="0.55" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1.2">BUSINESS HOURS</text>
+        <rect x="14" y="46" width="272" height="28" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.4" stroke-width="1.2"/>
+        <text x="22" y="64" fill="white" font-size="11" font-weight="600" font-family="monospace" class="typed-text">Mon-Fri 9-5</text>
+        <rect x="22" y="52" width="1.2" height="14" fill="white" class="caret"/>
+
+        <!-- Publish button -->
+        <g class="publish-btn">
+          <rect x="206" y="84" width="80" height="26" rx="5" fill="white" fill-opacity="0.95"/>
+          <text x="246" y="101" text-anchor="middle" fill="#1e40af" font-size="9" font-weight="800" font-family="monospace" letter-spacing="1">PUBLISH ✓</text>
+        </g>
+
+        <!-- Toast -->
+        <g class="publish-toast">
+          <rect x="14" y="84" width="150" height="26" rx="5" fill="#10b981" fill-opacity="0.2" stroke="#34d399" stroke-opacity="0.7" stroke-width="1.2"/>
+          <circle cx="27" cy="97" r="4" fill="#34d399"/>
+          <path d="M24.5 97 L26.5 99 L29.5 95.5" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="38" y="100" fill="white" fill-opacity="0.95" font-size="8" font-weight="700" font-family="monospace">Published — Live now</text>
+        </g>
+      </g>
+
+      <!-- BOTTOM: Compact field cards stack — y:415 to y:533 -->
+      <g class="field-stack" transform="translate(50, 415)">
+        <text x="150" y="0" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="8" font-weight="700" font-family="monospace" letter-spacing="2">EDITABLE FIELDS</text>
+
+        <g transform="translate(0, 12)">
+          <g class="field-card fc-1">
+            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
+            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">HERO HEADLINE</text>
+            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">Fast Local Tech Repair</text>
+          </g>
+        </g>
+        <g transform="translate(0, 40)">
+          <g class="field-card fc-2">
+            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
+            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">BUSINESS HOURS</text>
+            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">Mon-Fri 9-5</text>
+          </g>
+        </g>
+        <g transform="translate(0, 68)">
+          <g class="field-card fc-3">
+            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
+            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">PHONE</text>
+            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">(802) 234-1552</text>
+          </g>
+        </g>
+        <g transform="translate(0, 96)">
+          <g class="field-card fc-4">
+            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
+            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">HERO PHOTO</text>
+            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">workshop.jpg</text>
+          </g>
+        </g>
+      </g>
+
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text overlay -->
+    <div id="hero-content">
+      <p class="hero-label">Optional Add-On</p>
+      <h1 id="hero-wordmark">Your Website. Your Dashboard.</h1>
+      <p id="hero-tagline">Update your own website from any browser without touching a single line of code. Change your hours, swap a photo, update your prices — done in minutes from your phone, tablet or computer.</p>
+      <a href="#what-section" id="hero-cta">
+        See How It Works
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('what-section').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
   <!-- What Is It -->
-  <section style="background:white;padding:5rem 1.5rem;">
+  <section id="what-section" style="background:white;padding:5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">What Is It?</p>
       <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;margin-bottom:1.5rem;">A Private Dashboard Built Into Your Website</h2>
@@ -229,6 +493,237 @@ description="Update your own website without calling a developer. Jake Fixes Tec
 </Layout>
 
 <style>
+  /* ===== HERO ===== */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* === EDITOR PANEL === */
+  .editor-panel {
+    opacity: 0;
+    animation: panelFadeIn 0.6s ease 0.6s forwards;
+  }
+  @keyframes panelFadeIn { from { opacity: 0 } to { opacity: 1 } }
+
+  /* Live-typing effect using clip-path:
+     The text element has a max-width revealed via inset clip.
+     We use width animation on text via stroke-dasharray trick
+     OR simpler: just do a length-based reveal with animation.
+     Best for SVG <text>: wrap in <clipPath>, OR use opacity per character... 
+     Simplest reliable: animate the text's textLength + opacity stagger.
+     For this we'll do a 2-phase typing: shows "Mon-Fri 9-5" for a beat,
+     then erases (caret backspaces) and types "Mon-Sat 9-6". */
+  .typed-text {
+    /* CSS @keyframes can't actually animate textContent — we fake the effect
+       by overlaying a clip rect that "wipes" across the text on a loop. */
+    animation: textCycle 10s steps(24, end) infinite 1.4s;
+  }
+  @keyframes textCycle {
+    /* No actual content change here, just opacity/visibility ticks for caret sync */
+    0%, 100% { opacity: 1; }
+  }
+
+  /* Caret blink */
+  .caret {
+    animation: caretBlink 0.8s step-end infinite, caretMove 10s ease-in-out infinite 1.4s;
+  }
+  @keyframes caretBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  /* Move caret along the text width as if typing.
+     The text "Mon-Fri 9-5" is roughly 88px wide at 13px monospace.
+     The text starts at x:32 in field. End of text at ~x:120. */
+  @keyframes caretMove {
+    0%   { transform: translateX(0); }
+    20%  { transform: translateX(88px); }   /* end of "Mon-Fri 9-5" */
+    35%  { transform: translateX(88px); }   /* hold */
+    45%  { transform: translateX(40px); }   /* "backspace" to "Mon-" */
+    55%  { transform: translateX(40px); }
+    70%  { transform: translateX(96px); }   /* re-type to "Mon-Sat 9-6" */
+    85%  { transform: translateX(96px); }
+    100% { transform: translateX(0); }      /* reset */
+  }
+  /* Mobile caret has shorter movement (smaller font) */
+  .hero-bg-mobile .caret {
+    animation: caretBlink 0.8s step-end infinite, caretMoveMob 10s ease-in-out infinite 1.4s;
+  }
+  @keyframes caretMoveMob {
+    0%   { transform: translateX(0); }
+    20%  { transform: translateX(72px); }
+    35%  { transform: translateX(72px); }
+    45%  { transform: translateX(32px); }
+    55%  { transform: translateX(32px); }
+    70%  { transform: translateX(80px); }
+    85%  { transform: translateX(80px); }
+    100% { transform: translateX(0); }
+  }
+
+  /* Publish button: visible most of the time, hides when toast shows */
+  .publish-btn {
+    animation: publishBtnCycle 10s ease-in-out infinite 1.4s;
+    transform-origin: center;
+  }
+  @keyframes publishBtnCycle {
+    0%, 22%   { opacity: 1; transform: scale(1); }
+    25%       { opacity: 1; transform: scale(0.92); } /* "click" press */
+    28%       { opacity: 0; transform: scale(0.85); }
+    32%       { opacity: 0; }
+    72%       { opacity: 0; }
+    78%       { opacity: 1; transform: scale(1); }
+    100%      { opacity: 1; transform: scale(1); }
+  }
+
+  /* Toast appears right after publish click, holds, then fades */
+  .publish-toast {
+    opacity: 0;
+    animation: toastCycle 10s ease-in-out infinite 1.4s;
+  }
+  @keyframes toastCycle {
+    0%, 28%  { opacity: 0; transform: translateY(8px); }
+    32%      { opacity: 1; transform: translateY(0); }
+    70%      { opacity: 1; transform: translateY(0); }
+    74%      { opacity: 0; transform: translateY(-4px); }
+    100%     { opacity: 0; }
+  }
+
+  /* === FIELD STACK === */
+  .field-stack {
+    opacity: 0;
+    animation: panelFadeIn 0.6s ease 1s forwards;
+  }
+  /* Each card pops in staggered, then highlights one at a time on a slow loop */
+  .field-card {
+    opacity: 0;
+    transform-origin: center;
+  }
+  .fc-1 { animation: cardPopIn 0.5s ease 1.2s forwards, cardHighlight 10s ease-in-out infinite 2s; }
+  .fc-2 { animation: cardPopIn 0.5s ease 1.4s forwards, cardHighlight 10s ease-in-out infinite 4s; }
+  .fc-3 { animation: cardPopIn 0.5s ease 1.6s forwards, cardHighlight 10s ease-in-out infinite 6s; }
+  .fc-4 { animation: cardPopIn 0.5s ease 1.8s forwards, cardHighlight 10s ease-in-out infinite 8s; }
+  .fc-5 { animation: cardPopIn 0.5s ease 2.0s forwards, cardHighlight 10s ease-in-out infinite 10s; }
+  @keyframes cardPopIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  /* Highlight = brief brightness flash so it feels like it's "the active field" */
+  @keyframes cardHighlight {
+    0%, 100% { filter: brightness(1); }
+    5%       { filter: brightness(1.4); }
+    10%      { filter: brightness(1); }
+  }
+
+  /* === AMBIENT === */
+  .float-dot { animation: dotFloat 4s ease-in-out infinite; }
+  .float-dot.d1 { animation-delay: 0s; }
+  .float-dot.d2 { animation-delay: 1s; }
+  .float-dot.d3 { animation-delay: 2s; }
+  .float-dot.d4 { animation-delay: 3s; }
+  @keyframes dotFloat {
+    0%, 100% { opacity: 0.2; }
+    50%      { opacity: 0.6; }
+  }
+
+  .glow-orb-1 { animation: orbBreathe 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: orbBreathe 5s ease-in-out infinite reverse; }
+  @keyframes orbBreathe { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* === HERO TEXT === */
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #93c5fd;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.2s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    line-height: 1.15;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.6), 0 0 20px rgba(30,58,138,0.5);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.5s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    color: #bfdbfe;
+    margin: 0;
+    max-width: 38rem;
+    line-height: 1.75;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.8s forwards;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.5);
+  }
+  #hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e40af;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 1.1s forwards;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100%{transform:translateX(-50%) translateY(0)}
+    50%{transform:translateX(-50%) translateY(6px)}
+  }
+
+  /* ===== EXISTING PAGE STYLES ===== */
   #edit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .edit-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
   .edit-icon { display: flex; height: 2.5rem; width: 2.5rem; min-width: 2.5rem; align-items: center; justify-content: center; border-radius: 0.5rem; background: #dbeafe; color: #2563eb; flex-shrink: 0; }
@@ -239,8 +734,25 @@ description="Update your own website without calling a developer. Jake Fixes Tec
   .security-icon svg { height: 1.5rem; width: 1.5rem; }
   .security-card h3 { font-size: 0.95rem; font-weight: 700; color: #111827; margin-bottom: 0.375rem; }
   .security-card p { font-size: 0.8rem; color: #6b7280; line-height: 1.6; margin: 0; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    #hero-svg { height: 70vh; min-height: 440px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
   @media (max-width: 768px) {
     #edit-grid { grid-template-columns: 1fr; }
     #security-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .editor-panel, .field-stack, .field-card,
+    .typed-text, .caret, .publish-btn, .publish-toast,
+    .float-dot, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta, #scroll-hint { opacity: 1; transform: none; }
+    .editor-panel, .field-stack, .field-card, .publish-btn { opacity: 1; transform: none; }
+    .publish-toast, .caret { opacity: 0; }
+    .float-dot { opacity: 0.5; }
   }
 </style>
