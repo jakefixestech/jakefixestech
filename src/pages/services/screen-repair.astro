@@ -5,27 +5,252 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Screen Repair | Jake Fixes Tech — Littleton, NH"
 description="Laptop, Chromebook, all-in-one and handheld gaming console screen replacement. Free quote, honest advice, $100 labor plus parts. Serving Littleton NH and the North Country.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Screen Repair Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="320" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1180" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- Main laptop with cracking/repairing screen — translate(110, 130), 360x250 -->
+      <g class="laptop-group" transform="translate(110, 130)">
+        <!-- Laptop base/keyboard -->
+        <path d="M-30 220 L390 220 L420 250 L-60 250 Z" stroke="white" stroke-opacity="0.25" stroke-width="2" fill="white" fill-opacity="0.06"/>
+        <rect x="170" y="225" width="20" height="6" rx="1" fill="white" fill-opacity="0.2"/>
+        <!-- Laptop screen frame -->
+        <rect x="0" y="0" width="360" height="220" rx="6" stroke="white" stroke-opacity="0.3" stroke-width="2" fill="white" fill-opacity="0.05"/>
+        <!-- Screen interior background -->
+        <rect x="10" y="10" width="340" height="200" rx="3" fill="white" fill-opacity="0.05" class="screen-bg"/>
+        <!-- Screen content that "draws in" during repaired phase -->
+        <g class="screen-content">
+          <!-- Title bar -->
+          <rect x="22" y="22" width="316" height="14" rx="2" fill="white" fill-opacity="0.15" class="content-line cl-1"/>
+          <!-- Content lines -->
+          <line x1="22" y1="56" x2="280" y2="56" stroke="white" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round" class="content-line cl-2"/>
+          <line x1="22" y1="78" x2="320" y2="78" stroke="white" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" class="content-line cl-3"/>
+          <line x1="22" y1="98" x2="240" y2="98" stroke="white" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" class="content-line cl-4"/>
+          <!-- Image / card boxes -->
+          <rect x="22" y="120" width="100" height="74" rx="3" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06" class="content-line cl-5"/>
+          <rect x="132" y="120" width="100" height="74" rx="3" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06" class="content-line cl-6"/>
+          <rect x="242" y="120" width="100" height="74" rx="3" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06" class="content-line cl-7"/>
+        </g>
+        <!-- Crack pattern that fades during repair (covers screen area 10,10 to 350,210) -->
+        <g class="crack-group" stroke="white" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round">
+          <!-- Main impact point near upper-left -->
+          <circle cx="120" cy="80" r="4" fill="white" fill-opacity="0.6" class="crack-impact"/>
+          <!-- Radiating cracks -->
+          <path d="M120 80 L60 30" class="crack crack-1"/>
+          <path d="M120 80 L40 110" class="crack crack-2"/>
+          <path d="M120 80 L80 180" class="crack crack-3"/>
+          <path d="M120 80 L200 50" class="crack crack-4"/>
+          <path d="M120 80 L240 120" class="crack crack-5"/>
+          <path d="M120 80 L320 180" class="crack crack-6"/>
+          <path d="M120 80 L180 200" class="crack crack-7"/>
+          <!-- Branching cracks -->
+          <path d="M180 130 L240 170" class="crack crack-8"/>
+          <path d="M70 60 L100 30" class="crack crack-9"/>
+          <path d="M280 150 L320 130" class="crack crack-10"/>
+        </g>
+        <!-- Screen camera dot -->
+        <circle cx="180" cy="6" r="1.5" fill="white" fill-opacity="0.4"/>
+      </g>
+
+      <!-- Secondary device: handheld console (right side) — translate(990, 240), ~260x180 -->
+      <g class="handheld-group" transform="translate(990, 240)">
+        <!-- Console body -->
+        <path d="M0 30 Q0 0 30 0 L230 0 Q260 0 260 30 L260 110 Q260 140 230 140 L30 140 Q0 140 0 110 Z" stroke="white" stroke-opacity="0.22" stroke-width="2" fill="white" fill-opacity="0.05"/>
+        <!-- Screen -->
+        <rect x="60" y="20" width="140" height="100" rx="4" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08" class="handheld-screen"/>
+        <!-- Screen pixels appearing -->
+        <g class="handheld-pixels">
+          <rect x="70" y="32" width="120" height="6" rx="1" fill="white" fill-opacity="0.3" class="hp-line hp-1"/>
+          <rect x="70" y="46" width="80" height="4" rx="1" fill="white" fill-opacity="0.2" class="hp-line hp-2"/>
+          <rect x="70" y="60" width="100" height="40" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="1" fill="white" fill-opacity="0.05" class="hp-line hp-3"/>
+        </g>
+        <!-- D-pad -->
+        <g transform="translate(28, 70)">
+          <rect x="-3" y="-12" width="6" height="24" rx="1" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+          <rect x="-12" y="-3" width="24" height="6" rx="1" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+        </g>
+        <!-- Buttons -->
+        <g transform="translate(232, 70)">
+          <circle cx="-10" cy="0" r="5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+          <circle cx="10" cy="0" r="5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+          <circle cx="0" cy="-10" r="5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+          <circle cx="0" cy="10" r="5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+        </g>
+        <!-- Subtle crack on handheld screen -->
+        <g class="handheld-crack" stroke="white" stroke-opacity="0.55" stroke-width="1.2" fill="none" stroke-linecap="round">
+          <path d="M130 50 L100 30" class="crack-h crack-h-1"/>
+          <path d="M130 50 L160 75" class="crack-h crack-h-2"/>
+          <path d="M130 50 L110 100" class="crack-h crack-h-3"/>
+          <circle cx="130" cy="50" r="2.5" fill="white" fill-opacity="0.5" class="crack-impact"/>
+        </g>
+      </g>
+
+      <!-- Floating screwdriver tool — outer group positions, inner animates -->
+      <g transform="translate(700, 80)">
+        <g class="float-icon float-tool-1">
+          <line x1="0" y1="0" x2="40" y2="40" stroke="white" stroke-opacity="0.18" stroke-width="3" stroke-linecap="round"/>
+          <rect x="-8" y="-8" width="14" height="14" rx="2" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.25" stroke-width="1.5" transform="rotate(45)"/>
+        </g>
+      </g>
+
+      <!-- Floating wrench -->
+      <g transform="translate(140, 380)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2">
+          <path d="M14 7l3-3a5 5 0 0 0-6.2 6.2L1 20.5a2.5 2.5 0 0 0 3.5 3.5l9.6-9.6A5 5 0 0 0 21 8l-3 3-4-4z" transform="scale(1.3)"/>
+        </g>
+      </g>
+
+      <!-- Floating pixel grid icon -->
+      <g transform="translate(1260, 110)">
+        <g class="float-icon float-tool-3" stroke="white" stroke-opacity="0.16" fill="white" fill-opacity="0.08">
+          <rect x="0" y="0" width="8" height="8" rx="1"/>
+          <rect x="12" y="0" width="8" height="8" rx="1"/>
+          <rect x="24" y="0" width="8" height="8" rx="1"/>
+          <rect x="0" y="12" width="8" height="8" rx="1"/>
+          <rect x="12" y="12" width="8" height="8" rx="1"/>
+          <rect x="24" y="12" width="8" height="8" rx="1"/>
+          <rect x="0" y="24" width="8" height="8" rx="1"/>
+          <rect x="12" y="24" width="8" height="8" rx="1"/>
+          <rect x="24" y="24" width="8" height="8" rx="1"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// diagnose</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// repair</text>
+        <text x="1180" y="450" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// test</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">1080 × 1920</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="320" cy="500" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Laptop top center — translate(80, 60), 240x170 -->
+      <g class="laptop-group" transform="translate(80, 60)">
+        <path d="M-15 150 L255 150 L275 170 L-35 170 Z" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+        <rect x="0" y="0" width="240" height="150" rx="5" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+        <rect x="8" y="8" width="224" height="134" rx="3" fill="white" fill-opacity="0.05" class="screen-bg"/>
+        <g class="screen-content">
+          <rect x="18" y="18" width="204" height="10" rx="2" fill="white" fill-opacity="0.15" class="content-line cl-1"/>
+          <line x1="18" y1="42" x2="180" y2="42" stroke="white" stroke-opacity="0.4" stroke-width="2.5" stroke-linecap="round" class="content-line cl-2"/>
+          <line x1="18" y1="58" x2="210" y2="58" stroke="white" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" class="content-line cl-3"/>
+          <rect x="18" y="78" width="60" height="50" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06" class="content-line cl-5"/>
+          <rect x="86" y="78" width="60" height="50" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06" class="content-line cl-6"/>
+          <rect x="154" y="78" width="60" height="50" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06" class="content-line cl-7"/>
+        </g>
+        <g class="crack-group" stroke="white" stroke-opacity="0.85" stroke-width="1.5" fill="none" stroke-linecap="round">
+          <circle cx="80" cy="60" r="3" fill="white" fill-opacity="0.6" class="crack-impact"/>
+          <path d="M80 60 L40 25" class="crack crack-1"/>
+          <path d="M80 60 L25 80" class="crack crack-2"/>
+          <path d="M80 60 L60 130" class="crack crack-3"/>
+          <path d="M80 60 L140 35" class="crack crack-4"/>
+          <path d="M80 60 L170 90" class="crack crack-5"/>
+          <path d="M80 60 L210 130" class="crack crack-6"/>
+          <path d="M120 90 L160 110" class="crack crack-7"/>
+        </g>
+        <circle cx="120" cy="4" r="1.2" fill="white" fill-opacity="0.4"/>
+      </g>
+
+      <!-- Handheld console — bottom — translate(60, 380), ~280x150 -->
+      <g class="handheld-group" transform="translate(60, 380)">
+        <path d="M0 25 Q0 0 25 0 L255 0 Q280 0 280 25 L280 95 Q280 120 255 120 L25 120 Q0 120 0 95 Z" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+        <rect x="60" y="18" width="160" height="84" rx="4" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08" class="handheld-screen"/>
+        <g class="handheld-pixels">
+          <rect x="70" y="28" width="140" height="5" rx="1" fill="white" fill-opacity="0.3" class="hp-line hp-1"/>
+          <rect x="70" y="40" width="90" height="4" rx="1" fill="white" fill-opacity="0.2" class="hp-line hp-2"/>
+          <rect x="70" y="52" width="120" height="42" rx="2" stroke="white" stroke-opacity="0.25" stroke-width="1" fill="white" fill-opacity="0.05" class="hp-line hp-3"/>
+        </g>
+        <g transform="translate(28, 60)">
+          <rect x="-3" y="-10" width="6" height="20" rx="1" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+          <rect x="-10" y="-3" width="20" height="6" rx="1" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+        </g>
+        <g transform="translate(252, 60)">
+          <circle cx="-9" cy="0" r="4" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+          <circle cx="9" cy="0" r="4" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+          <circle cx="0" cy="-9" r="4" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+          <circle cx="0" cy="9" r="4" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+        </g>
+        <g class="handheld-crack" stroke="white" stroke-opacity="0.55" stroke-width="1" fill="none" stroke-linecap="round">
+          <path d="M140 50 L110 28" class="crack-h crack-h-1"/>
+          <path d="M140 50 L175 70" class="crack-h crack-h-2"/>
+          <circle cx="140" cy="50" r="2" fill="white" fill-opacity="0.5" class="crack-impact"/>
+        </g>
+      </g>
+
+      <!-- Ambient label -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="20" y="290" font-size="10" fill-opacity="0.1" class="code-tw ct-a">// repair</text>
+        <text x="290" y="290" font-size="10" fill-opacity="0.09" class="code-tw ct-b">1080p</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
         <a href="/services#screen-repair" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
       </p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Screen Repair</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        Cracked, flickering or completely dead screen? I replace screens on laptops, Chromebooks, all-in-one computers and handheld gaming consoles, including retro handhelds. Free quote, honest advice.
-      </p>
-      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+      <h1 id="hero-wordmark">Screen Repair</h1>
+      <p id="hero-tagline">Cracked, flickering or completely dead screen? I replace screens on laptops, Chromebooks, all-in-one computers and handheld gaming consoles, including retro handhelds. Free quote, honest advice.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
           Get a Free Quote
           <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          View Pricing
-        </a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
       </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('what-i-replace').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -50,7 +275,7 @@ description="Laptop, Chromebook, all-in-one and handheld gaming console screen r
   </section>
 
   <!-- What I Replace -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section id="what-i-replace" style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div style="margin-bottom:2.5rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">What I Work On</p>
@@ -204,6 +429,183 @@ description="Laptop, Chromebook, all-in-one and handheld gaming console screen r
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Crack/repair cycle: 8s loop
+     0-15%: cracks visible (broken state)
+     15-25%: cracks fade out (repairing)
+     25-50%: screen content draws in (repaired)
+     50-65%: screen content stays (showcase)
+     65-75%: content fades back out
+     75-90%: cracks redraw (re-broken)
+     90-100%: hold broken
+  */
+
+  .crack { stroke-dasharray: 200; stroke-dashoffset: 0; animation: crackCycle 8s ease-in-out infinite; }
+  .crack-impact { animation: impactCycle 8s ease-in-out infinite; }
+  @keyframes crackCycle {
+    0%, 15%   { stroke-dashoffset: 0; opacity: 1; }
+    25%, 75%  { stroke-dashoffset: 200; opacity: 0; }
+    90%, 100% { stroke-dashoffset: 0; opacity: 1; }
+  }
+  @keyframes impactCycle {
+    0%, 15%   { opacity: 0.6; }
+    25%, 75%  { opacity: 0; }
+    90%, 100% { opacity: 0.6; }
+  }
+
+  .content-line { opacity: 0; animation: contentCycle 8s ease-in-out infinite; }
+  .cl-1 { animation-delay: 0s; }
+  .cl-2 { animation-delay: 0.15s; }
+  .cl-3 { animation-delay: 0.25s; }
+  .cl-4 { animation-delay: 0.35s; }
+  .cl-5 { animation-delay: 0.45s; }
+  .cl-6 { animation-delay: 0.55s; }
+  .cl-7 { animation-delay: 0.65s; }
+  @keyframes contentCycle {
+    0%, 25%   { opacity: 0; transform: translateY(4px); }
+    35%, 65%  { opacity: 1; transform: translateY(0); }
+    75%, 100% { opacity: 0; transform: translateY(4px); }
+  }
+
+  /* Handheld crack — same cycle but offset slightly so they don't sync */
+  .crack-h { stroke-dasharray: 100; stroke-dashoffset: 0; animation: crackCycleH 8s ease-in-out infinite 0.4s; }
+  @keyframes crackCycleH {
+    0%, 15%   { stroke-dashoffset: 0; opacity: 1; }
+    25%, 75%  { stroke-dashoffset: 100; opacity: 0; }
+    90%, 100% { stroke-dashoffset: 0; opacity: 1; }
+  }
+  .hp-line { opacity: 0; animation: contentCycle 8s ease-in-out infinite; }
+  .hp-1 { animation-delay: 0.5s; }
+  .hp-2 { animation-delay: 0.6s; }
+  .hp-3 { animation-delay: 0.7s; }
+
+  /* Float icons — outer wrapper handles position, inner handles bobbing */
+  .float-icon-1, .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-icon-2, .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-icon-3, .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(5deg)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 38rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .crack, .crack-impact, .content-line, .crack-h, .hp-line,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .crack { stroke-dashoffset: 0; opacity: 1; }
+    .crack-impact { opacity: 0.6; }
+    .content-line { opacity: 0; }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Page content styles (preserved from your original) */
   .service-item { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1.25rem; }
   .service-num { height: 3rem; width: 3rem; min-width: 3rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .service-num svg { height: 1.5rem; width: 1.5rem; }
