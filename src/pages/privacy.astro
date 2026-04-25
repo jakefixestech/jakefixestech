@@ -5,18 +5,202 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Privacy Policy | Jake Fixes Tech LLC"
 description="Privacy Policy for Jake Fixes Tech LLC. Learn how we handle and protect your personal information.">
 
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" width="1920" height="1080" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Legal</p>
-      <h1 style="font-size:2.5rem;font-weight:800;color:white;margin-top:0.5rem;margin-bottom:1rem;">Privacy Policy</h1>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin:0 auto;">How we collect, use and protect your personal information.</p>
-      <p style="color:#93c5fd;font-size:0.875rem;margin-top:0.75rem;">Last updated: April 2026</p>
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Privacy Policy">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="350" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1150" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- Large shield - left side -->
+      <g class="shield-group" transform="translate(220, 100)">
+        <path d="M150 0 L290 38 L290 175 Q290 270 150 330 Q10 270 10 175 L10 38 Z"
+              stroke="white" stroke-opacity="0.2" stroke-width="2" fill="white" fill-opacity="0.05" class="shield-outer"/>
+        <path d="M150 22 L268 54 L268 175 Q268 250 150 305 Q32 250 32 175 L32 54 Z"
+              fill="white" fill-opacity="0.04" class="shield-inner"/>
+        <path d="M90 175 L135 220 L210 130"
+              stroke="white" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" class="check-draw"/>
+        <circle cx="150" cy="170" r="120" stroke="white" stroke-opacity="0.2" stroke-width="1.5" fill="none" class="pulse-ring"/>
+      </g>
+
+      <!-- Padlock with encrypted data flowing in - right side -->
+      <g class="lock-group" transform="translate(960, 130)">
+        <path d="M75 70 Q75 25 130 25 Q185 25 185 70 L185 105"
+              stroke="white" stroke-opacity="0.25" stroke-width="3" stroke-linecap="round" fill="none" class="lock-shackle"/>
+        <rect x="40" y="105" width="180" height="150" rx="12" stroke="white" stroke-opacity="0.25" stroke-width="2" fill="white" fill-opacity="0.05" class="lock-body"/>
+        <rect x="50" y="115" width="160" height="130" rx="8" fill="white" fill-opacity="0.04" class="lock-body"/>
+        <circle cx="130" cy="170" r="12" fill="white" fill-opacity="0.5" class="keyhole"/>
+        <rect x="125" y="180" width="10" height="28" fill="white" fill-opacity="0.5" class="keyhole"/>
+
+        <!-- Encrypted data lines flowing in -->
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="white" fill-opacity="0.5">
+          <text x="-180" y="135" class="data-flow data-flow-1">a8f3 :: 9c2e :: 1b7d</text>
+          <text x="-180" y="180" class="data-flow data-flow-2">e4k9 :: 7m3p :: 2x8q</text>
+          <text x="-180" y="225" class="data-flow data-flow-3">SHA256 :: VERIFIED</text>
+        </g>
+      </g>
+
+      <!-- Dotted secure-transmission path from shield to lock -->
+      <path d="M520 240 Q740 220 960 200" stroke="white" stroke-opacity="0.08" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+
+      <!-- Travelling dots along path -->
+      <circle r="3" fill="white" fill-opacity="0.6">
+        <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.5s">
+          <mpath href="#secure-path"/>
+        </animateMotion>
+      </circle>
+      <circle r="2" fill="white" fill-opacity="0.4">
+        <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s">
+          <mpath href="#secure-path"/>
+        </animateMotion>
+      </circle>
+      <defs>
+        <path id="secure-path" d="M520 240 Q740 220 960 200"/>
+      </defs>
+
+      <!-- Floating eye-with-slash (no-tracking) -->
+      <g class="float-icon float-icon-1" transform="translate(560, 60)" stroke="white" stroke-opacity="0.1" fill="none" stroke-width="2">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+        <line x1="2" y1="2" x2="22" y2="22" stroke-opacity="0.18"/>
+      </g>
+
+      <!-- Floating key -->
+      <g class="float-icon float-icon-2" transform="translate(490, 380)" stroke="white" stroke-opacity="0.1" fill="none" stroke-width="2">
+        <circle cx="8" cy="14" r="6"/>
+        <path d="M14 14h18M28 14v6M22 14v6"/>
+      </g>
+
+      <!-- Floating fingerprint -->
+      <g class="float-icon float-icon-3" transform="translate(720, 400)" stroke="white" stroke-opacity="0.1" fill="none" stroke-width="1.5">
+        <path d="M12 11c0-3 2-5 5-5M5 14a7 7 0 0 1 7-7M9 18a3 3 0 0 1 0-6 3 3 0 0 1 3 3M14 23c-2-2-3-5-3-8M19 22a18 18 0 0 0-1-9 5 5 0 0 0-7-2"/>
+      </g>
+
+      <!-- "SECURE" stamp - top right corner -->
+      <g class="float-icon float-icon-4" transform="translate(1280, 60)">
+        <circle cx="40" cy="40" r="34" stroke="white" stroke-opacity="0.15" stroke-width="1.5" fill="none"/>
+        <circle cx="40" cy="40" r="28" stroke="white" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+        <text x="40" y="44" text-anchor="middle" font-size="10" font-family="ui-monospace, monospace" font-weight="700" fill="white" fill-opacity="0.25">SECURE</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="200" cy="180" rx="260" ry="200" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="200" cy="500" rx="220" ry="160" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Shield - top center -->
+      <g class="shield-group" transform="translate(140, 30)">
+        <path d="M60 0 L120 18 L120 90 Q120 150 60 180 Q0 150 0 90 L0 18 Z"
+              stroke="white" stroke-opacity="0.2" stroke-width="2" fill="white" fill-opacity="0.05" class="shield-outer"/>
+        <path d="M60 14 L108 30 L108 90 Q108 140 60 165 Q12 140 12 90 L12 30 Z"
+              fill="white" fill-opacity="0.04" class="shield-inner"/>
+        <path d="M36 92 L54 112 L84 72"
+              stroke="white" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" class="check-draw"/>
+      </g>
+
+      <!-- Padlock - bottom center -->
+      <g class="lock-group" transform="translate(140, 410)">
+        <path d="M48 40 Q48 14 60 14 Q72 14 72 40 L72 60"
+              stroke="white" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" fill="none" class="lock-shackle"/>
+        <rect x="30" y="60" width="60" height="80" rx="6" stroke="white" stroke-opacity="0.25" stroke-width="2" fill="white" fill-opacity="0.05" class="lock-body"/>
+        <circle cx="60" cy="92" r="6" fill="white" fill-opacity="0.5" class="keyhole"/>
+        <rect x="57" y="98" width="6" height="16" fill="white" fill-opacity="0.5" class="keyhole"/>
+      </g>
+
+      <!-- Dotted secure path between shield and lock -->
+      <path d="M200 220 Q230 320 200 410" stroke="white" stroke-opacity="0.08" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+      <circle r="2.5" fill="white" fill-opacity="0.6">
+        <animateMotion dur="3s" repeatCount="indefinite" begin="0.5s">
+          <mpath href="#secure-path-m"/>
+        </animateMotion>
+      </circle>
+      <defs>
+        <path id="secure-path-m" d="M200 220 Q230 320 200 410"/>
+      </defs>
+
+      <!-- Floating key - left mid -->
+      <g class="float-icon float-icon-1" transform="translate(30, 320)" stroke="white" stroke-opacity="0.12" fill="none" stroke-width="1.5">
+        <circle cx="7" cy="12" r="5"/>
+        <path d="M12 12h14M22 12v5M17 12v5"/>
+      </g>
+
+      <!-- Floating eye-slash - top right -->
+      <g class="float-icon float-icon-2" transform="translate(330, 30)" stroke="white" stroke-opacity="0.12" fill="none" stroke-width="1.5">
+        <path d="M1 10s4-7 9-7 9 7 9 7-4 7-9 7-9-7-9-7z"/>
+        <circle cx="10" cy="10" r="2.5"/>
+        <line x1="2" y1="2" x2="18" y2="18" stroke-opacity="0.2"/>
+      </g>
+
+      <!-- SECURE stamp - bottom right -->
+      <g class="float-icon float-icon-3" transform="translate(310, 460)">
+        <circle cx="30" cy="30" r="26" stroke="white" stroke-opacity="0.15" stroke-width="1.5" fill="none"/>
+        <circle cx="30" cy="30" r="20" stroke="white" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+        <text x="30" y="34" text-anchor="middle" font-size="8" font-family="ui-monospace, monospace" font-weight="700" fill="white" fill-opacity="0.28">SECURE</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">Legal · Privacy</p>
+      <h1 id="hero-wordmark">Privacy Policy</h1>
+      <p id="hero-tagline">How we collect, use and protect your personal information — clearly explained, no fine-print games.</p>
+      <a href="#privacy-content" id="hero-cta">
+        Read the Policy
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <p class="hero-meta">Last updated: April 2026</p>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('privacy-content').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
-  <section style="background:white;padding:3rem 1.5rem;">
+  <!-- Privacy Content -->
+  <section id="privacy-content" style="background:white;padding:3rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
 
       <div class="terms-section">
@@ -133,6 +317,202 @@ description="Privacy Policy for Jake Fixes Tech LLC. Learn how we handle and pro
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Shield entrance */
+  .shield-outer { animation: shieldAppear 0.9s ease 0.3s both; }
+  .shield-inner { animation: shieldAppear 0.9s ease 0.5s both; }
+  @keyframes shieldAppear {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Self-drawing checkmark */
+  .check-draw {
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+    animation: drawCheck 1.2s ease 1.0s forwards;
+  }
+  @keyframes drawCheck { to { stroke-dashoffset: 0; } }
+
+  /* Pulse ring around shield */
+  .pulse-ring {
+    transform-origin: center;
+    animation: pulseRing 4s ease-out infinite 1.5s;
+  }
+  @keyframes pulseRing {
+    0%   { transform: scale(0.7); opacity: 0.5; }
+    100% { transform: scale(1.15); opacity: 0; }
+  }
+
+  /* Lock entrance — body first, then shackle locks down */
+  .lock-body { animation: lockAppear 0.8s ease 1.5s both; }
+  .lock-shackle { animation: lockShackle 0.6s cubic-bezier(0.34,1.56,0.64,1) 2.0s both; }
+  .keyhole { animation: lockAppear 0.4s ease 2.4s both; }
+  @keyframes lockAppear {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes lockShackle {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Encrypted data lines flow in */
+  .data-flow { animation: dataFlow 5s linear infinite; }
+  .data-flow-1 { animation-delay: 0s; }
+  .data-flow-2 { animation-delay: -1.7s; }
+  .data-flow-3 { animation-delay: -3.4s; }
+  @keyframes dataFlow {
+    0%   { transform: translateX(0); opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { transform: translateX(180px); opacity: 0; }
+  }
+
+  /* Floating icons */
+  .float-icon-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-icon-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-icon-3 { animation: floatC 5.5s ease-in-out infinite; }
+  .float-icon-4 { animation: floatA 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 48rem;
+  }
+
+  .hero-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #93c5fd;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+
+  #hero-tagline {
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    color: #bfdbfe;
+    margin: 0;
+    max-width: 36rem;
+    line-height: 1.75;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+
+  #hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e40af;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 1.2s forwards;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+  .hero-meta {
+    color: #93c5fd;
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 1.4s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.8);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100%{transform:translateX(-50%) translateY(0)}
+    50%{transform:translateX(-50%) translateY(6px)}
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 440px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .shield-outer, .shield-inner, .check-draw, .pulse-ring,
+    .lock-body, .lock-shackle, .keyhole, .data-flow,
+    .float-icon-1, .float-icon-2, .float-icon-3, .float-icon-4,
+    .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta, .hero-meta, #scroll-hint { opacity: 1; transform: none; }
+    .check-draw { stroke-dashoffset: 0; }
+    .pulse-ring { display: none; }
+  }
+
+  /* Privacy content */
   .terms-section { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #f3f4f6; }
   .terms-section h2 { font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem; }
   .terms-section p { color: #4b5563; line-height: 1.75; font-size: 0.975rem; }
