@@ -5,27 +5,331 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Tech Tutoring | Jake Fixes Tech — Littleton, NH"
 description="One-on-one tech tutoring in person or remote. Learn at your own pace with patient, friendly help. $50/hr, 30 minute minimum. Serving Littleton NH and the North Country.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Tech Tutoring Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <radialGradient id="bulbGlow">
+          <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.5"/>
+          <stop offset="100%" style="stop-color:#fde68a;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="220" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1220" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Student's computer with thought bubble — translate(280, 240) -->
+      <g class="student-group" transform="translate(280, 240)">
+        <!-- Laptop base -->
+        <path d="M-110 80 L110 80 L120 95 L-120 95 Z" stroke="white" stroke-opacity="0.35" stroke-width="2" fill="white" fill-opacity="0.06" class="laptop-piece"/>
+        <!-- Laptop screen -->
+        <rect x="-100" y="-65" width="200" height="145" rx="4" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="white" fill-opacity="0.05" class="laptop-piece"/>
+        <rect x="-92" y="-57" width="184" height="129" rx="2" fill="white" fill-opacity="0.04"/>
+        <circle cx="0" cy="-61" r="1.2" fill="white" fill-opacity="0.4"/>
+        <!-- Screen content (window mockup) -->
+        <rect x="-80" y="-45" width="160" height="14" rx="1" fill="white" fill-opacity="0.1"/>
+        <circle cx="-72" cy="-38" r="1.5" fill="white" fill-opacity="0.4"/>
+        <circle cx="-67" cy="-38" r="1.5" fill="white" fill-opacity="0.4"/>
+        <circle cx="-62" cy="-38" r="1.5" fill="white" fill-opacity="0.4"/>
+        <line x1="-80" y1="-20" x2="60" y2="-20" stroke="white" stroke-opacity="0.25" stroke-width="1.5"/>
+        <line x1="-80" y1="-8" x2="40" y2="-8" stroke="white" stroke-opacity="0.18" stroke-width="1.2"/>
+        <line x1="-80" y1="4" x2="50" y2="4" stroke="white" stroke-opacity="0.18" stroke-width="1.2"/>
+        <rect x="-80" y="20" width="60" height="40" rx="2" stroke="white" stroke-opacity="0.22" stroke-width="1" fill="white" fill-opacity="0.05"/>
+        <rect x="-12" y="20" width="60" height="40" rx="2" stroke="white" stroke-opacity="0.22" stroke-width="1" fill="white" fill-opacity="0.05"/>
+        <!-- Hinge -->
+        <rect x="-22" y="79" width="44" height="3" rx="1" fill="white" fill-opacity="0.2"/>
+
+        <!-- Thought bubble above the laptop — outer wrapper positions, inner swaps content -->
+        <g transform="translate(70, -110)">
+          <!-- Bubble cloud -->
+          <ellipse cx="0" cy="0" rx="44" ry="34" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="#1e3a8a" fill-opacity="0.6" class="thought-bubble"/>
+          <!-- Connecting dots leading from laptop to bubble -->
+          <circle cx="-30" cy="30" r="6" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="#1e3a8a" fill-opacity="0.6" class="thought-bubble"/>
+          <circle cx="-42" cy="42" r="3" stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="#1e3a8a" fill-opacity="0.6" class="thought-bubble"/>
+
+          <!-- Question mark state (confused) -->
+          <g class="state-confused">
+            <text x="0" y="14" text-anchor="middle" fill="#fcd34d" fill-opacity="0.85" font-size="44" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="900">?</text>
+          </g>
+
+          <!-- Lightbulb state (aha!) -->
+          <g class="state-aha">
+            <!-- Bulb glow halo -->
+            <circle cx="0" cy="-2" r="32" fill="url(#bulbGlow)"/>
+            <!-- Bulb glass -->
+            <path d="M-12 -10 a 12 12 0 1 1 24 0 c 0 5 -3 9 -5 12 L 5 8 L -5 8 L -7 2 c -2 -3 -5 -7 -5 -12 z"
+                  stroke="#fde68a" stroke-opacity="0.85" stroke-width="2" fill="#fde68a" fill-opacity="0.25" stroke-linejoin="round"/>
+            <!-- Bulb base/threads -->
+            <line x1="-5" y1="11" x2="5" y2="11" stroke="#fde68a" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+            <line x1="-4" y1="14" x2="4" y2="14" stroke="#fde68a" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+            <line x1="-3" y1="17" x2="3" y2="17" stroke="#fde68a" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+            <!-- Filament inside -->
+            <path d="M-4 -4 Q0 -8 4 -4 M-3 0 Q0 2 3 0" stroke="#fde68a" stroke-opacity="0.6" stroke-width="1" fill="none"/>
+            <!-- Sparkle rays around bulb -->
+            <g class="bulb-rays" stroke="#fde68a" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round">
+              <line x1="0" y1="-26" x2="0" y2="-32"/>
+              <line x1="-22" y1="-2" x2="-28" y2="-2"/>
+              <line x1="22" y1="-2" x2="28" y2="-2"/>
+              <line x1="-16" y1="-20" x2="-21" y2="-25"/>
+              <line x1="16" y1="-20" x2="21" y2="-25"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- "Student" label -->
+        <text x="0" y="125" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="11" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">YOU</text>
+      </g>
+
+      <!-- RIGHT: Whiteboard / lesson panel — translate(1180, 240) -->
+      <g class="board-group" transform="translate(1180, 240)">
+        <!-- Easel legs -->
+        <line x1="-110" y1="80" x2="-90" y2="120" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round"/>
+        <line x1="110" y1="80" x2="90" y2="120" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-30" y1="80" x2="-30" y2="120" stroke="white" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Board frame -->
+        <rect x="-115" y="-80" width="230" height="170" rx="4" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.06" class="board-piece"/>
+        <!-- Board surface -->
+        <rect x="-105" y="-72" width="210" height="154" rx="2" stroke="white" stroke-opacity="0.18" stroke-width="1" fill="white" fill-opacity="0.04"/>
+
+        <!-- Title at top: "Lesson:" -->
+        <text x="-95" y="-50" fill="white" fill-opacity="0.55" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="700">Today's Lesson</text>
+        <line x1="-95" y1="-42" x2="95" y2="-42" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+
+        <!-- 3 lesson points appear one by one -->
+        <!-- Point 1 -->
+        <g transform="translate(-90, -22)">
+          <g class="lesson-point lp-1">
+            <circle cx="0" cy="0" r="8" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+            <text x="0" y="3" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="9" font-family="ui-monospace, monospace" font-weight="700">1</text>
+          </g>
+          <line x1="14" y1="0" x2="170" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="1.5" class="lesson-line ll-1"/>
+          <line x1="14" y1="6" x2="120" y2="6" stroke="white" stroke-opacity="0.15" stroke-width="1" class="lesson-line ll-1"/>
+        </g>
+        <!-- Point 2 -->
+        <g transform="translate(-90, 18)">
+          <g class="lesson-point lp-2">
+            <circle cx="0" cy="0" r="8" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+            <text x="0" y="3" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="9" font-family="ui-monospace, monospace" font-weight="700">2</text>
+          </g>
+          <line x1="14" y1="0" x2="160" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="1.5" class="lesson-line ll-2"/>
+          <line x1="14" y1="6" x2="100" y2="6" stroke="white" stroke-opacity="0.15" stroke-width="1" class="lesson-line ll-2"/>
+        </g>
+        <!-- Point 3 -->
+        <g transform="translate(-90, 58)">
+          <g class="lesson-point lp-3">
+            <circle cx="0" cy="0" r="8" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+            <text x="0" y="3" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="9" font-family="ui-monospace, monospace" font-weight="700">3</text>
+          </g>
+          <line x1="14" y1="0" x2="155" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="1.5" class="lesson-line ll-3"/>
+          <line x1="14" y1="6" x2="115" y2="6" stroke="white" stroke-opacity="0.15" stroke-width="1" class="lesson-line ll-3"/>
+        </g>
+
+        <!-- Floating graduation cap above the board -->
+        <g transform="translate(0, -110)">
+          <g class="grad-cap">
+            <!-- Mortarboard top (flat diamond) -->
+            <polygon points="0,-12 28,-2 0,8 -28,-2" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.15" stroke-linejoin="round"/>
+            <!-- Cap base/crown -->
+            <path d="M-18 0 L-14 10 L14 10 L18 0" stroke="white" stroke-opacity="0.45" stroke-width="2" fill="white" fill-opacity="0.1" stroke-linejoin="round"/>
+            <!-- Tassel -->
+            <line x1="20" y1="-2" x2="24" y2="14" stroke="#fde68a" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="24" cy="16" r="2" fill="#fde68a" fill-opacity="0.7"/>
+            <!-- Button on top -->
+            <circle cx="0" cy="-2" r="2" fill="white" fill-opacity="0.4"/>
+          </g>
+        </g>
+
+        <!-- "Tutor" label -->
+        <text x="0" y="135" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="11" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">JAKE</text>
+      </g>
+
+      <!-- Floating pencil — outer wrapper -->
+      <g transform="translate(720, 90)">
+        <g class="float-icon float-tool-1" stroke="white" stroke-opacity="0.18" fill="white" fill-opacity="0.08" stroke-width="1.5" stroke-linejoin="round">
+          <!-- Pencil body -->
+          <rect x="-3" y="-22" width="6" height="32" transform="rotate(-30)"/>
+          <!-- Tip -->
+          <polygon points="0,12 4,18 -4,18" transform="rotate(-30)" fill="white" fill-opacity="0.25"/>
+          <!-- Eraser -->
+          <rect x="-3" y="-26" width="6" height="6" transform="rotate(-30)" fill="#fca5a5" fill-opacity="0.5"/>
+        </g>
+      </g>
+
+      <!-- Floating books stack -->
+      <g transform="translate(160, 380)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.18" stroke-width="1.5" stroke-linejoin="round">
+          <rect x="-18" y="6" width="36" height="6" rx="0.5" fill="white" fill-opacity="0.08"/>
+          <rect x="-16" y="-2" width="32" height="6" rx="0.5" fill="white" fill-opacity="0.1"/>
+          <rect x="-19" y="-10" width="38" height="6" rx="0.5" fill="white" fill-opacity="0.06"/>
+          <line x1="-12" y1="9" x2="-2" y2="9" stroke-opacity="0.3"/>
+          <line x1="-10" y1="1" x2="0" y2="1" stroke-opacity="0.3"/>
+        </g>
+      </g>
+
+      <!-- Floating speech bubble (asking questions) -->
+      <g transform="translate(1280, 110)">
+        <g class="float-icon float-tool-3" stroke="white" stroke-opacity="0.18" fill="white" fill-opacity="0.06" stroke-width="1.5" stroke-linejoin="round">
+          <path d="M-18 -10 L18 -10 Q22 -10 22 -6 L22 6 Q22 10 18 10 L4 10 L-2 16 L-2 10 L-18 10 Q-22 10 -22 6 L-22 -6 Q-22 -10 -18 -10 Z"/>
+          <circle cx="-8" cy="0" r="1.2" fill="white" fill-opacity="0.5" stroke="none"/>
+          <circle cx="0" cy="0" r="1.2" fill="white" fill-opacity="0.5" stroke="none"/>
+          <circle cx="8" cy="0" r="1.2" fill="white" fill-opacity="0.5" stroke="none"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// learn</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// understand</text>
+        <text x="1180" y="450" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// no rush</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">questions: ok</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <radialGradient id="bulbGlowM">
+          <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.5"/>
+          <stop offset="100%" style="stop-color:#fde68a;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="80" cy="100" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="340" cy="500" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Student laptop top-left — translate(80, 100) -->
+      <g class="student-group" transform="translate(80, 100)">
+        <path d="M-65 50 L65 50 L72 60 L-72 60 Z" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.06" class="laptop-piece"/>
+        <rect x="-60" y="-40" width="120" height="90" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="white" fill-opacity="0.05" class="laptop-piece"/>
+        <rect x="-54" y="-34" width="108" height="80" rx="2" fill="white" fill-opacity="0.04"/>
+        <line x1="-46" y1="-12" x2="40" y2="-12" stroke="white" stroke-opacity="0.25" stroke-width="1"/>
+        <line x1="-46" y1="-4" x2="30" y2="-4" stroke="white" stroke-opacity="0.18" stroke-width="0.8"/>
+        <line x1="-46" y1="4" x2="36" y2="4" stroke="white" stroke-opacity="0.18" stroke-width="0.8"/>
+
+        <!-- Thought bubble: question mark / lightbulb -->
+        <g transform="translate(45, -65)">
+          <ellipse cx="0" cy="0" rx="28" ry="22" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="#1e3a8a" fill-opacity="0.6" class="thought-bubble"/>
+          <circle cx="-20" cy="20" r="4" stroke="white" stroke-opacity="0.4" stroke-width="1.2" fill="#1e3a8a" fill-opacity="0.6" class="thought-bubble"/>
+
+          <g class="state-confused">
+            <text x="0" y="9" text-anchor="middle" fill="#fcd34d" fill-opacity="0.85" font-size="28" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="900">?</text>
+          </g>
+
+          <g class="state-aha">
+            <circle cx="0" cy="-1" r="22" fill="url(#bulbGlowM)"/>
+            <path d="M-8 -7 a 8 8 0 1 1 16 0 c 0 3 -2 6 -3 8 L 3 5 L -3 5 L -5 1 c -1 -2 -3 -5 -3 -8 z"
+                  stroke="#fde68a" stroke-opacity="0.85" stroke-width="1.5" fill="#fde68a" fill-opacity="0.25" stroke-linejoin="round"/>
+            <line x1="-3" y1="7" x2="3" y2="7" stroke="#fde68a" stroke-opacity="0.85" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="-2" y1="9" x2="2" y2="9" stroke="#fde68a" stroke-opacity="0.85" stroke-width="1.5" stroke-linecap="round"/>
+            <g class="bulb-rays" stroke="#fde68a" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round">
+              <line x1="0" y1="-17" x2="0" y2="-21"/>
+              <line x1="-15" y1="-2" x2="-19" y2="-2"/>
+              <line x1="15" y1="-2" x2="19" y2="-2"/>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <!-- Whiteboard bottom-right — translate(310, 510) -->
+      <g class="board-group" transform="translate(310, 510)">
+        <line x1="-65" y1="50" x2="-55" y2="68" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="65" y1="50" x2="55" y2="68" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/>
+        <rect x="-68" y="-50" width="136" height="100" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="1.8" fill="white" fill-opacity="0.06" class="board-piece"/>
+        <rect x="-62" y="-44" width="124" height="88" rx="2" stroke="white" stroke-opacity="0.18" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+
+        <text x="-55" y="-30" fill="white" fill-opacity="0.55" font-size="8" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="700">Today's Lesson</text>
+        <line x1="-55" y1="-25" x2="55" y2="-25" stroke="white" stroke-opacity="0.2" stroke-width="0.8"/>
+
+        <g transform="translate(-50, -10)">
+          <g class="lesson-point lp-1">
+            <circle cx="0" cy="0" r="5" stroke="#86efac" stroke-opacity="0.7" stroke-width="1" fill="white" fill-opacity="0.08"/>
+            <text x="0" y="2" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="6" font-family="ui-monospace, monospace" font-weight="700">1</text>
+          </g>
+          <line x1="9" y1="0" x2="100" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="1" class="lesson-line ll-1"/>
+        </g>
+        <g transform="translate(-50, 12)">
+          <g class="lesson-point lp-2">
+            <circle cx="0" cy="0" r="5" stroke="#86efac" stroke-opacity="0.7" stroke-width="1" fill="white" fill-opacity="0.08"/>
+            <text x="0" y="2" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="6" font-family="ui-monospace, monospace" font-weight="700">2</text>
+          </g>
+          <line x1="9" y1="0" x2="90" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="1" class="lesson-line ll-2"/>
+        </g>
+        <g transform="translate(-50, 34)">
+          <g class="lesson-point lp-3">
+            <circle cx="0" cy="0" r="5" stroke="#86efac" stroke-opacity="0.7" stroke-width="1" fill="white" fill-opacity="0.08"/>
+            <text x="0" y="2" text-anchor="middle" fill="#86efac" fill-opacity="0.85" font-size="6" font-family="ui-monospace, monospace" font-weight="700">3</text>
+          </g>
+          <line x1="9" y1="0" x2="95" y2="0" stroke="white" stroke-opacity="0.25" stroke-width="1" class="lesson-line ll-3"/>
+        </g>
+
+        <!-- Mini grad cap -->
+        <g transform="translate(0, -68)">
+          <g class="grad-cap">
+            <polygon points="0,-7 17,-1 0,5 -17,-1" stroke="white" stroke-opacity="0.5" stroke-width="1.2" fill="white" fill-opacity="0.15" stroke-linejoin="round"/>
+            <path d="M-11 0 L-9 6 L9 6 L11 0" stroke="white" stroke-opacity="0.45" stroke-width="1.2" fill="white" fill-opacity="0.1" stroke-linejoin="round"/>
+            <line x1="13" y1="-1" x2="15" y2="9" stroke="#fde68a" stroke-opacity="0.7" stroke-width="1" stroke-linecap="round"/>
+            <circle cx="15" cy="10" r="1.2" fill="#fde68a" fill-opacity="0.7"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
         <a href="/services#tech-tutoring" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
       </p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Tech Tutoring</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        Patient, one-on-one tech help at your pace. In person or remote. No judgment, no rushing. Just clear, friendly explanations that actually make sense.
-      </p>
-      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+      <h1 id="hero-wordmark">Tech Tutoring</h1>
+      <p id="hero-tagline">Patient, one-on-one tech help at your pace. In person or remote. No judgment, no rushing. Just clear, friendly explanations that actually make sense.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
           Book a Session
           <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          View Pricing
-        </a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
       </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -50,7 +354,7 @@ description="One-on-one tech tutoring in person or remote. Learn at your own pac
   </section>
 
   <!-- What Is This -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section id="how-it-works" style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div style="margin-bottom:2.5rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">How It Works</p>
@@ -155,6 +459,191 @@ description="One-on-one tech tutoring in person or remote. Learn at your own pac
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Pieces fade in */
+  .laptop-piece, .board-piece, .thought-bubble { animation: pieceAppear 0.8s ease 0.3s both; }
+  @keyframes pieceAppear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* 8s loop:
+     0-50%:  question mark visible (confused)
+     50-58%: swap to lightbulb (aha!)
+     58-95%: lightbulb held with sparkle rays
+     95-100%: reset
+     Lessons 1, 2, 3 appear at 12%, 26%, 40% (during the question phase, while concepts are being explained), then highlighted briefly when the aha lands at 50% */
+  .state-confused { animation: confusedState 8s ease-in-out infinite; }
+  .state-aha      { opacity: 0; animation: ahaState 8s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes confusedState {
+    0%, 48%  { opacity: 1; }
+    52%      { opacity: 0; }
+    100%     { opacity: 0; }
+  }
+  @keyframes ahaState {
+    0%, 48%  { opacity: 0; transform: scale(0.7); }
+    54%      { opacity: 1; transform: scale(1.2); }
+    62%, 95% { opacity: 1; transform: scale(1); }
+    100%     { opacity: 0; transform: scale(0.7); }
+  }
+
+  /* Sparkle rays around the lightbulb gently flicker */
+  .bulb-rays { animation: rayFlicker 1.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes rayFlicker {
+    0%, 100% { stroke-opacity: 0.7; transform: scale(1); }
+    50%      { stroke-opacity: 0.4; transform: scale(0.9); }
+  }
+
+  /* Lesson points appear sequentially during the "explanation" phase */
+  .lesson-point, .lesson-line { opacity: 0; transform-origin: left center; transform-box: fill-box; }
+  .lp-1, .ll-1 { animation: lessonAppear 8s ease-in-out infinite 0s; }
+  .lp-2, .ll-2 { animation: lessonAppear 8s ease-in-out infinite 1s; }
+  .lp-3, .ll-3 { animation: lessonAppear 8s ease-in-out infinite 2s; }
+  @keyframes lessonAppear {
+    0%, 6%    { opacity: 0; transform: translateX(-6px); }
+    14%       { opacity: 1; transform: translateX(0); }
+    90%       { opacity: 1; transform: translateX(0); }
+    98%, 100% { opacity: 0; transform: translateX(-6px); }
+  }
+
+  /* Grad cap gentle wobble */
+  .grad-cap { animation: capWobble 4s ease-in-out infinite; transform-origin: center bottom; transform-box: fill-box; }
+  @keyframes capWobble {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25%      { transform: translateY(-3px) rotate(-3deg); }
+    75%      { transform: translateY(-3px) rotate(3deg); }
+  }
+
+  /* Float icons */
+  .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(8deg)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 40rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .laptop-piece, .board-piece, .thought-bubble,
+    .state-confused, .state-aha, .bulb-rays,
+    .lesson-point, .lesson-line, .grad-cap,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .laptop-piece, .board-piece, .thought-bubble { opacity: 1; }
+    .state-confused { opacity: 0; }
+    .state-aha { opacity: 1; transform: scale(1); }
+    .lesson-point, .lesson-line { opacity: 1; transform: translateX(0); }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Page content (preserved exactly) */
   #topics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
   .topic-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; }
   .topic-icon { display: flex; height: 3rem; width: 3rem; align-items: center; justify-content: center; border-radius: 0.5rem; background-color: #dbeafe; color: #2563eb; margin-bottom: 0.75rem; }
