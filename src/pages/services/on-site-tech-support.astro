@@ -5,27 +5,282 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="On-Site Tech Support | Jake Fixes Tech — Littleton, NH"
 description="On-site tech support for homes and small businesses across the North Country. WiFi, printers, device setup, troubleshooting and more. $65/hr, weekends 9am–4pm.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="On-Site Tech Support Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="220" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1220" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Customer's house — translate(280, 240) -->
+      <g class="house-group" transform="translate(280, 240)">
+        <!-- Ground line -->
+        <line x1="-180" y1="100" x2="180" y2="100" stroke="white" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- House body -->
+        <rect x="-90" y="-20" width="180" height="120" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.06" class="house-body"/>
+        <!-- Roof -->
+        <polygon points="-100,-20 0,-90 100,-20" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.08" stroke-linejoin="round" class="house-body"/>
+        <!-- Chimney -->
+        <rect x="40" y="-70" width="14" height="22" stroke="white" stroke-opacity="0.35" stroke-width="2" fill="white" fill-opacity="0.08"/>
+        <!-- Door -->
+        <rect x="-15" y="40" width="30" height="60" rx="1" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="white" fill-opacity="0.1"/>
+        <circle cx="8" cy="70" r="1.5" fill="white" fill-opacity="0.5"/>
+        <!-- Left window -->
+        <rect x="-65" y="0" width="32" height="32" rx="1" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+        <line x1="-49" y1="0" x2="-49" y2="32" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+        <line x1="-65" y1="16" x2="-33" y2="16" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+        <!-- Right window -->
+        <rect x="33" y="0" width="32" height="32" rx="1" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+        <line x1="49" y1="0" x2="49" y2="32" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+        <line x1="33" y1="16" x2="65" y2="16" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+
+        <!-- WiFi indicator above the chimney showing problem then fixed -->
+        <!-- Broken state: red signal with X -->
+        <g class="house-wifi-broken" transform="translate(47, -100)">
+          <path d="M -16 -4 a 22 22 0 0 1 32 0" stroke="#fca5a5" stroke-opacity="0.7" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M -10 2 a 14 14 0 0 1 20 0" stroke="#fca5a5" stroke-opacity="0.5" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M -4 8 a 6 6 0 0 1 8 0" stroke="#fca5a5" stroke-opacity="0.4" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- X over the signal -->
+          <line x1="-12" y1="-8" x2="12" y2="14" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="12" y1="-8" x2="-12" y2="14" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+
+        <!-- Fixed state: green strong signal -->
+        <g class="house-wifi-fixed" transform="translate(47, -100)">
+          <path d="M -16 -4 a 22 22 0 0 1 32 0" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M -10 2 a 14 14 0 0 1 20 0" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M -4 8 a 6 6 0 0 1 8 0" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="0" cy="14" r="1.5" fill="#86efac" fill-opacity="0.9" stroke="none"/>
+        </g>
+
+        <!-- "Your Home" label -->
+        <text x="0" y="125" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="11" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">YOUR PLACE</text>
+      </g>
+
+      <!-- RIGHT: Service vehicle starting point with tools — translate(1180, 240) -->
+      <g class="van-start-group" transform="translate(1180, 240)">
+        <!-- Ground line -->
+        <line x1="-130" y1="100" x2="130" y2="100" stroke="white" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- Tech briefcase / toolkit (where Jake "starts from") -->
+        <g transform="translate(0, 50)">
+          <!-- Briefcase body -->
+          <rect x="-50" y="-25" width="100" height="50" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="white" fill-opacity="0.08" class="van-start"/>
+          <!-- Handle on top -->
+          <path d="M-15 -25 L-15 -38 Q-15 -45 -10 -45 L10 -45 Q15 -45 15 -38 L15 -25" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="none"/>
+          <!-- Latches -->
+          <rect x="-30" y="-5" width="6" height="3" rx="0.5" fill="white" fill-opacity="0.4"/>
+          <rect x="24" y="-5" width="6" height="3" rx="0.5" fill="white" fill-opacity="0.4"/>
+          <!-- Tools peeking through "open" briefcase -->
+          <line x1="-30" y1="-25" x2="30" y2="-25" stroke="white" stroke-opacity="0.3" stroke-width="0.8" stroke-dasharray="2 2"/>
+          <!-- Wrench shape -->
+          <g transform="translate(-25, 5)">
+            <path d="M-3 -10 L3 -10 L4 -2 L2 0 L2 12 L-2 12 L-2 0 L-4 -2 Z" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+          </g>
+          <!-- Screwdriver -->
+          <g transform="translate(-5, 5)">
+            <rect x="-2" y="-10" width="4" height="14" rx="0.5" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+            <rect x="-3" y="4" width="6" height="8" rx="1" fill="white" fill-opacity="0.22" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+          </g>
+          <!-- Hex key -->
+          <g transform="translate(15, 5)" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-3 -8 L-3 8 L6 8"/>
+          </g>
+        </g>
+
+        <!-- Service van (animated, travels left to house) — visible during travel phase -->
+        <g class="service-van">
+          <!-- Cab -->
+          <path d="M-30 30 L-30 0 Q-30 -8 -22 -8 L-10 -8 L-2 8 L30 8 L30 30 Z" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.15" stroke-linejoin="round"/>
+          <!-- Window -->
+          <path d="M-22 -2 L-12 -2 L-6 8 L-22 8 Z" stroke="white" stroke-opacity="0.5" stroke-width="1.2" fill="white" fill-opacity="0.25"/>
+          <!-- Body line detail -->
+          <line x1="-2" y1="20" x2="30" y2="20" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+          <!-- Wheels -->
+          <circle cx="-18" cy="32" r="6" stroke="white" stroke-opacity="0.6" stroke-width="2" fill="white" fill-opacity="0.12"/>
+          <circle cx="-18" cy="32" r="2" fill="white" fill-opacity="0.4"/>
+          <circle cx="20" cy="32" r="6" stroke="white" stroke-opacity="0.6" stroke-width="2" fill="white" fill-opacity="0.12"/>
+          <circle cx="20" cy="32" r="2" fill="white" fill-opacity="0.4"/>
+          <!-- Headlight -->
+          <circle cx="-29" cy="20" r="1.5" fill="#fde68a" fill-opacity="0.8"/>
+          <!-- "JFT" text on van side -->
+          <text x="10" y="22" text-anchor="middle" fill="white" fill-opacity="0.7" font-size="7" font-family="ui-monospace, monospace" font-weight="700">JFT</text>
+          <animateMotion dur="9s" repeatCount="indefinite" begin="0s" keyPoints="0;0;1;1" keyTimes="0;0.1;0.5;1" calcMode="linear">
+            <mpath href="#travel-path"/>
+          </animateMotion>
+        </g>
+
+        <!-- "Jake (Mobile)" label -->
+        <text x="0" y="125" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="11" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="700">JAKE</text>
+      </g>
+
+      <!-- Travel path (right to left, road from Jake to house) -->
+      <!-- Path goes from van starting position (about 1180, 280) over to house (about 280, 280) -->
+      <path id="travel-path" d="M1090 280 Q730 250 370 280" stroke="white" stroke-opacity="0.18" stroke-width="2" fill="none" stroke-dasharray="8 8" class="road-line"/>
+
+      <!-- Road dashed centerline glow effect -->
+      <path d="M1090 280 Q730 250 370 280" stroke="white" stroke-opacity="0.06" stroke-width="6" fill="none"/>
+
+      <!-- Floating signal bars — outer wrapper -->
+      <g transform="translate(900, 130)">
+        <g class="float-icon float-tool-1" stroke="white" stroke-opacity="0.18" fill="white" fill-opacity="0.06" stroke-width="1.5">
+          <rect x="-12" y="6" width="4" height="10" rx="0.5"/>
+          <rect x="-4" y="0" width="4" height="16" rx="0.5"/>
+          <rect x="4" y="-6" width="4" height="22" rx="0.5"/>
+        </g>
+      </g>
+
+      <!-- Floating location pin (top center) -->
+      <g transform="translate(720, 90)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.2" fill="white" fill-opacity="0.08" stroke-width="2" stroke-linejoin="round">
+          <path d="M0 -20 C 10 -20 14 -12 14 -6 C 14 4 0 16 0 16 C 0 16 -14 4 -14 -6 C -14 -12 -10 -20 0 -20 Z"/>
+          <circle cx="0" cy="-6" r="4" fill="white" fill-opacity="0.2"/>
+        </g>
+      </g>
+
+      <!-- Floating wrench (bottom-left) -->
+      <g transform="translate(160, 400)">
+        <g class="float-icon float-tool-3" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 -5.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" transform="translate(-12, -2)"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// route</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// arriving</text>
+        <text x="1180" y="450" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// onsite</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">ETA: 15min</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="80" cy="100" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="340" cy="500" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- House top-left corner — translate(80, 100) -->
+      <g class="house-group" transform="translate(80, 100)">
+        <line x1="-78" y1="60" x2="78" y2="60" stroke="white" stroke-opacity="0.2" stroke-width="1" stroke-linecap="round"/>
+        <rect x="-50" y="-15" width="100" height="75" rx="2" stroke="white" stroke-opacity="0.4" stroke-width="1.8" fill="white" fill-opacity="0.06" class="house-body"/>
+        <polygon points="-58,-15 0,-58 58,-15" stroke="white" stroke-opacity="0.4" stroke-width="1.8" fill="white" fill-opacity="0.08" stroke-linejoin="round" class="house-body"/>
+        <rect x="22" y="-46" width="9" height="14" stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="white" fill-opacity="0.08"/>
+        <rect x="-9" y="22" width="18" height="38" rx="0.5" stroke="white" stroke-opacity="0.4" stroke-width="1.2" fill="white" fill-opacity="0.1"/>
+        <rect x="-38" y="0" width="20" height="20" rx="0.5" stroke="white" stroke-opacity="0.35" stroke-width="1" fill="white" fill-opacity="0.08"/>
+        <rect x="18" y="0" width="20" height="20" rx="0.5" stroke="white" stroke-opacity="0.35" stroke-width="1" fill="white" fill-opacity="0.08"/>
+
+        <g class="house-wifi-broken" transform="translate(26, -65)">
+          <path d="M -10 -2 a 14 14 0 0 1 20 0" stroke="#fca5a5" stroke-opacity="0.7" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M -6 2 a 9 9 0 0 1 12 0" stroke="#fca5a5" stroke-opacity="0.5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <line x1="-7" y1="-5" x2="7" y2="9" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+          <line x1="7" y1="-5" x2="-7" y2="9" stroke="#fca5a5" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g class="house-wifi-fixed" transform="translate(26, -65)">
+          <path d="M -10 -2 a 14 14 0 0 1 20 0" stroke="#86efac" stroke-opacity="0.85" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M -6 2 a 9 9 0 0 1 12 0" stroke="#86efac" stroke-opacity="0.85" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="0" cy="8" r="1" fill="#86efac" fill-opacity="0.9"/>
+        </g>
+      </g>
+
+      <!-- Toolbox bottom-right corner — translate(310, 510) -->
+      <g class="van-start-group" transform="translate(310, 510)">
+        <line x1="-65" y1="40" x2="65" y2="40" stroke="white" stroke-opacity="0.2" stroke-width="1" stroke-linecap="round"/>
+        <g transform="translate(0, 15)">
+          <rect x="-32" y="-15" width="64" height="30" rx="2" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="white" fill-opacity="0.08" class="van-start"/>
+          <path d="M-10 -15 L-10 -22 Q-10 -26 -7 -26 L7 -26 Q10 -26 10 -22 L10 -15" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+          <rect x="-19" y="-3" width="4" height="2" rx="0.3" fill="white" fill-opacity="0.4"/>
+          <rect x="15" y="-3" width="4" height="2" rx="0.3" fill="white" fill-opacity="0.4"/>
+          <line x1="-19" y1="-15" x2="19" y2="-15" stroke="white" stroke-opacity="0.3" stroke-width="0.6" stroke-dasharray="1.5 1.5"/>
+          <g transform="translate(-12, 4)">
+            <path d="M-2 -7 L2 -7 L3 -1 L1 0 L1 8 L-1 8 L-1 0 L-3 -1 Z" fill="white" fill-opacity="0.18"/>
+          </g>
+          <g transform="translate(0, 4)">
+            <rect x="-1.5" y="-7" width="3" height="9" rx="0.3" fill="white" fill-opacity="0.18"/>
+            <rect x="-2" y="2" width="4" height="6" rx="0.5" fill="white" fill-opacity="0.22"/>
+          </g>
+          <g transform="translate(12, 4)" stroke="white" stroke-opacity="0.4" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-2 -5 L-2 5 L4 5"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Mobile travel path (bottom-right to top-left) -->
+      <path id="travel-path-m" d="M270 525 Q200 320 140 130" stroke="white" stroke-opacity="0.18" stroke-width="1.5" fill="none" stroke-dasharray="6 6" class="road-line"/>
+
+      <!-- Mobile service van -->
+      <g class="service-van">
+        <path d="M-18 18 L-18 0 Q-18 -5 -13 -5 L-6 -5 L-1 5 L18 5 L18 18 Z" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.15" stroke-linejoin="round"/>
+        <path d="M-13 -1 L-7 -1 L-3 5 L-13 5 Z" stroke="white" stroke-opacity="0.5" stroke-width="1" fill="white" fill-opacity="0.25"/>
+        <circle cx="-11" cy="19" r="3.5" stroke="white" stroke-opacity="0.6" stroke-width="1.5" fill="white" fill-opacity="0.12"/>
+        <circle cx="12" cy="19" r="3.5" stroke="white" stroke-opacity="0.6" stroke-width="1.5" fill="white" fill-opacity="0.12"/>
+        <circle cx="-17" cy="12" r="0.8" fill="#fde68a" fill-opacity="0.8"/>
+        <animateMotion dur="9s" repeatCount="indefinite" begin="0s" keyPoints="0;0;1;1" keyTimes="0;0.1;0.5;1" calcMode="linear">
+          <mpath href="#travel-path-m"/>
+        </animateMotion>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
         <a href="/services#on-site-tech-support" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
       </p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">On-Site Tech Support</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        I come to you. Whether it's a WiFi problem, a printer that won't cooperate, a new device to set up, or general tech troubleshooting, I'll handle it at your home or business across the North Country.
-      </p>
-      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+      <h1 id="hero-wordmark">On-Site Tech Support</h1>
+      <p id="hero-tagline">I come to you. Whether it's a WiFi problem, a printer that won't cooperate, a new device to set up, or general tech troubleshooting, I'll handle it at your home or business across the North Country.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
           Book a Visit
           <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          View Pricing
-        </a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
       </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('availability').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -50,7 +305,7 @@ description="On-site tech support for homes and small businesses across the Nort
   </section>
 
   <!-- Hours & Availability -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section id="availability" style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div style="margin-bottom:2.5rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Availability</p>
@@ -249,6 +504,179 @@ description="On-site tech support for homes and small businesses across the Nort
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Pieces fade in */
+  .house-body, .van-start { animation: pieceAppear 0.8s ease 0.3s both; }
+  @keyframes pieceAppear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* 9s loop matching the van travel:
+     0-10%:  van parked at start (broken WiFi visible)
+     10-50%: van travels right → left along road
+     50%:    van arrives at house, broken → fixed
+     50-100%: van parked at house, fixed WiFi held
+  */
+  .house-wifi-broken { animation: brokenSignal 9s ease-in-out infinite; }
+  .house-wifi-fixed  { opacity: 0; animation: fixedSignal 9s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes brokenSignal {
+    0%, 48%  { opacity: 1; }
+    52%      { opacity: 0; }
+    100%     { opacity: 0; }
+  }
+  @keyframes fixedSignal {
+    0%, 48%  { opacity: 0; transform: scale(0.85); }
+    54%      { opacity: 1; transform: scale(1.15); }
+    60%, 96% { opacity: 1; transform: scale(1); }
+    100%     { opacity: 0; transform: scale(0.85); }
+  }
+
+  /* Van fades in/out — visible only during travel phase */
+  .service-van { animation: vanVisible 9s ease-in-out infinite; }
+  @keyframes vanVisible {
+    0%, 6%   { opacity: 0; }
+    12%      { opacity: 1; }
+    48%      { opacity: 1; }
+    54%, 100% { opacity: 0; }
+  }
+
+  /* Road dashed line scrolls subtly to feel like motion */
+  .road-line { animation: roadScroll 2s linear infinite; }
+  @keyframes roadScroll {
+    from { stroke-dashoffset: 0; }
+    to   { stroke-dashoffset: -32; }
+  }
+
+  /* Float icons */
+  .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-12px) rotate(15deg)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 40rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .house-body, .van-start, .house-wifi-broken, .house-wifi-fixed,
+    .service-van, .road-line,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .house-body, .van-start { opacity: 1; }
+    .house-wifi-broken { opacity: 0; }
+    .house-wifi-fixed { opacity: 1; transform: scale(1); }
+    .service-van { display: none; }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Page content (preserved exactly) */
   .onsite-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; }
   .onsite-icon { display: flex; height: 2.5rem; width: 2.5rem; align-items: center; justify-content: center; border-radius: 0.5rem; background: #dbeafe; color: #2563eb; margin-bottom: 0.75rem; }
   .onsite-icon svg { height: 1.25rem; width: 1.25rem; }
