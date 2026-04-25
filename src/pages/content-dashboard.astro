@@ -188,9 +188,9 @@ description="Update your own website without calling a developer. Jake Fixes Tec
       <ellipse cx="100" cy="180" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="320" cy="500" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- TOP: Compact editor demo — y:60 to y:180 -->
+      <!-- TOP: Compact editor demo — y:60 to y:148 (just the active field, no button inside) -->
       <g class="editor-panel" transform="translate(50, 60)">
-        <rect x="0" y="0" width="300" height="120" rx="8" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.4" stroke-width="1.2"/>
+        <rect x="0" y="0" width="300" height="88" rx="8" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.4" stroke-width="1.2"/>
         <rect x="0" y="0" width="300" height="22" rx="8" fill="white" fill-opacity="0.06"/>
         <rect x="0" y="14" width="300" height="8" fill="white" fill-opacity="0.06"/>
         <circle cx="10" cy="11" r="2.5" fill="white" fill-opacity="0.35"/>
@@ -202,56 +202,40 @@ description="Update your own website without calling a developer. Jake Fixes Tec
         <rect x="14" y="46" width="272" height="28" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.4" stroke-width="1.2"/>
         <text x="22" y="64" fill="white" font-size="11" font-weight="600" font-family="monospace" class="typed-text">Mon-Fri 9-5</text>
         <rect x="22" y="52" width="1.2" height="14" fill="white" class="caret"/>
-
-        <!-- Publish button -->
-        <g class="publish-btn">
-          <rect x="206" y="84" width="80" height="26" rx="5" fill="white" fill-opacity="0.95"/>
-          <text x="246" y="101" text-anchor="middle" fill="#1e40af" font-size="9" font-weight="800" font-family="monospace" letter-spacing="1">PUBLISH ✓</text>
-        </g>
-
-        <!-- Toast -->
-        <g class="publish-toast">
-          <rect x="14" y="84" width="150" height="26" rx="5" fill="#10b981" fill-opacity="0.2" stroke="#34d399" stroke-opacity="0.7" stroke-width="1.2"/>
-          <circle cx="27" cy="97" r="4" fill="#34d399"/>
-          <path d="M24.5 97 L26.5 99 L29.5 95.5" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="38" y="100" fill="white" fill-opacity="0.95" font-size="8" font-weight="700" font-family="monospace">Published — Live now</text>
-        </g>
       </g>
 
-      <!-- BOTTOM: Compact field cards stack — y:415 to y:533 -->
-      <g class="field-stack" transform="translate(50, 415)">
-        <text x="150" y="0" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="8" font-weight="700" font-family="monospace" letter-spacing="2">EDITABLE FIELDS</text>
+      <!-- "Published" toast floating BELOW editor — y:155 -->
+      <g class="publish-toast" transform="translate(120, 155)">
+        <rect x="0" y="0" width="160" height="22" rx="11" fill="#10b981" fill-opacity="0.25" stroke="#34d399" stroke-opacity="0.8" stroke-width="1.2"/>
+        <circle cx="14" cy="11" r="4" fill="#34d399"/>
+        <path d="M11.5 11 L13.5 13 L16.5 9" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="24" y="14" fill="white" fill-opacity="0.95" font-size="8" font-weight="700" font-family="monospace">Published — Live now</text>
+      </g>
 
-        <g transform="translate(0, 12)">
+      <!-- BOTTOM: 3 compact field cards — y:480 to y:540 (clears the button on most phones) -->
+      <g class="field-stack" transform="translate(50, 480)">
+        <g transform="translate(0, 0)">
           <g class="field-card fc-1">
-            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
-            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
-            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">HERO HEADLINE</text>
-            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">Fast Local Tech Repair</text>
+            <rect width="300" height="18" rx="4" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+            <rect x="5" y="5" width="8" height="8" rx="2" fill="white" fill-opacity="0.25"/>
+            <text x="18" y="13" fill="white" fill-opacity="0.85" font-size="7" font-weight="700" font-family="monospace">HERO HEADLINE</text>
+            <text x="295" y="13" text-anchor="end" fill="white" fill-opacity="0.5" font-size="7" font-family="monospace">Fast Local Tech Repair</text>
           </g>
         </g>
-        <g transform="translate(0, 40)">
+        <g transform="translate(0, 22)">
           <g class="field-card fc-2">
-            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
-            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
-            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">BUSINESS HOURS</text>
-            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">Mon-Fri 9-5</text>
+            <rect width="300" height="18" rx="4" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+            <rect x="5" y="5" width="8" height="8" rx="2" fill="white" fill-opacity="0.25"/>
+            <text x="18" y="13" fill="white" fill-opacity="0.85" font-size="7" font-weight="700" font-family="monospace">BUSINESS HOURS</text>
+            <text x="295" y="13" text-anchor="end" fill="white" fill-opacity="0.5" font-size="7" font-family="monospace">Mon-Fri 9-5</text>
           </g>
         </g>
-        <g transform="translate(0, 68)">
+        <g transform="translate(0, 44)">
           <g class="field-card fc-3">
-            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
-            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
-            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">PHONE</text>
-            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">(802) 234-1552</text>
-          </g>
-        </g>
-        <g transform="translate(0, 96)">
-          <g class="field-card fc-4">
-            <rect width="300" height="22" rx="5" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
-            <rect x="6" y="6" width="10" height="10" rx="2" fill="white" fill-opacity="0.25"/>
-            <text x="22" y="15" fill="white" fill-opacity="0.85" font-size="8" font-weight="700" font-family="monospace">HERO PHOTO</text>
-            <text x="298" y="15" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace">workshop.jpg</text>
+            <rect width="300" height="18" rx="4" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+            <rect x="5" y="5" width="8" height="8" rx="2" fill="white" fill-opacity="0.25"/>
+            <text x="18" y="13" fill="white" fill-opacity="0.85" font-size="7" font-weight="700" font-family="monospace">HERO PHOTO</text>
+            <text x="295" y="13" text-anchor="end" fill="white" fill-opacity="0.5" font-size="7" font-family="monospace">workshop.jpg</text>
           </g>
         </g>
       </g>
