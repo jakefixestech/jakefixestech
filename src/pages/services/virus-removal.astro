@@ -5,27 +5,305 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Virus & Malware Removal | Jake Fixes Tech — Littleton, NH"
 description="Professional virus and malware removal service in Littleton, NH. Thorough multi-tool cleaning process, data backup included, flat rate $75. Serving the North Country.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Virus and Malware Removal Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:0"/>
+          <stop offset="50%" style="stop-color:#93c5fd;stop-opacity:0.4"/>
+          <stop offset="100%" style="stop-color:#93c5fd;stop-opacity:0"/>
+        </linearGradient>
+        <clipPath id="shieldClip">
+          <path d="M0 -90 C 50 -90 80 -75 80 -45 L 80 20 C 80 60 40 95 0 110 C -40 95 -80 60 -80 20 L -80 -45 C -80 -75 -50 -90 0 -90 Z"/>
+        </clipPath>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="220" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1180" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Shield with scanning beam — translate(280, 240) -->
+      <g class="shield-group" transform="translate(280, 240)">
+        <!-- Outer pulse ring -->
+        <circle cx="0" cy="10" r="130" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none" class="shield-ring shield-ring-1"/>
+        <circle cx="0" cy="10" r="130" stroke="white" stroke-opacity="0.06" stroke-width="1" fill="none" class="shield-ring shield-ring-2"/>
+
+        <!-- Shield body -->
+        <path d="M0 -90 C 50 -90 80 -75 80 -45 L 80 20 C 80 60 40 95 0 110 C -40 95 -80 60 -80 20 L -80 -45 C -80 -75 -50 -90 0 -90 Z"
+              stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.06" class="shield-body"/>
+
+        <!-- Scan beam clipped to shield -->
+        <g clip-path="url(#shieldClip)">
+          <rect class="scan-beam" x="-90" y="0" width="180" height="40" fill="url(#scanGrad)"/>
+        </g>
+
+        <!-- Center checkmark — fades in during "all clear" phase -->
+        <g class="check-group">
+          <circle cx="0" cy="10" r="32" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08"/>
+          <polyline points="-14,10 -4,22 16,-2" stroke="white" stroke-opacity="0.85" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+
+        <!-- Crosshair / scanning element — visible during scan phase -->
+        <g class="scanning-icon">
+          <circle cx="0" cy="10" r="22" stroke="white" stroke-opacity="0.4" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+          <line x1="-30" y1="10" x2="-15" y2="10" stroke="white" stroke-opacity="0.4" stroke-width="2"/>
+          <line x1="15" y1="10" x2="30" y2="10" stroke="white" stroke-opacity="0.4" stroke-width="2"/>
+          <line x1="0" y1="-20" x2="0" y2="-5" stroke="white" stroke-opacity="0.4" stroke-width="2"/>
+          <line x1="0" y1="25" x2="0" y2="40" stroke="white" stroke-opacity="0.4" stroke-width="2"/>
+        </g>
+      </g>
+
+      <!-- RIGHT: Viruses/bugs that get caught — translate(1180, 220) -->
+      <g class="virus-zone" transform="translate(1180, 220)">
+        <!-- Virus 1: spiky blob (top-left) — outer wrapper positions, inner animates -->
+        <g transform="translate(-50, -60)">
+          <g class="virus virus-1">
+          <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.45" stroke-width="2" fill="white" fill-opacity="0.1"/>
+          <line x1="0" y1="-18" x2="0" y2="-25" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="0" y1="18" x2="0" y2="25" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="-18" y1="0" x2="-25" y2="0" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="0" x2="25" y2="0" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="-12.7" y1="-12.7" x2="-17.7" y2="-17.7" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="12.7" y1="-12.7" x2="17.7" y2="-17.7" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="-12.7" y1="12.7" x2="-17.7" y2="17.7" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="12.7" y1="12.7" x2="17.7" y2="17.7" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="-5" cy="-3" r="2.5" fill="white" fill-opacity="0.45"/>
+          <circle cx="5" cy="-3" r="2.5" fill="white" fill-opacity="0.45"/>
+          <path d="M-6 6 Q0 10 6 6" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </g>
+        </g>
+
+        <!-- Virus 2: alert circle (top-right) — outer wrapper positions, inner animates -->
+        <g transform="translate(50, -60)">
+          <g class="virus virus-2">
+            <circle cx="0" cy="0" r="20" stroke="white" stroke-opacity="0.45" stroke-width="2" fill="white" fill-opacity="0.1"/>
+            <line x1="0" y1="-10" x2="0" y2="4" stroke="white" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="0" cy="11" r="2" fill="white" fill-opacity="0.7"/>
+          </g>
+        </g>
+
+        <!-- Virus 3: warning triangle (bottom-left) — outer wrapper positions, inner animates -->
+        <g transform="translate(-50, 60)">
+          <g class="virus virus-3">
+            <polygon points="0,-22 22,18 -22,18" stroke="white" stroke-opacity="0.45" stroke-width="2" fill="white" fill-opacity="0.08" stroke-linejoin="round"/>
+            <line x1="0" y1="-8" x2="0" y2="6" stroke="white" stroke-opacity="0.7" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="0" cy="13" r="1.5" fill="white" fill-opacity="0.7"/>
+          </g>
+        </g>
+
+        <!-- Virus 4: skull-ish circle (bottom-right) — outer wrapper positions, inner animates -->
+        <g transform="translate(50, 60)">
+          <g class="virus virus-4">
+            <circle cx="0" cy="0" r="20" stroke="white" stroke-opacity="0.42" stroke-width="2" fill="white" fill-opacity="0.08"/>
+            <circle cx="-6" cy="-3" r="3" fill="white" fill-opacity="0.55"/>
+            <circle cx="6" cy="-3" r="3" fill="white" fill-opacity="0.55"/>
+            <line x1="-6" y1="8" x2="6" y2="8" stroke="white" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+            <line x1="-3" y1="6" x2="-3" y2="11" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+            <line x1="3" y1="6" x2="3" y2="11" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+          </g>
+        </g>
+
+        <!-- "Captured" checkmarks — appear when viruses are removed. Same wrapper pattern. -->
+        <g transform="translate(-50, -60)">
+          <g class="cleared-1">
+            <circle cx="0" cy="0" r="22" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+            <polyline points="-9,0 -3,8 10,-6" stroke="#86efac" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <g transform="translate(50, -60)">
+          <g class="cleared-2">
+            <circle cx="0" cy="0" r="20" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+            <polyline points="-9,0 -3,8 10,-6" stroke="#86efac" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <g transform="translate(-50, 60)">
+          <g class="cleared-3">
+            <circle cx="0" cy="0" r="22" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+            <polyline points="-9,0 -3,8 10,-6" stroke="#86efac" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <g transform="translate(50, 60)">
+          <g class="cleared-4">
+            <circle cx="0" cy="0" r="20" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+            <polyline points="-9,0 -3,8 10,-6" stroke="#86efac" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Floating padlock icon — outer wrapper -->
+      <g transform="translate(720, 90)">
+        <g class="float-icon float-tool-1" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2">
+          <rect x="-12" y="-2" width="24" height="22" rx="3"/>
+          <path d="M-7 -2 V -10 a 7 7 0 0 1 14 0 V -2"/>
+        </g>
+      </g>
+
+      <!-- Floating bug -->
+      <g transform="translate(140, 380)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.15" fill="none" stroke-width="1.5">
+          <ellipse cx="0" cy="0" rx="12" ry="14"/>
+          <line x1="-12" y1="-4" x2="-20" y2="-8"/>
+          <line x1="-12" y1="4" x2="-20" y2="8"/>
+          <line x1="12" y1="-4" x2="20" y2="-8"/>
+          <line x1="12" y1="4" x2="20" y2="8"/>
+          <line x1="0" y1="-14" x2="-4" y2="-22"/>
+          <line x1="0" y1="-14" x2="4" y2="-22"/>
+        </g>
+      </g>
+
+      <!-- Floating shield-check icon -->
+      <g transform="translate(1280, 100)">
+        <g class="float-icon float-tool-3" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2">
+          <path d="M0 -16 L 14 -10 V 4 C 14 12 0 18 0 18 C 0 18 -14 12 -14 4 V -10 Z"/>
+          <polyline points="-6,0 -2,5 7,-5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// scan</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// quarantine</text>
+        <text x="1180" y="450" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// secure</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">threats: 0</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="scanGradM" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:0"/>
+          <stop offset="50%" style="stop-color:#93c5fd;stop-opacity:0.4"/>
+          <stop offset="100%" style="stop-color:#93c5fd;stop-opacity:0"/>
+        </linearGradient>
+        <clipPath id="shieldClipM">
+          <path d="M0 -55 C 30 -55 50 -45 50 -28 L 50 12 C 50 38 25 60 0 68 C -25 60 -50 38 -50 12 L -50 -28 C -50 -45 -30 -55 0 -55 Z"/>
+        </clipPath>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="80" cy="100" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="340" cy="500" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Shield tucked into TOP-LEFT — translate(60, 90) -->
+      <g class="shield-group" transform="translate(60, 90)">
+        <circle cx="0" cy="6" r="80" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none" class="shield-ring shield-ring-1"/>
+        <path d="M0 -55 C 30 -55 50 -45 50 -28 L 50 12 C 50 38 25 60 0 68 C -25 60 -50 38 -50 12 L -50 -28 C -50 -45 -30 -55 0 -55 Z"
+              stroke="white" stroke-opacity="0.4" stroke-width="2" fill="white" fill-opacity="0.06" class="shield-body"/>
+        <g clip-path="url(#shieldClipM)">
+          <rect class="scan-beam-m" x="-55" y="0" width="110" height="24" fill="url(#scanGradM)"/>
+        </g>
+        <g class="check-group">
+          <circle cx="0" cy="6" r="20" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <polyline points="-9,6 -2,13 10,-2" stroke="white" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g class="scanning-icon">
+          <circle cx="0" cy="6" r="14" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+        </g>
+      </g>
+
+      <!-- Viruses tucked into BOTTOM-RIGHT — translate(310, 480) -->
+      <g class="virus-zone" transform="translate(310, 480)">
+        <g transform="translate(-30, -30)">
+          <g class="virus virus-1">
+            <circle cx="0" cy="0" r="14" stroke="white" stroke-opacity="0.45" stroke-width="1.5" fill="white" fill-opacity="0.1"/>
+            <line x1="0" y1="-14" x2="0" y2="-20" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="0" y1="14" x2="0" y2="20" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="-14" y1="0" x2="-20" y2="0" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="14" y1="0" x2="20" y2="0" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="-4" cy="-3" r="2" fill="white" fill-opacity="0.45"/>
+            <circle cx="4" cy="-3" r="2" fill="white" fill-opacity="0.45"/>
+          </g>
+        </g>
+        <g transform="translate(35, -10)">
+          <g class="virus virus-2">
+            <polygon points="0,-15 14,12 -14,12" stroke="white" stroke-opacity="0.45" stroke-width="1.5" fill="white" fill-opacity="0.08" stroke-linejoin="round"/>
+            <line x1="0" y1="-5" x2="0" y2="4" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="0" cy="9" r="1.2" fill="white" fill-opacity="0.7"/>
+          </g>
+        </g>
+        <g transform="translate(-30, 35)">
+          <g class="virus virus-3">
+            <ellipse cx="0" cy="0" rx="12" ry="14" stroke="white" stroke-opacity="0.42" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+            <circle cx="-3" cy="-4" r="1.5" fill="white" fill-opacity="0.5"/>
+            <circle cx="3" cy="-4" r="1.5" fill="white" fill-opacity="0.5"/>
+          </g>
+        </g>
+        <g transform="translate(-30, -30)">
+          <g class="cleared-1">
+            <circle cx="0" cy="0" r="14" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+            <polyline points="-6,0 -2,5 7,-4" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <g transform="translate(35, -10)">
+          <g class="cleared-2">
+            <circle cx="0" cy="0" r="14" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+            <polyline points="-6,0 -2,5 7,-4" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <g transform="translate(-30, 35)">
+          <g class="cleared-3">
+            <circle cx="0" cy="0" r="14" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+            <polyline points="-6,0 -2,5 7,-4" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
         <a href="/services#virus-removal" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
       </p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Virus & Malware Removal</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        A thorough, multi-tool cleaning process that goes far beyond a single scan. Works on Windows, Mac, Linux, ChromeOS and even mobile devices. Your data is backed up first and your device comes back clean inside and out.
-      </p>
-      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+      <h1 id="hero-wordmark">Virus &amp; Malware Removal</h1>
+      <p id="hero-tagline">A thorough, multi-tool cleaning process that goes far beyond a single scan. Works on Windows, Mac, Linux, ChromeOS and even mobile devices. Your data is backed up first and your device comes back clean inside and out.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
           Book a Repair
           <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          View Pricing
-        </a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
       </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('approach-section').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -50,7 +328,7 @@ description="Professional virus and malware removal service in Littleton, NH. Th
   </section>
 
   <!-- My Approach -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section id="approach-section" style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div style="margin-bottom:2.5rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">My Approach</p>
@@ -224,6 +502,219 @@ description="Professional virus and malware removal service in Littleton, NH. Th
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Shield body entrance */
+  .shield-body { animation: shieldAppear 0.9s cubic-bezier(0.34,1.56,0.64,1) 0.3s both; transform-origin: center; }
+  @keyframes shieldAppear {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* Outer ring pulse */
+  .shield-ring-1 { animation: ringPulse 4s ease-in-out infinite; }
+  .shield-ring-2 { animation: ringPulse 4s ease-in-out infinite 0.8s; }
+  @keyframes ringPulse {
+    0%,100% { stroke-opacity: 0.04; }
+    50%     { stroke-opacity: 0.18; }
+  }
+
+  /* 8s loop:
+     0-50%: scan beam sweeps top to bottom, viruses visible, scanning crosshair shown
+     50-55%: viruses fade, cleared checkmarks fade in
+     55-95%: cleared state holds, big checkmark on shield
+     95-100%: reset
+  */
+
+  .scan-beam { animation: scanSweep 8s ease-in-out infinite; }
+  .scan-beam-m { animation: scanSweepM 8s ease-in-out infinite; }
+  @keyframes scanSweep {
+    0%   { transform: translateY(-100px); opacity: 0; }
+    5%   { opacity: 1; }
+    45%  { transform: translateY(110px); opacity: 1; }
+    50%  { transform: translateY(110px); opacity: 0; }
+    100% { transform: translateY(110px); opacity: 0; }
+  }
+  @keyframes scanSweepM {
+    0%   { transform: translateY(-65px); opacity: 0; }
+    5%   { opacity: 1; }
+    45%  { transform: translateY(70px); opacity: 1; }
+    50%  { transform: translateY(70px); opacity: 0; }
+    100% { transform: translateY(70px); opacity: 0; }
+  }
+
+  .scanning-icon { animation: scanIconCycle 8s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes scanIconCycle {
+    0%, 50%   { opacity: 1; }
+    55%, 100% { opacity: 0; }
+  }
+
+  .check-group { opacity: 0; animation: checkCycle 8s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes checkCycle {
+    0%, 50%   { opacity: 0; transform: scale(0.7); }
+    58%       { opacity: 1; transform: scale(1.15); }
+    65%, 95%  { opacity: 1; transform: scale(1); }
+    100%      { opacity: 0; transform: scale(0.7); }
+  }
+
+  /* Viruses + cleared checkmarks share the same cycle, opposite phase */
+  .virus { animation: virusCycle 8s ease-in-out infinite; transform-origin: center; }
+  .virus-1 { animation-delay: 0s; }
+  .virus-2 { animation-delay: 0.2s; }
+  .virus-3 { animation-delay: 0.4s; }
+  .virus-4 { animation-delay: 0.6s; }
+  @keyframes virusCycle {
+    0%, 45% { opacity: 1; transform: scale(1); }
+    52%     { opacity: 0; transform: scale(0.6); }
+    100%    { opacity: 0; transform: scale(0.6); }
+  }
+
+  .cleared-1, .cleared-2, .cleared-3, .cleared-4 {
+    opacity: 0;
+    animation: clearedCycle 8s ease-in-out infinite;
+    transform-origin: center;
+  }
+  .cleared-1 { animation-delay: 0s; }
+  .cleared-2 { animation-delay: 0.2s; }
+  .cleared-3 { animation-delay: 0.4s; }
+  .cleared-4 { animation-delay: 0.6s; }
+  @keyframes clearedCycle {
+    0%, 50%  { opacity: 0; transform: scale(0.5); }
+    58%      { opacity: 1; transform: scale(1.15); }
+    65%, 95% { opacity: 1; transform: scale(1); }
+    100%     { opacity: 0; transform: scale(0.5); }
+  }
+
+  /* Float icons */
+  .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2rem, 5.5vw, 3.25rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 40rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .shield-body, .shield-ring-1, .shield-ring-2, .scan-beam, .scan-beam-m,
+    .scanning-icon, .check-group, .virus, .cleared-1, .cleared-2, .cleared-3, .cleared-4,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .shield-body { opacity: 1; transform: scale(1); }
+    .scan-beam, .scan-beam-m { opacity: 0; }
+    .check-group { opacity: 1; transform: scale(1); }
+    .scanning-icon { opacity: 0; }
+    .virus { opacity: 0; }
+    .cleared-1, .cleared-2, .cleared-3, .cleared-4 { opacity: 1; transform: scale(1); }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Page content styles (preserved exactly) */
   .step-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .step-number { font-size: 1.1rem; font-weight: 800; height: 2.5rem; width: 2.5rem; min-width: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .step-title { font-size: 1rem; font-weight: 700; color: #111827; margin-bottom: 0.375rem; }
