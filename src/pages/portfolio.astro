@@ -140,22 +140,266 @@ const sites = [
   description="Browse example websites built by Jake Fixes Tech. Starter, Professional and Premium package examples showing real-world results for small businesses."
 >
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem 5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">Portfolio</p>
-      <h1 style="margin-top:0.5rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Example Websites</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;font-size:1.1rem;line-height:1.75;max-width:42rem;margin-left:auto;margin-right:auto;">
-        Every example site is mobile responsive, WCAG AA accessible, scores 10/10 on WAVE and 100/100 on Lighthouse. This is the standard I hold all my work to.
-      </p>
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-top:1.5rem;">
-        <span class="score-badge">✅ 10/10 WAVE</span>
-        <span class="score-badge">✅ 100/100 Lighthouse</span>
-        <span class="score-badge">✅ WCAG AA</span>
-        <span class="score-badge">✅ Mobile Responsive</span>
-      </div>
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Website portfolio examples">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="320" cy="240" rx="360" ry="240" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1180" cy="320" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: stacked browser window frames - back, middle, front -->
+      <g class="window-stack" transform="translate(90, 130)">
+        <!-- Back window -->
+        <g class="win win-back">
+          <rect x="80" y="70" width="280" height="190" rx="8" stroke="white" stroke-opacity="0.18" stroke-width="1.5" fill="white" fill-opacity="0.04"/>
+          <rect x="80" y="70" width="280" height="22" rx="8" fill="white" fill-opacity="0.08"/>
+          <circle cx="95" cy="81" r="3" fill="white" fill-opacity="0.3"/>
+          <circle cx="107" cy="81" r="3" fill="white" fill-opacity="0.3"/>
+          <circle cx="119" cy="81" r="3" fill="white" fill-opacity="0.3"/>
+          <line x1="100" y1="115" x2="280" y2="115" stroke="white" stroke-opacity="0.15" stroke-width="2"/>
+          <line x1="100" y1="135" x2="240" y2="135" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+          <line x1="100" y1="155" x2="260" y2="155" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+        </g>
+        <!-- Middle window -->
+        <g class="win win-mid">
+          <rect x="40" y="40" width="280" height="200" rx="8" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+          <rect x="40" y="40" width="280" height="24" rx="8" fill="white" fill-opacity="0.1"/>
+          <circle cx="56" cy="52" r="3.5" fill="white" fill-opacity="0.4"/>
+          <circle cx="69" cy="52" r="3.5" fill="white" fill-opacity="0.4"/>
+          <circle cx="82" cy="52" r="3.5" fill="white" fill-opacity="0.4"/>
+          <line x1="60" y1="88" x2="300" y2="88" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+          <line x1="60" y1="112" x2="240" y2="112" stroke="white" stroke-opacity="0.16" stroke-width="2"/>
+          <line x1="60" y1="136" x2="260" y2="136" stroke="white" stroke-opacity="0.16" stroke-width="2"/>
+          <rect x="60" y="160" width="80" height="50" rx="4" stroke="white" stroke-opacity="0.18" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+          <rect x="150" y="160" width="80" height="50" rx="4" stroke="white" stroke-opacity="0.18" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+        </g>
+        <!-- Front window (most prominent) -->
+        <g class="win win-front">
+          <rect x="0" y="0" width="280" height="210" rx="8" stroke="white" stroke-opacity="0.3" stroke-width="2" fill="white" fill-opacity="0.08"/>
+          <rect x="0" y="0" width="280" height="26" rx="8" fill="white" fill-opacity="0.13"/>
+          <circle cx="18" cy="13" r="4" fill="white" fill-opacity="0.55"/>
+          <circle cx="32" cy="13" r="4" fill="white" fill-opacity="0.55"/>
+          <circle cx="46" cy="13" r="4" fill="white" fill-opacity="0.55"/>
+          <!-- URL bar -->
+          <rect x="65" y="6" width="200" height="14" rx="3" fill="white" fill-opacity="0.12"/>
+          <text x="75" y="16" font-size="9" font-family="ui-monospace, monospace" fill="white" fill-opacity="0.45">jakefixestech.com</text>
+          <!-- Hero block -->
+          <rect x="20" y="44" width="240" height="60" rx="4" fill="white" fill-opacity="0.08" class="win-hero"/>
+          <line x1="32" y1="64" x2="180" y2="64" stroke="white" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round" class="win-line wl-1"/>
+          <line x1="32" y1="78" x2="220" y2="78" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" class="win-line wl-2"/>
+          <line x1="32" y1="90" x2="160" y2="90" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" class="win-line wl-3"/>
+          <!-- Card grid -->
+          <rect x="20" y="120" width="74" height="74" rx="4" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.06" class="win-card wc-1"/>
+          <rect x="103" y="120" width="74" height="74" rx="4" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.06" class="win-card wc-2"/>
+          <rect x="186" y="120" width="74" height="74" rx="4" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.06" class="win-card wc-3"/>
+        </g>
+      </g>
+
+      <!-- RIGHT: Lighthouse-style score gauges -->
+      <g class="score-panel" transform="translate(895, 140)">
+        <!-- Gauge 1: 100 Performance -->
+        <g class="gauge gauge-1">
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.15" stroke-width="4" fill="none"/>
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.7" stroke-width="4" fill="none"
+            stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round"
+            transform="rotate(-90 40 40)" class="gauge-arc gauge-arc-1"/>
+          <text x="40" y="46" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="20" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-1">100</text>
+          <text x="40" y="92" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="9" font-family="ui-monospace, monospace" letter-spacing="1">PERF</text>
+        </g>
+        <!-- Gauge 2: 100 Accessibility -->
+        <g class="gauge gauge-2" transform="translate(85, 0)">
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.15" stroke-width="4" fill="none"/>
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.7" stroke-width="4" fill="none"
+            stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round"
+            transform="rotate(-90 40 40)" class="gauge-arc gauge-arc-2"/>
+          <text x="40" y="46" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="20" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-2">100</text>
+          <text x="40" y="92" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="9" font-family="ui-monospace, monospace" letter-spacing="1">ACCESS</text>
+        </g>
+        <!-- Gauge 3: 100 Best Practices -->
+        <g class="gauge gauge-3" transform="translate(170, 0)">
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.15" stroke-width="4" fill="none"/>
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.7" stroke-width="4" fill="none"
+            stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round"
+            transform="rotate(-90 40 40)" class="gauge-arc gauge-arc-3"/>
+          <text x="40" y="46" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="20" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-3">100</text>
+          <text x="40" y="92" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="9" font-family="ui-monospace, monospace" letter-spacing="1">BEST</text>
+        </g>
+        <!-- Gauge 4: 100 SEO -->
+        <g class="gauge gauge-4" transform="translate(255, 0)">
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.15" stroke-width="4" fill="none"/>
+          <circle cx="40" cy="40" r="32" stroke="white" stroke-opacity="0.7" stroke-width="4" fill="none"
+            stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round"
+            transform="rotate(-90 40 40)" class="gauge-arc gauge-arc-4"/>
+          <text x="40" y="46" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="20" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-4">100</text>
+          <text x="40" y="92" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="9" font-family="ui-monospace, monospace" letter-spacing="1">SEO</text>
+        </g>
+        <!-- WAVE 10/10 stamp — outer group positions, inner group animates opacity only -->
+        <g transform="translate(105, 130)">
+          <g class="wave-stamp">
+            <rect x="0" y="0" width="120" height="36" rx="4" stroke="white" stroke-opacity="0.45" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="112" height="28" rx="2" stroke="white" stroke-opacity="0.2" stroke-width="1" fill="none"/>
+            <text x="60" y="24" text-anchor="middle" fill="white" fill-opacity="0.7" font-size="13" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="900">WAVE 10/10</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Cursor moving from windows toward gauges, with click flash -->
+      <g class="cursor-group">
+        <g class="cursor-shape">
+          <path d="M0 0 L0 16 L4 12 L7 18 L10 17 L7 11 L13 11 Z"
+                fill="white" fill-opacity="0.8" stroke="#1e3a8a" stroke-width="1"/>
+        </g>
+        <circle class="click-pulse" cx="0" cy="0" r="3" fill="white" fill-opacity="0"/>
+      </g>
+
+      <!-- AMBIENT MONOSPACE CODE/LABELS -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="80" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">&lt;header /&gt;</text>
+        <text x="120" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">&lt;section /&gt;</text>
+        <text x="660" y="90" font-size="11" fill-opacity="0.11" class="code-tw ct-c">&lt;footer /&gt;</text>
+        <text x="700" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-d">.css {`{ ... }`}</text>
+        <text x="900" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-a">build · ship</text>
+        <text x="600" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-c">10/10</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">100/100</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="320" cy="500" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Browser window - top center -->
+      <g class="window-stack" transform="translate(60, 80)">
+        <g class="win win-mid">
+          <rect x="14" y="14" width="280" height="180" rx="6" stroke="white" stroke-opacity="0.2" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+        </g>
+        <g class="win win-front">
+          <rect x="0" y="0" width="280" height="190" rx="6" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.08"/>
+          <rect x="0" y="0" width="280" height="22" rx="6" fill="white" fill-opacity="0.13"/>
+          <circle cx="14" cy="11" r="3" fill="white" fill-opacity="0.55"/>
+          <circle cx="26" cy="11" r="3" fill="white" fill-opacity="0.55"/>
+          <circle cx="38" cy="11" r="3" fill="white" fill-opacity="0.55"/>
+          <rect x="55" y="5" width="210" height="12" rx="3" fill="white" fill-opacity="0.12"/>
+          <rect x="20" y="38" width="240" height="50" rx="4" fill="white" fill-opacity="0.08"/>
+          <line x1="32" y1="58" x2="180" y2="58" stroke="white" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round" class="win-line wl-1"/>
+          <line x1="32" y1="72" x2="220" y2="72" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" class="win-line wl-2"/>
+          <rect x="20" y="100" width="74" height="74" rx="4" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.06" class="win-card wc-1"/>
+          <rect x="103" y="100" width="74" height="74" rx="4" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.06" class="win-card wc-2"/>
+          <rect x="186" y="100" width="74" height="74" rx="4" stroke="white" stroke-opacity="0.22" stroke-width="1.5" fill="white" fill-opacity="0.06" class="win-card wc-3"/>
+        </g>
+      </g>
+
+      <!-- Score gauges row - bottom -->
+      <g class="score-panel" transform="translate(40, 380)">
+        <g class="gauge gauge-1">
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.15" stroke-width="3" fill="none"/>
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.7" stroke-width="3" fill="none"
+            stroke-dasharray="163" stroke-dashoffset="163" stroke-linecap="round"
+            transform="rotate(-90 32 32)" class="gauge-arc gauge-arc-1"/>
+          <text x="32" y="37" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="14" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-1">100</text>
+        </g>
+        <g class="gauge gauge-2" transform="translate(80, 0)">
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.15" stroke-width="3" fill="none"/>
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.7" stroke-width="3" fill="none"
+            stroke-dasharray="163" stroke-dashoffset="163" stroke-linecap="round"
+            transform="rotate(-90 32 32)" class="gauge-arc gauge-arc-2"/>
+          <text x="32" y="37" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="14" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-2">100</text>
+        </g>
+        <g class="gauge gauge-3" transform="translate(160, 0)">
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.15" stroke-width="3" fill="none"/>
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.7" stroke-width="3" fill="none"
+            stroke-dasharray="163" stroke-dashoffset="163" stroke-linecap="round"
+            transform="rotate(-90 32 32)" class="gauge-arc gauge-arc-3"/>
+          <text x="32" y="37" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="14" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-3">100</text>
+        </g>
+        <g class="gauge gauge-4" transform="translate(240, 0)">
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.15" stroke-width="3" fill="none"/>
+          <circle cx="32" cy="32" r="26" stroke="white" stroke-opacity="0.7" stroke-width="3" fill="none"
+            stroke-dasharray="163" stroke-dashoffset="163" stroke-linecap="round"
+            transform="rotate(-90 32 32)" class="gauge-arc gauge-arc-4"/>
+          <text x="32" y="37" text-anchor="middle" fill="white" fill-opacity="0.85" font-size="14" font-weight="900" font-family="ui-monospace, monospace" class="gauge-num gauge-num-4">100</text>
+        </g>
+        <!-- WAVE stamp below — outer group positions, inner animates opacity -->
+        <g transform="translate(95, 80)">
+          <g class="wave-stamp">
+            <rect x="0" y="0" width="130" height="32" rx="4" stroke="white" stroke-opacity="0.45" stroke-width="1.8" fill="none"/>
+            <text x="65" y="22" text-anchor="middle" fill="white" fill-opacity="0.7" font-size="13" font-family="ui-monospace, monospace" letter-spacing="2" font-weight="900">WAVE 10/10</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Ambient code labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="30" y="290" font-size="10" fill-opacity="0.1" class="code-tw ct-a">&lt;header /&gt;</text>
+        <text x="280" y="290" font-size="10" fill-opacity="0.1" class="code-tw ct-b">100/100</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">PORTFOLIO · LIVE EXAMPLES</p>
+      <h1 id="hero-wordmark">Sites I've Built</h1>
+      <p id="hero-tagline">Every example is mobile responsive, WCAG AA accessible, scores 10/10 on WAVE, and 100s across the board on Lighthouse. That's the standard — every time.</p>
+      <a href="/contact" id="hero-cta">
+        Contact Jake
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('portfolio-list').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- Score Banner -->
+  <section style="background:#1e40af;padding:1.25rem 1.5rem;">
+    <div style="max-width:80rem;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;">
+      <span class="score-badge">✅ 10/10 WAVE ACCESS</span>
+      <span class="score-badge">✅ 100/100 Best Practices</span>
+      <span class="score-badge">✅ WCAG AA</span>
+      <span class="score-badge">✅ Mobile Responsive</span>
     </div>
   </section>
 
@@ -189,7 +433,6 @@ const sites = [
           class={`portfolio-row ${index % 2 === 1 ? 'reverse' : ''}`}
           aria-label={`View ${site.name} example website`}
         >
-          <!-- Image -->
           <div class="portfolio-img-wrap">
             <img
               src={site.image}
@@ -200,7 +443,6 @@ const sites = [
             />
           </div>
 
-          <!-- Text -->
           <div class="portfolio-text">
             <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
               <span class="tier-pill" style={`background:${site.tierBg};color:${site.tierColor};`}>{site.tierLabel}</span>
@@ -269,6 +511,172 @@ const sites = [
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Window stack entrance */
+  .win-back  { opacity: 0; animation: winSlide 0.7s ease 0.4s both; transform-origin: center; }
+  .win-mid   { opacity: 0; animation: winSlide 0.7s ease 0.6s both; transform-origin: center; }
+  .win-front { opacity: 0; animation: winSlide 0.7s ease 0.8s both; transform-origin: center; }
+  @keyframes winSlide {
+    from { opacity: 0; transform: translateY(20px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Window content lines draw in */
+  .win-line { stroke-dasharray: 220; stroke-dashoffset: 220; animation: drawLine 0.6s ease forwards; }
+  .wl-1 { animation-delay: 1.2s; }
+  .wl-2 { animation-delay: 1.4s; }
+  .wl-3 { animation-delay: 1.6s; }
+  @keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+  .win-card { opacity: 0; animation: cardPop 0.4s cubic-bezier(0.34,1.56,0.64,1) both; }
+  .wc-1 { animation-delay: 1.7s; }
+  .wc-2 { animation-delay: 1.85s; }
+  .wc-3 { animation-delay: 2.0s; }
+  @keyframes cardPop {
+    from { opacity: 0; transform: translateY(8px) scale(0.9); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Lighthouse gauges fill in */
+  .gauge-arc-1 { animation: gaugeFill 1.2s ease 2.2s forwards; }
+  .gauge-arc-2 { animation: gaugeFill 1.2s ease 2.5s forwards; }
+  .gauge-arc-3 { animation: gaugeFill 1.2s ease 2.8s forwards; }
+  .gauge-arc-4 { animation: gaugeFill 1.2s ease 3.1s forwards; }
+  @keyframes gaugeFill {
+    from { stroke-dashoffset: 201; }
+    to   { stroke-dashoffset: 0; }
+  }
+
+  .gauge-num { opacity: 0; animation: fadeIn 0.4s ease both; }
+  .gauge-num-1 { animation-delay: 3.0s; }
+  .gauge-num-2 { animation-delay: 3.3s; }
+  .gauge-num-3 { animation-delay: 3.6s; }
+  .gauge-num-4 { animation-delay: 3.9s; }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+  /* WAVE stamp — opacity-only animation; outer group handles positioning */
+  .wave-stamp { opacity: 0; animation: stampFade 0.6s ease 4.2s forwards; }
+  @keyframes stampFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Cursor — slow loop with real pauses: hover window → move → hover gauge → click → return */
+  .cursor-group { animation: cursorPath 14s ease-in-out infinite 1.5s; }
+  @keyframes cursorPath {
+    /* Pause hovering over a card in the front window for ~3s */
+    0%   { transform: translate(290px, 290px); }
+    20%  { transform: translate(290px, 290px); }
+    /* Slow drift toward gauges over ~2s */
+    30%  { transform: translate(620px, 230px); }
+    /* Pause mid-route briefly */
+    40%  { transform: translate(620px, 230px); }
+    /* Glide to gauges over ~2s, settle on gauge */
+    52%  { transform: translate(960px, 200px); }
+    /* Hold on gauge for click moment */
+    62%  { transform: translate(960px, 200px); }
+    /* Drift back slowly */
+    80%  { transform: translate(620px, 250px); }
+    /* Final pause back near windows */
+    92%  { transform: translate(290px, 290px); }
+    100% { transform: translate(290px, 290px); }
+  }
+  .click-pulse {
+    transform-origin: center;
+    animation: clickPulse 14s ease-out infinite 1.5s;
+  }
+  @keyframes clickPulse {
+    /* Click happens during the gauge-hover hold, around 56-58% */
+    0%, 55%, 60%, 100% { r: 0; opacity: 0; }
+    57%                 { r: 16; opacity: 0.7; }
+  }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 48rem;
+  }
+  .hero-label { font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin:0;opacity:0;animation:fadeUp 0.6s ease 0.3s forwards; }
+  #hero-wordmark { font-size:clamp(2.25rem,6vw,3.5rem);font-weight:900;color:white;margin:0;line-height:1.1;text-shadow:0 2px 30px rgba(0,0,0,0.3);opacity:0;animation:fadeUp 0.7s ease 0.6s forwards; }
+  #hero-tagline { font-size:clamp(0.875rem,1.8vw,1rem);color:#bfdbfe;margin:0;max-width:38rem;line-height:1.75;opacity:0;animation:fadeUp 0.6s ease 0.9s forwards; }
+  #hero-cta { display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;opacity:0;animation:fadeUp 0.6s ease 1.2s forwards;transition:transform 0.2s,box-shadow 0.2s; }
+  #hero-cta:hover { transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+  #scroll-hint {
+    position:absolute; bottom:1.5rem; left:50%;
+    transform:translateX(-50%);
+    color:rgba(255,255,255,0.85);
+    animation:scrollBounce 2s ease-in-out infinite, fadeUp 0.6s ease 1.6s both;
+    opacity:0; z-index:2; cursor:pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100%{transform:translateX(-50%) translateY(0)}
+    50%{transform:translateX(-50%) translateY(6px)}
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height:70vh;min-height:440px; }
+    .hero-bg-desktop { display:none; }
+    .hero-bg-mobile  { display:block; }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+    .win-back,.win-mid,.win-front,.win-line,.win-card,
+    .gauge-arc-1,.gauge-arc-2,.gauge-arc-3,.gauge-arc-4,
+    .gauge-num,.wave-stamp,.cursor-group,.click-pulse,
+    .code-tw,.glow-orb-1,.glow-orb-2,#scroll-hint { animation: none; }
+    .hero-label,#hero-wordmark,#hero-tagline,#hero-cta,#scroll-hint { opacity:1; transform:none; }
+    .win-back,.win-mid,.win-front,.win-card,.gauge-num,.wave-stamp { opacity:1; }
+    .win-line { stroke-dashoffset: 0; }
+    .gauge-arc-1,.gauge-arc-2,.gauge-arc-3,.gauge-arc-4 { stroke-dashoffset: 0; }
+    .code-tw { opacity: 0.7; }
+    .cursor-group { display: none; }
+  }
+
+  /* Score badges */
   .score-badge {
     background: rgba(255,255,255,0.15);
     color: white;
@@ -279,24 +687,18 @@ const sites = [
     border: 1px solid rgba(255,255,255,0.25);
   }
 
+  /* Filter & portfolio */
   .filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
     justify-content: center;
     background: white;
     padding: 1.25rem 1.5rem;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    position: sticky; top: 0; z-index: 10;
   }
-
   .filter-tab {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
+    display: inline-flex; align-items: center; gap: 0.375rem;
     padding: 0.5rem 1.125rem;
     border-radius: 9999px;
     border: 2px solid #e5e7eb;
@@ -307,115 +709,64 @@ const sites = [
     cursor: pointer;
     transition: all 0.15s;
   }
-
   .filter-tab:hover { border-color: #2563eb; color: #2563eb; }
   .filter-tab.active { background: #2563eb; border-color: #2563eb; color: white; }
   .tab-price { font-size: 0.75rem; font-weight: 500; color: inherit; }
 
   .portfolio-row {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background: white;
-    border-radius: 1rem;
-    overflow: hidden;
+    display: flex; flex-direction: column;
+    gap: 2rem; background: white;
+    border-radius: 1rem; overflow: hidden;
     box-shadow: 0 2px 16px rgba(0,0,0,0.07);
     text-decoration: none;
     transition: box-shadow 0.2s, transform 0.2s;
   }
-
   .portfolio-row:hover {
     box-shadow: 0 8px 32px rgba(0,0,0,0.13);
     transform: translateY(-2px);
   }
-
-  .portfolio-img-wrap {
-    width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-
+  .portfolio-img-wrap { width: 100%; overflow: hidden; flex-shrink: 0; }
   .portfolio-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    object-position: top;
+    width: 100%; height: 240px;
+    object-fit: cover; object-position: top;
     display: block;
     transition: transform 0.4s ease;
   }
-
-  .portfolio-row:hover .portfolio-img {
-    transform: scale(1.02);
-  }
-
-  .portfolio-text {
-    padding: 2rem;
-  }
+  .portfolio-row:hover .portfolio-img { transform: scale(1.02); }
+  .portfolio-text { padding: 2rem; }
 
   .tier-pill {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
   }
-
   .view-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: inline-flex; align-items: center; gap: 0.5rem;
     color: #2563eb;
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: 0.9rem; font-weight: 700;
   }
-
   .coming-soon-row {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    display: flex; align-items: center; gap: 1.5rem;
     background: white;
-    border-radius: 1rem;
-    padding: 2rem;
+    border-radius: 1rem; padding: 2rem;
     box-shadow: 0 2px 16px rgba(0,0,0,0.07);
     border: 2px dashed #e5e7eb;
   }
-
-  .coming-soon-icon {
-    font-size: 2.5rem;
-    flex-shrink: 0;
-  }
-
+  .coming-soon-icon { font-size: 2.5rem; flex-shrink: 0; }
   .portfolio-item[hidden] { display: none; }
 
   @media (min-width: 768px) {
-    .portfolio-row {
-      flex-direction: row;
-      min-height: 22rem;
-    }
-
-    .portfolio-row.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .portfolio-img-wrap {
-      width: 50%;
-    }
-
-    .portfolio-img {
-      height: 100%;
-    }
-
+    .portfolio-row { flex-direction: row; min-height: 22rem; }
+    .portfolio-row.reverse { flex-direction: row-reverse; }
+    .portfolio-img-wrap { width: 50%; }
+    .portfolio-img { height: 100%; }
     .portfolio-text {
-      width: 50%;
-      padding: 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      width: 50%; padding: 3rem;
+      display: flex; flex-direction: column; justify-content: center;
     }
   }
-
   @media (min-width: 1024px) {
     .portfolio-img-wrap { width: 55%; }
     .portfolio-text { width: 45%; }
@@ -423,12 +774,13 @@ const sites = [
 </style>
 
 <script>
-  const tabs = document.querySelectorAll<HTMLButtonElement>('.filter-tab');
-  const items = document.querySelectorAll<HTMLElement>('.portfolio-item');
+  // @ts-nocheck
+  const tabs = document.querySelectorAll('.filter-tab');
+  const items = document.querySelectorAll('.portfolio-item');
   const countEl = document.getElementById('results-count');
   const emptyState = document.getElementById('empty-state');
 
-  function updateCount(filter: string) {
+  function updateCount(filter) {
     const visible = filter === 'all'
       ? items.length
       : [...items].filter(c => c.dataset.tier === filter).length;
@@ -440,7 +792,7 @@ const sites = [
     }
   }
 
-  function filterItems(filter: string) {
+  function filterItems(filter) {
     items.forEach(item => {
       item.hidden = filter !== 'all' && item.dataset.tier !== filter;
     });
