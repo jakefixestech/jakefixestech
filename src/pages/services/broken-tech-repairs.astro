@@ -5,27 +5,314 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Broken Tech Repairs | Jake Fixes Tech — Littleton, NH"
 description="Broken laptop, desktop, Chromebook, gaming console or handheld? I diagnose and repair a wide range of broken devices. $50 diagnostic fee applied to your repair. Serving Littleton NH and the North Country.">
 
-  <!-- Header Banner -->
-  <section style="position:relative;overflow:hidden;background-color:rgb(30,64,175);">
-    <img src="/hero.jpg" alt="Professional tech workspace with dual monitors" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,64,175,0.88),rgba(37,99,235,0.88));z-index:1;"></div>
-    <div style="max-width:56rem;margin:0 auto;padding:4rem 1.5rem 5rem 1.5rem;text-align:center;position:relative;z-index:2;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;">
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Broken Tech Repairs Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="220" cy="200" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1220" cy="340" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Broken devices being repaired — translate(280, 240) -->
+      <g class="devices-group" transform="translate(280, 240)">
+
+        <!-- Device 1: Laptop with cracked screen (top) -->
+        <g transform="translate(-110, -110)">
+          <g class="device device-1">
+            <!-- Laptop base -->
+            <path d="M-15 80 L155 80 L165 92 L-25 92 Z" stroke="white" stroke-opacity="0.3" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+            <!-- Laptop screen frame -->
+            <rect x="0" y="0" width="140" height="80" rx="3" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+            <rect x="6" y="6" width="128" height="68" rx="2" fill="white" fill-opacity="0.05"/>
+            <!-- Cracks (visible during broken phase) -->
+            <g class="broken-state d1-broken" stroke="white" stroke-opacity="0.7" stroke-width="1.2" fill="none" stroke-linecap="round">
+              <circle cx="60" cy="40" r="2" fill="white" fill-opacity="0.5"/>
+              <path d="M60 40 L25 14"/>
+              <path d="M60 40 L18 56"/>
+              <path d="M60 40 L42 78"/>
+              <path d="M60 40 L100 18"/>
+              <path d="M60 40 L120 60"/>
+              <path d="M60 40 L130 78"/>
+            </g>
+            <!-- Fixed checkmark (visible during fixed phase) -->
+            <g class="fixed-state d1-fixed">
+              <circle cx="70" cy="40" r="20" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+              <polyline points="59,40 67,48 81,32" stroke="#86efac" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- Device 2: Game controller (middle right) -->
+        <g transform="translate(20, -10)">
+          <g class="device device-2">
+            <!-- Controller body -->
+            <path d="M-50 0 Q-50 -18 -32 -18 L32 -18 Q50 -18 50 0 L60 35 Q60 50 45 50 L30 50 L20 35 L-20 35 L-30 50 L-45 50 Q-60 50 -60 35 Z"
+                  stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+            <!-- Left D-pad cross -->
+            <rect x="-38" y="0" width="6" height="14" rx="0.5" fill="white" fill-opacity="0.3"/>
+            <rect x="-42" y="4" width="14" height="6" rx="0.5" fill="white" fill-opacity="0.3"/>
+            <!-- Right buttons (4 circles) -->
+            <circle cx="32" cy="0" r="3" fill="white" fill-opacity="0.35"/>
+            <circle cx="42" cy="7" r="3" fill="white" fill-opacity="0.35"/>
+            <circle cx="32" cy="14" r="3" fill="white" fill-opacity="0.35"/>
+            <circle cx="22" cy="7" r="3" fill="white" fill-opacity="0.35"/>
+            <!-- Joystick center -->
+            <circle cx="-10" cy="22" r="5" stroke="white" stroke-opacity="0.3" stroke-width="1" fill="white" fill-opacity="0.1"/>
+            <circle cx="10" cy="22" r="5" stroke="white" stroke-opacity="0.3" stroke-width="1" fill="white" fill-opacity="0.1"/>
+            <!-- Broken X (visible during broken phase) -->
+            <g class="broken-state d2-broken" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round">
+              <line x1="-12" y1="-8" x2="0" y2="4"/>
+              <line x1="0" y1="-8" x2="-12" y2="4"/>
+            </g>
+            <!-- Fixed checkmark -->
+            <g class="fixed-state d2-fixed">
+              <circle cx="0" cy="10" r="18" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+              <polyline points="-9,10 -1,18 12,4" stroke="#86efac" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- Device 3: Tablet/handheld (bottom left) -->
+        <g transform="translate(-100, 60)">
+          <g class="device device-3">
+            <rect x="0" y="0" width="100" height="70" rx="6" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.06"/>
+            <rect x="6" y="6" width="88" height="58" rx="3" fill="white" fill-opacity="0.05"/>
+            <circle cx="50" cy="68" r="2" fill="white" fill-opacity="0.3"/>
+            <!-- Broken / dead screen lines -->
+            <g class="broken-state d3-broken" stroke="white" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round">
+              <line x1="14" y1="20" x2="86" y2="20"/>
+              <line x1="14" y1="34" x2="60" y2="34"/>
+              <line x1="14" y1="48" x2="86" y2="48"/>
+              <circle cx="50" cy="35" r="3" fill="white" fill-opacity="0.5" stroke="none"/>
+            </g>
+            <g class="fixed-state d3-fixed">
+              <circle cx="50" cy="35" r="18" stroke="#86efac" stroke-opacity="0.7" stroke-width="2" fill="white" fill-opacity="0.05"/>
+              <polyline points="41,35 49,43 62,29" stroke="#86efac" stroke-opacity="0.85" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </g>
+        </g>
+
+      </g>
+
+      <!-- RIGHT: Open toolbox — translate(1180, 240) -->
+      <g class="toolbox-group" transform="translate(1180, 240)">
+        <!-- Toolbox body -->
+        <path d="M-100 0 L100 0 L100 80 L-100 80 Z" stroke="white" stroke-opacity="0.35" stroke-width="2" fill="white" fill-opacity="0.06" class="tb-body"/>
+        <!-- Toolbox handle on top -->
+        <path d="M-30 0 L-30 -25 Q-30 -35 -20 -35 L20 -35 Q30 -35 30 -25 L30 0" stroke="white" stroke-opacity="0.35" stroke-width="2" fill="none" class="tb-handle"/>
+        <!-- Toolbox lid (open, slightly tilted back) -->
+        <path d="M-100 0 L100 0 L110 -8 L-110 -8 Z" stroke="white" stroke-opacity="0.35" stroke-width="2" fill="white" fill-opacity="0.08" class="tb-lid"/>
+        <!-- Front pocket detail -->
+        <rect x="-90" y="20" width="180" height="50" rx="2" stroke="white" stroke-opacity="0.18" stroke-width="1" fill="none"/>
+        <!-- Latch -->
+        <rect x="-8" y="-5" width="16" height="10" rx="1" fill="white" fill-opacity="0.25"/>
+
+        <!-- Tools peeking out (animated up and down) -->
+        <!-- Wrench (left) -->
+        <g transform="translate(-65, 0)">
+          <g class="tool tool-1" stroke="white" stroke-opacity="0.45" stroke-width="2" fill="white" fill-opacity="0.12" stroke-linejoin="round">
+            <path d="M-6 -30 L6 -30 L8 -16 L4 -10 L4 18 L-4 18 L-4 -10 L-8 -16 Z"/>
+            <circle cx="0" cy="-22" r="2" fill="white" fill-opacity="0.3" stroke="none"/>
+          </g>
+        </g>
+        <!-- Screwdriver (center) -->
+        <g transform="translate(-15, 0)">
+          <g class="tool tool-2">
+            <rect x="-3" y="-32" width="6" height="20" rx="1" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="white" fill-opacity="0.15"/>
+            <rect x="-5" y="-12" width="10" height="14" rx="1.5" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.2"/>
+            <line x1="-2" y1="-10" x2="-2" y2="-2" stroke="white" stroke-opacity="0.3" stroke-width="0.8"/>
+            <line x1="2" y1="-10" x2="2" y2="-2" stroke="white" stroke-opacity="0.3" stroke-width="0.8"/>
+          </g>
+        </g>
+        <!-- Pliers (right-center) -->
+        <g transform="translate(30, 0)">
+          <g class="tool tool-3" stroke="white" stroke-opacity="0.45" stroke-width="2" fill="white" fill-opacity="0.1" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M-5 -28 L-2 -10 L-6 16"/>
+            <path d="M5 -28 L2 -10 L6 16"/>
+            <circle cx="0" cy="-8" r="3" fill="white" fill-opacity="0.3" stroke="none"/>
+          </g>
+        </g>
+        <!-- Hex key / Allen wrench (far right) -->
+        <g transform="translate(70, 0)">
+          <g class="tool tool-4" stroke="white" stroke-opacity="0.45" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-6 -28 L-6 0 L8 0"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Floating wrench (top-center) — outer wrapper -->
+      <g transform="translate(720, 90)">
+        <g class="float-icon float-tool-1" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 -2.7a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" transform="translate(-12, -8)"/>
+        </g>
+      </g>
+
+      <!-- Floating gear (bottom-left) -->
+      <g transform="translate(140, 380)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.16" fill="none" stroke-width="1.5">
+          <circle cx="0" cy="0" r="10"/>
+          <path d="M0 -16 L0 -10 M0 10 L0 16 M-16 0 L-10 0 M10 0 L16 0 M-11.3 -11.3 L-7 -7 M7 7 L11.3 11.3 M-11.3 11.3 L-7 7 M7 -7 L11.3 -11.3"/>
+          <circle cx="0" cy="0" r="3" fill="white" fill-opacity="0.2"/>
+        </g>
+      </g>
+
+      <!-- Floating broken-then-fixed indicator -->
+      <g transform="translate(1280, 110)">
+        <g class="float-icon float-tool-3" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="0" cy="0" r="14"/>
+          <polyline points="-6,0 -1,5 7,-4"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// diagnose</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// repair</text>
+        <text x="1180" y="450" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// restore</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">status: fixed</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="80" cy="100" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="340" cy="500" rx="180" ry="140" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Broken devices top-left — translate(80, 90) -->
+      <g class="devices-group" transform="translate(80, 90)">
+        <!-- Small laptop -->
+        <g transform="translate(-50, -50)">
+          <g class="device device-1">
+            <path d="M-8 50 L98 50 L106 58 L-16 58 Z" stroke="white" stroke-opacity="0.3" stroke-width="1.2" fill="white" fill-opacity="0.06"/>
+            <rect x="0" y="0" width="90" height="50" rx="3" stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="white" fill-opacity="0.05"/>
+            <g class="broken-state d1-broken" stroke="white" stroke-opacity="0.7" stroke-width="1" stroke-linecap="round">
+              <circle cx="38" cy="25" r="1.5" fill="white" fill-opacity="0.5"/>
+              <path d="M38 25 L15 8" fill="none"/>
+              <path d="M38 25 L10 36" fill="none"/>
+              <path d="M38 25 L70 12" fill="none"/>
+              <path d="M38 25 L78 40" fill="none"/>
+            </g>
+            <g class="fixed-state d1-fixed">
+              <circle cx="45" cy="25" r="13" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+              <polyline points="38,25 43,30 53,20" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </g>
+        </g>
+        <!-- Small controller -->
+        <g transform="translate(20, 0)">
+          <g class="device device-2">
+            <path d="M-32 0 Q-32 -12 -20 -12 L20 -12 Q32 -12 32 0 L38 22 Q38 32 28 32 L18 32 L12 22 L-12 22 L-18 32 L-28 32 Q-38 32 -38 22 Z"
+                  stroke="white" stroke-opacity="0.35" stroke-width="1.2" fill="white" fill-opacity="0.06"/>
+            <rect x="-22" y="-2" width="4" height="9" rx="0.5" fill="white" fill-opacity="0.3"/>
+            <rect x="-25" y="1" width="9" height="4" rx="0.5" fill="white" fill-opacity="0.3"/>
+            <circle cx="20" cy="-2" r="2" fill="white" fill-opacity="0.35"/>
+            <circle cx="26" cy="3" r="2" fill="white" fill-opacity="0.35"/>
+            <circle cx="20" cy="8" r="2" fill="white" fill-opacity="0.35"/>
+            <circle cx="14" cy="3" r="2" fill="white" fill-opacity="0.35"/>
+            <g class="broken-state d2-broken" stroke="white" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round">
+              <line x1="-7" y1="-5" x2="0" y2="2"/>
+              <line x1="0" y1="-5" x2="-7" y2="2"/>
+            </g>
+            <g class="fixed-state d2-fixed">
+              <circle cx="0" cy="6" r="11" stroke="#86efac" stroke-opacity="0.7" stroke-width="1.5" fill="white" fill-opacity="0.05"/>
+              <polyline points="-6,6 -1,12 8,0" stroke="#86efac" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <!-- Toolbox bottom-right — translate(310, 510) -->
+      <g class="toolbox-group" transform="translate(310, 510)">
+        <path d="M-65 0 L65 0 L65 50 L-65 50 Z" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.06" class="tb-body"/>
+        <path d="M-20 0 L-20 -16 Q-20 -22 -14 -22 L14 -22 Q20 -22 20 -16 L20 0" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="none" class="tb-handle"/>
+        <path d="M-65 0 L65 0 L72 -5 L-72 -5 Z" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="white" fill-opacity="0.08" class="tb-lid"/>
+        <rect x="-58" y="13" width="116" height="32" rx="2" stroke="white" stroke-opacity="0.18" stroke-width="0.8" fill="none"/>
+        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="white" fill-opacity="0.25"/>
+
+        <g transform="translate(-40, 0)">
+          <g class="tool tool-1" stroke="white" stroke-opacity="0.45" stroke-width="1.5" fill="white" fill-opacity="0.12" stroke-linejoin="round">
+            <path d="M-4 -20 L4 -20 L5 -10 L3 -7 L3 12 L-3 12 L-3 -7 L-5 -10 Z"/>
+          </g>
+        </g>
+        <g transform="translate(-10, 0)">
+          <g class="tool tool-2">
+            <rect x="-2" y="-22" width="4" height="14" rx="0.5" stroke="white" stroke-opacity="0.4" stroke-width="1" fill="white" fill-opacity="0.15"/>
+            <rect x="-3" y="-8" width="6" height="10" rx="1" stroke="white" stroke-opacity="0.5" stroke-width="1" fill="white" fill-opacity="0.2"/>
+          </g>
+        </g>
+        <g transform="translate(20, 0)">
+          <g class="tool tool-3" stroke="white" stroke-opacity="0.45" stroke-width="1.5" fill="white" fill-opacity="0.1" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M-3 -18 L-1 -6 L-4 10"/>
+            <path d="M3 -18 L1 -6 L4 10"/>
+          </g>
+        </g>
+        <g transform="translate(45, 0)">
+          <g class="tool tool-4" stroke="white" stroke-opacity="0.45" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-4 -18 L-4 0 L5 0"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
         <a href="/services#broken-tech-repairs" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">← Services</a>
       </p>
-      <h1 style="margin-top:0.75rem;font-size:2.5rem;font-weight:800;color:white;line-height:1.2;">Broken Tech Repairs</h1>
-      <p style="margin-top:1rem;color:#bfdbfe;line-height:1.75;font-size:1.1rem;max-width:42rem;margin-left:auto;margin-right:auto;">
-        Dead, damaged or just stopped working? I diagnose and repair a wide range of broken devices including laptops, desktops, Chromebooks, gaming consoles, handhelds and more. Hardware and software both.
-      </p>
-      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+      <h1 id="hero-wordmark">Broken Tech Repairs</h1>
+      <p id="hero-tagline">Dead, damaged or just stopped working? I diagnose and repair a wide range of broken devices including laptops, desktops, Chromebooks, gaming consoles, handhelds and more. Hardware and software both.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
           Get a Free Quote
           <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.75rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
-          View Pricing
-        </a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
       </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -50,7 +337,7 @@ description="Broken laptop, desktop, Chromebook, gaming console or handheld? I d
   </section>
 
   <!-- Diagnostic Fee Explainer -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+  <section id="how-it-works" style="background:#f8fafc;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div style="margin-bottom:2.5rem;">
         <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">How It Works</p>
@@ -317,6 +604,203 @@ description="Broken laptop, desktop, Chromebook, gaming console or handheld? I d
 </Layout>
 
 <style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Devices/toolbox entrance */
+  .device, .tb-body, .tb-handle, .tb-lid { animation: pieceAppear 0.8s ease 0.3s both; }
+  @keyframes pieceAppear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* 9s loop, 3 devices each get a "broken → fixed" beat (3s each).
+     During each beat:  0-66% broken visible, 66-100% fixed visible
+     Devices are staggered so only one is "fixing" at a time.
+     Default state: broken visible, fixed hidden. Then they swap. */
+
+  .broken-state { opacity: 1; }
+  .fixed-state  { opacity: 0; transform-origin: center; transform-box: fill-box; }
+
+  /* Device 1 cycle 0-3s of 9s */
+  .d1-broken { animation: brokenBeat1 9s ease-in-out infinite; }
+  .d1-fixed  { animation: fixedBeat1 9s ease-in-out infinite; }
+  @keyframes brokenBeat1 {
+    0%, 22%      { opacity: 1; }
+    25%          { opacity: 0; }
+    100%         { opacity: 0; }
+  }
+  @keyframes fixedBeat1 {
+    0%, 22%      { opacity: 0; transform: scale(0.7); }
+    28%          { opacity: 1; transform: scale(1.15); }
+    33%, 100%    { opacity: 1; transform: scale(1); }
+  }
+
+  /* Device 2 cycle 3-6s of 9s */
+  .d2-broken { animation: brokenBeat2 9s ease-in-out infinite; }
+  .d2-fixed  { animation: fixedBeat2 9s ease-in-out infinite; }
+  @keyframes brokenBeat2 {
+    0%, 55%      { opacity: 1; }
+    58%          { opacity: 0; }
+    100%         { opacity: 0; }
+  }
+  @keyframes fixedBeat2 {
+    0%, 55%      { opacity: 0; transform: scale(0.7); }
+    61%          { opacity: 1; transform: scale(1.15); }
+    66%, 100%    { opacity: 1; transform: scale(1); }
+  }
+
+  /* Device 3 cycle 6-9s of 9s */
+  .d3-broken { animation: brokenBeat3 9s ease-in-out infinite; }
+  .d3-fixed  { animation: fixedBeat3 9s ease-in-out infinite; }
+  @keyframes brokenBeat3 {
+    0%, 88%      { opacity: 1; }
+    91%          { opacity: 0; }
+    100%         { opacity: 0; }
+  }
+  @keyframes fixedBeat3 {
+    0%, 88%      { opacity: 0; transform: scale(0.7); }
+    94%          { opacity: 1; transform: scale(1.15); }
+    99%, 100%    { opacity: 1; transform: scale(1); }
+  }
+
+  /* Tools peek up out of toolbox (staggered) */
+  .tool { transform-origin: bottom center; transform-box: fill-box; }
+  .tool-1 { animation: toolPeek 5s ease-in-out infinite 0s; }
+  .tool-2 { animation: toolPeek 5s ease-in-out infinite 0.5s; }
+  .tool-3 { animation: toolPeek 5s ease-in-out infinite 1s; }
+  .tool-4 { animation: toolPeek 5s ease-in-out infinite 1.5s; }
+  @keyframes toolPeek {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+
+  /* Float icons */
+  .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(-8deg)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-8px) rotate(20deg)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 40rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .device, .tb-body, .tb-handle, .tb-lid,
+    .broken-state, .fixed-state, .tool,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .device, .tb-body, .tb-handle, .tb-lid { opacity: 1; }
+    .broken-state { opacity: 0; }
+    .fixed-state { opacity: 1; transform: scale(1); }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Page content (preserved exactly) */
   .service-item { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1.25rem; }
   .service-icon { height: 3rem; width: 3rem; min-width: 3rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .service-icon svg { height: 1.5rem; width: 1.5rem; }
