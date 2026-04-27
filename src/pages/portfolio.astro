@@ -515,8 +515,8 @@ const sites = [
       </article>
     ))}
 
-    <!-- Coming Soon Premium -->
-    <div class="portfolio-item" data-tier="premium" style="max-width:80rem;margin:0 auto 3rem;padding:0 1.5rem;">
+    <!-- Coming Soon Premium — uses .portfolio-placeholder so they aren't counted as real examples -->
+    <div class="portfolio-placeholder" data-tier="premium" style="max-width:80rem;margin:0 auto 3rem;padding:0 1.5rem;">
       <div class="coming-soon-row">
         <div class="coming-soon-icon">🚧</div>
         <div>
@@ -527,7 +527,7 @@ const sites = [
       </div>
     </div>
 
-    <div class="portfolio-item" data-tier="premium" style="max-width:80rem;margin:0 auto 3rem;padding:0 1.5rem;">
+    <div class="portfolio-placeholder" data-tier="premium" style="max-width:80rem;margin:0 auto 3rem;padding:0 1.5rem;">
       <div class="coming-soon-row">
         <div class="coming-soon-icon">🚧</div>
         <div>
@@ -808,7 +808,8 @@ const sites = [
     border: 2px dashed #e5e7eb;
   }
   .coming-soon-icon { font-size: 2.5rem; flex-shrink: 0; }
-  .portfolio-item[hidden] { display: none; }
+  .portfolio-item[hidden],
+  .portfolio-placeholder[hidden] { display: none; }
 
   /* Desktop layout: lock cards to a fixed height so all cards match
      regardless of image aspect ratio or text length */
@@ -853,8 +854,11 @@ const sites = [
 
 <script>
   // @ts-nocheck
-  const tabs = document.querySelectorAll('.filter-tab');
+  // Real portfolio items (excludes coming-soon placeholders)
   const items = document.querySelectorAll('.portfolio-item');
+  // Placeholders: shown/hidden alongside real items by tier, but never counted
+  const placeholders = document.querySelectorAll('.portfolio-placeholder');
+  const tabs = document.querySelectorAll('.filter-tab');
   const countEl = document.getElementById('results-count');
   const emptyState = document.getElementById('empty-state');
 
@@ -873,6 +877,9 @@ const sites = [
   function filterItems(filter) {
     items.forEach(item => {
       item.hidden = filter !== 'all' && item.dataset.tier !== filter;
+    });
+    placeholders.forEach(ph => {
+      ph.hidden = filter !== 'all' && ph.dataset.tier !== filter;
     });
     updateCount(filter);
   }
