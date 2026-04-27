@@ -519,14 +519,14 @@ import content from '../content/why-different.yml';
     </div>
   </section>
 
-  <!-- Still on the Fence — Portfolio Bridge -->
-  <section style="background:#2563eb;padding:4rem 1.5rem;color:white;">
-    <div style="max-width:56rem;margin:0 auto;text-align:center;">
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#bfdbfe;margin-bottom:0.75rem;">Still on the Fence?</p>
-      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Don't Take My Word for It. Click Around.</h2>
-      <p style="color:#dbeafe;line-height:1.85;font-size:1.05rem;margin-bottom:0.5rem;">I've built example sites across all three packages — barbershops, breweries, sheriff's offices, hauling companies, maple syrup producers, and more. Every single one is live, fully functional, and scores 10/10 on WAVE and 100/100 on Lighthouse.</p>
-      <p style="color:#dbeafe;line-height:1.85;font-size:1.05rem;margin-bottom:2rem;">Pick any of them, click through, and see how a modern small business site actually feels. No login, no demo request, no email gate. Just real, live websites.</p>
-      <a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e40af;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+  <!-- Still on the Fence — Portfolio Bridge — matches main site footer CTA gradient -->
+  <section class="fence-section">
+    <div style="max-width:56rem;margin:0 auto;text-align:center;position:relative;z-index:1;">
+      <p class="fence-eyebrow">Still on the Fence?</p>
+      <h2 class="fence-title">Don't Take My Word for It. Click Around.</h2>
+      <p class="fence-body">I've built example sites across all three packages — barbershops, breweries, sheriff's offices, hauling companies, maple syrup producers, and more. Every single one is live, fully functional, and scores 10/10 on WAVE and 100/100 on Lighthouse.</p>
+      <p class="fence-body">Pick any of them, click through, and see how a modern small business site actually feels. No login, no demo request, no email gate. Just real, live websites.</p>
+      <a href="/portfolio" class="fence-cta">
         Browse the Portfolio
         <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -956,6 +956,56 @@ import content from '../content/why-different.yml';
     line-height: 1.5;
   }
 
+  /* ===== Still on the Fence — matches main site footer CTA gradient ===== */
+  /* Gradient: deep navy left → brighter blue right (same as homepage Ready to Get Your Tech Fixed CTA) */
+  /* All text colors hit AA contrast (4.5:1+) against the deepest part of the gradient */
+  .fence-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    padding: 4rem 1.5rem;
+    color: white;
+  }
+  .fence-eyebrow {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    margin: 0 0 0.75rem 0;
+  }
+  .fence-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+  .fence-body {
+    color: #ffffff;
+    line-height: 1.85;
+    font-size: 1.05rem;
+    margin: 0 0 1rem 0;
+  }
+  .fence-body:last-of-type {
+    margin-bottom: 2rem;
+  }
+  .fence-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e3a8a;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .fence-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+
   @media (max-width: 900px) {
     #hero-svg { height: 70vh; min-height: 440px; }
     .hero-bg-desktop { display: none; }
@@ -999,5 +1049,7 @@ import content from '../content/why-different.yml';
     .dash-num, .dash-num-mob, .dash-label, .dash-label-mob { opacity: 1; }
     .win-stamp { opacity: 1; transform: scale(1); }
     .sparkle { opacity: 0.6; }
+    .fence-cta { transition: none; }
+    .fence-cta:hover { transform: none; }
   }
 </style>
