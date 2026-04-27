@@ -521,6 +521,58 @@ import content from '../content/why-different.yml';
     </div>
   </section>
 
+  <!-- NEW: Speed of Delivery -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:2.5rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Turnaround Time</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Weeks, Not Months.</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">Most agencies stretch a small business website out into a 2-3 month project full of meetings, revisions, and approval cycles. I don't work that way.</p>
+      </div>
+      <div class="delivery-grid">
+        <div class="delivery-card delivery-bad">
+          <div class="delivery-icon">🐌</div>
+          <div class="delivery-time">6–12 weeks</div>
+          <div class="delivery-label">Typical Agency</div>
+          <ul class="delivery-list">
+            <li>⚠️ Discovery calls before a contract is even signed</li>
+            <li>⚠️ Multiple rounds of design mockups</li>
+            <li>⚠️ Approval cycles with project managers</li>
+            <li>⚠️ Months of back-and-forth before you see it live</li>
+          </ul>
+        </div>
+        <div class="delivery-card delivery-good">
+          <div class="delivery-icon">⚡</div>
+          <div class="delivery-time">3–14 days</div>
+          <div class="delivery-label">Jake Fixes Tech</div>
+          <ul class="delivery-list">
+            <li>✅ Starter sites in 3–5 days</li>
+            <li>✅ Professional sites in 1–2 weeks</li>
+            <li>✅ Premium sites scoped to your timeline</li>
+            <li>✅ One person, one inbox, fast iterations</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:2rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:0.75rem;padding:1.25rem 1.5rem;text-align:center;">
+        <p style="color:#1e3a8a;font-size:0.95rem;line-height:1.75;margin:0;"><strong>Why so fast?</strong> No layers of project managers, account reps, or sub-contractors. You talk to me, I build it, you see it. That's the whole process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: Still on the Fence — Portfolio Bridge -->
+  <section style="background:#0f172a;padding:4rem 1.5rem;color:white;">
+    <div style="max-width:56rem;margin:0 auto;text-align:center;">
+      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin-bottom:0.75rem;">Still on the Fence?</p>
+      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Don't Take My Word for It. Click Around.</h2>
+      <p style="color:#cbd5e1;line-height:1.85;font-size:1.05rem;margin-bottom:0.5rem;">I've built example sites across all three packages — barbershops, breweries, sheriff's offices, hauling companies, maple syrup producers, and more. Every single one is live, fully functional, and scores 10/10 on WAVE and 100/100 on Lighthouse.</p>
+      <p style="color:#cbd5e1;line-height:1.85;font-size:1.05rem;margin-bottom:2rem;">Pick any of them, click through, and see how a modern small business site actually feels. No login, no demo request, no email gate. Just real, live websites.</p>
+      <a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#0f172a;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+        Browse the Portfolio
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
   <!-- Bottom Line -->
   <section style="background:white;padding:4rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;text-align:center;">
@@ -533,7 +585,7 @@ import content from '../content/why-different.yml';
           <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#1e3a8a;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:2px solid #1e3a8a;">
-          Get a Free Quote
+          Start a Project
           <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -872,7 +924,7 @@ import content from '../content/why-different.yml';
     50%{transform:translateX(-50%) translateY(6px)}
   }
 
-  /* ===== REST OF PAGE (unchanged) ===== */
+  /* ===== REST OF PAGE ===== */
   #speed-grid { display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: 0 auto 3rem auto; }
   .speed-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; }
   .speed-label { font-weight: 700; color: #111827; margin-bottom: 0.75rem; font-size: 0.95rem; }
@@ -920,6 +972,61 @@ import content from '../content/why-different.yml';
   .platform-list { list-style: none; padding: 1.25rem 1.5rem; margin: 0; background: white; display: flex; flex-direction: column; gap: 0.625rem; }
   .platform-list li { font-size: 0.875rem; color: #374151; line-height: 1.5; }
 
+  /* ===== Speed of Delivery section ===== */
+  .delivery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .delivery-card {
+    border-radius: 0.75rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .delivery-bad {
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+  }
+  .delivery-good {
+    background: #f0fdf4;
+    border: 2px solid #86efac;
+  }
+  .delivery-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .delivery-time {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .delivery-bad .delivery-time { color: #991b1b; }
+  .delivery-good .delivery-time { color: #166534; }
+  .delivery-label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.25rem;
+  }
+  .delivery-bad .delivery-label { color: #991b1b; }
+  .delivery-good .delivery-label { color: #166534; }
+  .delivery-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    text-align: left;
+  }
+  .delivery-list li {
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.5;
+  }
+
   @media (max-width: 900px) {
     #hero-svg { height: 70vh; min-height: 440px; }
     .hero-bg-desktop { display: none; }
@@ -931,6 +1038,7 @@ import content from '../content/why-different.yml';
     #platform-grid { grid-template-columns: 1fr; }
     .widget-compare-grid { grid-template-columns: 1fr; }
     .two-col-grid { grid-template-columns: 1fr; }
+    .delivery-grid { grid-template-columns: 1fr; }
     .compare-card { flex-wrap: wrap; }
     .compare-cols { width: 100%; }
     .compare-agency, .compare-jake { width: 50%; font-size: 0.8rem; }
