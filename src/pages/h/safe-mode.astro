@@ -1,4 +1,15 @@
-
+---
+// /h/safe-mode.astro
+// Place at: src/pages/h/safe-mode.astro
+//
+// The long-scroll mystery page. Each milestone <h2> is pre-filled with its text
+// (so WAVE sees real headings, not empty ones). JS clears the text on intersection
+// and re-types it via the typewriter effect for real users.
+//
+// Also includes a visually-hidden <h1> for proper heading hierarchy (WAVE requires one).
+//
+// noindex/nofollow.
+---
 
 <!doctype html>
 <html lang="en">
@@ -34,6 +45,11 @@
   <body data-pagefind-ignore>
     <main class="page" aria-label="A mysterious page">
 
+      <!-- Visually-hidden h1 for proper heading hierarchy. WAVE requires a top-level
+           heading on every page; this one is hidden from sight but read by screen
+           readers and detected by accessibility tools. -->
+      <h1 class="sr-only">Scavenger Hunt</h1>
+
       <!-- SECTION 1: scroll down -->
       <section class="milestone milestone-1">
         <div class="floaters" aria-hidden="true">
@@ -68,7 +84,7 @@
         </div>
 
         <div class="milestone-content">
-          <h2 class="typewriter" data-text="scroll down"></h2>
+          <h2 class="typewriter" data-text="scroll down">scroll down</h2>
           <div class="scroll-arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M 12 4 L 12 20 M 6 14 L 12 20 L 18 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -117,7 +133,7 @@
         </div>
 
         <div class="milestone-content">
-          <h2 class="typewriter" data-text="scavenger hunt?"></h2>
+          <h2 class="typewriter" data-text="scavenger hunt?">scavenger hunt?</h2>
         </div>
       </section>
 
@@ -155,7 +171,7 @@
         </div>
 
         <div class="milestone-content">
-          <h2 class="typewriter" data-text="are you ready to begin?"></h2>
+          <h2 class="typewriter" data-text="are you ready to begin?">are you ready to begin?</h2>
         </div>
       </section>
 
@@ -199,7 +215,7 @@
         </div>
 
         <div class="milestone-content">
-          <h2 class="typewriter" data-text="okay then, keep scrolling..."></h2>
+          <h2 class="typewriter" data-text="okay then, keep scrolling...">okay then, keep scrolling...</h2>
         </div>
       </section>
 
@@ -259,6 +275,7 @@
               entry.target.dataset.typed = 'true';
               const text = entry.target.dataset.text;
               const target = entry.target;
+              target.textContent = '';  // clear pre-filled text before animating
               let i = 0;
 
               function typeChar() {
@@ -312,6 +329,20 @@
       }
 
       .page { position: relative; min-height: 100vh; }
+
+      /* Visually-hidden utility — keeps text accessible to screen readers
+         and accessibility tools (like WAVE) without showing it on screen */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
 
       .milestone {
         position: relative;
