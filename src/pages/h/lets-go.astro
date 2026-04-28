@@ -3,10 +3,14 @@
 // Place at: src/pages/h/lets-go.astro
 //
 // The minigame clue! Whack-a-virus on a 3x3 grid.
-// Score 10 in 30 seconds to unlock the next clue page (/h/clue-4).
+// Score 20 in 30 seconds to unlock the next clue page (/h/clue-4).
 //
 // Custom SVG virus characters with eyes, teeth, and personality.
 // Vanilla JS, no libraries. Mobile + desktop + curved screens all supported.
+//
+// IMPORTANT: Win/lose result states are static HTML in the page (not injected
+// via innerHTML). This ensures Astro's scoped CSS classes apply correctly.
+// JS just shows/hides the right state and updates the score number.
 //
 // noindex/nofollow.
 ---
@@ -46,9 +50,7 @@
     <main class="page">
       <h1 class="sr-only">Scavenger Hunt — Whack-a-Virus Minigame</h1>
 
-      <!-- ============================================ -->
-      <!-- Floating ambient SVG icons                   -->
-      <!-- ============================================ -->
+      <!-- Floating ambient SVG icons -->
       <div class="floaters" aria-hidden="true">
         <svg class="floater pos-a" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
           <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="2" />
@@ -96,12 +98,9 @@
         </svg>
       </div>
 
-      <!-- ============================================ -->
-      <!-- The game container                           -->
-      <!-- ============================================ -->
+      <!-- Game container -->
       <section class="game-section">
         <div class="game-wrap">
-          <!-- Header (terminal-style title bar) -->
           <div class="game-header" aria-hidden="true">
             <div class="game-dots">
               <span class="dot dot-red"></span>
@@ -111,7 +110,6 @@
             <div class="game-title">jake@hunt: ~/whack-a-virus</div>
           </div>
 
-          <!-- Body — switches between three states: intro / playing / result -->
           <div class="game-body">
 
             <!-- INTRO STATE -->
@@ -143,16 +141,19 @@
               </p>
 
               <button id="start-btn" class="primary-btn" type="button">
-                <span>RUN ANTIVIRUS</span>
+                <span>RUN JAKE'S ANTIVIRUS</span>
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M 5 12 L 19 12 M 13 6 L 19 12 L 13 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </button>
+
+              <p class="intro-disclaimer">
+                <span class="disclaimer-prefix">&gt;</span> system: this is just a game. your device is not actually infected.
+              </p>
             </div>
 
             <!-- PLAYING STATE -->
             <div id="state-playing" class="state">
-              <!-- HUD -->
               <div class="hud">
                 <div class="hud-item">
                   <span class="hud-label">SCORE</span>
@@ -171,7 +172,6 @@
                 </div>
               </div>
 
-              <!-- The 3x3 grid -->
               <div class="grid" role="application" aria-label="Whack-a-virus game grid. Click on viruses to remove them.">
                 <button type="button" class="cell" data-cell="0" aria-label="Cell 1"></button>
                 <button type="button" class="cell" data-cell="1" aria-label="Cell 2"></button>
@@ -187,9 +187,49 @@
               <p class="play-hint" aria-hidden="true">Tap viruses fast. Score 20 to win.</p>
             </div>
 
-            <!-- RESULT STATE (win OR lose) -->
-            <div id="state-result" class="state">
-              <div id="result-content"></div>
+            <!-- WIN STATE — static HTML so Astro scoped CSS applies -->
+            <div id="state-win" class="state">
+              <div class="result-icon" aria-hidden="true">
+                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="36" fill="#10b981" />
+                  <path d="M 22 40 L 36 54 L 58 28" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h2 class="result-title">System cleaned!</h2>
+              <p class="result-text">
+                You smashed <strong id="win-score">20</strong> viruses in time. Nice reflexes.
+              </p>
+
+              <div class="win-status" aria-live="polite">
+                <span class="status-dot"></span>
+                <span class="status-text">CLUE UNLOCKED</span>
+              </div>
+
+              <a href="/h/clue-4" class="win-chip" aria-label="Continue to the next clue">
+                <span class="win-chip-prefix">$</span>
+                <span class="win-chip-text">./next_clue.sh</span>
+                <span class="win-chip-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <!-- LOSE STATE — static HTML -->
+            <div id="state-lose" class="state">
+              <div class="result-icon" aria-hidden="true">
+                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="36" fill="#f59e0b" />
+                  <path d="M 28 28 L 52 52 M 52 28 L 28 52" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h2 class="result-title">The viruses won this round.</h2>
+              <p class="result-text">
+                You smashed <strong id="lose-score">0</strong> out of <strong>20</strong>. Almost — try again!
+              </p>
+              <button type="button" id="retry-btn" class="primary-btn">
+                <span>TRY AGAIN</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M 4 12 a 8 8 0 1 1 2.5 5.7 M 4 12 V 6 M 4 12 H 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
 
           </div>
@@ -197,11 +237,7 @@
       </section>
     </main>
 
-    <!-- ============================================ -->
-    <!-- VIRUS SVG TEMPLATE                           -->
-    <!-- Used as a JS template, hidden from layout    -->
-    <!-- Three virus variants for personality variety -->
-    <!-- ============================================ -->
+    <!-- Virus templates (used by JS) -->
     <template id="virus-template-1">
       <svg class="virus virus-1" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <ellipse cx="40" cy="44" rx="22" ry="26" fill="#ef4444" />
@@ -276,12 +312,15 @@
       // === DOM refs ===
       const stateIntro = document.getElementById('state-intro');
       const statePlaying = document.getElementById('state-playing');
-      const stateResult = document.getElementById('state-result');
-      const resultContent = document.getElementById('result-content');
+      const stateWin = document.getElementById('state-win');
+      const stateLose = document.getElementById('state-lose');
       const startBtn = document.getElementById('start-btn');
+      const retryBtn = document.getElementById('retry-btn');
       const scoreDisplay = document.getElementById('score-display');
       const timerDisplay = document.getElementById('timer-display');
       const timerFill = document.getElementById('timer-fill');
+      const winScoreEl = document.getElementById('win-score');
+      const loseScoreEl = document.getElementById('lose-score');
       const cells = Array.from(document.querySelectorAll('.cell'));
       const virusTemplates = [
         document.getElementById('virus-template-1'),
@@ -290,11 +329,10 @@
       ];
 
       // === Game config ===
-      const GAME_DURATION = 30;        // seconds
+      const GAME_DURATION = 30;
       const SCORE_TO_WIN = 20;
-      const VIRUS_LIFETIME = 950;      // ms a virus stays before disappearing
-      const SPAWN_INTERVAL = 600;      // ms between spawn attempts
-      const NEXT_CLUE_URL = '/h/clue-4';
+      const VIRUS_LIFETIME = 950;
+      const SPAWN_INTERVAL = 600;
 
       // === Game state ===
       let score = 0;
@@ -302,17 +340,16 @@
       let gameRunning = false;
       let timerHandle = null;
       let spawnHandle = null;
-      let activeViruses = new Map(); // cellIndex → { element, hideTimeout }
+      let activeViruses = new Map();
 
-      // === State switching ===
       function showState(stateName) {
-        [stateIntro, statePlaying, stateResult].forEach(s => s.classList.remove('state--active'));
-        if (stateName === 'intro') stateIntro.classList.add('state--active');
+        [stateIntro, statePlaying, stateWin, stateLose].forEach(s => s.classList.remove('state--active'));
+        if (stateName === 'intro')   stateIntro.classList.add('state--active');
         if (stateName === 'playing') statePlaying.classList.add('state--active');
-        if (stateName === 'result') stateResult.classList.add('state--active');
+        if (stateName === 'win')     stateWin.classList.add('state--active');
+        if (stateName === 'lose')    stateLose.classList.add('state--active');
       }
 
-      // === Start game ===
       function startGame() {
         score = 0;
         timeLeft = GAME_DURATION;
@@ -322,23 +359,17 @@
         scoreDisplay.textContent = '0';
         timerDisplay.textContent = String(GAME_DURATION);
         timerFill.style.width = '100%';
+        timerDisplay.classList.remove('timer-urgent');
 
-        // Clear any leftover virus elements in cells
         cells.forEach(cell => { cell.innerHTML = ''; cell.classList.remove('cell--smashed'); });
 
         showState('playing');
 
-        // Start countdown
         timerHandle = setInterval(tickTimer, 1000);
-
-        // Start spawning viruses
         spawnHandle = setInterval(spawnVirus, SPAWN_INTERVAL);
-
-        // Spawn one immediately so the player sees something instantly
         spawnVirus();
       }
 
-      // === Timer tick ===
       function tickTimer() {
         timeLeft--;
         timerDisplay.textContent = String(timeLeft);
@@ -347,24 +378,20 @@
         if (timeLeft <= 5) {
           timerDisplay.classList.add('timer-urgent');
         }
-
         if (timeLeft <= 0) {
           endGame();
         }
       }
 
-      // === Spawn a virus in a random empty cell ===
       function spawnVirus() {
         if (!gameRunning) return;
 
-        // Find an empty cell
         const emptyCells = cells.filter((_, i) => !activeViruses.has(i));
         if (emptyCells.length === 0) return;
 
         const targetCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
         const cellIndex = parseInt(targetCell.dataset.cell);
 
-        // Pick a random virus variant
         const template = virusTemplates[Math.floor(Math.random() * virusTemplates.length)];
         const virusClone = template.content.cloneNode(true);
         targetCell.appendChild(virusClone);
@@ -373,7 +400,6 @@
         if (!virusEl) return;
         virusEl.classList.add('virus--popping');
 
-        // Auto-disappear after lifetime
         const hideTimeout = setTimeout(() => {
           if (gameRunning && activeViruses.has(cellIndex)) {
             removeVirus(cellIndex, false);
@@ -383,7 +409,6 @@
         activeViruses.set(cellIndex, { element: virusEl, hideTimeout, smashed: false });
       }
 
-      // === Remove virus from cell ===
       function removeVirus(cellIndex, wasSmashed) {
         const data = activeViruses.get(cellIndex);
         if (!data) return;
@@ -393,27 +418,21 @@
         const virus = data.element;
 
         if (wasSmashed && virus) {
-          // Smash animation
           virus.classList.remove('virus--popping');
           virus.classList.add('virus--smashed');
           cell.classList.add('cell--smashed');
-
           setTimeout(() => {
             cell.innerHTML = '';
             cell.classList.remove('cell--smashed');
           }, 350);
         } else {
-          // Just disappear
           if (virus) virus.classList.add('virus--escaping');
-          setTimeout(() => {
-            cell.innerHTML = '';
-          }, 250);
+          setTimeout(() => { cell.innerHTML = ''; }, 250);
         }
 
         activeViruses.delete(cellIndex);
       }
 
-      // === Cell click handler ===
       cells.forEach(cell => {
         cell.addEventListener('click', () => {
           if (!gameRunning) return;
@@ -421,29 +440,24 @@
           if (!activeViruses.has(cellIndex)) return;
 
           const data = activeViruses.get(cellIndex);
-          if (data.smashed) return; // already smashed, prevent double-counting
+          if (data.smashed) return;
           data.smashed = true;
 
           score++;
           scoreDisplay.textContent = String(score);
 
-          // Bounce animation on score
           scoreDisplay.classList.remove('score-bump');
-          // Force reflow so we can re-trigger animation
           void scoreDisplay.offsetWidth;
           scoreDisplay.classList.add('score-bump');
 
           removeVirus(cellIndex, true);
 
-          // Win check (don't end immediately — let timer run out, but mark a win)
-          // Actually — immediate win is more satisfying when you hit the goal
           if (score >= SCORE_TO_WIN) {
             endGame();
           }
         });
       });
 
-      // === End game ===
       function endGame() {
         if (!gameRunning) return;
         gameRunning = false;
@@ -451,7 +465,6 @@
         clearInterval(timerHandle);
         clearInterval(spawnHandle);
 
-        // Clear all active viruses
         activeViruses.forEach((data, idx) => {
           clearTimeout(data.hideTimeout);
           cells[idx].innerHTML = '';
@@ -460,66 +473,17 @@
 
         timerDisplay.classList.remove('timer-urgent');
 
-        // Show result
-        const won = score >= SCORE_TO_WIN;
-        renderResult(won);
-        showState('result');
-      }
-
-      // === Render result state ===
-      function renderResult(won) {
-        if (won) {
-          resultContent.innerHTML = `
-            <div class="result-icon result-icon--win" aria-hidden="true">
-              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="40" r="36" fill="#10b981" />
-                <path d="M 22 40 L 36 54 L 58 28" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <h2 class="result-title">System cleaned!</h2>
-            <p class="result-text">You smashed <strong>${score}</strong> viruses in time. Nice reflexes.</p>
-
-            <div class="win-status" aria-live="polite">
-              <span class="status-dot"></span>
-              <span class="status-text">CLUE UNLOCKED</span>
-            </div>
-
-            <a href="${NEXT_CLUE_URL}" class="win-chip" aria-label="Continue to the next clue">
-              <span class="win-chip-prefix">$</span>
-              <span class="win-chip-text">./next_clue.sh</span>
-              <span class="win-chip-arrow" aria-hidden="true">→</span>
-            </a>
-          `;
+        if (score >= SCORE_TO_WIN) {
+          winScoreEl.textContent = String(score);
+          showState('win');
         } else {
-          resultContent.innerHTML = `
-            <div class="result-icon result-icon--lose" aria-hidden="true">
-              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="40" r="36" fill="#f59e0b" />
-                <path d="M 28 28 L 52 52 M 52 28 L 28 52" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h2 class="result-title">The viruses won this round.</h2>
-            <p class="result-text">You smashed <strong>${score}</strong> out of <strong>${SCORE_TO_WIN}</strong>. Almost — try again!</p>
-            <button type="button" id="retry-btn" class="primary-btn">
-              <span>TRY AGAIN</span>
-              <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M 4 12 a 8 8 0 1 1 2.5 5.7 M 4 12 V 6 M 4 12 H 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-          `;
-          // Wire up retry button after innerHTML
-          requestAnimationFrame(() => {
-            const retryBtn = document.getElementById('retry-btn');
-            if (retryBtn) retryBtn.addEventListener('click', startGame);
-          });
+          loseScoreEl.textContent = String(score);
+          showState('lose');
         }
       }
 
-      // === Wire up start button ===
       startBtn.addEventListener('click', startGame);
-
-      // === Reduced motion: skip pop animations, just show/hide ===
-      // CSS handles this via @media query, no JS changes needed.
+      if (retryBtn) retryBtn.addEventListener('click', startGame);
     </script>
 
     <style>
@@ -554,9 +518,7 @@
         border: 0;
       }
 
-      /* ============================================================ */
-      /* Floaters (same system as other hunt pages)                    */
-      /* ============================================================ */
+      /* Floaters */
       .floaters {
         position: fixed;
         inset: 0;
@@ -602,9 +564,7 @@
         80%      { transform: translate(-15px, 15px) rotate(5deg); }
       }
 
-      /* ============================================================ */
-      /* Game container                                                */
-      /* ============================================================ */
+      /* Game container */
       .game-section {
         position: relative;
         z-index: 1;
@@ -692,7 +652,9 @@
       }
 
       .state--active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         animation: state-fade-in 0.3s ease;
       }
 
@@ -701,9 +663,7 @@
         to   { opacity: 1; transform: translateY(0); }
       }
 
-      /* ============================================================ */
-      /* Intro state                                                   */
-      /* ============================================================ */
+      /* Intro state */
       .intro-icon {
         width: 96px;
         height: 96px;
@@ -717,7 +677,11 @@
         75%      { transform: rotate(6deg); }
       }
 
-      .intro-icon svg { width: 100%; height: 100%; display: block; }
+      .intro-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
 
       .intro-title {
         font-family: 'Inter Tight', system-ui, sans-serif;
@@ -748,9 +712,23 @@
         margin-bottom: 2rem;
       }
 
-      /* ============================================================ */
-      /* Primary button                                                */
-      /* ============================================================ */
+      .intro-disclaimer {
+        margin-top: 1.5rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: rgba(148, 163, 184, 0.7);
+        letter-spacing: 0.02em;
+        line-height: 1.5;
+        max-width: 26rem;
+      }
+
+      .disclaimer-prefix {
+        color: rgba(74, 222, 128, 0.7);
+        font-weight: 700;
+        margin-right: 0.35rem;
+      }
+
+      /* Primary button */
       .primary-btn {
         display: inline-flex;
         align-items: center;
@@ -779,8 +757,6 @@
         animation-play-state: paused;
       }
 
-      /* Specifically size SVGs INSIDE primary-btn — the .btn-icon class makes
-         this rule beat the broader .result-icon svg { width: 100% } rule */
       .primary-btn svg,
       .primary-btn .btn-icon {
         width: 1.1rem !important;
@@ -788,123 +764,12 @@
         flex-shrink: 0;
       }
 
-      .primary-btn--win {
-        background: #10b981;
-        color: #fff;
-      }
-
       @keyframes btn-pulse {
         0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4), 0 8px 30px rgba(0,0,0,0.25); }
         50%      { box-shadow: 0 0 0 10px rgba(255,255,255,0), 0 10px 35px rgba(0,0,0,0.3); }
       }
 
-      /* ============================================================ */
-      /* WIN STATUS — green LED indicator above the chip               */
-      /* ============================================================ */
-      .win-status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.4rem 0.85rem;
-        margin: 0.5rem auto 1.5rem auto;
-        background: rgba(16, 185, 129, 0.12);
-        border: 1px solid rgba(16, 185, 129, 0.45);
-        border-radius: 999px;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: #4ade80;
-        letter-spacing: 0.15em;
-      }
-
-      .status-dot {
-        width: 0.55rem;
-        height: 0.55rem;
-        border-radius: 50%;
-        background: #10b981;
-        box-shadow: 0 0 8px #10b981;
-        animation: status-pulse 1.4s ease-in-out infinite;
-      }
-
-      @keyframes status-pulse {
-        0%, 100% { opacity: 1; box-shadow: 0 0 8px #10b981; }
-        50%      { opacity: 0.5; box-shadow: 0 0 14px #10b981; }
-      }
-
-      /* ============================================================ */
-      /* WIN CHIP — terminal-style victory chip → continue link        */
-      /* Same DNA as the cmd-chip on /h/clue-1 for visual consistency  */
-      /* ============================================================ */
-      .win-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.65rem;
-        padding: 1rem 1.5rem;
-        background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(5, 150, 105, 0.14));
-        border: 1px solid rgba(16, 185, 129, 0.55);
-        border-radius: 0.5rem;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 1rem;
-        font-weight: 600;
-        color: #4ade80;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow:
-          0 0 25px rgba(16, 185, 129, 0.25),
-          inset 0 1px 0 rgba(255, 255, 255, 0.05);
-        animation: win-chip-pulse 2.4s ease-in-out infinite;
-      }
-
-      .win-chip:hover,
-      .win-chip:focus-visible {
-        background: linear-gradient(135deg, rgba(16, 185, 129, 0.32), rgba(5, 150, 105, 0.25));
-        border-color: rgba(74, 222, 128, 0.95);
-        color: #fff;
-        outline: none;
-        transform: translateX(3px);
-        animation-play-state: paused;
-        box-shadow:
-          0 0 40px rgba(16, 185, 129, 0.5),
-          inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      }
-
-      .win-chip-prefix {
-        color: #fbbf24;
-        font-weight: 700;
-      }
-
-      .win-chip-text {
-        letter-spacing: 0.02em;
-      }
-
-      .win-chip-arrow {
-        margin-left: 0.25rem;
-        font-size: 1.1em;
-        transition: transform 0.2s ease;
-      }
-
-      .win-chip:hover .win-chip-arrow {
-        transform: translateX(2px);
-      }
-
-      @keyframes win-chip-pulse {
-        0%, 100% {
-          box-shadow:
-            0 0 25px rgba(16, 185, 129, 0.25),
-            inset 0 1px 0 rgba(255, 255, 255, 0.05);
-        }
-        50% {
-          box-shadow:
-            0 0 45px rgba(16, 185, 129, 0.55),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-      }
-
-
-      /* ============================================================ */
-      /* Playing state — HUD + Grid                                    */
-      /* ============================================================ */
+      /* HUD */
       .hud {
         display: grid;
         grid-template-columns: 1fr 1.5fr 1fr;
@@ -914,6 +779,7 @@
         background: rgba(15, 23, 42, 0.7);
         border: 1px solid rgba(96, 165, 250, 0.25);
         border-radius: 0.5rem;
+        width: 100%;
       }
 
       .hud-item {
@@ -980,12 +846,13 @@
         100% { transform: scale(1); color: #f8fafc; }
       }
 
-      /* The 3x3 grid */
+      /* Grid */
       .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 0.6rem;
         max-width: 100%;
+        width: 100%;
         aspect-ratio: 1;
         margin-bottom: 1rem;
       }
@@ -1017,7 +884,6 @@
         border-color: rgba(74, 222, 128, 0.6);
       }
 
-      /* Virus inside cell */
       .virus {
         position: absolute;
         inset: 12%;
@@ -1069,12 +935,13 @@
       }
 
       /* ============================================================ */
-      /* Result state                                                  */
+      /* WIN/LOSE RESULT STATE                                         */
       /* ============================================================ */
       .result-icon {
         width: 96px;
         height: 96px;
         margin: 0 auto 1.5rem auto;
+        flex-shrink: 0;
         animation: result-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
       }
 
@@ -1084,7 +951,11 @@
         100% { transform: scale(1); }
       }
 
-      .result-icon svg { width: 100%; height: 100%; display: block; }
+      .result-icon svg {
+        width: 96px;
+        height: 96px;
+        display: block;
+      }
 
       .result-title {
         font-family: 'Inter Tight', system-ui, sans-serif;
@@ -1098,7 +969,7 @@
       .result-text {
         font-size: 1rem;
         color: #d1d5db;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         line-height: 1.6;
       }
 
@@ -1107,17 +978,117 @@
         font-weight: 700;
       }
 
-      .result-sub {
+      /* ============================================================ */
+      /* WIN STATUS BADGE — green LED indicator                        */
+      /* ============================================================ */
+      .win-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.85rem;
+        margin: 0 auto 1.5rem auto;
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.45);
+        border-radius: 999px;
         font-family: 'JetBrains Mono', monospace;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        font-weight: 700;
         color: #4ade80;
-        margin-bottom: 1.5rem;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.15em;
+      }
+
+      .status-dot {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: #10b981;
+        box-shadow: 0 0 8px #10b981;
+        animation: status-pulse 1.4s ease-in-out infinite;
+      }
+
+      @keyframes status-pulse {
+        0%, 100% { opacity: 1; box-shadow: 0 0 8px #10b981; }
+        50%      { opacity: 0.5; box-shadow: 0 0 14px #10b981; }
       }
 
       /* ============================================================ */
-      /* Mobile                                                        */
+      /* WIN CHIP — shimmering terminal-style button to next clue      */
+      /* Matches the cmd-chip style used on /h/clue-1 and /h/clue-4    */
       /* ============================================================ */
+      .win-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(5, 150, 105, 0.14));
+        border: 1px solid rgba(16, 185, 129, 0.55);
+        border-radius: 0.5rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #4ade80;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow:
+          0 0 25px rgba(16, 185, 129, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        animation: win-chip-pulse 2.4s ease-in-out infinite;
+      }
+
+      .win-chip:visited {
+        color: #4ade80;
+      }
+
+      .win-chip:hover,
+      .win-chip:focus-visible {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.32), rgba(5, 150, 105, 0.25));
+        border-color: rgba(74, 222, 128, 0.95);
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+        transform: translateX(3px);
+        animation-play-state: paused;
+        box-shadow:
+          0 0 40px rgba(16, 185, 129, 0.5),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+
+      .win-chip-prefix {
+        color: #fbbf24;
+        font-weight: 700;
+      }
+
+      .win-chip-text {
+        letter-spacing: 0.02em;
+        color: inherit;
+      }
+
+      .win-chip-arrow {
+        margin-left: 0.25rem;
+        font-size: 1.1em;
+        color: inherit;
+        transition: transform 0.2s ease;
+      }
+
+      .win-chip:hover .win-chip-arrow {
+        transform: translateX(2px);
+      }
+
+      @keyframes win-chip-pulse {
+        0%, 100% {
+          box-shadow:
+            0 0 25px rgba(16, 185, 129, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        50% {
+          box-shadow:
+            0 0 45px rgba(16, 185, 129, 0.55),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      /* Mobile */
       @media (max-width: 768px) {
         .floater { width: 38px; height: 38px; }
         .game-section { padding: 3rem 1rem; }
@@ -1132,13 +1103,15 @@
 
         .intro-title { font-size: 1.25rem; }
         .intro-text { font-size: 0.9rem; }
+        .intro-disclaimer { font-size: 0.7rem; margin-top: 1.25rem; }
 
         .primary-btn { font-size: 0.9rem; padding: 0.85rem 1.5rem; }
+
+        .win-chip { font-size: 0.9rem; padding: 0.85rem 1.25rem; }
+        .result-title { font-size: 1.4rem; }
       }
 
-      /* ============================================================ */
-      /* Reduced motion                                                */
-      /* ============================================================ */
+      /* Reduced motion */
       @media (prefers-reduced-motion: reduce) {
         .floater { animation: none; }
         .game-wrap { animation: none; }
