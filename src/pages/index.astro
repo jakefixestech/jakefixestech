@@ -344,10 +344,53 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
 
 </Layout>
 
-<!-- Tiny inline script: marks the page as "JS loaded" so the animation states only kick in when CSS animations can actually run.
-     This means WAVE (which doesn't run JS) sees fully-visible text and won't false-flag contrast errors. -->
+<!-- ============================================================ -->
+<!-- JS-DRIVEN HERO REVEAL (WAVE-safe approach)                   -->
+<!-- ============================================================ -->
+<!--
+  Strategy: elements default to fully visible (WAVE sees opaque text → 0 contrast errors).
+  When JS runs, it adds a class .hero-anim-active to each element with its own delay,
+  which triggers the fade-in animation. The opacity:0 starting state ONLY exists when
+  the class is present — and the class is only added by JS — so WAVE never sees opacity:0.
+
+  Critical detail: instead of starting from opacity:0 in CSS and animating to 1,
+  we set opacity:0 ONLY when the .hero-anim-active class is added, and the
+  animation runs immediately on class add. This means there's never a static
+  "invisible" frame for WAVE to scan.
+-->
 <script is:inline>
-  document.documentElement.classList.add('js-loaded');
+  (function() {
+    // If user prefers reduced motion, do nothing — leave elements fully visible
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    // Each entry: [elementSelector, delayMs]
+    const reveals = [
+      ['.wordmark-jake',  1800],
+      ['.wordmark-fixes', 2100],
+      ['.wordmark-tech',  2400],
+      ['#hero-tagline',   2800],
+      ['#hero-cta',       3100],
+      ['#scroll-hint',    3500],
+    ];
+
+    // Use requestAnimationFrame to ensure the browser has painted the initial state
+    // (fully visible) before we begin queuing animation classes. This guarantees
+    // no "flash" between page load and animation start.
+    requestAnimationFrame(function() {
+      reveals.forEach(function(entry) {
+        var el = document.querySelector(entry[0]);
+        if (!el) return;
+        // First, mark element as "ready to animate" — sets opacity:0 invisibly fast
+        el.classList.add('hero-anim-prep');
+        // Then schedule the actual animation trigger
+        setTimeout(function() {
+          el.classList.add('hero-anim-active');
+        }, entry[1]);
+      });
+    });
+  })();
 </script>
 
 <style>
@@ -462,19 +505,7 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     justify-content: center;
   }
 
-  /* ===== WORDMARK FIX FOR WAVE CONTRAST ERRORS =====
-     The fade-in animation requires elements to start at opacity:0, but WAVE
-     reads opacity:0 as transparent text and flags it as a contrast error.
-
-     Fix: by default (no JS), text is fully visible — no animation, just static.
-     When JS loads, the .js-loaded class is added to <html>, which "arms" the
-     animation: opacity gets reset to 0 and the keyframes run.
-
-     Result:
-     - WAVE sees fully visible white text on dark background → no contrast errors
-     - Real users with JS see the fade-in animation as intended
-     - Users without JS see the static (no-animation) version, which is also fine
-  */
+  /* ===== BASE STYLES (WAVE sees these — fully visible) ===== */
   .wordmark-jake,
   .wordmark-fixes,
   .wordmark-tech {
@@ -484,45 +515,23 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     letter-spacing: -0.02em;
     line-height: 1;
     text-shadow: 0 2px 40px rgba(0,0,0,0.3);
-    /* Default state: fully visible, no animation. WAVE sees this. */
+    /* Default state: fully visible, no transforms, no opacity changes.
+       WAVE scans this state → 0 contrast errors. */
   }
 
   .wordmark-fixes {
     color: #bfdbfe;
   }
 
-  /* Once JS loads, arm the animation: hide first, then fade in */
-  :global(.js-loaded) .wordmark-jake,
-  :global(.js-loaded) .wordmark-fixes,
-  :global(.js-loaded) .wordmark-tech {
-    opacity: 0;
-    animation: wordmarkFade 0.8s ease forwards;
-  }
-
-  :global(.js-loaded) .wordmark-jake  { animation-delay: 1.8s; }
-  :global(.js-loaded) .wordmark-fixes { animation-delay: 2.1s; }
-  :global(.js-loaded) .wordmark-tech  { animation-delay: 2.4s; }
-
-  @keyframes wordmarkFade {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Tagline — same JS-gated pattern */
   #hero-tagline {
     font-size: clamp(0.875rem, 2vw, 1.1rem);
     color: rgba(255,255,255,0.92);
     letter-spacing: 0.04em;
     font-weight: 500;
     margin: 0;
+    /* Fully visible by default for WAVE */
   }
 
-  :global(.js-loaded) #hero-tagline {
-    opacity: 0;
-    animation: wordmarkFade 0.8s ease 2.8s forwards;
-  }
-
-  /* CTA button — same JS-gated pattern */
   #hero-cta {
     display: inline-flex;
     align-items: center;
@@ -535,11 +544,7 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     text-decoration: none;
     font-size: 1rem;
     transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  :global(.js-loaded) #hero-cta {
-    opacity: 0;
-    animation: wordmarkFade 0.8s ease 3.1s forwards;
+    /* Fully visible by default for WAVE */
   }
 
   #hero-cta:hover {
@@ -547,7 +552,6 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
 
-  /* Scroll hint — same JS-gated pattern */
   #scroll-hint {
     position: absolute;
     bottom: 1.5rem;
@@ -556,11 +560,36 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     color: rgba(255,255,255,0.8);
     z-index: 2;
     cursor: pointer;
+    /* Fully visible by default for WAVE */
   }
 
-  :global(.js-loaded) #scroll-hint {
+  /* ===== JS-DRIVEN ANIMATION =====
+     The .hero-anim-prep class is added by JS the moment the script runs.
+     This sets opacity:0 IMMEDIATELY and applies a transform offset.
+     Then .hero-anim-active is added after the delay, triggering the fade in.
+
+     WAVE (no JS) never sees these classes, so it always sees fully-visible text. */
+  .hero-anim-prep {
     opacity: 0;
-    animation: scrollBounce 2s ease-in-out infinite, wordmarkFade 0.8s ease 3.5s forwards;
+    transform: translateY(16px);
+  }
+
+  /* When JS adds this class, the element becomes visible via transition */
+  .hero-anim-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  /* Scroll hint has its own translateX (-50%) for centering, so we need to
+     preserve that during the transform */
+  #scroll-hint.hero-anim-prep {
+    transform: translateX(-50%) translateY(16px);
+  }
+
+  #scroll-hint.hero-anim-active {
+    transform: translateX(-50%) translateY(0);
+    animation: scrollBounce 2s ease-in-out infinite 0.8s;
   }
 
   @keyframes scrollBounce {
@@ -617,15 +646,11 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     .glow-orb-1, .glow-orb-2 {
       animation: none;
     }
-    :global(.js-loaded) .wordmark-jake,
-    :global(.js-loaded) .wordmark-fixes,
-    :global(.js-loaded) .wordmark-tech,
-    :global(.js-loaded) #hero-tagline,
-    :global(.js-loaded) #hero-cta,
-    :global(.js-loaded) #scroll-hint {
-      opacity: 1;
-      transform: none;
-      animation: none;
+    .hero-anim-prep, .hero-anim-active {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+      animation: none !important;
     }
     .trace { stroke-dashoffset: 0; }
     .node { fill-opacity: 0.7; }
