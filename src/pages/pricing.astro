@@ -28,7 +28,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
       <g class="price-tag" transform="translate(120, 130)">
         <line x1="70" y1="0" x2="70" y2="50" stroke="white" stroke-opacity="0.18" stroke-width="1.5" class="tag-string"/>
         <circle cx="70" cy="0" r="3" fill="white" fill-opacity="0.2" class="tag-pivot"/>
-        <g class="tag-swing" transform-origin="70 0">
+        <g class="tag-swing scavenger-price-tag" transform-origin="70 0">
           <path d="M70 50 L30 70 L30 170 L180 170 L180 70 L70 50 Z"
             stroke="white" stroke-opacity="0.25" stroke-width="2"
             fill="white" fill-opacity="0.08" class="tag-body"/>
@@ -155,7 +155,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
       <g class="price-tag" transform="translate(20, 60)">
         <line x1="45" y1="0" x2="45" y2="30" stroke="white" stroke-opacity="0.18" stroke-width="1.5" class="tag-string"/>
         <circle cx="45" cy="0" r="2.5" fill="white" fill-opacity="0.2" class="tag-pivot"/>
-        <g class="tag-swing" transform-origin="45 0">
+        <g class="tag-swing scavenger-price-tag" transform-origin="45 0">
           <path d="M45 30 L18 44 L18 110 L118 110 L118 44 L45 30 Z"
             stroke="white" stroke-opacity="0.25" stroke-width="1.5"
             fill="white" fill-opacity="0.08" class="tag-body"/>
@@ -399,6 +399,48 @@ description="Transparent flat rate pricing for all computer repair services. Sta
     </div>
   </section>
 
+  <!-- ============================================================ -->
+  <!-- Scavenger hunt: silent click counter on the swinging price tag.
+       Listens to BOTH desktop and mobile .scavenger-price-tag elements.
+       Clicks 1-14: nothing happens, no visible feedback (by design).
+       Click 15: redirects to /h/clue-5 (the next hidden clue page).
+       ============================================================ -->
+  <script is:inline>
+    (function() {
+      const tags = document.querySelectorAll('.scavenger-price-tag');
+      if (!tags || tags.length === 0) return;
+
+      let clickCount = 0;
+      const TARGET_CLICKS = 15;
+      const NEXT_CLUE_URL = '/h/clue-5';
+
+      function handleClick() {
+        clickCount++;
+        if (clickCount >= TARGET_CLICKS) {
+          setTimeout(function() {
+            window.location.href = NEXT_CLUE_URL;
+          }, 150);
+        }
+      }
+
+      tags.forEach(function(tag) {
+        // Mouse + touch click
+        tag.addEventListener('click', handleClick);
+
+        // Keyboard accessibility — Tab to it, hit Enter or Space
+        tag.setAttribute('tabindex', '0');
+        tag.setAttribute('role', 'button');
+        tag.setAttribute('aria-label', 'Decorative price tag');
+        tag.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleClick();
+          }
+        });
+      });
+    })();
+  </script>
+
 </Layout>
 
 <style>
@@ -437,6 +479,19 @@ description="Transparent flat rate pricing for all computer repair services. Sta
   .tag-swing {
     animation: tagSwing 4s ease-in-out infinite 2.2s;
     transform-origin: 70px 0;
+  }
+  /* Scavenger price tag must look IDENTICAL to a normal swinging tag —
+     no pointer cursor on hover so visitors don't realize it's clickable.
+     Only difference: it's clickable. */
+  .scavenger-price-tag {
+    cursor: default;
+  }
+  .scavenger-price-tag:focus { outline: none; }
+  /* Subtle focus indicator for keyboard users (WCAG requirement) without
+     revealing it as interactive on hover */
+  .scavenger-price-tag:focus-visible {
+    outline: 2px dashed rgba(255, 255, 255, 0.4);
+    outline-offset: 4px;
   }
   @keyframes dropIn {
     from { opacity: 0; transform: scaleY(0); }

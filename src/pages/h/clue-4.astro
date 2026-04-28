@@ -1,0 +1,694 @@
+---
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>...</title>
+    <meta name="description" content="" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=optional"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=optional"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+  </head>
+
+  <body data-pagefind-ignore>
+    <main class="page">
+      <h1 class="sr-only">Scavenger Hunt — Clue Four</h1>
+
+      <!-- ============================================ -->
+      <!-- Floating ambient SVG icons                   -->
+      <!-- ============================================ -->
+      <div class="floaters" aria-hidden="true">
+        <svg class="floater pos-a" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="10" width="28" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M 6 14 L 14 14 L 16 10 L 26 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+        <svg class="floater pos-b" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="6" width="20" height="28" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+          <line x1="13" y1="14" x2="23" y2="14" stroke="currentColor" stroke-width="1.5" />
+          <line x1="13" y1="20" x2="23" y2="20" stroke="currentColor" stroke-width="1.5" />
+          <line x1="13" y1="26" x2="20" y2="26" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+        <svg class="floater pos-c" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="2" />
+          <line x1="20" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <line x1="28" y1="20" x2="28" y2="25" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <line x1="32" y1="20" x2="32" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg class="floater pos-d" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 14 8 L 6 20 L 14 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M 26 8 L 34 20 L 26 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <line x1="22" y1="8" x2="18" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <svg class="floater pos-e" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="28" height="28" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+          <rect x="11" y="6" width="18" height="11" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <rect x="14" y="22" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <rect x="22" y="9" width="3" height="5" fill="currentColor" />
+        </svg>
+        <svg class="floater pos-f" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="24" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2" />
+          <line x1="14" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="1.5" />
+          <line x1="14" y1="18" x2="22" y2="18" stroke="currentColor" stroke-width="1.5" />
+          <line x1="14" y1="22" x2="26" y2="22" stroke="currentColor" stroke-width="1.5" />
+          <line x1="14" y1="26" x2="20" y2="26" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+        <svg class="floater pos-g" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <text x="6" y="26" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="currentColor">&gt;_</text>
+        </svg>
+        <svg class="floater pos-h" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 6 10 L 14 10 L 16 14 L 34 14 L 34 32 L 6 32 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+        <svg class="floater pos-i" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M 20 10 L 23 20 L 20 30 L 17 20 Z" fill="currentColor" opacity="0.6" />
+          <circle cx="20" cy="20" r="1.5" fill="currentColor" />
+        </svg>
+        <svg class="floater pos-j" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="6" width="20" height="28" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+          <line x1="14" y1="13" x2="26" y2="13" stroke="currentColor" stroke-width="1.5" />
+          <line x1="14" y1="18" x2="26" y2="18" stroke="currentColor" stroke-width="1.5" />
+          <line x1="14" y1="23" x2="22" y2="23" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </div>
+
+      <!-- ============================================ -->
+      <!-- The file extraction window                    -->
+      <!-- ============================================ -->
+      <section class="extract-section">
+        <div class="extract-window">
+          <!-- Window title bar -->
+          <div class="window-header" aria-hidden="true">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="window-title">File Manager — clue_04.zip</div>
+          </div>
+
+          <!-- Window body -->
+          <div class="window-body">
+
+            <!-- EXTRACTION STATE -->
+            <div id="state-extracting" class="estate estate--active">
+              <div class="extract-icon-wrap" aria-hidden="true">
+                <!-- Folder being unzipped — folder + zipper down the front -->
+                <svg class="folder-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Folder back -->
+                  <path d="M 14 24 L 38 24 L 44 30 L 86 30 L 86 80 L 14 80 Z"
+                        fill="#3b82f6" stroke="#1e40af" stroke-width="2" stroke-linejoin="round" />
+                  <!-- Folder front (slightly offset) -->
+                  <rect x="14" y="36" width="72" height="44" rx="2"
+                        fill="#60a5fa" stroke="#1e40af" stroke-width="2" />
+                  <!-- The "zipper" running down the front -->
+                  <line x1="50" y1="36" x2="50" y2="80"
+                        stroke="#1e40af" stroke-width="1.5" stroke-dasharray="3 2" />
+                  <!-- Zipper teeth pattern (small cross-hatches) -->
+                  <g class="zipper-teeth" stroke="#1e40af" stroke-width="1.5">
+                    <line x1="46" y1="40" x2="54" y2="40" />
+                    <line x1="46" y1="44" x2="54" y2="44" />
+                    <line x1="46" y1="48" x2="54" y2="48" />
+                    <line x1="46" y1="52" x2="54" y2="52" />
+                    <line x1="46" y1="56" x2="54" y2="56" />
+                    <line x1="46" y1="60" x2="54" y2="60" />
+                    <line x1="46" y1="64" x2="54" y2="64" />
+                    <line x1="46" y1="68" x2="54" y2="68" />
+                    <line x1="46" y1="72" x2="54" y2="72" />
+                    <line x1="46" y1="76" x2="54" y2="76" />
+                  </g>
+                  <!-- The zipper pull -->
+                  <g class="zipper-pull">
+                    <circle cx="50" cy="38" r="3.5" fill="#fbbf24" stroke="#92400e" stroke-width="1.5" />
+                    <line x1="50" y1="42" x2="50" y2="46" stroke="#92400e" stroke-width="1.5" stroke-linecap="round" />
+                  </g>
+                  <!-- Files popping out -->
+                  <g class="extract-files">
+                    <rect class="file-1" x="20" y="14" width="9" height="12" rx="1" fill="#fff" stroke="#1e40af" stroke-width="1.5" />
+                    <line class="file-1" x1="22" y1="18" x2="27" y2="18" stroke="#1e40af" stroke-width="0.8" />
+                    <line class="file-1" x1="22" y1="21" x2="27" y2="21" stroke="#1e40af" stroke-width="0.8" />
+
+                    <rect class="file-2" x="46" y="6" width="9" height="12" rx="1" fill="#fff" stroke="#1e40af" stroke-width="1.5" />
+                    <line class="file-2" x1="48" y1="10" x2="53" y2="10" stroke="#1e40af" stroke-width="0.8" />
+                    <line class="file-2" x1="48" y1="13" x2="53" y2="13" stroke="#1e40af" stroke-width="0.8" />
+
+                    <rect class="file-3" x="72" y="14" width="9" height="12" rx="1" fill="#fff" stroke="#1e40af" stroke-width="1.5" />
+                    <line class="file-3" x1="74" y1="18" x2="79" y2="18" stroke="#1e40af" stroke-width="0.8" />
+                    <line class="file-3" x1="74" y1="21" x2="79" y2="21" stroke="#1e40af" stroke-width="0.8" />
+                  </g>
+                </svg>
+              </div>
+
+              <p class="extract-status" id="extract-status">Extracting clue_04.zip...</p>
+
+              <div class="progress-track" aria-hidden="true">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+
+              <p class="extract-meta" id="extract-meta">0% — initializing</p>
+            </div>
+
+            <!-- REVEALED STATE -->
+            <div id="state-revealed" class="estate">
+              <div class="success-row" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="success-check">
+                  <circle cx="12" cy="12" r="11" fill="#10b981" />
+                  <path d="M 6 12 L 10 16 L 18 8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="success-label">EXTRACTION COMPLETE</span>
+              </div>
+
+              <h2 class="reveal-heading">clue_04.txt</h2>
+
+              <div class="rhyme-block">
+                <p class="rhyme-line">Four down, one to go — you're doing great,</p>
+                <p class="rhyme-line">but Jake is hiding one last gate.</p>
+                <p class="rhyme-line">Head over to the <strong>pricing page</strong> with care,</p>
+                <p class="rhyme-line">a <strong>swinging price tag</strong> waits for you there.</p>
+                <p class="rhyme-line">It dangles left, it dangles right —</p>
+                <p class="rhyme-line">click it <strong>fifteen times</strong> with all your might.</p>
+              </div>
+
+              <p class="instruction" id="instruction-text">
+                Tap or click the swinging "<span class="kbd">FLAT RATE $50</span>" tag on the pricing page exactly 15 times.
+              </p>
+
+              <a href="/pricing" class="reveal-chip" aria-label="Go to the pricing page">
+                <span class="reveal-chip-prefix">$</span>
+                <span class="reveal-chip-text">cd /pricing</span>
+                <span class="reveal-chip-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // @ts-nocheck
+
+      const stateExtracting = document.getElementById('state-extracting');
+      const stateRevealed = document.getElementById('state-revealed');
+      const progressFill = document.getElementById('progress-fill');
+      const extractMeta = document.getElementById('extract-meta');
+      const extractStatus = document.getElementById('extract-status');
+
+      // Fake extraction progress messages
+      const extractStages = [
+        { pct: 8,   text: '8% — reading archive header' },
+        { pct: 22,  text: '22% — verifying integrity' },
+        { pct: 41,  text: '41% — decompressing data' },
+        { pct: 58,  text: '58% — extracting clue_04.txt' },
+        { pct: 73,  text: '73% — applying decryption' },
+        { pct: 88,  text: '88% — finalizing' },
+        { pct: 100, text: '100% — complete' },
+      ];
+
+      function reveal() {
+        stateExtracting.classList.remove('estate--active');
+        requestAnimationFrame(() => {
+          stateRevealed.classList.add('estate--active');
+        });
+      }
+
+      function runExtraction() {
+        let stageIndex = 0;
+        const stageDuration = 600; // ms between stages
+
+        function nextStage() {
+          if (stageIndex >= extractStages.length) {
+            // Hold at 100% for a moment, then reveal
+            setTimeout(reveal, 700);
+            return;
+          }
+          const stage = extractStages[stageIndex];
+          progressFill.style.width = stage.pct + '%';
+          extractMeta.textContent = stage.text;
+          if (stage.pct >= 100) {
+            extractStatus.textContent = 'Extraction complete.';
+          }
+          stageIndex++;
+          setTimeout(nextStage, stageDuration);
+        }
+
+        nextStage();
+      }
+
+      // Reduced motion: skip the fake extraction, go straight to the reveal
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        reveal();
+      } else {
+        // Small delay so user has a moment to see the initial state
+        setTimeout(runExtraction, 500);
+      }
+
+      // Safety net: if anything fails, force-reveal after 8 seconds
+      setTimeout(() => {
+        if (!stateRevealed.classList.contains('estate--active')) {
+          reveal();
+        }
+      }, 8000);
+    </script>
+
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+      body {
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        color: #ffffff;
+        font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .page { position: relative; min-height: 100vh; }
+
+      .sr-only {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Floaters */
+      .floaters {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .floater {
+        position: absolute;
+        width: 56px;
+        height: 56px;
+        color: rgba(255, 255, 255, 0.10);
+        will-change: transform;
+      }
+
+      .pos-a { top:  6%; left:  8%; animation: drift-a 28s ease-in-out infinite; }
+      .pos-b { top: 14%; left: 78%; animation: drift-b 32s ease-in-out infinite; }
+      .pos-c { top: 22%; left: 18%; animation: drift-c 30s ease-in-out infinite; }
+      .pos-d { top: 28%; left: 88%; animation: drift-a 36s ease-in-out infinite; }
+      .pos-e { top: 42%; left:  6%; animation: drift-b 26s ease-in-out infinite; }
+      .pos-f { top: 50%; left: 92%; animation: drift-c 34s ease-in-out infinite; }
+      .pos-g { top: 62%; left: 14%; animation: drift-a 30s ease-in-out infinite; }
+      .pos-h { top: 70%; left: 82%; animation: drift-b 32s ease-in-out infinite; }
+      .pos-i { top: 80%; left:  8%; animation: drift-c 28s ease-in-out infinite; }
+      .pos-j { top: 88%; left: 76%; animation: drift-a 30s ease-in-out infinite; }
+
+      @keyframes drift-a {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        25%      { transform: translate(20px, -15px) rotate(8deg); }
+        50%      { transform: translate(-10px, 20px) rotate(-6deg); }
+        75%      { transform: translate(-25px, -10px) rotate(4deg); }
+      }
+      @keyframes drift-b {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        33%      { transform: translate(-18px, 12px) rotate(-5deg); }
+        66%      { transform: translate(15px, -22px) rotate(7deg); }
+      }
+      @keyframes drift-c {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        20%      { transform: translate(12px, 18px) rotate(3deg); }
+        50%      { transform: translate(22px, -12px) rotate(-8deg); }
+        80%      { transform: translate(-15px, 15px) rotate(5deg); }
+      }
+
+      /* Extract section */
+      .extract-section {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 1.5rem;
+      }
+
+      .extract-window {
+        width: 100%;
+        max-width: 42rem;
+        background: #0a0e1a;
+        border: 1px solid rgba(96, 165, 250, 0.4);
+        border-radius: 0.875rem;
+        overflow: hidden;
+        box-shadow:
+          0 0 0 1px rgba(96, 165, 250, 0.15),
+          0 0 40px rgba(96, 165, 250, 0.35),
+          0 0 90px rgba(37, 99, 235, 0.4),
+          0 25px 60px rgba(0, 0, 0, 0.4);
+        animation: window-glow 3.5s ease-in-out infinite;
+      }
+
+      @keyframes window-glow {
+        0%, 100% {
+          box-shadow:
+            0 0 0 1px rgba(96, 165, 250, 0.15),
+            0 0 40px rgba(96, 165, 250, 0.35),
+            0 0 90px rgba(37, 99, 235, 0.4),
+            0 25px 60px rgba(0, 0, 0, 0.4);
+        }
+        50% {
+          box-shadow:
+            0 0 0 1px rgba(96, 165, 250, 0.3),
+            0 0 60px rgba(96, 165, 250, 0.5),
+            0 0 120px rgba(37, 99, 235, 0.55),
+            0 25px 60px rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .window-header {
+        background: #11172a;
+        border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+        padding: 0.625rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .window-dots { display: flex; gap: 0.4rem; }
+
+      .dot {
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .dot-red    { background: #ef4444; }
+      .dot-yellow { background: #f59e0b; }
+      .dot-green  { background: #10b981; }
+
+      .window-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.02em;
+      }
+
+      .window-body {
+        padding: 2.5rem 2rem;
+        min-height: 26rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* States */
+      .estate {
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      .estate--active {
+        display: block;
+        animation: estate-fade-in 0.4s ease;
+      }
+
+      @keyframes estate-fade-in {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* === Extracting state === */
+      .extract-icon-wrap {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .folder-icon {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      /* The zipper pull bobs up and down */
+      .zipper-pull {
+        animation: zip-bob 1.2s ease-in-out infinite;
+        transform-origin: 50px 38px;
+      }
+
+      @keyframes zip-bob {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(2px); }
+      }
+
+      /* Files emerge / float */
+      .extract-files .file-1,
+      .extract-files .file-2,
+      .extract-files .file-3 {
+        animation: file-float 2.4s ease-in-out infinite;
+      }
+
+      .extract-files .file-2 { animation-delay: 0.4s; }
+      .extract-files .file-3 { animation-delay: 0.8s; }
+
+      @keyframes file-float {
+        0%, 100% { transform: translateY(0); opacity: 1; }
+        50%      { transform: translateY(-3px); opacity: 0.85; }
+      }
+
+      .extract-status {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #93c5fd;
+        margin-bottom: 1rem;
+      }
+
+      .progress-track {
+        max-width: 24rem;
+        height: 8px;
+        margin: 0 auto 1rem auto;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        overflow: hidden;
+        border: 1px solid rgba(96, 165, 250, 0.2);
+      }
+
+      .progress-fill {
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, #60a5fa, #3b82f6, #2563eb);
+        border-radius: 999px;
+        transition: width 0.5s ease;
+        box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+      }
+
+      .extract-meta {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.8rem;
+        color: #64748b;
+        letter-spacing: 0.02em;
+      }
+
+      /* === Revealed state === */
+      .success-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.4rem 0.85rem;
+        margin-bottom: 1.25rem;
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.45);
+        border-radius: 999px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #4ade80;
+        letter-spacing: 0.15em;
+      }
+
+      .success-check {
+        width: 1.05rem;
+        height: 1.05rem;
+        flex-shrink: 0;
+      }
+
+      .reveal-heading {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #cbd5e1;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px dashed rgba(96, 165, 250, 0.25);
+      }
+
+      .rhyme-block {
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .rhyme-line {
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-size: clamp(1rem, 2.4vw, 1.15rem);
+        font-style: italic;
+        color: #93c5fd;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .rhyme-line strong {
+        color: #fbbf24;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .instruction {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        color: #cbd5e1;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        padding: 0.875rem 1rem;
+        background: rgba(15, 23, 42, 0.6);
+        border-left: 3px solid #fbbf24;
+        border-radius: 0.25rem;
+        text-align: left;
+      }
+
+      .kbd {
+        display: inline-block;
+        padding: 0.1rem 0.4rem;
+        background: rgba(96, 165, 250, 0.15);
+        border: 1px solid rgba(96, 165, 250, 0.45);
+        border-radius: 0.25rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        color: #93c5fd;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      /* Reveal chip — same green DNA as the win-chip on lets-go */
+      .reveal-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.18), rgba(37, 99, 235, 0.14));
+        border: 1px solid rgba(96, 165, 250, 0.55);
+        border-radius: 0.5rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #93c5fd;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow:
+          0 0 25px rgba(96, 165, 250, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        animation: reveal-chip-pulse 2.4s ease-in-out infinite;
+      }
+
+      .reveal-chip:hover,
+      .reveal-chip:focus-visible {
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.32), rgba(37, 99, 235, 0.25));
+        border-color: rgba(147, 197, 253, 0.95);
+        color: #fff;
+        outline: none;
+        transform: translateX(3px);
+        animation-play-state: paused;
+        box-shadow:
+          0 0 40px rgba(96, 165, 250, 0.5),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+
+      .reveal-chip-prefix { color: #fbbf24; font-weight: 700; }
+      .reveal-chip-text { letter-spacing: 0.02em; }
+      .reveal-chip-arrow {
+        margin-left: 0.25rem;
+        font-size: 1.1em;
+        transition: transform 0.2s ease;
+      }
+
+      .reveal-chip:hover .reveal-chip-arrow {
+        transform: translateX(2px);
+      }
+
+      @keyframes reveal-chip-pulse {
+        0%, 100% {
+          box-shadow:
+            0 0 25px rgba(96, 165, 250, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        50% {
+          box-shadow:
+            0 0 45px rgba(96, 165, 250, 0.55),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .floater { width: 38px; height: 38px; }
+        .extract-section { padding: 3rem 1rem; }
+        .window-body { padding: 1.5rem 1.25rem; min-height: 24rem; }
+        .window-title { font-size: 0.7rem; }
+
+        .extract-icon-wrap { width: 100px; height: 100px; }
+        .extract-status { font-size: 0.9rem; }
+        .extract-meta { font-size: 0.7rem; }
+
+        .reveal-heading { font-size: 1rem; }
+        .rhyme-line { font-size: 1rem; }
+        .instruction { font-size: 0.78rem; padding: 0.75rem 0.85rem; }
+        .reveal-chip { font-size: 0.85rem; padding: 0.85rem 1.1rem; }
+      }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .floater { animation: none; }
+        .extract-window { animation: none; }
+        .zipper-pull { animation: none; }
+        .extract-files .file-1,
+        .extract-files .file-2,
+        .extract-files .file-3 { animation: none; }
+        .progress-fill { transition: none; }
+        .reveal-chip { animation: none; }
+        .estate--active { animation: none; }
+      }
+    </style>
+  </body>
+</html>

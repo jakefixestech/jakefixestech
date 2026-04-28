@@ -100,7 +100,90 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://jakefixestech.com');
       gtag('config', 'G-7C6PE3V9LJ');
     </script>
 
+
   </head>
+  <script is:inline>
+(function() {
+  'use strict';
+
+  const SCAVENGER_PHRASES = {
+    "lets go":   "/h/lets-go",
+    "let's go":  "/h/lets-go",
+  };
+
+  function normalize(str) {
+    return (str || "")
+      .toLowerCase()
+      .trim()
+      .replace(/[.,!?;:"]/g, "")
+      .replace(/\s+/g, " ");
+  }
+
+  function checkPhrase(rawText) {
+    const normalized = normalize(rawText);
+    if (SCAVENGER_PHRASES[normalized]) {
+      return SCAVENGER_PHRASES[normalized];
+    }
+    const noApos = normalized.replace(/'/g, "");
+    if (SCAVENGER_PHRASES[noApos]) {
+      return SCAVENGER_PHRASES[noApos];
+    }
+    return null;
+  }
+
+  function handleTrigger(targetUrl, event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 150);
+  }
+
+  function attachListeners() {
+    const searchInputs = document.querySelectorAll(
+      'input[type="search"], input[name*="search" i], input[id*="search" i], input[class*="search" i], input[placeholder*="search" i]'
+    );
+
+    searchInputs.forEach((input) => {
+      if (input.dataset.scavengerWired) return;
+      input.dataset.scavengerWired = "true";
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          const target = checkPhrase(input.value);
+          if (target) {
+            handleTrigger(target, e);
+          }
+        }
+      });
+
+      const form = input.closest("form");
+      if (form && !form.dataset.scavengerWired) {
+        form.dataset.scavengerWired = "true";
+        form.addEventListener("submit", (e) => {
+          const target = checkPhrase(input.value);
+          if (target) {
+            handleTrigger(target, e);
+          }
+        });
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", attachListeners);
+  } else {
+    attachListeners();
+  }
+
+  const observer = new MutationObserver(() => {
+    attachListeners();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
   <body>
     <Navbar />
     <main>

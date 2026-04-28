@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import content from '../content/home.yml';
+import ScavengerEntry from '../components/ScavengerEntry.astro';
 ---
 
 <Layout title="Jake Fixes Tech — Computer Repair & Website Design in Littleton, NH"
@@ -320,8 +321,8 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:5rem 1.5rem;text-align:center;">
+  <!-- CTA Section — wraps the existing CTA in a positioned div so the scavenger entry can sit on its right side -->
+  <section class="cta-with-scavenger" style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:5rem 1.5rem;text-align:center;position:relative;">
     <div style="max-width:40rem;margin:0 auto;">
       <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">{content.ctaTitle}</h2>
       <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">{content.ctaSubtitle}</p>
@@ -336,9 +337,18 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
         </a>
       </div>
     </div>
+
+    <!-- Scavenger hunt entry: peeks out on the right edge (desktop) or bottom-right (mobile) -->
+    <ScavengerEntry />
   </section>
 
 </Layout>
+
+<!-- Tiny inline script: marks the page as "JS loaded" so the animation states only kick in when CSS animations can actually run.
+     This means WAVE (which doesn't run JS) sees fully-visible text and won't false-flag contrast errors. -->
+<script is:inline>
+  document.documentElement.classList.add('js-loaded');
+</script>
 
 <style>
   /* ===== SVG HERO ===== */
@@ -452,6 +462,19 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     justify-content: center;
   }
 
+  /* ===== WORDMARK FIX FOR WAVE CONTRAST ERRORS =====
+     The fade-in animation requires elements to start at opacity:0, but WAVE
+     reads opacity:0 as transparent text and flags it as a contrast error.
+
+     Fix: by default (no JS), text is fully visible — no animation, just static.
+     When JS loads, the .js-loaded class is added to <html>, which "arms" the
+     animation: opacity gets reset to 0 and the keyframes run.
+
+     Result:
+     - WAVE sees fully visible white text on dark background → no contrast errors
+     - Real users with JS see the fade-in animation as intended
+     - Users without JS see the static (no-animation) version, which is also fine
+  */
   .wordmark-jake,
   .wordmark-fixes,
   .wordmark-tech {
@@ -460,33 +483,46 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     color: white;
     letter-spacing: -0.02em;
     line-height: 1;
-    opacity: 0;
-    animation: wordmarkFade 0.8s ease forwards;
     text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+    /* Default state: fully visible, no animation. WAVE sees this. */
   }
 
-  .wordmark-jake  { animation-delay: 1.8s; }
   .wordmark-fixes {
-    animation-delay: 2.1s;
     color: #bfdbfe;
   }
-  .wordmark-tech  { animation-delay: 2.4s; }
+
+  /* Once JS loads, arm the animation: hide first, then fade in */
+  :global(.js-loaded) .wordmark-jake,
+  :global(.js-loaded) .wordmark-fixes,
+  :global(.js-loaded) .wordmark-tech {
+    opacity: 0;
+    animation: wordmarkFade 0.8s ease forwards;
+  }
+
+  :global(.js-loaded) .wordmark-jake  { animation-delay: 1.8s; }
+  :global(.js-loaded) .wordmark-fixes { animation-delay: 2.1s; }
+  :global(.js-loaded) .wordmark-tech  { animation-delay: 2.4s; }
 
   @keyframes wordmarkFade {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  /* Tagline — same JS-gated pattern */
   #hero-tagline {
     font-size: clamp(0.875rem, 2vw, 1.1rem);
     color: rgba(255,255,255,0.92);
     letter-spacing: 0.04em;
     font-weight: 500;
     margin: 0;
+  }
+
+  :global(.js-loaded) #hero-tagline {
     opacity: 0;
     animation: wordmarkFade 0.8s ease 2.8s forwards;
   }
 
+  /* CTA button — same JS-gated pattern */
   #hero-cta {
     display: inline-flex;
     align-items: center;
@@ -498,9 +534,12 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     border-radius: 0.5rem;
     text-decoration: none;
     font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  :global(.js-loaded) #hero-cta {
     opacity: 0;
     animation: wordmarkFade 0.8s ease 3.1s forwards;
-    transition: transform 0.2s, box-shadow 0.2s;
   }
 
   #hero-cta:hover {
@@ -508,22 +547,33 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
 
-  /* Scroll hint */
+  /* Scroll hint — same JS-gated pattern */
   #scroll-hint {
     position: absolute;
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     color: rgba(255,255,255,0.8);
-    animation: scrollBounce 2s ease-in-out infinite, wordmarkFade 0.8s ease 3.5s forwards;
-    opacity: 0;
     z-index: 2;
     cursor: pointer;
+  }
+
+  :global(.js-loaded) #scroll-hint {
+    opacity: 0;
+    animation: scrollBounce 2s ease-in-out infinite, wordmarkFade 0.8s ease 3.5s forwards;
   }
 
   @keyframes scrollBounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50%       { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ===== CTA section with scavenger entry ===== */
+  /* Add bottom padding on mobile so the bottom-right scavenger entry doesn't crowd the email button */
+  @media (max-width: 768px) {
+    .cta-with-scavenger {
+      padding-bottom: 6rem !important;
+    }
   }
 
   /* ===== REST OF PAGE ===== */
@@ -564,13 +614,18 @@ description="Your friendly neighborhood tech expert. Affordable computer repair,
 
   @media (prefers-reduced-motion: reduce) {
     .trace, .node, .pulse-ring,
-    .glow-orb-1, .glow-orb-2, #scroll-hint {
+    .glow-orb-1, .glow-orb-2 {
       animation: none;
     }
-    .wordmark-jake, .wordmark-fixes, .wordmark-tech,
-    #hero-tagline, #hero-cta, #scroll-hint {
+    :global(.js-loaded) .wordmark-jake,
+    :global(.js-loaded) .wordmark-fixes,
+    :global(.js-loaded) .wordmark-tech,
+    :global(.js-loaded) #hero-tagline,
+    :global(.js-loaded) #hero-cta,
+    :global(.js-loaded) #scroll-hint {
       opacity: 1;
       transform: none;
+      animation: none;
     }
     .trace { stroke-dashoffset: 0; }
     .node { fill-opacity: 0.7; }

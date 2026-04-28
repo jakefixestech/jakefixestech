@@ -1,0 +1,242 @@
+<a
+  href="/h/safe-mode"
+  class="scavenger-entry"
+  aria-label="A mysterious clickable element"
+  rel="nofollow"
+>
+  <!-- The word: "Start?" — eyes on the question mark -->
+  <div class="peek-word" aria-hidden="true">
+    <span class="letter">S</span>
+    <span class="letter">t</span>
+    <span class="letter">a</span>
+    <span class="letter">r</span>
+    <span class="letter">t</span>
+    <span class="letter letter-q">
+      <!-- Question mark with embedded blinking eyes -->
+      <svg viewBox="0 0 32 48" class="qmark-svg" xmlns="http://www.w3.org/2000/svg">
+        <!-- Question mark shape -->
+        <path
+          d="M 8 14 Q 8 4 16 4 Q 24 4 24 14 Q 24 20 18 24 Q 16 26 16 32 M 16 38 L 16 42"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <!-- Two eyes that blink -->
+        <g class="eyes">
+          <circle cx="13" cy="14" r="2.2" class="eye eye-left" />
+          <circle cx="19" cy="14" r="2.2" class="eye eye-right" />
+        </g>
+      </svg>
+    </span>
+  </div>
+
+  <span class="sr-only">Start a hidden scavenger hunt</span>
+</a>
+
+<style>
+  /* === The wrapper === */
+  .scavenger-entry {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    outline: none;
+  }
+
+  .scavenger-entry:hover {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .scavenger-entry:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  /* === The peeking word === */
+  .peek-word {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 0.05em;
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    line-height: 1;
+    padding: 0 0.35rem;
+  }
+
+  /* Each letter starts hidden below, then peeks up & wave-bounces */
+  .letter {
+    display: inline-block;
+    transform: translateY(140%);
+    opacity: 0;
+    animation:
+      letter-peek 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+      letter-wave 3s ease-in-out infinite;
+  }
+
+  /*
+    Stagger each letter so they peek out one at a time.
+    First delay is the peek-up animation start (60s + small offset for stagger).
+    Second delay is when the wave-bounce starts (after the peek finishes).
+  */
+  .letter:nth-child(1) { animation-delay: 60.0s, 60.8s; }  /* S */
+  .letter:nth-child(2) { animation-delay: 60.15s, 60.95s; } /* t */
+  .letter:nth-child(3) { animation-delay: 60.3s, 61.1s; }   /* a */
+  .letter:nth-child(4) { animation-delay: 60.45s, 61.25s; } /* r */
+  .letter:nth-child(5) { animation-delay: 60.6s, 61.4s; }   /* t */
+  .letter:nth-child(6) { animation-delay: 60.75s, 61.55s; } /* ? */
+
+  /* Question mark needs to be slightly bigger than the letters */
+  .letter-q {
+    width: 1.2em;
+    height: 1.6em;
+    margin-left: 0.05em;
+  }
+
+  .qmark-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: currentColor;
+    overflow: visible;
+  }
+
+  /* === Eye blink animation ===
+     Eyes start hidden too, so they don't appear before the question mark peeks up.
+     Then they begin blinking and looking around once the ? is in place. */
+  .eye {
+    fill: currentColor;
+    transform-origin: center;
+    transform-box: fill-box;
+    opacity: 0;
+    animation:
+      eye-fadein 0.4s ease 61.55s forwards,
+      eye-blink 5s ease-in-out 62s infinite,
+      eye-look 7s ease-in-out 62s infinite;
+  }
+
+  /* Slight delay between left and right eye for personality */
+  .eye-right {
+    animation-delay: 61.55s, 62.05s, 62.3s;
+  }
+
+  /* === Keyframes === */
+
+  @keyframes letter-peek {
+    0% {
+      opacity: 0;
+      transform: translateY(140%);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-12%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes letter-wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  @keyframes eye-fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes eye-blink {
+    0%, 92%, 100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    94%, 98% {
+      transform: scaleY(0.1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes eye-look {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-1px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(1px);
+    }
+  }
+
+  /* === Hover: word "wakes up" — bigger, brighter, eyes go wide === */
+  .scavenger-entry:hover .peek-word {
+    transform: scale(1.08);
+    transition: transform 0.25s ease;
+  }
+
+  .scavenger-entry:hover .eye {
+    animation-play-state: paused;
+  }
+
+  /* === Mobile === */
+  @media (max-width: 768px) {
+    .scavenger-entry {
+      top: auto;
+      bottom: 1rem;
+      right: 1rem;
+      transform: none;
+    }
+
+    .peek-word {
+      font-size: 0.85rem;
+    }
+  }
+
+  /* === Accessibility: screen reader only label === */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* === Reduced motion: still discoverable, but no animation === */
+  @media (prefers-reduced-motion: reduce) {
+    .letter {
+      opacity: 1;
+      transform: translateY(0);
+      animation: none;
+    }
+    .eye {
+      opacity: 1;
+      animation: none;
+    }
+    .scavenger-entry:hover .peek-word {
+      transition: none;
+    }
+  }
+</style>

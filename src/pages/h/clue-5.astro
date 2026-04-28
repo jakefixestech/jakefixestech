@@ -1,0 +1,953 @@
+---
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>...</title>
+    <meta name="description" content="" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=optional"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=optional"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+  </head>
+
+  <body data-pagefind-ignore>
+    <main class="page">
+      <h1 class="sr-only">Scavenger Hunt — Final Reward</h1>
+
+      <!-- ============================================ -->
+      <!-- Rising sparkle particles                     -->
+      <!-- ============================================ -->
+      <div class="sparkles" aria-hidden="true">
+        <span class="spark sp-1"></span>
+        <span class="spark sp-2"></span>
+        <span class="spark sp-3"></span>
+        <span class="spark sp-4"></span>
+        <span class="spark sp-5"></span>
+        <span class="spark sp-6"></span>
+        <span class="spark sp-7"></span>
+        <span class="spark sp-8"></span>
+        <span class="spark sp-9"></span>
+        <span class="spark sp-10"></span>
+        <span class="spark sp-11"></span>
+        <span class="spark sp-12"></span>
+        <span class="spark sp-13"></span>
+        <span class="spark sp-14"></span>
+        <span class="spark sp-15"></span>
+        <span class="spark sp-16"></span>
+        <span class="spark sp-17"></span>
+        <span class="spark sp-18"></span>
+        <span class="spark sp-19"></span>
+        <span class="spark sp-20"></span>
+      </div>
+
+      <!-- ============================================ -->
+      <!-- HERO: Trophy + congratulations               -->
+      <!-- ============================================ -->
+      <section class="hero">
+        <div class="trophy-wrap" aria-hidden="true">
+          <!-- Glowing aura behind trophy -->
+          <div class="trophy-aura"></div>
+
+          <svg class="trophy" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Handles -->
+            <path d="M 28 38 Q 10 38 10 58 Q 10 75 28 75" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" />
+            <path d="M 92 38 Q 110 38 110 58 Q 110 75 92 75" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" />
+
+            <!-- Cup body -->
+            <path d="M 24 24 L 96 24 L 90 80 Q 88 90 78 92 L 42 92 Q 32 90 30 80 Z"
+                  fill="#fbbf24" stroke="#92400e" stroke-width="2" stroke-linejoin="round" />
+
+            <!-- Cup highlight -->
+            <path d="M 32 30 L 42 30 L 40 78 Q 39 84 35 86 L 32 86 Z" fill="#fde68a" opacity="0.6" />
+
+            <!-- Top rim -->
+            <rect x="22" y="20" width="76" height="8" rx="1" fill="#fbbf24" stroke="#92400e" stroke-width="2" />
+            <rect x="24" y="22" width="72" height="2" fill="#fde68a" opacity="0.7" />
+
+            <!-- Star on the cup -->
+            <path d="M 60 44 L 64 54 L 75 55 L 67 62 L 70 73 L 60 67 L 50 73 L 53 62 L 45 55 L 56 54 Z"
+                  fill="#fff" stroke="#fff" stroke-width="0.5" />
+
+            <!-- Stem -->
+            <rect x="52" y="92" width="16" height="14" fill="#d97706" stroke="#92400e" stroke-width="2" />
+
+            <!-- Base -->
+            <path d="M 36 106 L 84 106 L 88 122 L 32 122 Z" fill="#d97706" stroke="#92400e" stroke-width="2" stroke-linejoin="round" />
+
+            <!-- Base highlight -->
+            <rect x="40" y="108" width="40" height="3" fill="#fbbf24" opacity="0.7" />
+
+            <!-- Plate text-style line on base -->
+            <rect x="44" y="115" width="32" height="2" rx="0.5" fill="#92400e" opacity="0.6" />
+          </svg>
+        </div>
+
+        <p class="hero-eyebrow">SCAVENGER HUNT • COMPLETE</p>
+        <h2 class="hero-title">You found it.</h2>
+        <p class="hero-subtitle">
+          You scrolled, scanned, hacked, smashed, and clicked your way through five clues —
+          and you actually finished. Respect.
+        </p>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- DISCOUNT REWARD CARD                         -->
+      <!-- ============================================ -->
+      <section class="reward-section">
+        <div class="reward-card">
+          <div class="reward-header">
+            <span class="reward-badge">YOUR REWARD</span>
+          </div>
+
+          <div class="reward-amount">
+            <span class="amount-num">20%</span>
+            <span class="amount-label">OFF</span>
+          </div>
+
+          <p class="reward-desc">
+            Your next computer repair service from Jake Fixes Tech.
+          </p>
+
+          <!-- The catchphrase code -->
+          <div class="code-wrap">
+            <p class="code-label">Mention this catchphrase when you book:</p>
+            <div class="code-display">
+              <span id="code-text">I FOUND THE BUG</span>
+              <button id="copy-btn" type="button" class="copy-btn" aria-label="Copy catchphrase to clipboard">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M 5 15 V 5 a 2 2 0 0 1 2 -2 H 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="copy-btn-text">Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- The fine print, but cleanly -->
+          <ul class="terms">
+            <li>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="check-icon">
+                <circle cx="12" cy="12" r="11" fill="#10b981"/>
+                <path d="M 7 12 L 11 16 L 17 8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Applies to <strong>all computer repair services</strong> — software, hardware, data, Mac, gaming consoles, on-site, remote, and tech tutoring.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="x-icon">
+                <circle cx="12" cy="12" r="11" fill="#94a3b8"/>
+                <path d="M 8 8 L 16 16 M 16 8 L 8 16" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <span>Does <strong>not</strong> apply to web design or website services.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="info-icon">
+                <circle cx="12" cy="12" r="11" fill="#60a5fa"/>
+                <text x="12" y="17" text-anchor="middle" fill="#fff" font-family="Inter Tight, sans-serif" font-weight="900" font-size="14">1</text>
+              </svg>
+              <span><strong>One-time use</strong> per customer. No expiration date — use it whenever you need a repair.</span>
+            </li>
+          </ul>
+
+          <a href="/contact" class="primary-cta">
+            <span>Schedule My Repair</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M 5 12 L 19 12 M 13 6 L 19 12 L 13 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- WEB DESIGN UPSELL                            -->
+      <!-- ============================================ -->
+      <section class="upsell-section">
+        <div class="upsell-divider" aria-hidden="true"></div>
+
+        <div class="upsell-card">
+          <p class="upsell-eyebrow">PSST — ONE MORE THING</p>
+          <h2 class="upsell-title">Want one of these on YOUR site?</h2>
+          <p class="upsell-text">
+            Liked the hunt? I build these too. As an add-on to a Jake Fixes Tech web design
+            project, I can wire a custom scavenger hunt — minigames, hidden triggers, secret
+            pages, themed puzzles — into your site.
+          </p>
+          <p class="upsell-text">
+            Built start-to-finish in vanilla code. No third-party platforms. 100/100 Lighthouse,
+            full accessibility, mobile and desktop. Tailored to your brand and goals.
+          </p>
+
+          <!-- Pricing tiers -->
+          <div class="tier-grid">
+            <div class="tier">
+              <div class="tier-name">STARTER</div>
+              <div class="tier-price">$400</div>
+              <p class="tier-desc">2 clues, simple triggers (search, click, scroll). No game.</p>
+            </div>
+            <div class="tier tier--featured">
+              <div class="tier-flag">MOST POPULAR</div>
+              <div class="tier-name">STANDARD</div>
+              <div class="tier-price">$750</div>
+              <p class="tier-desc">4 clues, 1 custom minigame, integration into existing pages.</p>
+            </div>
+            <div class="tier">
+              <div class="tier-name">PREMIUM</div>
+              <div class="tier-price">$1,200<span class="tier-plus">+</span></div>
+              <p class="tier-desc">5+ clues, custom minigame, multiple page integrations, custom illustrations.</p>
+            </div>
+          </div>
+
+          <p class="tier-extra">
+            Need more? <strong>$150 per additional clue.</strong> Pricing scales with complexity —
+            extra games, custom artwork, or unique mechanics get quoted individually.
+          </p>
+
+          <a href="/web-services" class="upsell-cta">
+            <span>See Web Design Services</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M 5 12 L 19 12 M 13 6 L 19 12 L 13 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Footer outro                                  -->
+      <!-- ============================================ -->
+      <section class="outro">
+        <p class="outro-line">— Thanks for playing —</p>
+        <a href="/" class="home-link">Back to homepage</a>
+      </section>
+    </main>
+
+    <script>
+      // @ts-nocheck
+      // Copy-to-clipboard functionality
+      const copyBtn = document.getElementById('copy-btn');
+      const codeText = document.getElementById('code-text');
+      const copyBtnText = copyBtn.querySelector('.copy-btn-text');
+
+      copyBtn.addEventListener('click', async function() {
+        const text = codeText.textContent.trim();
+        try {
+          await navigator.clipboard.writeText(text);
+          copyBtnText.textContent = 'Copied!';
+          copyBtn.classList.add('copy-btn--success');
+          setTimeout(function() {
+            copyBtnText.textContent = 'Copy';
+            copyBtn.classList.remove('copy-btn--success');
+          }, 2000);
+        } catch (e) {
+          // Fallback for older browsers — select the text manually
+          try {
+            const range = document.createRange();
+            range.selectNode(codeText);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            copyBtnText.textContent = 'Copied!';
+            copyBtn.classList.add('copy-btn--success');
+            setTimeout(function() {
+              copyBtnText.textContent = 'Copy';
+              copyBtn.classList.remove('copy-btn--success');
+            }, 2000);
+          } catch (e2) {
+            copyBtnText.textContent = 'Failed';
+            setTimeout(function() {
+              copyBtnText.textContent = 'Copy';
+            }, 2000);
+          }
+        }
+      });
+    </script>
+
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+      body {
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        color: #ffffff;
+        font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .page { position: relative; min-height: 100vh; padding-bottom: 4rem; }
+
+      .sr-only {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* ============================================================ */
+      /* RISING SPARKLES                                               */
+      /* ============================================================ */
+      .sparkles {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .spark {
+        position: absolute;
+        bottom: -20px;
+        width: 4px;
+        height: 4px;
+        background: #fbbf24;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #fbbf24, 0 0 14px rgba(251, 191, 36, 0.5);
+        opacity: 0;
+      }
+
+      .sp-1  { left:  4%; animation: sparkle-rise 6s linear  0s   infinite; }
+      .sp-2  { left: 12%; animation: sparkle-rise 7s linear  1s   infinite; }
+      .sp-3  { left: 18%; animation: sparkle-rise 5s linear  2.5s infinite; }
+      .sp-4  { left: 25%; animation: sparkle-rise 8s linear  0.5s infinite; }
+      .sp-5  { left: 33%; animation: sparkle-rise 6s linear  3s   infinite; }
+      .sp-6  { left: 40%; animation: sparkle-rise 7s linear  1.5s infinite; }
+      .sp-7  { left: 48%; animation: sparkle-rise 5s linear  4s   infinite; }
+      .sp-8  { left: 55%; animation: sparkle-rise 8s linear  2s   infinite; }
+      .sp-9  { left: 62%; animation: sparkle-rise 6s linear  0.8s infinite; }
+      .sp-10 { left: 70%; animation: sparkle-rise 7s linear  3.5s infinite; }
+      .sp-11 { left: 76%; animation: sparkle-rise 5s linear  1.2s infinite; }
+      .sp-12 { left: 84%; animation: sparkle-rise 8s linear  2.8s infinite; }
+      .sp-13 { left: 90%; animation: sparkle-rise 6s linear  4.5s infinite; }
+      .sp-14 { left: 96%; animation: sparkle-rise 7s linear  1.8s infinite; }
+      .sp-15 { left:  8%; animation: sparkle-rise 9s linear  3.2s infinite; }
+      .sp-16 { left: 30%; animation: sparkle-rise 9s linear  5s   infinite; }
+      .sp-17 { left: 52%; animation: sparkle-rise 9s linear  4.2s infinite; }
+      .sp-18 { left: 72%; animation: sparkle-rise 9s linear  5.5s infinite; }
+      .sp-19 { left: 22%; animation: sparkle-rise 7s linear  6s   infinite; }
+      .sp-20 { left: 88%; animation: sparkle-rise 8s linear  3.8s infinite; }
+
+      @keyframes sparkle-rise {
+        0%   { transform: translateY(0) scale(0.5); opacity: 0; }
+        10%  { opacity: 1; transform: translateY(-10vh) scale(1); }
+        80%  { opacity: 1; }
+        100% { transform: translateY(-110vh) scale(0.3); opacity: 0; }
+      }
+
+      /* ============================================================ */
+      /* HERO                                                          */
+      /* ============================================================ */
+      .hero {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 5rem 1.5rem 3rem 1.5rem;
+        max-width: 42rem;
+        margin: 0 auto;
+      }
+
+      .trophy-wrap {
+        position: relative;
+        width: 160px;
+        height: 180px;
+        margin: 0 auto 2rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .trophy-aura {
+        position: absolute;
+        inset: -30%;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(251, 191, 36, 0.45) 0%, rgba(251, 191, 36, 0) 65%);
+        animation: aura-pulse 3.5s ease-in-out infinite;
+      }
+
+      @keyframes aura-pulse {
+        0%, 100% { transform: scale(1); opacity: 0.7; }
+        50%      { transform: scale(1.15); opacity: 1; }
+      }
+
+      .trophy {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 30px rgba(251, 191, 36, 0.5));
+        animation: trophy-float 4s ease-in-out infinite;
+      }
+
+      @keyframes trophy-float {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-6px); }
+      }
+
+      .hero-eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #fbbf24;
+        letter-spacing: 0.2em;
+        margin-bottom: 0.75rem;
+        animation: fade-up 0.6s ease 0.2s both;
+      }
+
+      .hero-title {
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-size: clamp(2.5rem, 7vw, 4.5rem);
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        color: #fff;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+        animation: fade-up 0.7s ease 0.4s both;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1rem, 2.4vw, 1.15rem);
+        color: #bfdbfe;
+        line-height: 1.6;
+        max-width: 36rem;
+        margin: 0 auto;
+        animation: fade-up 0.6s ease 0.7s both;
+      }
+
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ============================================================ */
+      /* REWARD CARD                                                   */
+      /* ============================================================ */
+      .reward-section {
+        position: relative;
+        z-index: 1;
+        padding: 0 1.5rem;
+        max-width: 38rem;
+        margin: 0 auto 4rem auto;
+      }
+
+      .reward-card {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(251, 191, 36, 0.4);
+        border-radius: 1.25rem;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        box-shadow:
+          0 0 0 1px rgba(251, 191, 36, 0.15),
+          0 0 50px rgba(251, 191, 36, 0.2),
+          0 25px 60px rgba(0, 0, 0, 0.35);
+        animation: card-glow 4s ease-in-out infinite;
+      }
+
+      @keyframes card-glow {
+        0%, 100% {
+          box-shadow:
+            0 0 0 1px rgba(251, 191, 36, 0.15),
+            0 0 50px rgba(251, 191, 36, 0.2),
+            0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+        50% {
+          box-shadow:
+            0 0 0 1px rgba(251, 191, 36, 0.3),
+            0 0 80px rgba(251, 191, 36, 0.35),
+            0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+      }
+
+      .reward-header { margin-bottom: 1.5rem; }
+
+      .reward-badge {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        background: rgba(251, 191, 36, 0.15);
+        border: 1px solid rgba(251, 191, 36, 0.5);
+        border-radius: 999px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #fbbf24;
+        letter-spacing: 0.2em;
+      }
+
+      .reward-amount {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .amount-num {
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-size: clamp(4rem, 14vw, 7rem);
+        font-weight: 900;
+        line-height: 1;
+        background: linear-gradient(135deg, #fbbf24, #fde68a, #fbbf24);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gold-shimmer 3s ease-in-out infinite;
+        letter-spacing: -0.04em;
+      }
+
+      @keyframes gold-shimmer {
+        0%, 100% { background-position: 0% 50%; }
+        50%      { background-position: 100% 50%; }
+      }
+
+      .amount-label {
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+        font-weight: 900;
+        color: #fbbf24;
+        letter-spacing: 0.05em;
+      }
+
+      .reward-desc {
+        font-size: 1rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+      }
+
+      /* Code display */
+      .code-wrap {
+        margin-bottom: 2rem;
+      }
+
+      .code-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: #94a3b8;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.05em;
+      }
+
+      .code-display {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 0;
+        background: #0a0e1a;
+        border: 1px solid rgba(96, 165, 250, 0.4);
+        border-radius: 0.625rem;
+        overflow: hidden;
+      }
+
+      #code-text {
+        flex: 1;
+        padding: 1rem 1.25rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: clamp(0.95rem, 2.4vw, 1.25rem);
+        font-weight: 700;
+        color: #fbbf24;
+        letter-spacing: 0.08em;
+        user-select: all;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .copy-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0 1rem;
+        background: rgba(96, 165, 250, 0.15);
+        border: none;
+        border-left: 1px solid rgba(96, 165, 250, 0.4);
+        color: #93c5fd;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .copy-btn:hover,
+      .copy-btn:focus-visible {
+        background: rgba(96, 165, 250, 0.3);
+        color: #fff;
+        outline: none;
+      }
+
+      .copy-btn svg {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+      }
+
+      .copy-btn--success {
+        background: rgba(16, 185, 129, 0.25) !important;
+        color: #4ade80 !important;
+        border-left-color: rgba(16, 185, 129, 0.5) !important;
+      }
+
+      /* Terms list */
+      .terms {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+
+      .terms li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.6rem 0;
+        font-size: 0.9rem;
+        color: #cbd5e1;
+        line-height: 1.55;
+      }
+
+      .terms li strong {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .check-icon, .x-icon, .info-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+
+      /* Primary CTA */
+      .primary-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 1.1rem 2.25rem;
+        background: linear-gradient(135deg, #fbbf24, #f59e0b);
+        color: #1e3a8a;
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-weight: 900;
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        border-radius: 0.625rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 12px 40px rgba(251, 191, 36, 0.4);
+        animation: cta-pulse 2.4s ease-in-out infinite;
+      }
+
+      .primary-cta:hover,
+      .primary-cta:focus-visible {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 0 0 6px rgba(251, 191, 36, 0.25), 0 16px 50px rgba(251, 191, 36, 0.5);
+        outline: none;
+        animation-play-state: paused;
+      }
+
+      .primary-cta svg {
+        width: 1.1rem;
+        height: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      @keyframes cta-pulse {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4), 0 12px 40px rgba(251, 191, 36, 0.4); }
+        50%      { box-shadow: 0 0 0 12px rgba(251, 191, 36, 0), 0 14px 45px rgba(251, 191, 36, 0.5); }
+      }
+
+      /* ============================================================ */
+      /* UPSELL                                                        */
+      /* ============================================================ */
+      .upsell-section {
+        position: relative;
+        z-index: 1;
+        padding: 0 1.5rem;
+        max-width: 56rem;
+        margin: 0 auto 4rem auto;
+      }
+
+      .upsell-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        margin-bottom: 4rem;
+      }
+
+      .upsell-card {
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(96, 165, 250, 0.25);
+        border-radius: 1.25rem;
+        padding: 2.5rem 2rem;
+        text-align: center;
+      }
+
+      .upsell-eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #93c5fd;
+        letter-spacing: 0.2em;
+        margin-bottom: 0.75rem;
+      }
+
+      .upsell-title {
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        color: #fff;
+        margin-bottom: 1.25rem;
+      }
+
+      .upsell-text {
+        font-size: 1rem;
+        color: #cbd5e1;
+        line-height: 1.65;
+        max-width: 42rem;
+        margin: 0 auto 1rem auto;
+      }
+
+      /* Tier grid */
+      .tier-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 2.5rem 0 1.5rem 0;
+        text-align: left;
+      }
+
+      .tier {
+        position: relative;
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid rgba(96, 165, 250, 0.25);
+        border-radius: 0.75rem;
+        padding: 1.5rem 1.25rem;
+        transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      }
+
+      .tier:hover {
+        transform: translateY(-3px);
+        border-color: rgba(96, 165, 250, 0.5);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .tier--featured {
+        background: rgba(96, 165, 250, 0.1);
+        border-color: rgba(96, 165, 250, 0.6);
+        box-shadow: 0 0 30px rgba(96, 165, 250, 0.2);
+      }
+
+      .tier-flag {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #60a5fa;
+        color: #0a0e1a;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        padding: 0.25rem 0.6rem;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+
+      .tier-name {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #94a3b8;
+        letter-spacing: 0.18em;
+        margin-bottom: 0.5rem;
+      }
+
+      .tier-price {
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-size: 2rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.02em;
+      }
+
+      .tier-plus {
+        font-size: 1.25rem;
+        color: #93c5fd;
+        font-weight: 700;
+      }
+
+      .tier-desc {
+        font-size: 0.85rem;
+        color: #cbd5e1;
+        line-height: 1.55;
+      }
+
+      .tier-extra {
+        font-size: 0.9rem;
+        color: #94a3b8;
+        line-height: 1.6;
+        max-width: 38rem;
+        margin: 0 auto 2rem auto;
+      }
+
+      .tier-extra strong {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .upsell-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: rgba(96, 165, 250, 0.15);
+        border: 1px solid rgba(96, 165, 250, 0.55);
+        color: #93c5fd;
+        font-family: 'Inter Tight', system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease;
+      }
+
+      .upsell-cta:hover,
+      .upsell-cta:focus-visible {
+        background: rgba(96, 165, 250, 0.3);
+        border-color: rgba(147, 197, 253, 0.95);
+        color: #fff;
+        transform: translateX(3px);
+        outline: none;
+      }
+
+      .upsell-cta svg {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+      }
+
+      /* ============================================================ */
+      /* OUTRO                                                         */
+      /* ============================================================ */
+      .outro {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+
+      .outro-line {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+      }
+
+      .home-link {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        color: #93c5fd;
+        text-decoration: none;
+        border-bottom: 1px dashed rgba(147, 197, 253, 0.5);
+        padding-bottom: 0.1rem;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      .home-link:hover,
+      .home-link:focus-visible {
+        color: #fff;
+        border-bottom-color: rgba(255, 255, 255, 0.8);
+        outline: none;
+      }
+
+      /* ============================================================ */
+      /* MOBILE                                                        */
+      /* ============================================================ */
+      @media (max-width: 768px) {
+        .hero { padding: 3rem 1.25rem 2rem 1.25rem; }
+        .trophy-wrap { width: 120px; height: 140px; }
+
+        .reward-card { padding: 2rem 1.25rem; border-radius: 1rem; }
+        .upsell-card { padding: 2rem 1.25rem; }
+
+        .tier-grid {
+          grid-template-columns: 1fr;
+          gap: 0.875rem;
+        }
+
+        .tier { padding: 1.25rem 1rem; }
+        .tier-price { font-size: 1.75rem; }
+
+        #code-text {
+          font-size: 0.95rem;
+          padding: 0.85rem 1rem;
+        }
+
+        .copy-btn { padding: 0 0.85rem; font-size: 0.8rem; }
+        .copy-btn-text { display: none; }
+
+        .upsell-divider { margin-bottom: 2.5rem; }
+
+        .terms li { font-size: 0.85rem; }
+
+        .primary-cta { font-size: 0.9rem; padding: 1rem 1.75rem; }
+      }
+
+      /* ============================================================ */
+      /* REDUCED MOTION                                                */
+      /* ============================================================ */
+      @media (prefers-reduced-motion: reduce) {
+        .spark { animation: none !important; opacity: 0; }
+        .trophy-aura { animation: none; }
+        .trophy { animation: none; }
+        .reward-card { animation: none; }
+        .amount-num { animation: none; background-position: 0% 50%; }
+        .primary-cta { animation: none; }
+        .hero-eyebrow,
+        .hero-title,
+        .hero-subtitle { animation: none; opacity: 1; transform: none; }
+      }
+    </style>
+  </body>
+</html>
