@@ -3,10 +3,9 @@
 // Place at: src/pages/h/safe-mode.astro
 //
 // The long-scroll mystery page. Each milestone <h2> is pre-filled with its text
-// (so WAVE sees real headings, not empty ones). JS clears the text on intersection
-// and re-types it via the typewriter effect for real users.
-//
-// Also includes a visually-hidden <h1> for proper heading hierarchy (WAVE requires one).
+// (so WAVE sees real headings, not empty ones). On page load, JS immediately clears
+// all the typewriter text — then the IntersectionObserver types each one back in
+// when the user scrolls to that milestone.
 //
 // noindex/nofollow.
 ---
@@ -268,6 +267,11 @@
       // @ts-nocheck
       const typewriters = document.querySelectorAll('.typewriter');
 
+      // Clear pre-filled text immediately on page load (before user scrolls past
+      // the first milestone). Text is pre-filled so WAVE sees real headings, but
+      // real users with JS get the typewriter animation experience.
+      typewriters.forEach((el) => { el.textContent = ''; });
+
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -275,7 +279,7 @@
               entry.target.dataset.typed = 'true';
               const text = entry.target.dataset.text;
               const target = entry.target;
-              target.textContent = '';  // clear pre-filled text before animating
+              target.textContent = '';  // safety: ensure empty before typing
               let i = 0;
 
               function typeChar() {
