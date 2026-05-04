@@ -1,0 +1,1592 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Win a Free $2,000 Website — NH Local Business Giveaway | Jake Fixes Tech"
+  description="Enter to win a free $2,000 professional website build. Open to New Hampshire local businesses only. 10-day entry window, May 15-25, 2026. No purchase necessary. All entrants get 20% off any future website build.">
+
+  <!-- =====================================================
+       Animated SVG Hero
+       ===================================================== -->
+  <section id="hero-svg" aria-label="Free Website Giveaway for NH Local Businesses">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 580" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="trophyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.95"/>
+          <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.95"/>
+        </linearGradient>
+        <radialGradient id="trophyGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.4"/>
+          <stop offset="60%" style="stop-color:#fbbf24;stop-opacity:0.15"/>
+          <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+
+      <rect width="1440" height="580" fill="url(#bgGrad)"/>
+
+      <!-- Glow orbs -->
+      <ellipse cx="350" cy="260" rx="380" ry="280" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1100" cy="280" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Big golden trophy with glow halo behind -->
+      <g class="trophy-bob">
+        <!-- Soft golden glow halo behind trophy -->
+        <ellipse cx="220" cy="260" rx="200" ry="180" fill="url(#trophyGlow)" class="trophy-halo"/>
+
+        <g class="trophy-group" transform="translate(80, 130)">
+        <!-- Trophy body -->
+        <path d="M50 30 Q50 10 70 10 L210 10 Q230 10 230 30 L230 90 Q230 150 180 165 L180 200 L210 200 L210 240 L70 240 L70 200 L100 200 L100 165 Q50 150 50 90 Z"
+              fill="url(#trophyGrad)" stroke="#fde68a" stroke-opacity="0.6" stroke-width="1.5" class="trophy-cup"/>
+        <!-- Trophy handles -->
+        <path d="M50 50 Q15 50 15 80 Q15 110 50 110" stroke="#fde68a" stroke-opacity="0.8" stroke-width="3" fill="none" class="trophy-handle"/>
+        <path d="M230 50 Q265 50 265 80 Q265 110 230 110" stroke="#fde68a" stroke-opacity="0.8" stroke-width="3" fill="none" class="trophy-handle"/>
+        <!-- Trophy base -->
+        <rect x="60" y="240" width="160" height="20" rx="3" fill="#fbbf24" fill-opacity="0.85" class="trophy-base"/>
+        <!-- Star on the cup -->
+        <path d="M140 70 L150 95 L177 95 L155 110 L163 137 L140 121 L117 137 L125 110 L103 95 L130 95 Z"
+              fill="white" fill-opacity="0.9" class="trophy-star"/>
+      </g>
+      </g>
+      <!-- /trophy-bob -->
+
+      <!-- RIGHT: Stack of "FREE" floating badges suggesting prize value
+           NOTE: Each pill is positioned via x/y attributes on its rect+text rather
+           than transform="translate()" because the CSS animation also uses transform
+           and would override the SVG positioning.
+           Hero text max-width: 38rem ≈ 608px in a 1440 viewport, so text spans
+           roughly x=416-1024. Pills sit at x=1060-1300 with a ~36px buffer.
+           Trophy sits at translate(80,130), spans x=80-380, also ~36px buffer. -->
+      <g class="badge-stack">
+        <!-- $2,000 prize value -->
+        <g class="prize-pill p1">
+          <rect x="1060" y="110" width="240" height="56" rx="14" fill="white" fill-opacity="0.12" stroke="#fde68a" stroke-opacity="0.6" stroke-width="1.5"/>
+          <text x="1180" y="146" text-anchor="middle" fill="#fde68a" font-size="22" font-weight="900" font-family="ui-sans-serif, system-ui">$2,000 PRIZE</text>
+        </g>
+        <!-- 100% FREE -->
+        <g class="prize-pill p2">
+          <rect x="1060" y="180" width="240" height="56" rx="14" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+          <text x="1180" y="216" text-anchor="middle" fill="white" font-size="22" font-weight="900" font-family="ui-sans-serif, system-ui">100% FREE ENTRY</text>
+        </g>
+        <!-- NH local only -->
+        <g class="prize-pill p3">
+          <rect x="1060" y="250" width="240" height="56" rx="14" fill="white" fill-opacity="0.12" stroke="#34d399" stroke-opacity="0.6" stroke-width="1.5"/>
+          <text x="1180" y="286" text-anchor="middle" fill="#34d399" font-size="18" font-weight="900" font-family="ui-sans-serif, system-ui">NH BUSINESSES ONLY</text>
+        </g>
+        <!-- 20% off all entrants -->
+        <g class="prize-pill p4">
+          <rect x="1060" y="320" width="240" height="56" rx="14" fill="white" fill-opacity="0.12" stroke="#bfdbfe" stroke-opacity="0.5" stroke-width="1.5"/>
+          <text x="1180" y="356" text-anchor="middle" fill="#bfdbfe" font-size="17" font-weight="900" font-family="ui-sans-serif, system-ui">20% OFF FOR EVERYONE</text>
+        </g>
+      </g>
+
+      <!-- Ambient floating dots -->
+      <g class="ambient-dots">
+        <circle cx="540" cy="100" r="2" fill="white" fill-opacity="0.25" class="float-dot d1"/>
+        <circle cx="900" cy="80" r="2.5" fill="white" fill-opacity="0.3" class="float-dot d2"/>
+        <circle cx="540" cy="450" r="2" fill="white" fill-opacity="0.25" class="float-dot d3"/>
+        <circle cx="900" cy="500" r="2" fill="white" fill-opacity="0.3" class="float-dot d4"/>
+        <circle cx="700" cy="40" r="2" fill="white" fill-opacity="0.25" class="float-dot d5"/>
+      </g>
+
+      <!-- Decorative grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="145" x2="1440" y2="145"/>
+        <line x1="0" y1="290" x2="1440" y2="290"/>
+        <line x1="0" y1="435" x2="1440" y2="435"/>
+        <line x1="360" y1="0" x2="360" y2="580"/>
+        <line x1="720" y1="0" x2="720" y2="580"/>
+        <line x1="1080" y1="0" x2="1080" y2="580"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.4"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="trophyGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.95"/>
+          <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.95"/>
+        </linearGradient>
+        <radialGradient id="trophyGlowM" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.4"/>
+          <stop offset="60%" style="stop-color:#fbbf24;stop-opacity:0.15"/>
+          <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+
+      <rect width="400" height="700" fill="url(#bgGradM)"/>
+
+      <ellipse cx="200" cy="180" rx="240" ry="200" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="200" cy="600" rx="220" ry="160" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- Trophy at top with glow halo -->
+      <g class="trophy-bob">
+        <ellipse cx="220" cy="130" rx="120" ry="110" fill="url(#trophyGlowM)" class="trophy-halo"/>
+
+        <g class="trophy-group" transform="translate(150, 50)">
+        <path d="M30 18 Q30 6 42 6 L126 6 Q138 6 138 18 L138 54 Q138 90 108 99 L108 120 L126 120 L126 144 L42 144 L42 120 L60 120 L60 99 Q30 90 30 54 Z"
+              fill="url(#trophyGradM)" stroke="#fde68a" stroke-opacity="0.6" stroke-width="1" class="trophy-cup"/>
+        <path d="M30 30 Q9 30 9 48 Q9 66 30 66" stroke="#fde68a" stroke-opacity="0.8" stroke-width="2" fill="none" class="trophy-handle"/>
+        <path d="M138 30 Q159 30 159 48 Q159 66 138 66" stroke="#fde68a" stroke-opacity="0.8" stroke-width="2" fill="none" class="trophy-handle"/>
+        <rect x="36" y="144" width="96" height="12" rx="2" fill="#fbbf24" fill-opacity="0.85" class="trophy-base"/>
+        <path d="M84 42 L90 57 L106 57 L93 66 L98 82 L84 72 L70 82 L75 66 L62 57 L78 57 Z"
+              fill="white" fill-opacity="0.9" class="trophy-star"/>
+      </g>
+      </g>
+      <!-- /trophy-bob mobile -->
+
+      <!-- Prize pills stacked -->
+      <g class="badge-stack">
+        <g class="prize-pill p1">
+          <rect x="60" y="410" width="280" height="48" rx="12" fill="white" fill-opacity="0.12" stroke="#fde68a" stroke-opacity="0.6" stroke-width="1.5"/>
+          <text x="200" y="442" text-anchor="middle" fill="#fde68a" font-size="20" font-weight="900" font-family="ui-sans-serif, system-ui">$2,000 PRIZE</text>
+        </g>
+        <g class="prize-pill p2">
+          <rect x="60" y="470" width="280" height="48" rx="12" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+          <text x="200" y="502" text-anchor="middle" fill="white" font-size="20" font-weight="900" font-family="ui-sans-serif, system-ui">100% FREE ENTRY</text>
+        </g>
+        <g class="prize-pill p3">
+          <rect x="60" y="530" width="280" height="48" rx="12" fill="white" fill-opacity="0.12" stroke="#34d399" stroke-opacity="0.6" stroke-width="1.5"/>
+          <text x="200" y="562" text-anchor="middle" fill="#34d399" font-size="17" font-weight="900" font-family="ui-sans-serif, system-ui">NH BUSINESSES ONLY</text>
+        </g>
+        <g class="prize-pill p4">
+          <rect x="60" y="590" width="280" height="48" rx="12" fill="white" fill-opacity="0.12" stroke="#bfdbfe" stroke-opacity="0.5" stroke-width="1.5"/>
+          <text x="200" y="622" text-anchor="middle" fill="#bfdbfe" font-size="16" font-weight="900" font-family="ui-sans-serif, system-ui">20% OFF FOR EVERYONE</text>
+        </g>
+      </g>
+
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="170" x2="400" y2="170"/>
+        <line x1="0" y1="340" x2="400" y2="340"/>
+        <line x1="0" y1="510" x2="400" y2="510"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">NH Local Business Giveaway · May 15–25, 2026</p>
+      <h1 id="hero-wordmark">Win a Free<br/>$2,000 Website</h1>
+      <p id="hero-tagline">A free professional 5-15 page website build for one lucky New Hampshire local business. Every other entrant gets 20% off any future website build. No purchase necessary. Just enter.</p>
+      <div class="hero-cta-row">
+        <a href="#giveaway-state" id="hero-cta">
+          <span id="hero-cta-text">See Status &amp; Enter</span>
+          <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+      <p class="hero-meta">Free entry. No purchase. NH-based businesses only.</p>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('giveaway-state').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       State-aware Giveaway Section
+       Has 4 states: pre-launch, active, closed, announced.
+       JS picks the right one on page load based on date.
+       Default visible: PRE-LAUNCH (so WAVE/no-JS sees a valid page).
+       ===================================================== -->
+  <section id="giveaway-state" style="background:#f8fafc;padding:5rem 1.5rem;">
+    <div style="max-width:64rem;margin:0 auto;">
+
+      <!-- ============ STATE: PRE-LAUNCH (default visible) ============ -->
+      <div id="state-prelaunch" class="state-block">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <p class="section-eyebrow">Coming Soon</p>
+          <h2 class="section-title">Entries open in...</h2>
+          <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+            The giveaway officially opens on <strong style="color:#111827;">May 15, 2026 at 12:00 AM EST</strong>. The form will go live the moment the timer hits zero. Bookmark this page or come back then.
+          </p>
+        </div>
+
+        <!-- Countdown timer -->
+        <div class="countdown" aria-live="polite" aria-atomic="true">
+          <div class="countdown-cell">
+            <div class="countdown-num" id="cd-days">--</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-sep" aria-hidden="true">:</div>
+          <div class="countdown-cell">
+            <div class="countdown-num" id="cd-hours">--</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-sep" aria-hidden="true">:</div>
+          <div class="countdown-cell">
+            <div class="countdown-num" id="cd-mins">--</div>
+            <div class="countdown-label">Mins</div>
+          </div>
+          <div class="countdown-sep" aria-hidden="true">:</div>
+          <div class="countdown-cell">
+            <div class="countdown-num" id="cd-secs">--</div>
+            <div class="countdown-label">Secs</div>
+          </div>
+        </div>
+
+        <!-- Disabled full form preview -->
+        <div class="form-disabled-wrap">
+          <div class="form-disabled-overlay" aria-hidden="true">
+            <div class="form-disabled-badge">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;display:inline-block;vertical-align:-0.4rem;margin-right:0.5rem;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Form Locked Until May 15
+            </div>
+          </div>
+          <div class="form-disabled-content">
+            <h3 style="font-size:1.25rem;font-weight:800;color:#111827;margin-bottom:0.5rem;text-align:center;">Entry Form Preview</h3>
+            <p style="color:#6b7280;text-align:center;margin-bottom:2rem;font-size:0.9rem;">Here's exactly what the form will look like when entries open. You won't be able to submit until May 15 at midnight.</p>
+
+            <p class="form-required-note">Fields marked * are required.</p>
+
+            <div class="form-row">
+              <label>Business Name *</label>
+              <input type="text" disabled placeholder="e.g. Mountain View Bakery" aria-label="Business Name (preview, disabled)" />
+            </div>
+
+            <div class="form-row">
+              <label>Owner / Contact Name *</label>
+              <input type="text" disabled placeholder="Your full name" aria-label="Owner Name (preview, disabled)" />
+            </div>
+
+            <div class="form-row form-row-split">
+              <div>
+                <label>Email *</label>
+                <input type="email" disabled placeholder="you@yourbusiness.com" aria-label="Email (preview, disabled)" />
+              </div>
+              <div>
+                <label>Phone Number *</label>
+                <input type="tel" disabled placeholder="(603) 555-1234" aria-label="Phone (preview, disabled)" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>NH Business Address *</label>
+              <input type="text" disabled placeholder="Street, City, NH ZIP" aria-label="Business Address (preview, disabled)" />
+              <p class="form-help">Must be a verified NH business address. Eligibility verified before prize is awarded.</p>
+            </div>
+
+            <div class="form-row">
+              <label>State *</label>
+              <select disabled aria-label="State (preview, disabled)">
+                <option>Select state...</option>
+              </select>
+              <p class="form-help">Only NH-based businesses are eligible. Out-of-state entries are automatically disqualified.</p>
+            </div>
+
+            <div class="form-row">
+              <label>Type of Business *</label>
+              <select disabled aria-label="Business type (preview, disabled)">
+                <option>Select type...</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label>Brief Description of Your Business *</label>
+              <textarea disabled rows="3" placeholder="What does your business do? Where are you located in NH?" aria-label="Business description (preview, disabled)"></textarea>
+              <p class="form-help">2-3 sentences is plenty.</p>
+            </div>
+
+            <div class="form-row">
+              <label>What Would You Want From a Website? *</label>
+              <textarea disabled rows="4" placeholder="e.g. Show our menu, get more bookings, make it easier for customers to find us, sell products online, etc." aria-label="Website goals (preview, disabled)"></textarea>
+              <p class="form-help">Don't overthink it. Even 1 sentence is fine.</p>
+            </div>
+
+            <div class="form-row form-row-checkbox">
+              <input type="checkbox" disabled aria-label="Rules agreement (preview, disabled)" />
+              <label>
+                I have read and agree to the <a href="#sweepstakes-rules">Official Sweepstakes Rules</a> and confirm my business is located in New Hampshire. *
+              </label>
+            </div>
+
+            <div class="form-row form-row-checkbox">
+              <input type="checkbox" disabled aria-label="Discount opt-in (preview, disabled)" />
+              <label>
+                I'd like to receive a 20% off discount on any future website build (automatically given to all verified entrants who don't win).
+              </label>
+            </div>
+
+            <button type="button" disabled class="btn-primary" style="width:100%;justify-content:center;opacity:0.5;cursor:not-allowed;">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1rem;width:1rem;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Locked — Opens May 15
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ STATE: ACTIVE (hidden by default, JS shows) ============ -->
+      <div id="state-active" class="state-block" hidden>
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <p class="section-eyebrow" style="color:#16a34a;">Entries Open Now</p>
+          <h2 class="section-title">Enter the Giveaway</h2>
+          <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+            <span id="active-countdown-text">Entries close on May 25, 2026 at 12:00 AM EST.</span> Free to enter. NH businesses only.
+          </p>
+          <!-- Mini countdown showing time remaining -->
+          <div class="countdown countdown-mini" aria-live="polite">
+            <div class="countdown-cell"><div class="countdown-num" id="cd-active-days">--</div><div class="countdown-label">Days</div></div>
+            <div class="countdown-cell"><div class="countdown-num" id="cd-active-hours">--</div><div class="countdown-label">Hours</div></div>
+            <div class="countdown-cell"><div class="countdown-num" id="cd-active-mins">--</div><div class="countdown-label">Mins</div></div>
+          </div>
+        </div>
+
+        <!-- Real Web3Forms entry form -->
+        <form id="giveaway-form" action="https://api.web3forms.com/submit" method="POST" class="giveaway-form" novalidate>
+          <!-- Web3Forms config -->
+          <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="🎉 New Giveaway Entry — NH Website Giveaway" />
+          <input type="hidden" name="from_name" value="Jake Fixes Tech Giveaway" />
+          <input type="hidden" name="redirect" value="false" />
+          <!-- Honeypot anti-spam (must stay empty) -->
+          <input type="checkbox" name="botcheck" id="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" />
+
+          <p class="form-required-note">Fields marked * are required.</p>
+
+          <div class="form-row">
+            <label for="biz-name">Business Name *</label>
+            <input type="text" id="biz-name" name="business_name" required maxlength="120" placeholder="e.g. Mountain View Bakery" autocomplete="organization" />
+          </div>
+
+          <div class="form-row">
+            <label for="owner-name">Owner / Contact Name *</label>
+            <input type="text" id="owner-name" name="owner_name" required maxlength="120" placeholder="Your full name" autocomplete="name" />
+          </div>
+
+          <div class="form-row form-row-split">
+            <div>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required maxlength="200" placeholder="you@yourbusiness.com" autocomplete="email" />
+            </div>
+            <div>
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required maxlength="30" placeholder="(603) 555-1234" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="biz-address">NH Business Address *</label>
+            <input type="text" id="biz-address" name="business_address" required maxlength="200" placeholder="Street, City, NH ZIP" autocomplete="street-address" />
+            <p class="form-help">Must be a verified NH business address. Eligibility verified before prize is awarded.</p>
+          </div>
+
+          <div class="form-row">
+            <label for="state-confirm">State *</label>
+            <select id="state-confirm" name="state" required>
+              <option value="">Select state...</option>
+              <option value="NH">New Hampshire (NH)</option>
+              <option value="OTHER">Outside NH (not eligible)</option>
+            </select>
+            <p class="form-help">Only NH-based businesses are eligible. Out-of-state entries are automatically disqualified.</p>
+          </div>
+
+          <div class="form-row">
+            <label for="biz-type">Type of Business *</label>
+            <select id="biz-type" name="business_type" required>
+              <option value="">Select type...</option>
+              <option>Restaurant / Food Service</option>
+              <option>Retail / Shop</option>
+              <option>Service-Based (Plumber, Electrician, Contractor, etc.)</option>
+              <option>Professional Services (Legal, Accounting, Consulting)</option>
+              <option>Health / Wellness</option>
+              <option>Trades / Construction</option>
+              <option>Salon / Spa / Personal Care</option>
+              <option>Auto Services</option>
+              <option>Nonprofit / Community Org</option>
+              <option>Real Estate</option>
+              <option>Tech / Creative</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="biz-desc">Brief Description of Your Business *</label>
+            <textarea id="biz-desc" name="business_description" required maxlength="500" rows="3" placeholder="What does your business do? Where are you located in NH?"></textarea>
+            <p class="form-help">2-3 sentences is plenty.</p>
+          </div>
+
+          <div class="form-row">
+            <label for="goals">What Would You Want From a Website? *</label>
+            <textarea id="goals" name="website_goals" required maxlength="800" rows="4" placeholder="e.g. Show our menu, get more bookings, make it easier for customers to find us, sell products online, etc."></textarea>
+            <p class="form-help">Don't overthink it. Even 1 sentence is fine.</p>
+          </div>
+
+          <div class="form-row form-row-checkbox">
+            <input type="checkbox" id="agree-rules" name="agree_rules" required value="yes" />
+            <label for="agree-rules">
+              I have read and agree to the <a href="#sweepstakes-rules">Official Sweepstakes Rules</a> and confirm my business is located in New Hampshire. *
+            </label>
+          </div>
+
+          <div class="form-row form-row-checkbox">
+            <input type="checkbox" id="agree-discount" name="agree_discount" value="yes" checked />
+            <label for="agree-discount">
+              I'd like to receive a 20% off discount on any future website build (automatically given to all verified entrants who don't win).
+            </label>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn-primary">
+            <span id="submit-btn-text">Submit My Entry</span>
+            <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+
+          <div id="form-error" class="form-error" hidden>Something went wrong submitting your entry. Please try again or email jake@jakefixestech.com.</div>
+        </form>
+
+        <!-- Success state (hidden until form posts) -->
+        <div id="form-success" class="form-success" hidden>
+          <div class="success-check" aria-hidden="true">
+            <svg viewBox="0 0 64 64" style="width:3.5rem;height:3.5rem;">
+              <circle cx="32" cy="32" r="30" fill="#16a34a" fill-opacity="0.15" stroke="#16a34a" stroke-width="2"/>
+              <path d="M20 32 L28 40 L44 24" stroke="#16a34a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>You're In!</h3>
+          <p>Your entry has been received. You'll get a confirmation email at the address you provided shortly.</p>
+          <p style="margin-top:1rem;">The drawing happens on <strong>May 25, 2026 at 9:00 AM EST</strong>. The winner will be announced on Facebook that same day, and contacted directly. <strong>Whether you win or not</strong>, all verified NH-business entrants get 20% off any future website build — just mention you entered when you book.</p>
+          <p style="margin-top:1.5rem;font-size:0.875rem;color:#6b7280;">Want to stay in touch? Follow us on <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener">Facebook</a> for the winner announcement.</p>
+        </div>
+      </div>
+
+      <!-- ============ STATE: CLOSED, AWAITING DRAWING ============ -->
+      <div id="state-closed" class="state-block" hidden>
+        <div style="text-align:center;">
+          <p class="section-eyebrow" style="color:#9333ea;">Entries Closed</p>
+          <h2 class="section-title">Drawing Soon</h2>
+          <p style="color:#6b7280;margin-top:1rem;max-width:38rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+            Entry submissions closed on May 25, 2026 at 12:00 AM EST. The winner will be drawn at <strong style="color:#111827;">9:00 AM EST on May 25, 2026 (Memorial Day)</strong>.
+          </p>
+          <p style="color:#6b7280;margin-top:1rem;max-width:38rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+            All verified NH-business entrants will receive a 20% off discount on any future website build. The winner will be announced here and on our <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" style="color:#2563eb;">Facebook page</a> shortly after the drawing.
+          </p>
+          <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" class="btn-primary" style="margin-top:2rem;">
+            Follow on Facebook for Announcement
+            <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============ STATE: WINNER ANNOUNCED ============ -->
+      <div id="state-announced" class="state-block" hidden>
+        <div style="text-align:center;">
+          <p class="section-eyebrow" style="color:#16a34a;">Winner Announced</p>
+          <h2 class="section-title">🎉 We Have a Winner!</h2>
+          <p style="color:#6b7280;margin-top:1rem;max-width:38rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+            The drawing was held on May 25, 2026. The winning NH business has been notified directly and the announcement is posted on our <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" style="color:#2563eb;font-weight:600;">Facebook page</a>.
+          </p>
+          <p style="color:#6b7280;margin-top:1rem;max-width:38rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+            <strong style="color:#111827;">Thanks to everyone who entered.</strong> Every verified NH-business entrant qualifies for 20% off any future website build with Jake Fixes Tech — just mention you entered the giveaway when you reach out.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2rem;">
+            <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" class="btn-primary">
+              See Winner on Facebook
+              <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/contact" class="btn-secondary">
+              Claim 20% Off — Contact Jake
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       How It Works (4 steps)
+       ===================================================== -->
+  <section style="background:white;padding:5rem 1.5rem;">
+    <div style="max-width:80rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p class="section-eyebrow">How It Works</p>
+        <h2 class="section-title">From Entry to Website in 4 Steps</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Enter</h3>
+          <p>Fill out the entry form during the May 15-25 window. Free. NH businesses only.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Drawing</h3>
+          <p>One winner is drawn at random on May 25, 2026 at 9:00 AM EST.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Verification</h3>
+          <p>Jake personally contacts the winner and verifies the business before the prize is awarded.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3>Build &amp; Launch</h3>
+          <p>Winner gets a free $2,000 Professional package website. All non-winners get 20% off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       What's Included (Prize details)
+       ===================================================== -->
+  <section style="background:#f8fafc;padding:5rem 1.5rem;">
+    <div style="max-width:64rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p class="section-eyebrow">What You Win</p>
+        <h2 class="section-title">A Real $2,000 Professional Website</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;margin-left:auto;margin-right:auto;line-height:1.75;">
+          The same Professional-tier package on the <a href="/web-services" style="color:#2563eb;">Web Services page</a>. Built from scratch, lightning fast, and yours to own outright.
+        </p>
+      </div>
+      <div class="prize-grid">
+        <div class="prize-card">
+          <div class="prize-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          </div>
+          <h3>5-15 Custom Pages</h3>
+          <p>Home, services, about, contact, FAQ — built around your business, not a template.</p>
+        </div>
+        <div class="prize-card">
+          <div class="prize-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h3>Mobile-First Design</h3>
+          <p>Looks great on phones, tablets, and desktops. Fast on every connection.</p>
+        </div>
+        <div class="prize-card">
+          <div class="prize-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M3 12h18M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9z"/></svg>
+          </div>
+          <h3>Domain &amp; Hosting Setup</h3>
+          <p>I'll register the domain in your name and set up free Cloudflare Pages hosting.</p>
+        </div>
+        <div class="prize-card">
+          <div class="prize-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>SEO &amp; Search Setup</h3>
+          <p>Google indexing, sitemap, meta tags. Discoverable from day one.</p>
+        </div>
+        <div class="prize-card">
+          <div class="prize-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c1.65 0 3.18.45 4.5 1.23"/></svg>
+          </div>
+          <h3>Accessibility Built In</h3>
+          <p>WCAG 2.1 AA compliant — actually accessible, not just on paper.</p>
+        </div>
+        <div class="prize-card">
+          <div class="prize-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>You Own It Outright</h3>
+          <p>No lock-in. The site is yours. The code is yours. The domain is yours.</p>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:2.5rem;color:#6b7280;font-size:0.875rem;">
+        Total prize value: <strong style="color:#111827;">$2,000</strong>. Optional management plans (separate from the build) start at $75/month if the winner wants ongoing support, but are not required.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FAQ
+       ===================================================== -->
+  <section style="background:white;padding:5rem 1.5rem;">
+    <div style="max-width:48rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p class="section-eyebrow">FAQ</p>
+        <h2 class="section-title">Common Questions</h2>
+      </div>
+
+      <details class="faq-item">
+        <summary>Is this really free? What's the catch?</summary>
+        <div class="faq-body">
+          <p>Yes, genuinely free. No purchase, no payment, no hidden fees. I'm running this giveaway to get the word out about my web design services and to give one local NH business a serious head start. The only "catch" is you have to actually be a New Hampshire-based business — that's it.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why only NH businesses?</summary>
+        <div class="faq-body">
+          <p>I'm a Littleton, NH-based business and I want to support my community. Plus, having local clients makes ongoing communication, in-person meetings, and follow-up support much easier. If you're outside NH and you're interested in a website, I still build them — just <a href="/contact">reach out directly</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How will the winner be chosen?</summary>
+        <div class="faq-body">
+          <p>All verified entries will be loaded into a numbered list. On May 25, 2026 at 9:00 AM EST, I'll use a publicly-verifiable random number generator (random.org) to pick the winner. The drawing process will be documented and shared on Facebook. I'll then personally contact the winner to verify their business is real before announcing them publicly.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I win but I'm not actually a NH business?</summary>
+        <div class="faq-body">
+          <p>Eligibility is verified before the prize is awarded. If a winner can't be verified as a legitimate NH-based business with a real address and operations in the state, the entry is forfeited and a new winner will be drawn. Don't waste your time entering if you don't qualify.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How does the 20% off discount work?</summary>
+        <div class="faq-body">
+          <p>Easy. After the drawing, every verified NH business that entered (and didn't win) is on my list. When you reach out to book a website build — at any tier from Starter ($750) to Premium ($3,500+) — just mention you entered the giveaway. I'll check my list, confirm your entry, and apply 20% off to your build. No code, no expiration, no hassle.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I enter multiple times?</summary>
+        <div class="faq-body">
+          <p>One entry per business. Multiple entries from the same business email or address will be merged into a single entry. Trying to game it with throwaway emails just disqualifies you.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens to my information?</summary>
+        <div class="faq-body">
+          <p>Your entry data is used solely to administer the giveaway and (if you check the box) to apply your 20% discount when you book. I don't sell, share, or use it for any other purpose. See the full <a href="/privacy">Privacy Policy</a> for details.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I want to enter but don't win — do I have to use the 20% off?</summary>
+        <div class="faq-body">
+          <p>No, you're not obligated to use the discount or book anything. It's just there if you want it. The discount has no expiration during your entry list lifetime (3 years per the privacy policy retention period).</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       Official Sweepstakes Rules (collapsible)
+       ===================================================== -->
+  <section id="sweepstakes-rules" style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <p class="section-eyebrow">Legal</p>
+        <h2 class="section-title">Official Sweepstakes Rules</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;font-size:0.875rem;">
+          NO PURCHASE NECESSARY TO ENTER OR WIN.
+        </p>
+      </div>
+
+      <details class="rules-collapsible">
+        <summary>Read the full Official Rules</summary>
+        <div class="rules-body">
+
+          <p><strong>Sponsor:</strong> Jake Fixes Tech LLC, Littleton, New Hampshire. Contact: jake@jakefixestech.com.</p>
+
+          <p><strong>1. Eligibility.</strong> The Jake Fixes Tech NH Local Business Website Giveaway ("Sweepstakes") is open only to legally formed and operating businesses located within the state of New Hampshire, USA, whose primary business address and operations are physically in New Hampshire at the time of entry. Entrants must be the owner or authorized representative of the business and must be at least 18 years of age. Employees, contractors, and immediate family of Jake Fixes Tech LLC are not eligible. Void where prohibited by law.</p>
+
+          <p><strong>2. Sponsor &amp; Administration.</strong> This Sweepstakes is sponsored and administered solely by Jake Fixes Tech LLC. It is not sponsored, endorsed, administered by, or associated with Facebook, Google, Cloudflare, or any other third-party platform.</p>
+
+          <p><strong>3. Entry Period.</strong> The Sweepstakes entry period begins at <strong>12:00 AM Eastern Time on May 15, 2026</strong> and ends at <strong>12:00 AM Eastern Time on May 25, 2026</strong>. Entries received outside this period will not be accepted. Sponsor's server clock is the official timekeeping device.</p>
+
+          <p><strong>4. How to Enter.</strong> To enter, visit jakefixestech.com/giveaway during the entry period and complete the entry form, providing your business name, owner/contact name, email address, phone number, NH business address, business type, and business description. All listed fields are required. Entry is free. NO PURCHASE NECESSARY. There is no alternative method of entry.</p>
+
+          <p><strong>5. Limit One Entry Per Business.</strong> Each business may submit only one (1) entry. Multiple entries from the same business or with substantially identical contact information will be merged into a single entry at Sponsor's sole discretion. Use of automated entry methods, scripts, or fraudulent entries is grounds for disqualification.</p>
+
+          <p><strong>6. Grand Prize.</strong> One (1) Grand Prize will be awarded: a free Professional-tier website build from Jake Fixes Tech LLC. The Grand Prize includes a custom-built 5–15 page website, mobile-responsive design, domain registration in the winner's name, free hosting setup on Cloudflare Pages, basic SEO setup, and WCAG 2.1 AA accessibility. Total approximate retail value (ARV): $2,000 USD. <strong>The prize is awarded at no cost to the winner.</strong> Prize is non-transferable, has no cash equivalent, and may not be substituted, except by Sponsor in its sole discretion. Optional ongoing management plans are not included in the prize.</p>
+
+          <p><strong>7. Consolation Benefit.</strong> All verified non-winning entrants will be eligible for a 20% discount on any future website build commissioned from Jake Fixes Tech LLC. The discount is verified manually by Sponsor against the entrant list at the time of booking. The discount has no formal expiration but remains valid only while the entrant remains on Sponsor's record (per Sponsor's data retention policy).</p>
+
+          <p><strong>8. Drawing.</strong> One (1) winner will be selected via random drawing from all eligible entries on <strong>May 25, 2026 at approximately 9:00 AM Eastern Time</strong>. The drawing will use a publicly-verifiable random number generator (random.org or equivalent). Documentation of the drawing process will be available upon request.</p>
+
+          <p><strong>9. Winner Notification &amp; Verification.</strong> The winner will be notified by email and telephone within 48 hours of the drawing using the contact information provided at entry. Sponsor will independently verify the winner's eligibility, including a verification phone call to confirm the winning business is legitimately operating in New Hampshire. <strong>If the winner cannot be verified, fails to respond within 7 calendar days of notification, or is found ineligible for any reason, the prize will be forfeited and an alternate winner may be drawn.</strong></p>
+
+          <p><strong>10. Public Announcement.</strong> The winner's business name will be publicly announced on the Jake Fixes Tech Facebook page (and may be announced on jakefixestech.com) on or after May 25, 2026, subject to winner verification. By entering, entrants consent to public announcement of their business name and general location (city, NH) if selected as winner.</p>
+
+          <p><strong>11. Prize Delivery.</strong> The Grand Prize website build will commence within 10 calendar days of winner verification, in accordance with New Hampshire law (RSA 358-A) requiring prizes to be delivered free of charge to the winner. Build timeline thereafter is subject to Sponsor's standard project terms (see <a href="/terms">Terms &amp; Conditions</a>). The winner is responsible for providing reasonable content (text, images, brand assets) within agreed timelines per Sponsor's normal client responsibility terms. The Grand Prize is delivered at no cost to the winner; only optional add-ons or out-of-scope work (e.g., management plans, premium custom features beyond the Professional tier scope) would carry separate charges if elected by the winner.</p>
+
+          <p><strong>12. Taxes.</strong> The Grand Prize has an Approximate Retail Value (ARV) of $2,000 USD. As required by federal law for prizes valued over $600, Sponsor will issue the winner a Form 1099-MISC reflecting the ARV of the prize for the applicable tax year. The winner is solely responsible for any federal income tax owed on the prize. New Hampshire does not impose a state income tax on prize winnings for residents, but winners should consult a tax professional for personal advice. All other taxes, fees, and expenses related to acceptance and use of the prize are the sole responsibility of the winner.</p>
+
+          <p><strong>13. Use of Information.</strong> Information collected from entrants is used solely to administer this Sweepstakes, verify eligibility, deliver the prize, and apply the 20% consolation discount. Entry information is governed by the Sponsor's <a href="/privacy">Privacy Policy</a>. Personal information will not be sold, traded, or shared with third parties.</p>
+
+          <p><strong>14. Release of Liability.</strong> By entering, entrants release Jake Fixes Tech LLC, its owner, agents, and representatives from any and all liability for any claims, injuries, losses, or damages arising out of participation in the Sweepstakes or acceptance, use, or misuse of the Grand Prize, to the fullest extent permitted by law.</p>
+
+          <p><strong>15. Disqualification.</strong> Sponsor reserves the right, in its sole discretion, to disqualify any entrant found to: (a) submit false or misleading information; (b) attempt to undermine the legitimate operation of the Sweepstakes; (c) tamper with the entry process; (d) violate these Official Rules; or (e) act in any unsportsmanlike or disruptive manner.</p>
+
+          <p><strong>16. General Conditions.</strong> Sponsor reserves the right to cancel, suspend, or modify the Sweepstakes if any factor (technical failure, fraud, or other cause) impairs its administration, security, or fairness. In the event of cancellation, Sponsor will use reasonable efforts to notify entrants. Sponsor's decisions on all matters relating to the Sweepstakes are final and binding.</p>
+
+          <p><strong>17. Governing Law.</strong> This Sweepstakes is governed by the laws of the State of New Hampshire, without regard to its conflict of law provisions. Any dispute arising from this Sweepstakes shall be subject to the exclusive jurisdiction of courts located in Grafton County, New Hampshire.</p>
+
+          <p><strong>18. Winner List / Documentation.</strong> A copy of the winner's business name (city, state only) and a copy of these Official Rules are available by emailing jake@jakefixestech.com after May 25, 2026.</p>
+
+          <p style="margin-top:1.25rem;font-size:0.825rem;color:#6b7280;"><em>Last updated: May 4, 2026.</em></p>
+
+        </div>
+      </details>
+
+      <p style="margin-top:1.5rem;text-align:center;color:#6b7280;font-size:0.875rem;">
+        Questions about the rules? Email <a href="mailto:jake@jakefixestech.com" style="color:#2563eb;">jake@jakefixestech.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       Final CTA
+       ===================================================== -->
+  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:5rem 1.5rem;text-align:center;">
+    <div style="max-width:40rem;margin:0 auto;">
+      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Ready to Enter?</h2>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">
+        Bookmark this page. The form goes live on May 15. One free professional website. One winner. Ten days to enter.
+      </p>
+      <a href="#giveaway-state" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1.1rem;">
+        Go to Giveaway Status
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<!-- ============================================================
+     Auto-state-transitioning JavaScript
+     ============================================================ -->
+<script is:inline>
+  (function() {
+    // Date constants — Eastern Time
+    // May 15, 2026 00:00:00 EDT = 2026-05-15T00:00:00-04:00 (DST is in effect)
+    // May 25, 2026 00:00:00 EDT = 2026-05-25T00:00:00-04:00
+    // May 25, 2026 09:00:00 EDT = 2026-05-25T09:00:00-04:00
+    var ENTRY_OPEN  = new Date('2026-05-15T00:00:00-04:00');
+    var ENTRY_CLOSE = new Date('2026-05-25T00:00:00-04:00');
+    var DRAWING     = new Date('2026-05-25T09:00:00-04:00');
+
+    var states = {
+      prelaunch: document.getElementById('state-prelaunch'),
+      active:    document.getElementById('state-active'),
+      closed:    document.getElementById('state-closed'),
+      announced: document.getElementById('state-announced')
+    };
+
+    function showState(name) {
+      Object.keys(states).forEach(function(key) {
+        if (!states[key]) return;
+        if (key === name) {
+          states[key].hidden = false;
+        } else {
+          states[key].hidden = true;
+        }
+      });
+    }
+
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+    function pickState(now) {
+      if (now < ENTRY_OPEN) return 'prelaunch';
+      if (now < ENTRY_CLOSE) return 'active';
+      if (now < DRAWING) return 'closed';
+      return 'announced';
+    }
+
+    function updateCountdown() {
+      var now = new Date();
+      var state = pickState(now);
+      showState(state);
+
+      // Update CTA button text based on state
+      var ctaText = document.getElementById('hero-cta-text');
+      if (ctaText) {
+        if (state === 'prelaunch') ctaText.textContent = 'See Countdown';
+        else if (state === 'active') ctaText.textContent = 'Enter Now';
+        else if (state === 'closed') ctaText.textContent = 'See Status';
+        else if (state === 'announced') ctaText.textContent = 'See Winner';
+      }
+
+      if (state === 'prelaunch') {
+        var diff = Math.max(0, ENTRY_OPEN - now);
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        var dd = document.getElementById('cd-days');
+        var hh = document.getElementById('cd-hours');
+        var mm = document.getElementById('cd-mins');
+        var ss = document.getElementById('cd-secs');
+        if (dd) dd.textContent = pad(d);
+        if (hh) hh.textContent = pad(h);
+        if (mm) mm.textContent = pad(m);
+        if (ss) ss.textContent = pad(s);
+      } else if (state === 'active') {
+        var diff = Math.max(0, ENTRY_CLOSE - now);
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var dd = document.getElementById('cd-active-days');
+        var hh = document.getElementById('cd-active-hours');
+        var mm = document.getElementById('cd-active-mins');
+        if (dd) dd.textContent = pad(d);
+        if (hh) hh.textContent = pad(h);
+        if (mm) mm.textContent = pad(m);
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  })();
+</script>
+
+<!-- ============================================================
+     Form submission handler — AJAX to Web3Forms
+     ============================================================ -->
+<script is:inline>
+  (function() {
+    var form = document.getElementById('giveaway-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var btn = document.getElementById('submit-btn');
+      var btnText = document.getElementById('submit-btn-text');
+      var errorEl = document.getElementById('form-error');
+      var successEl = document.getElementById('form-success');
+
+      if (errorEl) errorEl.hidden = true;
+
+      // Validate state field — must be NH
+      var state = form.querySelector('#state-confirm');
+      if (state && state.value !== 'NH') {
+        if (errorEl) {
+          errorEl.textContent = 'This giveaway is open to New Hampshire businesses only. If your business is located in NH, please select "New Hampshire (NH)" from the dropdown.';
+          errorEl.hidden = false;
+        }
+        state.focus();
+        return;
+      }
+
+      btn.disabled = true;
+      if (btnText) btnText.textContent = 'Submitting...';
+
+      var formData = new FormData(form);
+      var json = {};
+      formData.forEach(function(value, key) { json[key] = value; });
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(json)
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (data.success) {
+          form.hidden = true;
+          if (successEl) successEl.hidden = false;
+          // Scroll the success message into view
+          if (successEl) successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        if (btnText) btnText.textContent = 'Submit My Entry';
+        if (errorEl) {
+          errorEl.textContent = 'Something went wrong submitting your entry. Please try again or email jake@jakefixestech.com.';
+          errorEl.hidden = false;
+        }
+      });
+    });
+  })();
+</script>
+
+<style>
+  /* ============= HERO ============= */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    min-height: 540px;
+    max-height: 760px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Trophy entrance */
+  .trophy-cup    { animation: trophyIn 0.9s cubic-bezier(0.34,1.56,0.64,1) 0.4s both; transform-origin: center bottom; }
+  .trophy-handle { animation: trophyIn 0.7s ease 0.7s both; }
+  .trophy-base   { animation: trophyIn 0.6s ease 0.5s both; transform-origin: center bottom; }
+  .trophy-star   { animation: starPop 0.6s cubic-bezier(0.34,1.56,0.64,1) 1.0s both; transform-origin: 140px 105px; }
+
+  @keyframes trophyIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.85); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes starPop {
+    from { opacity: 0; transform: scale(0); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* Trophy gentle bob — slow up-and-down once everything has loaded */
+  .trophy-bob {
+    animation: trophyBob 4s ease-in-out infinite 1.4s;
+    transform-origin: center;
+  }
+  @keyframes trophyBob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+
+  /* Soft golden halo pulses behind trophy */
+  .trophy-halo {
+    transform-origin: center;
+    animation: haloPulse 3.5s ease-in-out infinite 1s;
+  }
+  @keyframes haloPulse {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50%      { opacity: 1;   transform: scale(1.08); }
+  }
+
+  /* Prize pills cascade — opacity-only animation since SVG uses x/y attributes */
+  .prize-pill { opacity: 0; }
+  .p1 { animation: pillIn 0.6s ease 0.6s forwards; }
+  .p2 { animation: pillIn 0.6s ease 0.85s forwards; }
+  .p3 { animation: pillIn 0.6s ease 1.10s forwards; }
+  .p4 { animation: pillIn 0.6s ease 1.35s forwards; }
+  @keyframes pillIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Ambient dots */
+  .float-dot { animation: dotFloat 4s ease-in-out infinite; }
+  .float-dot.d1 { animation-delay: 0s; }
+  .float-dot.d2 { animation-delay: 1s; }
+  .float-dot.d3 { animation-delay: 2s; }
+  .float-dot.d4 { animation-delay: 3s; }
+  .float-dot.d5 { animation-delay: 1.5s; }
+  @keyframes dotFloat {
+    0%, 100% { opacity: 0.2; }
+    50%      { opacity: 0.6; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: orbBreathe 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: orbBreathe 5s ease-in-out infinite reverse; }
+  @keyframes orbBreathe { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0 1.5rem;
+    max-width: 38rem;
+  }
+
+  .hero-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fde68a;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+
+  #hero-wordmark {
+    font-size: clamp(2.25rem, 7vw, 4.5rem);
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.4);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  #hero-tagline {
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: rgba(255,255,255,0.92);
+    margin: 0;
+    max-width: 34rem;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.95s forwards;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+
+  #hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e40af;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+
+  .hero-meta {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 1.4s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100%{transform:translateX(-50%) translateY(0)}
+    50%{transform:translateX(-50%) translateY(6px)}
+  }
+
+  /* ============= SHARED SECTION STYLES ============= */
+  .section-eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #2563eb;
+    margin: 0;
+  }
+  .section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+  }
+
+  /* ============= COUNTDOWN ============= */
+  .countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  .countdown-cell {
+    background: white;
+    border: 2px solid #2563eb;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    min-width: 5.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+  }
+  .countdown-num {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 900;
+    color: #1e40af;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b7280;
+    margin-top: 0.25rem;
+  }
+  .countdown-sep {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #93c5fd;
+    align-self: center;
+  }
+  .countdown-mini {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+  .countdown-mini .countdown-cell {
+    padding: 0.625rem 0.85rem;
+    min-width: 4rem;
+  }
+  .countdown-mini .countdown-num {
+    font-size: 1.4rem;
+  }
+
+  /* ============= DISABLED FORM (PRE-LAUNCH) ============= */
+  .form-disabled-wrap {
+    position: relative;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2.5rem 2rem;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  .form-disabled-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .form-disabled-badge {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+  }
+  .form-disabled-content {
+    opacity: 0.5;
+    pointer-events: none;
+    margin-top: 2rem;
+  }
+
+  /* ============= REAL FORM ============= */
+  .giveaway-form {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2rem 1.75rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .form-required-note {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+  .form-row {
+    margin-bottom: 1.25rem;
+  }
+  .form-row label {
+    display: block;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+  }
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  .form-row input[type="tel"],
+  .form-row select,
+  .form-row textarea,
+  .form-disabled-wrap input,
+  .form-disabled-wrap select {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #111827;
+    background: white;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+  }
+  .form-row input:disabled,
+  .form-disabled-wrap input,
+  .form-disabled-wrap select {
+    background: #f9fafb;
+    color: #9ca3af;
+    cursor: not-allowed;
+  }
+  .form-row textarea {
+    resize: vertical;
+    min-height: 4.5rem;
+  }
+  .form-row-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .form-row-checkbox {
+    display: flex;
+    gap: 0.625rem;
+    align-items: flex-start;
+  }
+  .form-row-checkbox input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: #2563eb;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .form-row-checkbox label {
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.5;
+    cursor: pointer;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  .form-row-checkbox label a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+  .form-help {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: #1e40af;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37,99,235,0.35);
+  }
+  .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e40af;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 2px solid white;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+  .form-error {
+    margin-top: 1rem;
+    padding: 0.875rem 1rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    color: #b91c1c;
+    font-size: 0.9rem;
+  }
+
+  /* ============= SUCCESS STATE ============= */
+  .form-success {
+    text-align: center;
+    background: white;
+    border: 1px solid #d1fae5;
+    border-radius: 0.75rem;
+    padding: 3rem 2rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .success-check {
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
+  }
+  .form-success h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  .form-success p {
+    color: #4b5563;
+    line-height: 1.7;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-success a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  /* ============= STEPS GRID ============= */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .step-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .step-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .step-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  .step-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.625;
+  }
+
+  /* ============= PRIZE GRID ============= */
+  .prize-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .prize-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .prize-icon {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: #dbeafe;
+    color: #2563eb;
+    margin-bottom: 1rem;
+  }
+  .prize-icon svg { width: 1.5rem; height: 1.5rem; }
+  .prize-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  .prize-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.625;
+  }
+
+  /* ============= FAQ ============= */
+  .faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    background: white;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #111827;
+    list-style: none;
+    position: relative;
+    user-select: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2563eb;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+  .faq-body {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    color: #4b5563;
+    line-height: 1.75;
+    font-size: 0.95rem;
+  }
+  .faq-body a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  /* ============= RULES COLLAPSIBLE ============= */
+  .rules-collapsible {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: white;
+    overflow: hidden;
+  }
+  .rules-collapsible summary {
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: #111827;
+    list-style: none;
+    position: relative;
+    user-select: none;
+    background: #f9fafb;
+  }
+  .rules-collapsible summary::-webkit-details-marker { display: none; }
+  .rules-collapsible summary::after {
+    content: '▾';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2563eb;
+    font-size: 1rem;
+    transition: transform 0.2s;
+  }
+  .rules-collapsible[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .rules-body {
+    padding: 1.5rem;
+    color: #4b5563;
+    line-height: 1.75;
+    font-size: 0.9rem;
+  }
+  .rules-body p {
+    margin-bottom: 1rem;
+  }
+  .rules-body strong {
+    color: #111827;
+  }
+  .rules-body a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  /* ============= RESPONSIVE ============= */
+  @media (max-width: 900px) {
+    #hero-svg { height: 78vh; min-height: 580px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+
+    .steps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .prize-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .countdown-cell { padding: 0.75rem 0.85rem; min-width: 4.5rem; }
+    .countdown-num { font-size: 1.75rem; }
+    .countdown-sep { font-size: 1.5rem; }
+    .form-row-split { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .steps-grid { grid-template-columns: 1fr; }
+    .prize-grid { grid-template-columns: 1fr; }
+    .countdown-sep { display: none; }
+    .countdown { gap: 0.4rem; }
+    .countdown-cell { padding: 0.625rem 0.5rem; min-width: 4rem; }
+    .giveaway-form { padding: 1.5rem 1.25rem; }
+    .form-disabled-wrap { padding: 2rem 1.25rem; }
+    .section-title { font-size: 1.5rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .trophy-cup, .trophy-handle, .trophy-base, .trophy-star,
+    .trophy-bob, .trophy-halo,
+    .prize-pill, .float-dot, .glow-orb-1, .glow-orb-2, #scroll-hint,
+    .hero-label, #hero-wordmark, #hero-tagline, .hero-cta-row, .hero-meta {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
