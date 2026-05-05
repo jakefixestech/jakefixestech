@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Win a Free $2,000 Website — NH Local Business Giveaway | Jake Fixes Tech"
+  title="Win a Free $2,000 Website: NH Local Business Giveaway | Jake Fixes Tech"
   description="Enter to win a free $2,000 professional website build. Open to New Hampshire local businesses only. 10-day entry window, May 15-25, 2026. No purchase necessary. All entrants get 20% off any future website build.">
 
   <!-- =====================================================
@@ -193,10 +193,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <p class="hero-meta">Free entry. No purchase. NH-based businesses only.</p>
     </div>
-
-    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('giveaway-state').scrollIntoView({behavior:'smooth'})">
-      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </div>
   </section>
 
   <!-- =====================================================
@@ -256,34 +252,34 @@ import Layout from '../layouts/Layout.astro';
             <p class="form-required-note">Fields marked * are required.</p>
 
             <div class="form-row">
-              <label>Business Name *</label>
+              <p class="preview-label">Business Name *</p>
               <input type="text" disabled placeholder="e.g. Mountain View Bakery" aria-label="Business Name (preview, disabled)" />
             </div>
 
             <div class="form-row">
-              <label>Owner / Contact Name *</label>
+              <p class="preview-label">Owner / Contact Name *</p>
               <input type="text" disabled placeholder="Your full name" aria-label="Owner Name (preview, disabled)" />
             </div>
 
             <div class="form-row form-row-split">
               <div>
-                <label>Email *</label>
+                <p class="preview-label">Email *</p>
                 <input type="email" disabled placeholder="you@yourbusiness.com" aria-label="Email (preview, disabled)" />
               </div>
               <div>
-                <label>Phone Number *</label>
+                <p class="preview-label">Phone Number *</p>
                 <input type="tel" disabled placeholder="(603) 555-1234" aria-label="Phone (preview, disabled)" />
               </div>
             </div>
 
             <div class="form-row">
-              <label>NH Business Address *</label>
+              <p class="preview-label">NH Business Address *</p>
               <input type="text" disabled placeholder="Street, City, NH ZIP" aria-label="Business Address (preview, disabled)" />
-              <p class="form-help">Must be a verified NH business address. Eligibility verified before prize is awarded.</p>
+              <p class="form-help">Must be a real NH business address. I'll personally call to verify all entries before the drawing.</p>
             </div>
 
             <div class="form-row">
-              <label>State *</label>
+              <p class="preview-label">State *</p>
               <select disabled aria-label="State (preview, disabled)">
                 <option>Select state...</option>
               </select>
@@ -291,41 +287,41 @@ import Layout from '../layouts/Layout.astro';
             </div>
 
             <div class="form-row">
-              <label>Type of Business *</label>
+              <p class="preview-label">Type of Business *</p>
               <select disabled aria-label="Business type (preview, disabled)">
                 <option>Select type...</option>
               </select>
             </div>
 
             <div class="form-row">
-              <label>Brief Description of Your Business *</label>
+              <p class="preview-label">Brief Description of Your Business *</p>
               <textarea disabled rows="3" placeholder="What does your business do? Where are you located in NH?" aria-label="Business description (preview, disabled)"></textarea>
               <p class="form-help">2-3 sentences is plenty.</p>
             </div>
 
             <div class="form-row">
-              <label>What Would You Want From a Website? *</label>
+              <p class="preview-label">What Would You Want From a Website? *</p>
               <textarea disabled rows="4" placeholder="e.g. Show our menu, get more bookings, make it easier for customers to find us, sell products online, etc." aria-label="Website goals (preview, disabled)"></textarea>
               <p class="form-help">Don't overthink it. Even 1 sentence is fine.</p>
             </div>
 
             <div class="form-row form-row-checkbox">
               <input type="checkbox" disabled aria-label="Rules agreement (preview, disabled)" />
-              <label>
-                I have read and agree to the <a href="#sweepstakes-rules">Official Sweepstakes Rules</a> and confirm my business is located in New Hampshire. *
-              </label>
+              <p class="preview-label preview-label-inline">
+                I have read and agree to the Official Sweepstakes Rules below and confirm my business is located in New Hampshire. *
+              </p>
             </div>
 
             <div class="form-row form-row-checkbox">
               <input type="checkbox" disabled aria-label="Discount opt-in (preview, disabled)" />
-              <label>
+              <p class="preview-label preview-label-inline">
                 I'd like to receive a 20% off discount on any future website build (automatically given to all verified entrants who don't win).
-              </label>
+              </p>
             </div>
 
             <button type="button" disabled class="btn-primary" style="width:100%;justify-content:center;opacity:0.5;cursor:not-allowed;">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1rem;width:1rem;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              Locked — Opens May 15
+              Locked. Opens May 15
             </button>
           </div>
         </div>
@@ -351,11 +347,11 @@ import Layout from '../layouts/Layout.astro';
         <form id="giveaway-form" action="https://api.web3forms.com/submit" method="POST" class="giveaway-form" novalidate>
           <!-- Web3Forms config -->
           <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY" />
-          <input type="hidden" name="subject" value="🎉 New Giveaway Entry — NH Website Giveaway" />
+          <input type="hidden" name="subject" value="🎉 New Giveaway Entry: NH Website Giveaway" />
           <input type="hidden" name="from_name" value="Jake Fixes Tech Giveaway" />
           <input type="hidden" name="redirect" value="false" />
           <!-- Honeypot anti-spam (must stay empty) -->
-          <input type="checkbox" name="botcheck" id="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" />
+          <input type="checkbox" name="botcheck" id="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" aria-label="Anti-spam check (do not fill out)" aria-hidden="true" />
 
           <p class="form-required-note">Fields marked * are required.</p>
 
@@ -383,7 +379,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="form-row">
             <label for="biz-address">NH Business Address *</label>
             <input type="text" id="biz-address" name="business_address" required maxlength="200" placeholder="Street, City, NH ZIP" autocomplete="street-address" />
-            <p class="form-help">Must be a verified NH business address. Eligibility verified before prize is awarded.</p>
+            <p class="form-help">Must be a real NH business address. I'll personally call to verify all entries before the drawing.</p>
           </div>
 
           <div class="form-row">
@@ -459,7 +455,8 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3>You're In!</h3>
           <p>Your entry has been received. You'll get a confirmation email at the address you provided shortly.</p>
-          <p style="margin-top:1rem;">The drawing happens on <strong>May 25, 2026 at 9:00 AM EST</strong>. The winner will be announced on Facebook that same day, and contacted directly. <strong>Whether you win or not</strong>, all verified NH-business entrants get 20% off any future website build — just mention you entered when you book.</p>
+          <p style="margin-top:1rem;"><strong>Heads up:</strong> I'll be calling you at the phone number you provided to verify your business before the drawing. It's a quick conversation, usually under 5 minutes. Only verified entries make it into the drawing pool.</p>
+          <p style="margin-top:1rem;">The drawing happens on <strong>May 25, 2026 at 9:00 AM EST</strong>. The winner will be announced on Facebook that same day, and contacted directly. <strong>Whether you win or not</strong>, all verified NH-business entrants get 20% off any future website build. Just mention you entered when you book.</p>
           <p style="margin-top:1.5rem;font-size:0.875rem;color:#6b7280;">Want to stay in touch? Follow us on <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener">Facebook</a> for the winner announcement.</p>
         </div>
       </div>
@@ -473,7 +470,7 @@ import Layout from '../layouts/Layout.astro';
             Entry submissions closed on May 25, 2026 at 12:00 AM EST. The winner will be drawn at <strong style="color:#111827;">9:00 AM EST on May 25, 2026 (Memorial Day)</strong>.
           </p>
           <p style="color:#6b7280;margin-top:1rem;max-width:38rem;margin-left:auto;margin-right:auto;line-height:1.75;">
-            All verified NH-business entrants will receive a 20% off discount on any future website build. The winner will be announced here and on our <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" style="color:#2563eb;">Facebook page</a> shortly after the drawing.
+            All verified NH-business entrants will receive a 20% off discount on any future website build. The winner will be announced here and on our Facebook page shortly after the drawing.
           </p>
           <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" class="btn-primary" style="margin-top:2rem;">
             Follow on Facebook for Announcement
@@ -488,10 +485,10 @@ import Layout from '../layouts/Layout.astro';
           <p class="section-eyebrow" style="color:#16a34a;">Winner Announced</p>
           <h2 class="section-title">🎉 We Have a Winner!</h2>
           <p style="color:#6b7280;margin-top:1rem;max-width:38rem;margin-left:auto;margin-right:auto;line-height:1.75;">
-            The drawing was held on May 25, 2026. The winning NH business has been notified directly and the announcement is posted on our <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" style="color:#2563eb;font-weight:600;">Facebook page</a>.
+            The drawing was held on May 25, 2026. The winning NH business has been notified directly and the announcement is posted on our Facebook page.
           </p>
           <p style="color:#6b7280;margin-top:1rem;max-width:38rem;margin-left:auto;margin-right:auto;line-height:1.75;">
-            <strong style="color:#111827;">Thanks to everyone who entered.</strong> Every verified NH-business entrant qualifies for 20% off any future website build with Jake Fixes Tech — just mention you entered the giveaway when you reach out.
+            <strong style="color:#111827;">Thanks to everyone who entered.</strong> Every verified NH-business entrant qualifies for 20% off any future website build with Jake Fixes Tech. Just mention you entered the giveaway when you reach out.
           </p>
           <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2rem;">
             <a href="https://www.facebook.com/profile.php?id=61588399565146" target="_blank" rel="noopener" class="btn-primary">
@@ -499,7 +496,7 @@ import Layout from '../layouts/Layout.astro';
               <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a href="/contact" class="btn-secondary">
-              Claim 20% Off — Contact Jake
+              Claim 20% Off: Contact Jake
             </a>
           </div>
         </div>
@@ -525,13 +522,13 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="step-card">
           <div class="step-num">2</div>
-          <h3>Drawing</h3>
-          <p>One winner is drawn at random on May 25, 2026 at 9:00 AM EST.</p>
+          <h3>Verification</h3>
+          <p>Jake personally calls each entrant during the entry window to verify the business is real and NH-based. Only verified entries make it into the drawing.</p>
         </div>
         <div class="step-card">
           <div class="step-num">3</div>
-          <h3>Verification</h3>
-          <p>Jake personally contacts the winner and verifies the business before the prize is awarded.</p>
+          <h3>Drawing</h3>
+          <p>One winner is drawn at random from verified entries on May 25, 2026 at 9:00 AM EST.</p>
         </div>
         <div class="step-card">
           <div class="step-num">4</div>
@@ -544,9 +541,11 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- =====================================================
        What's Included (Prize details)
+       Two-column checklist — scannable, less visual repetition
+       than the previous 8-card grid.
        ===================================================== -->
   <section style="background:#f8fafc;padding:5rem 1.5rem;">
-    <div style="max-width:64rem;margin:0 auto;">
+    <div style="max-width:56rem;margin:0 auto;">
       <div style="text-align:center;margin-bottom:3rem;">
         <p class="section-eyebrow">What You Win</p>
         <h2 class="section-title">A Real $2,000 Professional Website</h2>
@@ -554,54 +553,140 @@ import Layout from '../layouts/Layout.astro';
           The same Professional-tier package on the <a href="/web-services" style="color:#2563eb;">Web Services page</a>. Built from scratch, lightning fast, and yours to own outright.
         </p>
       </div>
-      <div class="prize-grid">
-        <div class="prize-card">
-          <div class="prize-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+
+      <ul class="prize-checklist" role="list">
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>5–15 custom pages</strong> built around your business, not a template
           </div>
-          <h3>5-15 Custom Pages</h3>
-          <p>Home, services, about, contact, FAQ — built around your business, not a template.</p>
-        </div>
-        <div class="prize-card">
-          <div class="prize-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </li>
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>Mobile-first design</strong> that looks great on phones, tablets, and desktops
           </div>
-          <h3>Mobile-First Design</h3>
-          <p>Looks great on phones, tablets, and desktops. Fast on every connection.</p>
-        </div>
-        <div class="prize-card">
-          <div class="prize-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M3 12h18M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9z"/></svg>
+        </li>
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>Domain &amp; hosting setup.</strong> Registered in your name, free Cloudflare Pages hosting
           </div>
-          <h3>Domain &amp; Hosting Setup</h3>
-          <p>I'll register the domain in your name and set up free Cloudflare Pages hosting.</p>
-        </div>
-        <div class="prize-card">
-          <div class="prize-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </li>
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>Google SEO setup</strong> with sitemap and meta tags so you're discoverable day one
           </div>
-          <h3>SEO &amp; Search Setup</h3>
-          <p>Google indexing, sitemap, meta tags. Discoverable from day one.</p>
-        </div>
-        <div class="prize-card">
-          <div class="prize-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c1.65 0 3.18.45 4.5 1.23"/></svg>
+        </li>
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>WCAG 2.1 AA accessibility.</strong> Actually accessible, not just on paper
           </div>
-          <h3>Accessibility Built In</h3>
-          <p>WCAG 2.1 AA compliant — actually accessible, not just on paper.</p>
-        </div>
-        <div class="prize-card">
-          <div class="prize-icon" aria-hidden="true">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </li>
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>Built-in site search</strong> so visitors can find anything instantly. No plugins needed.
           </div>
-          <h3>You Own It Outright</h3>
-          <p>No lock-in. The site is yours. The code is yours. The domain is yours.</p>
-        </div>
-      </div>
+        </li>
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>Self-edit admin page</strong> to update hours, prices, services, or news yourself. Free forever.
+          </div>
+        </li>
+        <li>
+          <span class="prize-check" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>You own it outright.</strong> No lock-in, no recurring fees, the code is yours
+          </div>
+        </li>
+      </ul>
 
       <p style="text-align:center;margin-top:2.5rem;color:#6b7280;font-size:0.875rem;">
         Total prize value: <strong style="color:#111827;">$2,000</strong>. Optional management plans (separate from the build) start at $75/month if the winner wants ongoing support, but are not required.
       </p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       Portfolio Examples
+       Shows the same 3 demo sites that appear on /web-services
+       with a 'View All' link to /portfolio
+       ===================================================== -->
+  <section style="background:white;padding:5rem 1.5rem;">
+    <div style="max-width:64rem;margin:0 auto;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+        <div>
+          <p class="section-eyebrow">See What You'll Get</p>
+          <h2 class="section-title">Real Example Sites</h2>
+          <p style="color:#6b7280;margin-top:0.5rem;max-width:36rem;line-height:1.75;">Every site I build is mobile responsive, ADA compliant, and scores 10/10 on WAVE. Three featured demos below, each a different style.</p>
+        </div>
+        <a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;white-space:nowrap;flex-shrink:0;">View All Examples →</a>
+      </div>
+
+      <div class="giveaway-portfolio-grid">
+        <a href="https://demo4.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="giveaway-portfolio-card">
+          <div class="giveaway-portfolio-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
+          <div class="giveaway-portfolio-preview" style="background:linear-gradient(135deg,#2d0f3a,#6b1d4e);">
+            <div style="color:#f4c542;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Moonstone &amp; Sage</div>
+            <div style="color:#f5a3c7;font-size:0.75rem;text-align:center;">Mystical Gifts &amp; Bohemian Treasures</div>
+          </div>
+          <div class="giveaway-portfolio-info">
+            <div style="font-weight:600;color:#111827;font-size:0.95rem;">Moonstone &amp; Sage</div>
+            <div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">Bohemian Gift Shop · 1 page</div>
+            <div class="giveaway-portfolio-link">View Example →</div>
+          </div>
+        </a>
+
+        <a href="https://demo1.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="giveaway-portfolio-card">
+          <div class="giveaway-portfolio-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
+          <div class="giveaway-portfolio-preview" style="background:linear-gradient(135deg,#1a2332,#2d8a6e);">
+            <div style="color:white;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Ridge &amp; Route</div>
+            <div style="color:#a8c4d0;font-size:0.75rem;text-align:center;">Hiking Trail Discovery</div>
+          </div>
+          <div class="giveaway-portfolio-info">
+            <div style="font-weight:600;color:#111827;font-size:0.95rem;">Ridge &amp; Route</div>
+            <div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">NH White Mountains · 1 page</div>
+            <div class="giveaway-portfolio-link">View Example →</div>
+          </div>
+        </a>
+
+        <a href="https://demo3.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="giveaway-portfolio-card">
+          <div class="giveaway-portfolio-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
+          <div class="giveaway-portfolio-preview" style="background:linear-gradient(135deg,#1a1a1a,#cc5500);">
+            <div style="color:white;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Ironveil Construction</div>
+            <div style="color:#fbbf24;font-size:0.75rem;text-align:center;">Civil &amp; Commercial Construction</div>
+          </div>
+          <div class="giveaway-portfolio-info">
+            <div style="font-weight:600;color:#111827;font-size:0.95rem;">Ironveil Construction</div>
+            <div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">Littleton, NH · 1 page</div>
+            <div class="giveaway-portfolio-link">View Example →</div>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;color:#2563eb;font-weight:600;font-size:0.95rem;text-decoration:none;">See all 14 example sites →</a>
+      </div>
     </div>
   </section>
 
@@ -618,35 +703,35 @@ import Layout from '../layouts/Layout.astro';
       <details class="faq-item">
         <summary>Is this really free? What's the catch?</summary>
         <div class="faq-body">
-          <p>Yes, genuinely free. No purchase, no payment, no hidden fees. I'm running this giveaway to get the word out about my web design services and to give one local NH business a serious head start. The only "catch" is you have to actually be a New Hampshire-based business — that's it.</p>
+          <p>Yes, genuinely free. No purchase, no payment, no hidden fees. I'm running this giveaway to get the word out about my web design services and to give one local NH business a serious head start. The only "catch" is you have to actually be a New Hampshire-based business. That's it.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Why only NH businesses?</summary>
         <div class="faq-body">
-          <p>I'm a Littleton, NH-based business and I want to support my community. Plus, having local clients makes ongoing communication, in-person meetings, and follow-up support much easier. If you're outside NH and you're interested in a website, I still build them — just <a href="/contact">reach out directly</a>.</p>
+          <p>I'm a Littleton, NH-based business and I want to support my community. Plus, having local clients makes ongoing communication, in-person meetings, and follow-up support much easier. If you're outside NH and you're interested in a website, I still build them. Just <a href="/contact">reach out directly</a>.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>How will the winner be chosen?</summary>
         <div class="faq-body">
-          <p>All verified entries will be loaded into a numbered list. On May 25, 2026 at 9:00 AM EST, I'll use a publicly-verifiable random number generator (random.org) to pick the winner. The drawing process will be documented and shared on Facebook. I'll then personally contact the winner to verify their business is real before announcing them publicly.</p>
+          <p>During the May 15-25 entry window, I'll personally call every single entrant to verify the business is real and NH-based. Only verified entries make it into the drawing pool. On May 25 at 9:00 AM EST, I'll use a publicly-verifiable random number generator (random.org) to pick the winner from that verified pool. The drawing process will be documented and shared on Facebook, and the winner will be notified by phone and email that same day.</p>
         </div>
       </details>
 
       <details class="faq-item">
-        <summary>What if I win but I'm not actually a NH business?</summary>
+        <summary>What if I'm not actually a NH business?</summary>
         <div class="faq-body">
-          <p>Eligibility is verified before the prize is awarded. If a winner can't be verified as a legitimate NH-based business with a real address and operations in the state, the entry is forfeited and a new winner will be drawn. Don't waste your time entering if you don't qualify.</p>
+          <p>This giveaway is just for New Hampshire-based businesses. I personally call every entrant during the entry window to verify, so out-of-state or unverifiable entries get removed from the pool before the drawing. If you're outside NH and you're still interested in a website, I'd love to chat. Just <a href="/contact">reach out directly</a> and we can talk options.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>How does the 20% off discount work?</summary>
         <div class="faq-body">
-          <p>Easy. After the drawing, every verified NH business that entered (and didn't win) is on my list. When you reach out to book a website build — at any tier from Starter ($750) to Premium ($3,500+) — just mention you entered the giveaway. I'll check my list, confirm your entry, and apply 20% off to your build. No code, no expiration, no hassle.</p>
+          <p>Easy. After the drawing, every verified NH business that entered (and didn't win) is on my list. When you reach out to book a website build at any tier from Starter ($750) to Premium ($3,500+), just mention you entered the giveaway. I'll check my list, confirm your entry, and apply 20% off to your build. No code, no expiration, no hassle.</p>
         </div>
       </details>
 
@@ -665,7 +750,7 @@ import Layout from '../layouts/Layout.astro';
       </details>
 
       <details class="faq-item">
-        <summary>What if I want to enter but don't win — do I have to use the 20% off?</summary>
+        <summary>What if I want to enter but don't win, do I have to use the 20% off?</summary>
         <div class="faq-body">
           <p>No, you're not obligated to use the discount or book anything. It's just there if you want it. The discount has no expiration during your entry list lifetime (3 years per the privacy policy retention period).</p>
         </div>
@@ -692,41 +777,90 @@ import Layout from '../layouts/Layout.astro';
 
           <p><strong>Sponsor:</strong> Jake Fixes Tech LLC, Littleton, New Hampshire. Contact: jake@jakefixestech.com.</p>
 
-          <p><strong>1. Eligibility.</strong> The Jake Fixes Tech NH Local Business Website Giveaway ("Sweepstakes") is open only to legally formed and operating businesses located within the state of New Hampshire, USA, whose primary business address and operations are physically in New Hampshire at the time of entry. Entrants must be the owner or authorized representative of the business and must be at least 18 years of age. Employees, contractors, and immediate family of Jake Fixes Tech LLC are not eligible. Void where prohibited by law.</p>
+          <ol class="rules-list">
+            <li>
+              <strong>Eligibility.</strong> The Jake Fixes Tech NH Local Business Website Giveaway ("Sweepstakes") is open only to legally formed and operating businesses located within the state of New Hampshire, USA, whose primary business address and operations are physically in New Hampshire at the time of entry. Entrants must be the owner or authorized representative of the business and must be at least 18 years of age. Employees, contractors, and immediate family of Jake Fixes Tech LLC are not eligible. Void where prohibited by law.
+            </li>
 
-          <p><strong>2. Sponsor &amp; Administration.</strong> This Sweepstakes is sponsored and administered solely by Jake Fixes Tech LLC. It is not sponsored, endorsed, administered by, or associated with Facebook, Google, Cloudflare, or any other third-party platform.</p>
+            <li>
+              <strong>Sponsor &amp; Administration.</strong> This Sweepstakes is sponsored and administered solely by Jake Fixes Tech LLC. It is not sponsored, endorsed, administered by, or associated with Facebook, Google, Cloudflare, or any other third-party platform.
+            </li>
 
-          <p><strong>3. Entry Period.</strong> The Sweepstakes entry period begins at <strong>12:00 AM Eastern Time on May 15, 2026</strong> and ends at <strong>12:00 AM Eastern Time on May 25, 2026</strong>. Entries received outside this period will not be accepted. Sponsor's server clock is the official timekeeping device.</p>
+            <li>
+              <strong>Entry Period.</strong> The Sweepstakes entry period begins at <strong>12:00 AM Eastern Time on May 15, 2026</strong> and ends at <strong>12:00 AM Eastern Time on May 25, 2026</strong>. Entries received outside this period will not be accepted. Sponsor's server clock is the official timekeeping device.
+            </li>
 
-          <p><strong>4. How to Enter.</strong> To enter, visit jakefixestech.com/giveaway during the entry period and complete the entry form, providing your business name, owner/contact name, email address, phone number, NH business address, business type, and business description. All listed fields are required. Entry is free. NO PURCHASE NECESSARY. There is no alternative method of entry.</p>
+            <li>
+              <strong>How to Enter.</strong> To enter, visit jakefixestech.com/giveaway during the entry period and complete the entry form, providing your business name, owner/contact name, email address, phone number, NH business address, business type, and business description. All listed fields are required. Entry is free. NO PURCHASE NECESSARY. There is no alternative method of entry.
+            </li>
 
-          <p><strong>5. Limit One Entry Per Business.</strong> Each business may submit only one (1) entry. Multiple entries from the same business or with substantially identical contact information will be merged into a single entry at Sponsor's sole discretion. Use of automated entry methods, scripts, or fraudulent entries is grounds for disqualification.</p>
+            <li>
+              <strong>Limit One Entry Per Business.</strong> Each business may submit only one (1) entry. Multiple entries from the same business or with substantially identical contact information will be merged into a single entry at Sponsor's sole discretion. Use of automated entry methods, scripts, or fraudulent entries is grounds for disqualification.
+            </li>
 
-          <p><strong>6. Grand Prize.</strong> One (1) Grand Prize will be awarded: a free Professional-tier website build from Jake Fixes Tech LLC. The Grand Prize includes a custom-built 5–15 page website, mobile-responsive design, domain registration in the winner's name, free hosting setup on Cloudflare Pages, basic SEO setup, and WCAG 2.1 AA accessibility. Total approximate retail value (ARV): $2,000 USD. <strong>The prize is awarded at no cost to the winner.</strong> Prize is non-transferable, has no cash equivalent, and may not be substituted, except by Sponsor in its sole discretion. Optional ongoing management plans are not included in the prize.</p>
+            <li>
+              <strong>Grand Prize.</strong> One (1) Grand Prize will be awarded: a free Professional-tier website build from Jake Fixes Tech LLC. The Grand Prize includes a custom-built 5–15 page website, mobile-responsive design, domain registration in the winner's name, free hosting setup on Cloudflare Pages, basic SEO setup, WCAG 2.1 AA accessibility, a built-in site-wide search feature, and a self-service content editor (admin interface) so the winner can update their own site content without recurring fees. Total approximate retail value (ARV): $2,000 USD. <strong>The prize is awarded at no cost to the winner.</strong> Prize is non-transferable, has no cash equivalent, and may not be substituted, except by Sponsor in its sole discretion. Optional ongoing management plans are not included in the prize.
+            </li>
 
-          <p><strong>7. Consolation Benefit.</strong> All verified non-winning entrants will be eligible for a 20% discount on any future website build commissioned from Jake Fixes Tech LLC. The discount is verified manually by Sponsor against the entrant list at the time of booking. The discount has no formal expiration but remains valid only while the entrant remains on Sponsor's record (per Sponsor's data retention policy).</p>
+            <li>
+              <strong>Consolation Benefit.</strong> All verified non-winning entrants will be eligible for a 20% discount on any future website build commissioned from Jake Fixes Tech LLC. The discount is verified manually by Sponsor against the entrant list at the time of booking. The discount has no formal expiration but remains valid only while the entrant remains on Sponsor's record (per Sponsor's data retention policy).
+            </li>
 
-          <p><strong>8. Drawing.</strong> One (1) winner will be selected via random drawing from all eligible entries on <strong>May 25, 2026 at approximately 9:00 AM Eastern Time</strong>. The drawing will use a publicly-verifiable random number generator (random.org or equivalent). Documentation of the drawing process will be available upon request.</p>
+            <li>
+              <strong>Entrant Verification.</strong> During the entry period, Sponsor will personally contact each entrant by telephone to verify the business is legitimately operating in New Hampshire and that the entry information is accurate. <strong>Only verified entries will be eligible for the drawing.</strong> Entries that cannot be verified (e.g., disconnected phone, no response after reasonable attempts, business not operating in NH, falsified information) will be removed from the entry pool and will not be considered for the Grand Prize or the consolation 20% discount. Sponsor reserves the right to use reasonable means to verify business legitimacy, including but not limited to phone contact, public records search, and online presence review.
+            </li>
 
-          <p><strong>9. Winner Notification &amp; Verification.</strong> The winner will be notified by email and telephone within 48 hours of the drawing using the contact information provided at entry. Sponsor will independently verify the winner's eligibility, including a verification phone call to confirm the winning business is legitimately operating in New Hampshire. <strong>If the winner cannot be verified, fails to respond within 7 calendar days of notification, or is found ineligible for any reason, the prize will be forfeited and an alternate winner may be drawn.</strong></p>
+            <li>
+              <strong>Drawing.</strong> One (1) winner will be selected via random drawing from the pool of verified eligible entries on <strong>May 25, 2026 at approximately 9:00 AM Eastern Time</strong>. The drawing will use a publicly-verifiable random number generator (random.org or equivalent). Documentation of the drawing process will be available upon request.
+            </li>
 
-          <p><strong>10. Public Announcement.</strong> The winner's business name will be publicly announced on the Jake Fixes Tech Facebook page (and may be announced on jakefixestech.com) on or after May 25, 2026, subject to winner verification. By entering, entrants consent to public announcement of their business name and general location (city, NH) if selected as winner.</p>
+            <li>
+              <strong>Winner Notification.</strong> Because all entrants are verified before the drawing, the selected winner will be notified directly by email and telephone within 48 hours of the drawing using the contact information provided at entry. <strong>If the winner fails to respond and confirm acceptance of the prize within 7 calendar days of notification, the prize will be forfeited and an alternate winner will be drawn from the remaining verified entries.</strong>
+            </li>
 
-          <p><strong>11. Prize Delivery.</strong> The Grand Prize website build will commence within 10 calendar days of winner verification, in accordance with New Hampshire law (RSA 358-A) requiring prizes to be delivered free of charge to the winner. Build timeline thereafter is subject to Sponsor's standard project terms (see <a href="/terms">Terms &amp; Conditions</a>). The winner is responsible for providing reasonable content (text, images, brand assets) within agreed timelines per Sponsor's normal client responsibility terms. The Grand Prize is delivered at no cost to the winner; only optional add-ons or out-of-scope work (e.g., management plans, premium custom features beyond the Professional tier scope) would carry separate charges if elected by the winner.</p>
+            <li>
+              <strong>Public Announcement.</strong> The winner's business name will be publicly announced on the Jake Fixes Tech Facebook page (and may be announced on jakefixestech.com) on or after May 25, 2026, subject to winner acceptance of the prize. By entering, entrants consent to public announcement of their business name and general location (city, NH) if selected as winner.
+            </li>
 
-          <p><strong>12. Taxes.</strong> The Grand Prize has an Approximate Retail Value (ARV) of $2,000 USD. As required by federal law for prizes valued over $600, Sponsor will issue the winner a Form 1099-MISC reflecting the ARV of the prize for the applicable tax year. The winner is solely responsible for any federal income tax owed on the prize. New Hampshire does not impose a state income tax on prize winnings for residents, but winners should consult a tax professional for personal advice. All other taxes, fees, and expenses related to acceptance and use of the prize are the sole responsibility of the winner.</p>
+            <li>
+              <strong>Prize Delivery.</strong> The Grand Prize website build will commence within 10 calendar days of winner acceptance, in accordance with New Hampshire law (RSA 358-A) requiring prizes to be delivered free of charge to the winner. Build timeline thereafter is subject to Sponsor's standard project terms (see <a href="/terms">Terms &amp; Conditions</a>). The winner is responsible for providing reasonable content (text, images, brand assets) within agreed timelines per Sponsor's normal client responsibility terms. The Grand Prize is delivered at no cost to the winner; only optional add-ons or out-of-scope work (e.g., management plans, premium custom features beyond the Professional tier scope) would carry separate charges if elected by the winner.
+            </li>
 
-          <p><strong>13. Use of Information.</strong> Information collected from entrants is used solely to administer this Sweepstakes, verify eligibility, deliver the prize, and apply the 20% consolation discount. Entry information is governed by the Sponsor's <a href="/privacy">Privacy Policy</a>. Personal information will not be sold, traded, or shared with third parties.</p>
+            <li>
+              <strong>Taxes.</strong> The Grand Prize has an Approximate Retail Value (ARV) of $2,000 USD. As required by federal law for prizes valued over $600, Sponsor will issue the winner a Form 1099-MISC reflecting the ARV of the prize for the applicable tax year. The winner is solely responsible for any federal income tax owed on the prize. New Hampshire does not impose a state income tax on prize winnings for residents, but winners should consult a tax professional for personal advice. All other taxes, fees, and expenses related to acceptance and use of the prize are the sole responsibility of the winner.
+            </li>
 
-          <p><strong>14. Release of Liability.</strong> By entering, entrants release Jake Fixes Tech LLC, its owner, agents, and representatives from any and all liability for any claims, injuries, losses, or damages arising out of participation in the Sweepstakes or acceptance, use, or misuse of the Grand Prize, to the fullest extent permitted by law.</p>
+            <li>
+              <strong>Use of Information.</strong> Information collected from entrants is used solely to administer this Sweepstakes, verify eligibility, deliver the prize, and apply the 20% consolation discount. Entry information is governed by the Sponsor's <a href="/privacy">Privacy Policy</a>. Personal information will not be sold, traded, or shared with third parties.
+            </li>
 
-          <p><strong>15. Disqualification.</strong> Sponsor reserves the right, in its sole discretion, to disqualify any entrant found to: (a) submit false or misleading information; (b) attempt to undermine the legitimate operation of the Sweepstakes; (c) tamper with the entry process; (d) violate these Official Rules; or (e) act in any unsportsmanlike or disruptive manner.</p>
+            <li>
+              <strong>Release of Liability.</strong> By entering, entrants release Jake Fixes Tech LLC, its owner, agents, and representatives from any and all liability for any claims, injuries, losses, or damages arising out of participation in the Sweepstakes or acceptance, use, or misuse of the Grand Prize, to the fullest extent permitted by law.
+            </li>
 
-          <p><strong>16. General Conditions.</strong> Sponsor reserves the right to cancel, suspend, or modify the Sweepstakes if any factor (technical failure, fraud, or other cause) impairs its administration, security, or fairness. In the event of cancellation, Sponsor will use reasonable efforts to notify entrants. Sponsor's decisions on all matters relating to the Sweepstakes are final and binding.</p>
+            <li>
+              <strong>Disqualification.</strong> Sponsor reserves the right, in its sole discretion, to disqualify any entrant found to:
+              <ol class="rules-sublist" type="a">
+                <li>submit false or misleading information;</li>
+                <li>attempt to undermine the legitimate operation of the Sweepstakes;</li>
+                <li>tamper with the entry process;</li>
+                <li>violate these Official Rules; or</li>
+                <li>act in any unsportsmanlike or disruptive manner.</li>
+              </ol>
+            </li>
 
-          <p><strong>17. Governing Law.</strong> This Sweepstakes is governed by the laws of the State of New Hampshire, without regard to its conflict of law provisions. Any dispute arising from this Sweepstakes shall be subject to the exclusive jurisdiction of courts located in Grafton County, New Hampshire.</p>
+            <li>
+              <strong>General Conditions.</strong> Sponsor reserves the right to cancel, suspend, or modify the Sweepstakes if any factor (technical failure, fraud, or other cause) impairs its administration, security, or fairness. In the event of cancellation, Sponsor will use reasonable efforts to notify entrants. Sponsor's decisions on all matters relating to the Sweepstakes are final and binding.
+            </li>
 
-          <p><strong>18. Winner List / Documentation.</strong> A copy of the winner's business name (city, state only) and a copy of these Official Rules are available by emailing jake@jakefixestech.com after May 25, 2026.</p>
+            <li>
+              <strong>Governing Law.</strong> This Sweepstakes is governed by the laws of the State of New Hampshire, without regard to its conflict of law provisions. Any dispute arising from this Sweepstakes shall be subject to the exclusive jurisdiction of courts located in Grafton County, New Hampshire.
+            </li>
+
+            <li>
+              <strong>Winner List / Documentation.</strong> A copy of the winner's business name (city, state only) and a copy of these Official Rules are available by emailing jake@jakefixestech.com after May 25, 2026.
+            </li>
+          </ol>
 
           <p style="margin-top:1.25rem;font-size:0.825rem;color:#6b7280;"><em>Last updated: May 4, 2026.</em></p>
 
@@ -1081,22 +1215,6 @@ import Layout from '../layouts/Layout.astro';
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  #scroll-hint {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255,255,255,0.85);
-    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
-    opacity: 0;
-    z-index: 2;
-    cursor: pointer;
-  }
-  @keyframes scrollBounce {
-    0%,100%{transform:translateX(-50%) translateY(0)}
-    50%{transform:translateX(-50%) translateY(6px)}
-  }
-
   /* ============= SHARED SECTION STYLES ============= */
   .section-eyebrow {
     font-size: 0.875rem;
@@ -1150,7 +1268,7 @@ import Layout from '../layouts/Layout.astro';
   .countdown-sep {
     font-size: 2rem;
     font-weight: 900;
-    color: #93c5fd;
+    color: #1e40af;
     align-self: center;
   }
   .countdown-mini {
@@ -1223,6 +1341,20 @@ import Layout from '../layouts/Layout.astro';
     color: #111827;
     margin-bottom: 0.4rem;
     font-size: 0.95rem;
+  }
+  .preview-label {
+    display: block;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 0.4rem 0;
+    font-size: 0.95rem;
+  }
+  .preview-label-inline {
+    margin: 0;
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.5;
+    font-size: 0.9rem;
   }
   .form-row input[type="text"],
   .form-row input[type="email"],
@@ -1425,41 +1557,89 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.625;
   }
 
-  /* ============= PRIZE GRID ============= */
-  .prize-grid {
+  /* ============= PRIZE CHECKLIST =============
+     Two-column scannable list with green checkmarks.
+     Mobile collapses to single column. */
+  .prize-checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
   }
-  .prize-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  }
-  .prize-icon {
+  .prize-checklist li {
     display: flex;
-    width: 3rem;
-    height: 3rem;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 0.5rem 0;
+    color: #374151;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  .prize-checklist li strong {
+    color: #111827;
+    font-weight: 700;
+  }
+  .prize-check {
+    flex-shrink: 0;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0.5rem;
-    background: #dbeafe;
-    color: #2563eb;
-    margin-bottom: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #d1fae5;
+    color: #16a34a;
+    margin-top: 0.15rem;
   }
-  .prize-icon svg { width: 1.5rem; height: 1.5rem; }
-  .prize-card h3 {
-    font-size: 1rem;
+  .prize-check svg {
+    width: 0.95rem;
+    height: 0.95rem;
+  }
+
+  /* ============= GIVEAWAY PORTFOLIO ============= */
+  .giveaway-portfolio-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .giveaway-portfolio-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: white;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .giveaway-portfolio-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+  }
+  .giveaway-portfolio-badge {
+    font-size: 0.7rem;
     font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.375rem 1rem;
+    text-align: center;
   }
-  .prize-card p {
-    font-size: 0.9rem;
-    color: #6b7280;
-    line-height: 1.625;
+  .giveaway-portfolio-preview {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .giveaway-portfolio-info {
+    padding: 1rem;
+  }
+  .giveaway-portfolio-link {
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
   }
 
   /* ============= FAQ ============= */
@@ -1553,6 +1733,38 @@ import Layout from '../layouts/Layout.astro';
     color: #2563eb;
     text-decoration: underline;
   }
+  .rules-list {
+    list-style: decimal;
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+    color: #4b5563;
+    line-height: 1.75;
+    font-size: 0.9rem;
+  }
+  .rules-list > li {
+    margin-bottom: 1rem;
+    padding-left: 0.25rem;
+  }
+  .rules-list > li:last-child {
+    margin-bottom: 0;
+  }
+  .rules-list > li::marker {
+    color: #111827;
+    font-weight: 700;
+  }
+  .rules-sublist {
+    margin: 0.75rem 0 0 0;
+    padding-left: 1.5rem;
+    color: #4b5563;
+    line-height: 1.75;
+    font-size: 0.9rem;
+  }
+  .rules-sublist li {
+    margin-bottom: 0.4rem;
+  }
+  .rules-sublist li:last-child {
+    margin-bottom: 0;
+  }
 
   /* ============= RESPONSIVE ============= */
   @media (max-width: 900px) {
@@ -1560,8 +1772,34 @@ import Layout from '../layouts/Layout.astro';
     .hero-bg-desktop { display: none; }
     .hero-bg-mobile  { display: block; }
 
+    /* On mobile, hide the trophy + pills decorations inside the mobile SVG.
+       The gradient + glow orbs remain as background. The hero TEXT is the
+       focus on mobile — no need to fight for space with decorations. */
+    .hero-bg-mobile .trophy-bob,
+    .hero-bg-mobile .badge-stack {
+      display: none;
+    }
+
+    /* Tighten hero text container on mobile so it has more room */
+    #hero-content {
+      max-width: 100%;
+      padding: 0 1.25rem;
+    }
+    .hero-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+    }
+    #hero-wordmark {
+      font-size: clamp(1.85rem, 8vw, 2.75rem);
+    }
+    #hero-tagline {
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
     .steps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .prize-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .prize-checklist { gap: 0.75rem 1.5rem; }
+    .giveaway-portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .countdown-cell { padding: 0.75rem 0.85rem; min-width: 4.5rem; }
     .countdown-num { font-size: 1.75rem; }
     .countdown-sep { font-size: 1.5rem; }
@@ -1569,8 +1807,14 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media (max-width: 600px) {
+    /* Even tighter on phones — keep SVG bg visible by using flex centering with min-height */
+    #hero-svg { min-height: 480px; height: auto; padding: 3.5rem 0; }
+    #hero-wordmark { font-size: clamp(1.6rem, 9vw, 2.4rem); }
+    #hero-tagline { font-size: 0.9rem; }
+
     .steps-grid { grid-template-columns: 1fr; }
-    .prize-grid { grid-template-columns: 1fr; }
+    .prize-checklist { grid-template-columns: 1fr; }
+    .giveaway-portfolio-grid { grid-template-columns: 1fr; }
     .countdown-sep { display: none; }
     .countdown { gap: 0.4rem; }
     .countdown-cell { padding: 0.625rem 0.5rem; min-width: 4rem; }
@@ -1582,7 +1826,7 @@ import Layout from '../layouts/Layout.astro';
   @media (prefers-reduced-motion: reduce) {
     .trophy-cup, .trophy-handle, .trophy-base, .trophy-star,
     .trophy-bob, .trophy-halo,
-    .prize-pill, .float-dot, .glow-orb-1, .glow-orb-2, #scroll-hint,
+    .prize-pill, .float-dot, .glow-orb-1, .glow-orb-2,
     .hero-label, #hero-wordmark, #hero-tagline, .hero-cta-row, .hero-meta {
       animation: none;
       opacity: 1;
