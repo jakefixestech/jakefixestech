@@ -204,7 +204,7 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
       </a>
     </div>
 
-    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('about-content').scrollIntoView({behavior:'smooth'})">
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('about-content').scrollIntoView({behavior:'smooth'})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('about-content').scrollIntoView({behavior:'smooth'})}">
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
@@ -245,6 +245,42 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
         <div class="credential-card"><div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>{content.cred2Title}</h3><p>{content.cred2Desc}</p><p class="credential-sub">{content.cred2Sub}</p></div>
         <div class="credential-card"><div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>{content.cred3Title}</h3><p>{content.cred3Desc}</p><p class="credential-sub">{content.cred3Sub}</p></div>
         <div class="credential-card"><div class="credential-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><h3>{content.cred4Title}</h3><p>{content.cred4Desc}</p><p class="credential-sub">{content.cred4Sub}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Memberships & Affiliations                                   -->
+  <!-- Local directories, chambers, and professional listings.     -->
+  <!-- Designed to grow as more memberships are added.             -->
+  <!-- ============================================================ -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:64rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:2.5rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Local Trust</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Memberships &amp; Affiliations</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;margin-left:auto;margin-right:auto;line-height:1.75;">Proud to be listed alongside other trusted local businesses serving the North Country and White Mountains region.</p>
+      </div>
+
+      <div id="memberships-grid">
+        <a href="https://www.whitemountainsdirectory.com/united-states/littleton/local-services-shopping/jake-fixes-tech-llc?from=badge"
+           target="_blank"
+           rel="noopener noreferrer external"
+           class="membership-link"
+           aria-label="Find Jake Fixes Tech on White Mountains Directory (opens in a new tab)">
+          <img src="/badges/white-mountains-directory-member.webp"
+               alt="Proud Member of White Mountains Directory"
+               width="200"
+               height="200"
+               loading="lazy"
+               decoding="async"
+               class="membership-img" />
+          <span class="membership-label">White Mountains Directory</span>
+        </a>
+
+        <!-- Add more membership badges here as you join Chamber of Commerce, BBB, etc.
+             Just duplicate the <a class="membership-link"> block above and update the
+             href, image src, alt, and label. -->
       </div>
     </div>
   </section>
@@ -393,18 +429,66 @@ description="Meet Jake Charland, Computer Information Systems graduate, former c
   .credential-card p { font-size:0.875rem;color:#4b5563;line-height:1.5; }
   .credential-sub { font-size:0.8rem !important;color:#6b7280 !important;margin-top:0.25rem; }
 
+  /* ============= MEMBERSHIPS & AFFILIATIONS ============= */
+  /* Flex layout that centers badges and grows naturally
+     when more are added. Each badge is a self-contained
+     card with image + label.                              */
+  #memberships-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .membership-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    min-width: 200px;
+  }
+  .membership-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: #bfdbfe;
+  }
+  .membership-link:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+  }
+  .membership-img {
+    display: block;
+    border: none;
+    max-width: 200px;
+    height: auto;
+  }
+  .membership-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-align: center;
+  }
+
   @media (max-width:768px) {
     #hero-svg { height:70vh;min-height:440px; }
     .hero-bg-desktop { display:none; }
     .hero-bg-mobile  { display:block; }
     #credentials-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .membership-link { min-width: 160px; padding: 1.25rem; }
+    .membership-img { max-width: 160px; }
   }
 
   @media (prefers-reduced-motion:reduce) {
     .mountain-back,.mountain-front,.snow,.diploma-body,.diploma-curl-top,.diploma-curl-bot,
     .diploma-rule,.diploma-text,.diploma-seal,.diploma-star,.badge-outer,.badge-ring,
     .badge-num,.star-tw,
-    .glow-orb-1,.glow-orb-2,#scroll-hint { animation:none; }
+    .glow-orb-1,.glow-orb-2,#scroll-hint,.membership-link { animation:none;transition:none; }
     .hero-label,#hero-wordmark,#hero-tagline,#hero-cta,#scroll-hint { opacity:1;transform:none; }
     .diploma-body,.mountain-back,.mountain-front,.badge-ring { opacity:1; }
     .diploma-text,.diploma-seal,.diploma-star,.badge-num,.badge-outer { opacity:1; }
