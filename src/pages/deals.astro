@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Community Discounts & Deals | Jake Fixes Tech — Littleton, NH"
-description="10% off all computer repair services for military, first responders, police, firefighters, seniors and students. Jake Fixes Tech — Littleton, NH.">
+description="10% off all computer repair services for military, first responders, police, firefighters, seniors and students. 15% off referral rewards. Jake Fixes Tech — Littleton, NH.">
 
   <!-- Animated SVG Hero -->
   <section id="hero-svg" aria-label="Community Discounts">
@@ -29,9 +29,7 @@ description="10% off all computer repair services for military, first responders
       <ellipse cx="320" cy="260" rx="380" ry="280" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1150" cy="260" rx="340" ry="260" fill="url(#glowGrad)" class="glow-orb-2"/>
 
-      <!-- LEFT: 10% OFF tag stack — anchored x:160 y:200.
-           Outer <g> handles position+rotation (stays put);
-           inner <g class="tag"> handles fade+sway animation. -->
+      <!-- LEFT: 10% OFF tag stack — anchored x:160 y:200. -->
       <g class="tag-stack" transform="translate(160, 200)">
         <g transform="rotate(-12 90 40)">
           <g class="tag tag-back">
@@ -57,17 +55,14 @@ description="10% off all computer repair services for military, first responders
         </g>
       </g>
 
-      <!-- RIGHT: All 5 community icons arranged in a 3+2 grid.
-           Group anchor x:1180 y:260 (center of grid).
-           Top row (3 icons): y:-50 row, x: -100, 0, 100
-           Bottom row (2 icons): y:+70 row, x: -50, 50
-           Each icon pops in staggered, then gently bobs in place.  -->
+      <!-- RIGHT: 6 community icons in 3+3 grid.
+           Top row (3 icons): y:-55, x: -110, 0, 110
+           Bottom row (3 icons): y:+65, x: -110, 0, 110 -->
       <g class="icon-grid" transform="translate(1180, 260)">
-        <!-- Soft ambient glow behind grid (no longer the carousel ring) -->
-        <ellipse cx="0" cy="0" rx="170" ry="130" fill="url(#spotGrad)" class="grid-glow"/>
+        <ellipse cx="0" cy="0" rx="180" ry="135" fill="url(#spotGrad)" class="grid-glow"/>
 
         <!-- Top row -->
-        <g class="grid-icon gi-1" transform="translate(-100, -50)">
+        <g class="grid-icon gi-1" transform="translate(-110, -55)">
           <g class="bob bob-1">
             <!-- Shield (Military) -->
             <path d="M0 -32 L-20 -24 L-20 6 C-20 20 -10 29 0 33 C10 29 20 20 20 6 L20 -24 Z" fill="none" stroke="white" stroke-opacity="0.75" stroke-width="2.5" stroke-linejoin="round"/>
@@ -76,7 +71,7 @@ description="10% off all computer repair services for military, first responders
           <text x="0" y="56" text-anchor="middle" fill="white" fill-opacity="0.75" font-size="11" font-weight="700" font-family="monospace" letter-spacing="2">MILITARY</text>
         </g>
 
-        <g class="grid-icon gi-2" transform="translate(0, -50)">
+        <g class="grid-icon gi-2" transform="translate(0, -55)">
           <g class="bob bob-2">
             <!-- Police badge -->
             <path d="M0 -33 L7 -25 L18 -25 L18 -14 L26 -6 L18 2 L18 13 L7 13 L0 21 L-7 13 L-18 13 L-18 2 L-26 -6 L-18 -14 L-18 -25 L-7 -25 Z" fill="none" stroke="white" stroke-opacity="0.75" stroke-width="2.5" stroke-linejoin="round"/>
@@ -89,7 +84,7 @@ description="10% off all computer repair services for military, first responders
           <text x="0" y="56" text-anchor="middle" fill="white" fill-opacity="0.75" font-size="11" font-weight="700" font-family="monospace" letter-spacing="2">POLICE</text>
         </g>
 
-        <g class="grid-icon gi-3" transform="translate(100, -50)">
+        <g class="grid-icon gi-3" transform="translate(110, -55)">
           <g class="bob bob-3">
             <!-- Fire/EMS maltese cross -->
             <path d="M0 -28 L7 -16 L19 -24 L13 -12 L26 -6 L13 0 L26 6 L13 12 L19 24 L7 16 L0 28 L-7 16 L-19 24 L-13 12 L-26 6 L-13 0 L-26 -6 L-13 -12 L-19 -24 L-7 -16 Z" fill="none" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linejoin="round"/>
@@ -99,7 +94,7 @@ description="10% off all computer repair services for military, first responders
         </g>
 
         <!-- Bottom row -->
-        <g class="grid-icon gi-4" transform="translate(-50, 70)">
+        <g class="grid-icon gi-4" transform="translate(-110, 65)">
           <g class="bob bob-4">
             <!-- Heart (Seniors) -->
             <path d="M0 22 C0 22 -24 9 -24 -7 C-24 -16 -17 -22 -10 -22 C-5 -22 -1 -19 0 -15 C1 -19 5 -22 10 -22 C17 -22 24 -16 24 -7 C24 9 0 22 0 22 Z" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.85" stroke-width="2.5" stroke-linejoin="round"/>
@@ -107,7 +102,7 @@ description="10% off all computer repair services for military, first responders
           <text x="0" y="56" text-anchor="middle" fill="white" fill-opacity="0.75" font-size="11" font-weight="700" font-family="monospace" letter-spacing="2">SENIORS</text>
         </g>
 
-        <g class="grid-icon gi-5" transform="translate(50, 70)">
+        <g class="grid-icon gi-5" transform="translate(0, 65)">
           <g class="bob bob-5">
             <!-- Grad cap (Students) -->
             <polygon points="0,-19 27,-6 0,7 -27,-6" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.85" stroke-width="2.5" stroke-linejoin="round"/>
@@ -116,6 +111,18 @@ description="10% off all computer repair services for military, first responders
             <circle cx="27" cy="14" r="3" fill="white" fill-opacity="0.85"/>
           </g>
           <text x="0" y="56" text-anchor="middle" fill="white" fill-opacity="0.75" font-size="11" font-weight="700" font-family="monospace" letter-spacing="2">STUDENTS</text>
+        </g>
+
+        <g class="grid-icon gi-6" transform="translate(110, 65)">
+          <g class="bob bob-6">
+            <!-- Two people connected (Referrals) -->
+            <circle cx="-10" cy="-12" r="7" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.85" stroke-width="2"/>
+            <path d="M-22 12 C-22 5 -17 0 -10 0 C-3 0 2 5 2 12" fill="none" stroke="white" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="-8" r="6" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.85" stroke-width="2"/>
+            <path d="M2 14 C2 8 6 4 12 4 C18 4 22 8 22 14" fill="none" stroke="white" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+            <path d="M-3 -5 L5 -3" stroke="white" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+          </g>
+          <text x="0" y="56" text-anchor="middle" fill="white" fill-opacity="0.75" font-size="11" font-weight="700" font-family="monospace" letter-spacing="2">REFERRALS</text>
         </g>
       </g>
 
@@ -159,7 +166,7 @@ description="10% off all computer repair services for military, first responders
       <ellipse cx="100" cy="180" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="320" cy="500" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- TOP: Tag stack — y:60-145, smaller and pulled up tighter -->
+      <!-- TOP: Tag stack -->
       <g class="tag-stack" transform="translate(80, 60)">
         <g transform="rotate(-10 50 22)">
           <g class="tag tag-back">
@@ -185,44 +192,52 @@ description="10% off all computer repair services for military, first responders
         </g>
       </g>
 
-      <!-- BOTTOM: All 5 icons in a row across bottom — y:475 -->
+      <!-- BOTTOM: 6 icons in a row across bottom — y:495, evenly spaced -->
       <g class="icon-grid" transform="translate(0, 0)">
-        <!-- Soft ambient glow behind row -->
-        <ellipse cx="200" cy="495" rx="180" ry="50" fill="url(#spotGradM)" class="grid-glow"/>
+        <ellipse cx="200" cy="495" rx="190" ry="50" fill="url(#spotGradM)" class="grid-glow"/>
 
-        <g class="grid-icon gi-1" transform="translate(60, 495)">
+        <g class="grid-icon gi-1" transform="translate(45, 495)">
           <g class="bob bob-1">
             <path d="M0 -20 L-12 -15 L-12 4 C-12 13 -6 19 0 21 C6 19 12 13 12 4 L12 -15 Z" fill="none" stroke="white" stroke-opacity="0.75" stroke-width="1.8" stroke-linejoin="round"/>
             <polygon points="0,-11 2.5,-3 10,-3 4,2 6,9 0,4 -6,9 -4,2 -10,-3 -2.5,-3" fill="white" fill-opacity="0.85"/>
           </g>
         </g>
 
-        <g class="grid-icon gi-2" transform="translate(130, 495)">
+        <g class="grid-icon gi-2" transform="translate(110, 495)">
           <g class="bob bob-2">
             <path d="M0 -21 L4 -16 L11 -16 L11 -9 L16 -4 L11 1 L11 8 L4 8 L0 13 L-4 8 L-11 8 L-11 1 L-16 -4 L-11 -9 L-11 -16 L-4 -16 Z" fill="none" stroke="white" stroke-opacity="0.75" stroke-width="1.8" stroke-linejoin="round"/>
             <circle cx="0" cy="-4" r="5" fill="none" stroke="white" stroke-opacity="0.85" stroke-width="1.5"/>
           </g>
         </g>
 
-        <g class="grid-icon gi-3" transform="translate(200, 495)">
+        <g class="grid-icon gi-3" transform="translate(175, 495)">
           <g class="bob bob-3">
             <path d="M0 -18 L4 -10 L12 -15 L8 -7 L16 -4 L8 0 L16 4 L8 7 L12 15 L4 10 L0 18 L-4 10 L-12 15 L-8 7 L-16 4 L-8 0 L-16 -4 L-8 -7 L-12 -15 L-4 -10 Z" fill="none" stroke="white" stroke-opacity="0.7" stroke-width="1.5" stroke-linejoin="round"/>
             <path d="M0 -5 C-2 -1 -4 1 -4 4 C-4 7 -2 10 0 10 C2 10 4 7 4 4 C4 1 2 -1 0 -5 Z" fill="white" fill-opacity="0.85"/>
           </g>
         </g>
 
-        <g class="grid-icon gi-4" transform="translate(270, 495)">
+        <g class="grid-icon gi-4" transform="translate(240, 495)">
           <g class="bob bob-4">
             <path d="M0 14 C0 14 -15 5 -15 -4 C-15 -10 -11 -14 -6 -14 C-3 -14 -1 -11 0 -9 C1 -11 3 -14 6 -14 C11 -14 15 -10 15 -4 C15 5 0 14 0 14 Z" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.85" stroke-width="1.8" stroke-linejoin="round"/>
           </g>
         </g>
 
-        <g class="grid-icon gi-5" transform="translate(340, 495)">
+        <g class="grid-icon gi-5" transform="translate(305, 495)">
           <g class="bob bob-5">
             <polygon points="0,-12 17,-4 0,4 -17,-4" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.85" stroke-width="1.8" stroke-linejoin="round"/>
             <path d="M10 0 L10 10 C10 10 6 13 0 13 C-6 13 -10 10 -10 10 L-10 0" fill="none" stroke="white" stroke-opacity="0.85" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             <line x1="17" y1="-4" x2="17" y2="6" stroke="white" stroke-opacity="0.85" stroke-width="1.8" stroke-linecap="round"/>
             <circle cx="17" cy="8" r="2" fill="white" fill-opacity="0.85"/>
+          </g>
+        </g>
+
+        <g class="grid-icon gi-6" transform="translate(365, 495)">
+          <g class="bob bob-6">
+            <circle cx="-7" cy="-8" r="5" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.85" stroke-width="1.5"/>
+            <path d="M-15 8 C-15 3 -11 0 -7 0 C-3 0 1 3 1 8" fill="none" stroke="white" stroke-opacity="0.85" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="8" cy="-5" r="4" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.85" stroke-width="1.5"/>
+            <path d="M1 9 C1 5 4 3 8 3 C12 3 15 5 15 9" fill="none" stroke="white" stroke-opacity="0.85" stroke-width="1.5" stroke-linecap="round"/>
           </g>
         </g>
       </g>
@@ -240,7 +255,7 @@ description="10% off all computer repair services for military, first responders
     <div id="hero-content">
       <p class="hero-label">Community Discounts</p>
       <h1 id="hero-wordmark">Deals for the People<br/>Who Show Up for Us</h1>
-      <p id="hero-tagline">Some people give more than they take. This is my small way of giving back. 10% off all computer repair labor — no expiration, no fine print, forever.</p>
+      <p id="hero-tagline">Some people give more than they take. This is my small way of giving back. 10% off all computer repair labor — no expiration, no fine print, forever. Plus a 15% off referral bonus for both you and the person you send my way.</p>
       <a href="#deals-section" id="hero-cta">
         See Who Qualifies
         <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -255,7 +270,7 @@ description="10% off all computer repair services for military, first responders
   <!-- How to Claim -->
   <section id="claim-section" style="background:#1e40af;padding:1.5rem;">
     <div style="max-width:56rem;margin:0 auto;text-align:center;">
-      <p style="color:white;font-size:0.95rem;line-height:1.75;margin:0;"><strong style="color:#bfdbfe;">How to claim:</strong> Just mention it when you reach out or drop off. Show valid ID, badge, student ID or military ID. That's it. No forms, no codes, no hassle.</p>
+      <p style="color:white;font-size:0.95rem;line-height:1.75;margin:0;"><strong style="color:#bfdbfe;">How to claim:</strong> Just mention it when you reach out or drop off. Show valid ID, badge, student ID or military ID. For referrals, just tell me who sent you. That's it. No forms, no codes, no hassle.</p>
     </div>
   </section>
 
@@ -345,6 +360,24 @@ description="10% off all computer repair services for military, first responders
         </div>
       </div>
 
+      <div class="deal-card reveal-right" data-delay="500">
+        <div class="deal-icon-wrap deal-icon-referral">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="42" cy="44" r="14" stroke="currentColor" stroke-width="5" fill="none"/>
+            <path d="M22 88 C22 74 31 64 42 64 C53 64 62 74 62 88" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="80" cy="50" r="12" stroke="currentColor" stroke-width="5" fill="none"/>
+            <path d="M62 90 C62 78 70 70 80 70 C90 70 98 78 98 90" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M55 38 L70 42" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+        <div class="deal-content">
+          <div class="deal-badge deal-badge-referral">15% Off — For Both of You</div>
+          <h2 class="deal-title">Refer a Friend</h2>
+          <p class="deal-desc">Once you've used me at least once, send a friend my way. When they hire me and mention your name, they get <strong>15% off their first repair</strong> — and I'll add a <strong>15% off coupon to your account</strong> for the next time you need me. It's my way of saying thanks for trusting me enough to vouch for me.</p>
+          <p class="deal-fine">Existing customer must have paid at least the diagnostic fee to qualify. One coupon earned per referral. No expiration.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -355,11 +388,22 @@ description="10% off all computer repair services for military, first responders
         <h2 style="font-size:1rem;font-weight:700;color:#111827;margin-bottom:1rem;">Discount Terms</h2>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;">
           <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Applies to all computer repair labor charges. Does not apply to parts, web design services or on-demand hourly web work.</li>
-          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> 10% discount applies after the $50 diagnostic fee, which is non-discountable.</li>
-          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> One discount per repair. Discounts cannot be combined.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Discounts apply after the $50 diagnostic fee, which is non-discountable.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Only one of the 10% community discounts (military, police, fire/EMS, seniors, students) applies per repair. Pick whichever fits.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> The 15% referral discount can stack on top of any one community discount, for a maximum of 25% off labor on a single repair.</li>
           <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Must be mentioned at time of drop-off or before work begins. Cannot be applied retroactively.</li>
           <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Valid indefinitely — no expiration date, no seasonal limits.</li>
           <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#2563eb;font-weight:700;">✓</span> Jake Fixes Tech reserves the right to request verification. Abuse of the discount program results in forfeiture.</li>
+        </ul>
+
+        <h2 style="font-size:1rem;font-weight:700;color:#111827;margin-top:1.75rem;margin-bottom:1rem;">Referral Program — How It Works</h2>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;">
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">★</span> You must have already paid me at least once (diagnostic fee or full repair) to qualify as a referrer.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">★</span> The person you refer must mention your name when they reach out, before any work begins.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">★</span> Once they pay (diagnostic or repair), they get <strong>15% off that first repair</strong> and you earn a <strong>15% off coupon</strong> for your next visit.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">★</span> Coupons earned do not stack across multiple referrals. Each referral earns one separate coupon, used one at a time on individual repairs.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">★</span> Coupons never expire. Use them whenever you need me next.</li>
+          <li style="font-size:0.875rem;color:#4b5563;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">★</span> Self-referrals, household referrals, and referrals from existing customers' immediate family living at the same address don't qualify.</li>
         </ul>
       </div>
     </div>
@@ -422,9 +466,6 @@ description="10% off all computer repair services for military, first responders
   }
 
   /* === ICON GRID === */
-  /* Each icon pops in staggered (0.15s apart), then bobs gently in place forever.
-     The grid-icon class handles the entrance fade+scale.
-     The bob class (inner) handles the continuous in-place movement. */
   .icon-grid {
     opacity: 0;
     animation: gridFadeIn 0.5s ease 1s forwards;
@@ -440,29 +481,25 @@ description="10% off all computer repair services for military, first responders
     50%      { opacity: 1; }
   }
 
-  /* Each icon: invisible until its turn, then pops in and stays */
   .grid-icon {
     opacity: 0;
     transform-origin: center;
   }
   .gi-1 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s forwards; }
-  .gi-2 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.4s forwards; }
-  .gi-3 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.6s forwards; }
-  .gi-4 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s forwards; }
-  .gi-5 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 2.0s forwards; }
+  .gi-2 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.35s forwards; }
+  .gi-3 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.5s forwards; }
+  .gi-4 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.65s forwards; }
+  .gi-5 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s forwards; }
+  .gi-6 { animation: iconPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.95s forwards; }
   @keyframes iconPopIn {
     0%   { opacity: 0; }
     100% { opacity: 1; }
   }
 
-  /* Inner bob group — synchronized 3-group wave on a 6s cycle.
-     Phase 1 (0-33%): icons 1 + 3 bob up together
-     Phase 2 (33-66%): icons 2 + 4 bob up together
-     Phase 3 (66-100%): icon 5 bobs up alone
-     All on the same 6s timeline so the wave is visibly rhythmic. */
-  .bob-1, .bob-3 { animation: bobPhase1 6s ease-in-out infinite 2.5s; transform-origin: center; }
-  .bob-2, .bob-4 { animation: bobPhase2 6s ease-in-out infinite 2.5s; transform-origin: center; }
-  .bob-5         { animation: bobPhase3 6s ease-in-out infinite 2.5s; transform-origin: center; }
+  /* Bob wave: 6 icons on a 6s cycle, staggered in 3 phases (2 icons per phase) */
+  .bob-1, .bob-4 { animation: bobPhase1 6s ease-in-out infinite 2.5s; transform-origin: center; }
+  .bob-2, .bob-5 { animation: bobPhase2 6s ease-in-out infinite 2.5s; transform-origin: center; }
+  .bob-3, .bob-6 { animation: bobPhase3 6s ease-in-out infinite 2.5s; transform-origin: center; }
 
   @keyframes bobPhase1 {
     0%, 33%, 100% { transform: translateY(0); }
@@ -610,6 +647,7 @@ description="10% off all computer repair services for military, first responders
   .deal-icon-fire     { background: #fff7ed; color: #c2410c; }
   .deal-icon-senior   { background: #fdf2f8; color: #9d174d; }
   .deal-icon-student  { background: #f0fdf4; color: #15803d; }
+  .deal-icon-referral { background: #f5f3ff; color: #7c3aed; }
 
   .deal-badge {
     display: inline-block;
@@ -622,6 +660,10 @@ description="10% off all computer repair services for military, first responders
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     margin-bottom: 0.625rem;
+  }
+  .deal-badge-referral {
+    background: #ede9fe;
+    color: #6d28d9;
   }
   .deal-title { font-size: 1.75rem; font-weight: 900; color: #111827; margin-bottom: 0.625rem; line-height: 1.1; }
   .deal-desc { font-size: 0.95rem; color: #4b5563; line-height: 1.75; margin: 0 0 0.5rem 0; }
@@ -641,7 +683,7 @@ description="10% off all computer repair services for military, first responders
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .tag, .icon-grid, .grid-glow, .grid-icon, .bob-1, .bob-2, .bob-3, .bob-4, .bob-5,
+    .tag, .icon-grid, .grid-glow, .grid-icon, .bob-1, .bob-2, .bob-3, .bob-4, .bob-5, .bob-6,
     .float-dot, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
     .hero-label, #hero-wordmark, #hero-tagline, #hero-cta, #scroll-hint { opacity: 1; transform: none; }
     .tag, .icon-grid, .grid-icon { opacity: 1; }
