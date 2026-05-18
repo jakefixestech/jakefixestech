@@ -439,7 +439,7 @@ const sites = [
   </div>
 
   <!-- Results count -->
-  <div style="max-width:80rem;margin:0 auto;padding:1.25rem 1.5rem 0;">
+  <div id="results-anchor" style="max-width:80rem;margin:0 auto;padding:1.25rem 1.5rem 0;">
     <p id="results-count" style="color:#6b7280;font-size:0.875rem;"></p>
   </div>
 
@@ -730,6 +730,7 @@ const sites = [
   }
   .filter-tab:hover { border-color: #2563eb; color: #2563eb; }
   .filter-tab.active { background: #2563eb; border-color: #2563eb; color: white; }
+  .filter-tab:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
   .tab-price { font-size: 0.75rem; font-weight: 500; color: inherit; }
 
   .portfolio-row {
@@ -827,6 +828,8 @@ const sites = [
   const tabs = document.querySelectorAll('.filter-tab');
   const countEl = document.getElementById('results-count');
   const emptyState = document.getElementById('empty-state');
+  const filterBar = document.getElementById('filter-bar');
+  const resultsAnchor = document.getElementById('results-anchor');
 
   function updateCount(filter) {
     const visible = filter === 'all'
@@ -850,19 +853,32 @@ const sites = [
     updateCount(filter);
   }
 
+  // After filtering, if the visitor has scrolled down past the start of
+  // the results, gently scroll back up to the results so they aren't
+  // stranded below a now-shorter list. If they're already up near the
+  // top, leave the scroll position alone.
+  function scrollToResultsIfNeeded() {
+    if (!resultsAnchor) return;
+    const barH = filterBar ? filterBar.offsetHeight : 0;
+    const anchorTop = resultsAnchor.getBoundingClientRect().top + window.scrollY - barH;
+    if (window.scrollY > anchorTop) {
+      window.scrollTo({ top: anchorTop, behavior: 'smooth' });
+    }
+  }
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
       filterItems(tab.dataset.filter ?? 'all');
+      scrollToResultsIfNeeded();
     });
   });
 
   updateCount('all');
 
   // Filter bar — hide on scroll down, show on scroll up
-  const filterBar = document.getElementById('filter-bar');
   let lastScrollY = window.scrollY;
   let ticking = false;
   const SCROLL_THRESHOLD = 5;

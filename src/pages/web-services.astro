@@ -4,7 +4,7 @@ import content from '../content/web-services.yml';
 ---
 
 <Layout title="Website Design & Management | Jake Fixes Tech — Littleton, NH"
-description="Professional website design, hosting and management for small businesses. Packages starting at $750. Serving Littleton NH and the North Country.">
+description="Professional website design, hosting and management for small businesses. Packages starting at $750. Site audits from $150. Serving Littleton NH and the North Country.">
 
   <!-- Animated SVG Hero -->
   <section id="hero-svg" aria-label="Web Services">
@@ -184,8 +184,8 @@ description="Professional website design, hosting and management for small busin
       <h1 id="hero-wordmark">{content.headerTitle}</h1>
       <p id="hero-tagline">{content.headerSubtitle}</p>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;" id="hero-btns">
-        <a href="#packages-section" class="hero-cta-primary">
-          View Packages
+        <a href="#ws-tabs" class="hero-cta-primary">
+          Explore Services
           <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </a>
         <a href="/why-different" class="hero-cta-secondary">Why My Sites Are Different →</a>
@@ -247,239 +247,444 @@ description="Professional website design, hosting and management for small busin
     </div>
   </section>
 
-  <!-- Why Choose Jake for Web Design -->
-  <section id="why-section" style="background:#f8fafc;padding:4rem 1.5rem;">
-    <div style="max-width:72rem;margin:0 auto;">
-      <div style="text-align:left;margin-bottom:3rem;max-width:56rem;">
-        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.whyTitle}</h2>
-        <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;line-height:1.75;">{content.whyDesc}</p>
-      </div>
-      <div id="why-grid">
-        <div class="why-card">
-          <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-          <h3>{content.why1Title}</h3>
-          <p>{content.why1Desc}</p>
+  <!-- ============================================================ -->
+  <!-- SECTION TAB BAR                                              -->
+  <!-- Shows ONE section at a time. Hides on scroll-down,           -->
+  <!-- reappears on scroll-up (does not stay pinned — keeps         -->
+  <!-- 500% zoom usable for accessibility).                         -->
+  <!-- ============================================================ -->
+  <div class="ws-tab-bar" id="ws-tabs" role="tablist" aria-label="Browse web services by category">
+    <button class="ws-tab active" data-section="build" role="tab" aria-selected="true" aria-controls="section-build" id="tab-build">
+      <span class="ws-tab-icon" aria-hidden="true">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M2 3h20v14H2zM8 21h8M12 17v4"/></svg>
+      </span>
+      Build a New Website
+    </button>
+    <button class="ws-tab" data-section="existing" role="tab" aria-selected="false" aria-controls="section-existing" id="tab-existing">
+      <span class="ws-tab-icon" aria-hidden="true">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      </span>
+      Already Have a Site?
+    </button>
+    <button class="ws-tab" data-section="support" role="tab" aria-selected="false" aria-controls="section-support" id="tab-support">
+      <span class="ws-tab-icon" aria-hidden="true">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      Ongoing Support &amp; Add-Ons
+    </button>
+    <button class="ws-tab" data-section="examples" role="tab" aria-selected="false" aria-controls="section-examples" id="tab-examples">
+      <span class="ws-tab-icon" aria-hidden="true">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      </span>
+      Examples &amp; Get Started
+    </button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1 — BUILD A NEW WEBSITE                              -->
+  <!-- ============================================================ -->
+  <div class="ws-section" id="section-build" role="tabpanel" aria-labelledby="tab-build">
+
+    <!-- Why Choose Jake for Web Design -->
+    <section id="why-section" style="background:#f8fafc;padding:4rem 1.5rem;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <div style="text-align:left;margin-bottom:3rem;max-width:56rem;">
+          <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.whyTitle}</h2>
+          <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;line-height:1.75;">{content.whyDesc}</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <h3>{content.why2Title}</h3>
-          <p>{content.why2Desc}</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h3>{content.why3Title}</h3>
-          <p>{content.why3Desc}</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <h3>{content.why4Title}</h3>
-          <p>{content.why4Desc}</p>
-        </div>
-      </div>
-      <!-- ADA / Compliance card — paragraph + 4 stat cards rewritten in plain English. -->
-      <!-- Note: the paragraph is now hardcoded (no longer pulling from {content.adaTitle} / {content.adaDesc}). -->
-      <!-- To re-link to decap CMS, update those two values in web-services.yml and swap the references back in. -->
-      <div class="ada-card">
-        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-          <div style="background:#16a34a;border-radius:50%;height:3rem;width:3rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg style="height:1.5rem;width:1.5rem;color:white;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/><path d="M9 12a3 3 0 1 1 6 0"/></svg>
+        <div id="why-grid">
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h3>{content.why1Title}</h3>
+            <p>{content.why1Desc}</p>
           </div>
-          <div style="flex:1;min-width:200px;">
-            <h3 style="font-size:1.1rem;font-weight:700;color:#15803d;margin-bottom:0.25rem;">ADA &amp; WCAG AA Compliant — Built Into Every Site</h3>
-            <p style="color:#166534;font-size:0.9rem;line-height:1.6;">All websites I build follow WCAG AA accessibility guidelines, the standard required under the Americans with Disabilities Act. This means your site works for everyone — including users with visual, motor, or cognitive disabilities. Accessible websites also rank better on Google, load faster on every device, and are built to a stricter standard than most agencies even attempt. That's the bar I hold all my work to.</p>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+            <h3>{content.why2Title}</h3>
+            <p>{content.why2Desc}</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>{content.why3Title}</h3>
+            <p>{content.why3Desc}</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3>{content.why4Title}</h3>
+            <p>{content.why4Desc}</p>
           </div>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
-          <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">AA</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">Accessibility</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Every Page</div></div>
-          <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">Maxed</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">Performance</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Every Page</div></div>
-          <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">100%</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">SEO Optimized</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Every Page</div></div>
-          <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">&lt;2s</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">Load Time</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Globally</div></div>
+        <!-- ADA / Compliance card — paragraph + 4 stat cards rewritten in plain English. -->
+        <!-- Note: the paragraph is now hardcoded (no longer pulling from {content.adaTitle} / {content.adaDesc}). -->
+        <!-- To re-link to decap CMS, update those two values in web-services.yml and swap the references back in. -->
+        <div class="ada-card">
+          <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+            <div style="background:#16a34a;border-radius:50%;height:3rem;width:3rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg style="height:1.5rem;width:1.5rem;color:white;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/><path d="M9 12a3 3 0 1 1 6 0"/></svg>
+            </div>
+            <div style="flex:1;min-width:200px;">
+              <h3 style="font-size:1.1rem;font-weight:700;color:#15803d;margin-bottom:0.25rem;">ADA &amp; WCAG AA Compliant — Built Into Every Site</h3>
+              <p style="color:#166534;font-size:0.9rem;line-height:1.6;">All websites I build follow WCAG AA accessibility guidelines, the standard required under the Americans with Disabilities Act. This means your site works for everyone — including users with visual, motor, or cognitive disabilities. Accessible websites also rank better on Google, load faster on every device, and are built to a stricter standard than most agencies even attempt. That's the bar I hold all my work to.</p>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">AA</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">Accessibility</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Every Page</div></div>
+            <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">Maxed</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">Performance</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Every Page</div></div>
+            <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">100%</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">SEO Optimized</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Every Page</div></div>
+            <div style="text-align:center;background:white;border-radius:0.75rem;padding:1rem 1.5rem;border:2px solid #16a34a;flex:1;min-width:120px;"><div style="font-size:clamp(1.25rem, 4vw, 2rem);font-weight:800;color:#16a34a;">&lt;2s</div><div style="font-size:0.75rem;color:#166534;font-weight:600;">Load Time</div><div style="font-size:0.7rem;color:#14532d;margin-top:0.1rem;">Globally</div></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Build Packages -->
-  <section id="packages-section" style="background:white;padding:4rem 1.5rem;">
-    <div style="max-width:72rem;margin:0 auto;">
-      <div style="text-align:left;margin-bottom:2rem;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.packagesLabel}</p>
-        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.packagesTitle}</h2>
-        <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;line-height:1.75;">{content.packagesDesc}</p>
-      </div>
-      <div id="packages-grid">
-        <div class="package-card">
-          <div class="package-header"><h3>Starter</h3><div class="package-price">{content.starterPrice}</div><p class="package-label">one-time build fee</p></div>
-          <ul class="package-features">
-            <li>✅ 1-3 page website</li><li>✅ Mobile responsive design</li><li>✅ Contact info & hours</li><li>✅ Contact form</li><li>✅ Domain setup & configuration</li><li>✅ SSL certificate (free)</li><li>✅ Google-ready (basic SEO)</li><li>✅ 2 rounds of revisions</li><li>✅ 30 day post-launch support</li><li>✅ WCAG AA accessible</li>
-            <li class="not-included">Google Analytics</li><li class="not-included">Google Business Profile setup</li><li class="not-included">Search Bar</li><li class="not-included">Blog or news section</li><li class="not-included">Booking system</li>
-          </ul>
-          <p class="package-best">Best for: Local businesses, tradespeople, simple landing pages</p>
-          <a href="mailto:jake@jakefixestech.com?subject=Starter Website Package Inquiry" class="package-btn">Get Started</a>
+    <!-- Build Packages -->
+    <section id="packages-section" style="background:white;padding:4rem 1.5rem;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <div style="text-align:left;margin-bottom:2rem;">
+          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.packagesLabel}</p>
+          <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.packagesTitle}</h2>
+          <p style="color:#6b7280;margin-top:0.75rem;max-width:36rem;line-height:1.75;">{content.packagesDesc}</p>
         </div>
-        <div class="package-card package-featured">
-          <div class="package-popular">Most Popular</div>
-          <div class="package-header"><h3>Professional</h3><div class="package-price">{content.professionalPrice}</div><p class="package-label">one-time build fee</p></div>
-          <ul class="package-features">
-            <li>✅ 5-15 page website</li><li>✅ Mobile responsive design</li><li>✅ Contact form</li><li>✅ Search Bar</li><li>✅ Domain setup & configuration</li><li>✅ SSL certificate (free)</li><li>✅ SEO optimization</li><li>✅ Google Analytics setup</li><li>✅ Google Business Profile setup</li><li>✅ Social media links</li><li>✅ 3 rounds of revisions</li><li>✅ 30 day post-launch support</li><li>✅ WCAG AA accessible</li><li>✅ WAVE accessibility report included</li>
-            <li class="not-included">Booking system</li>
-          </ul>
-          <p class="package-best">Best for: Small businesses, restaurants, service companies</p>
-          <a href="mailto:jake@jakefixestech.com?subject=Professional Website Package Inquiry" class="package-btn">Get Started</a>
+        <div id="packages-grid">
+          <div class="package-card">
+            <div class="package-header"><h3>Starter</h3><div class="package-price">{content.starterPrice}</div><p class="package-label">one-time build fee</p></div>
+            <ul class="package-features">
+              <li>✅ 1-3 page website</li><li>✅ Mobile responsive design</li><li>✅ Contact info & hours</li><li>✅ Contact form</li><li>✅ Domain setup & configuration</li><li>✅ SSL certificate (free)</li><li>✅ Google-ready (basic SEO)</li><li>✅ 2 rounds of revisions</li><li>✅ 30 day post-launch support</li><li>✅ WCAG AA accessible</li>
+              <li class="not-included">Google Analytics</li><li class="not-included">Google Business Profile setup</li><li class="not-included">Search Bar</li><li class="not-included">Blog or news section</li><li class="not-included">Booking system</li>
+            </ul>
+            <p class="package-best">Best for: Local businesses, tradespeople, simple landing pages</p>
+            <a href="mailto:jake@jakefixestech.com?subject=Starter Website Package Inquiry" class="package-btn">Get Started</a>
+          </div>
+          <div class="package-card package-featured">
+            <div class="package-popular">Most Popular</div>
+            <div class="package-header"><h3>Professional</h3><div class="package-price">{content.professionalPrice}</div><p class="package-label">one-time build fee</p></div>
+            <ul class="package-features">
+              <li>✅ 5-15 page website</li><li>✅ Mobile responsive design</li><li>✅ Contact form</li><li>✅ Search Bar</li><li>✅ Domain setup & configuration</li><li>✅ SSL certificate (free)</li><li>✅ SEO optimization</li><li>✅ Google Analytics setup</li><li>✅ Google Business Profile setup</li><li>✅ Social media links</li><li>✅ 3 rounds of revisions</li><li>✅ 30 day post-launch support</li><li>✅ WCAG AA accessible</li><li>✅ WAVE accessibility report included</li>
+              <li class="not-included">Booking system</li>
+            </ul>
+            <p class="package-best">Best for: Small businesses, restaurants, service companies</p>
+            <a href="mailto:jake@jakefixestech.com?subject=Professional Website Package Inquiry" class="package-btn">Get Started</a>
+          </div>
+          <div class="package-card">
+            <div class="package-header"><h3>Premium</h3><div class="package-price">{content.premiumPrice}</div><p class="package-label">starting price — quoted by scope</p></div>
+            <ul class="package-features">
+              <li>✅ 30+ pages, custom scope</li><li>✅ Mobile responsive design</li><li>✅ Contact form & booking system</li><li>✅ Domain setup & configuration</li><li>✅ SSL certificate (free)</li><li>✅ Full SEO optimization</li><li>✅ Google Analytics setup</li><li>✅ Google Business Profile setup</li><li>✅ Custom features & integrations</li><li>✅ 5 rounds of revisions</li><li>✅ Priority support</li><li>✅ 60 day post-launch support</li><li>✅ WCAG AA accessible</li><li>✅ Full WAVE accessibility report included</li>
+            </ul>
+            <p class="package-best">Best for: Schools, municipalities, large businesses and organizations needing a full custom build</p>
+            <a href="mailto:jake@jakefixestech.com?subject=Premium Website Package Inquiry" class="package-btn">Get a Free Quote</a>
+          </div>
         </div>
-        <div class="package-card">
-          <div class="package-header"><h3>Premium</h3><div class="package-price">{content.premiumPrice}</div><p class="package-label">starting price — quoted by scope</p></div>
-          <ul class="package-features">
-            <li>✅ 30+ pages, custom scope</li><li>✅ Mobile responsive design</li><li>✅ Contact form & booking system</li><li>✅ Domain setup & configuration</li><li>✅ SSL certificate (free)</li><li>✅ Full SEO optimization</li><li>✅ Google Analytics setup</li><li>✅ Google Business Profile setup</li><li>✅ Custom features & integrations</li><li>✅ 5 rounds of revisions</li><li>✅ Priority support</li><li>✅ 60 day post-launch support</li><li>✅ WCAG AA accessible</li><li>✅ Full WAVE accessibility report included</li>
-          </ul>
-          <p class="package-best">Best for: Schools, municipalities, large businesses and organizations needing a full custom build</p>
-          <a href="mailto:jake@jakefixestech.com?subject=Premium Website Package Inquiry" class="package-btn">Get a Free Quote</a>
+        <div style="margin-top:2rem;background:#eff6ff;border:2px solid #bfdbfe;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:0.75rem;">
+          <div style="flex-shrink:0;color:#2563eb;margin-top:0.1rem;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="currentColor" stroke="none"/></svg></div>
+          <p style="font-size:0.875rem;color:#1e40af;line-height:1.6;margin:0;"><strong style="color:#1e3a8a;">Premium projects are quoted by scope.</strong> The $3,500 price is a starting point. Your final quote depends on page count, custom features, content complexity and timeline. <a href="mailto:jake@jakefixestech.com?subject=Premium Website Quote Request" style="color:#1e40af;font-weight:700;text-decoration:underline;">Request a free quote</a> and I'll have a number for you fast.</p>
         </div>
       </div>
-      <div style="margin-top:2rem;background:#eff6ff;border:2px solid #bfdbfe;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:0.75rem;">
-        <div style="flex-shrink:0;color:#2563eb;margin-top:0.1rem;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="currentColor" stroke="none"/></svg></div>
-        <p style="font-size:0.875rem;color:#1e40af;line-height:1.6;margin:0;"><strong style="color:#1e3a8a;">Premium projects are quoted by scope.</strong> {content.premiumNotice} <a href="mailto:jake@jakefixestech.com?subject=Premium Website Quote Request" style="color:#1e40af;font-weight:700;text-decoration:underline;">Request a free quote</a> and I'll have a number for you fast.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Portfolio Examples -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
-    <div style="max-width:72rem;margin:0 auto;">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
-        <div>
-          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Portfolio</p>
-          <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Example Websites</h2>
-          <p style="color:#6b7280;margin-top:0.5rem;max-width:36rem;line-height:1.75;">Every example site is mobile responsive, ADA compliant and scores 10/10 on WAVE. Three featured demos below — each a different style and aesthetic.</p>
-        </div>
-        <a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;white-space:nowrap;flex-shrink:0;">View All Examples →</a>
-      </div>
-      <div id="portfolio-grid">
-        <a href="https://demo4.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
-          <div class="portfolio-tier-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
-          <div class="portfolio-preview" style="background:linear-gradient(135deg,#2d0f3a,#6b1d4e);"><div style="color:#f4c542;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Moonstone & Sage</div><div style="color:#f5a3c7;font-size:0.75rem;text-align:center;">Mystical Gifts & Bohemian Treasures</div></div>
-          <div class="portfolio-info"><div style="font-weight:600;color:#111827;font-size:0.95rem;">Moonstone & Sage</div><div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">Bohemian Gift Shop · 1 page</div><div class="portfolio-link">View Example →</div></div>
-        </a>
-        <a href="https://demo1.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
-          <div class="portfolio-tier-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
-          <div class="portfolio-preview" style="background:linear-gradient(135deg,#1a2332,#2d8a6e);"><div style="color:white;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Ridge & Route</div><div style="color:#a8c4d0;font-size:0.75rem;text-align:center;">Hiking Trail Discovery</div></div>
-          <div class="portfolio-info"><div style="font-weight:600;color:#111827;font-size:0.95rem;">Ridge & Route</div><div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">NH White Mountains · 1 page</div><div class="portfolio-link">View Example →</div></div>
-        </a>
-        <a href="https://demo3.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
-          <div class="portfolio-tier-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
-          <div class="portfolio-preview" style="background:linear-gradient(135deg,#1a1a1a,#cc5500);"><div style="color:white;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Ironveil Construction</div><div style="color:#fbbf24;font-size:0.75rem;text-align:center;">Civil & Commercial Construction</div></div>
-          <div class="portfolio-info"><div style="font-weight:600;color:#111827;font-size:0.95rem;">Ironveil Construction</div><div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">Littleton, NH · 1 page</div><div class="portfolio-link">View Example →</div></div>
-        </a>
-      </div>
-      <div style="text-align:center;margin-top:2rem;"><a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;color:#2563eb;font-weight:600;font-size:0.95rem;text-decoration:none;">See all 14 example sites →</a></div>
-    </div>
-  </section>
+  </div>
+  <!-- END SECTION 1 -->
 
-  <!-- Management Plans -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;">
-    <div style="max-width:72rem;margin:0 auto;">
-      <div style="text-align:left;margin-bottom:3rem;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.mgmtLabel}</p>
-        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.mgmtTitle}</h2>
-        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;line-height:1.75;">{content.mgmtDesc}</p>
-      </div>
-      <div id="management-grid">
-        <div class="mgmt-card"><h3>Basic</h3><div class="mgmt-price">{content.basicPrice}<span>/month</span></div><ul class="mgmt-features"><li>Site uptime monitoring</li><li>Domain renewal management</li><li>Up to 1 hr/month included</li><li>Minor text & content edits</li><li>Email support</li></ul><a href="mailto:jake@jakefixestech.com?subject=Basic Management Plan Inquiry" class="mgmt-btn">Get Started</a></div>
-        <div class="mgmt-card mgmt-featured"><div class="mgmt-popular">Most Popular</div><h3>Standard</h3><div class="mgmt-price">{content.standardPrice}<span>/month</span></div><ul class="mgmt-features"><li>Everything in Basic</li><li>Up to 3 hrs/month included</li><li>SEO monitoring</li><li>Monthly Google Analytics report</li><li>Monthly check-in call</li><li>Priority email support</li></ul><a href="mailto:jake@jakefixestech.com?subject=Standard Management Plan Inquiry" class="mgmt-btn">Get Started</a></div>
-        <div class="mgmt-card"><h3>Premium</h3><div class="mgmt-price">{content.premiumMgmtPrice}<span>/month</span></div><ul class="mgmt-features"><li>Everything in Standard</li><li>Regular content updates</li><li>Same-day priority support</li><li>Monthly Analytics & performance report</li><li>Quarterly WAVE accessibility check</li><li>Up to 8 hrs/month included</li></ul><a href="mailto:jake@jakefixestech.com?subject=Premium Management Plan Inquiry" class="mgmt-btn">Get Started</a></div>
-      </div>
-      <div style="margin-top:2rem;background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.5rem;">
-        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-          <div style="flex-shrink:0;height:1.5rem;width:1.5rem;color:#1e40af;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <p style="font-weight:700;color:#1e40af;font-size:1rem;margin:0;">Flexible Payment Options. Pay Less Upfront or Save More Annually!</p>
-        </div>
-        <div style="overflow-x:auto;">
-          <table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:320px;">
-            <thead><tr style="background:#dbeafe;"><th style="padding:0.625rem 1rem;text-align:left;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Plan</th><th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Monthly</th><th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Quarterly<br/><span style="font-size:0.7rem;font-weight:400;">save 5%</span></th><th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;background:#dbeafe;">Annual<br/><span style="font-size:0.7rem;font-weight:400;">2 months free!</span></th></tr></thead>
-            <tbody>
-              <tr><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Basic</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$75/mo</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$213/qtr</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$750/yr</td></tr>
-              <tr style="background:#f9fafb;"><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Standard</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$150/mo</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$427/qtr</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$1,500/yr</td></tr>
-              <tr><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Premium</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$300/mo</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$855/qtr</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$3,000/yr</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="color:#1e40af;font-size:0.8rem;margin-top:1rem;text-align:center;">Full payment terms and cancellation policy available in our <a href="/terms#web-services-terms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Terms & Conditions</a>.</p>
-      </div>
-    </div>
-  </section>
+  <!-- ============================================================ -->
+  <!-- SECTION 2 — ALREADY HAVE A SITE?                             -->
+  <!-- New content: Site Audit & QA Test + Existing-Site Fixes      -->
+  <!-- Written as plain inline HTML — no YAML.                      -->
+  <!-- ============================================================ -->
+  <div class="ws-section" id="section-existing" role="tabpanel" aria-labelledby="tab-existing" hidden>
 
-  <!-- Content Dashboard Add-On -->
-  <section style="background:#f8fafc;padding:4rem 1.5rem;border-top:1px solid #e5e7eb;">
-    <div style="max-width:72rem;margin:0 auto;">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2rem;margin-bottom:2.5rem;">
+    <!-- Intro -->
+    <section style="background:#f8fafc;padding:4rem 1.5rem 2rem;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Already Have a Website?</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Audits &amp; Fixes for Sites You Already Own</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:42rem;line-height:1.75;">Not ready for a full rebuild? No problem. I can test your current website for accessibility, performance and broken links — or roll up my sleeves and fix specific problems on the site you already have. Two simple, low-commitment ways to get expert help fast.</p>
+      </div>
+    </section>
+
+    <!-- Site Audit & QA Test -->
+    <section style="background:#f8fafc;padding:1rem 1.5rem 4rem;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <div style="background:white;border:1px solid #e5e7eb;border-radius:1rem;overflow:hidden;">
+
+          <!-- Audit header band -->
+          <div style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:2rem;">
+            <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+              <div style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:0.75rem;height:3.5rem;width:3.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;" aria-hidden="true">
+                <svg style="height:1.75rem;width:1.75rem;color:white;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.5rem;font-weight:800;color:white;margin:0;">Site Audit &amp; QA Test</h3>
+                <p style="color:#bfdbfe;font-size:0.95rem;margin:0.25rem 0 0;">A professional, executive-ready report on what's wrong with your current website — and what it'll take to fix it.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What the audit covers -->
+          <div style="padding:2rem;border-bottom:1px solid #f3f4f6;">
+            <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#2563eb;margin-bottom:1.25rem;">What I Check</p>
+            <div class="audit-pillars">
+              <div class="audit-pillar">
+                <div class="audit-pillar-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/><path d="M9 12a3 3 0 1 1 6 0"/></svg></div>
+                <h4>Accessibility &amp; Compliance</h4>
+                <p>WCAG AA testing with WAVE and Lighthouse — color contrast, missing alt text and aria-labels, screen-reader traps and other ADA compliance liabilities.</p>
+              </div>
+              <div class="audit-pillar">
+                <div class="audit-pillar-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+                <h4>User Experience &amp; Links</h4>
+                <p>Broken links and redirects, 404 errors, unclickable elements, confusing layout and navigation, and missing mobile responsiveness.</p>
+              </div>
+              <div class="audit-pillar">
+                <div class="audit-pillar-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                <h4>Performance &amp; SEO</h4>
+                <p>Page load speeds and Core Web Vitals, unoptimized images and assets, and gaps in your SEO metadata that are costing you Google rankings.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Audit pricing tiers -->
+          <div style="padding:2rem;">
+            <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#2563eb;margin-bottom:0.5rem;">Audit Pricing</p>
+            <p style="color:#6b7280;font-size:0.9rem;line-height:1.6;margin-bottom:1.5rem;max-width:38rem;">Flat-rate tiers by page count. Starting at $150 for up to 5 pages, then just $20 per additional page. You get a polished PDF report with the top critical issues, compliance liabilities and broken UX paths laid out in plain English.</p>
+            <div id="audit-grid">
+              <div class="audit-card">
+                <div class="audit-card-head"><h4>Starter Audit</h4><div class="audit-price">$150</div><p class="audit-label">flat rate</p></div>
+                <ul class="audit-features">
+                  <li>✅ Up to 5 pages</li>
+                  <li>✅ Full WCAG AA accessibility scan</li>
+                  <li>✅ Lighthouse performance report</li>
+                  <li>✅ Broken link & 404 check</li>
+                  <li>✅ Professional PDF summary</li>
+                </ul>
+                <p class="audit-best">Best for: Local landing pages, small trades and service businesses</p>
+                <a href="mailto:jake@jakefixestech.com?subject=Starter Site Audit Request (Up to 5 Pages)" class="audit-btn">Request Audit</a>
+              </div>
+              <div class="audit-card audit-featured">
+                <div class="audit-popular">Most Popular</div>
+                <div class="audit-card-head"><h4>Growth Audit</h4><div class="audit-price">$350</div><p class="audit-label">flat rate</p></div>
+                <ul class="audit-features">
+                  <li>✅ Up to 15 pages</li>
+                  <li>✅ Everything in Starter Audit</li>
+                  <li>✅ Core Web Vitals breakdown</li>
+                  <li>✅ SEO metadata gap analysis</li>
+                  <li>✅ Mobile responsiveness review</li>
+                  <li>✅ Prioritized fix recommendations</li>
+                </ul>
+                <p class="audit-best">Best for: Standard businesses, local fire & police departments, clinics</p>
+                <a href="mailto:jake@jakefixestech.com?subject=Growth Site Audit Request (Up to 15 Pages)" class="audit-btn">Request Audit</a>
+              </div>
+              <div class="audit-card">
+                <div class="audit-card-head"><h4>Enterprise / Municipal</h4><div class="audit-price">$500+</div><p class="audit-label">custom quote</p></div>
+                <ul class="audit-features">
+                  <li>✅ 15+ pages</li>
+                  <li>✅ Everything in Growth Audit</li>
+                  <li>✅ Multi-department site coverage</li>
+                  <li>✅ Full compliance liability summary</li>
+                  <li>✅ Executive-ready presentation report</li>
+                  <li>✅ $20 per additional page over 15</li>
+                </ul>
+                <p class="audit-best">Best for: Large school districts, multi-department town and city sites</p>
+                <a href="mailto:jake@jakefixestech.com?subject=Enterprise/Municipal Site Audit Quote Request" class="audit-btn">Get a Quote</a>
+              </div>
+            </div>
+
+            <!-- Free-review-after-hire hook -->
+            <div style="margin-top:2rem;background:#f0fdf4;border:2px solid #16a34a;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:0.75rem;">
+              <div style="flex-shrink:0;color:#16a34a;margin-top:0.1rem;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <p style="font-size:0.9rem;color:#166534;line-height:1.65;margin:0;"><strong style="color:#14532d;">Already planning a full rebuild?</strong> Once you've hired me to build your new website and completed your first payment installment, a QA review of your existing site is included free as part of the build process — it helps me carry over what's working and fix what isn't. The standalone Site Audit above is a separate paid service.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Existing-Site Fixes -->
+    <section style="background:white;padding:4rem 1.5rem;border-top:1px solid #e5e7eb;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2rem;">
+          <div style="flex:1;min-width:280px;">
+            <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:0.5rem;">Existing-Site Fixes</p>
+            <h3 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.75rem;">Need Something Fixed on Your Current Site?</h3>
+            <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:38rem;margin-bottom:0.75rem;">Once your audit points out the problems — or if you already know what's broken — I can go in and fix it. Broken contact forms, accessibility errors, slow-loading pages, busted links, outdated content: I'll work directly on the website you already have, on whatever platform it's built on.</p>
+            <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:38rem;margin-bottom:1.5rem;">This is billed at my standard <strong>$75/hour</strong> web design rate, with a <strong>15-hour cap per project</strong>. The cap is intentional: working inside someone else's platform — especially page builders like WordPress, Wix or Squarespace — can get slow, and I'd rather be upfront than run a meter on you. If a fix is going to take more than 15 hours, that's usually a sign the site needs a proper rebuild, and we'll talk about that instead.</p>
+            <a href="mailto:jake@jakefixestech.com?subject=Existing Website Fix Request" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;">
+              <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Request a Fix
+            </a>
+          </div>
+          <div style="flex-shrink:0;width:240px;">
+            <div style="background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.5rem;text-align:center;">
+              <div style="font-size:3rem;font-weight:900;color:#2563eb;line-height:1;">$75</div>
+              <div style="font-size:1rem;color:#6b7280;font-weight:500;">per hour</div>
+              <div style="height:1px;background:#bfdbfe;margin:1rem 0;"></div>
+              <div style="font-size:1.5rem;font-weight:800;color:#1e40af;line-height:1;">15 hrs</div>
+              <div style="font-size:0.8rem;color:#6b7280;margin-top:0.25rem;">maximum per project</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2rem;background:#eff6ff;border:2px solid #bfdbfe;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:0.75rem;">
+          <div style="flex-shrink:0;color:#2563eb;margin-top:0.1rem;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="currentColor" stroke="none"/></svg></div>
+          <p style="font-size:0.875rem;color:#1e40af;line-height:1.6;margin:0;"><strong style="color:#1e3a8a;">Why the 15-hour cap?</strong> Existing-site fixes are meant to be quick wins, not open-ended projects. If your site needs more than 15 hours of work, a fresh <a href="#" class="jump-to-build" style="color:#1e40af;font-weight:700;text-decoration:underline;">Astro rebuild</a> is almost always the better value — faster, fully accessible and built to last.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- END SECTION 2 -->
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3 — ONGOING SUPPORT & ADD-ONS                        -->
+  <!-- ============================================================ -->
+  <div class="ws-section" id="section-support" role="tabpanel" aria-labelledby="tab-support" hidden>
+
+    <!-- Management Plans -->
+    <section style="background:#f8fafc;padding:4rem 1.5rem;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <div style="text-align:left;margin-bottom:3rem;">
+          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">{content.mgmtLabel}</p>
+          <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">{content.mgmtTitle}</h2>
+          <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;line-height:1.75;">{content.mgmtDesc}</p>
+        </div>
+        <div id="management-grid">
+          <div class="mgmt-card"><h3>Basic</h3><div class="mgmt-price">{content.basicPrice}<span>/month</span></div><ul class="mgmt-features"><li>Site uptime monitoring</li><li>Domain renewal management</li><li>Up to 1 hr/month included</li><li>Minor text & content edits</li><li>Email support</li></ul><a href="mailto:jake@jakefixestech.com?subject=Basic Management Plan Inquiry" class="mgmt-btn">Get Started</a></div>
+          <div class="mgmt-card mgmt-featured"><div class="mgmt-popular">Most Popular</div><h3>Standard</h3><div class="mgmt-price">{content.standardPrice}<span>/month</span></div><ul class="mgmt-features"><li>Everything in Basic</li><li>Up to 3 hrs/month included</li><li>SEO monitoring</li><li>Monthly Google Analytics report</li><li>Monthly check-in call</li><li>Priority email support</li></ul><a href="mailto:jake@jakefixestech.com?subject=Standard Management Plan Inquiry" class="mgmt-btn">Get Started</a></div>
+          <div class="mgmt-card"><h3>Premium</h3><div class="mgmt-price">{content.premiumMgmtPrice}<span>/month</span></div><ul class="mgmt-features"><li>Everything in Standard</li><li>Regular content updates</li><li>Same-day priority support</li><li>Monthly Analytics & performance report</li><li>Quarterly WAVE accessibility check</li><li>Up to 8 hrs/month included</li></ul><a href="mailto:jake@jakefixestech.com?subject=Premium Management Plan Inquiry" class="mgmt-btn">Get Started</a></div>
+        </div>
+        <div style="margin-top:2rem;background:#eff6ff;border:2px solid #2563eb;border-radius:0.75rem;padding:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <div style="flex-shrink:0;height:1.5rem;width:1.5rem;color:#1e40af;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <p style="font-weight:700;color:#1e40af;font-size:1rem;margin:0;">Flexible Payment Options. Pay Less Upfront or Save More Annually!</p>
+          </div>
+          <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:320px;">
+              <thead><tr style="background:#dbeafe;"><th style="padding:0.625rem 1rem;text-align:left;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Plan</th><th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Monthly</th><th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;">Quarterly<br/><span style="font-size:0.7rem;font-weight:400;">save 5%</span></th><th style="padding:0.625rem 1rem;text-align:center;color:#1e40af;font-weight:700;border:1px solid #bfdbfe;background:#dbeafe;">Annual<br/><span style="font-size:0.7rem;font-weight:400;">2 months free!</span></th></tr></thead>
+              <tbody>
+                <tr><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Basic</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$75/mo</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$213/qtr</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$750/yr</td></tr>
+                <tr style="background:#f9fafb;"><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Standard</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$150/mo</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$427/qtr</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$1,500/yr</td></tr>
+                <tr><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;font-weight:600;color:#374151;">Premium</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$300/mo</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#374151;">$855/qtr</td><td style="padding:0.625rem 1rem;border:1px solid #e5e7eb;text-align:center;color:#2563eb;font-weight:700;background:#f0f9ff;">$3,000/yr</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="color:#1e40af;font-size:0.8rem;margin-top:1rem;text-align:center;">Full payment terms and cancellation policy available in our <a href="/terms#web-services-terms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Terms & Conditions</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Dashboard Add-On -->
+    <section style="background:#f8fafc;padding:4rem 1.5rem;border-top:1px solid #e5e7eb;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2rem;margin-bottom:2.5rem;">
+          <div style="flex:1;min-width:260px;">
+            <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:0.5rem;">Optional Add-On</p>
+            <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:0.75rem;">Give Your Website a Content Dashboard</h2>
+            <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:38rem;margin-bottom:0.75rem;">Want to update your own website without calling me? I can add a private, password-protected dashboard to your site that lets you edit text, swap images and update your content from any browser — phone, tablet or computer.</p>
+            <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:38rem;margin-bottom:1.5rem;">Log in securely, make your changes, hit save. Your site updates automatically within about 60 seconds. No code, no developer, no waiting.</p>
+            <a href="/content-dashboard" style="display:inline-flex;align-items:center;gap:0.5rem;color:#2563eb;font-weight:700;font-size:0.95rem;text-decoration:underline;">Learn how the Content Dashboard works →</a>
+          </div>
+          <div class="dashboard-pricing-cards">
+            <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"><div><div style="font-size:0.85rem;font-weight:700;color:#111827;">Starter Package</div><div style="font-size:0.8rem;color:#6b7280;margin-top:0.1rem;">1-3 page sites</div></div><div style="font-size:1.5rem;font-weight:800;color:#2563eb;white-space:nowrap;">$100 add-on</div></div>
+            <div style="background:white;border:2px solid #2563eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"><div><div style="font-size:0.85rem;font-weight:700;color:#111827;">Professional Package</div><div style="font-size:0.8rem;color:#1e40af;margin-top:0.1rem;">5-15 page sites</div></div><div style="font-size:1.5rem;font-weight:800;color:#2563eb;white-space:nowrap;">$250 add-on</div></div>
+            <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"><div><div style="font-size:0.85rem;font-weight:700;color:#111827;">Premium Package</div><div style="font-size:0.8rem;color:#6b7280;margin-top:0.1rem;">30+ pages, quoted by scope</div></div><div style="font-size:1.5rem;font-weight:800;color:#2563eb;white-space:nowrap;">$500 add-on</div></div>
+            <p style="font-size:0.78rem;color:#6b7280;text-align:center;margin-top:0.25rem;">One-time setup fee. Must be added at time of build.</p>
+          </div>
+        </div>
+        <div class="dashboard-features-grid">
+          <div style="display:flex;align-items:flex-start;gap:0.75rem;"><div style="display:flex;height:2.5rem;width:2.5rem;min-width:2.5rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><div style="font-size:0.9rem;font-weight:700;color:#111827;margin-bottom:0.25rem;">Private & Secure</div><div style="font-size:0.8rem;color:#6b7280;line-height:1.6;">Your dashboard is hidden from the public and protected by secure login. Only you can access it.</div></div></div>
+          <div style="display:flex;align-items:flex-start;gap:0.75rem;"><div style="display:flex;height:2.5rem;width:2.5rem;min-width:2.5rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div><div style="font-size:0.9rem;font-weight:700;color:#111827;margin-bottom:0.25rem;">Edit Anything</div><div style="font-size:0.8rem;color:#6b7280;line-height:1.6;">Change text, update images, edit descriptions and more — all through a simple form-based interface.</div></div></div>
+          <div style="display:flex;align-items:flex-start;gap:0.75rem;"><div style="display:flex;height:2.5rem;width:2.5rem;min-width:2.5rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div style="font-size:0.9rem;font-weight:700;color:#111827;margin-bottom:0.25rem;">Live in ~60 Seconds</div><div style="font-size:0.8rem;color:#6b7280;line-height:1.6;">Click Publish and your website updates automatically. No waiting, no developer needed.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- On Demand -->
+    <section style="background:white;padding:4rem 1.5rem;border-top:1px solid #e5e7eb;">
+      <div style="max-width:72rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;">
         <div style="flex:1;min-width:260px;">
-          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:0.5rem;">Optional Add-On</p>
-          <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:0.75rem;">Give Your Website a Content Dashboard</h2>
-          <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:38rem;margin-bottom:0.75rem;">Want to update your own website without calling me? I can add a private, password-protected dashboard to your site that lets you edit text, swap images and update your content from any browser — phone, tablet or computer.</p>
-          <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:38rem;margin-bottom:1.5rem;">Log in securely, make your changes, hit save. Your site updates automatically within about 60 seconds. No code, no developer, no waiting.</p>
-          <a href="/content-dashboard" style="display:inline-flex;align-items:center;gap:0.5rem;color:#2563eb;font-weight:700;font-size:0.95rem;text-decoration:underline;">Learn how the Content Dashboard works →</a>
+          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:0.5rem;">{content.onDemandLabel}</p>
+          <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.75rem;">{content.onDemandTitle}</h2>
+          <p style="color:#6b7280;font-size:0.95rem;line-height:1.75;max-width:36rem;">{content.onDemandDesc}</p>
         </div>
-        <div class="dashboard-pricing-cards">
-          <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"><div><div style="font-size:0.85rem;font-weight:700;color:#111827;">Starter Package</div><div style="font-size:0.8rem;color:#6b7280;margin-top:0.1rem;">1-3 page sites</div></div><div style="font-size:1.5rem;font-weight:800;color:#2563eb;white-space:nowrap;">$100 add-on</div></div>
-          <div style="background:white;border:2px solid #2563eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"><div><div style="font-size:0.85rem;font-weight:700;color:#111827;">Professional Package</div><div style="font-size:0.8rem;color:#1e40af;margin-top:0.1rem;">5-15 page sites</div></div><div style="font-size:1.5rem;font-weight:800;color:#2563eb;white-space:nowrap;">$250 add-on</div></div>
-          <div style="background:white;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"><div><div style="font-size:0.85rem;font-weight:700;color:#111827;">Premium Package</div><div style="font-size:0.8rem;color:#6b7280;margin-top:0.1rem;">30+ pages, quoted by scope</div></div><div style="font-size:1.5rem;font-weight:800;color:#2563eb;white-space:nowrap;">$500 add-on</div></div>
-          <p style="font-size:0.78rem;color:#6b7280;text-align:center;margin-top:0.25rem;">One-time setup fee. Must be added at time of build.</p>
+        <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+          <div style="text-align:center;"><div style="font-size:3.5rem;font-weight:900;color:#2563eb;line-height:1;">{content.onDemandRate}</div><div style="font-size:1rem;color:#6b7280;font-weight:500;">per hour</div><div style="font-size:0.8rem;color:#6b7280;margin-top:0.25rem;">1 hour minimum</div></div>
+          <a href="mailto:jake@jakefixestech.com?subject=Web Design Hourly On-Demand Work Request" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;white-space:nowrap;">Request Work →</a>
         </div>
       </div>
-      <div class="dashboard-features-grid">
-        <div style="display:flex;align-items:flex-start;gap:0.75rem;"><div style="display:flex;height:2.5rem;width:2.5rem;min-width:2.5rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><div style="font-size:0.9rem;font-weight:700;color:#111827;margin-bottom:0.25rem;">Private & Secure</div><div style="font-size:0.8rem;color:#6b7280;line-height:1.6;">Your dashboard is hidden from the public and protected by secure login. Only you can access it.</div></div></div>
-        <div style="display:flex;align-items:flex-start;gap:0.75rem;"><div style="display:flex;height:2.5rem;width:2.5rem;min-width:2.5rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div><div style="font-size:0.9rem;font-weight:700;color:#111827;margin-bottom:0.25rem;">Edit Anything</div><div style="font-size:0.8rem;color:#6b7280;line-height:1.6;">Change text, update images, edit descriptions and more — all through a simple form-based interface.</div></div></div>
-        <div style="display:flex;align-items:flex-start;gap:0.75rem;"><div style="display:flex;height:2.5rem;width:2.5rem;min-width:2.5rem;align-items:center;justify-content:center;border-radius:0.5rem;background:#dbeafe;color:#2563eb;flex-shrink:0;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.25rem;width:1.25rem;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div style="font-size:0.9rem;font-weight:700;color:#111827;margin-bottom:0.25rem;">Live in ~60 Seconds</div><div style="font-size:0.8rem;color:#6b7280;line-height:1.6;">Click Publish and your website updates automatically. No waiting, no developer needed.</div></div></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- On Demand -->
-  <section style="background:white;padding:4rem 1.5rem;border-top:1px solid #e5e7eb;">
-    <div style="max-width:72rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;">
-      <div style="flex:1;min-width:260px;">
-        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:0.5rem;">{content.onDemandLabel}</p>
-        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.75rem;">{content.onDemandTitle}</h2>
-        <p style="color:#6b7280;font-size:0.95rem;line-height:1.75;max-width:36rem;">{content.onDemandDesc}</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
-        <div style="text-align:center;"><div style="font-size:3.5rem;font-weight:900;color:#2563eb;line-height:1;">{content.onDemandRate}</div><div style="font-size:1rem;color:#6b7280;font-weight:500;">per hour</div><div style="font-size:0.8rem;color:#6b7280;margin-top:0.25rem;">1 hour minimum</div></div>
-        <a href="mailto:jake@jakefixestech.com?subject=On-Demand Work Request" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;white-space:nowrap;">Request Work →</a>
-      </div>
-    </div>
-  </section>
+  </div>
+  <!-- END SECTION 3 -->
 
-  <!-- Terms Notice -->
-  <section style="background:white;padding:1rem 1.5rem 2rem 1.5rem;">
-    <div style="max-width:56rem;margin:0 auto;text-align:center;">
-      <p style="color:#6b7280;font-size:0.875rem;">All web design and management services are subject to our <a href="/terms#web-services-terms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Terms & Conditions</a>. By engaging Jake Fixes Tech LLC for web services you agree to these terms.</p>
-    </div>
-  </section>
+  <!-- ============================================================ -->
+  <!-- SECTION 4 — EXAMPLES & GET STARTED                           -->
+  <!-- ============================================================ -->
+  <div class="ws-section" id="section-examples" role="tabpanel" aria-labelledby="tab-examples" hidden>
 
-  <!-- Project Questionnaire -->
-  <section style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);padding:4rem 1.5rem;border-top:1px solid #bae6fd;">
-    <div style="max-width:56rem;margin:0 auto;text-align:center;">
-      <div style="display:inline-flex;align-items:center;justify-content:center;background:#dbeafe;color:#2563eb;border-radius:50%;height:3.5rem;width:3.5rem;margin-bottom:1.25rem;"><svg style="height:1.75rem;width:1.75rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
-      <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:0.5rem;">{content.questionnaireLabel}</p>
-      <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:1rem;">{content.questionnaireTitle}</h2>
-      <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:40rem;margin:0 auto 0.75rem auto;">{content.questionnaireDesc}</p>
-      <p style="color:#6b7280;font-size:0.875rem;line-height:1.6;max-width:38rem;margin:0 auto 2rem auto;">{content.questionnaireSave}</p>
-      <a href="https://form.jotform.com/261100737410039" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
-        <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
-        Start the Questionnaire
-      </a>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:5rem 1.5rem;text-align:center;">
-    <div style="max-width:40rem;margin:0 auto;">
-      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">{content.ctaTitle}</h2>
-      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">{content.ctaSubtitle}</p>
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-        <a href="mailto:jake@jakefixestech.com?subject=Website Project Inquiry" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email Me</a>
-        <a href="tel:+18022341552" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.54-.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 17z"/></svg>(802) 234-1552</a>
+    <!-- Portfolio Examples -->
+    <section style="background:#f8fafc;padding:4rem 1.5rem;">
+      <div style="max-width:72rem;margin:0 auto;">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+          <div>
+            <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Portfolio</p>
+            <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Example Websites</h2>
+            <p style="color:#6b7280;margin-top:0.5rem;max-width:36rem;line-height:1.75;">Every example site is mobile responsive, ADA compliant and scores 10/10 on WAVE. Three featured demos below — each a different style and aesthetic.</p>
+          </div>
+          <a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.9rem;white-space:nowrap;flex-shrink:0;">View All Examples →</a>
+        </div>
+        <div id="portfolio-grid">
+          <a href="https://demo4.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+            <div class="portfolio-tier-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
+            <div class="portfolio-preview" style="background:linear-gradient(135deg,#2d0f3a,#6b1d4e);"><div style="color:#f4c542;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Moonstone & Sage</div><div style="color:#f5a3c7;font-size:0.75rem;text-align:center;">Mystical Gifts & Bohemian Treasures</div></div>
+            <div class="portfolio-info"><div style="font-weight:600;color:#111827;font-size:0.95rem;">Moonstone & Sage</div><div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">Bohemian Gift Shop · 1 page</div><div class="portfolio-link">View Example →</div></div>
+          </a>
+          <a href="https://demo1.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+            <div class="portfolio-tier-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
+            <div class="portfolio-preview" style="background:linear-gradient(135deg,#1a2332,#2d8a6e);"><div style="color:white;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Ridge & Route</div><div style="color:#a8c4d0;font-size:0.75rem;text-align:center;">Hiking Trail Discovery</div></div>
+            <div class="portfolio-info"><div style="font-weight:600;color:#111827;font-size:0.95rem;">Ridge & Route</div><div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">NH White Mountains · 1 page</div><div class="portfolio-link">View Example →</div></div>
+          </a>
+          <a href="https://demo3.jakefixestech.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+            <div class="portfolio-tier-badge" style="background:#fef3c7;color:#92400e;">Demo</div>
+            <div class="portfolio-preview" style="background:linear-gradient(135deg,#1a1a1a,#cc5500);"><div style="color:white;font-weight:700;font-size:1rem;text-align:center;padding:1rem;">Ironveil Construction</div><div style="color:#fbbf24;font-size:0.75rem;text-align:center;">Civil & Commercial Construction</div></div>
+            <div class="portfolio-info"><div style="font-weight:600;color:#111827;font-size:0.95rem;">Ironveil Construction</div><div style="color:#4b5563;font-size:0.8rem;margin-top:0.25rem;">Littleton, NH · 1 page</div><div class="portfolio-link">View Example →</div></div>
+          </a>
+        </div>
+        <div style="text-align:center;margin-top:2rem;"><a href="/portfolio" style="display:inline-flex;align-items:center;gap:0.5rem;color:#2563eb;font-weight:600;font-size:0.95rem;text-decoration:none;">See all 14 example sites →</a></div>
       </div>
+    </section>
+
+    <!-- Project Questionnaire -->
+    <section style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);padding:4rem 1.5rem;border-top:1px solid #bae6fd;">
+      <div style="max-width:56rem;margin:0 auto;text-align:center;">
+        <div style="display:inline-flex;align-items:center;justify-content:center;background:#dbeafe;color:#2563eb;border-radius:50%;height:3.5rem;width:3.5rem;margin-bottom:1.25rem;"><svg style="height:1.75rem;width:1.75rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;margin-bottom:0.5rem;">{content.questionnaireLabel}</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:1rem;">{content.questionnaireTitle}</h2>
+        <p style="color:#4b5563;font-size:1rem;line-height:1.75;max-width:40rem;margin:0 auto 0.75rem auto;">{content.questionnaireDesc}</p>
+        <p style="color:#6b7280;font-size:0.875rem;line-height:1.6;max-width:38rem;margin:0 auto 2rem auto;">{content.questionnaireSave}</p>
+        <a href="https://form.jotform.com/261100737410039" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+          Start the Questionnaire
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:5rem 1.5rem;text-align:center;">
+      <div style="max-width:40rem;margin:0 auto;">
+        <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">{content.ctaTitle}</h2>
+        <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">{content.ctaSubtitle}</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+          <a href="mailto:jake@jakefixestech.com?subject=Website Project Inquiry" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email Me</a>
+          <a href="tel:+18022341552" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);"><svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.54-.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 17z"/></svg>(802) 234-1552</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- END SECTION 4 -->
+
+  <!-- Terms Notice — full-width blue band, always visible, outside the tab system -->
+  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:2.5rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.875rem;flex-wrap:wrap;text-align:center;">
+      <div style="flex-shrink:0;color:#bfdbfe;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>
+      <p style="font-size:0.95rem;color:#bfdbfe;line-height:1.65;margin:0;">All web design, audit and management services are subject to our <a href="/terms#web-services-terms" style="color:white;font-weight:700;text-decoration:underline;">Terms &amp; Conditions</a>. By engaging Jake Fixes Tech LLC for web services you agree to these terms.</p>
     </div>
   </section>
 
@@ -542,6 +747,134 @@ description="Professional website design, hosting and management for small busin
 
     update();
     setInterval(update, 1000);
+  })();
+</script>
+
+<!-- ============================================================ -->
+<!-- SECTION TABS — show one section at a time;                   -->
+<!-- tab bar hides on scroll-down, reappears on scroll-up.        -->
+<!-- ============================================================ -->
+<script is:inline>
+  (function() {
+    var tabs     = Array.prototype.slice.call(document.querySelectorAll('.ws-tab'));
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.ws-section'));
+    var tabBar   = document.getElementById('ws-tabs');
+
+    function showSection(name, focusTab, scrollToTop) {
+      tabs.forEach(function(t) {
+        var on = t.getAttribute('data-section') === name;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        if (on && focusTab) t.focus();
+      });
+      sections.forEach(function(s) {
+        s.hidden = s.getAttribute('id') !== 'section-' + name;
+      });
+      // On a real tab switch, jump to the top of the new section so
+      // the visitor doesn't keep their old scroll depth in a section
+      // that may be a different length. Offset for the sticky tab bar.
+      if (scrollToTop) {
+        var panel = document.getElementById('section-' + name);
+        if (panel) {
+          var barH = tabBar.classList.contains('is-sticky') ? tabBar.offsetHeight : 0;
+          var y = panel.getBoundingClientRect().top + window.scrollY - barH;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
+    }
+
+    tabs.forEach(function(tab, i) {
+      tab.addEventListener('click', function() {
+        showSection(tab.getAttribute('data-section'), false, true);
+      });
+      // Arrow-key navigation between tabs (accessibility)
+      tab.addEventListener('keydown', function(e) {
+        var idx = null;
+        if (e.key === 'ArrowRight') idx = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft') idx = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') idx = 0;
+        else if (e.key === 'End') idx = tabs.length - 1;
+        if (idx !== null) {
+          e.preventDefault();
+          showSection(tabs[idx].getAttribute('data-section'), true, true);
+        }
+      });
+    });
+
+    // "Astro rebuild" inline links inside Section 2 jump to the Build tab
+    Array.prototype.slice.call(document.querySelectorAll('.jump-to-build')).forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection('build', false, false);
+        // Scroll to the top of the Build section's content, offset
+        // for the sticky tab bar so the heading isn't tucked under it.
+        var target = document.getElementById('why-section');
+        if (target) {
+          var barH = tabBar.classList.contains('is-sticky') ? tabBar.offsetHeight : 0;
+          var y = target.getBoundingClientRect().top + window.scrollY - barH;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Tab bar — only sticky once the giveaway banner is fully
+    // scrolled past (so it never overlaps the banner). While the
+    // banner is on screen the bar scrolls normally with the page.
+    var giveawayBanner = document.getElementById('giveaway-callout');
+    var barIsSticky = false;
+
+    if (giveawayBanner && 'IntersectionObserver' in window) {
+      var bannerObserver = new IntersectionObserver(function(entries) {
+        // entry.isIntersecting is true while any part of the banner
+        // is visible in the viewport.
+        barIsSticky = !entries[0].isIntersecting;
+        tabBar.classList.toggle('is-sticky', barIsSticky);
+        if (!barIsSticky) {
+          // Banner back in view — drop sticky styling and any hidden state.
+          tabBar.classList.remove('hidden');
+        }
+      }, { threshold: 0 });
+      bannerObserver.observe(giveawayBanner);
+    } else {
+      // No banner or no observer support — fall back to always sticky.
+      barIsSticky = true;
+      tabBar.classList.add('is-sticky');
+    }
+
+    // Tab bar — hide on scroll down, show on scroll up. Only runs
+    // while the bar is in its sticky state.
+    var lastScrollY = window.scrollY;
+    var ticking = false;
+    var SCROLL_THRESHOLD = 5;
+
+    function handleScroll() {
+      if (!barIsSticky) {
+        lastScrollY = window.scrollY;
+        ticking = false;
+        return;
+      }
+      var currentScrollY = window.scrollY;
+      var delta = currentScrollY - lastScrollY;
+
+      if (Math.abs(delta) < SCROLL_THRESHOLD) {
+        ticking = false;
+        return;
+      }
+      if (delta > 0) {
+        tabBar.classList.add('hidden');
+      } else {
+        tabBar.classList.remove('hidden');
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
+      }
+    }, { passive: true });
   })();
 </script>
 
@@ -920,6 +1253,153 @@ description="Professional website design, hosting and management for small busin
     .gc-label { font-size: 0.7rem; }
   }
 
+  /* ============================================================ */
+  /* SECTION TAB BAR                                              */
+  /* Not sticky while the giveaway banner is on screen (avoids    */
+  /* overlapping it). Becomes sticky once the banner is fully     */
+  /* scrolled past — toggled via the .is-sticky class in JS.      */
+  /* ============================================================ */
+  .ws-tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    position: relative;
+    top: 0;
+    z-index: 10;
+    transition: transform 0.3s ease;
+  }
+  .ws-tab-bar.is-sticky {
+    position: sticky;
+  }
+  .ws-tab-bar.hidden {
+    transform: translateY(-100%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ws-tab-bar { transition: none; }
+    .ws-tab-bar.hidden { transform: none; }
+  }
+
+  .ws-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 9999px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .ws-tab:hover { border-color: #2563eb; color: #2563eb; }
+  .ws-tab.active { background: #2563eb; border-color: #2563eb; color: white; }
+  .ws-tab:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+  .ws-tab-icon { display: inline-flex; }
+  .ws-tab-icon svg { height: 1.1rem; width: 1.1rem; }
+
+  .ws-section[hidden] { display: none; }
+
+  /* ============================================================ */
+  /* SITE AUDIT — pillars + pricing cards                         */
+  /* ============================================================ */
+  .audit-pillars {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .audit-pillar {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+  .audit-pillar-icon {
+    display: flex;
+    height: 2.75rem;
+    width: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: #dbeafe;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+  }
+  .audit-pillar-icon svg { height: 1.4rem; width: 1.4rem; }
+  .audit-pillar h4 { font-size: 1rem; font-weight: 700; color: #111827; margin-bottom: 0.4rem; }
+  .audit-pillar p { font-size: 0.85rem; color: #6b7280; line-height: 1.6; }
+
+  #audit-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+  }
+  .audit-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: white;
+    position: relative;
+  }
+  .audit-featured {
+    border: 2px solid #2563eb;
+    box-shadow: 0 4px 20px rgba(37,99,235,0.15);
+  }
+  .audit-popular {
+    background: #2563eb;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.375rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .audit-card-head {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .audit-card-head h4 { font-size: 1.15rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem; }
+  .audit-price { font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1; }
+  .audit-label { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+  .audit-features {
+    list-style: none;
+    padding: 1.25rem 1.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .audit-features li { font-size: 0.875rem; color: #374151; line-height: 1.5; }
+  .audit-best {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-style: italic;
+    padding: 0 1.5rem 1rem 1.5rem;
+    line-height: 1.5;
+  }
+  .audit-btn {
+    display: block;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+  .audit-btn:hover { background: #1d4ed8; }
+
   #why-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .why-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; text-align: center; }
   .why-icon { display: flex; height: 3rem; width: 3rem; align-items: center; justify-content: center; border-radius: 0.5rem; background: #dbeafe; color: #2563eb; margin: 0 auto 0.75rem auto; }
@@ -974,10 +1454,14 @@ description="Professional website design, hosting and management for small busin
     #management-grid { grid-template-columns: 1fr; }
     .dashboard-features-grid { grid-template-columns: 1fr; }
     .dashboard-pricing-cards { min-width: unset; width: 100%; flex-shrink: unset; }
+    .audit-pillars { grid-template-columns: 1fr; }
+    #audit-grid { grid-template-columns: 1fr; }
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
     #why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .audit-pillars { grid-template-columns: 1fr; }
+    #audit-grid { grid-template-columns: 1fr; }
   }
 
   @media (prefers-reduced-motion: reduce) {
