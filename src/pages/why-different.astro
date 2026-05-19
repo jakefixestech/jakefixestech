@@ -519,6 +519,47 @@ import content from '../content/why-different.yml';
     </div>
   </section>
 
+  <!-- More Than Just the Build -->
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:72rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">More Than Just the Build</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">The Full Package — and Help If You're Already Built</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:42rem;margin-left:auto;margin-right:auto;line-height:1.75;">Everything on this page is about the websites I build from scratch. But the build itself is only part of what you get — and if you already have a site, there's a way I can help with that too.</p>
+      </div>
+      <div class="mtj-grid">
+        <div class="mtj-card mtj-card-good">
+          <div class="mtj-head mtj-head-good">
+            <span class="mtj-tag mtj-tag-good">Included With Every Build</span>
+            <h3>SEO &amp; Local Visibility, Built In</h3>
+          </div>
+          <div class="mtj-body">
+            <p>When I build your website, getting you found is part of the job — not a separate invoice. Because I control the code from the ground up, the technical SEO is baked in, and I handle your local presence as part of the project.</p>
+            <ul class="mtj-list">
+              <li>✅ On-page technical SEO — meta tags, clean structure, fast pages</li>
+              <li>✅ WCAG AA accessibility, which search engines reward</li>
+              <li>✅ Google Business Profile, Yelp &amp; Apple Business Connect listings</li>
+              <li>✅ Consistent NAP — your Name, Address &amp; Phone identical everywhere</li>
+              <li>✅ No add-on fees — it all comes with the build</li>
+            </ul>
+            <a href="/web-services" class="mtj-link mtj-link-good">See what's included in every package →</a>
+          </div>
+        </div>
+        <div class="mtj-card mtj-card-neutral">
+          <div class="mtj-head mtj-head-neutral">
+            <span class="mtj-tag mtj-tag-neutral">Already Have a Website?</span>
+            <h3>Audits &amp; Fixes for Existing Sites</h3>
+          </div>
+          <div class="mtj-body">
+            <p>Not everyone is ready for a brand-new build, and that's fine. I can run a paid Site Audit on your current website, or fix specific problems on it — on whatever platform it's built on.</p>
+            <p style="margin-top:0.75rem;">One honest heads-up: existing-site fixes are billed hourly with a firm 15-hour cap. Platforms like WordPress, Wix and Framer are slow and awkward to work in, and I won't run an open-ended meter on you. If a site needs more than 15 hours of work, that's the platform telling you something — a fresh build is faster for me to deliver and far easier for you to manage long-term.</p>
+            <a href="/web-services" class="mtj-link mtj-link-neutral">See audits &amp; existing-site help →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Still on the Fence — Portfolio Bridge — matches main site footer CTA gradient -->
   <section class="fence-section">
     <div style="max-width:56rem;margin:0 auto;text-align:center;position:relative;z-index:1;">
@@ -956,6 +997,59 @@ import content from '../content/why-different.yml';
     line-height: 1.5;
   }
 
+  /* ===== More Than Just the Build section ===== */
+  .mtj-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .mtj-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: white;
+  }
+  .mtj-card-good { border: 2px solid #86efac; }
+  .mtj-card-neutral { border: 2px solid #bfdbfe; }
+  .mtj-head { padding: 1.25rem 1.5rem; }
+  .mtj-head-good { background: #dcfce7; }
+  .mtj-head-neutral { background: #dbeafe; }
+  .mtj-head h3 { font-size: 1.15rem; font-weight: 800; margin: 0.5rem 0 0 0; }
+  .mtj-head-good h3 { color: #166534; }
+  .mtj-head-neutral h3 { color: #1e40af; }
+  .mtj-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .mtj-tag-good { background: #86efac; color: #14532d; }
+  .mtj-tag-neutral { background: #bfdbfe; color: #1e3a8a; }
+  .mtj-body { padding: 1.5rem; }
+  .mtj-body p { font-size: 0.9rem; color: #374151; line-height: 1.7; margin: 0; }
+  .mtj-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .mtj-list li { font-size: 0.85rem; color: #374151; line-height: 1.5; }
+  .mtj-link {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .mtj-link-good { color: #15803d; }
+  .mtj-link-neutral { color: #2563eb; }
+
   /* ===== Still on the Fence — matches main site footer CTA gradient ===== */
   .fence-section {
     background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
@@ -1016,6 +1110,7 @@ import content from '../content/why-different.yml';
     .widget-compare-grid { grid-template-columns: 1fr; }
     .two-col-grid { grid-template-columns: 1fr; }
     .delivery-grid { grid-template-columns: 1fr; }
+    .mtj-grid { grid-template-columns: 1fr; }
     .compare-card { flex-wrap: wrap; }
     .compare-cols { width: 100%; }
     .compare-agency, .compare-jake { width: 50%; font-size: 0.8rem; }
