@@ -24,7 +24,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
       <ellipse cx="280" cy="240" rx="360" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1200" cy="300" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
 
-      <!-- PRICE TAG — left side. Pulled down 10px (y:120→130) to keep string clear of top edge on tall viewports -->
+      <!-- Price tag -->
       <g class="price-tag" transform="translate(120, 130)">
         <line x1="70" y1="0" x2="70" y2="50" stroke="white" stroke-opacity="0.18" stroke-width="1.5" class="tag-string"/>
         <circle cx="70" cy="0" r="3" fill="white" fill-opacity="0.2" class="tag-pivot"/>
@@ -40,7 +40,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- RECEIPT — right side. Pulled down 20px (y:90→110) to clear top edge cropping -->
+      <!-- Receipt -->
       <g class="receipt" transform="translate(1080, 110)">
         <path d="M0 20 L220 20 L220 280 L210 290 L200 280 L190 290 L180 280 L170 290 L160 280 L150 290 L140 280 L130 290 L120 280 L110 290 L100 280 L90 290 L80 280 L70 290 L60 280 L50 290 L40 280 L30 290 L20 280 L10 290 L0 280 Z"
           stroke="white" stroke-opacity="0.22" stroke-width="2"
@@ -71,7 +71,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- COIN STACKS — pulled up 40px (y:420→380) so bottom of tallest stack (y:412 in scene) sits in safe zone -->
+      <!-- Coin stacks -->
       <g class="coins" transform="translate(480, 380)">
         <g class="coin-stack stack-1">
           <ellipse cx="0" cy="40" rx="26" ry="7" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c1a"/>
@@ -107,7 +107,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- AMBIENT PRICING GLYPHS — top row pulled from y:45-65 to y:75-95, all kept inside safe zone (y:75 to y:445) -->
+      <!-- Ambient pricing glyphs -->
       <g class="glyph-field" font-family="monospace" font-weight="700" fill="white">
         <text x="80" y="85" font-size="18" fill-opacity="0.1" class="glyph-tw gl-a">$</text>
         <text x="340" y="75" font-size="14" fill-opacity="0.1" class="glyph-tw gl-b">%</text>
@@ -151,7 +151,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
       <ellipse cx="100" cy="160" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="320" cy="480" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- Price tag — top-left. Pulled down from y:30 to y:60 so the string isn't right at viewport edge -->
+      <!-- Price tag -->
       <g class="price-tag" transform="translate(20, 60)">
         <line x1="45" y1="0" x2="45" y2="30" stroke="white" stroke-opacity="0.18" stroke-width="1.5" class="tag-string"/>
         <circle cx="45" cy="0" r="2.5" fill="white" fill-opacity="0.2" class="tag-pivot"/>
@@ -167,7 +167,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- Receipt — top-right. Pulled down from y:30 to y:60 (top of receipt was getting cropped on tall phones) -->
+      <!-- Receipt -->
       <g class="receipt" transform="translate(240, 60)">
         <path d="M0 14 L140 14 L140 170 L132 178 L124 170 L116 178 L108 170 L100 178 L92 170 L84 178 L76 170 L68 178 L60 170 L52 178 L44 170 L36 178 L28 170 L20 178 L12 170 L4 178 L0 170 Z"
           stroke="white" stroke-opacity="0.22" stroke-width="1.5"
@@ -196,7 +196,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- Coin stacks — pulled up from y:470 to y:430 so bottom of coins (y:458 in scene) is safely above viewport edge -->
+      <!-- Coin stacks -->
       <g class="coins" transform="translate(80, 430)">
         <g class="coin-stack stack-1">
           <ellipse cx="0" cy="28" rx="18" ry="5" stroke="white" stroke-opacity="0.25" stroke-width="1.5" fill="white" fill-opacity="0.08" class="coin c1a"/>
@@ -224,7 +224,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
         </g>
       </g>
 
-      <!-- Floating pricing glyphs — kept inside safe zone (y:70 to y:540, was y:40 to y:560) -->
+      <!-- Floating pricing glyphs -->
       <g class="glyph-field" font-family="monospace" font-weight="700" fill="white">
         <text x="185" y="70" font-size="14" fill-opacity="0.11" class="glyph-tw gl-a">$</text>
         <text x="195" y="120" font-size="11" fill-opacity="0.09" class="glyph-tw gl-c">%</text>
@@ -282,6 +282,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
     </div>
   </section>
 
+  <!-- Price categories -->
   <section style="background:white;padding:3rem 1.5rem 5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;">
       <div id="price-grid">
@@ -310,10 +311,10 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           </h2>
           <div class="price-table">
             <div class="price-row"><span>Hardware Repair (general)</span><span class="price" style="color:#c2410c;">$60+</span></div>
-            <div class="price-row"><span>SSD Upgrade (with data transfer)</span><span class="price" style="color:#c2410c;">$100</span></div>
+            <div class="price-row"><span>SSD Upgrade (with data transfer)</span><span class="price" style="color:#c2410c;">$85</span></div>
             <div class="price-row"><span>RAM Upgrade</span><span class="price" style="color:#c2410c;">$50</span></div>
             <div class="price-row"><span>Laptop Screen Replacement</span><span class="price" style="color:#c2410c;">$125+</span></div>
-            <div class="price-row"><span>Laptop Keyboard Replacement</span><span class="price" style="color:#c2410c;">$90</span></div>
+            <div class="price-row"><span>Laptop Keyboard Replacement</span><span class="price" style="color:#c2410c;">$45–$100</span></div>
           </div>
         </div>
 
@@ -326,7 +327,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
           </h2>
           <div class="price-table">
             <div class="price-row"><span>Data Backup & Transfer</span><span class="price" style="color:#15803d;">$75</span></div>
-            <div class="price-row"><span>Data Recovery (per drive)</span><span class="price" style="color:#15803d;">$125+</span></div>
+            <div class="price-row"><span>Data Recovery (per drive)</span><span class="price" style="color:#15803d;">$100+</span></div>
           </div>
         </div>
 
@@ -354,9 +355,11 @@ description="Transparent flat rate pricing for all computer repair services. Sta
             Gaming Console Repair
           </h2>
           <div class="price-table">
-            <div class="price-row"><span>HDMI Port Replacement</span><span class="price" style="color:#6d28d9;">$95</span></div>
             <div class="price-row"><span>Console Deep Cleaning</span><span class="price" style="color:#6d28d9;">$55</span></div>
+            <div class="price-row"><span>Thermal Paste / Liquid Metal Replacement</span><span class="price" style="color:#6d28d9;">$65</span></div>
+            <div class="price-row"><span>Disk Drive Replacement</span><span class="price" style="color:#6d28d9;">$75–$100</span></div>
             <div class="price-row"><span>Controller Repair</span><span class="price" style="color:#6d28d9;">$45</span></div>
+            <div class="price-row"><span>Retro Console Help</span><span class="price" style="color:#6d28d9;">$25–$75</span></div>
           </div>
         </div>
 
@@ -368,7 +371,7 @@ description="Transparent flat rate pricing for all computer repair services. Sta
             On-Site, Remote & Tech Tutoring
           </h2>
           <div class="price-table">
-            <div class="price-row"><span>On-Site Service (per hour)</span><span class="price" style="color:#b45309;">$75</span></div>
+            <div class="price-row"><span>On-Site Service (per hour)</span><span class="price" style="color:#b45309;">$65</span></div>
             <div class="price-row"><span>Remote Support (per hour)</span><span class="price" style="color:#b45309;">$60</span></div>
             <div class="price-row"><span>1-on-1 Tech Tutoring (per hour)</span><span class="price" style="color:#b45309;">$55</span></div>
           </div>
@@ -399,12 +402,8 @@ description="Transparent flat rate pricing for all computer repair services. Sta
     </div>
   </section>
 
-  <!-- ============================================================ -->
   <!-- Scavenger hunt: silent click counter on the swinging price tag.
-       Listens to BOTH desktop and mobile .scavenger-price-tag elements.
-       Clicks 1-14: nothing happens, no visible feedback (by design).
-       Click 15: redirects to /h/clue-5 (the next hidden clue page).
-       ============================================================ -->
+       15 clicks redirects to /h/clue-5. -->
   <script is:inline>
     (function() {
       const tags = document.querySelectorAll('.scavenger-price-tag');
@@ -424,10 +423,8 @@ description="Transparent flat rate pricing for all computer repair services. Sta
       }
 
       tags.forEach(function(tag) {
-        // Mouse + touch click
         tag.addEventListener('click', handleClick);
 
-        // Keyboard accessibility — Tab to it, hit Enter or Space
         tag.setAttribute('tabindex', '0');
         tag.setAttribute('role', 'button');
         tag.setAttribute('aria-label', 'Decorative price tag');
@@ -480,15 +477,12 @@ description="Transparent flat rate pricing for all computer repair services. Sta
     animation: tagSwing 4s ease-in-out infinite 2.2s;
     transform-origin: 70px 0;
   }
-  /* Scavenger price tag must look IDENTICAL to a normal swinging tag —
-     no pointer cursor on hover so visitors don't realize it's clickable.
-     Only difference: it's clickable. */
+  /* Scavenger price tag — looks identical to a normal tag, default cursor */
   .scavenger-price-tag {
     cursor: default;
   }
   .scavenger-price-tag:focus { outline: none; }
-  /* Subtle focus indicator for keyboard users (WCAG requirement) without
-     revealing it as interactive on hover */
+  /* Subtle keyboard focus indicator for WCAG */
   .scavenger-price-tag:focus-visible {
     outline: 2px dashed rgba(255, 255, 255, 0.4);
     outline-offset: 4px;
