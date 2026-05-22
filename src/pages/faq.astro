@@ -24,18 +24,10 @@ description="Answers to the most common questions about computer repair, pricing
       <ellipse cx="320" cy="260" rx="380" ry="280" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1150" cy="260" rx="340" ry="260" fill="url(#glowGrad)" class="glow-orb-2"/>
 
-      <!-- ============================================
-           LEFT: Q&A chat bubbles cycling through 4 questions.
-           x:200 group anchor. Q bubble at top (white), A bubble below (faint).
-           Cycles 4 questions: pricing, turnaround, apple, warranty.
-           Safe zone: x:200-460 (inside x:200-1240 ultrawide-safe).
-           y:140-380 (inside y:75-445 vertical safe).
-           ============================================ -->
+      <!-- Q&A cycling chat bubbles -->
       <g class="qa-stack" transform="translate(220, 160)">
-        <!-- Section label -->
         <text x="0" y="0" fill="white" fill-opacity="0.45" font-size="10" font-weight="700" font-family="monospace" letter-spacing="2">COMMON QUESTIONS</text>
 
-        <!-- Q1: Pricing -->
         <g class="qa-set qa-1">
           <g transform="translate(0, 30)">
             <rect x="0" y="0" width="220" height="44" rx="14" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.45" stroke-width="1.5"/>
@@ -51,7 +43,6 @@ description="Answers to the most common questions about computer repair, pricing
           </g>
         </g>
 
-        <!-- Q2: Turnaround -->
         <g class="qa-set qa-2">
           <g transform="translate(0, 30)">
             <rect x="0" y="0" width="220" height="44" rx="14" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.45" stroke-width="1.5"/>
@@ -67,7 +58,6 @@ description="Answers to the most common questions about computer repair, pricing
           </g>
         </g>
 
-        <!-- Q3: Apple -->
         <g class="qa-set qa-3">
           <g transform="translate(0, 30)">
             <rect x="0" y="0" width="220" height="44" rx="14" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.45" stroke-width="1.5"/>
@@ -83,7 +73,6 @@ description="Answers to the most common questions about computer repair, pricing
           </g>
         </g>
 
-        <!-- Q4: Warranty -->
         <g class="qa-set qa-4">
           <g transform="translate(0, 30)">
             <rect x="0" y="0" width="220" height="44" rx="14" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.45" stroke-width="1.5"/>
@@ -100,16 +89,10 @@ description="Answers to the most common questions about computer repair, pricing
         </g>
       </g>
 
-      <!-- ============================================
-           RIGHT: Category chips/tags showing how questions
-           are organized. Each chip lights up in sequence.
-           x:1020 group anchor (extends to x:1240).
-           y:130-400 inside safe zone.
-           ============================================ -->
+      <!-- Category chips -->
       <g class="cat-chips" transform="translate(1000, 130)">
         <text x="110" y="0" text-anchor="middle" fill="white" fill-opacity="0.45" font-size="10" font-weight="700" font-family="monospace" letter-spacing="2">BROWSE BY TOPIC</text>
 
-        <!-- Chip 1: Pricing -->
         <g transform="translate(0, 24)">
           <g class="cat-chip cc-1">
             <rect width="220" height="38" rx="19" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
@@ -122,7 +105,6 @@ description="Answers to the most common questions about computer repair, pricing
           </g>
         </g>
 
-        <!-- Chip 2: Turnaround -->
         <g transform="translate(0, 72)">
           <g class="cat-chip cc-2">
             <rect width="220" height="38" rx="19" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
@@ -135,7 +117,6 @@ description="Answers to the most common questions about computer repair, pricing
           </g>
         </g>
 
-        <!-- Chip 3: Apple & Devices -->
         <g transform="translate(0, 120)">
           <g class="cat-chip cc-3">
             <rect width="220" height="38" rx="19" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
@@ -148,7 +129,6 @@ description="Answers to the most common questions about computer repair, pricing
           </g>
         </g>
 
-        <!-- Chip 4: Privacy -->
         <g transform="translate(0, 168)">
           <g class="cat-chip cc-4">
             <rect width="220" height="38" rx="19" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
@@ -161,7 +141,6 @@ description="Answers to the most common questions about computer repair, pricing
           </g>
         </g>
 
-        <!-- Chip 5: Web Design -->
         <g transform="translate(0, 216)">
           <g class="cat-chip cc-5">
             <rect width="220" height="38" rx="19" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.35" stroke-width="1.2"/>
@@ -211,9 +190,7 @@ description="Answers to the most common questions about computer repair, pricing
       <ellipse cx="100" cy="180" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="320" cy="500" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- TOP: Single Q&A pair cycling — y:65 to y:155 -->
       <g class="qa-stack" transform="translate(40, 65)">
-        <!-- Q1 -->
         <g class="qa-set qa-1">
           <g transform="translate(0, 0)">
             <rect x="0" y="0" width="320" height="32" rx="11" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.45" stroke-width="1.2"/>
@@ -272,7 +249,6 @@ description="Answers to the most common questions about computer repair, pricing
         </g>
       </g>
 
-      <!-- BOTTOM: Category chips wrapped in 2 rows — y:475 to y:540 -->
       <g class="cat-chips" transform="translate(20, 475)">
         <g transform="translate(0, 0)">
           <g class="cat-chip cc-1">
@@ -344,7 +320,7 @@ description="Answers to the most common questions about computer repair, pricing
             <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" hidden>
-            <p>All repairs start with a $50 diagnostic fee, which is applied toward your total if you proceed. Repair pricing from there depends on the service. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and screen replacement labor is $100 plus the cost of the part. You can see the full breakdown on the <a href="/pricing">Pricing page</a>.</p>
+            <p>All repairs start with a $50 diagnostic fee, which is applied toward your total if you proceed. Repair pricing from there depends on the service. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and laptop screen replacement starts at $125 plus the cost of the part. You can see the full breakdown on the <a href="/pricing">Pricing page</a>.</p>
           </div>
         </div>
 
@@ -456,7 +432,7 @@ description="Answers to the most common questions about computer repair, pricing
             <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" hidden>
-            <p>Yes. PlayStation, Xbox, Nintendo Switch, Wii, Wii U, GameCube, N64 and other retro consoles. Common repairs include disc drive failures, overheating, Joy-Con drift, power issues and general diagnostics. I also do retro odds and ends like Game Boy cartridge battery replacements. See the <a href="/services/gaming-console-repair">Gaming Console Repair page</a> for the full breakdown.</p>
+            <p>Yes. PlayStation, Xbox, Nintendo Switch, Wii, Wii U, GameCube, N64 and other retro consoles. Common repairs include thermal paste and liquid metal replacement, disk drive replacement, deep cleaning, Joy-Con drift, controller repair and general diagnostics. I also do retro odds and ends like Game Boy cartridge battery replacements. See the <a href="/services/gaming-console-repair">Gaming Console Repair page</a> for the full breakdown.</p>
           </div>
         </div>
 
@@ -492,7 +468,7 @@ description="Answers to the most common questions about computer repair, pricing
             <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" hidden>
-            <p>Often yes. If the computer won't boot but the drive is intact, I can pull the drive, connect it externally and attempt to recover your files. Data recovery starts with a $50 assessment. If recovery is successful the total is $100. See the <a href="/services/data-recovery">Data Recovery page</a> for full details on what's possible and what isn't.</p>
+            <p>Often yes. If the computer won't boot but the drive is intact, I can pull the drive, connect it externally and attempt to recover your files. Data recovery is $50 upfront to attempt the recovery, then another $50 on delivery if I successfully get your files back, for $100 total. If recovery isn't possible, the $50 attempt fee is all you pay. See the <a href="/services/data-recovery">Data Recovery page</a> for full details on what's possible and what isn't.</p>
           </div>
         </div>
 
@@ -508,7 +484,7 @@ description="Answers to the most common questions about computer repair, pricing
             <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" hidden>
-            <p>Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to my work, I'll fix it at no charge. The warranty covers labor only and does not cover new or unrelated issues, physical damage, or part failures after installation.</p>
+            <p>Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to my work, I'll fix it at no charge. The warranty covers labor only and does not cover new or unrelated issues, physical damage, or part failures after installation. The 30-day labor warranty applies to tech repair services only, not web design, audits or SEO work.</p>
           </div>
         </div>
 
@@ -544,7 +520,7 @@ description="Answers to the most common questions about computer repair, pricing
             <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" hidden>
-            <p>Yes. On-site visits are available on weekends from 9am to 4pm for homes and small businesses within roughly 30 minutes of Littleton, NH. A flat travel fee applies for distances over 10 miles. See the <a href="/services/on-site-tech-support">On-Site Tech Support page</a> for the full travel fee breakdown.</p>
+            <p>Yes. On-site visits are available on weekends from 9am to 4pm for homes and small businesses within roughly 30 minutes of Littleton, NH. Mileage is calculated from 28 Grove Street, Littleton, and travel fees are tiered: free within 10 miles, $20 for 10-15 miles, $40 for 15-20 miles, and $60 for 20-25 miles. Beyond 25 miles I'll provide a custom quote. See the <a href="/services/on-site-tech-support">On-Site Tech Support page</a> for full details.</p>
           </div>
         </div>
 
@@ -604,6 +580,36 @@ description="Answers to the most common questions about computer repair, pricing
           </div>
         </div>
 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can you check my existing website for problems?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes — I offer a paid Site Audit & QA Test for websites you already own, no matter what platform they're built on. You get a written report covering performance, accessibility, SEO, broken links and security concerns, along with prioritized recommendations. Pricing is tiered by page count: $150 for up to 5 pages (Starter), $350 for up to 15 pages (Growth — most popular), and $500+ for larger sites (Enterprise). Each additional page beyond the tier is $20. Full payment is required upfront and is non-refundable once the report is delivered. See the <a href="/web-services">Web Services page</a> for details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can you fix my WordPress, Wix, Squarespace or Framer site?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes, with one honest heads-up. Existing-site fixes are billed at $75 per hour with a firm 15-hour cap per project. Platforms like WordPress, Wix, Squarespace, Framer and GoDaddy can be slow and awkward to work in, and I won't run an open-ended meter on you. If a site needs more than 15 hours of work, that's the platform telling you something — at that point a fresh build is faster for me to deliver and far easier for you to manage long-term. See the <a href="/web-services">Web Services page</a> for the full breakdown.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can you help me get found on Google if you didn't build my site?
+            <svg class="faq-chevron" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes — I offer a standalone Local SEO Package for $250, one-time, flat. It covers setting up your Google Business Profile, Yelp and Apple Business Connect listings, and aligning consistent NAP (Name, Address, Phone) information across the major directories. Full payment is required upfront. Important: search rankings, map placement and traffic are controlled by third parties like Google, so I can't guarantee any specific result — SEO is ongoing by nature. What I can guarantee is the work itself is done right. See the <a href="/web-services">Web Services page</a> for more.</p>
+          </div>
+        </div>
+
       </div>
 
       <!-- Search nudge -->
@@ -641,21 +647,25 @@ description="Answers to the most common questions about computer repair, pricing
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "How much does computer repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "All repairs start with a $50 diagnostic fee applied toward your total. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and screen replacement labor is $100 plus parts." } },
+    { "@type": "Question", "name": "How much does computer repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "All repairs start with a $50 diagnostic fee applied toward your total. Software repairs like virus removal start at $75, hardware repairs start at $60 plus parts, and laptop screen replacement starts at $125 plus parts." } },
     { "@type": "Question", "name": "What is the $50 diagnostic fee?", "acceptedAnswer": { "@type": "Answer", "text": "The $50 diagnostic fee is required upfront before any work begins. If you proceed with the repair it comes off your total. If you decide not to repair, you leave with a clear answer on what is wrong." } },
     { "@type": "Question", "name": "Do you work on Apple products?", "acceptedAnswer": { "@type": "Answer", "text": "macOS software is fully supported including installations, upgrades and troubleshooting. Apple hardware repairs including MacBooks and iMacs are not available." } },
-    { "@type": "Question", "name": "Do repairs come with a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to the repair work, it will be fixed at no charge." } },
+    { "@type": "Question", "name": "Do repairs come with a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All completed repairs include a 30 day labor warranty. If the same issue comes back within 30 days due to the repair work, it will be fixed at no charge. The 30-day labor warranty applies to tech repair services only, not web design, audits or SEO work." } },
+    { "@type": "Question", "name": "Can you recover files from a dead or broken computer?", "acceptedAnswer": { "@type": "Answer", "text": "Often yes. Data recovery is $50 upfront to attempt the recovery, then another $50 on delivery if files are successfully recovered, for $100 total. If recovery isn't possible, the $50 attempt fee is all you pay." } },
     { "@type": "Question", "name": "Can you fix my computer remotely?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for most software issues. Remote support is available via phone, video call or direct screen control using Chrome Remote Desktop. Hardware repairs always require the device in person." } },
     { "@type": "Question", "name": "Can I update my own website content after it's built?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, with the optional Content Dashboard add-on. A private editing interface is built into your site letting you update text, images, prices and hours from any browser without touching code. Click Publish and your site updates in about 60 seconds. One-time setup fee: $100 for Starter, $250 for Professional, $500+ for Premium." } },
     { "@type": "Question", "name": "Do I own my website after you build it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, always. You own the code, the domain and all content outright from day one." } },
     { "@type": "Question", "name": "How much does a website cost?", "acceptedAnswer": { "@type": "Answer", "text": "Build packages start at $750 for a 1 to 3 page starter site, $2,000 for a 5 to 15 page professional site, and $3,500 and up for larger custom builds." } },
-    { "@type": "Question", "name": "Do you come to my home or business?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On-site visits are available weekends 9am to 4pm within roughly 30 minutes of Littleton, NH. A flat travel fee applies for distances over 10 miles." } }
+    { "@type": "Question", "name": "Do you come to my home or business?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On-site visits are available weekends 9am to 4pm within roughly 30 minutes of Littleton, NH. Travel fees are tiered: free within 10 miles, $20 for 10-15 miles, $40 for 15-20 miles, $60 for 20-25 miles. Beyond 25 miles a custom quote is provided." } },
+    { "@type": "Question", "name": "Can you check my existing website for problems?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Site Audit & QA Test is a paid assessment of an existing website you own, no matter the platform. Pricing is tiered by page count: $150 Starter (up to 5 pages), $350 Growth (up to 15 pages), and $500+ Enterprise. Full payment upfront, non-refundable once the report is delivered." } },
+    { "@type": "Question", "name": "Can you fix my WordPress, Wix, Squarespace or Framer site?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Existing-site fixes are billed at $75 per hour with a firm 15-hour cap per project. WordPress, Wix, Squarespace, Framer and similar platforms can be slow to work in, so the cap keeps the service contained. If a site needs more than 15 hours of work, a fresh build is recommended as the better long-term option." } },
+    { "@type": "Question", "name": "Can you help me get found on Google if you didn't build my site?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The standalone Local SEO Package is a one-time flat $250 fee covering Google Business Profile, Yelp and Apple Business Connect listings, and consistent NAP alignment across directories. Search rankings are controlled by third parties and cannot be guaranteed." } }
   ]
 }
 </script>
 
 <style>
-  /* ===== HERO ===== */
+  /* Hero */
   #hero-svg {
     position: relative;
     width: 100%;
@@ -677,10 +687,7 @@ description="Answers to the most common questions about computer repair, pricing
   .hero-bg-desktop { display: block; }
   .hero-bg-mobile  { display: none; }
 
-  /* === Q&A CYCLE ===
-     4 Q/A sets cycle on a 12s loop. Each visible 3s.
-     Each set fades in (Q first, then A 0.4s later), holds, fades out.
-  */
+  /* Q&A cycle */
   .qa-stack { opacity: 0; animation: qaStackFadeIn 0.6s ease 0.6s forwards; }
   @keyframes qaStackFadeIn { from { opacity: 0 } to { opacity: 1 } }
 
@@ -697,9 +704,7 @@ description="Answers to the most common questions about computer repair, pricing
     100% { opacity: 0; }
   }
 
-  /* === CATEGORY CHIPS ===
-     5 chips. All fade in staggered, then a "highlight" cycles through them.
-  */
+  /* Category chips */
   .cat-chips { opacity: 0; animation: chipsFadeIn 0.6s ease 1s forwards; }
   @keyframes chipsFadeIn { from { opacity: 0 } to { opacity: 1 } }
 
@@ -719,7 +724,7 @@ description="Answers to the most common questions about computer repair, pricing
     10%      { filter: brightness(1); }
   }
 
-  /* === AMBIENT === */
+  /* Ambient */
   .float-dot { animation: dotFloat 4s ease-in-out infinite; }
   .float-dot.d1 { animation-delay: 0s; }
   .float-dot.d2 { animation-delay: 1s; }
@@ -734,7 +739,7 @@ description="Answers to the most common questions about computer repair, pricing
   .glow-orb-2 { animation: orbBreathe 5s ease-in-out infinite reverse; }
   @keyframes orbBreathe { 0%,100%{opacity:0.6} 50%{opacity:1} }
 
-  /* === HERO TEXT === */
+  /* Hero text */
   #hero-content {
     position: relative;
     z-index: 2;
@@ -812,7 +817,7 @@ description="Answers to the most common questions about computer repair, pricing
     50%{transform:translateX(-50%) translateY(6px)}
   }
 
-  /* ===== EXISTING FAQ STYLES ===== */
+  /* FAQ */
   .faq-group { margin-bottom: 2.5rem; }
 
   .faq-group-title {
@@ -943,7 +948,7 @@ description="Answers to the most common questions about computer repair, pricing
     outline-offset: 3px;
   }
 
-  /* ===== RESPONSIVE ===== */
+  /* Responsive */
   @media (max-width: 900px) {
     #hero-svg { height: 70vh; min-height: 440px; }
     .hero-bg-desktop { display: none; }
