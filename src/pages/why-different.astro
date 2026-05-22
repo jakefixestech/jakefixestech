@@ -27,18 +27,18 @@ import content from '../content/why-different.yml';
       <ellipse cx="320" cy="240" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1150" cy="280" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
 
+      <!-- Speed race bars -->
       <g class="speed-race" transform="translate(60, 160)">
         <g transform="translate(0, 0)">
           <text x="0" y="0" fill="white" fill-opacity="0.4" font-size="9" font-family="monospace" letter-spacing="1">TYPICAL AGENCY</text>
           <text x="280" y="0" text-anchor="end" fill="white" fill-opacity="0.35" font-size="9" font-family="monospace">10s</text>
           <rect x="0" y="8" width="280" height="18" rx="9" stroke="white" stroke-opacity="0.15" stroke-width="1.2" fill="white" fill-opacity="0.03"/>
           <line x1="280" y1="4" x2="280" y2="30" stroke="white" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="2 3"/>
-          <rect x="2" y="10" width="0" height="14" rx="7" fill="white" fill-opacity="0.15" class="race-bar-agency"/>
-          <g class="race-car-agency">
+          <rect x="2" y="10" width="240" height="14" rx="7" fill="white" fill-opacity="0.18"/>
+          <g transform="translate(240, 0)">
             <circle cx="0" cy="17" r="9" fill="white" fill-opacity="0.3"/>
             <circle cx="-2.5" cy="16" r="1.2" fill="#1e3a8a"/>
             <circle cx="2.5" cy="16" r="1.2" fill="#1e3a8a"/>
-            <path d="M-6 10 Q-7.5 12.5 -6 14.5 Q-4.5 12.5 -6 10 Z" fill="white" fill-opacity="0.5" class="sweat-drop"/>
           </g>
         </g>
 
@@ -47,14 +47,9 @@ import content from '../content/why-different.yml';
           <text x="280" y="0" text-anchor="end" fill="white" fill-opacity="0.55" font-size="9" font-family="monospace" font-weight="700">&lt;2s</text>
           <rect x="0" y="8" width="280" height="18" rx="9" stroke="white" stroke-opacity="0.28" stroke-width="1.2" fill="white" fill-opacity="0.05"/>
           <line x1="280" y1="4" x2="280" y2="30" stroke="white" stroke-opacity="0.45" stroke-width="1.5"/>
-          <rect x="2" y="10" width="0" height="14" rx="7" fill="white" fill-opacity="0.5" class="race-bar-jake"/>
-          <g class="speed-lines">
-            <line x1="-16" y1="14" x2="-6" y2="14" stroke="white" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="-20" y1="17" x2="-9" y2="17" stroke="white" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="-17" y1="20" x2="-7" y2="20" stroke="white" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
-          </g>
-          <g class="race-car-jake">
-            <circle cx="0" cy="17" r="9" fill="white" fill-opacity="0.65"/>
+          <rect x="2" y="10" width="276" height="14" rx="7" fill="white" fill-opacity="0.55"/>
+          <g transform="translate(276, 0)">
+            <circle cx="0" cy="17" r="9" fill="white" fill-opacity="0.7"/>
             <line x1="-4" y1="16" x2="-1" y2="16" stroke="#1e3a8a" stroke-width="1.6" stroke-linecap="round"/>
             <line x1="1" y1="16" x2="4" y2="16" stroke="#1e3a8a" stroke-width="1.6" stroke-linecap="round"/>
             <path d="M-2.5 19.5 Q0 21 2.5 19.5" stroke="#1e3a8a" stroke-width="1" fill="none" stroke-linecap="round"/>
@@ -67,58 +62,48 @@ import content from '../content/why-different.yml';
         </g>
       </g>
 
+      <!-- Score dashboard -->
       <g class="score-dashboard" transform="translate(1100, 170)">
 
         <g transform="translate(35, 60)">
           <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.1" stroke-width="5" fill="none"/>
-          <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.5" stroke-width="5" fill="none"
-            stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring dash-ring-1"/>
-          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.85" font-size="16" font-weight="900" font-family="monospace" class="dash-num dash-num-1">100</text>
+          <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.55" stroke-width="5" fill="none"
+            stroke-dasharray="201" stroke-dashoffset="2" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.9" font-size="16" font-weight="900" font-family="monospace">100</text>
           <text x="0" y="11" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="6" font-family="monospace">/100</text>
         </g>
-        <text x="35" y="115" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1" class="dash-label dash-label-1">BEST PRACTICES</text>
+        <text x="35" y="115" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1">BEST PRACTICES</text>
 
         <g transform="translate(120, 60)">
           <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.1" stroke-width="5" fill="none"/>
-          <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.5" stroke-width="5" fill="none"
-            stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring dash-ring-2"/>
-          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.85" font-size="16" font-weight="900" font-family="monospace" class="dash-num dash-num-2">100</text>
+          <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.55" stroke-width="5" fill="none"
+            stroke-dasharray="201" stroke-dashoffset="2" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.9" font-size="16" font-weight="900" font-family="monospace">100</text>
           <text x="0" y="11" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="6" font-family="monospace">/100</text>
         </g>
-        <text x="120" y="115" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1" class="dash-label dash-label-2">ACCESSIBILITY</text>
+        <text x="120" y="115" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1">ACCESSIBILITY</text>
 
         <g transform="translate(205, 60)">
           <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.1" stroke-width="5" fill="none"/>
-          <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.5" stroke-width="5" fill="none"
-            stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring dash-ring-3"/>
-          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.85" font-size="16" font-weight="900" font-family="monospace" class="dash-num dash-num-3">100</text>
+          <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.55" stroke-width="5" fill="none"
+            stroke-dasharray="201" stroke-dashoffset="2" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.9" font-size="16" font-weight="900" font-family="monospace">100</text>
           <text x="0" y="11" text-anchor="middle" fill="white" fill-opacity="0.4" font-size="6" font-family="monospace">/100</text>
         </g>
-        <text x="205" y="115" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1" class="dash-label dash-label-3">SEO</text>
+        <text x="205" y="115" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1">SEO</text>
 
         <g transform="translate(290, 60)">
           <circle cx="0" cy="0" r="36" stroke="white" stroke-opacity="0.12" stroke-width="6" fill="none"/>
-          <circle cx="0" cy="0" r="36" stroke="white" stroke-opacity="0.6" stroke-width="6" fill="none"
-            stroke-dasharray="226" stroke-dashoffset="226" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring dash-ring-4"/>
-          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.95" font-size="18" font-weight="900" font-family="monospace" class="dash-num dash-num-4">10</text>
+          <circle cx="0" cy="0" r="36" stroke="white" stroke-opacity="0.65" stroke-width="6" fill="none"
+            stroke-dasharray="226" stroke-dashoffset="2" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="-1" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.95" font-size="18" font-weight="900" font-family="monospace">10</text>
           <text x="0" y="13" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="7" font-family="monospace">/10</text>
         </g>
-        <text x="290" y="115" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1" class="dash-label dash-label-4">WAVE ACCESS</text>
-
-        <g class="sparkles">
-          <circle cx="35" cy="20" r="1.5" fill="white" fill-opacity="0.5" class="sparkle s1"/>
-          <circle cx="120" cy="22" r="1.2" fill="white" fill-opacity="0.45" class="sparkle s2"/>
-          <circle cx="205" cy="20" r="1.5" fill="white" fill-opacity="0.5" class="sparkle s3"/>
-          <circle cx="290" cy="18" r="2" fill="white" fill-opacity="0.6" class="sparkle s4"/>
-          <circle cx="20" cy="100" r="1.2" fill="white" fill-opacity="0.4" class="sparkle s5"/>
-          <circle cx="135" cy="100" r="1.2" fill="white" fill-opacity="0.4" class="sparkle s6"/>
-          <circle cx="220" cy="100" r="1.5" fill="white" fill-opacity="0.45" class="sparkle s7"/>
-          <circle cx="305" cy="100" r="1.5" fill="white" fill-opacity="0.5" class="sparkle s8"/>
-        </g>
+        <text x="290" y="115" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="7" font-weight="700" font-family="monospace" letter-spacing="1">WAVE ACCESS</text>
       </g>
 
       <g stroke="white" stroke-opacity="0.04" stroke-width="1">
@@ -131,6 +116,7 @@ import content from '../content/why-different.yml';
       </g>
     </svg>
 
+    <!-- MOBILE SVG -->
     <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -152,8 +138,8 @@ import content from '../content/why-different.yml';
           <text x="340" y="0" text-anchor="end" fill="white" fill-opacity="0.35" font-size="8" font-family="monospace">10s</text>
           <rect x="0" y="5" width="340" height="12" rx="6" stroke="white" stroke-opacity="0.15" stroke-width="1" fill="white" fill-opacity="0.03"/>
           <line x1="340" y1="2" x2="340" y2="20" stroke="white" stroke-opacity="0.25" stroke-width="1.2" stroke-dasharray="2 3"/>
-          <rect x="2" y="7" width="0" height="8" rx="4" fill="white" fill-opacity="0.15" class="race-bar-agency-mob"/>
-          <g class="race-car-agency">
+          <rect x="2" y="7" width="290" height="8" rx="4" fill="white" fill-opacity="0.18"/>
+          <g transform="translate(290, 0)">
             <circle cx="0" cy="11" r="6" fill="white" fill-opacity="0.3"/>
             <circle cx="-1.5" cy="10" r="0.8" fill="#1e3a8a"/>
             <circle cx="1.5" cy="10" r="0.8" fill="#1e3a8a"/>
@@ -165,13 +151,9 @@ import content from '../content/why-different.yml';
           <text x="340" y="0" text-anchor="end" fill="white" fill-opacity="0.55" font-size="8" font-family="monospace" font-weight="700">&lt;2s</text>
           <rect x="0" y="5" width="340" height="12" rx="6" stroke="white" stroke-opacity="0.28" stroke-width="1" fill="white" fill-opacity="0.05"/>
           <line x1="340" y1="2" x2="340" y2="20" stroke="white" stroke-opacity="0.45" stroke-width="1.2"/>
-          <rect x="2" y="7" width="0" height="8" rx="4" fill="white" fill-opacity="0.5" class="race-bar-jake-mob"/>
-          <g class="speed-lines">
-            <line x1="-10" y1="9" x2="-3" y2="9" stroke="white" stroke-opacity="0.4" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="-13" y1="12" x2="-5" y2="12" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/>
-          </g>
-          <g class="race-car-jake">
-            <circle cx="0" cy="11" r="6" fill="white" fill-opacity="0.65"/>
+          <rect x="2" y="7" width="336" height="8" rx="4" fill="white" fill-opacity="0.55"/>
+          <g transform="translate(336, 0)">
+            <circle cx="0" cy="11" r="6" fill="white" fill-opacity="0.7"/>
             <line x1="-2.5" y1="10" x2="-0.5" y2="10" stroke="#1e3a8a" stroke-width="1.2" stroke-linecap="round"/>
             <line x1="0.5" y1="10" x2="2.5" y2="10" stroke="#1e3a8a" stroke-width="1.2" stroke-linecap="round"/>
           </g>
@@ -181,46 +163,39 @@ import content from '../content/why-different.yml';
       <g class="score-dashboard" transform="translate(20, 485)">
         <g transform="translate(45, 20)">
           <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.1" stroke-width="3" fill="none"/>
-          <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.55" stroke-width="3" fill="none"
-            stroke-dasharray="113" stroke-dashoffset="113" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring-mob dash-ring-1"/>
-          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.9" font-size="11" font-weight="900" font-family="monospace" class="dash-num-mob dash-num-1">100</text>
+          <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.6" stroke-width="3" fill="none"
+            stroke-dasharray="113" stroke-dashoffset="1" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.95" font-size="11" font-weight="900" font-family="monospace">100</text>
         </g>
-        <text x="45" y="50" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5" class="dash-label-mob dash-label-1">BEST PRACTICES</text>
+        <text x="45" y="50" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5">BEST PRACTICES</text>
 
         <g transform="translate(135, 20)">
           <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.1" stroke-width="3" fill="none"/>
-          <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.55" stroke-width="3" fill="none"
-            stroke-dasharray="113" stroke-dashoffset="113" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring-mob dash-ring-2"/>
-          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.9" font-size="11" font-weight="900" font-family="monospace" class="dash-num-mob dash-num-2">100</text>
+          <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.6" stroke-width="3" fill="none"
+            stroke-dasharray="113" stroke-dashoffset="1" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.95" font-size="11" font-weight="900" font-family="monospace">100</text>
         </g>
-        <text x="135" y="50" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5" class="dash-label-mob dash-label-2">ACCESSIBILITY</text>
+        <text x="135" y="50" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5">ACCESSIBILITY</text>
 
         <g transform="translate(225, 20)">
           <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.1" stroke-width="3" fill="none"/>
-          <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.55" stroke-width="3" fill="none"
-            stroke-dasharray="113" stroke-dashoffset="113" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring-mob dash-ring-3"/>
-          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.9" font-size="11" font-weight="900" font-family="monospace" class="dash-num-mob dash-num-3">100</text>
+          <circle cx="0" cy="0" r="18" stroke="white" stroke-opacity="0.6" stroke-width="3" fill="none"
+            stroke-dasharray="113" stroke-dashoffset="1" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.95" font-size="11" font-weight="900" font-family="monospace">100</text>
         </g>
-        <text x="225" y="50" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5" class="dash-label-mob dash-label-3">SEO</text>
+        <text x="225" y="50" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5">SEO</text>
 
         <g transform="translate(315, 20)">
           <circle cx="0" cy="0" r="20" stroke="white" stroke-opacity="0.12" stroke-width="3.5" fill="none"/>
-          <circle cx="0" cy="0" r="20" stroke="white" stroke-opacity="0.65" stroke-width="3.5" fill="none"
-            stroke-dasharray="126" stroke-dashoffset="126" stroke-linecap="round"
-            transform="rotate(-90)" class="dash-ring-mob dash-ring-4"/>
-          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.95" font-size="12" font-weight="900" font-family="monospace" class="dash-num-mob dash-num-4">10</text>
+          <circle cx="0" cy="0" r="20" stroke="white" stroke-opacity="0.7" stroke-width="3.5" fill="none"
+            stroke-dasharray="126" stroke-dashoffset="1" stroke-linecap="round"
+            transform="rotate(-90)"/>
+          <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.95" font-size="12" font-weight="900" font-family="monospace">10</text>
         </g>
-        <text x="315" y="50" text-anchor="middle" fill="white" fill-opacity="0.6" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5" class="dash-label-mob dash-label-4">WAVE ACCESS</text>
-
-        <g class="sparkles">
-          <circle cx="45" cy="-2" r="1" fill="white" fill-opacity="0.5" class="sparkle s1"/>
-          <circle cx="135" cy="-1" r="0.8" fill="white" fill-opacity="0.45" class="sparkle s2"/>
-          <circle cx="225" cy="-2" r="1" fill="white" fill-opacity="0.5" class="sparkle s3"/>
-          <circle cx="315" cy="-3" r="1.3" fill="white" fill-opacity="0.6" class="sparkle s4"/>
-        </g>
+        <text x="315" y="50" text-anchor="middle" fill="white" fill-opacity="0.65" font-size="6" font-weight="700" font-family="monospace" letter-spacing="0.5">WAVE ACCESS</text>
       </g>
 
       <g stroke="white" stroke-opacity="0.04" stroke-width="1">
@@ -542,7 +517,7 @@ import content from '../content/why-different.yml';
               <li>✅ Consistent NAP — your Name, Address &amp; Phone identical everywhere</li>
               <li>✅ No add-on fees — it all comes with the build</li>
             </ul>
-            <a href="/web-services" class="mtj-link mtj-link-good">See what's included in every package →</a>
+            <a href="/web-services#why-section" class="mtj-link mtj-link-good">See what's included in every package →</a>
           </div>
         </div>
         <div class="mtj-card mtj-card-neutral">
@@ -553,14 +528,14 @@ import content from '../content/why-different.yml';
           <div class="mtj-body">
             <p>Not everyone is ready for a brand-new build, and that's fine. I can run a paid Site Audit on your current website, or fix specific problems on it — on whatever platform it's built on.</p>
             <p style="margin-top:0.75rem;">One honest heads-up: existing-site fixes are billed hourly with a firm 15-hour cap. Platforms like WordPress, Wix and Framer are slow and awkward to work in, and I won't run an open-ended meter on you. If a site needs more than 15 hours of work, that's the platform telling you something — a fresh build is faster for me to deliver and far easier for you to manage long-term.</p>
-            <a href="/web-services" class="mtj-link mtj-link-neutral">See audits &amp; existing-site help →</a>
+            <a href="/web-services#jump-to-existing" class="mtj-link mtj-link-neutral">See audits &amp; existing-site help →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Still on the Fence — Portfolio Bridge — matches main site footer CTA gradient -->
+  <!-- Still on the Fence — Portfolio Bridge -->
   <section class="fence-section">
     <div style="max-width:56rem;margin:0 auto;text-align:center;position:relative;z-index:1;">
       <p class="fence-eyebrow">Still on the Fence?</p>
@@ -579,7 +554,7 @@ import content from '../content/why-different.yml';
     <div style="max-width:56rem;margin:0 auto;text-align:center;">
       <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:1rem;">{content.bottomTitle}</h2>
       <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:1rem;">{content.bottomPara1}</p>
-      <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:2rem;">Every site I build loads fast on every device, ranks well on Google, and works for every visitor right out of the box. It's hosted for free on a global network, backed up automatically, and secured with a free SSL certificate. You own it outright from day one. No recurring fees for things that should have been free all along.</p>
+      <p style="color:#4b5563;line-height:1.85;font-size:1.05rem;margin-bottom:2rem;">Every site I build loads fast on every device, ranks well on Google, and works for every visitor right out of the box. Hosting is free on Cloudflare's global network, backups are automatic, and SSL is included. The only ongoing cost is your domain name — typically around $10 a year on Cloudflare. You own everything outright from day one. No recurring agency fees for things that should have been free all along.</p>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
         <a href="/web-services" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2563eb;color:white;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
           View Web Packages
@@ -596,7 +571,7 @@ import content from '../content/why-different.yml';
 </Layout>
 
 <style>
-  /* ===== ANIMATED HERO ===== */
+  /* Hero */
   #hero-svg {
     position: relative;
     width: 100%;
@@ -619,197 +594,19 @@ import content from '../content/why-different.yml';
   .hero-bg-desktop { display: block; }
   .hero-bg-mobile  { display: none; }
 
-  .race-bar-agency {
-    animation: agencyFill 4s ease-in-out infinite 0.6s;
-  }
-  @keyframes agencyFill {
-    0%   { width: 0; }
-    85%  { width: 276px; }
-    100% { width: 276px; }
-  }
-  .race-bar-agency-mob {
-    animation: agencyFillMob 4s ease-in-out infinite 0.6s;
-  }
-  @keyframes agencyFillMob {
-    0%   { width: 0; }
-    85%  { width: 336px; }
-    100% { width: 336px; }
-  }
-  .race-car-agency {
-    animation: agencyCarMove 4s ease-in-out infinite 0.6s;
-  }
-  @keyframes agencyCarMove {
-    0%   { transform: translateX(9px); }
-    85%  { transform: translateX(271px); }
-    100% { transform: translateX(271px); }
-  }
-  .hero-bg-mobile .race-car-agency {
-    animation: agencyCarMoveMob 4s ease-in-out infinite 0.6s;
-  }
-  @keyframes agencyCarMoveMob {
-    0%   { transform: translateX(8px); }
-    85%  { transform: translateX(330px); }
-    100% { transform: translateX(330px); }
-  }
-  .sweat-drop {
-    animation: sweatDrop 2s ease-in-out infinite 1s;
-  }
-  @keyframes sweatDrop {
-    0%, 70% { opacity: 0; transform: translateY(0); }
-    80%     { opacity: 0.6; transform: translateY(0); }
-    100%    { opacity: 0; transform: translateY(20px); }
-  }
-
-  .race-bar-jake {
-    animation: jakeFill 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.6s;
-  }
-  @keyframes jakeFill {
-    0%   { width: 0; }
-    20%  { width: 276px; }
-    100% { width: 276px; }
-  }
-  .race-bar-jake-mob {
-    animation: jakeFillMob 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.6s;
-  }
-  @keyframes jakeFillMob {
-    0%   { width: 0; }
-    20%  { width: 336px; }
-    100% { width: 336px; }
-  }
-  .race-car-jake {
-    animation: jakeCarMove 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.6s;
-  }
-  @keyframes jakeCarMove {
-    0%   { transform: translateX(9px); }
-    20%  { transform: translateX(271px); }
-    100% { transform: translateX(271px); }
-  }
-  .hero-bg-mobile .race-car-jake {
-    animation: jakeCarMoveMob 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.6s;
-  }
-  @keyframes jakeCarMoveMob {
-    0%   { transform: translateX(8px); }
-    20%  { transform: translateX(330px); }
-    100% { transform: translateX(330px); }
-  }
-  .speed-lines {
-    animation: speedLinesMove 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.6s;
-    opacity: 0;
-  }
-  @keyframes speedLinesMove {
-    0%   { transform: translateX(9px); opacity: 0; }
-    5%   { opacity: 0.8; }
-    20%  { transform: translateX(271px); opacity: 0; }
-    100% { transform: translateX(271px); opacity: 0; }
-  }
-  .hero-bg-mobile .speed-lines {
-    animation: speedLinesMoveMob 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.6s;
-  }
-  @keyframes speedLinesMoveMob {
-    0%   { transform: translateX(8px); opacity: 0; }
-    5%   { opacity: 0.8; }
-    20%  { transform: translateX(330px); opacity: 0; }
-    100% { transform: translateX(330px); opacity: 0; }
-  }
-
+  /* Subtle win-stamp fade-in (no infinite pop, no rotation) */
   .win-stamp {
     opacity: 0;
-    transform-origin: center;
-    animation: stampPop 4s ease-in-out infinite 0.6s;
+    animation: stampFadeIn 0.8s ease 1.5s forwards;
   }
-  @keyframes stampPop {
-    0%, 18%   { opacity: 0; transform: scale(0) rotate(-15deg); }
-    25%       { opacity: 1; transform: scale(1.2) rotate(0deg); }
-    30%       { transform: scale(1) rotate(0deg); }
-    90%       { opacity: 1; transform: scale(1) rotate(0deg); }
-    100%      { opacity: 0; transform: scale(0.8) rotate(0deg); }
+  @keyframes stampFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
 
-  .dash-ring, .dash-ring-mob { animation: ringFill 6s ease-in-out infinite both; }
-  .dash-ring-1, .dash-ring-mob.dash-ring-1 { animation-delay: 0.8s; }
-  .dash-ring-2, .dash-ring-mob.dash-ring-2 { animation-delay: 1.1s; }
-  .dash-ring-3, .dash-ring-mob.dash-ring-3 { animation-delay: 1.4s; }
-  .dash-ring-4, .dash-ring-mob.dash-ring-4 { animation-delay: 1.7s; }
-
-  .dash-ring { stroke-dashoffset: 201; }
-  .dash-ring-4 { stroke-dashoffset: 226; }
-  .dash-ring-mob { stroke-dashoffset: 113; }
-  .dash-ring-mob.dash-ring-4 { stroke-dashoffset: 126; }
-
-  @keyframes ringFill {
-    0%   { stroke-dashoffset: 201; }
-    25%  { stroke-dashoffset: 2; }
-    90%  { stroke-dashoffset: 2; }
-    100% { stroke-dashoffset: 201; }
-  }
-  .dash-ring-4 { animation: ringFill4 6s ease-in-out infinite both; animation-delay: 1.7s; }
-  @keyframes ringFill4 {
-    0%   { stroke-dashoffset: 226; }
-    25%  { stroke-dashoffset: 2; }
-    90%  { stroke-dashoffset: 2; }
-    100% { stroke-dashoffset: 226; }
-  }
-
-  .hero-bg-mobile .dash-ring-mob { animation: ringFillMob 6s ease-in-out infinite both; }
-  .hero-bg-mobile .dash-ring-mob.dash-ring-4 { animation: ringFillMob4 6s ease-in-out infinite both; }
-  @keyframes ringFillMob {
-    0%   { stroke-dashoffset: 113; }
-    25%  { stroke-dashoffset: 1; }
-    90%  { stroke-dashoffset: 1; }
-    100% { stroke-dashoffset: 113; }
-  }
-  @keyframes ringFillMob4 {
-    0%   { stroke-dashoffset: 126; }
-    25%  { stroke-dashoffset: 1; }
-    90%  { stroke-dashoffset: 1; }
-    100% { stroke-dashoffset: 126; }
-  }
-
-  .dash-num, .dash-num-mob { opacity: 0; animation: numFade 6s ease-in-out infinite both; }
-  .dash-num-1, .dash-num-mob.dash-num-1 { animation-delay: 0.8s; }
-  .dash-num-2, .dash-num-mob.dash-num-2 { animation-delay: 1.1s; }
-  .dash-num-3, .dash-num-mob.dash-num-3 { animation-delay: 1.4s; }
-  .dash-num-4, .dash-num-mob.dash-num-4 { animation-delay: 1.7s; }
-  @keyframes numFade {
-    0%, 15%  { opacity: 0; }
-    25%      { opacity: 1; }
-    90%      { opacity: 1; }
-    100%     { opacity: 0; }
-  }
-
-  .dash-label, .dash-label-mob { opacity: 0; animation: labelFade 6s ease-in-out infinite both; }
-  .dash-label-1, .dash-label-mob.dash-label-1 { animation-delay: 1.0s; }
-  .dash-label-2, .dash-label-mob.dash-label-2 { animation-delay: 1.3s; }
-  .dash-label-3, .dash-label-mob.dash-label-3 { animation-delay: 1.6s; }
-  .dash-label-4, .dash-label-mob.dash-label-4 { animation-delay: 1.9s; }
-  @keyframes labelFade {
-    0%, 18%  { opacity: 0; }
-    28%      { opacity: 1; }
-    90%      { opacity: 1; }
-    100%     { opacity: 0; }
-  }
-
-  .sparkle { opacity: 0; }
-  .sparkle.s1 { animation: sparkle 6s ease-in-out infinite 2.0s; }
-  .sparkle.s2 { animation: sparkle 6s ease-in-out infinite 2.3s; }
-  .sparkle.s3 { animation: sparkle 6s ease-in-out infinite 2.6s; }
-  .sparkle.s4 { animation: sparkle 6s ease-in-out infinite 2.4s; }
-  .sparkle.s5 { animation: sparkle 6s ease-in-out infinite 2.7s; }
-  .sparkle.s6 { animation: sparkle 6s ease-in-out infinite 2.5s; }
-  .sparkle.s7 { animation: sparkle 6s ease-in-out infinite 2.8s; }
-  .sparkle.s8 { animation: sparkle 6s ease-in-out infinite 2.2s; }
-  @keyframes sparkle {
-    0%, 8%   { opacity: 0; transform: scale(0.5); }
-    12%      { opacity: 1; transform: scale(1.4); }
-    16%      { opacity: 1; transform: scale(1); }
-    50%      { opacity: 0.5; }
-    80%      { opacity: 1; }
-    100%     { opacity: 0; }
-  }
-
-  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
-  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
-  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+  .glow-orb-1 { animation: glowPulse 8s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 9s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.7} 50%{opacity:1} }
 
   #hero-content {
     position: relative;
@@ -894,7 +691,7 @@ import content from '../content/why-different.yml';
     50%{transform:translateX(-50%) translateY(6px)}
   }
 
-  /* ===== REST OF PAGE ===== */
+  /* Page sections */
   #speed-grid { display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: 0 auto 3rem auto; }
   .speed-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; }
   .speed-label { font-weight: 700; color: #111827; margin-bottom: 0.75rem; font-size: 0.95rem; }
@@ -942,7 +739,7 @@ import content from '../content/why-different.yml';
   .platform-list { list-style: none; padding: 1.25rem 1.5rem; margin: 0; background: white; display: flex; flex-direction: column; gap: 0.625rem; }
   .platform-list li { font-size: 0.875rem; color: #374151; line-height: 1.5; }
 
-  /* ===== Speed of Delivery section ===== */
+  /* Speed of Delivery */
   .delivery-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -997,7 +794,7 @@ import content from '../content/why-different.yml';
     line-height: 1.5;
   }
 
-  /* ===== More Than Just the Build section ===== */
+  /* More Than Just the Build */
   .mtj-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1050,7 +847,7 @@ import content from '../content/why-different.yml';
   .mtj-link-good { color: #15803d; }
   .mtj-link-neutral { color: #2563eb; }
 
-  /* ===== Still on the Fence — matches main site footer CTA gradient ===== */
+  /* Still on the Fence */
   .fence-section {
     background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
     padding: 4rem 1.5rem;
@@ -1125,23 +922,8 @@ import content from '../content/why-different.yml';
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .race-bar-agency, .race-bar-agency-mob, .race-car-agency, .sweat-drop,
-    .race-bar-jake, .race-bar-jake-mob, .race-car-jake, .speed-lines,
-    .win-stamp,
-    .dash-ring, .dash-ring-mob, .dash-num, .dash-num-mob, .dash-label, .dash-label-mob,
-    .sparkle,
-    .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
-    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta, #scroll-hint { opacity: 1; transform: none; }
-    .race-bar-jake { width: 276px; }
-    .race-bar-jake-mob { width: 336px; }
-    .race-bar-agency { width: 240px; }
-    .race-bar-agency-mob { width: 290px; }
-    .dash-ring { stroke-dashoffset: 2; }
-    .dash-ring-4 { stroke-dashoffset: 2; }
-    .dash-ring-mob { stroke-dashoffset: 1; }
-    .dash-num, .dash-num-mob, .dash-label, .dash-label-mob { opacity: 1; }
-    .win-stamp { opacity: 1; transform: scale(1); }
-    .sparkle { opacity: 0.6; }
+    .win-stamp, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta, #scroll-hint, .win-stamp { opacity: 1; transform: none; }
     .fence-cta { transition: none; }
     .fence-cta:hover { transform: none; }
   }
