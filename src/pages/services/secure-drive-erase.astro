@@ -1,0 +1,1004 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Secure Drive Erase Service | Jake Fixes Tech — Littleton, NH"
+description="Professional secure drive erasure with Certificate of Sanitization. Two tiers: Consumer ($50/drive) NIST 800-88 compliant, or Professional ($100/drive) US DOE 7-pass. HDDs, SSDs, NVMe, thumb drives all welcome.">
+
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="Secure Drive Erase Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="sealGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#fef9c3;stop-opacity:0.6"/>
+          <stop offset="100%" style="stop-color:#ca8a04;stop-opacity:0.3"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#bgGrad)"/>
+      <ellipse cx="280" cy="240" rx="360" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1200" cy="300" rx="340" ry="240" fill="url(#glowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Hard drive with spinning platter -->
+      <g class="drive-group" transform="translate(180, 200)">
+        <rect x="0" y="0" width="180" height="130" rx="4" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.1"/>
+        <rect x="6" y="6" width="168" height="118" rx="2" stroke="white" stroke-opacity="0.2" stroke-width="1" fill="white" fill-opacity="0.04"/>
+
+        <g class="platter" transform="translate(90, 65)">
+          <circle cx="0" cy="0" r="48" stroke="white" stroke-opacity="0.4" stroke-width="1.5" fill="#1e3a8a" fill-opacity="0.4"/>
+          <circle cx="0" cy="0" r="44" stroke="white" stroke-opacity="0.25" stroke-width="0.8" fill="none"/>
+          <circle cx="0" cy="0" r="38" stroke="white" stroke-opacity="0.2" stroke-width="0.6" fill="none"/>
+          <circle cx="0" cy="0" r="32" stroke="white" stroke-opacity="0.18" stroke-width="0.6" fill="none"/>
+          <circle cx="0" cy="0" r="26" stroke="white" stroke-opacity="0.16" stroke-width="0.6" fill="none"/>
+          <g class="platter-spin">
+            <line x1="0" y1="-46" x2="0" y2="-38" stroke="white" stroke-opacity="0.6" stroke-width="1.5"/>
+            <line x1="32" y1="-32" x2="26" y2="-26" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+            <line x1="46" y1="0" x2="38" y2="0" stroke="white" stroke-opacity="0.5" stroke-width="1.2"/>
+            <line x1="-32" y1="32" x2="-26" y2="26" stroke="white" stroke-opacity="0.35" stroke-width="1"/>
+          </g>
+          <circle cx="0" cy="0" r="6" stroke="white" stroke-opacity="0.7" stroke-width="1.5" fill="#1e3a8a"/>
+          <circle cx="0" cy="0" r="2.5" fill="white" fill-opacity="0.85"/>
+        </g>
+
+        <g class="drive-arm">
+          <line x1="160" y1="20" x2="100" y2="55" stroke="white" stroke-opacity="0.6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="160" cy="20" r="4" stroke="white" stroke-opacity="0.7" stroke-width="1.5" fill="#1e3a8a"/>
+          <path d="M95 53 L105 57 L102 52 Z" fill="white" fill-opacity="0.7"/>
+        </g>
+
+        <text x="90" y="118" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="9" font-family="monospace" font-weight="700" letter-spacing="2">SATA · 1.0 TB</text>
+
+        <g transform="translate(0, 145)">
+          <text x="0" y="0" fill="white" fill-opacity="0.6" font-size="9" font-family="monospace" font-weight="700" letter-spacing="1">ERASING...</text>
+          <rect x="0" y="6" width="180" height="10" rx="2" stroke="white" stroke-opacity="0.4" stroke-width="1.2" fill="white" fill-opacity="0.05"/>
+          <rect x="2" y="8" width="0" height="6" rx="1" fill="white" fill-opacity="0.6" class="progress-fill"/>
+          <text x="180" y="0" text-anchor="end" fill="white" fill-opacity="0.5" font-size="8" font-family="monospace" class="progress-percent">0%</text>
+        </g>
+      </g>
+
+      <!-- RIGHT: Certificate / seal stack -->
+      <g class="cert-group" transform="translate(1020, 110)">
+        <text x="170" y="0" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="10" font-weight="700" font-family="monospace" letter-spacing="2">CERTIFICATE INCLUDED</text>
+
+        <g class="cert-doc" transform="translate(40, 15)">
+          <rect x="0" y="0" width="260" height="300" rx="4" stroke="white" stroke-opacity="0.55" stroke-width="2" fill="white" fill-opacity="0.12"/>
+          <rect x="0" y="0" width="260" height="38" rx="4" fill="white" fill-opacity="0.18"/>
+          <rect x="0" y="34" width="260" height="4" fill="white" fill-opacity="0.05"/>
+          <text x="14" y="18" fill="white" fill-opacity="0.9" font-size="11" font-weight="900" font-family="monospace">JAKE FIXES TECH</text>
+          <text x="14" y="30" fill="white" fill-opacity="0.6" font-size="6.5" font-family="monospace" letter-spacing="1.5">CERTIFICATE OF SECURE ERASURE</text>
+
+          <line x1="14" y1="56" x2="60" y2="56" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+          <line x1="14" y1="64" x2="180" y2="64" stroke="white" stroke-opacity="0.6" stroke-width="2"/>
+          <line x1="14" y1="82" x2="55" y2="82" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+          <line x1="14" y1="90" x2="200" y2="90" stroke="white" stroke-opacity="0.55" stroke-width="1.5"/>
+          <line x1="14" y1="98" x2="160" y2="98" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+          <line x1="14" y1="106" x2="190" y2="106" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+
+          <g class="mini-seal" transform="translate(200, 195)">
+            <circle cx="0" cy="0" r="34" stroke="#ca8a04" stroke-opacity="0.7" stroke-width="2" fill="url(#sealGoldGrad)"/>
+            <circle cx="0" cy="0" r="22" fill="#1e3a8a" fill-opacity="0.85" stroke="#1e3a8a" stroke-width="1"/>
+            <text x="0" y="-5" text-anchor="middle" fill="white" fill-opacity="0.95" font-size="5" font-weight="900" font-family="monospace">CERTIFIED</text>
+            <text x="0" y="3" text-anchor="middle" fill="white" fill-opacity="0.95" font-size="7" font-weight="900" font-family="monospace">SECURE</text>
+            <text x="0" y="11" text-anchor="middle" fill="white" fill-opacity="0.95" font-size="7" font-weight="900" font-family="monospace">ERASE</text>
+          </g>
+
+          <line x1="14" y1="248" x2="120" y2="248" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+          <text x="14" y="262" fill="white" fill-opacity="0.6" font-size="6" font-family="monospace" letter-spacing="1">JAKE CHARLAND · TECHNICIAN</text>
+          <text x="14" y="278" fill="white" fill-opacity="0.5" font-size="5.5" font-family="monospace" letter-spacing="1">NIST SP 800-88 REV. 1 COMPLIANT</text>
+        </g>
+      </g>
+
+      <!-- Ambient zero glyphs -->
+      <g class="binary-field" font-family="monospace" font-weight="700" fill="white">
+        <text x="540" y="120" font-size="14" fill-opacity="0.12" class="bin bin-a">0</text>
+        <text x="620" y="160" font-size="12" fill-opacity="0.1" class="bin bin-b">0</text>
+        <text x="680" y="100" font-size="13" fill-opacity="0.1" class="bin bin-c">0</text>
+        <text x="740" y="180" font-size="15" fill-opacity="0.12" class="bin bin-d">0</text>
+        <text x="820" y="130" font-size="11" fill-opacity="0.1" class="bin bin-a">0</text>
+        <text x="880" y="170" font-size="13" fill-opacity="0.1" class="bin bin-b">0</text>
+        <text x="940" y="110" font-size="14" fill-opacity="0.12" class="bin bin-c">0</text>
+        <text x="560" y="380" font-size="13" fill-opacity="0.1" class="bin bin-d">0</text>
+        <text x="700" y="420" font-size="11" fill-opacity="0.1" class="bin bin-a">0</text>
+        <text x="780" y="380" font-size="14" fill-opacity="0.11" class="bin bin-b">0</text>
+        <text x="870" y="410" font-size="12" fill-opacity="0.1" class="bin bin-c">0</text>
+      </g>
+
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="glowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="sealGoldGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#fef9c3;stop-opacity:0.6"/>
+          <stop offset="100%" style="stop-color:#ca8a04;stop-opacity:0.3"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#bgGradM)"/>
+      <ellipse cx="100" cy="180" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-1"/>
+      <ellipse cx="320" cy="500" rx="220" ry="180" fill="url(#glowGradM)" class="glow-orb-2"/>
+
+      <!-- TOP: Drive -->
+      <g class="drive-group" transform="translate(130, 100)">
+        <rect x="0" y="0" width="140" height="100" rx="3" stroke="white" stroke-opacity="0.5" stroke-width="1.5" fill="white" fill-opacity="0.1"/>
+        <rect x="5" y="5" width="130" height="90" rx="2" stroke="white" stroke-opacity="0.2" stroke-width="0.8" fill="white" fill-opacity="0.04"/>
+
+        <g class="platter" transform="translate(70, 50)">
+          <circle cx="0" cy="0" r="37" stroke="white" stroke-opacity="0.4" stroke-width="1.2" fill="#1e3a8a" fill-opacity="0.4"/>
+          <circle cx="0" cy="0" r="33" stroke="white" stroke-opacity="0.25" stroke-width="0.6" fill="none"/>
+          <circle cx="0" cy="0" r="27" stroke="white" stroke-opacity="0.2" stroke-width="0.5" fill="none"/>
+          <circle cx="0" cy="0" r="20" stroke="white" stroke-opacity="0.18" stroke-width="0.5" fill="none"/>
+          <g class="platter-spin">
+            <line x1="0" y1="-35" x2="0" y2="-28" stroke="white" stroke-opacity="0.6" stroke-width="1.2"/>
+            <line x1="25" y1="-25" x2="20" y2="-20" stroke="white" stroke-opacity="0.4" stroke-width="0.9"/>
+            <line x1="35" y1="0" x2="29" y2="0" stroke="white" stroke-opacity="0.5" stroke-width="1"/>
+            <line x1="-25" y1="25" x2="-20" y2="20" stroke="white" stroke-opacity="0.35" stroke-width="0.9"/>
+          </g>
+          <circle cx="0" cy="0" r="5" stroke="white" stroke-opacity="0.7" stroke-width="1.2" fill="#1e3a8a"/>
+          <circle cx="0" cy="0" r="2" fill="white" fill-opacity="0.85"/>
+        </g>
+
+        <g class="drive-arm">
+          <line x1="125" y1="15" x2="80" y2="42" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="125" cy="15" r="3" stroke="white" stroke-opacity="0.7" stroke-width="1.2" fill="#1e3a8a"/>
+          <path d="M76 40 L84 44 L82 39 Z" fill="white" fill-opacity="0.7"/>
+        </g>
+
+        <text x="70" y="90" text-anchor="middle" fill="white" fill-opacity="0.55" font-size="7" font-family="monospace" font-weight="700" letter-spacing="1.5">SATA · 1.0 TB</text>
+
+        <g transform="translate(0, 110)">
+          <text x="0" y="0" fill="white" fill-opacity="0.6" font-size="7" font-family="monospace" font-weight="700" letter-spacing="1">ERASING...</text>
+          <rect x="0" y="5" width="140" height="8" rx="1.5" stroke="white" stroke-opacity="0.4" stroke-width="1" fill="white" fill-opacity="0.05"/>
+          <rect x="2" y="7" width="0" height="4" rx="0.8" fill="white" fill-opacity="0.6" class="progress-fill-m"/>
+          <text x="140" y="0" text-anchor="end" fill="white" fill-opacity="0.5" font-size="6.5" font-family="monospace" class="progress-percent-m">0%</text>
+        </g>
+      </g>
+
+      <!-- BOTTOM: Certificate -->
+      <g class="cert-group" transform="translate(80, 350)">
+        <text x="120" y="0" text-anchor="middle" fill="white" fill-opacity="0.5" font-size="8" font-weight="700" font-family="monospace" letter-spacing="2">CERTIFICATE INCLUDED</text>
+
+        <g class="cert-doc" transform="translate(15, 12)">
+          <rect x="0" y="0" width="210" height="180" rx="3" stroke="white" stroke-opacity="0.55" stroke-width="1.5" fill="white" fill-opacity="0.12"/>
+          <rect x="0" y="0" width="210" height="28" rx="3" fill="white" fill-opacity="0.18"/>
+          <rect x="0" y="25" width="210" height="3" fill="white" fill-opacity="0.05"/>
+          <text x="10" y="13" fill="white" fill-opacity="0.9" font-size="8.5" font-weight="900" font-family="monospace">JAKE FIXES TECH</text>
+          <text x="10" y="22" fill="white" fill-opacity="0.6" font-size="5" font-family="monospace" letter-spacing="1">CERTIFICATE OF SECURE ERASURE</text>
+
+          <line x1="10" y1="42" x2="45" y2="42" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+          <line x1="10" y1="48" x2="140" y2="48" stroke="white" stroke-opacity="0.6" stroke-width="1.5"/>
+          <line x1="10" y1="62" x2="40" y2="62" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+          <line x1="10" y1="68" x2="155" y2="68" stroke="white" stroke-opacity="0.55" stroke-width="1.2"/>
+          <line x1="10" y1="76" x2="125" y2="76" stroke="white" stroke-opacity="0.5" stroke-width="1.2"/>
+
+          <g class="mini-seal" transform="translate(160, 122)">
+            <circle cx="0" cy="0" r="26" stroke="#ca8a04" stroke-opacity="0.7" stroke-width="1.5" fill="url(#sealGoldGradM)"/>
+            <circle cx="0" cy="0" r="17" fill="#1e3a8a" fill-opacity="0.85" stroke="#1e3a8a" stroke-width="0.8"/>
+            <text x="0" y="-3" text-anchor="middle" fill="white" fill-opacity="0.95" font-size="4" font-weight="900" font-family="monospace">CERTIFIED</text>
+            <text x="0" y="3" text-anchor="middle" fill="white" fill-opacity="0.95" font-size="5.5" font-weight="900" font-family="monospace">SECURE</text>
+            <text x="0" y="9" text-anchor="middle" fill="white" fill-opacity="0.95" font-size="5.5" font-weight="900" font-family="monospace">ERASE</text>
+          </g>
+
+          <line x1="10" y1="150" x2="90" y2="150" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+          <text x="10" y="160" fill="white" fill-opacity="0.6" font-size="4.5" font-family="monospace" letter-spacing="1">JAKE CHARLAND · TECHNICIAN</text>
+          <text x="10" y="170" fill="white" fill-opacity="0.5" font-size="4.5" font-family="monospace" letter-spacing="1">NIST SP 800-88 REV. 1 COMPLIANT</text>
+        </g>
+      </g>
+
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text overlay -->
+    <div id="hero-content">
+      <p class="hero-label">Secure Drive Erase Service</p>
+      <h1 id="hero-wordmark">Wiped Clean. Certified.<br/>Done Right.</h1>
+      <p id="hero-tagline">Selling, donating, or retiring an old drive? I securely erase any storage device including HDDs, SSDs, NVMe, and thumb drives using federal NIST 800-88 standards. Every drive comes back with a signed Certificate of Sanitization.</p>
+      <a href="#tiers" id="hero-cta">
+        See Pricing &amp; Tiers
+        <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Why Bother -->
+  <section style="background:white;padding:5rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Why This Matters</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">"I Already Deleted Everything." Not Really.</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">When you delete a file or even format a drive, the data is still there. It's just marked as "space available." Anyone with $30 in recovery software and a free afternoon can pull tax returns, photos, saved passwords, banking details, and medical records right back off. A secure erase actually overwrites the bytes so nothing is left.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Selling or Donating</h3>
+          <p>The next owner, known or unknown, will not be able to recover anything that was on the drive. You hand it off with confidence.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Compliance &amp; Sensitive Data</h3>
+          <p>For HIPAA, attorney-client, financial, or any sensitive records, the certificate documents that you followed federal sanitization guidelines.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Recycling Old Drives</h3>
+          <p>Even drives heading for the dumpster pass through hands and trucks. Wiping them first removes any risk that someone fishes data out later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two Tiers -->
+  <section id="tiers" style="background:#f8fafc;padding:5rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Two Tiers</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Pick the Right Level for Your Drive.</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">Both tiers meet or exceed federal NIST 800-88 standards for media sanitization. The difference is how many times the drive gets overwritten. Consumer is plenty for resale and donation. Professional is for when you need the deepest possible level of erasure.</p>
+      </div>
+
+      <div class="tier-grid">
+        <div class="tier-card tier-consumer">
+          <div class="tier-badge">Most Popular</div>
+          <div class="tier-label">Consumer Tier</div>
+          <div class="tier-price">$50<span class="tier-unit">/drive</span></div>
+          <p class="tier-tagline">Standard secure erase for resale, donation, and recycling.</p>
+
+          <ul class="tier-features">
+            <li><strong>Single-pass zero overwrite</strong> across the entire drive</li>
+            <li>Meets <strong>NIST 800-88 Clear</strong> federal standard</li>
+            <li>Signed Certificate of Sanitization (PDF) included</li>
+            <li>All drive types: HDD, SSD, NVMe, and thumb drives</li>
+            <li>Drive removal from non-Apple computers included</li>
+            <li>Typical turnaround: <strong>1-2 days per drive</strong></li>
+          </ul>
+
+          <p class="tier-note">Sufficient for any personal or business data being released for reuse. This is what NIST recommends as the standard for modern drives, and what most people will want.</p>
+        </div>
+
+        <div class="tier-card tier-professional">
+          <div class="tier-label">Professional Tier</div>
+          <div class="tier-price">$100<span class="tier-unit">/drive up to 2TB</span></div>
+          <p class="tier-tagline">Deep erasure for hospitals, attorneys, police, and highly sensitive data.</p>
+
+          <ul class="tier-features">
+            <li><strong>7-pass US DOE overwrite</strong> with alternating data patterns</li>
+            <li>Exceeds NIST 800-88 by a wide margin (legacy DOD/DOE standard)</li>
+            <li>Signed Certificate of Sanitization (PDF) included</li>
+            <li>All drive types: HDD, SSD, NVMe, and thumb drives</li>
+            <li>Drive removal from non-Apple computers included</li>
+            <li>Typical turnaround: <strong>2-5 days per drive</strong></li>
+            <li>Drives over 2TB: <strong>custom quote</strong></li>
+          </ul>
+
+          <p class="tier-note">For HIPAA, attorney-client files, government work, or anyone who simply wants the strongest reassurance available. Takes substantially longer, but produces an audit-ready paper trail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate spotlight -->
+  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div class="cert-spotlight-inner">
+        <div>
+          <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin-bottom:0.5rem;">EVERY ERASE COMES WITH ONE</p>
+          <h2 style="font-size:1.75rem;font-weight:800;color:white;margin-bottom:0.75rem;line-height:1.2;">A Real Certificate of Sanitization.</h2>
+          <p style="color:#bfdbfe;line-height:1.75;font-size:1rem;margin-bottom:1.25rem;">When the erase is done, you get a signed, professional one-page PDF documenting exactly what was wiped, what method was used, and when. Save it for your records, hand it to a compliance officer, or just keep it for peace of mind.</p>
+          <ul class="cert-bullets">
+            <li>Drive make, model, serial number, and capacity</li>
+            <li>Sanitization method and federal standard met</li>
+            <li>Date performed and signed by me as technician</li>
+            <li>Custom "Jake Fixes Tech Certified Secure Erase" seal</li>
+            <li>Unique certificate number for your records</li>
+          </ul>
+        </div>
+        <div class="cert-visual" aria-hidden="true">
+          <div class="cert-paper">
+            <div class="cert-header">JAKE FIXES TECH</div>
+            <div class="cert-subheader-bar"></div>
+            <div class="cert-line cert-line-1"></div>
+            <div class="cert-line cert-line-2"></div>
+            <div class="cert-line cert-line-3"></div>
+            <div class="cert-line cert-line-4"></div>
+            <div class="cert-seal">
+              <div class="cert-seal-inner">
+                <div class="cert-seal-bar cert-seal-bar-1"></div>
+                <div class="cert-seal-bar cert-seal-bar-2"></div>
+                <div class="cert-seal-bar cert-seal-bar-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section style="background:white;padding:5rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">How It Works</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Four Simple Steps.</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Drop Off the Drive</h3>
+          <p>Bring me the drive itself, or the computer it's in (non-Apple). If it's still in a machine, I'll pull it out at no extra charge. Apple hardware is excluded. I don't do hardware on Apple products.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Pay Up Front</h3>
+          <p>The flat fee for your chosen tier is paid in full at drop-off. Once I've started the erase, the work cannot be undone, so the fee is non-refundable from that point forward.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>I Wipe It Securely</h3>
+          <p>Using macOS Terminal with the federal NIST 800-88 method (or DOE 7-pass for Professional). I check on it periodically. The rest is just letting the drive work through the overwrite.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Pick Up + Certificate</h3>
+          <p>I hand back the wiped drive (or computer) along with your signed Certificate of Sanitization PDF. You're done. The drive is ready to sell, donate, recycle, or trash.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Realistic Timeline -->
+  <section style="background:#f8fafc;padding:5rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Realistic Timeline</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">How Long Does This Take?</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;max-width:40rem;margin-left:auto;margin-right:auto;line-height:1.75;">Secure erasure isn't quick. The drive has to write over every single byte. Larger drives and older drives both take longer. Here's roughly what to expect.</p>
+      </div>
+
+      <div class="timeline-table">
+        <div class="timeline-header">
+          <div>Drive Size</div>
+          <div>Consumer Tier</div>
+          <div>Professional Tier</div>
+        </div>
+        <div class="timeline-row">
+          <div class="t-size">Up to 500 GB</div>
+          <div>1-2 days</div>
+          <div>2-3 days</div>
+        </div>
+        <div class="timeline-row">
+          <div class="t-size">1 TB</div>
+          <div>1-2 days</div>
+          <div>3-4 days</div>
+        </div>
+        <div class="timeline-row">
+          <div class="t-size">2 TB</div>
+          <div>2 days</div>
+          <div>4-5 days</div>
+        </div>
+        <div class="timeline-row">
+          <div class="t-size">Larger than 2 TB</div>
+          <div>Custom quote</div>
+          <div>Custom quote</div>
+        </div>
+      </div>
+
+      <p style="text-align:center;color:#6b7280;font-size:0.85rem;margin-top:1.5rem;font-style:italic;line-height:1.7;">Older drives can run slower than newer ones. SSDs are typically faster than spinning HDDs. I'll give you a clear turnaround estimate when you drop off based on the specific drive.</p>
+    </div>
+  </section>
+
+  <!-- Fine Print -->
+  <section style="background:white;padding:5rem 1.5rem;">
+    <div style="max-width:52rem;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:2.5rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Good to Know</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">The Honest Details.</h2>
+      </div>
+
+      <div class="fineprint">
+        <div class="fp-item">
+          <h3>The drive will have no operating system after erasure</h3>
+          <p>A secure erase wipes everything, including the operating system. If the drive came out of a computer and you plan to put it back in and use that computer, you'll need an OS install afterward to make it bootable again. I offer that separately as an <a href="/services/os-install" style="color:#2563eb;font-weight:700;text-decoration:none;">OS install service</a>. Otherwise I can hand back the wiped drive on its own, or reassemble the computer with the wiped drive inside (it just won't boot until an OS is installed).</p>
+        </div>
+        <div class="fp-item">
+          <h3>Payment is upfront and non-refundable once started</h3>
+          <p>The fee is paid in full at drop-off. Once I've kicked off the secure erase, the drive cannot be brought back to its previous state, so refunds aren't possible from that point forward.</p>
+        </div>
+        <div class="fp-item">
+          <h3>Per-drive pricing</h3>
+          <p>The $50 / $100 fee is per drive, not per computer. A laptop with one drive is one fee. A desktop with two drives is two fees.</p>
+        </div>
+        <div class="fp-item">
+          <h3>Apple hardware exception</h3>
+          <p>I don't perform hardware work on Apple devices, so if your drive is in a Mac, you'll need to remove it yourself first. For Windows, Linux, and most other machines, I'll pull the drive at no extra charge.</p>
+        </div>
+        <div class="fp-item">
+          <h3>SSDs and NVMe drives</h3>
+          <p>Solid-state drives use a slightly different secure-erase approach than traditional spinning drives, but the certificate documents the method actually used. The outcome is the same: data unrecoverable.</p>
+        </div>
+        <div class="fp-item">
+          <h3>Drives over 2 TB at Professional tier</h3>
+          <p>The 7-pass professional method scales linearly with drive size. A 4TB drive takes roughly 4x as long as a 1TB. Above 2TB, I quote it custom based on the actual drive so you and I both know what we're agreeing to.</p>
+        </div>
+        <div class="fp-item">
+          <h3>This is software erasure, not physical destruction</h3>
+          <p>The drive remains physically intact and usable afterward. It's just blank. If you specifically need a drive physically destroyed (drilled, shredded, degaussed), I'd point you to a certified destruction service instead.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:5rem 1.5rem;text-align:center;">
+    <div style="max-width:40rem;margin:0 auto;">
+      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Ready to Wipe a Drive?</h2>
+      <p style="color:#bfdbfe;font-size:1.05rem;line-height:1.75;margin-bottom:2rem;">Reach out with what you've got (make, model, and capacity if you know it) and I'll confirm pricing, timeline, and a drop-off window.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send a Message
+        </a>
+        <a href="tel:+18022341552" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.54-.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 17z"/></svg>
+          (802) 234-1552
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  .drive-group { opacity: 0; animation: fadeIn 0.6s ease 0.5s forwards; }
+  .platter-spin {
+    transform-origin: center;
+    animation: platterSpin 4s linear infinite 1.2s;
+  }
+  @keyframes platterSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .drive-arm { animation: armSweep 6s ease-in-out infinite 1.5s; transform-origin: 160px 20px; }
+  .hero-bg-mobile .drive-arm { animation: armSweepM 6s ease-in-out infinite 1.5s; transform-origin: 125px 15px; }
+  @keyframes armSweep {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(-8deg); }
+  }
+  @keyframes armSweepM {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(-8deg); }
+  }
+
+  .progress-fill { animation: progressFill 5s ease-in-out infinite 2s; }
+  .progress-fill-m { animation: progressFillM 5s ease-in-out infinite 2s; }
+  @keyframes progressFill {
+    0%   { width: 0; }
+    100% { width: 176px; }
+  }
+  @keyframes progressFillM {
+    0%   { width: 0; }
+    100% { width: 136px; }
+  }
+  .progress-percent, .progress-percent-m {
+    animation: percentCount 5s ease-in-out infinite 2s;
+  }
+  @keyframes percentCount {
+    0%   { opacity: 0.3; }
+    100% { opacity: 0.8; }
+  }
+
+  .cert-group { opacity: 0; animation: fadeIn 0.6s ease 0.8s forwards; }
+  .cert-doc { animation: certFloat 5s ease-in-out infinite 2s; transform-origin: center; }
+  @keyframes certFloat {
+    0%, 100% { transform: translate(40px, 15px); }
+    50%      { transform: translate(40px, 12px); }
+  }
+  .hero-bg-mobile .cert-doc {
+    animation: certFloatM 5s ease-in-out infinite 2s;
+  }
+  @keyframes certFloatM {
+    0%, 100% { transform: translate(15px, 12px); }
+    50%      { transform: translate(15px, 9px); }
+  }
+
+  .mini-seal { animation: sealPulse 4s ease-in-out infinite 3s; transform-origin: center; }
+  @keyframes sealPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.85; }
+  }
+
+  .bin { animation: binFloat 4s ease-in-out infinite; }
+  .bin-a { animation-delay: 0s; }
+  .bin-b { animation-delay: 1s; }
+  .bin-c { animation-delay: 2s; }
+  .bin-d { animation-delay: 3s; }
+  @keyframes binFloat {
+    0%, 100% { opacity: 0.1; }
+    50%      { opacity: 0.4; }
+  }
+
+  .glow-orb-1 { animation: glowPulse 8s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 9s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.7} 50%{opacity:1} }
+
+  @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #93c5fd;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.2s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    line-height: 1.15;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.6), 0 0 20px rgba(30,58,138,0.5);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.5s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    color: #bfdbfe;
+    margin: 0;
+    max-width: 38rem;
+    line-height: 1.75;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.8s forwards;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.5);
+  }
+  #hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1e40af;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 1.1s forwards;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .why-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+  .why-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background: #dbeafe;
+    color: #2563eb;
+    margin-bottom: 0.875rem;
+  }
+  .why-icon svg { height: 1.5rem; width: 1.5rem; }
+  .why-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  .why-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .tier-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    position: relative;
+  }
+  .tier-card.tier-consumer {
+    border-color: #2563eb;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+  }
+  .tier-card.tier-professional {
+    border-color: #ca8a04;
+    box-shadow: 0 4px 20px rgba(202, 138, 4, 0.08);
+  }
+  .tier-badge {
+    position: absolute;
+    top: -0.7rem;
+    left: 1.5rem;
+    background: #2563eb;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+  .tier-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  .tier-price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #111827;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+  .tier-card.tier-consumer .tier-price { color: #2563eb; }
+  .tier-card.tier-professional .tier-price { color: #854d0e; }
+  .tier-unit {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-left: 0.25rem;
+  }
+  .tier-tagline {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.55;
+    margin: 0 0 1.25rem 0;
+    font-weight: 600;
+  }
+  .tier-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .tier-features li {
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .tier-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #15803d;
+    font-weight: 900;
+  }
+  .tier-features li strong { color: #111827; font-weight: 700; }
+  .tier-note {
+    font-size: 0.825rem;
+    color: #6b7280;
+    line-height: 1.65;
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px solid #f3f4f6;
+    font-style: italic;
+  }
+
+  .cert-spotlight-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+  }
+  .cert-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cert-bullets li {
+    font-size: 0.9rem;
+    color: #dbeafe;
+    line-height: 1.65;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .cert-bullets li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #93c5fd;
+    font-weight: 700;
+  }
+
+  .cert-visual { perspective: 800px; }
+  .cert-paper {
+    width: 220px;
+    background: white;
+    border-radius: 4px;
+    padding: 1rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 8px 16px rgba(0,0,0,0.2);
+    transform: rotate(-3deg);
+    position: relative;
+  }
+  .cert-header {
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: #1e3a8a;
+    letter-spacing: 0.5px;
+  }
+  .cert-subheader-bar {
+    height: 3px;
+    width: 70%;
+    background: #cbd5e1;
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+  }
+  .cert-line {
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    margin-bottom: 5px;
+  }
+  .cert-line-1 { width: 80%; background: #93c5fd; }
+  .cert-line-2 { width: 65%; }
+  .cert-line-3 { width: 90%; }
+  .cert-line-4 { width: 55%; }
+  .cert-seal {
+    margin-top: 0.5rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fef9c3, #ca8a04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border: 2px solid #ca8a04;
+  }
+  .cert-seal-inner {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #1e3a8a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    text-align: center;
+    line-height: 1;
+  }
+  .cert-seal-bar {
+    background: white;
+    border-radius: 2px;
+    opacity: 0.95;
+  }
+  .cert-seal-bar-1 { height: 3px; width: 28px; margin-bottom: 3px; }
+  .cert-seal-bar-2 { height: 4px; width: 32px; margin-bottom: 3px; }
+  .cert-seal-bar-3 { height: 3px; width: 20px; }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .step-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 0.875rem;
+  }
+  .step-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  .step-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .timeline-table {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .timeline-header, .timeline-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0.875rem 1.25rem;
+    align-items: center;
+  }
+  .timeline-header {
+    background: #1e40af;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .timeline-row {
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.9rem;
+    color: #374151;
+  }
+  .timeline-row:last-child { border-bottom: none; }
+  .timeline-row .t-size { font-weight: 700; color: #111827; }
+
+  .fineprint {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .fp-item {
+    background: #f8fafc;
+    border-left: 3px solid #2563eb;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1rem 1.25rem;
+  }
+  .fp-item h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.375rem;
+  }
+  .fp-item p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    #hero-svg { height: 70vh; min-height: 440px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+    .cert-spotlight-inner { grid-template-columns: 1fr; }
+    .cert-visual { display: flex; justify-content: center; margin-top: 1rem; }
+  }
+  @media (max-width: 640px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .tier-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .timeline-header, .timeline-row {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+      padding: 0.875rem 1rem;
+    }
+    .timeline-header div:not(:first-child),
+    .timeline-row div:not(:first-child) {
+      font-size: 0.825rem;
+    }
+    .timeline-row .t-size {
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid #f3f4f6;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .drive-group, .platter-spin, .drive-arm, .progress-fill, .progress-fill-m,
+    .progress-percent, .progress-percent-m, .cert-group, .cert-doc, .mini-seal,
+    .bin, .glow-orb-1, .glow-orb-2 { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta,
+    .drive-group, .cert-group, .cert-doc { opacity: 1; transform: none; }
+    .progress-fill { width: 100px; }
+    .progress-fill-m { width: 80px; }
+    .bin { opacity: 0.3; }
+  }
+</style>
