@@ -25,7 +25,7 @@ description="Professional website design, hosting and management for small busin
       <ellipse cx="350" cy="180" rx="380" ry="260" fill="url(#glowGrad)" class="glow-orb-1"/>
       <ellipse cx="1150" cy="360" rx="320" ry="220" fill="url(#glowGrad)" class="glow-orb-2"/>
 
-      <!-- Browser window — pulled DOWN from y:60 to y:90; extends to y:370 (well within safe zone 75-445) -->
+      <!-- Browser window -->
       <g class="browser-group" transform="translate(60, 90)">
         <rect x="0" y="0" width="420" height="280" rx="8" stroke="white" stroke-opacity="0.2" stroke-width="1.5" fill="white" fill-opacity="0.04" class="browser-frame"/>
         <rect x="0" y="0" width="420" height="32" rx="8" fill="white" fill-opacity="0.08"/>
@@ -44,7 +44,7 @@ description="Professional website design, hosting and management for small busin
         <line x1="16" y1="148" x2="220" y2="148" stroke="white" stroke-opacity="0" stroke-width="2" stroke-linecap="round" class="code-line code-line-7"/>
         <line x1="16" y1="164" x2="190" y2="164" stroke="white" stroke-opacity="0" stroke-width="2" stroke-linecap="round" class="code-line code-line-8"/>
         <rect x="190" y="157" width="2" height="12" fill="white" fill-opacity="0.6" class="cursor-blink"/>
-        <!-- Score bars at bottom — all three now fill to 100% (380px) -->
+        <!-- Score bars at bottom — all three fill to 100% (380px) -->
         <text x="16" y="206" fill="white" fill-opacity="0.25" font-size="7" font-family="monospace">PERFORMANCE</text>
         <rect x="16" y="210" width="380" height="6" rx="3" fill="white" fill-opacity="0.08"/>
         <rect x="16" y="210" width="0" height="6" rx="3" fill="white" fill-opacity="0.4" class="score-bar score-bar-1"/>
@@ -56,14 +56,14 @@ description="Professional website design, hosting and management for small busin
         <rect x="16" y="254" width="0" height="6" rx="3" fill="white" fill-opacity="0.3" class="score-bar score-bar-3"/>
       </g>
 
-      <!-- Lightning bolt cluster — pulled DOWN from y:40 to y:80, group spans y:80 to y:240 -->
+      <!-- Lightning bolt cluster -->
       <g class="lightning-group" transform="translate(1180, 80)">
         <path d="M30 0 L10 50 L28 50 L0 100 L20 100 L-10 160" stroke="white" stroke-opacity="0.25" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" class="bolt bolt-main"/>
         <path d="M80 20 L65 60 L78 60 L55 110" stroke="white" stroke-opacity="0.15" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="bolt bolt-2"/>
         <path d="M140 10 L128 45 L138 45 L120 85" stroke="white" stroke-opacity="0.1" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="bolt bolt-3"/>
       </g>
 
-      <!-- Score meter — y:300, r:80 means extends y:220 to y:380, safely within 75-445 -->
+      <!-- Score meter -->
       <g class="score-meter" transform="translate(1200, 300)">
         <circle cx="0" cy="0" r="80" stroke="white" stroke-opacity="0.08" stroke-width="8" fill="none"/>
         <circle cx="0" cy="0" r="80" stroke="white" stroke-opacity="0.25" stroke-width="8" fill="none"
@@ -114,7 +114,7 @@ description="Professional website design, hosting and management for small busin
       <ellipse cx="200" cy="180" rx="260" ry="200" fill="url(#glowGradM)" class="glow-orb-1"/>
       <ellipse cx="200" cy="500" rx="220" ry="160" fill="url(#glowGradM)" class="glow-orb-2"/>
 
-      <!-- Mini browser — pulled DOWN from y:30 to y:60. Extends to y:200, safely inside safe zone 60-540. -->
+      <!-- Mini browser -->
       <g class="browser-group" transform="translate(16, 60)">
         <rect x="0" y="0" width="200" height="140" rx="6" stroke="white" stroke-opacity="0.2" stroke-width="1.5" fill="white" fill-opacity="0.04" class="browser-frame"/>
         <rect x="0" y="0" width="200" height="22" rx="6" fill="white" fill-opacity="0.08"/>
@@ -139,7 +139,7 @@ description="Professional website design, hosting and management for small busin
         <rect x="10" y="128" width="0" height="4" rx="2" fill="white" fill-opacity="0.3" class="score-bar score-bar-3"/>
       </g>
 
-      <!-- Score meter — y:130, r:48 extends y:82 to y:178. Safely within 60-540. -->
+      <!-- Score meter -->
       <g class="score-meter" transform="translate(330, 130)">
         <circle cx="0" cy="0" r="48" stroke="white" stroke-opacity="0.08" stroke-width="6" fill="none"/>
         <circle cx="0" cy="0" r="48" stroke="white" stroke-opacity="0.25" stroke-width="6" fill="none"
@@ -148,7 +148,7 @@ description="Professional website design, hosting and management for small busin
         <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="white" fill-opacity="0.5" font-size="16" font-weight="800" font-family="monospace" class="score-text">100</text>
       </g>
 
-      <!-- Lightning — pulled UP from y:380 to y:360, extends to y:430. Safe. -->
+      <!-- Lightning -->
       <g class="lightning-group" transform="translate(320, 360)">
         <path d="M20 0 L6 34 L18 34 L0 70" stroke="white" stroke-opacity="0.2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="bolt bolt-main"/>
         <path d="M55 10 L44 38 L54 38 L38 70" stroke="white" stroke-opacity="0.12" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="bolt bolt-2"/>
@@ -192,68 +192,17 @@ description="Professional website design, hosting and management for small busin
       </div>
     </div>
 
-    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('giveaway-callout').scrollIntoView({behavior:'smooth'})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('giveaway-callout').scrollIntoView({behavior:'smooth'})}">
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('ws-tabs').scrollIntoView({behavior:'smooth'})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('ws-tabs').scrollIntoView({behavior:'smooth'})}">
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
   <!-- ============================================================ -->
-  <!-- GIVEAWAY CALLOUT BANNER                                      -->
-  <!-- Auto-state-transitions through pre-launch / active /         -->
-  <!-- closed / announced based on dates. No redeploys needed.     -->
-  <!-- ============================================================ -->
-  <section id="giveaway-callout" aria-label="NH Local Business Website Giveaway">
-    <div class="giveaway-callout-inner">
-
-      <!-- Left: Trophy + headline + state-aware text -->
-      <div class="giveaway-callout-left">
-        <div class="giveaway-trophy" aria-hidden="true">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="ghTrophyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#fde68a;stop-opacity:1"/>
-                <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1"/>
-              </linearGradient>
-            </defs>
-            <path d="M14 6 Q14 2 18 2 L46 2 Q50 2 50 6 L50 18 Q50 30 40 33 L40 40 L46 40 L46 48 L18 48 L18 40 L24 40 L24 33 Q14 30 14 18 Z" fill="url(#ghTrophyGrad)"/>
-            <path d="M14 10 Q7 10 7 16 Q7 22 14 22" stroke="#fde68a" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <path d="M50 10 Q57 10 57 16 Q57 22 50 22" stroke="#fde68a" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <rect x="16" y="48" width="32" height="6" rx="1" fill="#fbbf24"/>
-            <path d="M32 14 L34 20 L40 20 L35 24 L37 30 L32 26 L27 30 L29 24 L24 20 L30 20 Z" fill="white" fill-opacity="0.95"/>
-          </svg>
-        </div>
-
-        <div class="giveaway-callout-text">
-          <p class="giveaway-eyebrow">🎉 NH Local Business Giveaway</p>
-          <h2 class="giveaway-headline">Win This Free $2,000 Professional Package</h2>
-          <p class="giveaway-subhead" id="giveaway-state-text">Entries open May 15. 10-day window. NH businesses only. 100% free entry.</p>
-        </div>
-      </div>
-
-      <!-- Right: Countdown + CTA -->
-      <div class="giveaway-callout-right">
-        <div class="giveaway-countdown" id="giveaway-countdown" aria-live="polite">
-          <div class="gc-cell"><div class="gc-num" id="gc-days">--</div><div class="gc-label">Days</div></div>
-          <div class="gc-cell"><div class="gc-num" id="gc-hours">--</div><div class="gc-label">Hrs</div></div>
-          <div class="gc-cell"><div class="gc-num" id="gc-mins">--</div><div class="gc-label">Min</div></div>
-          <div class="gc-cell"><div class="gc-num" id="gc-secs">--</div><div class="gc-label">Sec</div></div>
-        </div>
-        <a href="/giveaway" class="giveaway-cta" id="giveaway-cta-link">
-          <span id="giveaway-cta-text">See Details &amp; Enter</span>
-          <svg style="height:1rem;width:1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
   <!-- SECTION TAB BAR                                              -->
-  <!-- Shows ONE section at a time. Hides on scroll-down,           -->
-  <!-- reappears on scroll-up (does not stay pinned — keeps         -->
-  <!-- 500% zoom usable for accessibility).                         -->
+  <!-- Sticky from the moment it scrolls into view; hides on        -->
+  <!-- scroll-down, reappears on scroll-up.                         -->
   <!-- ============================================================ -->
-  <div class="ws-tab-bar" id="ws-tabs" role="tablist" aria-label="Browse web services by category">
+  <div class="ws-tab-bar is-sticky" id="ws-tabs" role="tablist" aria-label="Browse web services by category">
     <button class="ws-tab active" data-section="build" role="tab" aria-selected="true" aria-controls="section-build" id="tab-build">
       <span class="ws-tab-icon" aria-hidden="true">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M2 3h20v14H2zM8 21h8M12 17v4"/></svg>
@@ -314,9 +263,7 @@ description="Professional website design, hosting and management for small busin
             <p>{content.why4Desc}</p>
           </div>
         </div>
-        <!-- ADA / Compliance card — paragraph + 4 stat cards rewritten in plain English. -->
-        <!-- Note: the paragraph is now hardcoded (no longer pulling from {content.adaTitle} / {content.adaDesc}). -->
-        <!-- To re-link to decap CMS, update those two values in web-services.yml and swap the references back in. -->
+        <!-- ADA / Compliance card -->
         <div class="ada-card">
           <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
             <div style="background:#16a34a;border-radius:50%;height:3rem;width:3rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
@@ -437,8 +384,6 @@ description="Professional website design, hosting and management for small busin
 
   <!-- ============================================================ -->
   <!-- SECTION 2 — ALREADY HAVE A SITE?                             -->
-  <!-- New content: Site Audit & QA Test + Existing-Site Fixes      -->
-  <!-- Written as plain inline HTML — no YAML.                      -->
   <!-- ============================================================ -->
   <div class="ws-section" id="section-existing" role="tabpanel" aria-labelledby="tab-existing" hidden>
 
@@ -786,7 +731,7 @@ description="Professional website design, hosting and management for small busin
   </div>
   <!-- END SECTION 4 -->
 
-  <!-- Terms Notice — full-width blue band, always visible, outside the tab system -->
+  <!-- Terms Notice -->
   <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:2.5rem 1.5rem;">
     <div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.875rem;flex-wrap:wrap;text-align:center;">
       <div style="flex-shrink:0;color:#bfdbfe;" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>
@@ -797,68 +742,9 @@ description="Professional website design, hosting and management for small busin
 </Layout>
 
 <!-- ============================================================ -->
-<!-- GIVEAWAY CALLOUT — auto-state-transitioning countdown        -->
-<!-- ============================================================ -->
-<script is:inline>
-  (function() {
-    var ENTRY_OPEN  = new Date('2026-05-15T00:00:00-04:00');
-    var ENTRY_CLOSE = new Date('2026-05-25T00:00:00-04:00');
-    var DRAWING     = new Date('2026-05-25T09:00:00-04:00');
-
-    var stateText = document.getElementById('giveaway-state-text');
-    var ctaText   = document.getElementById('giveaway-cta-text');
-    var countdown = document.getElementById('giveaway-countdown');
-    var dEl = document.getElementById('gc-days');
-    var hEl = document.getElementById('gc-hours');
-    var mEl = document.getElementById('gc-mins');
-    var sEl = document.getElementById('gc-secs');
-
-    function pad(n) { return n < 10 ? '0' + n : '' + n; }
-
-    function update() {
-      var now = new Date();
-      var target, ctaLabel;
-
-      if (now < ENTRY_OPEN) {
-        target = ENTRY_OPEN;
-        ctaLabel = 'See Details';
-        if (stateText) stateText.textContent = 'Entries open May 15. 10-day window. NH businesses only. 100% free entry.';
-      } else if (now < ENTRY_CLOSE) {
-        target = ENTRY_CLOSE;
-        ctaLabel = 'Enter Now';
-        if (stateText) stateText.textContent = 'Entries are open right now! NH businesses only. 100% free.';
-      } else if (now < DRAWING) {
-        if (stateText) stateText.textContent = 'Entries closed. Drawing happens at 9:00 AM EST on May 25.';
-        if (countdown) countdown.style.display = 'none';
-        if (ctaText) ctaText.textContent = 'See Status';
-        return;
-      } else {
-        if (stateText) stateText.textContent = 'Winner announced! All entrants get 20% off any website build.';
-        if (countdown) countdown.style.display = 'none';
-        if (ctaText) ctaText.textContent = 'See Winner';
-        return;
-      }
-
-      if (ctaText) ctaText.textContent = ctaLabel;
-      var diff = Math.max(0, target - now);
-      var d = Math.floor(diff / 86400000);
-      var h = Math.floor((diff % 86400000) / 3600000);
-      var m = Math.floor((diff % 3600000) / 60000);
-      var s = Math.floor((diff % 60000) / 1000);
-      if (dEl) dEl.textContent = pad(d);
-      if (hEl) hEl.textContent = pad(h);
-      if (mEl) mEl.textContent = pad(m);
-      if (sEl) sEl.textContent = pad(s);
-    }
-
-    update();
-    setInterval(update, 1000);
-  })();
-</script>
-
-<!-- ============================================================ -->
-<!-- SECTION TABS — show one section at a time;                   -->
-<!-- tab bar hides on scroll-down, reappears on scroll-up.        -->
+<!-- SECTION TABS                                                 -->
+<!-- Tab bar is sticky immediately; hides on scroll-down,         -->
+<!-- reappears on scroll-up.                                      -->
 <!-- ============================================================ -->
 <script is:inline>
   (function() {
@@ -882,7 +768,7 @@ description="Professional website design, hosting and management for small busin
       if (scrollToTop) {
         var panel = document.getElementById('section-' + name);
         if (panel) {
-          var barH = tabBar.classList.contains('is-sticky') ? tabBar.offsetHeight : 0;
+          var barH = tabBar.offsetHeight;
           var y = panel.getBoundingClientRect().top + window.scrollY - barH;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -912,11 +798,9 @@ description="Professional website design, hosting and management for small busin
       link.addEventListener('click', function(e) {
         e.preventDefault();
         showSection('build', false, false);
-        // Scroll to the top of the Build section's content, offset
-        // for the sticky tab bar so the heading isn't tucked under it.
         var target = document.getElementById('why-section');
         if (target) {
-          var barH = tabBar.classList.contains('is-sticky') ? tabBar.offsetHeight : 0;
+          var barH = tabBar.offsetHeight;
           var y = target.getBoundingClientRect().top + window.scrollY - barH;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -931,49 +815,19 @@ description="Professional website design, hosting and management for small busin
         showSection('existing', false, false);
         var target = document.getElementById('local-seo-package');
         if (target) {
-          var barH = tabBar.classList.contains('is-sticky') ? tabBar.offsetHeight : 0;
+          var barH = tabBar.offsetHeight;
           var y = target.getBoundingClientRect().top + window.scrollY - barH;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
       });
     });
 
-    // Tab bar — only sticky once the giveaway banner is fully
-    // scrolled past (so it never overlaps the banner). While the
-    // banner is on screen the bar scrolls normally with the page.
-    var giveawayBanner = document.getElementById('giveaway-callout');
-    var barIsSticky = false;
-
-    if (giveawayBanner && 'IntersectionObserver' in window) {
-      var bannerObserver = new IntersectionObserver(function(entries) {
-        // entry.isIntersecting is true while any part of the banner
-        // is visible in the viewport.
-        barIsSticky = !entries[0].isIntersecting;
-        tabBar.classList.toggle('is-sticky', barIsSticky);
-        if (!barIsSticky) {
-          // Banner back in view — drop sticky styling and any hidden state.
-          tabBar.classList.remove('hidden');
-        }
-      }, { threshold: 0 });
-      bannerObserver.observe(giveawayBanner);
-    } else {
-      // No banner or no observer support — fall back to always sticky.
-      barIsSticky = true;
-      tabBar.classList.add('is-sticky');
-    }
-
-    // Tab bar — hide on scroll down, show on scroll up. Only runs
-    // while the bar is in its sticky state.
+    // Tab bar — hide on scroll down, show on scroll up.
     var lastScrollY = window.scrollY;
     var ticking = false;
     var SCROLL_THRESHOLD = 5;
 
     function handleScroll() {
-      if (!barIsSticky) {
-        lastScrollY = window.scrollY;
-        ticking = false;
-        return;
-      }
       var currentScrollY = window.scrollY;
       var delta = currentScrollY - lastScrollY;
 
@@ -1055,7 +909,7 @@ description="Professional website design, hosting and management for small busin
     50%       { opacity: 0; }
   }
 
-  /* All score bars now fill to 100% (380px desktop / 180px mobile) */
+  /* All score bars fill to 100% (380px desktop / 180px mobile) */
   .score-bar-1 { animation: scoreBar 1.5s ease 2.8s both; }
   .score-bar-2 { animation: scoreBar 1.5s ease 3.0s both; }
   .score-bar-3 { animation: scoreBar 1.5s ease 3.2s both; }
@@ -1209,176 +1063,8 @@ description="Professional website design, hosting and management for small busin
   }
 
   /* ============================================================ */
-  /* GIVEAWAY CALLOUT BANNER                                      */
-  /* ============================================================ */
-  #giveaway-callout {
-    position: relative;
-    background:
-      radial-gradient(ellipse at 20% 50%, rgba(251, 191, 36, 0.15) 0%, transparent 60%),
-      radial-gradient(ellipse at 90% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 60%),
-      linear-gradient(135deg, #0c1e3d 0%, #1e3a8a 50%, #2563eb 100%);
-    padding: 2.5rem 1.5rem;
-    overflow: hidden;
-    border-top: 1px solid rgba(251, 191, 36, 0.25);
-    border-bottom: 1px solid rgba(251, 191, 36, 0.25);
-  }
-
-  .giveaway-callout-inner {
-    max-width: 80rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .giveaway-callout-left {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    min-width: 0;
-  }
-
-  .giveaway-trophy {
-    flex-shrink: 0;
-    width: 4.5rem;
-    height: 4.5rem;
-    animation: gcTrophyBob 3s ease-in-out infinite;
-  }
-  .giveaway-trophy svg { width: 100%; height: 100%; filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.5)); }
-
-  @keyframes gcTrophyBob {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-6px); }
-  }
-
-  .giveaway-callout-text { min-width: 0; }
-
-  .giveaway-eyebrow {
-    color: #fde68a;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 0 0 0.4rem 0;
-  }
-
-  .giveaway-headline {
-    color: white;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 900;
-    line-height: 1.15;
-    margin: 0 0 0.4rem 0;
-    letter-spacing: -0.01em;
-  }
-
-  .giveaway-subhead {
-    color: #bfdbfe;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0;
-    max-width: 30rem;
-  }
-
-  .giveaway-callout-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
-    flex-shrink: 0;
-  }
-
-  .giveaway-countdown {
-    display: flex;
-    gap: 0.4rem;
-  }
-
-  .gc-cell {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(251, 191, 36, 0.4);
-    border-radius: 0.5rem;
-    padding: 0.5rem 0.7rem;
-    text-align: center;
-    min-width: 3.2rem;
-    backdrop-filter: blur(4px);
-  }
-
-  .gc-num {
-    color: #fde68a;
-    font-size: 1.4rem;
-    font-weight: 900;
-    line-height: 1;
-    font-variant-numeric: tabular-nums;
-    text-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
-  }
-
-  .gc-label {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-top: 0.2rem;
-  }
-
-  .giveaway-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #fde68a;
-    color: #1e3a8a;
-    font-weight: 800;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
-  }
-  .giveaway-cta:hover {
-    background: #fef3c7;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(251, 191, 36, 0.5);
-  }
-  .giveaway-cta:focus-visible {
-    outline: 3px solid #fde68a;
-    outline-offset: 2px;
-  }
-
-  @media (max-width: 900px) {
-    .giveaway-callout-inner {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    .giveaway-callout-right {
-      align-items: stretch;
-    }
-    .giveaway-countdown {
-      justify-content: center;
-    }
-    .giveaway-cta {
-      justify-content: center;
-    }
-  }
-
-  @media (max-width: 540px) {
-    .giveaway-callout-left {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1rem;
-    }
-    .giveaway-subhead { max-width: 100%; }
-    .gc-cell { padding: 0.45rem 0.55rem; min-width: 2.8rem; }
-    .gc-num { font-size: 1.2rem; }
-    .gc-label { font-size: 0.7rem; }
-  }
-
-  /* ============================================================ */
   /* SECTION TAB BAR                                              */
-  /* Not sticky while the giveaway banner is on screen (avoids    */
-  /* overlapping it). Becomes sticky once the banner is fully     */
-  /* scrolled past — toggled via the .is-sticky class in JS.      */
+  /* Sticky immediately. Hide on scroll-down, show on scroll-up.  */
   /* ============================================================ */
   .ws-tab-bar {
     display: flex;
@@ -1389,13 +1075,12 @@ description="Professional website design, hosting and management for small busin
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    position: relative;
-    top: 0;
     z-index: 10;
     transition: transform 0.3s ease;
   }
   .ws-tab-bar.is-sticky {
     position: sticky;
+    top: 0;
   }
   .ws-tab-bar.hidden {
     transform: translateY(-100%);
@@ -1521,7 +1206,7 @@ description="Professional website design, hosting and management for small busin
   }
   .audit-btn:hover { background: #1d4ed8; }
 
-  /* SEO — included-with-build grid + standalone package list */
+  /* SEO grid + standalone package list */
   .seo-incl-grid {
     display: grid;
     gap: 1.25rem;
@@ -1626,7 +1311,7 @@ description="Professional website design, hosting and management for small busin
   @media (prefers-reduced-motion: reduce) {
     .browser-frame, .code-line, .cursor-blink, .bolt, .lightning-group,
     .score-bar-1, .score-bar-2, .score-bar-3, .score-ring,
-    .glow-orb-1, .glow-orb-2, #scroll-hint, .giveaway-trophy { animation: none; }
+    .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
     .hero-label, #hero-wordmark, #hero-tagline, #hero-btns, #scroll-hint { opacity: 1; transform: none; }
     .code-line { stroke-opacity: 0.35; }
     .score-ring { stroke-dashoffset: 2; }
