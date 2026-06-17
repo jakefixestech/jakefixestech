@@ -1,0 +1,857 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="E-Waste Recycling & Disposal | Jake Fixes Tech — Littleton, NH"
+description="Responsible e-waste recycling in Littleton, NH. I take the old computers, cables, monitors, and electronics most transfer stations turn away, with certified data destruction available. Drop-off from $15, pickup available.">
+
+  <!-- Animated SVG Hero -->
+  <section id="hero-svg" aria-label="E-Waste Recycling and Disposal Service">
+
+    <!-- DESKTOP SVG -->
+    <svg class="hero-bg-desktop" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="ewBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="ewGlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.25"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <radialGradient id="ewGreenGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color:#4ade80;stop-opacity:0.35"/>
+          <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="520" fill="url(#ewBgGrad)"/>
+      <ellipse cx="220" cy="200" rx="380" ry="260" fill="url(#ewGlowGrad)" class="glow-orb-1"/>
+      <ellipse cx="1180" cy="340" rx="320" ry="220" fill="url(#ewGlowGrad)" class="glow-orb-2"/>
+
+      <!-- LEFT: Recycling bin - translate(300, 250) -->
+      <g transform="translate(300, 250)">
+        <!-- Green glow behind bin -->
+        <ellipse cx="0" cy="25" rx="150" ry="140" fill="url(#ewGreenGlow)" class="bin-glow"/>
+
+        <g class="bin-body">
+          <!-- Lid / rim -->
+          <rect x="-66" y="-34" width="132" height="15" rx="4" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.08"/>
+          <!-- Body trapezoid -->
+          <path d="M-55 -19 L 55 -19 L 46 82 L -46 82 Z" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.06"/>
+          <!-- Vertical ridges -->
+          <line x1="-26" y1="-9" x2="-30" y2="72" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+          <line x1="0" y1="-9" x2="0" y2="72" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+          <line x1="26" y1="-9" x2="30" y2="72" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+
+          <!-- Recycle emblem on the bin -->
+          <g transform="translate(0, 31)">
+            <g class="recycle-emblem">
+              <g stroke="#86efac" stroke-opacity="0.9" stroke-width="2.5" fill="none" stroke-linecap="round">
+                <path d="M 16 0 A 16 16 0 0 1 0 16"/>
+                <path d="M -8 13.86 A 16 16 0 0 1 -13.86 -8"/>
+                <path d="M -8 -13.86 A 16 16 0 0 1 13.86 -8"/>
+              </g>
+              <g fill="#86efac" fill-opacity="0.9" stroke="none">
+                <polygon points="0,-7 -4.5,0 4.5,0" transform="translate(0,16) rotate(-90)"/>
+                <polygon points="0,-7 -4.5,0 4.5,0" transform="translate(-13.86,-8) rotate(30)"/>
+                <polygon points="0,-7 -4.5,0 4.5,0" transform="translate(13.86,-8) rotate(150)"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <!-- RIGHT: E-waste devices drifting gently - translate(1170, 220) -->
+      <g transform="translate(1170, 220)">
+        <!-- Monitor (top-left) -->
+        <g transform="translate(-55, -60)">
+          <g class="item item-1" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-20" y="-15" width="40" height="28" rx="2"/>
+            <line x1="0" y1="13" x2="0" y2="20"/>
+            <line x1="-9" y1="20" x2="9" y2="20"/>
+          </g>
+        </g>
+        <!-- Keyboard (top-right) -->
+        <g transform="translate(55, -60)">
+          <g class="item item-2" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-22" y="-9" width="44" height="20" rx="3"/>
+            <line x1="-14" y1="-2" x2="-10" y2="-2" stroke-linecap="round"/>
+            <line x1="-5" y1="-2" x2="-1" y2="-2" stroke-linecap="round"/>
+            <line x1="4" y1="-2" x2="8" y2="-2" stroke-linecap="round"/>
+            <line x1="13" y1="-2" x2="14" y2="-2" stroke-linecap="round"/>
+            <line x1="-9" y1="5" x2="9" y2="5" stroke-linecap="round"/>
+          </g>
+        </g>
+        <!-- Phone (bottom-left) -->
+        <g transform="translate(-55, 60)">
+          <g class="item item-3" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-11" y="-19" width="22" height="38" rx="4"/>
+            <line x1="-3" y1="13" x2="3" y2="13" stroke-linecap="round"/>
+          </g>
+        </g>
+        <!-- Hard drive (bottom-right) -->
+        <g transform="translate(55, 60)">
+          <g class="item item-4" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-20" y="-15" width="40" height="30" rx="2"/>
+            <circle cx="3" cy="0" r="9" fill="none"/>
+            <circle cx="3" cy="0" r="1.5" fill="white" fill-opacity="0.6" stroke="none"/>
+            <line x1="-14" y1="-9" x2="-14" y2="9"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Floating charger/plug icon -->
+      <g transform="translate(720, 90)">
+        <g class="float-icon float-tool-1" stroke="white" stroke-opacity="0.18" fill="none" stroke-width="2">
+          <path d="M-10 -8 V -16 M 4 -8 V -16"/>
+          <rect x="-14" y="-8" width="22" height="14" rx="3"/>
+          <path d="M-3 6 V 14 a 6 6 0 0 0 12 0 V 10"/>
+        </g>
+      </g>
+
+      <!-- Floating battery icon -->
+      <g transform="translate(150, 380)">
+        <g class="float-icon float-tool-2" stroke="white" stroke-opacity="0.15" fill="none" stroke-width="1.5">
+          <rect x="-16" y="-9" width="30" height="18" rx="2"/>
+          <line x1="14" y1="-4" x2="18" y2="-4"/>
+          <line x1="14" y1="4" x2="18" y2="4"/>
+          <line x1="-8" y1="0" x2="0" y2="0"/>
+          <line x1="-4" y1="-4" x2="-4" y2="4"/>
+        </g>
+      </g>
+
+      <!-- Floating leaf icon -->
+      <g transform="translate(1285, 110)">
+        <g class="float-icon float-tool-3" stroke="#86efac" stroke-opacity="0.22" fill="none" stroke-width="2">
+          <path d="M-12 12 C -12 -8 8 -12 14 -12 C 14 8 -4 12 -12 12 Z"/>
+          <path d="M-8 8 L 8 -8"/>
+        </g>
+      </g>
+
+      <!-- Ambient labels -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" fill="white">
+        <text x="100" y="100" font-size="11" fill-opacity="0.1" class="code-tw ct-a">// collect</text>
+        <text x="660" y="430" font-size="11" fill-opacity="0.1" class="code-tw ct-b">// haul</text>
+        <text x="1180" y="455" font-size="11" fill-opacity="0.1" class="code-tw ct-c">// recycle</text>
+        <text x="80" y="450" font-size="10" fill-opacity="0.09" class="code-tw ct-d">landfill: 0</text>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="130" x2="1440" y2="130"/>
+        <line x1="0" y1="260" x2="1440" y2="260"/>
+        <line x1="0" y1="390" x2="1440" y2="390"/>
+        <line x1="360" y1="0" x2="360" y2="520"/>
+        <line x1="720" y1="0" x2="720" y2="520"/>
+        <line x1="1080" y1="0" x2="1080" y2="520"/>
+      </g>
+    </svg>
+
+    <!-- MOBILE SVG -->
+    <svg class="hero-bg-mobile" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="ewBgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="ewGlowGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+        </linearGradient>
+        <radialGradient id="ewGreenGlowM" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color:#4ade80;stop-opacity:0.35"/>
+          <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0"/>
+        </radialGradient>
+      </defs>
+      <rect width="400" height="600" fill="url(#ewBgGradM)"/>
+      <ellipse cx="80" cy="100" rx="180" ry="140" fill="url(#ewGlowGradM)" class="glow-orb-1"/>
+      <ellipse cx="340" cy="500" rx="180" ry="140" fill="url(#ewGlowGradM)" class="glow-orb-2"/>
+
+      <!-- Bin tucked TOP-LEFT - translate(78, 120) scale(0.82) -->
+      <g transform="translate(78, 120) scale(0.82)">
+        <ellipse cx="0" cy="25" rx="150" ry="140" fill="url(#ewGreenGlowM)" class="bin-glow"/>
+        <g class="bin-body">
+          <rect x="-66" y="-34" width="132" height="15" rx="4" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.08"/>
+          <path d="M-55 -19 L 55 -19 L 46 82 L -46 82 Z" stroke="white" stroke-opacity="0.4" stroke-width="2.5" fill="white" fill-opacity="0.06"/>
+          <line x1="-26" y1="-9" x2="-30" y2="72" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+          <line x1="0" y1="-9" x2="0" y2="72" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+          <line x1="26" y1="-9" x2="30" y2="72" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+          <g transform="translate(0, 31)">
+            <g class="recycle-emblem">
+              <g stroke="#86efac" stroke-opacity="0.9" stroke-width="2.5" fill="none" stroke-linecap="round">
+                <path d="M 16 0 A 16 16 0 0 1 0 16"/>
+                <path d="M -8 13.86 A 16 16 0 0 1 -13.86 -8"/>
+                <path d="M -8 -13.86 A 16 16 0 0 1 13.86 -8"/>
+              </g>
+              <g fill="#86efac" fill-opacity="0.9" stroke="none">
+                <polygon points="0,-7 -4.5,0 4.5,0" transform="translate(0,16) rotate(-90)"/>
+                <polygon points="0,-7 -4.5,0 4.5,0" transform="translate(-13.86,-8) rotate(30)"/>
+                <polygon points="0,-7 -4.5,0 4.5,0" transform="translate(13.86,-8) rotate(150)"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <!-- Items tucked BOTTOM-RIGHT - translate(312, 470) scale(0.8) -->
+      <g transform="translate(312, 470) scale(0.8)">
+        <g transform="translate(-50, -50)">
+          <g class="item item-1" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-20" y="-15" width="40" height="28" rx="2"/>
+            <line x1="0" y1="13" x2="0" y2="20"/>
+            <line x1="-9" y1="20" x2="9" y2="20"/>
+          </g>
+        </g>
+        <g transform="translate(50, -50)">
+          <g class="item item-2" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-11" y="-19" width="22" height="38" rx="4"/>
+            <line x1="-3" y1="13" x2="3" y2="13" stroke-linecap="round"/>
+          </g>
+        </g>
+        <g transform="translate(-50, 50)">
+          <g class="item item-3" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-20" y="-15" width="40" height="30" rx="2"/>
+            <circle cx="3" cy="0" r="9" fill="none"/>
+            <line x1="-14" y1="-9" x2="-14" y2="9"/>
+          </g>
+        </g>
+        <g transform="translate(50, 50)">
+          <g class="item item-4" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="white" fill-opacity="0.08">
+            <rect x="-22" y="-9" width="44" height="20" rx="3"/>
+            <line x1="-9" y1="4" x2="9" y2="4" stroke-linecap="round"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Grid -->
+      <g stroke="white" stroke-opacity="0.04" stroke-width="1">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="0" y1="300" x2="400" y2="300"/>
+        <line x1="0" y1="450" x2="400" y2="450"/>
+        <line x1="133" y1="0" x2="133" y2="600"/>
+        <line x1="266" y1="0" x2="266" y2="600"/>
+      </g>
+    </svg>
+
+    <!-- Hero text -->
+    <div id="hero-content">
+      <p class="hero-label">
+        <a href="/services#e-waste-recycling" style="color:#93c5fd;text-decoration:none;" aria-label="Back to all services">&larr; Services</a>
+      </p>
+      <h1 id="hero-wordmark">E-Waste Recycling &amp; Disposal</h1>
+      <p id="hero-tagline">Old computers, cables, monitors, and dead electronics piling up? I take the e-waste most transfer stations turn away, haul it to a certified New Hampshire recycler, and keep it out of the landfill. Drop it off, or I'll come get it.</p>
+      <div id="hero-cta-row">
+        <a href="/contact" class="hero-cta-primary">
+          Get a Flat Rate
+          <svg style="height:1rem;width:1rem;" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#pricing-section" class="hero-cta-secondary">View Pricing</a>
+      </div>
+    </div>
+
+    <div id="scroll-hint" aria-hidden="true" role="button" tabindex="-1" onclick="document.getElementById('how-section').scrollIntoView({behavior:'smooth'})">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height:1.5rem;width:1.5rem;"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- Quick Info Bar -->
+  <section style="background:#1e40af;padding:1.25rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem;text-align:center;">
+      <div>
+        <div style="font-size:1.75rem;font-weight:800;color:white;">From $15</div>
+        <div style="font-size:0.8rem;color:#bfdbfe;font-weight:600;">Simple Flat-Rate Drop-Off</div>
+      </div>
+      <div style="width:1px;height:2.5rem;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
+      <div>
+        <div style="font-size:1.75rem;font-weight:800;color:white;">Kept Local</div>
+        <div style="font-size:0.8rem;color:#bfdbfe;font-weight:600;">Recycled in NH, Never Shipped Overseas</div>
+      </div>
+      <div style="width:1px;height:2.5rem;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
+      <div>
+        <div style="font-size:1.5rem;font-weight:800;color:white;">Data Destruction</div>
+        <div style="font-size:0.8rem;color:#bfdbfe;font-weight:600;">Optional Add-On &middot; Certificate Included</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-section" style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2.5rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">How It Works</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Easy to Drop Off. Easy to Recycle Right.</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">Most transfer stations only take small amounts, charge per item, and serve their own town's residents only. I take the e-waste they turn away and handle the rest, so you don't have to think about it.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div class="step-card" style="border-left:4px solid #2563eb;">
+          <div class="step-number" style="background:#eff6ff;color:#1e40af;">1</div>
+          <div>
+            <h3 class="step-title">Tell Me What You've Got</h3>
+            <p class="step-desc">Text or call with a rough list, or just snap a photo of the pile. No scales, no guessing games. I'll give you a flat rate up front so you know exactly what it costs before anything changes hands.</p>
+          </div>
+        </div>
+        <div class="step-card" style="border-left:4px solid #7c3aed;">
+          <div class="step-number" style="background:#f5f3ff;color:#6d28d9;">2</div>
+          <div>
+            <h3 class="step-title">Drop It Off or Schedule a Pickup</h3>
+            <p class="step-desc">Bring it by, or I'll come get it for a flat travel fee. For pickups I schedule a few days out so I can plan the trip, which keeps the cost down and the process smooth for both of us.</p>
+          </div>
+        </div>
+        <div class="step-card" style="border-left:4px solid #0369a1;">
+          <div class="step-number" style="background:#e0f2fe;color:#0369a1;">3</div>
+          <div>
+            <h3 class="step-title">Optional: Certified Data Destruction</h3>
+            <p class="step-desc">Got old hard drives you want gone for good? For a flat $25 per drive I'll have them physically destroyed and hand you a certificate of destruction for each one. It's an optional add-on. Recycling on its own does not include wiping, so if you skip it you're responsible for clearing your own data first. For phones and tablets, a factory reset before drop-off is the best free option.</p>
+          </div>
+        </div>
+        <div class="step-card" style="border-left:4px solid #15803d;">
+          <div class="step-number" style="background:#f0fdf4;color:#15803d;">4</div>
+          <div>
+            <h3 class="step-title">Hauled to a Certified NH Recycler</h3>
+            <p class="step-desc">Once I've gathered a full load, it goes to Aurum Recovery Group in Goffstown, NH, a family-run recycler with more than 30 years in the business and a dedicated dismantling and shredding facility.</p>
+          </div>
+        </div>
+        <div class="step-card" style="border-left:4px solid #047857;">
+          <div class="step-number" style="background:#ecfdf5;color:#047857;">5</div>
+          <div>
+            <h3 class="step-title">Kept Out of the Landfill</h3>
+            <p class="step-desc">Everything is dismantled, sorted, and responsibly recycled right here in New Hampshire. Nothing gets quietly dumped or shipped overseas, which means the hazardous materials inside old electronics are handled the right way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Take -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">What I Take</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">If It Plugs In, There's a Good Chance I Take It</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">I focus on the everyday electronics that pile up in closets, basements, and offices. Anything roughly household-printer sized or smaller is fair game.</p>
+      </div>
+      <div id="accept-grid">
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Computers, Laptops &amp; Servers</h3>
+          <p>Towers, all-in-ones, laptops, and small servers, working or dead.</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8"/></svg></div>
+          <h3>Keyboards, Mice &amp; Peripherals</h3>
+          <p>Webcams, speakers, docks, hubs, and the rest of the desk clutter.</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
+          <h3>Phones, Tablets &amp; MP3 Players</h3>
+          <p>Cell, home, and business phones, tablets, PDAs, and old media players.</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4v6a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4"/><path d="M7 4V2M17 4V2M12 14v8"/></svg></div>
+          <h3>Cables, Cords &amp; Chargers</h3>
+          <p>The tangle of wires, power adapters, and chargers nobody knows what to do with.</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 12h.01M10 12h.01"/><circle cx="17" cy="12" r="1.5"/></svg></div>
+          <h3>Networking Gear</h3>
+          <p>Routers, switches, modems, access points, and other IT equipment.</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Monitors &amp; A/V Equipment</h3>
+          <p>Flat-panel monitors, receivers, and audio/visual components.</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>DVD, Blu-ray &amp; VHS Players</h3>
+          <p>Disc and tape players, plus other legacy home media gear.</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="3"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg></div>
+          <h3>Game Consoles &amp; Handhelds</h3>
+          <p>Home consoles and portable systems. (Full arcade cabinets excluded.)</p>
+        </div>
+        <div class="accept-card">
+          <div class="accept-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 3h6v4l3 3v11H6V10l3-3z"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
+          <h3>Test, IT &amp; Small Medical</h3>
+          <p>Test equipment and small medical devices, with no fluids or bio-hazard material.</p>
+        </div>
+      </div>
+
+      <div class="scope-grid">
+        <div class="scope-col scope-yes">
+          <h3>Also welcome</h3>
+          <p>Household printers (priced below) and tangled holiday string lights. A normal box of lights folds into your drop-off; large quantities are quoted by the load.</p>
+        </div>
+        <div class="scope-col scope-no">
+          <h3>What I can't take</h3>
+          <p>Loose batteries of any kind (UPS, lead-acid, rechargeable packs), large appliances (refrigerators, microwaves, air conditioners), industrial equipment, arcade cabinets, electric motors and transformers, CRT and large-screen TVs, and anything bigger than a household printer. Not sure about an item? Send me a photo and I'll let you know.</p>
+        </div>
+      </div>
+      <p class="battery-note"><strong>Battery recycling coming later.</strong> I'm not set up to take batteries safely just yet, so please keep loose batteries out of your drop-off for now.</p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing-section" style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Pricing</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Simple, Flat-Rate Pricing</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">Priced per item, quoted up front, no weighing or surprises. Larger loads and business cleanouts get a custom quote.</p>
+      </div>
+
+      <div class="price-category">
+        <h2 class="price-cat-head">
+          <span class="cat-icon" aria-hidden="true">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+          </span>
+          Drop-Off Rates
+        </h2>
+        <div class="price-table">
+          <div class="price-row"><span>Small Mixed Drop-Off <em>cables, cords, chargers, mice, keyboards, phones, holiday lights</em></span><span class="price">$15 min</span></div>
+          <div class="price-row"><span>Single Items <em>computers, laptops, consoles, networking, A/V, media players</em></span><span class="price">$15 each</span></div>
+          <div class="price-row"><span>Large Items <em>servers and other bulky gear</em></span><span class="price">$30 each</span></div>
+          <div class="price-row"><span>Household Printers <em>inkjet/laser; thermal &amp; receipt printers count as standard items</em></span><span class="price">$20 each</span></div>
+          <div class="price-row"><span>Monitors <em>flat-panel displays; oversized or especially heavy ones $25</em></span><span class="price">$20 each</span></div>
+          <div class="price-row"><span>Certified Data Destruction <em>per drive, certificate included</em></span><span class="price">$25 / drive</span></div>
+          <div class="price-row"><span>On-Site Pickup <em>flat travel fee on top of item pricing</em></span><span class="price">From $35</span></div>
+        </div>
+      </div>
+
+      <div class="data-note">
+        <h3>What happens to your data and your devices</h3>
+        <p><strong>Your data:</strong> recycling does not include wiping your devices. Unless you add Certified Data Destruction above or use my <a href="/services/secure-drive-erase">Secure Drive Erase</a> service, you're responsible for removing your own data before drop-off. For phones and tablets, a factory reset is the best free option. Devices that are dead or too damaged to wipe are accepted as-is under the <a href="/terms#ewaste">e-waste terms</a>.</p>
+        <p><strong>A second life when it makes sense:</strong> some equipment still has good years left in it. Rather than scrap everything, I may securely wipe and refurbish usable devices so they're reused instead of destroyed, and anything resold has its storage securely erased first. The one exception: if you pay for Certified Data Destruction, that drive is always physically destroyed and never reused.</p>
+      </div>
+
+      <div style="margin-top:1rem;background:#1e40af;border-radius:0.75rem;padding:1.75rem 1.75rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#93c5fd;margin:0 0 0.35rem 0;">Commercial &amp; Bulk</p>
+        <h3 style="font-size:1.25rem;font-weight:800;color:white;margin:0 0 0.75rem 0;">Office Cleanouts, School &amp; Business Lots</h3>
+        <p style="font-size:0.95rem;color:#dbeafe;line-height:1.75;margin:0 0 1rem 0;">Clearing out a fleet of old machines, a storage room, or a whole office? I handle business and bulk lots that transfer stations turn away from commercial drop-offs. These are quoted per job:</p>
+        <ul style="margin:0 0 1rem 1.1rem;padding:0;color:#dbeafe;font-size:0.95rem;line-height:1.85;">
+          <li><strong style="color:white;">$150 minimum per job</strong> so the trip is always worth making</li>
+          <li><strong style="color:white;">Per-item pricing on top</strong> at the same rates above, once the load is bigger than the minimum</li>
+          <li><strong style="color:white;">Mileage past 10 miles</strong> at $2 per mile round trip from Littleton</li>
+        </ul>
+        <p style="font-size:0.9rem;color:#bfdbfe;line-height:1.7;margin:0 0 1.25rem 0;">You pay the $150 minimum or the itemized total, whichever is higher. Optional certified data destruction is $25 per drive with a certificate for each, which businesses retiring computers often want. <a href="/contact" style="color:white;text-decoration:underline;font-weight:600;">Get in touch for a quote.</a></p>
+        <p style="font-size:0.8rem;color:#93c5fd;line-height:1.6;margin:0;">Example: 35 computers picked up 15 miles away works out to $40 mileage plus the itemized total, far above the minimum, so you'd pay the itemized total. A couple of bins of cords from a mile down the road falls under the minimum, so it'd be the flat $150.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Destruction Callout -->
+  <section style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="background:linear-gradient(135deg,#eff6ff,#f0fdf4);border:1px solid #bfdbfe;border-radius:1rem;padding:2.5rem 2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#15803d;">Peace of Mind</p>
+        <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.5rem;">Certified Data Destruction</h2>
+        <p style="color:#4b5563;margin-top:0.75rem;line-height:1.75;">Recycling an old computer is only half the job. The data on the drive is the part that actually keeps people up at night. As an optional add-on, for $25 per drive I'll have your hard drives physically destroyed at a certified recycler and hand you a certificate of destruction for each one, so there is no question your information is gone. It's the kind of thing small businesses, anyone offloading an old work machine, and folks worried about identity theft genuinely value, and it's something no transfer station offers.</p>
+        <p style="color:#4b5563;margin-top:1rem;line-height:1.75;font-size:0.95rem;">A few honest notes: destruction is priced per drive and covers the drives listed on your receipt. Many phones, tablets, and newer laptops store data on chips soldered to the board, with no removable drive, so for those a factory reset before drop-off is your best protection and anything too broken to reset is accepted as-is. I don't open Apple devices, so for Macs I can only destroy a drive you've already removed.</p>
+        <p style="color:#4b5563;margin-top:1rem;line-height:1.75;font-size:0.95rem;">Just want your data securely wiped so you can keep, sell, or hand down the device? That's a different service. See <a href="/services/secure-drive-erase" style="color:#1e40af;text-decoration:underline;font-weight:600;">Secure Drive Erase</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Recycle With Me -->
+  <section style="background:#f8fafc;padding:4rem 1.5rem;">
+    <div style="max-width:56rem;margin:0 auto;">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Why Me</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Why Recycle With Jake Fixes Tech</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">There's a real gap in the North Country for this, and I built the service to fill it.</p>
+      </div>
+      <div id="reason-grid">
+        <div class="reason-card">
+          <div class="reason-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
+          <h3>No Transfer Station Runaround</h3>
+          <p>Many only take small amounts, charge per item, and serve their own town's residents. I take it no matter where you are in the area.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <h3>One Stop, Zero Hassle</h3>
+          <p>Drop it off or I'll haul it. No sorting rules, no resident sticker, and no hour-and-a-half drive to the recycler for you.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5l-8-3z"/><polyline points="9,12 11,14 15,10"/></svg></div>
+          <h3>Your Data, Your Call</h3>
+          <p>Optional certified physical destruction with a per-drive certificate, handled by an actual computer tech, not an anonymous bin. Skip it and you simply wipe your own devices first.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11 3C7 3 4 7 4 11c0 6 7 10 7 10s7-4 7-10c0-1.5-.4-2.8-1-4"/><path d="M11 11c4 0 7-3 8-8-5 1-8 4-8 8z"/></svg></div>
+          <h3>Genuinely Responsible</h3>
+          <p>Recycled at a certified New Hampshire facility, dismantled and sorted properly, never dumped or shipped overseas.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><rect x="9" y="12" width="6" height="9"/></svg></div>
+          <h3>Business Cleanouts Welcome</h3>
+          <p>Office upgrade, server room, or a closet full of old gear? I'll quote the whole load and take it off your hands.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+          <h3>Local &amp; Trusted</h3>
+          <p>The same Jake Fixes Tech you'd trust with a repair, now handling your electronics from pickup to recycler.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drop-Off Intake & Agreement -->
+  <section id="intake" style="background:white;padding:4rem 1.5rem;">
+    <div style="max-width:44rem;margin:0 auto;">
+      <div style="margin-bottom:1.5rem;">
+        <p style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#2563eb;">Before Drop-Off</p>
+        <h2 style="font-size:2rem;font-weight:800;color:#111827;margin-top:0.5rem;">Quick Intake &amp; Agreement</h2>
+        <p style="color:#6b7280;margin-top:0.75rem;line-height:1.75;">Fill this out when you drop off, or ahead of time. It logs what you're dropping off and your agreement to the e-waste terms, and takes about a minute. Please read the full <a href="/terms#ewaste" style="color:#1e40af;text-decoration:underline;font-weight:600;">e-waste terms and conditions</a> first.</p>
+      </div>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="intake-form">
+        <input type="hidden" name="access_key" value="46f02289-b380-48e0-9273-5b0a17f21f63">
+        <input type="hidden" name="subject" value="New E-Waste Drop-Off Intake">
+        <input type="hidden" name="from_name" value="Jake Fixes Tech E-Waste Intake">
+
+        <!-- Honeypot (spam trap, hidden from users) -->
+        <label for="botcheck" style="display:none;">Leave this field empty</label>
+        <input id="botcheck" type="checkbox" name="botcheck" style="display:none;" tabindex="-1" aria-hidden="true" autocomplete="off">
+
+        <div class="form-row">
+          <label for="iname">Full name</label>
+          <input id="iname" type="text" name="name" required autocomplete="name">
+        </div>
+
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="iphone">Phone</label>
+            <input id="iphone" type="tel" name="phone" required autocomplete="tel">
+          </div>
+          <div class="form-row">
+            <label for="iemail">Email <span class="opt">(optional)</span></label>
+            <input id="iemail" type="email" name="email" autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="idevices">What are you dropping off?</label>
+          <textarea id="idevices" name="devices" rows="4" required placeholder="e.g. 2 laptops, a box of cables, an old printer, 1 loose hard drive"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="idrives">Drives for certified destruction? <span class="opt">(optional, $25 each)</span></label>
+          <input id="idrives" type="text" name="drives_for_destruction" placeholder="How many drives, if any">
+        </div>
+
+        <div class="agree-box">
+          <input id="iagree" type="checkbox" name="agreed_to_terms" value="Yes — agreed to e-waste terms" required>
+          <label for="iagree">I have read and agree to the <a href="/terms#ewaste" target="_blank" rel="noopener">e-waste terms and conditions</a>, including that I am responsible for my own data unless I purchase data destruction, and that items cannot be returned once custody is transferred. <span class="req-star" aria-hidden="true">*</span></label>
+        </div>
+
+        <div class="form-row">
+          <label for="isign">Type your full name as your signature</label>
+          <input id="isign" type="text" name="signature" required autocomplete="off" placeholder="Your full name">
+        </div>
+
+        <button type="submit" id="intake-submit">Submit Intake</button>
+        <p class="form-note">This sends your intake straight to Jake. You'll get a flat-rate confirmation before anything changes hands.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#1e40af,#2563eb);padding:4rem 1.5rem;text-align:center;">
+    <div style="max-width:40rem;margin:0 auto;">
+      <h2 style="font-size:2rem;font-weight:800;color:white;margin-bottom:1rem;">Got E-Waste Piling Up?</h2>
+      <p style="color:#bfdbfe;font-size:1.1rem;line-height:1.75;margin-bottom:2rem;">Clear out the old electronics taking up space. Text me a photo or a quick list and I'll give you a flat rate. Drop-off or pickup, your call.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:#2563eb;font-weight:700;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get in Touch
+        </a>
+        <a href="tel:+18022341552" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);color:white;font-weight:600;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;border:1px solid rgba(255,255,255,0.3);">
+          <svg style="height:1.25rem;width:1.25rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.54-.54a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 17z"/></svg>
+          (802) 234-1552
+        </a>
+      </div>
+      <p style="color:#bfdbfe;font-size:0.875rem;margin-top:1.5rem;">
+        <a href="/services#e-waste-recycling" style="color:#bfdbfe;text-decoration:underline;" aria-label="Back to all services">Back to All Services</a>
+      </p>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // Progressive enhancement: keep submit disabled until the terms box is checked.
+  // Native `required` on the checkbox still enforces agreement if JS is off.
+  (function () {
+    const form = document.querySelector('.intake-form');
+    if (!form) return;
+    const agree = form.querySelector('#iagree');
+    const btn = form.querySelector('#intake-submit');
+    if (!agree || !btn) return;
+    function sync() {
+      if (agree instanceof HTMLInputElement && btn instanceof HTMLButtonElement) {
+        btn.disabled = !agree.checked;
+      }
+    }
+    agree.addEventListener('change', sync);
+    sync();
+  })();
+</script>
+
+<style>
+  /* Hero */
+  #hero-svg {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 460px;
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+  }
+  .hero-bg-desktop, .hero-bg-mobile {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .hero-bg-desktop { display: block; }
+  .hero-bg-mobile  { display: none; }
+
+  /* Bin entrance */
+  .bin-body { animation: binAppear 0.9s cubic-bezier(0.34,1.56,0.64,1) 0.3s both; transform-origin: center; }
+  @keyframes binAppear {
+    from { opacity: 0; transform: scale(0.85) translateY(10px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  /* Recycle emblem sits static on the bin, like a printed symbol */
+
+  /* Gentle green glow behind bin */
+  .bin-glow { animation: greenGlow 5s ease-in-out infinite; }
+  @keyframes greenGlow {
+    0%, 100% { opacity: 0.45; }
+    50%      { opacity: 0.8; }
+  }
+
+  /* Devices drift gently, each on its own rhythm */
+  .item { animation: itemFloat 7s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  .item-1 { animation-duration: 6.5s; animation-delay: 0s; }
+  .item-2 { animation-duration: 7.6s; animation-delay: 0.5s; }
+  .item-3 { animation-duration: 6.9s; animation-delay: 1s; }
+  .item-4 { animation-duration: 8.2s; animation-delay: 0.2s; }
+  @keyframes itemFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%      { transform: translateY(-7px) rotate(-2deg); }
+  }
+
+  /* Float icons */
+  .float-tool-1 { animation: floatA 6s ease-in-out infinite; }
+  .float-tool-2 { animation: floatB 7s ease-in-out infinite; }
+  .float-tool-3 { animation: floatC 5.5s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+  /* Ambient code labels */
+  .code-tw { animation-fill-mode: both; opacity: 0; }
+  .ct-a { animation: codeBlink 5s ease-in-out infinite 0.5s; }
+  .ct-b { animation: codeBlink 6s ease-in-out infinite 0.8s; }
+  .ct-c { animation: codeBlink 4.5s ease-in-out infinite 1.0s; }
+  .ct-d { animation: codeBlink 5.5s ease-in-out infinite 1.3s; }
+  @keyframes codeBlink {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.9; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 0.85; }
+  }
+
+  /* Glow orbs */
+  .glow-orb-1 { animation: glowPulse 4s ease-in-out infinite; }
+  .glow-orb-2 { animation: glowPulse 5s ease-in-out infinite reverse; }
+  @keyframes glowPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Hero text */
+  #hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+  }
+  .hero-label {
+    font-size: 0.875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #93c5fd; margin: 0;
+    opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+  #hero-wordmark {
+    font-size: clamp(2rem, 5.5vw, 3.25rem);
+    font-weight: 900; color: white; margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    opacity: 0; animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  #hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: #bfdbfe; margin: 0;
+    max-width: 40rem; line-height: 1.7;
+    opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+  }
+  #hero-cta-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 0.75rem;
+    opacity: 0; animation: fadeUp 0.7s ease 1.2s forwards;
+  }
+  .hero-cta-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: white; color: #1e40af; font-weight: 700;
+    padding: 0.875rem 1.75rem; border-radius: 0.5rem;
+    text-decoration: none; font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .hero-cta-secondary {
+    display: inline-flex; align-items: center;
+    background: rgba(255,255,255,0.15); color: white;
+    font-weight: 600; padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem; text-decoration: none;
+    font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    animation: scrollBounce 2s ease-in-out infinite, fadeUp 0.7s ease 1.6s both;
+    opacity: 0; z-index: 2; cursor: pointer;
+  }
+  @keyframes scrollBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50%     { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 768px) {
+    #hero-svg { height: 70vh; min-height: 480px; }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile  { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bin-body, .recycle-emblem, .bin-glow, .item,
+    .float-tool-1, .float-tool-2, .float-tool-3,
+    .code-tw, .glow-orb-1, .glow-orb-2, #scroll-hint { animation: none; }
+    .hero-label, #hero-wordmark, #hero-tagline, #hero-cta-row, #scroll-hint { opacity: 1; transform: none; }
+    .bin-body { opacity: 1; transform: scale(1); }
+    .bin-glow { opacity: 0.65; }
+    .item { opacity: 1; transform: none; }
+    .code-tw { opacity: 0.7; }
+  }
+
+  /* Step cards */
+  .step-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .step-number { font-size: 1.1rem; font-weight: 800; height: 2.5rem; width: 2.5rem; min-width: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-title { font-size: 1rem; font-weight: 700; color: #111827; margin-bottom: 0.375rem; }
+  .step-desc { font-size: 0.9rem; color: #4b5563; line-height: 1.7; margin: 0; }
+
+  /* Accept grid */
+  #accept-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+  .accept-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+  .accept-icon { display: flex; height: 3rem; width: 3rem; align-items: center; justify-content: center; border-radius: 0.5rem; background-color: #dbeafe; color: #2563eb; margin: 0 auto 0.75rem auto; }
+  .accept-icon svg { height: 1.5rem; width: 1.5rem; }
+  .accept-card h3 { font-size: 0.9rem; font-weight: 700; color: #111827; margin-bottom: 0.375rem; }
+  .accept-card p { font-size: 0.8rem; color: #6b7280; line-height: 1.5; margin: 0; }
+
+  /* Scope block (Also welcome / What I can't take) */
+  .scope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.75rem; }
+  .scope-col { border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; background: white; border-left: 4px solid #94a3b8; }
+  .scope-col.scope-yes { border-left-color: #15803d; }
+  .scope-col.scope-no  { border-left-color: #c2410c; }
+  .scope-col h3 { font-size: 0.95rem; font-weight: 700; color: #111827; margin: 0 0 0.4rem 0; }
+  .scope-col p { font-size: 0.875rem; color: #4b5563; line-height: 1.65; margin: 0; }
+  .battery-note { margin-top: 1rem; font-size: 0.85rem; color: #6b7280; line-height: 1.65; }
+  .battery-note strong { color: #374151; }
+
+  /* Pricing table (matches Pricing page pattern) */
+  .price-category { border: 1px solid #e5e7eb; border-radius: 0.75rem; overflow: hidden; background: white; border-left: 4px solid #0d9488; }
+  .price-cat-head { background: #f0fdfa; color: #134e4a; padding: 0.875rem 1.5rem; font-size: 1rem; font-weight: 700; border-bottom: 1px solid #99f6e4; margin: 0; display: flex; align-items: center; gap: 0.75rem; }
+  .price-cat-head .cat-icon { display: flex; height: 2rem; width: 2rem; min-width: 2rem; align-items: center; justify-content: center; border-radius: 0.375rem; background: #ccfbf1; color: #0d9488; flex-shrink: 0; }
+  .price-cat-head .cat-icon svg { height: 1.1rem; width: 1.1rem; }
+  .price-table { padding: 0.5rem 0; }
+  .price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.75rem 1.5rem; border-bottom: 1px solid #f3f4f6; gap: 1rem; }
+  .price-row:last-child { border-bottom: none; }
+  .price-row > span:first-child { font-size: 0.95rem; color: #374151; }
+  .price-row em { display: block; font-style: normal; font-size: 0.8rem; color: #6b7280; margin-top: 0.15rem; line-height: 1.45; }
+  .price-row .price { font-weight: 700; color: #0f766e; white-space: nowrap; }
+
+  /* Data + second-life note */
+  .data-note { margin-top: 1.75rem; border-left: 4px solid #2563eb; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; padding: 1.25rem 1.5rem; }
+  .data-note h3 { font-size: 1rem; font-weight: 700; color: #111827; margin: 0 0 0.6rem 0; }
+  .data-note p { font-size: 0.9rem; color: #4b5563; line-height: 1.7; margin: 0 0 0.75rem 0; }
+  .data-note p:last-child { margin-bottom: 0; }
+  .data-note a { color: #1e40af; text-decoration: underline; font-weight: 600; }
+
+  /* Reason grid */
+  #reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .reason-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; }
+  .reason-icon { display: flex; height: 3rem; width: 3rem; align-items: center; justify-content: center; border-radius: 0.5rem; background-color: #dbeafe; color: #2563eb; margin-bottom: 0.75rem; }
+  .reason-icon svg { height: 1.5rem; width: 1.5rem; }
+  .reason-card h3 { font-size: 0.95rem; font-weight: 700; color: #111827; margin-bottom: 0.375rem; }
+  .reason-card p { font-size: 0.85rem; color: #6b7280; line-height: 1.6; margin: 0; }
+
+  /* Intake form */
+  .intake-form { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.75rem; }
+  .form-row { display: flex; flex-direction: column; margin-bottom: 1rem; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .intake-form label { font-size: 0.85rem; font-weight: 700; color: #111827; margin-bottom: 0.4rem; }
+  .intake-form .opt { font-weight: 500; color: #6b7280; }
+  .intake-form input[type="text"],
+  .intake-form input[type="tel"],
+  .intake-form input[type="email"],
+  .intake-form textarea {
+    width: 100%; box-sizing: border-box;
+    border: 1px solid #cbd5e1; border-radius: 0.5rem;
+    padding: 0.6rem 0.75rem; font-size: 0.95rem;
+    font-family: inherit; color: #111827; background: white;
+  }
+  .intake-form textarea { resize: vertical; }
+  .intake-form input:focus, .intake-form textarea:focus {
+    outline: 2px solid #2563eb; outline-offset: 1px; border-color: #2563eb;
+  }
+  .agree-box {
+    display: flex; align-items: flex-start; gap: 0.625rem;
+    background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.5rem;
+    padding: 0.875rem 1rem; margin: 0.5rem 0 1rem 0;
+  }
+  .agree-box input { margin-top: 0.2rem; width: 1.1rem; height: 1.1rem; flex-shrink: 0; }
+  .agree-box label { font-size: 0.85rem; font-weight: 500; color: #1e3a8a; line-height: 1.6; margin: 0; }
+  .agree-box a { color: #1e40af; font-weight: 700; }
+  .req-star { color: #b91c1c; }
+  #intake-submit {
+    background: #2563eb; color: white; font-weight: 700; font-size: 1rem;
+    border: none; border-radius: 0.5rem; padding: 0.875rem 2rem;
+    cursor: pointer; transition: background 0.2s, transform 0.2s;
+  }
+  #intake-submit:hover { background: #1d4ed8; transform: translateY(-1px); }
+  #intake-submit:disabled { background: #93c5fd; cursor: not-allowed; transform: none; }
+  .form-note { font-size: 0.8rem; color: #6b7280; margin-top: 0.875rem; line-height: 1.6; }
+
+  @media (max-width: 768px) {
+    .step-card { flex-direction: column; gap: 0.75rem; }
+    #accept-grid { grid-template-columns: repeat(2, 1fr); }
+    .scope-grid { grid-template-columns: 1fr; }
+    #reason-grid { grid-template-columns: 1fr; }
+    .price-row { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    #accept-grid { grid-template-columns: repeat(3, 1fr); }
+    #reason-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
